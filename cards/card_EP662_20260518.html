@@ -4,101 +4,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>股癌 EP662 筆記</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;440;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Noto Sans TC', 'PingFang TC', sans-serif;
-            background-color: #f5f5f0; /* 紙張感背景 */
+            font-family: 'Inter', 'Noto Sans TC', system-ui, sans-serif;
+            background-color: #fafafa;
+            color: #1e293b;
+            line-height: 1.65;
             margin: 0;
             padding: 20px;
+        }
+        #top {
+            position: absolute;
+            top: 0;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            line-height: 1.7;
-            color: #333;
+            gap: 16px;
         }
         .card {
-            background-color: #fefefe; /* 白底 */
-            border: 1px solid #e5e7eb; /* 邊框 */
-            border-radius: 12px; /* 圓角 */
-            padding: 30px;
-            margin-bottom: 25px;
-            max-width: 700px;
-            width: 100%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            padding: 24px 28px;
             position: relative;
         }
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .card-title {
-            color: #2563eb; /* 主色藍 */
-            font-size: 1.8em;
-            font-weight: 700;
-            padding-bottom: 8px;
-            border-bottom: 3px solid #2563eb; /* 藍色底線 */
-            margin-top: 0;
-            flex-grow: 1;
-        }
         .card-number {
-            font-size: 0.9em;
-            color: #6b7280;
-            margin-left: 15px;
-            flex-shrink: 0;
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 16px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-top: 20px;
+            margin-bottom: 12px;
         }
         h3 {
-            color: #2563eb;
-            font-size: 1.3em;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-        ul {
-            list-style-type: disc;
-            padding-left: 25px;
-            margin-top: 10px;
-        }
-        li {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-top: 16px;
             margin-bottom: 8px;
         }
-        code {
-            background-color: #f3f4f6; /* 淺灰底 */
-            padding: 3px 6px;
-            border-radius: 4px;
-            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-            font-size: 0.9em;
-            color: #374151;
+        p, li {
+            font-size: 14.5px;
+            color: #334155;
+            margin-bottom: 8px;
         }
-        blockquote {
-            border-left: 5px solid #ea580c; /* 橘色左邊框 */
-            background-color: #fff7ed; /* 淺橘背景 */
-            margin: 20px 0;
-            padding: 15px 20px;
-            font-style: italic;
-            color: #555;
-            border-radius: 4px;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        .conclusion {
-            color: #ea580c; /* 橘色 */
+        ul li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        ul li::before {
+            content: '•';
+            color: #2563eb;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            flex-shrink: 0;
+            margin-right: 8px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #475569;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        .kpi-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .kpi-item {
+            flex: 1;
+            min-width: 120px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .kpi-value {
+            font-size: 22px;
             font-weight: 700;
-            margin-top: 25px;
-            display: block;
+            color: #0f172a;
         }
-        .cover-card ul {
-            list-style-type: none;
-            padding-left: 0;
+        .kpi-label {
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 4px;
         }
-        .cover-card li {
-            margin-bottom: 10px;
+        .highlight-box {
+            background-color: #f8fafc;
+            border-left: 4px solid #e2e8f0;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
         }
-        .cover-card a {
+        .highlight-box p {
+            margin: 0;
+        }
+        .ticker {
+            display: inline-flex;
+            align-items: center;
+            background-color: #e0e7ff; /* Light blue for tickers */
+            color: #2563eb;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-right: 6px;
+            margin-bottom: 4px;
+        }
+        .ticker code {
+            background: none;
+            color: #2563eb;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 0;
+            margin-left: 4px;
+        }
+        .badge-bull {
+            display: inline-block;
+            background-color: #dcfce7; /* Light green */
+            color: #16a34a; /* Dark green */
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+        .badge-bear {
+            display: inline-block;
+            background-color: #fee2e2; /* Light red */
+            color: #dc2626; /* Dark red */
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+        .badge-neutral {
+            display: inline-block;
+            background-color: #e0e7ff; /* Light blue */
+            color: #2563eb; /* Dark blue */
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+        strong {
+            font-weight: 600;
+            color: #0f172a;
+        }
+        .text-green { color: #16a34a; }
+        .text-red { color: #dc2626; }
+
+        blockquote {
+            border-left: 4px solid #ea580c;
+            background-color: #f8fafc;
+            padding: 12px 20px;
+            margin: 20px 0;
+            border-radius: 6px;
+            font-style: italic;
+            color: #475569;
+        }
+        blockquote p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .caption {
+            font-size: 12px;
+            color: #64748b;
+            margin-bottom: 4px;
+        }
+        .conclusion-banner {
+            background-color: #ea580c;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .action-list ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        .action-list ul li::before {
+            content: '';
+            width: 0;
+            margin-right: 0;
+        }
+        .action-list ul li {
+            display: list-item;
+        }
+        a {
             color: #2563eb;
             text-decoration: none;
-            font-weight: 600;
         }
-        .cover-card a:hover {
+        a:hover {
             text-decoration: underline;
         }
         .fixed-button {
@@ -118,212 +250,330 @@
 </head>
 <body>
     <div id="top"></div>
+    <div class="container">
 
-    <div class="card cover-card" id="card-1">
-        <div class="card-header">
-            <h1 class="card-title">股癌 EP662 筆記</h1>
-            <span class="card-number">1/10</span>
+        <!-- 卡 1：封面 -->
+        <div class="card" id="card-1">
+            <span class="card-number">#1/10</span>
+            <h1>股癌 EP662 筆記</h1>
+            <p class="caption">日期：2026-05-16</p>
+            <div class="kpi-bar">
+                <div class="kpi-item">
+                    <div class="kpi-value">被動元件</div>
+                    <div class="kpi-label">供給缺口擴大</div>
+                </div>
+                <div class="kpi-item">
+                    <div class="kpi-value">台積電</div>
+                    <div class="kpi-label">投信買盤將至</div>
+                </div>
+                <div class="kpi-item">
+                    <div class="kpi-value">資安軟體</div>
+                    <div class="kpi-label">新高王者浮現</div>
+                </div>
+                <div class="kpi-item">
+                    <div class="kpi-value">電源管理</div>
+                    <div class="kpi-label">漲價趨勢確立</div>
+                </div>
+            </div>
+            <h2>本集核心洞見</h2>
+            <ul>
+                <li><a href="#card-2">小男資本：長期投資台灣獨立遊戲團隊，強調創作自由。</a></li>
+                <li><a href="#card-3">個人經驗：分享二兒子安哥醫療歷程，推薦台大施景中醫師。</a></li>
+                <li><a href="#card-4">AI 資金排擠效應：投信買盤將轉向台積電，老AI面臨壓力。</a></li>
+                <li><a href="#card-5">被動元件供給缺口擴大：大廠停接單預期，恐重演2018漲價亂象。</a></li>
+                <li><a href="#card-6">美股軟體股汰弱留強：資安股領漲，新高王者值得關注。</a></li>
+                <li><a href="#card-7">電源管理元件漲價確立：AI電源櫃需求推升，日廠羅姆跟進。</a></li>
+                <li><a href="#card-8">修正行情是汰弱留強良機：市場將自動篩選下一波主流。</a></li>
+            </ul>
         </div>
-        <p>日期：2026-05-16</p>
-        <h3>本集主題：</h3>
-        <ul>
-            <li><a href="#card-2">1. 肖楠資本：獨立遊戲的長期投資哲學</a></li>
-            <li><a href="#card-3">2. 孩子健康之路：醫療的感恩與體悟</a></li>
-            <li><a href="#card-4">3. 台股修正應對：老手淡定，新手恐慌 (1/2)</a></li>
-            <li><a href="#card-5">4. 台股修正應對：資金輪動與汰弱留強 (2/2)</a></li>
-            <li><a href="#card-6">5. 美股軟體與資安股的崛起</a></li>
-            <li><a href="#card-7">6. 被動元件漲價潮與供應鏈緊繃 (1/2)</a></li>
-            <li><a href="#card-8">7. 被動元件漲價潮與供應鏈緊繃 (2/2)</a></li>
-            <li><a href="#card-9">8. 新AI題材與Power Components</a></li>
-            <li><a href="#card-10">9. 本集操作觀察與風險提醒</a></li>
-        </ul>
-    </div>
 
-    <div class="card" id="card-2">
-        <div class="card-header">
-            <h2 class="card-title">肖楠資本：獨立遊戲的長期投資哲學</h2>
-            <span class="card-number">2/10</span>
+        <!-- 卡 2：洞見卡 - 小男資本 -->
+        <div class="card" id="card-2">
+            <span class="card-number">#2/10</span>
+            <span class="tag">遊戲產業</span>
+            <h2>小男資本：長期投資台灣獨立遊戲，強調創作自由與AI賦能</h2>
+            <div class="highlight-box">
+                <p>🎯 <strong>核心主張：</strong>小男資本專注於長期投資台灣優秀獨立遊戲團隊，不干涉創作，並看好AI時代開發工具進步將提升生產力，為遊戲產業帶來順風車效應。</p>
+            </div>
+            <h3>🔍 機制 / 為什麼：</h3>
+            <ul>
+                <li>🎮 <strong>創投模式：</strong>與股市短期題材變化不同，遊戲創投是按部就班的長期投資，旨在支持台灣優秀團隊。</li>
+                <li>💡 <strong>獨立遊戲崛起：</strong>觀察到大型遊戲工作室劇情同質化、為「政治正確 (PC)」犧牲玩家體驗，導致玩家轉向追求創新玩法和跳脫俗套敘事的獨立遊戲。</li>
+                <li>🤝 <strong>資本方角色：</strong>小男資本定位為「敢玩敢投資」的資本方，提供人脈與關係輔助，但不干涉遊戲創作，避免影響藝術性與玩家體驗。</li>
+                <li>🚀 <strong>AI賦能：</strong>相信在AI時代，開發工具將更豐富，生產力會顯著提升，有助於台灣遊戲團隊發展，搭上產業順風車。</li>
+            </ul>
+            <h3>📊 關聯遊戲：</h3>
+            <ul>
+                <li>已推出：紅眼路比</li>
+                <li>明年推出：暗花夜戰 (Noa Bloom) - 2D槍舞動作遊戲，YouTube已有試玩影片，Steam可加入願望清單。</li>
+            </ul>
+            <h3>⚠️ 主持人觀點：</h3>
+            <ul>
+                <li><strong>長期浪漫投資：</strong>主持人將投資遊戲視為「偏向浪漫」的行為，強調「爽跟開心很重要」，但同時也進行了嚴謹的「盡職調查 (DD)」。</li>
+                <li><strong>非對外募資：</strong>強調小男資本為「自己人自己的快樂好朋友」共同出資，並非對外公開募資。</li>
+            </ul>
+            <div class="conclusion-banner">
+                📌 <strong>結論：</strong>小男資本以長期、不干涉創作的模式支持台灣獨立遊戲，看好AI對遊戲開發的正面影響，值得持續關注其投資成果。
+            </div>
         </div>
-        <h3>背景/原因：</h3>
-        <p>聽眾在Q&A詢問肖楠資本近期動向，主持人藉此分享其在遊戲產業的投資理念與策略。</p>
-        <h3>核心論點：</h3>
-        <ul>
-            <li>肖楠資本專注長期投資台灣優秀獨立遊戲團隊，不追求短期ROI，也不干預遊戲創作。</li>
-            <li>看好Indie Games（獨立遊戲）的創新玩法與跳脫俗套敘事，認為其受玩家喜愛。</li>
-            <li>AI時代開發工具增加，可望提升遊戲開發生產力，為遊戲產業帶來順風車。</li>
-            <li>具體投資遊戲：已上市的「紅眼路比 (Red-Eyed Ruby)」及明年將推出的2D槍舞動作遊戲「暗花夜戰 (Noah Bloom)」。</li>
-        </ul>
-        <blockquote>
-            我們就是一群敢玩、敢投資的人，輸了算的，死了算的。但當然我們並不是抱持著錢爛掉也沒關係，因為這都是大家辛苦錢。我們的心態呢是反正呢，我們就是看好一個東西之後，下好離手，那希望你可以發展的好，那不會在過程之中去給予過多的一個指導期。
-        </blockquote>
-        <span class="conclusion">📌 **肖楠資本專注長期投資獨立遊戲，相信其創新潛力與AI時代的發展優勢，並強調作為資本方不干預創作的原則。**</span>
-    </div>
 
-    <div class="card" id="card-3">
-        <div class="card-header">
-            <h2 class="card-title">孩子健康之路：醫療的感恩與體悟</h2>
-            <span class="card-number">3/10</span>
+        <!-- 卡 3：洞見卡 - 安哥醫療經驗 -->
+        <div class="card" id="card-3">
+            <span class="card-number">#3/10</span>
+            <span class="tag">個人經驗</span>
+            <h2>主持人分享二兒子安哥醫療歷程，推薦台大施景中醫師</h2>
+            <div class="highlight-box">
+                <p>🎯 <strong>核心主張：</strong>主持人分享二兒子安哥出生前被診斷出多重身體異常的艱辛歷程，並特別感謝台大施景中醫師的專業與「Chill」態度，成功化險為夷，因此向有類似困境的聽眾推薦施醫師。</p>
+            </div>
+            <h3>🔍 歷程 / 為什麼：</h3>
+            <ul>
+                <li>🚨 <strong>初期診斷：</strong>在高層次超音波檢查時，發現胎兒有單腎、腹腔囊腫、腦部囊腫、髖關節發育不良、膀胱泡泡、腸道異常等多重問題，初期診所醫師表示超出能力範圍。</li>
+                <li>🏥 <strong>轉診台大：</strong>經診所醫師推薦，轉診至台大兒醫尋求施景中醫師協助。</li>
+                <li>👨‍⚕️ <strong>施醫師的專業與態度：</strong>
+                    <blockquote>他是他認識可能在台灣最會處理棘手案件的人</blockquote>
+                    施醫師在第一次看診時，以其輕鬆且自信的態度表示：
+                    <blockquote>啊這個沒事情啦，這個我會處理啦</blockquote>
+                    這讓主持人夫婦如釋重負，即便後續仍有狀況，施醫師總能化險為夷。</li>
+                <li>🙏 <strong>感恩回饋：</strong>施醫師堅持不收禮，主持人因此轉為定期捐款台大兒醫，以表達心中感恩。</li>
+                <li>💡 <strong>資訊過載的煎熬：</strong>在醫療過程中，因接觸過多資訊（如聽眾分享類似案例的悲劇），導致心理壓力遠超一般人。</li>
+            </ul>
+            <h3>📊 關聯醫師：</h3>
+            <ul>
+                <li>台大兒醫：施景中醫師 <span class="badge-bull">推薦</span></li>
+            </ul>
+            <h3>⚠️ 主持人觀點：</h3>
+            <ul>
+                <li><strong>醫療推薦的謹慎：</strong>主持人通常不輕易推薦醫師，因醫療結果存在機率性，不願承擔「Karma」，但此次為少數例外，因施醫師的幫助巨大。</li>
+                <li><strong>健康的重要性：</strong>經歷孩子生病，讓主持人深刻體會到健康無價，也促使他更重視自身健康（如減重、照顧膽固醇）。</li>
+            </ul>
+            <div class="conclusion-banner">
+                📌 <strong>結論：</strong>施景中醫師在處理複雜胎兒問題上的專業能力與安撫人心的態度，為許多家庭帶來希望，值得有需要的家庭尋求諮詢。
+            </div>
         </div>
-        <h3>背景/原因：</h3>
-        <p>Telegram群組有地方爸爸詢問未出生孩子健康問題，觸發主持人分享二兒子安哥出生前的艱辛醫療經歷。</p>
-        <h3>核心論點：</h3>
-        <ul>
-            <li>二兒子安哥在高層次超音波檢查時發現多重健康問題（如少一顆腎、腹腔囊腫、腦部囊腫、髖關節發育不良等）。</li>
-            <li>從地方診所轉診至台大兒醫，獲得施景中醫師的專業與令人安心的協助。</li>
-            <li>醫療過程中，家長承受巨大壓力，資訊不透明與等待報告的煎熬令人難以入眠。</li>
-            <li>最終安哥健康快樂成長，主持人對醫療團隊充滿感恩，並定期捐款台大兒醫以回饋社會。</li>
-            <li>在羅馬Bambino Gesù醫院獲得免費醫療協助後，主持人亦捐款數十萬以示感恩，秉持「取之於社會，用之於社會」的精神。</li>
-            <li>自身體悟到健康的重要性，促使主持人開始正視個人身體狀況，如減重、照顧膽固醇。</li>
-        </ul>
-        <blockquote>
-            找到一個非常好的醫師是我們家的一個大幸啦。…健康真的是他媽太重要了。
-        </blockquote>
-        <span class="conclusion">📌 **面對生命中的健康挑戰，尋求專業協助並保持感恩之心，體悟到健康是人生最重要的財富，並積極回饋社會。**</span>
-    </div>
 
-    <div class="card" id="card-4">
-        <div class="card-header">
-            <h2 class="card-title">台股修正應對：老手淡定，新手恐慌 (1/2)</h2>
-            <span class="card-number">4/10</span>
+        <!-- 卡 4：洞見卡 - AI資金排擠效應 -->
+        <div class="card" id="card-4">
+            <span class="card-number">#4/10</span>
+            <span class="tag">台股策略</span>
+            <h2>投信買盤將轉向台積電，老AI面臨資金排擠壓力</h2>
+            <div class="highlight-box">
+                <p>🎯 <strong>核心主張：</strong>金管會放寬台積電持股上限後，投信資金將逐步轉向增持台積電，導致市場資金從其他高持股的中小型股（特別是老AI）流出，形成資金排擠效應。</p>
+            </div>
+            <h3>🔍 機制 / 為什麼：</h3>
+            <ul>
+                <li>📈 <strong>政策驅動：</strong>金管會放寬投信對單一股票（如 <span class="ticker">台積電 <code>2330</code></span>）的持股上限，為投信增持台積電創造了空間。</li>
+                <li>⏳ <strong>時間差效應：</strong>投信調整公發數、修改條款以增持 <span class="ticker">台積電 <code>2330</code></span> 需時約 2-3 個月（甚至 4-5 個月），目前已發酵一段時間，預計未來一個月左右會有更多投信完成調整並進場。</li>
+                <li>💰 <strong>資金有限：</strong>
+                    市場總資金有限，當大量投信資金湧入 <span class="ticker">台積電 <code>2330</code></span>，勢必會從其他部位提款。
+                    <br />
+                    <br />
+                    <p>主持人補充：</p>
+                    <p>台灣人的錢在市場裡面多不多，其實跟美國比沒有很多，因為我們蠻多錢是在房地產或者在存款裡面，就是你跟美國比說家戶的他們的資產佔比，我們的那個股票佔比是相對低的，所以台灣人真的很有錢啦，一堆錢還沒進市場。</p>
+                    <br />
+                    尤其鎖定投信持股比重高且近期漲幅已大、成本拉遠的中小型股進行停利。
+                </li>
+                <li>📉 <strong>老AI毛利疑慮：</strong>部分老AI公司毛利率表現不如預期，雖主持人認為是短期研發投入導致，長期有望改善（例如曾提及的 <span class="ticker">漢唐 <code>2404</code></span> 毛利率反彈），但短期內仍提供投信停利的藉口。</li>
+            </ul>
+            <h3>📊 關聯個股：</h3>
+            <ul>
+                <li><span class="ticker">台積電 <code>2330</code></span> <span class="badge-bull">看多</span></li>
+                <li>老AI族群（潛在資金流出標的）：<span class="ticker">廣達 <code>2382</code></span>、<span class="ticker">緯創 <code>3231</code></span>、<span class="ticker">技嘉 <code>2376</code></span>、<span class="ticker">英業達 <code>2356</code></span> 等投信高持股標的 <span class="badge-bear">看空</span></li>
+            </ul>
+            <h3>⚠️ 反向觀點 / 風險：</h3>
+            <ul>
+                <li>主持人個人偏好：認為老AI的毛利問題是短期現象，長期有望改善，但資金面壓力仍是當前主要考量。</li>
+                <li>市場共識：散戶恐慌，但大戶（與主持人水位類似者）尚未恐慌，顯示市場結構性調整而非全面看空。</li>
+            </ul>
+            <div class="conclusion-banner">
+                📌 <strong>結論：</strong>台積電的資金吸力將持續，老AI短期內面臨投信停利賣壓，宜避開或等待資金面壓力釋放。
+            </div>
         </div>
-        <h3>背景/原因：</h3>
-        <p>台股近期（禮拜五）出現較大跌幅，市場上出現恐慌情緒，主持人分享其個人操作與對市場心態的觀察。</p>
-        <h3>核心論點：</h3>
-        <ul>
-            <li>主持人本次未減碼：因今年行情瘋狂，持股成本已拉開很遠，即使跌停也未達成本，反而逢跌加碼。</li>
-            <li>逢跌加碼策略：看到跌停的標的反而高興進場買入，特別是針對長投部位。</li>
-            <li>資深投資人淡定：主持人身邊水位與量體相近的投資人並未恐慌，因獲利豐厚，可放任其跌。</li>
-            <li>市場新人恐慌：Telegram群組中許多新手（小菜雞）因歷練不足，面對1-2%跌幅即喊「跌死」、「大逃殺」。</li>
-            <li>修正預期：預期本次修正不會拖太久，將洗出不穩定籌碼，讓部分新人受傷。</li>
-        </ul>
-        <blockquote>
-            就算你跌停，你再跌三根，你都跌不回我的成本啦。…對一些就是在裡面玩久的人來說，我覺得到禮拜五都還沒有見到任何人有恐慌的感覺，因為真的是噴太遠了。
-        </blockquote>
-        <span class="conclusion">📌 **面對市場修正，資深投資人因成本優勢而淡定，甚至逢跌加碼；新手則因歷練不足易恐慌，市場將藉此汰除不穩定籌碼。**</span>
-    </div>
 
-    <div class="card" id="card-5">
-        <div class="card-header">
-            <h2 class="card-title">台股修正應對：資金輪動與汰弱留強 (2/2)</h2>
-            <span class="card-number">5/10</span>
+        <!-- 卡 5：洞見卡 - 被動元件供給缺口擴大 -->
+        <div class="card" id="card-5">
+            <span class="card-number">#5/10</span>
+            <span class="tag">電子零組件</span>
+            <h2>市場低估了被動元件擴產難度，供給缺口恐引爆漲價潮</h2>
+            <div class="highlight-box">
+                <p>🎯 <strong>核心主張：</strong>AI應用帶動被動元件需求暴增，但市場普遍低估了擴產難度與速度，導致供給缺口持續擴大，預期大廠將停止接單，引發類似2018年的漲價亂象。</p>
+            </div>
+            <h3>🔍 機制 / 為什麼：</h3>
+            <ul>
+                <li>📈 <strong>AI需求驅動：</strong>AI伺服器、電源櫃等新應用對被動元件（MLCC、鋁電容、電感、電阻）用量大增，導致整體需求強勁。</li>
+                <li>🏭 <strong>擴產不易：</strong>市場曾樂觀認為被動元件擴產簡單，但實際新產線拉設需時，難以短期內滿足暴增需求。
+                    <br />
+                    <br />
+                    主持人補充：
+                    <blockquote>日本跟韓國人其實在擴產的速度是太慢，或者說他們是站在一個比較保守的心態，或甚至是像記憶體，他們是蠻多廠商都直接它知道會好，它也不想要擴產的啦</blockquote>
+                    這種保守態度加劇了供給緊張，形成「遠水救不了近火」的局面。
+                </li>
+                <li>💸 <strong>漲價信號頻現：</strong>電阻因用到大量銀，已出現三成漲幅，電容、電感等更缺料的產品漲價壓力更大。<span class="ticker">Panasonic <code>6752.JP</code></span> 的SP-CAP產品預計六月初漲價三成，且可能以現貨漲價模式進行。</li>
+                <li>🛑 <strong>停止接單預警：</strong>當大廠（如 <span class="ticker">Panasonic <code>6752.JP</code></span>）宣布停止接單，將是市場進入瘋狂搶貨、價格失控的明確信號，重演2018年被動元件之亂。</li>
+            </ul>
+            <h3>📊 關聯個股：</h3>
+            <ul>
+                <li>MLCC：<span class="ticker">村田製作所 <code>6981.JP</code></span>、<span class="ticker">三星電機 <code>009150.KR</code></span>、<span class="ticker">國巨 <code>2327</code></span>、<span class="ticker">華新科 <code>2492</code></span>、<span class="ticker">信昌電 <code>6173</code></span> <span class="badge-bull">看多</span></li>
+                <li>鋁電容：<span class="ticker">立隆電 <code>2472</code></span>、<span class="ticker">金山電 <code>8042</code></span>、<span class="ticker">鈺邦 <code>6422</code></span> <span class="badge-bull">看多</span></li>
+                <li>電感：<span class="ticker">奇力新 <code>2456</code></span> (已併入國巨) <span class="badge-bull">看多</span></li>
+                <li>電阻：<span class="ticker">華新科 <code>2492</code></span> (旗下有華新科電阻) <span class="badge-bull">看多</span></li>
+            </ul>
+            <h3>⚠️ 反向觀點 / 風險：</h3>
+            <ul>
+                <li>市場共識轉變：過去認為擴產簡單，現在逐漸認清難度，但仍有部分人抱持觀望態度。</li>
+                <li>主持人個人偏好：對此族群持樂觀態度，認為缺口已現，漲價是高機率事件。</li>
+            </ul>
+            <div class="conclusion-banner">
+                📌 <strong>結論：</strong>被動元件產業供給缺口已是高機率事件，關注大廠停止接單信號，有望迎來新一波漲價行情。
+            </div>
         </div>
-        <h3>背景/原因：</h3>
-        <p>金管會放寬台積電 (2330) 投資上限，加上市場修正，將引導資金重新配置，加速市場汰弱留強。</p>
-        <h3>核心論點：</h3>
-        <ul>
-            <li>**金管會放寬台積電 (2330) 投資上限**：投信增持台積電 (2330) 的流程需2-3個月修改公發數，預計一個月後更多投信將增持。</li>
-            <li>**資金排擠效應**：市場資金有限，大量資金流向台積電 (2330) 勢必從其他標的提款，特別是投信持股比重高的中小股。</li>
-            <li>**老AI股面臨挑戰**：部分老AI股（如<code>聯發科 (2454)</code>）毛利表現不如預期，且可能受投信資金轉移影響，即便毛利問題可能短期。</li>
-            <li>**修正後的汰弱留強機會**：市場崩殺是汰弱留強的好時機，觀察誰優先爬回、不跌，將是下一波主流。</li>
-        </ul>
-        <blockquote>
-            你必須有很多要跑去台積電的話，會發生什麼事情？就是你勢必要從其他東西去做提款。…市場會直接幫你挑好說，誰有可能是下一波的老大。
-        </blockquote>
-        <span class="conclusion">📌 **金管會放寬台積電 (2330) 上限將引發資金排擠效應，加速市場汰弱留強，投資人應關注修正後率先反彈的強勢族群。**</span>
-    </div>
 
-    <div class="card" id="card-6">
-        <div class="card-header">
-            <h2 class="card-title">美股軟體與資安股的崛起</h2>
-            <span class="card-number">6/10</span>
+        <!-- 卡 6：洞見卡 - 美股軟體股汰弱留強 -->
+        <div class="card" id="card-6">
+            <span class="card-number">#6/10</span>
+            <span class="tag">美股科技</span>
+            <h2>美股軟體股已完成汰弱留強，資安與特定AI受惠者成新王者</h2>
+            <div class="highlight-box">
+                <p>🎯 <strong>核心主張：</strong>美股軟體板塊已歷經大幅修正，市場已完成汰弱留強，資安股逆勢創新高，部分AI受惠軟體公司表現優異，成為新時代的領頭羊。</p>
+            </div>
+            <h3>🔍 機制 / 為什麼：</h3>
+            <ul>
+                <li>📉 <strong>市場修正：</strong>過去一年許多軟體股跌幅達 40-50%，市場已充分消化泡沫與不確定性。</li>
+                <li>🛡️ <strong>資安股逆襲：</strong>儘管Metaverse興起時曾有論點認為資安將式微，但現實是資安需求不減反增，<span class="ticker">CrowdStrike <code>CRWD</code></span> 等資安股持續創新高。</li>
+                <li>💡 <strong>AI的順風車：</strong>部分軟體公司（如<span class="ticker">Figma <code>ADBE</code></span>）成功將AI視為「順風車 (Tailwind)」，而非威脅，開出優異財報，證明其AI整合能力與市場價值。
+                    <br />
+                    <br />
+                    主持人原話：
+                    <blockquote>它公司也沒有騙你，它跟你講說AI是我的Tailwind，啊沒有人相信嘛，大家都說，你這個就是生圖啦，我靠生圖軟體就可以把你打爆什麼的，結果它意外的開出一個好的成績啊</blockquote>
+                </li>
+                <li>🚀 <strong>動能投資偏好：</strong>主持人偏好追逐漲勢強勁、創新高的標的，認為這些是市場集體智慧篩選出的下一波領導者。
+                    <br />
+                    <br />
+                    主持人補充：
+                    <blockquote>我還是有蠻多那種動能仔的色彩在自己的身上，所以對我來講，就是我不會去對那些跌升的東西有很高的興趣，我反而會對漲多的東西會比較有興趣，所以就算我今天看到一個跌升的東西我有興趣，我反而會想等到你突破一些下降趨勢，或甚至是你準備新高的時候我再來追，我也沒差</blockquote>
+                </li>
+            </ul>
+            <h3>📊 關聯個股：</h3>
+            <ul>
+                <li>資安股：<span class="ticker">CrowdStrike <code>CRWD</code></span> <span class="badge-bull">看多</span></li>
+                <li>AI受惠軟體：<span class="ticker">Figma <code>ADBE</code></span> (Adobe旗下，但主持人提及Figma表現) <span class="badge-bull">看多</span></li>
+                <li>其他軟體：<span class="ticker">Atlassian <code>TEAM</code></span> (主持人提及，但非個人偏好) <span class="badge-neutral">中性</span></li>
+            </ul>
+            <h3>⚠️ 反向觀點 / 風險：</h3>
+            <ul>
+                <li>主持人個人偏好：不喜歡跌深反彈股，傾向追逐強勢股，認為跌深股可能存在價值陷阱。</li>
+                <li>市場共識：市場不一定永遠是對的，但集體智慧在汰弱留強時有參考價值。</li>
+            </ul>
+            <div class="conclusion-banner">
+                📌 <strong>結論：</strong>美股軟體板塊已完成洗牌，資安與具備AI整合優勢的軟體公司值得關注，優先考慮創新高者。
+            </div>
         </div>
-        <h3>背景/原因：</h3>
-        <p>近期美股軟體股與資安股表現亮眼，打破市場過往對其前景的疑慮，顯示AI時代的新趨勢。</p>
-        <h3>核心論點：</h3>
-        <ul>
-            <li>**資安股創新高**：如<code>CrowdStrike (CRWD)</code>，打破過去Metaverse將終結資安的論點，證明市場判斷不總是對的。</li>
-            <li>**部分軟體股反彈但需警惕**：許多軟體股曾跌爛，反彈不代表機會，需警惕價值陷阱；主持人偏好漲多而非跌深股。</li>
-            <li>**AI為軟體股帶來順風**：<code>Figma</code>等公司證實AI是其成長動能（Tailwind），開出超出預期的好成績。類似<code>Atlassian (TEAM)</code>等公司集體表態，顯示軟體領域的新變化。</li>
-            <li>**美股已完成汰弱留強**：目前市場上優先創新高的軟體股，可能是新一個時代的王者。</li>
-        </ul>
-        <blockquote>
-            資安股一大堆都在創新高。為什麼？就是不知道，就市場有時候會做這種奇怪的事情。…我反而會對漲多的東西會比較有興趣。
-        </blockquote>
-        <span class="conclusion">📌 **美股資安與部分軟體股受AI驅動表現強勁，市場已完成汰弱留強，投資人應關注創新高標的，而非跌深反彈股。**</span>
-    </div>
 
-    <div class="card" id="card-7">
-        <div class="card-header">
-            <h2 class="card-title">被動元件漲價潮與供應鏈緊繃 (1/2)</h2>
-            <span class="card-number">7/10</span>
+        <!-- 卡 7：洞見卡 - 電源管理元件漲價確立 -->
+        <div class="card" id="card-7">
+            <span class="card-number">#7/10</span>
+            <span class="tag">電子零組件</span>
+            <h2>AI電源櫃需求推升，電源管理元件漲價趨勢確立</h2>
+            <div class="highlight-box">
+                <p>🎯 <strong>核心主張：</strong>AI伺服器對電源櫃的需求劇增，帶動電源管理（Power Components）離散元件的強勁需求，美系大廠已持續漲價，日系大廠羅姆跟進將確立此漲價趨勢。</p>
+            </div>
+            <h3>🔍 機制 / 為什麼：</h3>
+            <ul>
+                <li>⚡ <strong>AI電源需求：</strong>新一代AI伺服器需要更高效、更大功率的電源供應，導致電源櫃用量大增，進而推升對內部電源管理離散元件的需求。</li>
+                <li>📈 <strong>美系大廠領漲：</strong>美系電源管理元件大廠已率先調漲價格，反映市場供需失衡。</li>
+                <li>🇯🇵 <strong>日廠跟進確立趨勢：</strong>日本廠商（如<span class="ticker">羅姆 <code>6963.JP</code></span>）通常動作較慢，若<span class="ticker">羅姆 <code>6963.JP</code></span> 也發出漲價信，將正式確立電源管理元件的全面漲價趨勢。</li>
+            </ul>
+            <h3>📊 關聯個股：</h3>
+            <ul>
+                <li>電源管理IC/離散元件：<span class="ticker">羅姆 <code>6963.JP</code></span> (日廠)、<span class="ticker">國際整流器 <code>IRF</code></span> (已併入英飛凌)、<span class="ticker">英飛凌 <code>IFX.DE</code></span>、<span class="ticker">德州儀器 <code>TXN</code></span>、<span class="ticker">安森美 <code>ON</code></span> <span class="badge-bull">看多</span></li>
+                <li>台廠相關：<span class="ticker">台達電 <code>2308</code></span> (電源供應器)、<span class="ticker">光寶科 <code>2301</code></span> (電源供應器) <span class="badge-bull">看多</span></li>
+            </ul>
+            <h3>⚠️ 反向觀點 / 風險：</h3>
+            <ul>
+                <li>市場共識：Legacy（成熟製程）中偏向消費性電子產品的電源元件，可能僅是補庫存，非長期趨勢。但AI相關電源元件需求是結構性增長。</li>
+            </ul>
+            <div class="conclusion-banner">
+                📌 <strong>結論：</strong>AI帶動的電源管理元件需求強勁，漲價趨勢明確，特別關注羅姆等日廠的動向。
+            </div>
         </div>
-        <h3>背景/原因：</h3>
-        <p>熱門族群被動元件出現新的大趨勢，好消息不斷，但對採購方而言卻是壓力，漲價信號頻繁。</p>
-        <h3>核心論點：</h3>
-        <ul>
-            <li>**漲價信號頻繁**：電阻、電容、電感都出現漲價跡象，電阻漲價可能與其大量使用銀的成本有關。</li>
-            <li>**Panasonic (6752.JP) 大幅漲價**：<code>Panasonic (6752.JP)</code> 預計在六月初左右，其SP-Cap產品將大幅漲價三成。</li>
-            <li>**現貨漲價模式**：若廠商不發正式漲價信，但業界實質漲價，將類似現貨市場模式，恐重現2018年被動元件之亂。</li>
-            <li>**停止接單是關鍵信號**：一旦大廠宣布停止接單，代表供應鏈將進入嚴峻狀態，瘋狂漲價模式正式展開。</li>
-        </ul>
-        <blockquote>
-            當你看到有人停止接單的時候，你就知道說This is it，就要出大事了。…這個就可能會有點像是2018被動元件之亂。
-        </blockquote>
-        <span class="conclusion">📌 **被動元件漲價潮蔓延，Panasonic (6752.JP) 大幅漲價預示供應鏈緊繃，大廠停止接單將是瘋狂漲價趨勢的正式確認。**</span>
-    </div>
 
-    <div class="card" id="card-8">
-        <div class="card-header">
-            <h2 class="card-title">被動元件漲價潮與供應鏈緊繃 (2/2) - 擴產緩不濟急</h2>
-            <span class="card-number">8/10</span>
+        <!-- 卡 8：洞見卡 - 修正行情是汰弱留強良機 -->
+        <div class="card" id="card-8">
+            <span class="card-number">#8/10</span>
+            <span class="tag">市場策略</span>
+            <h2>修正行情是市場自動汰弱留強的絕佳機會</h2>
+            <div class="highlight-box">
+                <p>🎯 <strong>核心主張：</strong>市場修正提供了一個觀察強勢股的絕佳時機，那些跌幅最少、最快反彈或直接不跌的族群，將是下一波市場的主流與領導者。</p>
+            </div>
+            <h3>🔍 機制 / 為什麼：</h3>
+            <ul>
+                <li>📉 <strong>籌碼洗牌：</strong>市場快速下跌會將不穩定的籌碼（散戶、歷練不足者）洗出。例如，當 <span class="ticker">聯發科 <code>2454</code></span> 等噴爆股回檔 1-2% 時，部分新進市場者就驚呼「大逃殺」，顯示其歷練不足，容易被洗出。這種洗牌讓市場結構更健康。</li>
+                <li>🔍 <strong>強弱立判：</strong>在修正中，強勢股會展現出抗跌性（跌幅小或不跌）或快速反彈的能力，因為市場惜售且搶買意願高。</li>
+                <li>💡 <strong>集體智慧：</strong>市場會直接幫投資人篩選出下一波的主流，無需過多主觀判斷，只需觀察資金流向與股價表現。</li>
+                <li>🔄 <strong>心態調整：</strong>避免在市場樂觀時追高，回檔時殺低，應保持看法穩定，利用修正期識別真正有價值的標的。
+                    <br />
+                    <br />
+                    主持人強調：
+                    <p>不要因為行情的變化，看法就轉變，那很多時候會把自己臉打爆。最怕的就是說，你可能最後面什麼都沒有買到，什麼都沒有抱到，什麼錢都沒有賺到，那就是很可惜了，整天進市場就是在最樂觀的時候追追追追追，然後開始回檔的時候就砍砍砍砍砍，那二紀律紀律，開口閉口都紀律，然後回頭看，</p>
+                    <blockquote>紀律了半天，媽一個懶叫都沒有賺到</blockquote>
+                    <p>那這個可能是要比較小心的啦。</p>
+                </li>
+            </ul>
+            <h3>📊 其他關注題材：</h3>
+            <ul>
+                <li>除了被動元件、電源管理外，主持人仍看好光通訊與成熟製程相關標的。</li>
+            </ul>
+            <h3>⚠️ 反向觀點 / 風險：</h3>
+            <ul>
+                <li>主持人個人偏好：強調不要輕易改變看法，避免因短期波動而錯失長期波段。</li>
+                <li>市場共識：散戶容易恐慌，但資深投資人在此波修正中仍老神在在，顯示對後市仍有信心。</li>
+            </ul>
+            <div class="conclusion-banner">
+                📌 <strong>結論：</strong>利用市場修正期觀察哪些股票或族群最抗跌或最快反彈，它們很可能是下一波行情的領頭羊。同時，保持穩定的投資心態至關重要。
+            </div>
         </div>
-        <h3>背景/原因：</h3>
-        <p>產業人士已觀察到被動元件的缺口，但市場曾認為擴產簡單，然而實際情況是擴產速度難以追上需求。</p>
-        <h3>核心論點：</h3>
-        <ul>
-            <li>**擴產緩不濟急**：被動元件擴產雖相對容易，但短期內無法滿足AI驅動的暴增需求，需要時間。</li>
-            <li>**搶貨潮將至**：一旦大廠正式宣布漲價，採購為避免後續更高漲幅，將加速搶貨，導致需求瞬間暴增。</li>
-            <li>**借鏡記憶體、CCL、載板**：日韓廠商在擴產態度上較為保守，或因用量過大導致擴產不足，加劇供應鏈緊張。</li>
-            <li>**AI驅動的Disruption**：AI對供應鏈的影響日益嚴重且廣泛，最終會反映在基本面，即使短期有盤整或鬼故事，缺就是缺。</li>
-        </ul>
-        <blockquote>
-            擴產也沒辦法在短期內去壓制掉這一些需求的暴增導致的漲價。…當這個事情發生的時候，其實它的那個速度會是很快的。
-        </blockquote>
-        <span class="conclusion">📌 **被動元件擴產速度難以追上AI驅動的需求暴增，搶貨潮將加劇漲價趨勢，供應鏈緊繃恐持續，最終基本面將反映此狀況。**</span>
-    </div>
 
-    <div class="card" id="card-9">
-        <div class="card-header">
-            <h2 class="card-title">新AI題材與Power Components</h2>
-            <span class="card-number">9/10</span>
+        <!-- 卡 9：盲點 / 補充 -->
+        <div class="card" id="card-9">
+            <span class="card-number">#9/10</span>
+            <span class="tag">主持人觀點</span>
+            <h2>主持人盲點與補充</h2>
+            <h3>主持人個人偏好造成的偏誤：</h3>
+            <ul>
+                <li><strong>對跌深股興趣不高：</strong>主持人明確表示不喜歡跌深反彈股，偏好追逐漲多的強勢股，甚至會等到跌深股突破下降趨勢或創新高才考慮介入。這是一種動能投資策略，可能錯失部分價值型投資機會，但也有效避開價值陷阱。</li>
+                <li><strong>對遊戲產業的浪漫情懷：</strong>對小男資本投資的台灣遊戲團隊抱持高度熱情與信心，認為在AI時代開發工具變多、生產力加強，應能搭上順風車。這份情感可能使其對遊戲投資的風險評估略顯樂觀，儘管強調已做DD。</li>
+                <li><strong>對市場波動的淡然：</strong>由於部位成本拉得夠遠，主持人對近期市場下跌表現得相當淡定，甚至樂於進場承接跌停股。這種心態對於新進或資金水位較低的投資人而言，可能難以複製，需警惕「賺太多所以沒差」的個人化情境。</li>
+            </ul>
+            <h3>主持人沒講清楚的地方：</h3>
+            <ul>
+                <li><strong>老AI毛利率改善時間點：</strong>雖然主持人認為老AI毛利率問題是短期現象，但並未具體說明預期何時能看到改善，以及改善的幅度是否足以抵銷資金面壓力。</li>
+                <li><strong>被動元件缺口具體數據：</strong>提及「缺口可能還蠻大」，但未提供具體的供需缺口數據或預估，讓讀者難以量化判斷。</li>
+                <li><strong>台積電資金排擠的量化影響：</strong>雖預期投信將增持台積電，但未量化說明預計有多少資金會轉向，以及對其他中小型股的具體衝擊程度。</li>
+            </ul>
+            <div class="conclusion-banner">
+                📌 <strong>結論：</strong>主持人觀點具鮮明個人風格，投資人應理解其偏好，並補充市場數據以進行更全面的判斷。
+            </div>
         </div>
-        <h3>背景/原因：</h3>
-        <p>除了被動元件，市場上仍有多元且具潛力的AI相關題材值得關注，特別是電源管理元件。</p>
-        <h3>核心論點：</h3>
-        <ul>
-            <li>**光通訊**：持續看好「New AI」相關的光通硬體，是AI時代的核心基礎設施。</li>
-            <li>**成熟製程**：Legacy AI（傳統AI）領域狀態良好，但需區分偏向消費性（僅補庫存）與非消費性（需求穩健）的應用。</li>
-            <li>**Power Components (電源管理元件)**：新的電源櫃需求大增，帶動離散元件表現優異。</li>
-            <li>**美系大廠漲價**：美系大廠已持續漲價，且日本<code>羅姆 (6963.JP)</code> 也預計發出漲價信，確立Power Components的漲價趨勢。</li>
-        </ul>
-        <blockquote>
-            我們看到Legacy這邊是狀態很好嘛。那只是Legacy裡面偏向Consumer的，我們沒有這麼看好的原因，認為它只是一個補庫存的行動。…羅姆很快就要看到漲價信出來了。所以呢，在Power這邊也可以注意啦。
-        </blockquote>
-        <span class="conclusion">📌 **AI時代驅動光通訊、成熟製程（非消費性）及電源管理元件 (Power Components) 需求，美系與日系大廠漲價確立其趨勢。**</span>
-    </div>
 
-    <div class="card" id="card-10">
-        <div class="card-header">
-            <h2 class="card-title">本集操作觀察與風險提醒</h2>
-            <span class="card-number">10/10</span>
+        <!-- 結尾卡：本週行動清單 -->
+        <div class="card action-list">
+            <span class="card-number">#10/10</span>
+            <h2>本週行動清單</h2>
+            <h3>觀察名單 (3-5 檔，附觀察理由)</h3>
+            <ul>
+                <li><span class="ticker">台積電 <code>2330</code></span>：觀察投信買盤是否持續放大，及其對股價的支撐力道。</li>
+                <li>被動元件相關（如<span class="ticker">國巨 <code>2327</code></span>、<span class="ticker">華新科 <code>2492</code></span>）：密切關注大廠是否發出停止接單或大幅漲價信號，確認產業趨勢。</li>
+                <li>資安軟體股（如<span class="ticker">CrowdStrike <code>CRWD</code></span>）：觀察其在美股修正後的抗跌性與是否持續創新高，確認其領先地位。</li>
+                <li>電源管理元件相關（如<span class="ticker">台達電 <code>2308</code></span>、<span class="ticker">光寶科 <code>2301</code></span>）：追蹤美系與日系大廠（如<span class="ticker">羅姆 <code>6963.JP</code></span>）的漲價進度，評估AI電源櫃需求帶來的長期效益。</li>
+                <li>光通訊與成熟製程相關標的：持續關注這些主持人偏好的題材，尋找潛在的投資機會。</li>
+                <li>修正後率先反彈的強勢股：在下週市場回穩後，識別那些跌幅最小或最快站回來的族群或個股，作為下一波潛在主流。</li>
+            </ul>
+            <h3>不該做什麼 (3 點，避免衝動)</h3>
+            <ul>
+                <li><strong>❌ 恐慌性殺出：</strong>避免因短期市場回檔而盲目停損，特別是對於成本已拉開的部位。</li>
+                <li><strong>❌ 追逐跌深股：</strong>在未確認基本面反轉或技術面突破前，避免介入跌幅過大的股票，以防落入價值陷阱。</li>
+                <li><strong>❌ 輕易改變看法：</strong>避免因短線行情波動而頻繁調整投資策略，應堅守經過深思熟慮的長期判斷。</li>
+            </ul>
         </div>
-        <h3>本集操作觀察：</h3>
-        <ul>
-            <li>**修正為汰弱留強時機**：市場修正提供重新審視持股、識別下一波主流的機會。</li>
-            <li>**資金流向台積電 (2330)**：金管會放寬上限將導致投信資金持續流入，可能排擠其他中小型股。</li>
-            <li>**AI驅動供應鏈變革**：AI對硬體（如光通、被動元件、Power Components）的需求持續擴大，導致漲價與供應鏈緊繃。</li>
-            <li>**美股軟體與資安股的機會**：美股已進行汰弱留強，創新高軟體與資安股值得關注。</li>
-            <li>**長期投資心態**：面對波動，若成本拉開，可採取淡然面對、逢跌加碼的策略，避免追高殺低。</li>
-        </ul>
-        <h3>風險提醒：</h3>
-        <ul>
-            <li>**新手恐慌與追高殺低**：市場新人易受短期波動影響，導致不理性操作，最終可能一無所獲。</li>
-            <li>**價值陷阱**：跌深股不一定有投資價值，需警惕反彈後的價值陷阱。</li>
-            <li>**供應鏈失衡風險**：被動元件等關鍵零組件的漲價與缺貨，可能影響下游產業成本與出貨。</li>
-        </ul>
-        <blockquote>
-            這個世界呢，你拉長看，不可能每個人都賺錢啦。所以當每個人都在賺錢的時候，像我們前面講的，天罰一定會發生。那天下發生的時候，其實就是淡然的去面對它。
-        </blockquote>
     </div>
 
     <a href="#top" class="fixed-button">↑ 目錄</a>
