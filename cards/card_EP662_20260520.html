@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP662 筆記</title>
+<style>
+  body {
+    font-family: 'Noto Sans TC', 'PingFang TC', -apple-system, sans-serif;
+    background: #f5f5f0;
+    margin: 0;
+    padding: 24px 16px 80px;
+    color: #1f2937;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+  .card {
+    background: #fefefe;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .card-no {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 12px;
+    color: #94a3b8;
+  }
+  .card h1 {
+    color: #0f172a;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  .card h2 {
+    color: #0f172a;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0 0 16px;
+    padding-right: 60px;
+  }
+  .card .date {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .insights-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .insights-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .insights-list li:last-child { border-bottom: none; }
+  .insights-list a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .insights-list a:hover { text-decoration: underline; }
+  .section-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    margin: 16px 0 8px;
+  }
+  .mechanism {
+    background: #f8fafc;
+    border-left: 3px solid #2563eb;
+    padding: 14px 16px;
+    border-radius: 6px;
+    margin: 12px 0;
+    font-size: 15px;
+  }
+  .ticker {
+    display: inline-block;
+    background: #f1f5f9;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin: 3px 4px 3px 0;
+    color: #0f172a;
+  }
+  .ticker code {
+    background: #e2e8f0;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 4px;
+    color: #1e293b;
+  }
+  .ticker-group {
+    margin: 10px 0;
+  }
+  .ticker-group-label {
+    font-size: 13px;
+    color: #475569;
+    margin-right: 6px;
+    font-weight: 500;
+  }
+  .risk {
+    background: #fef9c3;
+    border-left: 3px solid #ca8a04;
+    padding: 14px 16px;
+    border-radius: 6px;
+    margin: 12px 0;
+    font-size: 15px;
+  }
+  .action {
+    background: #ea580c;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin: 16px 0 0;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .action::before { content: "📌 "; }
+  blockquote {
+    border-left: 4px solid #ea580c;
+    background: #fff7ed;
+    padding: 12px 18px;
+    margin: 14px 0;
+    font-style: italic;
+    color: #7c2d12;
+    border-radius: 0 6px 6px 0;
+    font-size: 14px;
+  }
+  ul { padding-left: 22px; margin: 8px 0; }
+  ul li { margin-bottom: 6px; }
+  strong { color: #0f172a; }
+  .bullish { color: #16a34a; font-weight: 600; }
+  .bearish { color: #dc2626; font-weight: 600; }
+  .neutral { color: #6b7280; font-weight: 600; }
+  .floating-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2563eb;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    font-size: 14px;
+    z-index: 999;
+  }
+  .checklist {
+    background: #f0fdf4;
+    border-left: 3px solid #16a34a;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 12px 0;
+  }
+  .avoid {
+    background: #fef2f2;
+    border-left: 3px solid #dc2626;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 12px 0;
+  }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="container">
+
+  <div class="card" id="card-1">
+    <span class="card-no">1/8</span>
+    <h1>股癌 EP662 筆記</h1>
+    <div class="date">2026/5/16 · 思考重組筆記</div>
+    <div class="section-label">本集核心洞見</div>
+    <ul class="insights-list">
+      <li><a href="#card-2">大跌沒減碼還加碼跌停股：因為這次部位已經拉離成本太遠</a></li>
+      <li><a href="#card-3">金管會放寬台積電上限，是這波最關鍵的籌碼面變化</a></li>
+      <li><a href="#card-4">老 AI 後面毛利會回來，但主持人不會介入</a></li>
+      <li><a href="#card-5">被動元件擴產比市場想的難——產業人士早講了，市場現在才改口</a></li>
+      <li><a href="#card-6">美股軟體股要追的是「準備創新高」的，不是跌深反彈</a></li>
+    </ul>
+  </div>
+
+  <div class="card" id="card-2">
+    <span class="card-no">2/8</span>
+    <h2>大跌沒減碼還加碼跌停股：因為這次部位已經拉離成本太遠</h2>
+
+    <div class="section-label">🎯 核心主張</div>
+    <p>禮拜五台股大跌，主持人反常沒降槓桿，看到跌停反而加碼。這跟以往「市場恐慌就減倉」的紀律相反，背後是<span class="bullish">分散倉位 + 拉離成本</span>的進階策略。</p>
+
+    <div class="section-label">🔍 機制：為什麼這次不一樣</div>
+    <div class="mechanism">
+      今年噴太遠 → 成本拉得夠遠 → 跌三根都跌不回成本 → 帳上仍是大賺 → 心理壓力小 → 反而能扛過完整回檔吃完波段。<br><br>
+      <strong>關鍵不是「跌不跌」，是「跌完還在不在賺」</strong>。如果部位佔比小或拉離成本太遠，跌三根都沒事，那這種情境主動減碼反而會錯失下一波。
+    </div>
+
+    <div class="section-label">📊 主持人實際動作</div>
+    <p>禮拜五跌停加碼鎖住跌停的<span class="ticker">被動元件族群</span>，心中踏實，因為已經明確識別到族群機會。動能部位則沒動。</p>
+
+    <div class="section-label">⚠️ 反向觀點 / 風險</div>
+    <div class="risk">
+      <strong>這套不適合大部分人</strong>。主持人前提是「今年已大賺、部位拉離成本」。一般散戶今年才入場、成本就在附近的，跌停加碼是在賭，不是策略。盲目模仿會死。
+    </div>
+
+    <blockquote>1%多2%對你們來說叫跌死，你們真的遇到那種空頭的時候你們一定死的，這就是一個正常能量釋放而已（EP662）</blockquote>
+
+    <div class="action">如果你今年已大賺、部位拉離成本：可參考主持人邏輯不減碼。如果你成本就在附近：紀律照走、減碼為主，這集不是教你抄底</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <span class="card-no">3/8</span>
+    <h2>金管會放寬台積電上限，是這波最關鍵的籌碼面變化</h2>
+
+    <div class="section-label">🎯 核心主張</div>
+    <p>金管會放寬投信持有<span class="ticker">台積電 <code>2330</code></span>上限，過去幾集已開始發酵，但被外資倒貨壓住。<span class="bullish">真正效應約一個月後浮現</span>，市場錢有限，要去台積電就要從別處提款。</p>
+
+    <div class="section-label">🔍 機制：兩種投信、兩種速度</div>
+    <div class="mechanism">
+      <strong>第一批（沒到上限的投信）</strong>：今天就能直接買，反應最快。<br>
+      <strong>第二批（已到上限的投信）</strong>：要修改基金條款、變更募發數，流程 2-3 個月甚至 4-5 個月。<br><br>
+      但現在快馬加鞭辦，一個月後第二批陸續進場 → 增持力道加速 → 資金從別處提走流入台積電。
+    </div>
+
+    <div class="section-label">📊 被提款的會是誰</div>
+    <div class="ticker-group">
+      <span class="ticker-group-label">最危險：</span>
+      <span class="ticker">投信持股比高的中小股</span>
+      <span class="ticker">老 AI 族群</span>
+    </div>
+    <p>這些前面壓力測試已跌過一波，這波修正後若沒辦法再創高，停利潮會出現。</p>
+
+    <div class="section-label">⚠️ 反向觀點 / 風險</div>
+    <div class="risk">
+      外資若繼續倒貨，台積電拉抬效果還是會被壓住。主持人講「要不是外資前面亂倒貨，台積電早就走出去」——所以這個籌碼題材的兌現速度，看外資臉色。
+    </div>
+
+    <div class="action">追蹤一個月後投信對台積電的持倉變化（公開資料可查）；同時觀察自己的中小股部位有沒有投信持股偏高，若有要提防停利潮</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <span class="card-no">4/8</span>
+    <h2>老 AI 後面毛利會回來，但主持人不會介入</h2>
+
+    <div class="section-label">🎯 核心主張</div>
+    <p>市場用毛利不如預期解釋<span class="bearish">老 AI 大跌</span>，主持人認為這是短期現象（下一代研發投入），長線毛利會爬回來。但他<strong>還是不買</strong>——這是「就算我看對基本面也不參與」的重要心法。</p>
+
+    <div class="section-label">🔍 機制：基本面 vs 籌碼面誰大</div>
+    <div class="mechanism">
+      <strong>基本面（毛利）</strong>：短期受研發拖累，長期會修復 → 看似有撿便宜機會。<br>
+      <strong>籌碼面（資金流向）</strong>：投信錢要搬去台積電 → 老 AI 沒人接 → 短期內沒人想幫解套。<br><br>
+      <strong>結論：基本面利多碰上籌碼面利空，籌碼會贏</strong>。即便你看對毛利會回來，你也要等錢回來才有人幫你抬轎。
+    </div>
+
+    <div class="section-label">💡 衍生心法：市場直接幫你做太弱流強</div>
+    <blockquote>市場會直接幫你挑好說誰有可能是下一波的老大，當你去注意到這個族群性的時候，那一般來講就八九不離十就是那個東西（EP662）</blockquote>
+    <p>修正期不要硬猜誰會回來，看誰先爬回來、跌最少、衝最快，那個就是新主流。</p>
+
+    <div class="action">不要進場接老 AI 跌深的；觀察修正過後第一波反彈最快的族群（可能就是被動元件、Power、台積電本身），那才是下一波主流</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <span class="card-no">5/8</span>
+    <h2>被動元件擴產比市場想的難——產業人士早講了，市場現在才改口</h2>
+
+    <div class="section-label">🎯 核心主張</div>
+    <p>一兩個月前產業人士告訴主持人 passive 缺口很大，但市場當時認為擴產超簡單沒料。<span class="bullish">現在市場開始改口</span>——這是「資訊時間差」帶來的 alpha。</p>
+
+    <div class="section-label">🔍 機制：漲價的兩種模式，哪種更可怕</div>
+    <div class="mechanism">
+      <strong>模式 A（傳統）</strong>：大廠發漲價信 → 客戶提前下單囤貨 → 缺貨擴大 → 全產業跟漲。<br>
+      <strong>模式 B（更可怕）</strong>：不發漲價信，直接走現貨漲價，類似 2018 被動元件之亂。<br><br>
+      <span class="ticker">Panasonic <code>6752.T</code></span> 6 月可能宣布，業界已聽到漲幅約三成，電阻產品實際漲三成。若大廠進入<strong>「停止接單」</strong>狀態，就是趨勢正式確認的訊號。
+    </div>
+
+    <div class="section-label">📊 關聯個股清單</div>
+    <div class="ticker-group">
+      <span class="ticker-group-label">日廠領頭：</span>
+      <span class="ticker">Panasonic <code>6752.T</code></span>
+      <span class="ticker">羅姆 <code>6963.T</code></span>
+    </div>
+    <div class="ticker-group">
+      <span class="ticker-group-label">缺口最嚴重：</span>
+      <span class="ticker">MLCC 族群</span>
+      <span class="ticker">鋁電容族群</span>
+    </div>
+    <div class="ticker-group">
+      <span class="ticker-group-label">成本驅動漲價：</span>
+      <span class="ticker">鉭電容</span>
+      <span style="color:#6b7280;font-size:13px;">（用大量銀，銀漲就跟著漲）</span>
+    </div>
+    <div class="ticker-group">
+      <span class="ticker-group-label">另一條線：</span>
+      <span class="ticker">Power 元件 / 離散元件</span>
+      <span style="color:#6b7280;font-size:13px;">（新電源櫃需求）</span>
+    </div>
+
+    <div class="section-label">⚠️ 反向觀點 / 風險</div>
+    <div class="risk">
+      <strong>已聊數月別追高</strong>——這族群主持人已聊好幾個月，現在才上車已經不便宜。如果這時新建部位很容易受傷，要等回檔或新催化劑（如大廠停止接單訊號）再進場。
+    </div>
+
+    <div class="action">不是現在追高，是等下次回檔；持續追蹤羅姆漲價信、Panasonic 是否發漲價信、有沒有大廠進入停止接單狀態</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <span class="card-no">6/8</span>
+    <h2>美股軟體股要追的是「準備創新高」的，不是跌深反彈</h2>
+
+    <div class="section-label">🎯 核心主張</div>
+    <p>主持人有<span class="bullish">hybrid 動能仔色彩</span>——不買跌爛的軟體股（有價值陷阱），喜歡像 <span class="ticker">CrowdStrike <code>CRWD</code></span> 那種要創新高的。資安股反指標：之前市場擔心微軟 AI 出來資安股會死，結果一堆創新高。</p>
+
+    <div class="section-label">🔍 機制：跌深陷阱 vs 創新高動能</div>
+    <div class="mechanism">
+      <strong>跌深的軟體股</strong>：通常是因基本面真的有問題（不只情緒），即便反彈也彈不遠，容易再破底。<br>
+      <strong>準備創新高的</strong>：代表市場已用價格表態買單，籌碼乾淨，繼續往上機率高。<br><br>
+      所以策略是：就算對某個跌深個股有興趣，也<strong>等它突破下降趨勢或準備新高時再追</strong>，不是跌深去接。
+    </div>
+
+    <div class="section-label">📊 本集點名標的</div>
+    <div class="ticker-group">
+      <span class="ticker-group-label">看多：</span>
+      <span class="ticker">CrowdStrike <code>CRWD</code></span>
+      <span style="color:#6b7280;font-size:13px;">（資安股代表，要創新高）</span>
+    </div>
+    <div class="ticker-group">
+      <span class="ticker-group-label">中性觀察：</span>
+      <span class="ticker">Figma <code>FIG</code></span>
+      <span style="color:#6b7280;font-size:13px;">（歷史大量但非主持人偏好）</span>
+      <span class="ticker">Atlassian <code>TEAM</code></span>
+      <span style="color:#6b7280;font-size:13px;">（軟體股集體表態值得看）</span>
+    </div>
+
+    <div class="action">建美股觀察名單時，過濾條件改成「近 52 週新高 ± 5%」而非「跌幅排行榜」；資安股可優先看</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <span class="card-no">7/8</span>
+    <h2>本集核心心法整理</h2>
+
+    <div class="section-label">💡 四個 high severity 心法</div>
+
+    <p><strong>1. 忽略沉默成本</strong></p>
+    <blockquote>不要說我曾經買100塊現在要回100塊再賣...要看從現在我去哪個地方最快可以再讓我翻倍（EP662）</blockquote>
+
+    <p><strong>2. 不要因行情變化就轉變看法</strong></p>
+    <div class="mechanism" style="background:#fff7ed;border-color:#ea580c;">
+      臉打爆是小事，最怕是<strong>最後什麼都沒買到</strong>。看法要建立在事實上，行情只是價格而已。
+    </div>
+
+    <p><strong>3. 盤面比新聞準</strong></p>
+    <div class="mechanism" style="background:#fff7ed;border-color:#ea580c;">
+      該漲沒漲就是訊號。問「戰爭沒結束會不會缺油」？看油價就好——該噴沒噴 = 早就反映完 = 後面打不打不重要。
+    </div>
+
+    <p><strong>4. 天罰必然發生</strong></p>
+    <div class="mechanism" style="background:#fff7ed;border-color:#ea580c;">
+      每個人都賺錢時，市場一定會幫你做修正。所以漲到大家都樂時要警覺，跌到大家罵時可能機會。
+    </div>
+  </div>
+
+  <div class="card" id="card-8">
+    <span class="card-no">8/8</span>
+    <h2>本週行動清單</h2>
+
+    <div class="section-label">✅ 觀察名單</div>
+    <div class="checklist">
+      <ul>
+        <li><strong>台積電 (2330)</strong>：追蹤一個月後投信增持力道（公開資料）</li>
+        <li><strong>被動元件族群（MLCC、鋁電容）</strong>：不追高，等回檔或大廠停止接單訊號</li>
+        <li><strong>羅姆 (6963.T) / Panasonic (6752.T)</strong>：等漲價信是否真的發出</li>
+        <li><strong>CrowdStrike (CRWD)</strong>：等突破或回踩支撐</li>
+        <li><strong>自己手上的中小股</strong>：檢查投信持股比例，比例高的要提防停利潮</li>
+      </ul>
+    </div>
+
+    <div class="section-label">❌ 不該做什麼</div>
+    <div class="avoid">
+      <ul>
+        <li><strong>不要進場接老 AI 跌深的</strong>——基本面就算回來，籌碼面也沒人幫你抬</li>
+        <li><strong>不要因為主持人說「跌停加碼」就跟著抄底</strong>——他前提是部位已拉離成本，你沒有</li>
+        <li><strong>不要追高被動元件</strong>——這族群已聊數月，新建部位容易受傷</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<a href="#top" class="floating-top">↑ 目錄</a>
+</body>
+</html>
