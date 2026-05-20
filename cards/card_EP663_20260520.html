@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP663 筆記</title>
+<style>
+  body {
+    font-family: 'Noto Sans TC', 'PingFang TC', -apple-system, sans-serif;
+    background: #f5f5f0;
+    margin: 0;
+    padding: 24px 16px 80px;
+    color: #1f2937;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+  .card {
+    background: #fefefe;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .card-no {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 12px;
+    color: #94a3b8;
+  }
+  .card h1 {
+    color: #0f172a;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  .card h2 {
+    color: #0f172a;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0 0 16px;
+    padding-right: 60px;
+  }
+  .card .date {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .insights-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .insights-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .insights-list li:last-child { border-bottom: none; }
+  .insights-list a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .insights-list a:hover { text-decoration: underline; }
+  .section-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    margin: 16px 0 8px;
+  }
+  .mechanism {
+    background: #f8fafc;
+    border-left: 3px solid #2563eb;
+    padding: 14px 16px;
+    border-radius: 6px;
+    margin: 12px 0;
+    font-size: 15px;
+  }
+  .ticker {
+    display: inline-block;
+    background: #f1f5f9;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin: 3px 4px 3px 0;
+    color: #0f172a;
+  }
+  .ticker code {
+    background: #e2e8f0;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 4px;
+    color: #1e293b;
+  }
+  .ticker-group {
+    margin: 10px 0;
+  }
+  .ticker-group-label {
+    font-size: 13px;
+    color: #475569;
+    margin-right: 6px;
+    font-weight: 500;
+  }
+  .risk {
+    background: #fef9c3;
+    border-left: 3px solid #ca8a04;
+    padding: 14px 16px;
+    border-radius: 6px;
+    margin: 12px 0;
+    font-size: 15px;
+  }
+  .action {
+    background: #ea580c;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin: 16px 0 0;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .action::before { content: "📌 "; }
+  blockquote {
+    border-left: 4px solid #ea580c;
+    background: #fff7ed;
+    padding: 12px 18px;
+    margin: 14px 0;
+    font-style: italic;
+    color: #7c2d12;
+    border-radius: 0 6px 6px 0;
+    font-size: 14px;
+  }
+  ul { padding-left: 22px; margin: 8px 0; }
+  ul li { margin-bottom: 6px; }
+  strong { color: #0f172a; }
+  .bullish { color: #16a34a; font-weight: 600; }
+  .bearish { color: #dc2626; font-weight: 600; }
+  .neutral { color: #6b7280; font-weight: 600; }
+  .floating-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2563eb;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    font-size: 14px;
+    z-index: 999;
+  }
+  .action-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .action-col {
+    padding: 14px 18px;
+    border-radius: 6px;
+  }
+  .action-col h4 {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .col-watch { background: #f0fdf4; border-left: 3px solid #16a34a; }
+  .col-watch h4 { color: #16a34a; }
+  .col-trigger { background: #eff6ff; border-left: 3px solid #2563eb; }
+  .col-trigger h4 { color: #2563eb; }
+  .col-avoid { background: #fef2f2; border-left: 3px solid #dc2626; }
+  .col-avoid h4 { color: #dc2626; }
+  .disclosure-box {
+    background: #fef3c7;
+    border-left: 3px solid #d97706;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  .disclosure-label {
+    font-size: 13px;
+    color: #92400e;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="container">
+
+  <div class="card" id="card-1">
+    <span class="card-no">1/7</span>
+    <h1>股癌 EP663 筆記</h1>
+    <div class="date">2026/5/20 · 思考重組筆記</div>
+    <div class="section-label">本集核心洞見</div>
+    <ul class="insights-list">
+      <li><a href="#card-2">被動元件:大廠掃現貨不是炒股,是看到供需失衡的合理行為</a></li>
+      <li><a href="#card-3">Panasonic 漲價信實發+高階斷供,2018 大潮劇本重演</a></li>
+      <li><a href="#card-4">老 AI 不死,只是換代 — Broadcom 那條 fish 沒不見</a></li>
+      <li><a href="#card-5">高位行情:不評論個股估值,鎖定產業面聊</a></li>
+      <li><a href="#card-6">「看遠不看跑道」 — 短期軟掉的長線贏家別逃</a></li>
+    </ul>
+  </div>
+
+  <div class="card" id="card-2">
+    <span class="card-no">2/7</span>
+    <h2>被動元件:大廠掃現貨不是炒股,是看到供需失衡的合理行為</h2>
+
+    <div class="section-label">🎯 核心主張</div>
+    <p>市場最近出現大廠去現貨市場掃被動元件、台廠買日本電容貼牌出貨。<span class="bearish">空頭把這當成炒股</span>,但<span class="bullish">站老闆本位思考,看到供需失衡又知道後面要漲價,當然要掃光</span>。</p>
+
+    <div class="section-label">🔍 機制:為什麼掃貨是合理的</div>
+    <div class="mechanism">
+      你是水果商,已知某水果那邊屌缺、價格在漲、後面自己也要漲價。<br>
+      看到外面其他水果攤還在賣便宜的 → <strong>你 100% 會把它掃光</strong>。<br><br>
+      被動元件「貼牌轉手」其實跟記憶體模組廠買顆粒組裝是同一個邏輯。
+      <strong>不要把每個操作都當白癡 — 大空頭思維才會這樣解釋市場</strong>。
+    </div>
+
+    <div class="section-label">📊 關聯證據</div>
+    <div class="ticker-group">
+      <span class="ticker-group-label">已表態:</span>
+      <span class="ticker">Panasonic <code>6752.T</code></span>
+      <span style="color:#6b7280;font-size:13px;">(對部分客戶實發漲價信)</span>
+    </div>
+    <div class="ticker-group">
+      <span class="ticker-group-label">通路商發聲:</span>
+      <span class="ticker">密旺時(高階料號斷供)</span>
+    </div>
+
+    <div class="action">不要用「炒股」否定漲價趨勢的真實性;業內 + 通路雙重確認時就是真訊號</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <span class="card-no">3/7</span>
+    <h2>Panasonic 漲價信實發+高階斷供,2018 大潮劇本重演</h2>
+
+    <div class="section-label">🎯 核心主張</div>
+    <p>上集講「不會看到漲價信」但<span class="bullish">今天漲價信跑出來了</span>(部分客戶);更狠的是 Panasonic 把產能全部轉做高階 AI,<strong>原本為衝產能利用率做的鳥料直接不做</strong>。</p>
+
+    <div class="section-label">🔍 機制:漲價的兩種可能路徑</div>
+    <div class="mechanism">
+      <strong>路徑 A(2018 大潮模式)</strong>:大廠不發漲價信 → 每個月競標 → 價高者得。<br>
+      <strong>路徑 B(常規模式)</strong>:發 notice、客戶提前下單囤貨 → 缺貨擴大。<br><br>
+      目前 Panasonic 走 A 模式(只對部分客戶發);老大漲 30%,跟隨者可漲 25-28%。
+      <strong>高階供需強大時老大會放棄低階補產能 → 排擠效應反推台系受惠</strong>。
+    </div>
+
+    <div class="section-label">📊 個股族群</div>
+    <div class="ticker-group">
+      <span class="ticker-group-label">族群整體:</span>
+      <span class="ticker">MLCC</span>
+      <span class="ticker">鋁電容 L-CAP</span>
+      <span class="ticker">電阻</span>
+      <span class="ticker">電感</span>
+    </div>
+    <div class="ticker-group">
+      <span class="ticker-group-label">日廠領頭:</span>
+      <span class="ticker">Panasonic <code>6752.T</code></span>
+    </div>
+    <div class="ticker-group">
+      <span class="ticker-group-label">擴產警訊已現(僅 MLCC 高壓):</span>
+      <span style="color:#6b7280;font-size:13px;">其他被動元件廠都沒大動作</span>
+    </div>
+
+    <div class="section-label">⚠️ 反向觀點 / 風險</div>
+    <div class="risk">
+      <strong>後續觀察大廠集體擴產訊號</strong>。目前紀律性還在(類比記憶體不擴產劇本),但只要看到大規模擴產動向,供需問題會相對快解決,泡沫劇本就走不下去。
+    </div>
+
+    <div class="action">追蹤大廠擴產動向(尤其鋁電容、低階 MLCC);Panasonic 是否擴大發漲價信給全客戶</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <span class="card-no">4/7</span>
+    <h2>老 AI 不死,只是換代 — Broadcom 那條 fish 沒不見</h2>
+
+    <div class="section-label">🎯 核心主張</div>
+    <p>SemiAnalysis 報告說 Broadcom 在 Hummfish 對應的那條 fish 不見了,把 V10 IceFish 提早做。主持人考察結果<span class="bullish">不完全認同</span> — SoundFish 之後應該有「大顆 SoundFish」(兩晶片雙拼 substrate,類似蘋果 Ultra)。</p>
+
+    <div class="section-label">🔍 機制:老 AI 後續產品線</div>
+    <div class="mechanism">
+      <strong>傳統認知</strong>:Broadcom 每代 ASIC 一條魚對應 MTK 一條魚(V7/V8/V9 都是)。<br>
+      <strong>新發現</strong>:Hummfish 對應的 Broadcom 那條沒了 → 看似 Broadcom 縮編。<br>
+      <strong>主持人解讀</strong>:不是縮編,是改變做法 — 大顆 SoundFish 用 substrate 雙拼兩晶片,工程難度高但仍在 roadmap。<br><br>
+      <strong>結論:老 AI 現在資金不喜歡,但產品線故事還在</strong>。等大家開始討論這顆晶片時,被嫌棄的標的會回來。
+    </div>
+
+    <div class="section-label">📊 經典復活案例(教戰)</div>
+    <div class="ticker-group">
+      <span class="ticker">AP Memory 愛普 <code>6531</code></span>
+    </div>
+    <p style="font-size:14px;color:#475569;margin-top:8px;">
+      前面被冷落 → Google TPU 紅起來後因 IPD(integrated passive device)被重新注意。
+      <strong>前面軟的東西有機會在後面復活</strong>,別因短期資金流向就否定故事。
+    </p>
+
+    <div class="section-label">⚠️ 反向觀點 / 風險</div>
+    <div class="risk">
+      <strong>現在接刀稍危險</strong>。市場資金有去做變動,即便基本面 OK,沒人接的時候會繼續軟;要等催化劑出現再進。
+    </div>
+
+    <div class="action">老 AI 觀察名單先列起來:Broadcom 系、AP Memory(IPD);別追、別接刀,等資金回頭訊號</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <span class="card-no">5/7</span>
+    <h2>高位行情:不評論個股估值,鎖定產業面聊</h2>
+
+    <div class="section-label">🎯 核心主張</div>
+    <p>被動元件股價已到相對高位,<span class="bullish">主持人這集明確表態不再評論個股</span>,只談產業面。怕在山頂喊到害人接刀(即便前面從低就開始講)。</p>
+
+    <div class="section-label">🔍 機制:為什麼緘默</div>
+    <div class="mechanism">
+      <strong>前面從低位 cover</strong> → 沒問題,有 track record。<br>
+      <strong>到山頂還在喊個股名稱</strong> → 即便資訊正確,新接刀的會被套,聽眾只會記得「他在高檔喊」。<br><br>
+      所以主持人現在的處理方式:<strong>聊產業趨勢、漲價邏輯、防守訊號,個股估值閉嘴</strong>。
+    </div>
+
+    <div class="section-label">💡 衍生心法 — 多頭市場特徵</div>
+    <p style="font-size:14px;line-height:1.8;">
+      ✅ 部分東西軟、部分東西強 = 健康輪動<br>
+      ❌ 萬物齊噴(4 月那種) = 反而要擔心<br>
+      ✅ 強勢股還在 = 不會全面崩盤<br>
+      ⚠️ 鎖漲停的雜魚變多(隔天連開高都做不到) = 劣質籌碼開始亂砸
+    </p>
+
+    <div class="action">聽眾自己讀懂訊號就好;不要期待主持人 babysit 每隻表弟;手上有部位的自己盯防守訊號</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <span class="card-no">6/7</span>
+    <h2>「看遠不看跑道」 — 短期軟掉的長線贏家別逃</h2>
+
+    <div class="section-label">🎯 核心主張</div>
+    <p>聽眾問「光通何時聊?最近軟掉」。主持人:<span class="bearish">這根本沒真正軟</span>。市場養出一群跌 1% 就喊大跌的人,後面會受傷。<strong>長線贏家短期回檔不該當逃命訊號</strong>。</p>
+
+    <div class="section-label">🔍 機制:Astera Labs 案例(必記)</div>
+    <div class="mechanism">
+      Astera Labs <code>ALAB</code> 從高檔跌到 100 塊。<br>
+      <strong>那段時間大家怎麼說它?</strong> — 罵到爆、認為它不行了。<br>
+      然後呢? <strong>現在飆回新高</strong>。<br><br>
+      <strong>飛行 Landing 看遠方不看跑道</strong>。注意產業 Kager,過程震盪盡可能忽略。要吃大魚就必須這樣。
+    </div>
+
+    <div class="section-label">💡 X 上人物識別心法</div>
+    <p style="font-size:14px;">
+      ❌ <strong>不看人爆牌</strong> — 散戶才在追蹤誰準誰不準<br>
+      ✅ <strong>看業內人士觀點</strong> — 業內悲觀但報價在漲 = 還會繼續噴<br>
+      🇰🇷🇯🇵 <strong>反串韓國/日本帳號識別</strong> — 太刻意 Cue 工商時報、券商報告 = 通常是台灣人反串
+    </p>
+
+    <div class="section-label">⚠️ 風險</div>
+    <div class="risk">
+      <strong>需要部位耐性 + 不要 OE 滿倉</strong>。如果你滿槓桿+融資,沒能力扛波段震盪,看遠的策略不適合你。Astera Labs 那種跌幅一般人扛不住。
+    </div>
+
+    <div class="action">光通族群繼續觀察名單,別逃別追高;X 上鎖定 3-5 個業內人士的產業評論,移除爆牌帳號</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <span class="card-no">7/7</span>
+    <h2>持倉警示 + 本週行動清單</h2>
+
+    <div class="disclosure-box">
+      <div class="disclosure-label">⭐ 持倉揭露</div>
+      <ul style="margin:0;font-size:14px;">
+        <li><strong>被動元件族群</strong>(MLCC / 鋁電容):長期持有,本波好報酬主力</li>
+        <li><strong>光通設備</strong>:前陣子 car 進去</li>
+        <li><strong>多檔已進處置股</strong>:盤中無法動,被動看戲</li>
+      </ul>
+      <p style="font-size:12px;color:#92400e;margin:8px 0 0;">
+        本集主持人沒有揭露具體買賣動作 — 緘默期狀態
+      </p>
+    </div>
+
+    <div class="action-grid">
+      <div class="action-col col-watch">
+        <h4>✅ 觀察名單</h4>
+        <ul style="margin:0;font-size:14px;">
+          <li><strong>Panasonic (6752.T)</strong>:漲價信是否擴大發給全客戶</li>
+          <li><strong>大廠擴產動向</strong>:鋁電容、低階 MLCC 任何擴產新聞</li>
+          <li><strong>AP Memory (6531)</strong>:IPD 故事復活案例;老 AI 復活先發</li>
+          <li><strong>光通族群</strong>:回檔過後是否反彈創新高</li>
+          <li><strong>Dario Amodei 言論</strong>:整天放雷後股價打不下去 = 底到了</li>
+        </ul>
+      </div>
+
+      <div class="action-col col-trigger">
+        <h4>🎯 進場訊號</h4>
+        <ul style="margin:0;font-size:14px;">
+          <li>業內人士集體悲觀但報價持續上漲</li>
+          <li>軟掉的個股出現量增止跌</li>
+          <li>強勢族群跌深(漲多回檔)後出現低吸機會</li>
+          <li>2025 漲多被砍到合理估值的長線贏家</li>
+        </ul>
+      </div>
+
+      <div class="action-col col-avoid">
+        <h4>❌ 不該做什麼</h4>
+        <ul style="margin:0;font-size:14px;">
+          <li><strong>不要追高被動元件</strong> — 主持人已不評論個股估值</li>
+          <li><strong>不要接老 AI 跌深的刀</strong> — 等資金回頭訊號</li>
+          <li><strong>不要看到 1-3% 回檔就喊大跌喊崩盤</strong></li>
+          <li><strong>不要追蹤誰爆牌</strong> — 沒營養</li>
+          <li><strong>不要 OE 滿倉</strong> — 看遠策略需要耐震能力</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<a href="#top" class="floating-top">↑ 目錄</a>
+</body>
+</html>

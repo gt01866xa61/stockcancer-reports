@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌月報 2026/05（EP656-EP663）</title>
+<style>
+  :root {
+    --bullish: #16a34a;
+    --bearish: #dc2626;
+    --watchful: #ca8a04;
+    --neutral: #6b7280;
+    --primary: #2563eb;
+    --bg: #f5f5f0;
+    --card: #fefefe;
+    --border: #e5e7eb;
+    --text: #0f172a;
+    --muted: #475569;
+  }
+  body {
+    font-family: 'Noto Sans TC', 'PingFang TC', -apple-system, sans-serif;
+    background: var(--bg);
+    margin: 0;
+    padding: 24px 16px 80px;
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    color: white;
+    padding: 28px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+  .header h1 { margin: 0 0 6px; font-size: 26px; font-weight: 700; }
+  .header .subtitle { opacity: 0.9; font-size: 14px; }
+  .kpi-bar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    background: var(--card);
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+  }
+  .kpi { text-align: center; padding: 8px 4px; }
+  .kpi-num { font-size: 22px; font-weight: 700; color: var(--primary); line-height: 1; }
+  .kpi-label { font-size: 11px; color: var(--muted); margin-top: 6px; }
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  .toc strong { color: var(--muted); margin-right: 8px; }
+  .toc a {
+    color: var(--primary);
+    text-decoration: none;
+    margin-right: 14px;
+    white-space: nowrap;
+  }
+  .toc a:hover { text-decoration: underline; }
+  .section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 16px;
+  }
+  .section h2 {
+    margin: 0 0 18px;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 10px;
+  }
+  .narrative {
+    background: linear-gradient(to right, #eff6ff, #fff);
+    border-left: 4px solid var(--primary);
+    padding: 18px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .narrative p { margin: 8px 0; }
+  .narrative strong { color: var(--primary); }
+  .hot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+  }
+  .hot-item {
+    background: #eff6ff;
+    border-left: 3px solid var(--primary);
+    padding: 10px 14px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hot-item .name { font-weight: 600; color: var(--text); font-size: 14px; }
+  .hot-item .count {
+    background: var(--primary);
+    color: white;
+    padding: 2px 9px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .stock-zone { margin-bottom: 18px; }
+  .stock-zone-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  .bullish-title { background: #dcfce7; color: var(--bullish); }
+  .bearish-title { background: #fee2e2; color: var(--bearish); }
+  .watchful-title { background: #fef9c3; color: var(--watchful); }
+  .stock-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .stock-pill {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .stock-pill.owned {
+    background: #fef3c7;
+    border-color: #fcd34d;
+    font-weight: 600;
+  }
+  .stock-pill .ticker-code {
+    color: var(--muted);
+    font-size: 11px;
+    margin-left: 4px;
+  }
+  .stock-pill .freq {
+    color: var(--muted);
+    font-size: 11px;
+    margin-left: 4px;
+  }
+  .owned-marker { color: #d97706; margin-right: 4px; }
+  .disc-group {
+    margin-bottom: 18px;
+  }
+  .disc-group-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  .disc-buy { background: #dcfce7; color: var(--bullish); }
+  .disc-sell { background: #fee2e2; color: var(--bearish); }
+  .disc-hold { background: #f1f5f9; color: var(--muted); }
+  .disc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .disc-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: top;
+  }
+  .ep-badge {
+    background: var(--primary);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .transition {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--watchful);
+  }
+  .transition-stock {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  .transition-seq {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    font-size: 12px;
+    align-items: center;
+  }
+  .seq-node {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .seq-bullish { background: #dcfce7; color: var(--bullish); }
+  .seq-bearish { background: #fee2e2; color: var(--bearish); }
+  .seq-watchful { background: #fef9c3; color: var(--watchful); }
+  .seq-neutral { background: #f1f5f9; color: var(--muted); }
+  .seq-arrow { color: var(--muted); }
+  .mental-model {
+    background: #fff7ed;
+    border-left: 3px solid #ea580c;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  .mental-model .principle {
+    font-weight: 700;
+    color: #7c2d12;
+    margin-bottom: 6px;
+    font-size: 15px;
+  }
+  .mental-model blockquote {
+    margin: 8px 0 6px;
+    padding: 8px 12px;
+    background: white;
+    border-radius: 4px;
+    font-size: 13px;
+    color: var(--muted);
+    border-left: 2px solid #fed7aa;
+  }
+  .mental-model .source {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .watch-list {
+    background: #f0fdf4;
+    border-left: 3px solid var(--bullish);
+    padding: 14px 18px;
+    border-radius: 6px;
+  }
+  .watch-list ol { margin: 0; padding-left: 22px; }
+  .watch-list li { margin-bottom: 8px; font-size: 14px; }
+  .market-mood {
+    background: linear-gradient(to right, #fef3c7, #fff);
+    border-left: 4px solid var(--watchful);
+    padding: 18px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .market-mood strong { color: #92400e; }
+  .floating-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    font-size: 13px;
+    font-weight: 600;
+  }
+  @media (max-width: 600px) {
+    .kpi-bar { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="container">
+
+  <div class="header">
+    <h1>📊 股癌月報 2026/05</h1>
+    <div class="subtitle">EP656 – EP663（2026/5/2 – 2026/5/20）｜滾動式 8 集回顧</div>
+  </div>
+
+  <div class="kpi-bar">
+    <div class="kpi"><div class="kpi-num">8</div><div class="kpi-label">熱題數</div></div>
+    <div class="kpi"><div class="kpi-num" style="color:var(--bullish)">64</div><div class="kpi-label">強勢族群</div></div>
+    <div class="kpi"><div class="kpi-num" style="color:var(--bearish)">8</div><div class="kpi-label">弱勢族群</div></div>
+    <div class="kpi"><div class="kpi-num" style="color:var(--watchful)">6</div><div class="kpi-label">觀望族群</div></div>
+    <div class="kpi"><div class="kpi-num">28</div><div class="kpi-label">持倉動作</div></div>
+    <div class="kpi"><div class="kpi-num">7</div><div class="kpi-label">觀點轉折</div></div>
+    <div class="kpi"><div class="kpi-num" style="color:var(--watchful);font-size:14px;line-height:1.3">緘默期<br>高位</div><div class="kpi-label">主持狀態</div></div>
+  </div>
+
+  <div class="toc">
+    <strong>目錄</strong>
+    <a href="#narrative">📖 敘事弧</a>
+    <a href="#hot">🔥 熱題</a>
+    <a href="#flow">💰 資金流向</a>
+    <a href="#disclosure">📊 持倉動作</a>
+    <a href="#transition">🔄 觀點轉折</a>
+    <a href="#mental">💡 心法 Top 5</a>
+    <a href="#next">🎯 下一步觀察</a>
+    <a href="#mood">🌐 市場氣氛</a>
+  </div>
+
+  <div class="section" id="narrative">
+    <h2>📖 本月敘事弧</h2>
+    <div class="narrative">
+      <p><strong>開頭（EP656）：</strong>金管會調投信台積電上限 10%→25%，主持人禮拜五大規模減碼中小股換買台積電——「過去以來第一次調這麼多」。MTK 三根漲停受惠。</p>
+      <p><strong>中段轉折（EP657-EP660）：</strong>投信買台積電被外資 1.8 萬+2 萬張倒貨壓住，台積電動能噴出劇本受阻。Intel 後段封裝 90% 良率修正之前隱憂；Meta+AWS Graviton 5 確認 CPU 火熱；被動元件全面表態（國巨 AI40 大會、信昌電交期拉長）；Cloudflare 裁員開始示警高位風險。</p>
+      <p><strong>結尾現況（EP661-EP663）：</strong>大盤 42000、台積電 2345，主持人進入<strong>緘默期</strong>不評論個股回檔、改為「高位降槓桿即便理由不嚴重」。被動元件演進到 Panasonic 漲價信實發、高階斷供、2018 大潮劇本啟動。同時老 AI 故事換代（Broadcom 大顆 SoundFish 雙拼）為未來鋪墊。</p>
+    </div>
+  </div>
+
+  <div class="section" id="hot">
+    <h2>🔥 熱門題材 Top 8</h2>
+    <div class="hot-grid">
+      <div class="hot-item"><span class="name">被動元件</span><span class="count">13</span></div>
+      <div class="hot-item"><span class="name">AI 硬體</span><span class="count">12</span></div>
+      <div class="hot-item"><span class="name">盤勢</span><span class="count">7</span></div>
+      <div class="hot-item"><span class="name">籌碼面</span><span class="count">5</span></div>
+      <div class="hot-item"><span class="name">CPU 類股</span><span class="count">5</span></div>
+      <div class="hot-item"><span class="name">個股題材</span><span class="count">4</span></div>
+      <div class="hot-item"><span class="name">記憶體</span><span class="count">3</span></div>
+      <div class="hot-item"><span class="name">總經</span><span class="count">3</span></div>
+    </div>
+  </div>
+
+  <div class="section" id="flow">
+    <h2>💰 資金流向（最新 sentiment）</h2>
+    <p style="font-size:13px;color:var(--muted);margin-top:-8px;margin-bottom:18px;">⭐ 標記為主持人有持倉。括號內為 cover 集數。</p>
+
+    <div class="stock-zone">
+      <div class="stock-zone-title bullish-title">🟢 強勢（看多）</div>
+      <div class="stock-list">
+        <div class="stock-pill owned"><span class="owned-marker">⭐</span>台積電 <span class="ticker-code">2330</span><span class="freq">·7集</span></div>
+        <div class="stock-pill owned"><span class="owned-marker">⭐</span>被動元件（台股）<span class="freq">·5集</span></div>
+        <div class="stock-pill owned"><span class="owned-marker">⭐</span>CPU 類股（美股）<span class="freq">·4集</span></div>
+        <div class="stock-pill owned"><span class="owned-marker">⭐</span>美光 <span class="ticker-code">MU</span><span class="freq">·2集</span></div>
+        <div class="stock-pill owned"><span class="owned-marker">⭐</span>鋁電容<span class="freq">·2集</span></div>
+        <div class="stock-pill owned"><span class="owned-marker">⭐</span>Amazon ASIC 概念</div>
+        <div class="stock-pill owned"><span class="owned-marker">⭐</span>光通設備</div>
+        <div class="stock-pill">Intel <span class="ticker-code">INTC</span><span class="freq">·3集</span></div>
+        <div class="stock-pill">三星電機 Samco<span class="freq">·3集</span></div>
+        <div class="stock-pill">國巨 <span class="ticker-code">2327</span><span class="freq">·2集</span></div>
+        <div class="stock-pill">信昌電 <span class="ticker-code">6173</span><span class="freq">·2集</span></div>
+        <div class="stock-pill">村田 Murata <span class="ticker-code">6981.T</span><span class="freq">·2集</span></div>
+        <div class="stock-pill">聯電 <span class="ticker-code">2303</span><span class="freq">·2集</span></div>
+        <div class="stock-pill">世界先進 <span class="ticker-code">5347</span><span class="freq">·2集</span></div>
+        <div class="stock-pill">GlobalFoundries <span class="ticker-code">GFS</span><span class="freq">·2集</span></div>
+        <div class="stock-pill">AMD<span class="freq">·2集</span></div>
+        <div class="stock-pill">ARM<span class="freq">·2集</span></div>
+        <div class="stock-pill">高通 <span class="ticker-code">QCOM</span><span class="freq">·2集</span></div>
+        <div class="stock-pill">SanDisk <span class="ticker-code">SNDK</span><span class="freq">·2集</span></div>
+        <div class="stock-pill">台股記憶體<span class="freq">·2集</span></div>
+        <div class="stock-pill">光通族群（台股）<span class="freq">·2集</span></div>
+        <div class="stock-pill">正美 <span class="ticker-code">4943</span><span class="freq">·2集</span></div>
+        <div class="stock-pill">Panasonic <span class="ticker-code">6752.T</span><span class="freq">·3集</span></div>
+        <div class="stock-pill">AP Memory <span class="ticker-code">6531</span><span class="freq">·2集</span></div>
+        <div class="stock-pill">華新科 <span class="ticker-code">2492</span></div>
+        <div class="stock-pill">立隆電 <span class="ticker-code">2472</span></div>
+        <div class="stock-pill">金山 <span class="ticker-code">8027</span></div>
+        <div class="stock-pill">鈺邦 <span class="ticker-code">6449</span></div>
+        <div class="stock-pill">Nichicon <span class="ticker-code">6996.T</span></div>
+        <div class="stock-pill">Nippon Chemi-Con <span class="ticker-code">6997.T</span></div>
+        <div class="stock-pill">GUC <span class="ticker-code">3443</span></div>
+        <div class="stock-pill">Alchip <span class="ticker-code">3661</span></div>
+        <div class="stock-pill">CrowdStrike <span class="ticker-code">CRWD</span></div>
+        <div class="stock-pill">研華 <span class="ticker-code">2395</span></div>
+        <div class="stock-pill">研太 <span class="ticker-code">6231</span></div>
+        <div class="stock-pill">新唐 <span class="ticker-code">4919</span></div>
+        <div class="stock-pill">元太 <span class="ticker-code">8069</span></div>
+        <div class="stock-pill">旺紅 <span class="ticker-code">2408</span></div>
+        <div class="stock-pill">加折（CPU socket）</div>
+        <div class="stock-pill">Google <span class="ticker-code">GOOG</span></div>
+        <div class="stock-pill">AWS Graviton <span class="ticker-code">AMZN</span></div>
+        <div class="stock-pill">MLCC 高壓廠</div>
+        <div class="stock-pill">電阻電感族群</div>
+        <div class="stock-pill">記憶體族群</div>
+        <div class="stock-pill">衛星族群</div>
+        <div class="stock-pill">Nor Flash</div>
+        <div class="stock-pill">Astera Labs <span class="ticker-code">ALAB</span></div>
+      </div>
+    </div>
+
+    <div class="stock-zone">
+      <div class="stock-zone-title bearish-title">🔴 弱勢（看空 / 避開）</div>
+      <div class="stock-list">
+        <div class="stock-pill">中小股（投信高持股）<span class="freq">·2集</span></div>
+        <div class="stock-pill">AIPC<span class="freq">·2集</span></div>
+        <div class="stock-pill">散熱族群</div>
+        <div class="stock-pill">NVIDIA 散熱供應鏈</div>
+        <div class="stock-pill">美股軟體股</div>
+        <div class="stock-pill">ARK Invest <span class="ticker-code">ARKK</span></div>
+        <div class="stock-pill">Anthropic</div>
+        <div class="stock-pill">OpenAI</div>
+      </div>
+    </div>
+
+    <div class="stock-zone">
+      <div class="stock-zone-title watchful-title">🟡 觀望</div>
+      <div class="stock-list">
+        <div class="stock-pill">聯發科 <span class="ticker-code">2454</span><span class="freq">·7集</span></div>
+        <div class="stock-pill">Broadcom <span class="ticker-code">AVGO</span></div>
+        <div class="stock-pill">老 AI 族群<span class="freq">·2集</span></div>
+        <div class="stock-pill">中小股</div>
+        <div class="stock-pill">NVIDIA 本體（換料事件）</div>
+        <div class="stock-pill">DDI IC（台系）</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="disclosure">
+    <h2>📊 主持人持倉動作（28 筆）</h2>
+
+    <div class="disc-group">
+      <div class="disc-group-title disc-buy">🟢 買入 / 加碼</div>
+      <table class="disc-table">
+        <tr><td><span class="ep-badge">EP656</span></td><td>台積電 (2330)</td><td>禮拜五大規模加碼（首次調這麼多）</td></tr>
+        <tr><td><span class="ep-badge">EP657</span></td><td>權值股 / 大型股</td><td>上週減碼中小換大型</td></tr>
+        <tr><td><span class="ep-badge">EP657</span></td><td>中小（跌停爆開）</td><td>加碼買進</td></tr>
+        <tr><td><span class="ep-badge">EP659</span></td><td>被動元件族群</td><td>持有 + 抄底加碼</td></tr>
+        <tr><td><span class="ep-badge">EP659</span></td><td>Amazon ASIC 概念</td><td>打臉前言追回</td></tr>
+        <tr><td><span class="ep-badge">EP659</span></td><td>槓桿部位</td><td>放大槓桿</td></tr>
+        <tr><td><span class="ep-badge">EP661</span></td><td>台積電 + 聯發科</td><td>加碼</td></tr>
+        <tr><td><span class="ep-badge">EP661</span></td><td>瓜阿康（低估值防守）</td><td>準備躲進去</td></tr>
+        <tr><td><span class="ep-badge">EP662</span></td><td>被動元件（跌停）</td><td>跌停加碼</td></tr>
+      </table>
+    </div>
+
+    <div class="disc-group">
+      <div class="disc-group-title disc-sell">🔴 賣出 / 減碼</div>
+      <table class="disc-table">
+        <tr><td><span class="ep-badge">EP656</span></td><td>中小股（投信買兇）</td><td>禮拜五大規模減碼</td></tr>
+        <tr><td><span class="ep-badge">EP661</span></td><td>散熱族群</td><td>沒持有（沒進場）</td></tr>
+      </table>
+    </div>
+
+    <div class="disc-group">
+      <div class="disc-group-title disc-hold">🟡 持有 / 觀望</div>
+      <table class="disc-table">
+        <tr><td><span class="ep-badge">EP656</span></td><td>聯發科 (2454)</td><td>持有（三根漲停）</td></tr>
+        <tr><td><span class="ep-badge">EP657</span></td><td>聯發科 (2454)</td><td>持有</td></tr>
+        <tr><td><span class="ep-badge">EP657</span></td><td>記憶體 / Nor / MLC</td><td>魚頭吃到，後面沒吃</td></tr>
+        <tr><td><span class="ep-badge">EP658</span></td><td>未指名（波段留 10-20%）</td><td>心理帳戶部位永不賣</td></tr>
+        <tr><td><span class="ep-badge">EP658</span></td><td>研華 / 研太</td><td>暗示前面討論過</td></tr>
+        <tr><td><span class="ep-badge">EP659</span></td><td>聯發科 (2454)</td><td>持有不加碼（3000+ 預期打太滿）</td></tr>
+        <tr><td><span class="ep-badge">EP660</span></td><td>美光 (MU)</td><td>持有</td></tr>
+        <tr><td><span class="ep-badge">EP660</span></td><td>美股 CPU</td><td>爽到爛掉</td></tr>
+        <tr><td><span class="ep-badge">EP660</span></td><td>高位槓桿部位</td><td>沒降槓桿（成本太遠）</td></tr>
+        <tr><td><span class="ep-badge">EP661</span></td><td>中小股（高低配）</td><td>部分復活打回</td></tr>
+        <tr><td><span class="ep-badge">EP662</span></td><td>動能部位</td><td>持有不動</td></tr>
+        <tr><td><span class="ep-badge">EP662</span></td><td>被動元件族群</td><td>持有 + 跌停加碼</td></tr>
+        <tr><td><span class="ep-badge">EP663</span></td><td>被動元件族群（MLCC/L-CAP）</td><td>持有（本波好報酬主力）</td></tr>
+        <tr><td><span class="ep-badge">EP663</span></td><td>多檔已進處置股</td><td>盤中無法動</td></tr>
+        <tr><td><span class="ep-badge">EP663</span></td><td>光通設備</td><td>前陣子 car 進去</td></tr>
+        <tr><td><span class="ep-badge">EP663</span></td><td>玻璃基板</td><td>前面討論過後沒繼續聊</td></tr>
+        <tr><td><span class="ep-badge">EP663</span></td><td>衛星族群</td><td>看好態度不變</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="section" id="transition">
+    <h2>🔄 觀點轉折（同檔股跨集 sentiment 變化）</h2>
+
+    <div class="transition">
+      <div class="transition-stock">台積電 (2330)</div>
+      <div class="transition-seq">
+        <span class="seq-node seq-bullish">EP656</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-watchful">EP657 watchful</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-bullish">EP658</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-bullish">EP660</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-bullish">EP661</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-bullish">EP662</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-bullish">EP663</span>
+      </div>
+      <div style="font-size:12px;color:var(--muted);margin-top:8px;">EP657 短暫觀望：投信買盤被外資 1.8 萬+2 萬張壓住，動能噴出劇本受阻；之後外資讓出回到看多，至 EP663 仍是長期持有主力。</div>
+    </div>
+
+    <div class="transition">
+      <div class="transition-stock">聯發科 (2454)</div>
+      <div class="transition-seq">
+        <span class="seq-node seq-bullish">EP656</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-bullish">EP657</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-bullish">EP658</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-watchful">EP659 watchful</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-bullish">EP660</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-bullish">EP661</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-neutral">EP663 neutral</span>
+      </div>
+      <div style="font-size:12px;color:var(--muted);margin-top:8px;">EP659 預期已打太滿（市場估到 main die，主持人認知只到 IO/memory buffer）；EP663 重心轉到被動元件 + 老 AI 故事，聯發科退居次要討論。</div>
+    </div>
+
+    <div class="transition">
+      <div class="transition-stock">Panasonic (6752.T)</div>
+      <div class="transition-seq">
+        <span class="seq-node seq-neutral">EP661</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-bullish">EP662</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-bullish">EP663</span>
+      </div>
+      <div style="font-size:12px;color:var(--muted);margin-top:8px;">EP661 講退出 OS-CON；EP662 業界已聽到三成漲幅；EP663 實際對部分客戶發漲價信、產能轉去高階 AI 不做鳥料補。</div>
+    </div>
+
+    <div class="transition">
+      <div class="transition-stock">高通 (QCOM)</div>
+      <div class="transition-seq">
+        <span class="seq-node seq-neutral">EP657 neutral</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-bullish">EP661 bullish</span>
+      </div>
+      <div style="font-size:12px;color:var(--muted);margin-top:8px;">EP657 OpenAI 手機 chip + AI Pin 殷鑑謹慎；EP661 屌噴後改口為 AI infra 故事（不是 AIPC/Cloud）。</div>
+    </div>
+
+    <div class="transition">
+      <div class="transition-stock">光通族群（台股）</div>
+      <div class="transition-seq">
+        <span class="seq-node seq-watchful">EP657 watchful</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-bullish">EP662 bullish</span>
+      </div>
+      <div style="font-size:12px;color:var(--muted);margin-top:8px;">EP657 垃圾盤跌停潮中觀望；EP662 等美股光通持續創高後預期台股會追上。</div>
+    </div>
+
+    <div class="transition">
+      <div class="transition-stock">老 AI 族群</div>
+      <div class="transition-seq">
+        <span class="seq-node seq-bearish">EP662 bearish</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-watchful">EP663 watchful</span>
+      </div>
+      <div style="font-size:12px;color:var(--muted);margin-top:8px;">EP662 基本面+籌碼雙殺；EP663 SemiAnalysis 報告引發討論，主持人考察到「大顆 SoundFish 雙拼」故事，認為產品線還在，從看空升級為觀望。</div>
+    </div>
+
+    <div class="transition">
+      <div class="transition-stock">ARM</div>
+      <div class="transition-seq">
+        <span class="seq-node seq-neutral">EP656</span><span class="seq-arrow">→</span>
+        <span class="seq-node seq-bullish">EP657</span>
+      </div>
+      <div style="font-size:12px;color:var(--muted);margin-top:8px;">EP656 擔心被 1:1 CPU:GPU 小作文炒進去受傷；EP657 Meta+AWS Graviton 5 訂單驗證 CPU 真火熱。</div>
+    </div>
+  </div>
+
+  <div class="section" id="mental">
+    <h2>💡 心法 Top 5（跨集累積 high severity）</h2>
+
+    <div class="mental-model">
+      <div class="principle">1. 高位行情自綁手腳 — 不評論個股估值，鎖定產業聊</div>
+      <blockquote>「我真的不希望說...你可能從第一檔開始講，但大家就只會記得說你這山頂還有在提到。所以我們就盡可能去鎖定產業的部分跟大家聊」</blockquote>
+      <div class="source">EP661, EP663 · 心態紀律</div>
+    </div>
+
+    <div class="mental-model">
+      <div class="principle">2. 漲價有兩種驅動 — 成本 vs 需求，後者才是真的</div>
+      <blockquote>「成本驅動的漲價對毛利不一定有利...需求傳導的話，就會是比較重要的跟我們要觀察的，是不是有 demand 的存在」</blockquote>
+      <div class="source">EP661 · 產業判斷</div>
+    </div>
+
+    <div class="mental-model">
+      <div class="principle">3. Landing 看遠不看跑道 — 過程震盪盡可能忽略</div>
+      <blockquote>「你要看的不是你面前的跑道，你是要看遠方...過程之中的一些震盪的時候盡可能去忽略他，你要吃大魚的話就是要這樣子」</blockquote>
+      <div class="source">EP663 · 選股邏輯</div>
+    </div>
+
+    <div class="mental-model">
+      <div class="principle">4. 投信買台積電是 no brainer — 脫鉤大盤會失業</div>
+      <blockquote>「你不可以脫鉤大盤太遠...你離大盤越來越遠，你甚至會失去你的工作」</blockquote>
+      <div class="source">EP656 · 籌碼面（金管會調 10%→25% 上限後）</div>
+    </div>
+
+    <div class="mental-model">
+      <div class="principle">5. 不要把每個操作都當白癡（大空頭傾向）</div>
+      <blockquote>「盡量不要把每個操作都當白癡。就除非說你是那種大空頭，很多那種大空頭都喜歡把每個都當白癡，然後每個都要往一些負面的方向去解釋」</blockquote>
+      <div class="source">EP663 · 心態紀律（被動元件大廠掃現貨爭議）</div>
+    </div>
+  </div>
+
+  <div class="section" id="next">
+    <h2>🎯 下一步觀察重點</h2>
+    <div class="watch-list">
+      <ol>
+        <li><strong>Panasonic 漲價信擴大發放</strong>：目前只對部分客戶發，後續會否擴大到全客戶 → 2018 大潮劇本確認訊號</li>
+        <li><strong>大廠集體擴產動向</strong>：尤其鋁電容、低階 MLCC 廠任何擴產新聞 → 供需失衡可能反轉的最大警訊</li>
+        <li><strong>投信對台積電累計增持</strong>：金管會調上限後，Q2 末是否突破 5 萬張 → 籌碼面劇本兌現速度</li>
+        <li><strong>老 AI 復活訊號</strong>：AP Memory IPD 案例已示範；觀察 Broadcom 大顆 SoundFish 是否被市場討論</li>
+        <li><strong>Dario Amodei 放雷打不下去訊號</strong>：他繼續喊 AI 危險但軟體股不再下跌 → 底到了</li>
+        <li><strong>消費性復甦真假</strong>：26 下半年 DDI IC / 聯電 / 世界先進拉貨動能是否掉 → 補庫存 vs 真復甦的關鍵驗證</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="section" id="mood">
+    <h2>🌐 市場氣氛總結</h2>
+    <div class="market-mood">
+      <p>5 月行情狂熱：<strong>大盤從 33000 噴到 42000+，台積電摸 2345，4 月台灣億萬富翁暴增</strong>。主持人歷經 EP655 相對剝奪感 → EP656 金管會解放台積電大規模換倉 → EP660 進入「緘默期」高位降槓桿 → EP663 完全閉嘴不評論個股。</p>
+      <p>三大系統性警訊持續：(1) <strong>晴天收傘</strong>多家券商不讓借錢延展（EP659）；(2) <strong>價值觀偏差</strong>百大富豪線只要 2-300 億（EP659）；(3) <strong>多頭末期跡象</strong>跌 1% 就喊大跌的人變多、鎖漲停雜魚變多隔天連開高都做不到（EP663）。</p>
+      <p>主軸題材確立：<strong>被動元件 + 台積電 + CPU + 老 AI 換代故事</strong>。被動元件已到 Panasonic 實發漲價信階段，類比 2018 大潮；老 AI 從 EP662 看空升級到 EP663 觀望，Broadcom 大顆 SoundFish 雙拼故事鋪墊。避開：散熱供應鏈（NV 改料）、投信高持股中小、AIPC、Anthropic/OpenAI（Dario 末日論被指敗壞軟體股）。</p>
+    </div>
+  </div>
+
+</div>
+<a href="#top" class="floating-top">↑ 目錄</a>
+</body>
+</html>
