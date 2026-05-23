@@ -128,6 +128,33 @@
     font-weight: 500;
     display: block;
   }
+
+  /* 封面洞見 pill */
+  .insight-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .insight-pill {
+    background: #eff6ff;
+    color: #1e3a8a;
+    padding: 13px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14.5px;
+    border-left: 3px solid #2563eb;
+    transition: background 0.2s;
+    line-height: 1.5;
+  }
+  .insight-pill:hover { background: #dbeafe; }
+
+  /* inline 顏色強調 */
+  .kw-blue { color: #1e3a8a; font-weight: 700; }
+  .kw-red { color: #dc2626; font-weight: 700; }
+  .kw-orange { color: #ea580c; font-weight: 700; }
+  .kw-green { color: #15803d; font-weight: 700; }
   .insight-list { padding-left: 20px; margin: 14px 0; }
   .insight-list li { margin: 8px 0; color: #1e293b; }
   blockquote {
@@ -195,23 +222,23 @@
     <h1>股癌 EP664 筆記</h1>
     <p class="subtitle">2026/5/22 · 被動元件處置股 × Anthropic 轉獲利 × TPU 外銷 3:1</p>
     <h3>本集核心洞見</h3>
-    <ul class="toc">
-      <li><a href="#card-2">大跌沒減碼,是因為成本已經拉得太遠</a></li>
-      <li><a href="#card-3">Anthropic 轉獲利等於 AI 泡沫論被打臉,硬體投資只會更大</a></li>
-      <li><a href="#card-4">TPU 自用:外銷 = 3:1,Google + Blackstone Neo Cloud 改變戰局</a></li>
-      <li><a href="#card-5">被動元件進噴射段,基本面研究讓位給技術面</a></li>
-      <li><a href="#card-6">最甜的不在最頂,而在隔壁機櫃跟 Legacy 規格</a></li>
-      <li><a href="#card-7">卡關鍵原料就能擠掉對手,戰略物資化會蔓延全鏈</a></li>
-      <li><a href="#card-8">本集持倉警示 + 行動清單</a></li>
-    </ul>
+    <div class="insight-pills">
+      <a href="#card-2" class="insight-pill">大跌沒減碼,是因為成本已經拉得太遠</a>
+      <a href="#card-3" class="insight-pill">Anthropic 轉獲利等於 AI 泡沫論被打臉,硬體投資只會更大</a>
+      <a href="#card-4" class="insight-pill">TPU 自用:外銷 = 3:1,Google + Blackstone Neo Cloud 改變戰局</a>
+      <a href="#card-5" class="insight-pill">被動元件進噴射段,基本面研究讓位給技術面</a>
+      <a href="#card-6" class="insight-pill">最甜的不在最頂,而在隔壁機櫃跟 Legacy 規格</a>
+      <a href="#card-7" class="insight-pill">卡關鍵原料就能擠掉對手,戰略物資化會蔓延全鏈</a>
+      <a href="#card-8" class="insight-pill">本集持倉警示 + 行動清單</a>
+    </div>
   </div>
 
   <div class="card" id="card-2">
     <span class="card-num">2/8</span>
     <h2>大跌沒減碼,是因為成本已經拉得太遠</h2>
-    <p class="core">🎯 前幾集講會減碼的位置這次直接放棄。處置股關 20 分鐘也不動,跌停反而加碼,結果又繼續噴。</p>
+    <p class="core">🎯 前幾集講會減碼的位置這次直接放棄。<span class="kw-orange">處置股關 20 分鐘也不動,跌停反而加碼,結果又繼續噴</span>。</p>
     <div class="mechanism">
-      🔍 <strong>機制:</strong>被動元件部位拉出來成本已遠遠在天上,回檔再多也吃得起。處置股關住流動性也沒差,反正不能動。<strong>大家恐慌亂砍時加碼,結果加完再噴出去。</strong>5月績效再刷4月新高。
+      🔍 <strong>機制:</strong>被動元件部位拉出來成本已遠遠在天上,回檔再多也吃得起。處置股關住流動性也沒差,反正不能動。<span class="kw-orange">大家恐慌亂砍時加碼,結果加完再噴出去。</span><span class="kw-blue">5月績效再刷4月新高。</span>
     </div>
     <h3>📊 主持人持倉狀態</h3>
     <div class="stocks">
@@ -230,9 +257,9 @@
   <div class="card" id="card-3">
     <span class="card-num">3/8</span>
     <h2>Anthropic 轉獲利等於 AI 泡沫論被打臉,硬體投資只會更大</h2>
-    <p class="core">🎯 最燒錢的模型商都能轉正,加上 xAI Colossus One 算力出租 1-2 年回本,這兩件事是 AI 硬體股的雙重強心針。</p>
+    <p class="core">🎯 最燒錢的模型商都能轉正,加上 xAI Colossus One 算力出租 <span class="kw-orange">1-2 年回本</span>,這兩件事是 AI 硬體股的雙重強心針。</p>
     <div class="mechanism">
-      🔍 <strong>機制:</strong>過去市場最大空頭論述是「模型商永遠燒錢、AI 投資回收期太長」。Anthropic 轉獲利(即便為上市美化)+ xAI 演給市場看「自用賺不到、租出去就是印鈔」=<strong>砸重金買 AI 設備的投資人從「會不會回本」變成「越快買越多賺」。</strong>
+      🔍 <strong>機制:</strong>過去市場最大空頭論述是「<span class="kw-red">模型商永遠燒錢、AI 投資回收期太長</span>」。Anthropic 轉獲利(即便為上市美化)+ xAI 演給市場看「自用賺不到、租出去就是印鈔」=<span class="kw-orange">砸重金買 AI 設備的投資人從「會不會回本」變成「越快買越多賺」。</span>
     </div>
     <h3>📊 關聯個股</h3>
     <div class="stocks">
@@ -252,9 +279,9 @@
   <div class="card" id="card-4">
     <span class="card-num">4/8</span>
     <h2>TPU 自用:外銷 = 3:1,Google + Blackstone Neo Cloud 改變遊戲規則</h2>
-    <p class="core">🎯 去年市場質疑「TPU 外銷給 Anthropic 不可能」,現在共識,而且自用比外銷只多 3 倍 — 成長速度超乎所有人預期。</p>
+    <p class="core">🎯 去年市場質疑「TPU 外銷給 Anthropic 不可能」,現在共識,而且自用比外銷只多 <span class="kw-orange">3 倍</span> — 成長速度超乎所有人預期。</p>
     <div class="mechanism">
-      🔍 <strong>機制:</strong>過去模型廠商擔心資料給 Google 看到拒用 TPU,現在 Google + Blackstone 用 Neo Cloud 第三方架構解套,模型開發會直接放上 TPU。<strong>Google 供應鏈是大利多,NVIDIA Neo Cloud 與 ASIC 業者估值會被壓(成長性還在但本益比下修)。</strong>
+      🔍 <strong>機制:</strong>過去模型廠商擔心資料給 Google 看到拒用 TPU,現在 Google + Blackstone 用 Neo Cloud 第三方架構解套,模型開發會直接上 TPU。<span class="kw-orange">Google 供應鏈是大利多,NVIDIA Neo Cloud 與 ASIC 業者估值會被壓(成長性還在但本益比下修)。</span>
     </div>
     <h3>📊 關聯個股</h3>
     <div class="stocks">
@@ -276,9 +303,9 @@
   <div class="card" id="card-5">
     <span class="card-num">5/8</span>
     <h2>被動元件進噴射段,基本面研究讓位給技術面</h2>
-    <p class="core">🎯 某台廠坦承「沒漲價但會跟漲」,隔天還是漲停。當市場進入這種狀態,直接看五日線/十字線跌破決定動作,基本面細節不重要。</p>
+    <p class="core">🎯 某台廠坦承「沒漲價但會跟漲」,<span class="kw-orange">隔天還是漲停</span>。當市場進入這種狀態,直接看五日線/十字線跌破決定動作,基本面細節不重要。</p>
     <div class="mechanism">
-      🔍 <strong>機制:</strong>大噴段時資金已經 vote,基本面分析跑不贏資金速度。<strong>但回檔後第二波要回到基本面 — 真正缺的(高壓 MLCC、47m/22m、牛角電容)會被市場再次篩出來;雜魚就被洗掉。</strong>
+      🔍 <strong>機制:</strong>大噴段時資金已經 vote,基本面分析跑不贏資金速度。<span class="kw-orange">但回檔後第二波要回到基本面 — 真正缺的(高壓 MLCC、47m/22m、牛角電容)會被市場再次篩出來;雜魚就被洗掉。</span>
     </div>
     <h3>📊 真正缺的關聯個股</h3>
     <div class="stocks">
@@ -312,9 +339,9 @@
   <div class="card" id="card-6">
     <span class="card-num">6/8</span>
     <h2>最甜的不在最頂,而在隔壁機櫃跟 Legacy 規格</h2>
-    <p class="core">🎯 大家都盯 NVIDIA 板子/Strada/UBB,沒人看隔壁的 Power Rack 機櫃。同理大家都盯 HBM,結果 DDR4/DDR5 毛利跑贏。</p>
+    <p class="core">🎯 大家都盯 NVIDIA 板子/Strada/UBB,沒人看隔壁的 Power Rack 機櫃。同理大家都盯 HBM,結果 <span class="kw-orange">DDR4/DDR5 毛利跑贏</span>。</p>
     <div class="mechanism">
-      🔍 <strong>機制:</strong>當資金/產能往最高階衝,被擠出來的「次級品」反而供需失衡。<strong>AI 機櫃變高密度,power rack 拉出來放隔壁櫃 → 功率元件、高壓 MLCC、鋁電容用量大增;Legacy DDR4/DDR5 因產能被 HBM 排擠,毛利反而更甜。</strong>
+      🔍 <strong>機制:</strong>當資金/產能往最高階衝,被擠出來的「次級品」反而供需失衡。<span class="kw-orange">AI 機櫃變高密度,power rack 拉出來放隔壁櫃 → 功率元件、高壓 MLCC、鋁電容用量大增;Legacy DDR4/DDR5 因產能被 HBM 排擠,毛利反而更甜。</span>
     </div>
     <h3>📊 關聯個股</h3>
     <div class="stocks">
@@ -334,9 +361,9 @@
   <div class="card" id="card-7">
     <span class="card-num">7/8</span>
     <h2>卡關鍵原料就能擠掉對手,戰略物資化會蔓延全鏈</h2>
-    <p class="core">🎯 NVIDIA 包廣東雷射產能,算下來既有產品根本用不到 — 目的就是讓對手買不到料。這套玩法會從晶圓代工、記憶體,蔓延到光通、OSAT、被動元件。</p>
+    <p class="core">🎯 NVIDIA 包廣東雷射產能,算下來既有產品根本用不到 — <span class="kw-orange">目的就是讓對手買不到料</span>。這套玩法會從晶圓代工、記憶體,蔓延到光通、OSAT、被動元件。</p>
     <div class="mechanism">
-      🔍 <strong>機制:</strong>大廠看到 Anthropic + xAI 驗證 AI 設備有錢賺,搶料就成戰略行為。<strong>晶圓代工目前是 AI 泡沫的「限制器」(Gavin Baker:TSM 若全開,NVDA 營收會更好但泡沫加速破滅),但只包不住火 — 競爭者太多,Intel 後段甚至前段都會被逼產。</strong>
+      🔍 <strong>機制:</strong>大廠看到 Anthropic + xAI 驗證 AI 設備有錢賺,搶料就成戰略行為。<span class="kw-orange">晶圓代工目前是 AI 泡沫的「限制器」(Gavin Baker:TSM 若全開,NVDA 營收會更好但泡沫加速破滅),但只包不住火 — 競爭者太多,Intel 後段甚至前段都會被逼產。</span>
     </div>
     <h3>📊 戰略物資化候選</h3>
     <div class="stocks">
