@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP664 筆記 — 被動元件處置股 + AI 卡位戰</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #f5f5f0;
+    font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+    color: #0f172a;
+    line-height: 1.7;
+    padding: 32px 16px 80px;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+  .card {
+    background: #fefefe;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .card-num {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 600;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .subtitle {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 14px;
+    line-height: 1.4;
+    padding-right: 40px;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #334155;
+    margin: 18px 0 8px;
+  }
+  p { margin-bottom: 10px; color: #334155; }
+  .core {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0f172a;
+    margin: 12px 0;
+  }
+  .mechanism {
+    background: #f8fafc;
+    border-left: 3px solid #2563eb;
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-radius: 4px;
+  }
+  .mechanism strong { color: #1e3a8a; }
+  .stocks {
+    margin: 12px 0;
+    line-height: 2.2;
+  }
+  .ticker {
+    display: inline-block;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 3px 10px;
+    margin: 2px 4px 2px 0;
+    font-size: 13px;
+    color: #1e293b;
+  }
+  .ticker code {
+    background: #e2e8f0;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #475569;
+    margin-left: 4px;
+  }
+  .risk-warn {
+    background: #fef3c7;
+    border-left: 3px solid #d97706;
+    padding: 12px 16px;
+    margin: 12px 0;
+    border-radius: 4px;
+    color: #78350f;
+    font-size: 14px;
+  }
+  .action {
+    background: #fff7ed;
+    border-left: 4px solid #ea580c;
+    padding: 14px 18px;
+    margin: 14px 0;
+    border-radius: 4px;
+    color: #9a3412;
+    font-weight: 500;
+  }
+  .action::before { content: "📌 "; }
+  .own { color: #ea580c; font-weight: 700; }
+  .toc { list-style: none; padding: 0; }
+  .toc li {
+    margin: 8px 0;
+    padding: 8px 12px;
+    background: #f1f5f9;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+  .toc li:hover { background: #e2e8f0; }
+  .toc a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+  }
+  .insight-list { padding-left: 20px; margin: 14px 0; }
+  .insight-list li { margin: 8px 0; color: #1e293b; }
+  blockquote {
+    border-left: 3px solid #94a3b8;
+    padding: 8px 14px;
+    margin: 12px 0;
+    color: #475569;
+    font-style: italic;
+    font-size: 14px;
+  }
+  .three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .three-col .col {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .three-col h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #0f172a;
+  }
+  .three-col ul { padding-left: 16px; font-size: 13px; }
+  .three-col li { margin: 6px 0; color: #334155; }
+  .col-watch h4 { color: #2563eb; }
+  .col-signal h4 { color: #16a34a; }
+  .col-stop h4 { color: #dc2626; }
+  .float-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #1e3a8a;
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 100;
+  }
+  @media (max-width: 600px) {
+    .three-col { grid-template-columns: 1fr; }
+    body { padding: 16px 8px 80px; }
+    .card { padding: 20px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="container">
+
+  <div class="card" id="card-1">
+    <span class="card-num">1/8</span>
+    <h1>股癌 EP664 筆記</h1>
+    <p class="subtitle">2026/5/22 · 被動元件處置股 × Anthropic 轉獲利 × TPU 外銷 3:1</p>
+    <h3>本集核心洞見</h3>
+    <ul class="toc">
+      <li><a href="#card-2">大跌沒減碼,是因為成本已經拉得太遠</a></li>
+      <li><a href="#card-3">Anthropic 轉獲利等於 AI 泡沫論被打臉,硬體投資只會更大</a></li>
+      <li><a href="#card-4">TPU 自用:外銷 = 3:1,Google + Blackstone Neo Cloud 改變戰局</a></li>
+      <li><a href="#card-5">被動元件進噴射段,基本面研究讓位給技術面</a></li>
+      <li><a href="#card-6">最甜的不在最頂,而在隔壁機櫃跟 Legacy 規格</a></li>
+      <li><a href="#card-7">卡關鍵原料就能擠掉對手,戰略物資化會蔓延全鏈</a></li>
+      <li><a href="#card-8">本集持倉警示 + 行動清單</a></li>
+    </ul>
+  </div>
+
+  <div class="card" id="card-2">
+    <span class="card-num">2/8</span>
+    <h2>大跌沒減碼,是因為成本已經拉得太遠</h2>
+    <p class="core">🎯 前幾集講會減碼的位置這次直接放棄。處置股關 20 分鐘也不動,跌停反而加碼,結果又繼續噴。</p>
+    <div class="mechanism">
+      🔍 <strong>機制:</strong>被動元件部位拉出來成本已遠遠在天上,回檔再多也吃得起。處置股關住流動性也沒差,反正不能動。<strong>大家恐慌亂砍時加碼,結果加完再噴出去。</strong>5月績效再刷4月新高。
+    </div>
+    <h3>📊 主持人持倉狀態</h3>
+    <div class="stocks">
+      <span class="ticker">被動元件族群 <span class="own">⭐</span></span>
+      <span class="ticker">處置股部位（不動）<span class="own">⭐</span></span>
+      <span class="ticker">紅顏路比/湘南投資 <span class="own">⭐</span></span>
+    </div>
+    <div class="risk-warn">
+      ⚠️ 這是「成本拉出後」的劇本,不是進場才買的人能照抄。新進場成本沒拉開,跌一點就會被洗。
+    </div>
+    <div class="action">
+      成本拉夠遠的部位,該減碼點若是「漲多技術性回」而非基本面破壞,就放著看。「殺多一點我再去砍」是合理止損框架,而非凹單藉口。
+    </div>
+  </div>
+
+  <div class="card" id="card-3">
+    <span class="card-num">3/8</span>
+    <h2>Anthropic 轉獲利等於 AI 泡沫論被打臉,硬體投資只會更大</h2>
+    <p class="core">🎯 最燒錢的模型商都能轉正,加上 xAI Colossus One 算力出租 1-2 年回本,這兩件事是 AI 硬體股的雙重強心針。</p>
+    <div class="mechanism">
+      🔍 <strong>機制:</strong>過去市場最大空頭論述是「模型商永遠燒錢、AI 投資回收期太長」。Anthropic 轉獲利(即便為上市美化)+ xAI 演給市場看「自用賺不到、租出去就是印鈔」=<strong>砸重金買 AI 設備的投資人從「會不會回本」變成「越快買越多賺」。</strong>
+    </div>
+    <h3>📊 關聯個股</h3>
+    <div class="stocks">
+      <strong>受惠:</strong>
+      <span class="ticker">NVIDIA <code>NVDA</code></span>
+      <span class="ticker">台積電 <code>2330</code></span>
+      <span class="ticker">Neo Cloud / AI 算力出租業</span>
+    </div>
+    <div class="risk-warn">
+      ⚠️ Anthropic 數字可能為上市美化,要持續觀察其他模型商跟單獲利結構是否同步好轉。
+    </div>
+    <div class="action">
+      AI 硬體股下檔風險降低,模型端的「會不會泡沫」變成「擴張要不要更積極」的問題。
+    </div>
+  </div>
+
+  <div class="card" id="card-4">
+    <span class="card-num">4/8</span>
+    <h2>TPU 自用:外銷 = 3:1,Google + Blackstone Neo Cloud 改變遊戲規則</h2>
+    <p class="core">🎯 去年市場質疑「TPU 外銷給 Anthropic 不可能」,現在共識,而且自用比外銷只多 3 倍 — 成長速度超乎所有人預期。</p>
+    <div class="mechanism">
+      🔍 <strong>機制:</strong>過去模型廠商擔心資料給 Google 看到拒用 TPU,現在 Google + Blackstone 用 Neo Cloud 第三方架構解套,模型開發會直接放上 TPU。<strong>Google 供應鏈是大利多,NVIDIA Neo Cloud 與 ASIC 業者估值會被壓(成長性還在但本益比下修)。</strong>
+    </div>
+    <h3>📊 關聯個股</h3>
+    <div class="stocks">
+      <strong>受惠族群:</strong>
+      <span class="ticker">Google <code>GOOGL</code></span>
+      <span class="ticker">Blackstone <code>BX</code></span>
+      <span class="ticker">TPU 後段封裝/載板鏈</span>
+      <span class="ticker">愛普 <code>6531</code></span>
+      <br><strong>受壓:</strong>
+      <span class="ticker">NVIDIA Neo Cloud 概念</span>
+      <span class="ticker">AMD <code>AMD</code></span>
+      <span class="ticker">其他 ASIC 業者</span>
+    </div>
+    <div class="action">
+      TPU 供應鏈成為下半年重點,要把載板、後段封裝、IPD(integrated passive device)分支挖出來。
+    </div>
+  </div>
+
+  <div class="card" id="card-5">
+    <span class="card-num">5/8</span>
+    <h2>被動元件進噴射段,基本面研究讓位給技術面</h2>
+    <p class="core">🎯 某台廠坦承「沒漲價但會跟漲」,隔天還是漲停。當市場進入這種狀態,直接看五日線/十字線跌破決定動作,基本面細節不重要。</p>
+    <div class="mechanism">
+      🔍 <strong>機制:</strong>大噴段時資金已經 vote,基本面分析跑不贏資金速度。<strong>但回檔後第二波要回到基本面 — 真正缺的(高壓 MLCC、47m/22m、牛角電容)會被市場再次篩出來;雜魚就被洗掉。</strong>
+    </div>
+    <h3>📊 真正缺的關聯個股</h3>
+    <div class="stocks">
+      <strong>47m/22m 大缺:</strong>
+      <span class="ticker">春田</span>
+      <span class="ticker">Sanco</span>
+      <br><strong>高壓 MLCC:</strong>
+      <span class="ticker">日商 Murata</span>
+      <span class="ticker">Samco</span>
+      <span class="ticker">國巨 <code>2327</code></span>
+      <span class="ticker">華新科 <code>2492</code></span>
+      <br><strong>鋁電容(牛角/snap-in):</strong>
+      <span class="ticker">江海股份</span>
+      <span class="ticker">Kemikon</span>
+      <span class="ticker">Nichicon</span>
+      <span class="ticker">立隆電</span>
+      <span class="ticker">金山</span>
+      <span class="ticker">鈺邦</span>
+    </div>
+    <div class="risk-warn">
+      ⚠️ 雜魚跟著鎖漲停但隔天連開高都做不到 — 劣質籌碼進場會幫族群作小頭。回檔時識別誰真缺、誰跟風。
+    </div>
+    <div class="action">
+      大噴段不要想太多看技術面,回檔後第二波回到基本面鎖真正缺貨的標的。
+    </div>
+  </div>
+
+  <div class="card" id="card-6">
+    <span class="card-num">6/8</span>
+    <h2>最甜的不在最頂,而在隔壁機櫃跟 Legacy 規格</h2>
+    <p class="core">🎯 大家都盯 NVIDIA 板子/Strada/UBB,沒人看隔壁的 Power Rack 機櫃。同理大家都盯 HBM,結果 DDR4/DDR5 毛利跑贏。</p>
+    <div class="mechanism">
+      🔍 <strong>機制:</strong>當資金/產能往最高階衝,被擠出來的「次級品」反而供需失衡。<strong>AI 機櫃變高密度,power rack 拉出來放隔壁櫃 → 功率元件、高壓 MLCC、鋁電容用量大增;Legacy DDR4/DDR5 因產能被 HBM 排擠,毛利反而更甜。</strong>
+    </div>
+    <h3>📊 關聯個股</h3>
+    <div class="stocks">
+      <strong>Power Rack 概念:</strong>
+      <span class="ticker">功率半導體</span>
+      <span class="ticker">高壓 MLCC</span>
+      <span class="ticker">鋁電容族群</span>
+      <br><strong>Legacy 記憶體:</strong>
+      <span class="ticker">DDR4</span>
+      <span class="ticker">DDR5(非 HBM)</span>
+    </div>
+    <div class="action">
+      看主菜時順便看隔壁桌。市場集中關注的對立面,常常是利潤率最高的位置。
+    </div>
+  </div>
+
+  <div class="card" id="card-7">
+    <span class="card-num">7/8</span>
+    <h2>卡關鍵原料就能擠掉對手,戰略物資化會蔓延全鏈</h2>
+    <p class="core">🎯 NVIDIA 包廣東雷射產能,算下來既有產品根本用不到 — 目的就是讓對手買不到料。這套玩法會從晶圓代工、記憶體,蔓延到光通、OSAT、被動元件。</p>
+    <div class="mechanism">
+      🔍 <strong>機制:</strong>大廠看到 Anthropic + xAI 驗證 AI 設備有錢賺,搶料就成戰略行為。<strong>晶圓代工目前是 AI 泡沫的「限制器」(Gavin Baker:TSM 若全開,NVDA 營收會更好但泡沫加速破滅),但只包不住火 — 競爭者太多,Intel 後段甚至前段都會被逼產。</strong>
+    </div>
+    <h3>📊 戰略物資化候選</h3>
+    <div class="stocks">
+      <span class="ticker">記憶體</span>
+      <span class="ticker">晶圓代工(台積電/Intel)</span>
+      <span class="ticker">光通訊封裝/設備</span>
+      <span class="ticker">OSAT 封測</span>
+      <span class="ticker">被動元件全鏈</span>
+    </div>
+    <div class="risk-warn">
+      ⚠️ 戰略物資化的反面 = 一旦 AI 投資戛然而止,囤貨會反殺。要警覺「大廠聯合擴產」訊號出現。
+    </div>
+    <div class="action">
+      下半年看誰能拿到產能甚至加價搶單,誰就能複製馬斯克算力出租模式。鎖定上游關鍵環節而非下游表面標的。
+    </div>
+  </div>
+
+  <div class="card" id="card-8">
+    <span class="card-num">8/8</span>
+    <h2>持倉警示 + 行動清單</h2>
+    <h3>本集主持人持倉動作</h3>
+    <p>
+      <span class="own">⭐ 被動元件族群</span>:跌停加碼,後又噴出<br>
+      <span class="own">⭐ 處置股部位</span>:持有不動(關 20 分鐘)<br>
+      <span class="own">⭐ 整體部位</span>:5月績效再創4月新高<br>
+      <span class="own">⭐ 紅顏路比(湘南投資)</span>:7月Steam上線,請聽眾加願望清單<br>
+      <strong>該減碼點沒減碼</strong>:因成本已拉太遠
+    </p>
+
+    <h3>下一步行動</h3>
+    <div class="three-col">
+      <div class="col col-watch">
+        <h4>🎯 觀察名單</h4>
+        <ul>
+          <li>愛普 (6531) — IPD 隨 Google TPU 放大</li>
+          <li>春田/Sanco — 47m/22m 大缺</li>
+          <li>鋁電容台廠補漲(立隆電、金山、鈺邦)</li>
+          <li>Power Rack 概念(功率半導體)</li>
+          <li>TPU 後段封裝/載板供應鏈</li>
+        </ul>
+      </div>
+      <div class="col col-signal">
+        <h4>🟢 進場訊號</h4>
+        <ul>
+          <li>被動元件回檔後第二波轉強第一棒</li>
+          <li>5日/10日均線跌破又收復</li>
+          <li>業內看空但報價持續上漲</li>
+          <li>處置股劣質籌碼洗出後</li>
+          <li>Intel 後段擴產確認</li>
+        </ul>
+      </div>
+      <div class="col col-stop">
+        <h4>🔴 停損 / 不該做</h4>
+        <ul>
+          <li>新進場成本沒拉開不能照搬「不動」</li>
+          <li>大廠聯合擴產訊號出現要警覺</li>
+          <li>AI 投資若戛然而止整鏈崩盤</li>
+          <li>不要跟雜魚鎖漲停接刀</li>
+          <li>緘默期不亂喊抄底位</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<a href="#top" class="float-top" title="回頂部">↑</a>
+</body>
+</html>
