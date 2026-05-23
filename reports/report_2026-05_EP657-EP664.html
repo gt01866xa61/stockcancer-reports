@@ -166,6 +166,35 @@
   .at-buy { background: #dcfce7; color: #15803d; }
   .at-sell { background: #fee2e2; color: #b91c1c; }
   .at-hold { background: #fef3c7; color: #a16207; }
+  .action-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 16px;
+    font-size: 13px;
+  }
+  .action-table th {
+    background: #f1f5f9;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 700;
+    color: #1e293b;
+    border-bottom: 2px solid #cbd5e1;
+  }
+  .action-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #334155;
+  }
+  .action-table td:first-child { width: 60px; }
+  .action-table td:nth-child(2) { font-weight: 500; color: #0f172a; }
+  .action-table .ep {
+    background: #2563eb;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+  }
   .action-item {
     padding: 6px 0;
     font-size: 14px;
@@ -244,6 +273,99 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     z-index: 100;
   }
+
+  /* 熱題 Top 8 - 4 cols x 2 rows grid */
+  .hot-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .hot-card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hot-card .name { font-weight: 600; color: #0f172a; font-size: 14px; }
+  .hot-card .count {
+    background: #1e3a8a;
+    color: white;
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* 資金流向 chip cloud */
+  .flow-block { margin-bottom: 22px; }
+  .flow-header {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .bull-header { background: #dcfce7; color: #15803d; }
+  .bear-header { background: #fee2e2; color: #b91c1c; }
+  .watch-header { background: #fef3c7; color: #a16207; }
+  .chip-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .stock-chip {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+    padding: 5px 12px;
+    font-size: 13px;
+    color: #1e293b;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .stock-chip .cover {
+    background: white;
+    color: #64748b;
+    font-size: 11px;
+    padding: 1px 7px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+  }
+  .stock-chip .own { color: #ea580c; font-weight: 700; }
+  .stock-chip code {
+    background: #e2e8f0;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 11px;
+    color: #475569;
+  }
+  .flow-note { font-size: 12px; color: #64748b; margin-bottom: 14px; }
+
+  /* 觀點轉折 sentiment chips */
+  .sentiment-flow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 10px 0 8px;
+  }
+  .sent-chip {
+    background: #f1f5f9;
+    border-radius: 14px;
+    padding: 4px 11px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #1e293b;
+  }
+  .sent-bull { background: #dcfce7; color: #15803d; }
+  .sent-bear { background: #fee2e2; color: #b91c1c; }
+  .sent-watch { background: #fef3c7; color: #a16207; }
+  .sent-arrow { color: #94a3b8; font-weight: 700; }
   @media (max-width: 600px) {
     .kpi-bar { grid-template-columns: repeat(2, 1fr); }
     .flow-grid { grid-template-columns: 1fr; }
@@ -261,11 +383,11 @@
 <div class="container">
 
   <div class="kpi-bar">
-    <div class="kpi"><div class="num">8</div><div class="label">熱題</div></div>
-    <div class="kpi"><div class="num">7</div><div class="label">強勢族群</div></div>
-    <div class="kpi"><div class="num">7</div><div class="label">弱勢族群</div></div>
-    <div class="kpi"><div class="num">7</div><div class="label">觀望族群</div></div>
-    <div class="kpi"><div class="num">15</div><div class="label">持倉動作</div></div>
+    <div class="kpi"><div class="num">8</div><div class="label">熱題數</div></div>
+    <div class="kpi"><div class="num">42</div><div class="label">強勢標的<br>(累計 cover 數)</div></div>
+    <div class="kpi"><div class="num">7</div><div class="label">弱勢標的</div></div>
+    <div class="kpi"><div class="num">7</div><div class="label">觀望標的</div></div>
+    <div class="kpi"><div class="num">26</div><div class="label">持倉動作</div></div>
     <div class="kpi"><div class="num">8</div><div class="label">觀點轉折</div></div>
     <div class="kpi warn"><div class="num">緘默期<br>不降槓桿</div><div class="label">主持人狀態</div></div>
   </div>
@@ -290,103 +412,141 @@
 
   <section id="topics">
     <h2>🔥 熱門題材 Top 8</h2>
-    <div class="topic-row"><div class="topic-num">1</div><div class="topic-title">被動元件全鏈(MLCC / 鋁電容 / 高壓 MLCC / 牛角電容)</div><div class="topic-count">6 集</div></div>
-    <div class="topic-row"><div class="topic-num">2</div><div class="topic-title">AI 算力商業化(Anthropic 獲利 / xAI 出租 / TPU 外銷 3:1)</div><div class="topic-count">5 集</div></div>
-    <div class="topic-row"><div class="topic-num">3</div><div class="topic-title">記憶體(美光、SanDisk、DDR4/5 跑贏 HBM)</div><div class="topic-count">5 集</div></div>
-    <div class="topic-row"><div class="topic-num">4</div><div class="topic-title">後段封裝 / 載板(5921/5922、IMIB vs CoWoS、Broadcom 雙拼、AP Memory IPD)</div><div class="topic-count">4 集</div></div>
-    <div class="topic-row"><div class="topic-num">5</div><div class="topic-title">CPU(Intel/AMD/美股 CPU 噴爆、AMD TAM 上修)</div><div class="topic-count">3 集</div></div>
-    <div class="topic-row"><div class="topic-num">6</div><div class="topic-title">ASIC(GUC、Alchip、Trainium、聯發科 ASIC 法說)</div><div class="topic-count">3 集</div></div>
-    <div class="topic-row"><div class="topic-num">7</div><div class="topic-title">高位緘默期 / 成本拉遠不減碼 / 處置股雜魚籌碼</div><div class="topic-count">3 集</div></div>
-    <div class="topic-row"><div class="topic-num">8</div><div class="topic-title">軟體股翻案(Atlassian、Cloudflare、Palantir、Salesforce、SaaS-pocalypse 破滅)</div><div class="topic-count">2 集</div></div>
+    <div class="hot-grid">
+      <div class="hot-card"><span class="name">被動元件</span><span class="count">6</span></div>
+      <div class="hot-card"><span class="name">AI 算力商業化</span><span class="count">5</span></div>
+      <div class="hot-card"><span class="name">記憶體</span><span class="count">5</span></div>
+      <div class="hot-card"><span class="name">後段封裝 / 載板</span><span class="count">4</span></div>
+      <div class="hot-card"><span class="name">CPU 類股</span><span class="count">3</span></div>
+      <div class="hot-card"><span class="name">ASIC</span><span class="count">3</span></div>
+      <div class="hot-card"><span class="name">緘默期 / 處置股</span><span class="count">3</span></div>
+      <div class="hot-card"><span class="name">軟體股翻案</span><span class="count">2</span></div>
+    </div>
   </section>
 
   <section id="flow">
-    <h2>💰 資金流向</h2>
-    <div class="flow-grid">
-      <div class="flow-col col-bull">
-        <h4>🟢 強勢</h4>
-        <ul>
-          <li><span class="own-mark">⭐</span> 被動元件族群(主持人主力)</li>
-          <li><span class="own-mark">⭐</span> 鋁電容</li>
-          <li><span class="own-mark">⭐</span> 美光 <span class="ticker">MU</span></li>
-          <li><span class="own-mark">⭐</span> 美股 CPU(爽到爛)</li>
-          <li><span class="own-mark">⭐</span> 衛星族群</li>
-          <li><span class="own-mark">⭐</span> 紅顏路比(湘南投資)</li>
-          <li>春田、Sanco(47m/22m)</li>
-          <li>高壓 MLCC、Murata、Samco</li>
-          <li>國巨 <span class="ticker">2327</span> 華新科 <span class="ticker">2492</span></li>
-          <li>立隆電、金山、鈺邦、信昌、電龍</li>
-          <li>愛普 <span class="ticker">6531</span>(IPD)</li>
-          <li>Anthropic / xAI Colossus One</li>
-          <li>Google <span class="ticker">GOOGL</span> / Blackstone <span class="ticker">BX</span></li>
-          <li>Broadcom <span class="ticker">AVGO</span></li>
-          <li>江海股份、Kemikon、Nichicon</li>
-          <li>DDR4 / DDR5(Legacy)</li>
-          <li>功率半導體 / Power Rack</li>
-          <li>Atlassian、Cloudflare、Palantir</li>
-          <li>聯電 <span class="ticker">2303</span> 世界先進 <span class="ticker">5347</span></li>
-          <li>GlobalFoundries <span class="ticker">GFS</span></li>
-          <li>GUC <span class="ticker">3443</span> Alchip <span class="ticker">3661</span></li>
-          <li>環球晶 矽晶圓週期</li>
-          <li>研華 <span class="ticker">2395</span> 研太 <span class="ticker">6231</span></li>
-          <li>漢唐(non-TSMC)、必旺</li>
-        </ul>
+    <h2>💰 資金流向(最新 sentiment)</h2>
+    <div class="flow-note">⭐ 標記為主持人有持倉。括號內為 cover 集數。</div>
+
+    <div class="flow-block">
+      <div class="flow-header bull-header">🟢 強勢(看多)</div>
+      <div class="chip-cloud">
+        <span class="stock-chip"><span class="own">⭐</span> 被動元件族群 <span class="cover">6集</span></span>
+        <span class="stock-chip"><span class="own">⭐</span> 鋁電容 <span class="cover">3集</span></span>
+        <span class="stock-chip"><span class="own">⭐</span> 美光 <code>MU</code> <span class="cover">2集</span></span>
+        <span class="stock-chip"><span class="own">⭐</span> 美股 CPU <span class="cover">2集</span></span>
+        <span class="stock-chip"><span class="own">⭐</span> 衛星族群 <span class="cover">2集</span></span>
+        <span class="stock-chip"><span class="own">⭐</span> 紅顏路比(湘南投資)</span>
+        <span class="stock-chip">Panasonic <code>6752.T</code> <span class="cover">4集</span></span>
+        <span class="stock-chip">Anthropic <span class="cover">3集</span></span>
+        <span class="stock-chip">Google <code>GOOGL</code> <span class="cover">3集</span></span>
+        <span class="stock-chip">xAI / Colossus One</span>
+        <span class="stock-chip">愛普 <code>6531</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">春田 <span class="cover">2集</span></span>
+        <span class="stock-chip">Sanco(韓) <span class="cover">2集</span></span>
+        <span class="stock-chip">Murata <code>6981.T</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">國巨 <code>2327</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">華新科 <code>2492</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">立隆電 <code>2472</code></span>
+        <span class="stock-chip">金山 <code>8027</code></span>
+        <span class="stock-chip">鈺邦 <code>6449</code></span>
+        <span class="stock-chip">Nichicon <code>6996.T</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">Kemikon <code>6997.T</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">江海股份(中) <span class="cover">2集</span></span>
+        <span class="stock-chip">DDR4 / DDR5 <span class="cover">2集</span></span>
+        <span class="stock-chip">聯電 <code>2303</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">世界先進 <code>5347</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">GFS <code>GFS</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">AMD <code>AMD</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">Broadcom <code>AVGO</code></span>
+        <span class="stock-chip">GUC <code>3443</code></span>
+        <span class="stock-chip">Alchip <code>3661</code></span>
+        <span class="stock-chip">Atlassian <code>TEAM</code></span>
+        <span class="stock-chip">Palantir <code>PLTR</code></span>
+        <span class="stock-chip">CrowdStrike <code>CRWD</code></span>
+        <span class="stock-chip">研華 <code>2395</code></span>
+        <span class="stock-chip">研太 <code>6231</code></span>
+        <span class="stock-chip">環球晶 矽晶圓週期</span>
+        <span class="stock-chip">功率半導體 / Power Rack</span>
+        <span class="stock-chip">漢唐</span>
+        <span class="stock-chip">必旺</span>
+        <span class="stock-chip">Blackstone <code>BX</code></span>
+        <span class="stock-chip">高壓 MLCC 廠</span>
       </div>
-      <div class="flow-col col-bear">
-        <h4>🔴 弱勢</h4>
-        <ul>
-          <li>NVIDIA 散熱 supply chain(改料跌停)</li>
-          <li>散熱族群(集體轉弱)</li>
-          <li>IC design Legacy(成本驅動非需求)</li>
-          <li>玻璃基板(主持人賣掉)</li>
-          <li>AIPC(joke 笑話)</li>
-          <li>Cloudflare <span class="ticker">NET</span>(被重摔)</li>
-          <li>Old AI / GP300 舊產品 components</li>
-        </ul>
+    </div>
+
+    <div class="flow-block">
+      <div class="flow-header bear-header">🔴 弱勢(看空 / 避開)</div>
+      <div class="chip-cloud">
+        <span class="stock-chip">NVIDIA 散熱供應鏈 <span class="cover">2集</span></span>
+        <span class="stock-chip">散熱族群 <span class="cover">2集</span></span>
+        <span class="stock-chip">IC design Legacy</span>
+        <span class="stock-chip">玻璃基板(已停止 cover)</span>
+        <span class="stock-chip">AIPC(joke)</span>
+        <span class="stock-chip">Cloudflare <code>NET</code>(EP660 被殺)</span>
+        <span class="stock-chip">Anthropic(Dario 末日論)</span>
       </div>
-      <div class="flow-col col-watch">
-        <h4>🟡 觀望</h4>
-        <ul>
-          <li>NVIDIA <span class="ticker">NVDA</span>(TPU 壓估值)</li>
-          <li>台積電 <span class="ticker">2330</span>(限制器,沒衝出)</li>
-          <li>Intel <span class="ticker">INTC</span>(噴到看不懂)</li>
-          <li>AMD <span class="ticker">AMD</span></li>
-          <li>聯發科 <span class="ticker">2454</span>(後段封裝決勝)</li>
-          <li>Adobe(估值壓制合理)</li>
-          <li>Salesforce <span class="ticker">CRM</span></li>
-        </ul>
+    </div>
+
+    <div class="flow-block">
+      <div class="flow-header watch-header">🟡 觀望</div>
+      <div class="chip-cloud">
+        <span class="stock-chip">聯發科 <code>2454</code> <span class="cover">4集</span></span>
+        <span class="stock-chip">NVIDIA <code>NVDA</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">台積電 <code>2330</code></span>
+        <span class="stock-chip">Intel <code>INTC</code></span>
+        <span class="stock-chip">老 AI 族群 <span class="cover">3集</span></span>
+        <span class="stock-chip">Adobe <code>ADBE</code></span>
+        <span class="stock-chip">Salesforce <code>CRM</code></span>
       </div>
     </div>
   </section>
 
   <section id="actions">
-    <h2>📊 主持人持倉動作</h2>
+    <h2>📊 主持人持倉動作(26 筆)</h2>
 
     <div class="action-group">
       <div class="action-title at-buy">🟢 買入 / 加碼</div>
-      <div class="action-item"><span class="ep-tag">EP657</span>暗示研華/研太邊緣人股票,後續真的動起來</div>
-      <div class="action-item"><span class="ep-tag">EP659</span>加大槓桿;盤中尾盤轉強的東西進去卡位(快盤打法)</div>
-      <div class="action-item"><span class="ep-tag">EP660</span>該降槓桿位置「老子直接不降」,因成本拉太遠</div>
-      <div class="action-item"><span class="ep-tag">EP663</span>被動元件 + 鋁電容(過去帶來非常好報酬)</div>
-      <div class="action-item"><span class="ep-tag">EP664</span>處置股關 20 分鐘也跌停加碼,結果又繼續噴出</div>
+      <table class="action-table">
+        <tr><td><span class="ep">EP657</span></td><td>權值股 / 大型股</td><td>上週減碼中小換大型(EP656 換倉延續)</td></tr>
+        <tr><td><span class="ep">EP657</span></td><td>研華 (2395) / 研太 (6231)</td><td>暗示邊緣人股票,後續真的動起來</td></tr>
+        <tr><td><span class="ep">EP659</span></td><td>未指名(尾盤轉強)</td><td>盤中尾盤拉起進去卡位(快盤打法)</td></tr>
+        <tr><td><span class="ep">EP659</span></td><td>整體部位</td><td>加大槓桿、放大成交量</td></tr>
+        <tr><td><span class="ep">EP659</span></td><td>被動元件族群</td><td>抄底加碼(漲多回檔點)</td></tr>
+        <tr><td><span class="ep">EP662</span></td><td>被動元件族群</td><td>跌停加碼</td></tr>
+        <tr><td><span class="ep">EP664</span></td><td>被動元件族群</td><td>處置股關 20 分鐘也跌停加碼,結果又繼續噴出</td></tr>
+        <tr><td><span class="ep">EP664</span></td><td>紅顏路比(湘南投資)</td><td>7月 Steam 上線推廣</td></tr>
+      </table>
     </div>
 
     <div class="action-group">
       <div class="action-title at-sell">🔴 賣出 / 減碼</div>
-      <div class="action-item"><span class="ep-tag">EP660</span>進入緘默期 — 高位不公開評論個股抄底位</div>
-      <div class="action-item"><span class="ep-tag">EP660</span>明示:手上部位若大逃殺,理由不嚴重也要減碼(高位風控)</div>
-      <div class="action-item"><span class="ep-tag">EP662</span>有訊號會去減碼/降槓桿(但跌停鎖住沒辦法動)</div>
-      <div class="action-item"><span class="ep-tag">EP663</span>玻璃基板已賣掉(被網路酸出完貨)</div>
-      <div class="action-item"><span class="ep-tag">EP664</span>該減碼點未減碼(成本拉太遠,殺多再砍)</div>
+      <table class="action-table">
+        <tr><td><span class="ep">EP657</span></td><td>記憶體 / Nor / MLC</td><td>魚頭吃到,後面沒吃</td></tr>
+        <tr><td><span class="ep">EP660</span></td><td>未指名(高位部位)</td><td>進入緘默期,不公開評論個股抄底位</td></tr>
+        <tr><td><span class="ep">EP660</span></td><td>未指名(大逃殺部位)</td><td>明示:理由不嚴重也要減碼(高位風控)</td></tr>
+        <tr><td><span class="ep">EP662</span></td><td>未指名</td><td>有訊號會去減碼/降槓桿(但跌停鎖住沒動)</td></tr>
+        <tr><td><span class="ep">EP663</span></td><td>玻璃基板</td><td>停止 cover(網路酸出完貨)</td></tr>
+        <tr><td><span class="ep">EP664</span></td><td>未指名(該減碼點)</td><td>未減碼(成本拉太遠,殺多再砍)</td></tr>
+      </table>
     </div>
 
     <div class="action-group">
       <div class="action-title at-hold">🟡 持有 / 觀望</div>
-      <div class="action-item"><span class="ep-tag">EP658</span>心理帳戶部位永不賣(波段賺 500 萬留 50-100 萬)</div>
-      <div class="action-item"><span class="ep-tag">EP660</span>美光持有、美股 CPU 爽到爛</div>
-      <div class="action-item"><span class="ep-tag">EP663</span>衛星族群看好不變、光設備車進去研究中</div>
-      <div class="action-item"><span class="ep-tag">EP663</span>未指名(整體):噴射段大致不動,看技術面決定</div>
-      <div class="action-item"><span class="ep-tag">EP664</span>處置股部位不動,5月績效再創4月新高</div>
+      <table class="action-table">
+        <tr><td><span class="ep">EP657</span></td><td>聯發科 (2454)</td><td>持有(已射出後不屌吹)</td></tr>
+        <tr><td><span class="ep">EP658</span></td><td>未指名(波段 10-20% 部位)</td><td>心理帳戶部位永不賣(波段賺 500 萬留 50-100 萬)</td></tr>
+        <tr><td><span class="ep">EP659</span></td><td>聯發科 (2454)</td><td>持有不加碼(3000+ 預期打太滿)</td></tr>
+        <tr><td><span class="ep">EP660</span></td><td>美光 (MU)</td><td>持有(台股早被洗掉)</td></tr>
+        <tr><td><span class="ep">EP660</span></td><td>美股 CPU</td><td>爽到爛掉的部位之一</td></tr>
+        <tr><td><span class="ep">EP660</span></td><td>未指名(高位槓桿部位)</td><td>沒降槓桿(成本拉太遠麻木)</td></tr>
+        <tr><td><span class="ep">EP661</span></td><td>瓜阿康(低估值防守)</td><td>準備躲進去</td></tr>
+        <tr><td><span class="ep">EP662</span></td><td>動能部位</td><td>持有不動</td></tr>
+        <tr><td><span class="ep">EP663</span></td><td>被動元件族群 (MLCC/L-Cap)</td><td>持有(本波好報酬主力)</td></tr>
+        <tr><td><span class="ep">EP663</span></td><td>多檔已進處置股</td><td>盤中無法動,讓它隨風飄逸</td></tr>
+        <tr><td><span class="ep">EP663</span></td><td>光通設備</td><td>前陣子 car 進去研究中</td></tr>
+        <tr><td><span class="ep">EP663</span></td><td>衛星族群</td><td>看好態度不變</td></tr>
+      </table>
     </div>
   </section>
 
@@ -395,49 +555,83 @@
 
     <div class="pivot">
       <div class="pivot-name">台積電 (2330)</div>
-      <div class="pivot-flow">EP657 watchful → EP660 bullish → EP664 neutral</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip">EP657</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-watch">EP657 watchful</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP660 bullish</span><span class="sent-arrow">→</span>
+        <span class="sent-chip">EP664 neutral</span>
+      </div>
       <div class="pivot-why">EP657 投信買盤被外資 1.8 萬+2 萬張壓住、動能噴出劇本受阻;EP660 大盤 42000 台積電 2345 仍交易 12-20 倍 PE 沒泡沫;EP664 變成 AI 泡沫的「限制器」— 產能壓制下 NVDA 營收沒辦法暴衝,只包不住火後續壓力大</div>
     </div>
 
     <div class="pivot">
       <div class="pivot-name">聯發科 (2454)</div>
-      <div class="pivot-flow">EP657 bullish(已射出) → EP658 bullish(法說後 EPS 上修) → EP660 neutral(處置股) → EP663 watchful</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip sent-bull">EP657 bullish</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP658 bullish</span><span class="sent-arrow">→</span>
+        <span class="sent-chip">EP660 neutral</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-watch">EP663 watchful</span>
+      </div>
       <div class="pivot-why">EP658 法說後券商 upgrade EPS 喊到快 400(比小作文激進);EP660 變處置股大法人關廁所,主持人喊「想都不敢想」;EP663 前台積電大將加入,5922(HumuFresh)後段封裝可能從 Intel IMIB 拉回 TSMC,焦點轉到後段決勝</div>
     </div>
 
     <div class="pivot">
       <div class="pivot-name">Panasonic (6752.T)</div>
-      <div class="pivot-flow">EP661 neutral(退 OS-CON) → EP662 neutral(預期不會發漲價函) → EP663 bullish(漲價函流出僅部分客戶) → EP664 bullish(高壓 MLCC 帶頭漲)</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip">EP661 neutral</span><span class="sent-arrow">→</span>
+        <span class="sent-chip">EP662 neutral</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP663 bullish</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP664 bullish</span>
+      </div>
       <div class="pivot-why">EP661 退出 OS-CON 固態電容、Nippon Chemi-Con 接手;EP662 主持人推測還不會發漲價函;EP663 上集才講完隔天漲價函就流出(類似 2018 大潮模式:每月競標、價高者得);EP664 直接帶頭把產能轉去高階 AI 客戶,不買沒差</div>
     </div>
 
     <div class="pivot">
       <div class="pivot-name">愛普 AP Memory (6531)</div>
-      <div class="pivot-flow">EP657 neutral(IPD 暗示) → EP663 bullish(資金回流)</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip">EP657 neutral</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP663 bullish</span>
+      </div>
       <div class="pivot-why">EP657 在 Intel/MTK/Google 醫美相關段落第一次帶到 IPD(integrated passive device,埋載板電容);EP663 Google TPU 變成五台正中央後,IPD 故事被市場注意,資金回流。經典「不要的東西再被拿出來」案例</div>
     </div>
 
     <div class="pivot">
       <div class="pivot-name">被動元件族群(台股)</div>
-      <div class="pivot-flow">EP657 watchful(海外領先台股不動) → EP661 bullish(全面醒過來) → EP663 bullish(漲價函+斷供確認) → EP664 bullish(全面噴射)</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip sent-watch">EP657 watchful</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP661 bullish</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP663 bullish</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP664 bullish</span>
+      </div>
       <div class="pivot-why">EP657 主持人吐槽台股被動元件 underperform 海外(VPG、Samco、Murata 都先動);EP661 台股一動就最兇,MLCC 47m缺爆、鋁電容 Nichicon/Chemi-Con 噴飛;EP663 通路商必旺證實高階斷供;EP664 主持人本人跌停加碼又噴出,5月績效再刷4月新高</div>
     </div>
 
     <div class="pivot">
       <div class="pivot-name">Cloudflare (NET)</div>
-      <div class="pivot-flow">EP658 bullish(SaaS-pocalypse 翻案) → EP660 neutral(被重摔)</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip sent-bull">EP658 bullish</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bear">EP660 bearish</span>
+      </div>
       <div class="pivot-why">EP658 主持人看好垂直整合 FDE 商業模式、列為 AI 時代難被搞掉的軟體股之一;EP660 裁員 + guidance 不夠好被重摔,雖然基本面其實沒太大問題,但高位隨便理由都能殺。示範「高位緘默期 + 高位降槓桿」要求</div>
     </div>
 
     <div class="pivot">
       <div class="pivot-name">老 AI 族群 / Broadcom 載板</div>
-      <div class="pivot-flow">EP660 watchful(NVIDIA 改料 components 跌停) → EP663 watchful(故事鋪墊) → EP664 watchful</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip sent-watch">EP660 watchful</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-watch">EP663 watchful</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-watch">EP664 watchful</span>
+      </div>
       <div class="pivot-why">EP660 NVIDIA 改散熱介質(鍍金不用了)相關 components 跌停但本體沒事;EP663 SemiAnalysis 報告引發討論,主持人考察到「大顆 Sundfish 雙拼」載板新故事;EP664 主持人說現在接刀稍危險但 RoadMap 還在,「不要的東西再被拿出來」可能是後面題材</div>
     </div>
 
     <div class="pivot">
       <div class="pivot-name">散熱族群</div>
-      <div class="pivot-flow">EP660 bearish(NV 改料 supply chain 跌停) → EP661 bearish(集體轉弱) → EP663 bearish(換設計傳聞)</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip sent-bear">EP660 bearish</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bear">EP661 bearish</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bear">EP663 bearish</span>
+      </div>
       <div class="pivot-why">EP660 NVIDIA 散熱介質改料相關股直接跌停;EP661 散熱在強勢族群中相對軟;EP663 散熱換設計傳聞(不是小作文是消息),前期就在傳。X 上動漫頭像分析師開始寫代表已傳遍市場</div>
     </div>
   </section>
