@@ -7,23 +7,23 @@
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    background: #f5f5f0;
+    background: #fafaf7;
     font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-    color: #0f172a;
-    line-height: 1.7;
+    color: #1f2937;
+    line-height: 1.75;
     padding: 0 0 80px;
   }
   .container { max-width: 800px; margin: 0 auto; padding: 0 16px; }
   header {
-    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-    color: white;
-    padding: 36px 20px 28px;
+    background: #1f2937;
+    color: #fafaf7;
+    padding: 32px 20px 26px;
     text-align: center;
-    border-radius: 0 0 16px 16px;
     margin-bottom: 20px;
   }
-  header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
-  header .sub { opacity: 0.9; margin-top: 6px; font-size: 14px; }
+  header h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; }
+  header .sub { opacity: 0.7; margin-top: 6px; font-size: 13px; }
+
   .kpi-bar {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -31,266 +31,78 @@
     margin: 20px 0;
   }
   .kpi {
-    background: #fefefe;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 8px;
     padding: 14px 8px;
     text-align: center;
   }
-  .kpi .num { font-size: 24px; font-weight: 700; color: #2563eb; line-height: 1.2; }
-  .kpi .label { font-size: 11px; color: #64748b; margin-top: 4px; line-height: 1.3; }
-  .kpi.warn .num { color: #ca8a04; font-size: 16px; line-height: 1.4; }
+  .kpi .num { font-size: 24px; font-weight: 700; color: #1f2937; line-height: 1.2; }
+  .kpi .label { font-size: 11px; color: #888; margin-top: 4px; line-height: 1.3; }
+  .kpi.warn .num { color: #c2410c; font-size: 16px; line-height: 1.4; }
+
   .toc-block {
-    background: #1e3a8a;
-    border-radius: 10px;
-    padding: 12px 18px;
-    margin-bottom: 24px;
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 22px;
     font-size: 13px;
-    box-shadow: 0 4px 12px rgba(30,58,138,0.25);
   }
   .toc-block a {
-    color: #ffffff;
+    color: #4b5563;
     text-decoration: none;
     margin-right: 6px;
     display: inline-block;
-    padding: 5px 10px;
-    border-radius: 6px;
+    padding: 4px 9px;
+    border-radius: 5px;
     font-weight: 500;
-    background: rgba(255,255,255,0.08);
-    transition: background 0.2s;
+    background: #f4f4f0;
   }
-  .toc-block a:hover { background: rgba(255,255,255,0.22); }
+  .toc-block a:hover { background: #efeee9; }
+
   section {
-    background: #fefefe;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 18px;
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    padding: 24px 26px;
+    margin-bottom: 16px;
   }
   h2 {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #f1f5f9;
+    color: #111;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f0f0ec;
   }
   h3 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-    color: #1e3a8a;
+    color: #6b7280;
     margin: 16px 0 8px;
   }
-  p { margin-bottom: 10px; color: #334155; }
-  ul.clean { list-style: none; padding: 0; }
-  ul.clean li {
-    padding: 10px 0;
-    border-bottom: 1px dashed #e5e7eb;
-  }
-  ul.clean li:last-child { border-bottom: none; }
-  .topic-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px dashed #e5e7eb;
-  }
-  .topic-row:last-child { border-bottom: none; }
-  .topic-num {
-    background: #2563eb;
-    color: white;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 13px;
-    margin-right: 12px;
-    flex-shrink: 0;
-  }
-  .topic-title { flex: 1; font-weight: 500; }
-  .topic-count {
-    color: #64748b;
-    font-size: 12px;
-    background: #f1f5f9;
-    padding: 3px 10px;
-    border-radius: 12px;
-  }
-  .flow-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 14px;
-    margin-top: 12px;
-  }
-  .flow-col {
-    background: #f8fafc;
-    border-radius: 10px;
-    padding: 14px;
-  }
-  .flow-col h4 {
-    font-size: 14px;
-    margin-bottom: 10px;
-    padding-bottom: 6px;
-    border-bottom: 2px solid;
-  }
-  .col-bull h4 { color: #16a34a; border-color: #16a34a; }
-  .col-bear h4 { color: #dc2626; border-color: #dc2626; }
-  .col-watch h4 { color: #ca8a04; border-color: #ca8a04; }
-  .flow-col ul { list-style: none; padding: 0; font-size: 13px; }
-  .flow-col li { padding: 4px 0; color: #334155; }
-  .ticker {
-    display: inline-block;
-    background: white;
-    border: 1px solid #cbd5e1;
-    border-radius: 4px;
-    padding: 1px 6px;
-    font-size: 11px;
-    color: #475569;
-    margin-left: 4px;
-  }
-  .own-mark { color: #ea580c; font-weight: 700; }
-  .action-group { margin-bottom: 16px; }
-  .action-title {
-    font-weight: 700;
-    font-size: 14px;
-    padding: 6px 12px;
-    border-radius: 6px;
-    display: inline-block;
-    margin-bottom: 8px;
-  }
-  .at-buy { background: #dcfce7; color: #15803d; }
-  .at-sell { background: #fee2e2; color: #b91c1c; }
-  .at-hold { background: #fef3c7; color: #a16207; }
-  .action-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 10px 0 16px;
-    font-size: 13px;
-  }
-  .action-table th {
-    background: #f1f5f9;
-    padding: 8px 10px;
-    text-align: left;
-    font-weight: 700;
-    color: #1e293b;
-    border-bottom: 2px solid #cbd5e1;
-  }
-  .action-table td {
-    padding: 8px 10px;
-    border-bottom: 1px dashed #e5e7eb;
-    color: #334155;
-  }
-  .action-table td:first-child { width: 60px; }
-  .action-table td:nth-child(2) { font-weight: 500; color: #0f172a; }
-  .action-table .ep {
-    background: #2563eb;
-    color: white;
-    padding: 2px 7px;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 600;
-  }
-  .action-item {
-    padding: 6px 0;
-    font-size: 14px;
-    color: #334155;
-    border-bottom: 1px dashed #e5e7eb;
-  }
-  .ep-tag {
-    display: inline-block;
-    background: #2563eb;
-    color: white;
-    padding: 1px 7px;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 600;
-    margin-right: 6px;
-  }
-  .pivot {
-    background: #f8fafc;
-    border-left: 3px solid #2563eb;
-    padding: 12px 16px;
-    margin: 10px 0;
-    border-radius: 4px;
-  }
-  .pivot-name { font-weight: 700; color: #0f172a; margin-bottom: 4px; }
-  .pivot-flow { font-size: 13px; color: #475569; margin-bottom: 6px; }
-  .pivot-why { font-size: 13px; color: #1e3a8a; font-style: italic; }
-  .principle {
-    margin: 14px 0;
-    padding: 14px;
-    background: #f8fafc;
-    border-radius: 8px;
-    border-left: 4px solid #2563eb;
-  }
-  .principle-title {
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 6px;
-  }
-  .principle-quote {
-    color: #475569;
-    font-size: 13px;
-    font-style: italic;
-    margin: 6px 0;
-    padding-left: 10px;
-    border-left: 2px solid #cbd5e1;
-  }
-  .principle-from { font-size: 12px; color: #64748b; }
-  .watch-item {
-    padding: 10px 14px;
-    margin: 8px 0;
-    background: #f0f9ff;
-    border-left: 3px solid #0284c7;
-    border-radius: 4px;
-    font-size: 14px;
-  }
-  .market-summary {
-    background: linear-gradient(135deg, #fafafa 0%, #f1f5f9 100%);
-    padding: 18px;
-    border-radius: 10px;
-    line-height: 1.8;
-  }
-  .float-top {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    background: #1e3a8a;
-    color: white;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    z-index: 100;
-  }
+  p { margin-bottom: 10px; color: #374151; }
 
-  /* 熱題 Top 8 - 4 cols x 2 rows grid */
+  /* 熱題 grid */
   .hot-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
   }
   .hot-card {
-    background: #f8fafc;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
+    background: #f7f7f4;
+    border-radius: 8px;
     padding: 14px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .hot-card .name { font-weight: 600; color: #0f172a; font-size: 14px; }
+  .hot-card .name { font-weight: 600; color: #1f2937; font-size: 13.5px; }
   .hot-card .count {
-    background: #1e3a8a;
+    background: #1f2937;
     color: white;
-    border-radius: 12px;
+    border-radius: 11px;
     padding: 2px 10px;
     font-size: 12px;
     font-weight: 600;
@@ -300,73 +112,178 @@
   .flow-block { margin-bottom: 22px; }
   .flow-header {
     display: inline-block;
-    padding: 6px 16px;
+    padding: 5px 14px;
     border-radius: 20px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 13.5px;
     margin-bottom: 12px;
+    background: #f4f4f0;
+    color: #4b5563;
   }
-  .bull-header { background: #dcfce7; color: #15803d; }
-  .bear-header { background: #fee2e2; color: #b91c1c; }
-  .watch-header { background: #fef3c7; color: #a16207; }
   .chip-cloud {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 7px;
   }
   .stock-chip {
-    background: #f1f5f9;
-    border: 1px solid #cbd5e1;
-    border-radius: 16px;
-    padding: 5px 12px;
-    font-size: 13px;
-    color: #1e293b;
+    background: #f7f7f4;
+    border: 1px solid #ececec;
+    border-radius: 14px;
+    padding: 4px 11px;
+    font-size: 12.5px;
+    color: #1f2937;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
   }
   .stock-chip .cover {
     background: white;
-    color: #64748b;
+    color: #888;
     font-size: 11px;
-    padding: 1px 7px;
+    padding: 1px 6px;
     border-radius: 8px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #ececec;
   }
-  .stock-chip .own { color: #ea580c; font-weight: 700; }
+  .stock-chip .own { color: #c2410c; font-weight: 700; }
   .stock-chip code {
-    background: #e2e8f0;
-    padding: 1px 5px;
-    border-radius: 3px;
+    color: #888;
     font-size: 11px;
-    color: #475569;
   }
-  .flow-note { font-size: 12px; color: #64748b; margin-bottom: 14px; }
+  .flow-note { font-size: 12px; color: #888; margin-bottom: 14px; }
 
   /* 觀點轉折 sentiment chips */
+  .pivot {
+    margin: 14px 0;
+    padding: 13px 16px;
+    background: #f7f7f4;
+    border-radius: 7px;
+  }
+  .pivot-name { font-weight: 700; color: #111; margin-bottom: 6px; font-size: 14.5px; }
   .sentiment-flow {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     flex-wrap: wrap;
-    margin: 10px 0 8px;
+    margin: 8px 0;
   }
   .sent-chip {
-    background: #f1f5f9;
-    border-radius: 14px;
-    padding: 4px 11px;
-    font-size: 12px;
+    background: #ececec;
+    border-radius: 12px;
+    padding: 3px 10px;
+    font-size: 11.5px;
     font-weight: 500;
-    color: #1e293b;
+    color: #4b5563;
   }
-  .sent-bull { background: #dcfce7; color: #15803d; }
-  .sent-bear { background: #fee2e2; color: #b91c1c; }
-  .sent-watch { background: #fef3c7; color: #a16207; }
-  .sent-arrow { color: #94a3b8; font-weight: 700; }
+  .sent-bull { background: #d4e8d4; color: #2d5a2d; }
+  .sent-bear { background: #e8d4d4; color: #5a2d2d; }
+  .sent-watch { background: #ede5cf; color: #6a571f; }
+  .sent-arrow { color: #b0b0b0; font-weight: 700; }
+  .pivot-why { font-size: 13px; color: #4b5563; margin-top: 5px; line-height: 1.6; }
+
+  /* 持倉動作 table */
+  .action-group { margin-bottom: 18px; }
+  .action-title {
+    font-weight: 700;
+    font-size: 13.5px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 8px;
+    background: #f4f4f0;
+    color: #4b5563;
+  }
+  .action-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 14px;
+    font-size: 13px;
+  }
+  .action-table th {
+    background: #f7f7f4;
+    padding: 7px 10px;
+    text-align: left;
+    font-weight: 700;
+    color: #4b5563;
+    border-bottom: 1px solid #ececec;
+  }
+  .action-table td {
+    padding: 7px 10px;
+    border-bottom: 1px dashed #f0f0ec;
+    color: #374151;
+  }
+  .action-table td:first-child { width: 60px; }
+  .action-table td:nth-child(2) { font-weight: 500; color: #111; }
+  .action-table .ep {
+    background: #4b5563;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  /* 心法 */
+  .principle {
+    margin: 14px 0;
+    padding: 14px 16px;
+    background: #f7f7f4;
+    border-radius: 7px;
+  }
+  .principle-title {
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 6px;
+    font-size: 14.5px;
+  }
+  .principle-quote {
+    color: #6b7280;
+    font-size: 13px;
+    font-style: italic;
+    margin: 6px 0;
+    padding-left: 10px;
+    border-left: 2px solid #d4d4d0;
+  }
+  .principle-from { font-size: 12px; color: #888; }
+
+  /* 觀察重點 */
+  .watch-item {
+    padding: 10px 14px;
+    margin: 8px 0;
+    background: #f7f7f4;
+    border-radius: 6px;
+    font-size: 13.5px;
+  }
+
+  /* 市場氣氛 */
+  .market-summary {
+    background: #f7f7f4;
+    padding: 18px;
+    border-radius: 8px;
+    line-height: 1.8;
+    font-size: 14px;
+  }
+
+  .float-top {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    background: #1f2937;
+    color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    z-index: 100;
+  }
   @media (max-width: 600px) {
     .kpi-bar { grid-template-columns: repeat(2, 1fr); }
-    .flow-grid { grid-template-columns: 1fr; }
-    header h1 { font-size: 22px; }
+    .hot-grid { grid-template-columns: 1fr 1fr; }
+    header h1 { font-size: 21px; }
   }
 </style>
 </head>
@@ -390,25 +307,25 @@
   </div>
 
   <div class="toc-block">
-    <a href="#narrative">📖 敘事弧</a>
-    <a href="#topics">🔥 熱題</a>
-    <a href="#flow">💰 資金流向</a>
-    <a href="#actions">📊 持倉動作</a>
-    <a href="#pivots">🔄 觀點轉折</a>
-    <a href="#principles">💡 心法</a>
-    <a href="#watchlist">🎯 下一步觀察</a>
-    <a href="#market">🌐 市場氣氛</a>
+    <a href="#narrative">敘事弧</a>
+    <a href="#topics">熱題</a>
+    <a href="#flow">資金流向</a>
+    <a href="#actions">持倉動作</a>
+    <a href="#pivots">觀點轉折</a>
+    <a href="#principles">心法</a>
+    <a href="#watchlist">下一步觀察</a>
+    <a href="#market">市場氣氛</a>
   </div>
 
   <section id="narrative">
-    <h2>📖 本月敘事弧</h2>
+    <h2>本月敘事弧</h2>
     <p><strong>5月初(EP657-658)</strong>:4月績效爆好,主持人預警5月會有像樣回檔,黃仁勳訪問校正回歸 AI 取代焦慮,聯發科法說後券商 EPS 喊到比小作文還激進。台積電摸到 2330 後沒衝出去,資金回流中小,台股被動元件醒過來。</p>
     <p><strong>5月中(EP659-661)</strong>:大盤噴到 42000、台積電 2345,進入「高位緘默期」 — 主持人不公開評論個股抄底位。NVIDIA 改散熱料 components 跌停。被動元件全面甦醒(MLCC 47m缺、鋁電容 Nichicon/Chemi-Con 噴飛、Panasonic 退 OS-CON),消費性復甦先行(聯電/世界先進/IC設計 DDI)。</p>
     <p><strong>5月下(EP662-664)</strong>:被動元件第二階段 — Panasonic 漲價函流出、廠商現貨大掃料、必旺證實高階料號斷供。AI 算力商業化三連發:Anthropic 轉獲利、xAI 算力出租 1-2 年回本、Google + Blackstone TPU Cluster Cloud。TPU 自用:外銷 = 3:1 共識成形。主持人本人 5月績效再刷4月新高 — 處置股關住跌停反而加碼。</p>
   </section>
 
   <section id="topics">
-    <h2>🔥 熱門題材 Top 8</h2>
+    <h2>熱門題材 Top 8</h2>
     <div class="hot-grid">
       <div class="hot-card"><span class="name">被動元件</span><span class="count">6</span></div>
       <div class="hot-card"><span class="name">AI 算力商業化</span><span class="count">5</span></div>
@@ -422,11 +339,11 @@
   </section>
 
   <section id="flow">
-    <h2>💰 資金流向(最新 sentiment)</h2>
+    <h2>資金流向(最新 sentiment)</h2>
     <div class="flow-note">⭐ 標記為主持人有持倉。括號內為 cover 集數。</div>
 
     <div class="flow-block">
-      <div class="flow-header bull-header">🟢 強勢(看多)</div>
+      <div class="flow-header">強勢(看多)</div>
       <div class="chip-cloud">
         <span class="stock-chip"><span class="own">⭐</span> 被動元件族群 <span class="cover">6集</span></span>
         <span class="stock-chip"><span class="own">⭐</span> 鋁電容 <span class="cover">3集</span></span>
@@ -473,7 +390,7 @@
     </div>
 
     <div class="flow-block">
-      <div class="flow-header bear-header">🔴 弱勢(看空 / 避開)</div>
+      <div class="flow-header">弱勢(看空 / 避開)</div>
       <div class="chip-cloud">
         <span class="stock-chip">NVIDIA 散熱供應鏈 <span class="cover">2集</span></span>
         <span class="stock-chip">散熱族群 <span class="cover">2集</span></span>
@@ -486,7 +403,7 @@
     </div>
 
     <div class="flow-block">
-      <div class="flow-header watch-header">🟡 觀望</div>
+      <div class="flow-header">觀望</div>
       <div class="chip-cloud">
         <span class="stock-chip">聯發科 <code>2454</code> <span class="cover">4集</span></span>
         <span class="stock-chip">NVIDIA <code>NVDA</code> <span class="cover">2集</span></span>
@@ -500,10 +417,10 @@
   </section>
 
   <section id="actions">
-    <h2>📊 主持人持倉動作(26 筆)</h2>
+    <h2>主持人持倉動作(26 筆)</h2>
 
     <div class="action-group">
-      <div class="action-title at-buy">🟢 買入 / 加碼</div>
+      <div class="action-title">買入 / 加碼</div>
       <table class="action-table">
         <tr><td><span class="ep">EP657</span></td><td>權值股 / 大型股</td><td>上週減碼中小換大型(EP656 換倉延續)</td></tr>
         <tr><td><span class="ep">EP657</span></td><td>研華 (2395) / 研太 (6231)</td><td>暗示邊緣人股票,後續真的動起來</td></tr>
@@ -517,7 +434,7 @@
     </div>
 
     <div class="action-group">
-      <div class="action-title at-sell">🔴 賣出 / 減碼</div>
+      <div class="action-title">賣出 / 減碼</div>
       <table class="action-table">
         <tr><td><span class="ep">EP657</span></td><td>記憶體 / Nor / MLC</td><td>魚頭吃到,後面沒吃</td></tr>
         <tr><td><span class="ep">EP660</span></td><td>未指名(高位部位)</td><td>進入緘默期,不公開評論個股抄底位</td></tr>
@@ -529,7 +446,7 @@
     </div>
 
     <div class="action-group">
-      <div class="action-title at-hold">🟡 持有 / 觀望</div>
+      <div class="action-title">持有 / 觀望</div>
       <table class="action-table">
         <tr><td><span class="ep">EP657</span></td><td>聯發科 (2454)</td><td>持有(已射出後不屌吹)</td></tr>
         <tr><td><span class="ep">EP658</span></td><td>未指名(波段 10-20% 部位)</td><td>心理帳戶部位永不賣(波段賺 500 萬留 50-100 萬)</td></tr>
@@ -548,12 +465,11 @@
   </section>
 
   <section id="pivots">
-    <h2>🔄 觀點轉折(同檔股跨集 sentiment 變化)</h2>
+    <h2>觀點轉折(同檔股跨集 sentiment 變化)</h2>
 
     <div class="pivot">
       <div class="pivot-name">台積電 (2330)</div>
       <div class="sentiment-flow">
-        <span class="sent-chip">EP657</span><span class="sent-arrow">→</span>
         <span class="sent-chip sent-watch">EP657 watchful</span><span class="sent-arrow">→</span>
         <span class="sent-chip sent-bull">EP660 bullish</span><span class="sent-arrow">→</span>
         <span class="sent-chip">EP664 neutral</span>
@@ -634,7 +550,7 @@
   </section>
 
   <section id="principles">
-    <h2>💡 心法 Top 5(severity=high)</h2>
+    <h2>心法 Top 5(severity=high)</h2>
 
     <div class="principle">
       <div class="principle-title">1. 高位緘默期 + 高位降槓桿,理由不嚴重也要減碼</div>
@@ -668,7 +584,7 @@
   </section>
 
   <section id="watchlist">
-    <h2>🎯 下一步觀察重點</h2>
+    <h2>下一步觀察重點</h2>
     <div class="watch-item">1. <strong>大廠聯合擴產訊號</strong> — 被動元件/記憶體唯一下檔風險,目前只有部分高壓 MLCC 擴產,其他沒擴(EP663)</div>
     <div class="watch-item">2. <strong>Panasonic / Nichicon / Chemi-Con 漲價函發送對象擴大</strong>:全面對所有客戶 = 第二波開始</div>
     <div class="watch-item">3. <strong>聯發科 5922 (HumuFresh) 後段封裝走向</strong>:Intel IMIB-T vs TSMC CoWoS,前台積電大將加入是否提高 TSMC 機率</div>
@@ -680,7 +596,7 @@
   </section>
 
   <section id="market">
-    <h2>🌐 市場氣氛總結</h2>
+    <h2>市場氣氛總結</h2>
     <div class="market-summary">
       <p><strong>位階</strong>:大盤 42000+、台積電 2345、台股年化 20%+ 世界冠軍。多頭已久,跌 1% 叫崩盤、跌 3% 叫大逃殺的人變多 — 這群人會在後面受傷(主持人 EP660/EP663 警示)。</p>
       <p><strong>主軸</strong>:被動元件是 5月台股 MVP(從預警冷門到全面噴射只花 3-4 週)。AI 算力商業化三連發(Anthropic 獲利 + xAI 出租回本 + TPU 3:1 外銷)讓硬體投資論述從「會不會泡沫」變成「越快買越好」。</p>
