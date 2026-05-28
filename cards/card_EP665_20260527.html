@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP665 筆記</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif; color: #1f2937; line-height: 1.75; padding: 32px 16px 80px; }
+  .container { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px 30px; margin-bottom: 16px; position: relative; }
+  .card-num { position: absolute; top: 18px; right: 22px; font-size: 11.5px; color: #b0b0b0; font-weight: 500; }
+  .ch { font-size: 12px; color: #888; margin-bottom: 8px; letter-spacing: 1px; }
+  h1 { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 4px; letter-spacing: -0.5px; }
+  .subtitle { color: #888; font-size: 13px; margin-bottom: 20px; }
+  h2 { font-size: 19px; font-weight: 700; color: #111; margin-bottom: 14px; line-height: 1.45; padding-right: 40px; }
+  h3 { font-size: 13.5px; font-weight: 700; color: #6b7280; margin: 18px 0 8px; letter-spacing: 0.5px; }
+  p { margin-bottom: 10px; color: #374151; }
+  .core { font-size: 15px; color: #1f2937; margin: 10px 0 14px; }
+  .mechanism { background: #f7f7f4; padding: 14px 18px; margin: 14px 0; border-radius: 6px; font-size: 14.5px; color: #374151; }
+  .mechanism strong { color: #111; }
+  .stocks { margin: 10px 0; }
+  .stock-group { margin: 8px 0; line-height: 1.9; }
+  .stock-group .gl { display: inline-block; font-weight: 700; color: #6b7280; font-size: 13px; margin-right: 6px; }
+  .ticker { display: inline-block; background: #f4f4f0; border: 1px solid #e5e5e0; border-radius: 5px; padding: 2px 8px; margin: 2px 3px 2px 0; font-size: 13px; color: #1f2937; }
+  .ticker code { color: #888; font-size: 11.5px; margin-left: 4px; }
+  .note { display: block; margin: 5px 0 5px 20px; font-size: 12.5px; color: #888; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; padding: 11px 16px; margin: 12px 0; border-radius: 6px; color: #735c2e; font-size: 13.5px; }
+  .risk::before { content: "⚠️  "; }
+  .action { background: #fff5ec; padding: 13px 18px; margin: 14px 0; border-radius: 6px; color: #9a4f0e; font-weight: 500; font-size: 14.5px; }
+  .action::before { content: "📌 "; }
+  .own { color: #c2410c; font-weight: 700; }
+  .hl { color: #c2410c; font-weight: 700; }
+  blockquote { padding: 8px 14px; margin: 10px 0; color: #6b7280; font-style: italic; font-size: 13.5px; background: #f7f7f4; border-radius: 6px; }
+  .pills { display: flex; flex-direction: column; gap: 7px; margin-top: 10px; }
+  .pill { background: #f7f7f4; color: #1f2937; padding: 10px 15px; border-radius: 7px; text-decoration: none; font-size: 13.5px; line-height: 1.5; }
+  .pill:hover { background: #efeee9; }
+  .pill .pn { display: inline-block; width: 22px; color: #999; font-size: 12px; font-weight: 600; }
+  .companies { display: grid; grid-template-columns: 56px 1fr; gap: 6px 10px; margin: 12px 0 4px; font-size: 13px; }
+  .companies .lb { font-weight: 700; color: #888; padding-top: 3px; font-size: 12.5px; }
+  .three-col { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 14px 0 4px; }
+  .three-col .col { background: #f7f7f4; border-radius: 7px; padding: 12px 14px; }
+  .three-col h4 { font-size: 13px; font-weight: 700; color: #4b5563; margin-bottom: 7px; }
+  .three-col ul { padding-left: 16px; font-size: 12.5px; }
+  .three-col li { margin: 4px 0; color: #374151; line-height: 1.55; }
+  .float-top { position: fixed; bottom: 22px; right: 22px; background: #1f2937; color: white; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); }
+  @media (max-width: 600px) {
+    .three-col { grid-template-columns: 1fr; }
+    .companies { grid-template-columns: 1fr; }
+    .companies .lb { padding-top: 0; }
+    body { padding: 16px 8px 80px; }
+    .card { padding: 20px 22px; }
+    h1 { font-size: 21px; }
+    h2 { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="container">
+
+  <div class="card" id="card-1">
+    <span class="card-num">1/10</span>
+    <h1>股癌 EP665 筆記</h1>
+    <p class="subtitle">2026/05/27 · SpaceX 衛星算力 × 被動元件續噴 × 孩子音感天賦</p>
+
+    <h3>提及公司</h3>
+    <div class="companies">
+      <div class="lb">美股</div>
+      <div>
+        <span class="ticker">SpaceX</span>
+        <span class="ticker">Tesla <code>TSLA</code></span>
+        <span class="ticker">NVIDIA <code>NVDA</code></span>
+        <span class="ticker">Anthropic</span>
+        <span class="ticker">OpenAI</span>
+        <span class="ticker">Vishay <code>VSH</code></span>
+        <span class="ticker">VPG <code>VPG</code></span>
+      </div>
+      <div class="lb">台股</div>
+      <div>
+        <span class="ticker">台積電 <code>2330</code></span>
+        <span class="ticker">國巨 <code>2327</code></span>
+        <span class="ticker">春田</span>
+        <span class="ticker">機器人類股</span>
+      </div>
+      <div class="lb">其他</div>
+      <div>
+        <span class="ticker">Starlink</span>
+        <span class="ticker">江海股份(中)</span>
+        <span class="ticker">Neo Cloud 概念</span>
+      </div>
+    </div>
+
+    <h3>三句話總結</h3>
+    <div class="pills">
+      <a href="#card-3" class="pill"><span class="pn">1.</span>SpaceX IPO 要上,主持人看更前面 — 它會變新的 Neo Cloud 概念股(衛星上放 data center 賣算力),會先買一半卡位、降低 Tesla</a>
+      <a href="#card-5" class="pill"><span class="pn">2.</span>被動元件整組做壞掉續噴,國巨 BB Ratio 拉上去(特殊品稼動率 90%),用 2018 大潮類比測算明年 target price</a>
+      <a href="#card-6" class="pill"><span class="pn">3.</span>機器人類股噴(營收占比 2%→明年 10% = 5 倍成長),主持人最愛這種高成長題材</a>
+    </div>
+
+    <h3>章節導覽</h3>
+    <div class="pills">
+      <a href="#card-2" class="pill"><span class="pn">2.</span>市場現況 + 持倉動向</a>
+      <a href="#card-3" class="pill"><span class="pn">3.</span>SpaceX → Neo Cloud 衛星算力</a>
+      <a href="#card-4" class="pill"><span class="pn">4.</span>衛星 AI 運算供應鏈 + 戰鬥時期驗證</a>
+      <a href="#card-5" class="pill"><span class="pn">5.</span>被動元件續噴 + 2018 類比</a>
+      <a href="#card-6" class="pill"><span class="pn">6.</span>機器人類股 + 題材先行三段論</a>
+      <a href="#card-7" class="pill"><span class="pn">7.</span>QA — 操作課題(載版砍月線 / 融資爆倉)</a>
+      <a href="#card-8" class="pill"><span class="pn">8.</span>QA — 投資心法(灌鉛骰子 / 習慣失去)</a>
+      <a href="#card-9" class="pill"><span class="pn">9.</span>QA — 育兒識才(孩子音感天賦)</a>
+      <a href="#card-10" class="pill"><span class="pn">10.</span>持倉警示 + 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <span class="card-num">2/10</span>
+    <div class="ch">市場現況</div>
+    <h2>沒什麼好評論一直噴,被動元件這波賭對了</h2>
+    <p class="core">市場一直噴沒好評論。被動元件整組做壞掉,<span class="hl">假帥休息一下又繼續噴,射個滿臉看不懂</span>。主持人 5 月績效又比 4 月更好。</p>
+
+    <div class="mechanism">
+      <strong>這波為什麼賭對:</strong>被動元件這種東西兩三十集前主持人都直說「某程度上是一種賭」。身邊朋友因為成本拉太遠不撿了,索性賭看看 — 結果賭到了。<span class="hl">投資都是灌鉛骰子:贏面大但仍有輸,沒有穩贏這回事。</span>
+    </div>
+
+    <h3>本集主持人持倉動向</h3>
+    <div class="stocks">
+      <span class="ticker"><span class="own">⭐</span> SpaceX(IPO):計畫先買一半卡位</span>
+      <span class="ticker"><span class="own">⭐</span> Tesla:計畫降低持股(轉去 SpaceX)</span>
+      <span class="ticker"><span class="own">⭐</span> 被動元件處置股:加碼(拉太遠不減碼)</span>
+      <span class="ticker"><span class="own">⭐</span> 衛星族群:年初做的大多已出脫</span>
+      <span class="note">行情為很多人帶來財富(買 0050 都超過年薪),已有 sponsor 賺夠要離職,勞方講話大聲</span>
+    </div>
+
+    <div class="action">行情好好珍惜(獲利 + 身邊朋友),持續找新故事新題材。但下次修正時離職信會收回來。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <span class="card-num">3/10</span>
+    <div class="ch">衛星算力(本集主軸)</div>
+    <h2>SpaceX IPO 要上,主持人賭它變新的 Neo Cloud 概念股</h2>
+    <p class="core">招股書/Roadshow PDF 流出,大家都在算 Starlink 印鈔機的數字。<span class="hl">主持人往前跳一步:SpaceX 真正會刷的故事是「衛星上放 data center 賣算力」。</span></p>
+
+    <div class="mechanism">
+      <strong>機制:</strong>前兩集講過 Anthropic 跟 xAI 租 data center → 馬斯克已聞到「data center 是好生意」的味道。<br>
+      馬斯克 <strong>Mark my word</strong>:之後會看到衛星上放伺服器運算 — 因為軌道有<span class="hl">無限太陽能能源</span>,散熱等問題可解。<br>
+      → SpaceX 不只是 Starlink,會變成做算力銷售/出租的 Neo Cloud。「要刷故事一定要有 sexy 的東西」,Starlink 是中流砥柱但不夠 sexy,衛星算力才是。
+    </div>
+
+    <h3>主持人操作邏輯</h3>
+    <div class="mechanism">
+      <strong>先卡位再說:</strong>不管估出來價格怎樣,一定先上車(類比 Palantir 上市直接先買),先卡一半、後面再增持。同時降低 Tesla 持股。
+    </div>
+    <blockquote>「長期投資你以為是做一個決定,其實不是 — 是你每次來看部位時都下了一個決定(繼續持有也是一個決定)。投資的公司會變,你的想法也會變,不算違反初衷。」</blockquote>
+
+    <h3>關聯個股</h3>
+    <div class="stock-group">
+      <span class="ticker">SpaceX(IPO)</span>
+      <span class="ticker">Tesla <code>TSLA</code></span>
+      <span class="ticker">Neo Cloud 概念</span>
+      <span class="note">主持人以前不碰 Neo Cloud(怕折舊風險),但 AI 伺服器折舊比想像長、缺貨還漲價,顛覆想像;換衛星包裝就興致大開</span>
+    </div>
+
+    <div class="action">SpaceX 上市先卡位(他自己一半起跳)。衛星算力是這家公司之後最大話題,現在聚焦的人還不多 — 走在前面先相信的人吃 premium。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <span class="card-num">4/10</span>
+    <div class="ch">衛星算力供應鏈</div>
+    <h2>衛星 AI 運算供應鏈,難題都會被資本硬幹過去</h2>
+    <p class="core">很多人覺得「衛星放 AI 伺服器」是豪小,但 <span class="hl">AI 這幾年最大收穫是讓大家敢當 Believer、Dreamer</span>。美國新創跟大企業都在快馬加鞭推。</p>
+
+    <div class="mechanism">
+      <strong>機制(難題會被硬幹):</strong>類比 NVIDIA 從 HGX 推到 GB 垂直機櫃 — 當初產線朋友都說不可能、會 delay、良率比狗爛、插拔幾次就壞過不了驗證。最後怎麼解?<span class="hl">少插拔幾次、放點水就讓你過。情急了什麼都做得出來,人定勝天。</span><br>
+      衛星散熱片(軌道上超大片)、太陽能板、特殊材料、太空輻射傳熱 — 產業人士說「只要能一直把配肉射上去,技術難度都配得過去」。而 SpaceX 最強的就是把東西打上去。
+    </div>
+
+    <h3>關聯供應鏈</h3>
+    <div class="stock-group">
+      <span class="gl">受惠方向:</span>
+      <span class="ticker">散熱(軌道用超大散熱片)</span>
+      <span class="ticker">太陽能板</span>
+      <span class="note">散熱近期台股表現較差,但軌道伺服器這種「過得了驗證」的應用,單片超大、收入巨額</span>
+    </div>
+
+    <h3>題材時序(三段論)</h3>
+    <div class="mechanism">
+      <strong>出生段 → 主升段(東西真的放量)→ 噴最後一段(大家都信)。</strong>可能 <span class="hl">28 下半 / 29 上半</span>題材先行,即便那時 prototype 才剛出來、根本沒射多少東西,但題材會先走一波。
+    </div>
+
+    <div class="action">這題材現在看超遠,但若你接受機器人(營收 2%)的 premium,衛星算力也不算遠。年初衛星股已賺魚頭出脫,這次轉看的是「AI 算力增量市場」而非單純設衛星(V3/V4、PCBA、Router)。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <span class="card-num">5/10</span>
+    <div class="ch">被動元件</div>
+    <h2>被動元件續噴,國巨 BB Ratio 確認 + 用 2018 測算空間</h2>
+    <p class="core">本來覺得該橫一下休息,結果一直噴。<span class="hl">國巨 BB Ratio 拉上去,特殊品稼動率約 90%、標準品約 80%,數字越來越好。</span></p>
+
+    <div class="mechanism">
+      <strong>確認不是短期假缺貨:</strong>看全世界被動元件(Vishay、VPG、中國江海、日本廠)整體趨勢都往上 → 不是人為小操作的短時間缺貨,而是真趨勢。問題只剩「會走多遠」。
+    </div>
+
+    <h3>怎麼測算 target price(2018 類比法)</h3>
+    <div class="mechanism">
+      用 2018 大潮類比:<span class="hl">當年國巨毛利率最高摸到 60 幾</span>,看春田等公司毛利/營收高點。<br>
+      看這波漲價的 Learning Curve(學習曲線)斜率 — 比 2018 快就更猛、慢就沒這麼猛,抓相對值 → 測算明年 EPS → 推 target price。
+    </div>
+
+    <h3>關聯個股</h3>
+    <div class="stock-group">
+      <span class="gl">台廠:</span>
+      <span class="ticker">國巨 <code>2327</code></span>
+      <span class="ticker">春田</span>
+      <span class="gl" style="margin-left:8px;">海外驗證:</span>
+      <span class="ticker">Vishay <code>VSH</code></span>
+      <span class="ticker">VPG <code>VPG</code></span>
+      <span class="ticker">江海股份(中)</span>
+    </div>
+
+    <h3>鉭電容缺貨,取代料受惠</h3>
+    <div class="mechanism">
+      鉭(Ta)是爭議金屬,供需斷供、價格大漲。<span class="hl">MLCC、鋁電容精銳盡出做取代</span> — 戰鬥時期(大家搶料趕推)驗證會被資本快速幹過去,不像成品時期慢慢走。
+    </div>
+
+    <div class="action">已噴出去的族群用 2018 相對值測 target price 決定續抱或出。鉭電容取代鏈(MLCC/鋁電容)留意戰鬥時期加速放量。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <span class="card-num">6/10</span>
+    <div class="ch">題材股</div>
+    <h2>機器人類股噴 — 主持人最愛的高成長乘數</h2>
+    <p class="core">最近噴超多機器人類股。<span class="hl">營收占比可能才 2%,大家聽到覺得是炒股狗屎 — 但這正是主持人最喜歡的:明年 10% 就是 5 倍成長。</span></p>
+
+    <div class="mechanism">
+      <strong>機制:</strong>機器人不需要短期放量,市場就願意給 premium、給乘數估值。若主持人手上沒有正在噴又狂關處置的部位,說不定會介入。<br>
+      → <span class="hl">推論:既然機器人(2% 營收)市場都願意給這種估值,那衛星算力也不是太遠的東西。</span>市場現在敢給夢想股 premium。
+    </div>
+
+    <div class="action">機器人這種「今年 2% 明年 10%」的高成長乘數題材是主持人偏好型。同邏輯延伸 → 衛星算力題材的 premium 也站得住。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <span class="card-num">7/10</span>
+    <div class="ch">Q&amp;A 操作課題</div>
+    <h2>砍在月線縮水八成 + 融資爆倉的兩個操作教訓</h2>
+
+    <h3>載版設定:十日線賣最高 40%,改月線結果縮水八成</h3>
+    <p>聽眾原設定十日線賣(最高獲利 40%),後來看社群都說「未來超級好」就改報月線,結果破月線砍掉、獲利縮水八成。問犯了什麼錯。</p>
+    <div class="mechanism">
+      <strong>主持人答:你的做法其實沒錯。</strong><br>
+      ① <span class="hl">鎖定一個方式按紀律做</span> — 你設定十日線就照走,就算它後來開走那是課題(下次該更有耐心);但也有跌破就一直下去的,那你還好有砍。<br>
+      ② 每個決定都有 pros and cons,別用一兩次勝敗定義自己是不是白痴。<br>
+      ③ <span class="hl">關鍵澄清:主持人那天加碼是因為「這波拉太遠」特殊,以前同樣位置一樣會減碼</span> — 別簡單聽成「大跌就進場」。
+    </div>
+
+    <h3>融資爆倉:TQQQ/SQQQ 玩到剩 5000 鎂</h3>
+    <div class="mechanism">
+      聽眾信貸 100 萬玩槓桿,兩邊巴掌打到剩 5000 鎂,後改保守做法(大家罵時買制服股、吹捧時賣)才回到 3.3 萬還清融資。<br>
+      <strong>主持人提醒:</strong><span class="hl">先用無槓桿工具玩熟再放大槓桿</span>(股而優則期)。類比開餐廳 — 先做小的驗證有料再投 3000 萬。別忽略高利率融資成本(他幾年付了約 1 萬鎂利息)。
+    </div>
+
+    <div class="action">鎖定一套能穩定刷錢的進出方式,按紀律執行。報酬率會告訴你看對沒。先現股做好再開槓桿。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <span class="card-num">8/10</span>
+    <div class="ch">Q&amp;A 投資心法</div>
+    <h2>習慣失去 + 主觀細微調整才是吃這行飯的本事</h2>
+
+    <h3>人要習慣失去(秒速五公分推薦延伸)</h3>
+    <div class="mechanism">
+      聽眾推薦新海誠《秒速五公分》:「誰都不可能和誰在一起一輩子,人要習慣失去」。主持人借題發揮給賠錢的人:<br>
+      <span class="hl">要習慣你會失去、會賠一點錢。只要整體是好的,就不要專注在 losses,要專注在你得到什麼、你的家人、你的生活。</span>賣掉後又噴 50% 以前會難過,但下一支賺更多 — 沒走到最後不知道結果。
+    </div>
+
+    <h3>主觀細微調整 = 吃這行飯的主因</h3>
+    <div class="mechanism">
+      觀念講到主持人自己都膩,網路上酸他「都在講一樣的東西」。<strong>他說:對,因為真的就這樣。</strong>像聽巴菲特演講一百次都一樣 — 人家方法都告訴你了,不會就還是不會。<br>
+      但 <span class="hl">根據每次狀況不同做的「主觀細微調整」,就是決定你能不能吃這行飯的主因</span>(為何這波加碼但以前減碼)。動能仔在動能盤很好、震盪盤吃大便,鎖定適合自己的方式最重要。
+    </div>
+
+    <div class="action">別用一兩次勝敗定義自己。專注得到什麼不要專注 losses。觀念都一樣,差在主觀細微調整的磨練。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <span class="card-num">9/10</span>
+    <div class="ch">Q&amp;A 育兒識才</div>
+    <h2>孩子聽得出寶可夢聲音 — 找到天賦線索就往那推</h2>
+    <p class="core">本週最開心的事(比股票漲停還開心):<span class="hl">大兒子諾亞能聽出 Mezastar 每隻寶可夢的聲音</span> — 機台音效其實都很相近,他卻每隻都認得,沒刻意訓練就全背起來。</p>
+
+    <div class="mechanism">
+      <strong>識才哲學(投資/育兒共通):</strong>主持人自己從小學鋼琴有相對音感,判斷孩子耳朵異常靈敏(平常自己發聲也會摀耳朵)。<br>
+      <span class="hl">既然發現天賦線索,就往那個方向推(不是用逼的)</span> — 重金禮聘鋼琴/音樂老師。類比費德勒從足球轉網球、新一代網球選手身高 190-200 速度又快、林口國中生長很高 — 有餘裕的家長可往孩子天賦推,不一定推對但總有方向。
+    </div>
+
+    <blockquote>之前跟諾亞講的投資訓練:「你那個朋友要做什麼,你就記得投資他、跟著他一起做。我們不一定自己什麼都會,但都要上到車。」</blockquote>
+
+    <div class="action">這段不是閒聊 — 是主持人「找天賦線索就往那推」的識才框架,跟他挑題材股「發現增量市場就卡位」同一套邏輯。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <span class="card-num">10/10</span>
+    <div class="ch">行動清單</div>
+    <h2>持倉警示 + 下一步行動</h2>
+
+    <h3>本集主持人持倉動作</h3>
+    <p style="font-size: 14.5px;">
+      <span class="own">⭐ SpaceX(IPO)</span>:計畫先買一半卡位<br>
+      <span class="own">⭐ Tesla</span>:計畫降低持股(資金轉 SpaceX)<br>
+      <span class="own">⭐ 被動元件處置股</span>:加碼(這波拉太遠不減碼,以前同位置會減)<br>
+      <span class="own">⭐ 衛星族群</span>:年初做的大多已出脫(賺魚頭)<br>
+      <span>紅酒:破關(生活興趣)</span>
+    </p>
+
+    <h3>下一步行動</h3>
+    <div class="three-col">
+      <div class="col">
+        <h4>🎯 觀察名單</h4>
+        <ul>
+          <li>SpaceX IPO 定價與招股書細節</li>
+          <li>衛星 AI 算力供應鏈(散熱/太陽能)</li>
+          <li>國巨 (2327) — BB Ratio / 稼動率走向</li>
+          <li>春田 — 2018 類比測算參考</li>
+          <li>鉭電容取代鏈(MLCC/鋁電容)</li>
+          <li>機器人類股(營收占比成長斜率)</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🟢 進場訊號</h4>
+        <ul>
+          <li>SpaceX 上市先卡位(分批)</li>
+          <li>被動元件漲價斜率 vs 2018 比較</li>
+          <li>衛星算力題材出生段先行</li>
+          <li>機器人營收占比明顯跳升</li>
+          <li>鉭電容缺貨催化取代料放量</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🚫 停損 / 不該做</h4>
+        <ul>
+          <li>別把「這波加碼」聽成大跌就進(特殊狀況)</li>
+          <li>先現股做好再開槓桿(別學融資爆倉)</li>
+          <li>別忽略高利率融資成本</li>
+          <li>別用一兩次勝敗定義自己</li>
+          <li>衛星算力是 28-29 題材,別太早重壓</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<a href="#top" class="float-top" title="回頂部">↑</a>
+</body>
+</html>
