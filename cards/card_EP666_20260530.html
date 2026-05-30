@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP666 筆記</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif; color: #1f2937; line-height: 1.75; padding: 32px 16px 80px; }
+  .container { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px 30px; margin-bottom: 16px; position: relative; }
+  .card-num { position: absolute; top: 18px; right: 22px; font-size: 11.5px; color: #b0b0b0; font-weight: 500; }
+  .ch { font-size: 12px; color: #888; margin-bottom: 8px; letter-spacing: 1px; }
+  h1 { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 4px; letter-spacing: -0.5px; }
+  .subtitle { color: #888; font-size: 13px; margin-bottom: 20px; }
+  h2 { font-size: 19px; font-weight: 700; color: #111; margin-bottom: 14px; line-height: 1.45; padding-right: 40px; }
+  h3 { font-size: 13.5px; font-weight: 700; color: #6b7280; margin: 18px 0 8px; letter-spacing: 0.5px; }
+  p { margin-bottom: 10px; color: #374151; }
+  .core { font-size: 15px; color: #1f2937; margin: 10px 0 14px; }
+  .mechanism { background: #f7f7f4; padding: 14px 18px; margin: 14px 0; border-radius: 6px; font-size: 14.5px; color: #374151; }
+  .mechanism strong { color: #111; }
+  .stocks { margin: 10px 0; }
+  .stock-group { margin: 8px 0; line-height: 1.9; }
+  .stock-group .gl { display: inline-block; font-weight: 700; color: #6b7280; font-size: 13px; margin-right: 6px; }
+  .ticker { display: inline-block; background: #f4f4f0; border: 1px solid #e5e5e0; border-radius: 5px; padding: 2px 8px; margin: 2px 3px 2px 0; font-size: 13px; color: #1f2937; }
+  .ticker code { color: #888; font-size: 11.5px; margin-left: 4px; }
+  .note { display: block; margin: 5px 0 5px 20px; font-size: 12.5px; color: #888; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; padding: 11px 16px; margin: 12px 0; border-radius: 6px; color: #735c2e; font-size: 13.5px; }
+  .risk::before { content: "⚠️  "; }
+  .action { background: #fff5ec; padding: 13px 18px; margin: 14px 0; border-radius: 6px; color: #9a4f0e; font-weight: 500; font-size: 14.5px; }
+  .action::before { content: "📌 "; }
+  .own { color: #c2410c; font-weight: 700; }
+  .hl { color: #c2410c; font-weight: 700; }
+  blockquote { padding: 8px 14px; margin: 10px 0; color: #6b7280; font-style: italic; font-size: 13.5px; background: #f7f7f4; border-radius: 6px; }
+  .pills { display: flex; flex-direction: column; gap: 7px; margin-top: 10px; }
+  .pill { background: #f7f7f4; color: #1f2937; padding: 10px 15px; border-radius: 7px; text-decoration: none; font-size: 13.5px; line-height: 1.5; }
+  .pill:hover { background: #efeee9; }
+  .pill .pn { display: inline-block; width: 22px; color: #999; font-size: 12px; font-weight: 600; }
+  .companies { display: grid; grid-template-columns: 56px 1fr; gap: 6px 10px; margin: 12px 0 4px; font-size: 13px; }
+  .companies .lb { font-weight: 700; color: #888; padding-top: 3px; font-size: 12.5px; }
+  .three-col { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 14px 0 4px; }
+  .three-col .col { background: #f7f7f4; border-radius: 7px; padding: 12px 14px; }
+  .three-col h4 { font-size: 13px; font-weight: 700; color: #4b5563; margin-bottom: 7px; }
+  .three-col ul { padding-left: 16px; font-size: 12.5px; }
+  .three-col li { margin: 4px 0; color: #374151; line-height: 1.55; }
+  .float-top { position: fixed; bottom: 22px; right: 22px; background: #1f2937; color: white; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); }
+  @media (max-width: 600px) {
+    .three-col { grid-template-columns: 1fr; }
+    .companies { grid-template-columns: 1fr; }
+    .companies .lb { padding-top: 0; }
+    body { padding: 16px 8px 80px; }
+    .card { padding: 20px 22px; }
+    h1 { font-size: 21px; }
+    h2 { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="container">
+
+  <div class="card" id="card-1">
+    <span class="card-num">1/10</span>
+    <h1>股癌 EP666 筆記</h1>
+    <p class="subtitle">2026/05/30 · 軟體發布會四大心得 × 老AI復辟 × 被動元件需求driven</p>
+
+    <h3>提及公司</h3>
+    <div class="companies">
+      <div class="lb">美股</div>
+      <div>
+        <span class="ticker">NVIDIA <code>NVDA</code></span>
+        <span class="ticker">Salesforce <code>CRM</code></span>
+        <span class="ticker">ServiceNow <code>NOW</code></span>
+        <span class="ticker">Snowflake <code>SNOW</code></span>
+        <span class="ticker">Okta <code>OKTA</code></span>
+        <span class="ticker">Dell <code>DELL</code></span>
+        <span class="ticker">Anthropic</span>
+        <span class="ticker">OpenAI</span>
+      </div>
+      <div class="lb">台股</div>
+      <div>
+        <span class="ticker">鴻海 <code>2317</code></span>
+        <span class="ticker">廣達 <code>2382</code></span>
+        <span class="ticker">國巨 <code>2327</code></span>
+        <span class="ticker">華新科 <code>2492</code></span>
+        <span class="ticker">聯發科 <code>2454</code></span>
+        <span class="ticker">春田</span>
+      </div>
+      <div class="lb">其他</div>
+      <div>
+        <span class="ticker">Perplexity</span>
+        <span class="ticker">IGV(軟體ETF)</span>
+        <span class="ticker">江海股份(中)</span>
+        <span class="ticker">TerraFab</span>
+      </div>
+    </div>
+
+    <h3>三句話總結</h3>
+    <div class="pills">
+      <a href="#card-3" class="pill"><span class="pn">1.</span>軟體發布會四大心得 — 模型都差不多(邊際效應遞減),掌握資料 + 業務能力才是真贏家</a>
+      <a href="#card-6" class="pill"><span class="pn">2.</span>老AI復辟 + 軟體股全面大爆射,末日論 backfire,資金族群輪動回來</a>
+      <a href="#card-5" class="pill"><span class="pn">3.</span>被動元件從成本driven轉需求driven,鋁電容是市場還沒注意的「房間裡的大象」</a>
+    </div>
+
+    <h3>章節導覽</h3>
+    <div class="pills">
+      <a href="#card-2" class="pill"><span class="pn">2.</span>市場現況 — 90%鎖處置股 + 券商封控</a>
+      <a href="#card-3" class="pill"><span class="pn">3.</span>AI軟體競爭力 — 掌握資料 + 業務能力</a>
+      <a href="#card-4" class="pill"><span class="pn">4.</span>精緻化AI時代 + Neo Cloud</a>
+      <a href="#card-5" class="pill"><span class="pn">5.</span>被動元件需求driven轉換</a>
+      <a href="#card-6" class="pill"><span class="pn">6.</span>老AI復辟 + 軟體爆射 + 末日論backfire</a>
+      <a href="#card-7" class="pill"><span class="pn">7.</span>QA — 紀律停損彈性 + 設備直上</a>
+      <a href="#card-8" class="pill"><span class="pn">8.</span>QA — 紅酒樂花 + 進場時機類比</a>
+      <a href="#card-9" class="pill"><span class="pn">9.</span>QA — 創業心境 + 交易節奏反思</a>
+      <a href="#card-10" class="pill"><span class="pn">10.</span>持倉警示 + 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <span class="card-num">2/10</span>
+    <div class="ch">市場現況</div>
+    <h2>90% 資金鎖處置股,連動都動不了</h2>
+    <p class="core">市場瘋狂到不知該說什麼。<span class="hl">主持人 90% 資金在處置股(很多是 20 分鐘處置)— 崩盤跑不掉、想追也買不到籌碼(掛單剩個位數張)。</span>已進入沒事做的階段。</p>
+
+    <div class="mechanism">
+      <strong>券商封控反而是好事:</strong>主持人加碼套路是「買滿 → 帶出部分錢再買 → 漲了回衝維持率借更多再壓」。但券商收緊不限用途借款,部位鎖原地快一個月。<br>
+      <span class="hl">沒這控管能打出極度暴力成績,但他認為是老天封控</span> — 避免一路買到最後吃一個超大回檔吐掉。不會再去找管道搬錢,認命做好這段。
+    </div>
+
+    <h3>本集主持人持倉狀態</h3>
+    <div class="stocks">
+      <span class="ticker"><span class="own">⭐</span> 被動元件(本波主力,鎖住快一個月)</span>
+      <span class="ticker"><span class="own">⭐</span> 處置股部位(90%資金、20分鐘處置)</span>
+      <span class="note">融資增速超快,很多人拿命去搏跟它幹到底 — 主持人反而被動降速</span>
+    </div>
+
+    <div class="action">這是「被動降槓桿」的特殊狀態 — 不是主動減碼,是被券商鎖住。對讀者的啟示:槓桿在高位會變成雙面刃,額度被收時跑不掉也加不了。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <span class="ch">AI 軟體競爭力(本集主軸)</span>
+    <span class="card-num">3/10</span>
+    <h2>模型都差不多 — 掌握資料 + 業務能力才是真贏家</h2>
+    <p class="core">參加好友梁董邀請的軟體發布會後的核心心得:<span class="hl">別再糾結誰的模型比較強。</span></p>
+
+    <div class="mechanism">
+      <strong>機制①:資料決勝,不是模型。</strong>絕大多數模型 based on 網路公開資料 → 大家拿到的資料一樣 → 訓練到某程度<span class="hl">邊際效應遞減,做出來都差不多</span>。<br>
+      真正勝出的是能 access <strong>專家資料 / 封閉付費資料 / 大企業不外賣的資料</strong> 的 deployment/整合公司。AI 導入讓資料分析速度超快(很快理出 pattern),所以「誰有特殊資料」變成鑑別度。<br>
+      → 以前 AIOT/大數據是 buzzword(收一堆垃圾資料沒一筆能用),現在 AI 讓資料真的能變出有用結果。
+    </div>
+
+    <div class="mechanism">
+      <strong>機制②:業務/商務能力凌駕模型強弱。</strong>各家服務拉長看難分軒輊 → <span class="hl">誰接到業務誰賺錢</span>。<br>
+      企業要的是「<strong>可規則性</strong>」— 出事要有人負責賠償、打官司(像 Meta 上面詐騙你告不到人;台灣 SI 老闆可負責)。這就是為什麼工程師工作給 AI 做了,還要留一個人管理 — 要有人扛責任。<br>
+      <strong>鐵證:頂尖 AI 模型開始 hire 大量 FDE 工程師</strong> — 做通用已不新鮮,要做客製化(Termate)就得派人進去把生意談下來。
+    </div>
+
+    <h3>關聯案例</h3>
+    <div class="stock-group">
+      <span class="ticker">Perplexity(Computer)</span>
+      <span class="note">主持人自己用 Perplexity Computer:不在意背後用什麼模型,只要 deliver 結果(分析、畫寶可夢圖)就 OK。它串各種模型交互支用 → Capture 大價值,模型商還要拜託它多用、給它降價</span>
+    </div>
+
+    <div class="action">判斷 AI 軟體股別只看「模型多強」,要看:① 能不能拿到別人拿不到的資料 ② 業務/商務能力能不能把客製化生意談下來。模型強弱不是關鍵點。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="ch">AI 軟體競爭力</div>
+    <span class="card-num">4/10</span>
+    <h2>精緻化 AI 時代 + 不想把資料給大廠 = Neo Cloud 機會</h2>
+    <p class="core"><span class="hl">AI 從「fast food 量產」進入「精緻化」時代。</span></p>
+
+    <div class="mechanism">
+      <strong>精緻化機制:</strong>Sora 生圖生影片很炫,但企業要拿來做廣告就一堆問題 — 角色怎麼延續、會不會不小心幹到有版權的東西、後續沿用怎麼辦。<br>
+      → 隨機生成當彈指好笑,但商用要有人收尾、把邊界縮起來。<span class="hl">這就是精緻化能產出大價值的地方。</span>
+    </div>
+
+    <div class="mechanism">
+      <strong>Neo Cloud / TPU as a Service:</strong>Google 跟黑石搞 TPU 出租,比 Google 自家內建 Cloud 更有搞頭。<br>
+      因為<span class="hl">有些公司不想把資料放 Google</span>(覺得流通太多、危險)→ 額外的 Neo Cloud 就可以。所以大公司明面上不一定有優勢,客戶會選「服務做到家 + 專注資安 + 注意法尊 + 可規則性」的供應商。
+    </div>
+
+    <h3>延伸觀念</h3>
+    <div class="mechanism">
+      <strong>AI 會吃大便還吃得很高興:</strong>Meta AI 講錯主持人過去言論,那錯誤資訊竟有一百讚。引華盛頓「看太多新聞是 misinformation,不看是 uninformed」 — <span class="hl">很多人以為 AI 很屌,其實 AI 在餵你 garbage 你還吃得很開心。</span>
+    </div>
+
+    <div class="action">Neo Cloud(不想把資料給大廠的需求)+ 精緻化(商用要有人收尾)是後面軟體應用的兩個機會方向。應用層 Portfolio 很大一塊是 OpenAI/Anthropic(看 AR 恐怖數字),老軟體公司轉 Token-base 計費也會越開越好。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="ch">被動元件</div>
+    <span class="card-num">5/10</span>
+    <h2>從成本driven轉需求driven,鋁電容是「房間裡的大象」</h2>
+    <p class="core">日本被動元件全做壞掉。關鍵轉變:<span class="hl">這波是「需求driven漲價」</span> — 一兩個月前公司還說成本driven、不看好 Q3 續漲,現在全改口。</p>
+
+    <div class="mechanism">
+      <strong>市場派為何走在公司派前面:</strong>市場派認識的是「假方(下單的人)」— 下單方知道自己要大買,但被下單的公司派自己還不知道訂單要來,所以保守、甚至初期把持股賣掉。<br>
+      <span class="hl">台灣很多公司派持股低、隨時被 take over</span> — 因長期只做一波波行情沒長線經營,錯過 AI 這種超大段行情,內部人初期就拋掉部位很可惜。
+    </div>
+
+    <h3>真正缺料的重點:鋁電容 > MLCC</h3>
+    <div class="mechanism">
+      市場討論核心還是 MLCC(2018 慣性),但 <span class="hl">鋁電容更缺(SP-Cap / OS-CON / 牛角電容),日商還在撤出部分產品</span>。江海 MEMO 提到全球缺口高達 20 幾% — 所有人產能加起來都不夠。<br>
+      MLCC 被過度關注,旁邊更缺的鋁電容是「<strong>房間裡的大象</strong>」(大家隱約知道有東西在那卻沒注意),市場資金輪動慢。
+    </div>
+
+    <h3>關聯個股</h3>
+    <div class="stock-group">
+      <span class="gl">被動元件:</span>
+      <span class="ticker">國巨 <code>2327</code></span>
+      <span class="ticker">華新科 <code>2492</code></span>
+      <span class="ticker">春田</span>
+      <span class="note">春田宣布宮城縣擴廠、華新科法說持續擴產,2027 年底完工。需求轉換初期擴產不會立刻崩</span>
+    </div>
+    <div class="stock-group">
+      <span class="gl">鋁電容缺口:</span>
+      <span class="ticker">江海股份(中)</span>
+      <span class="note">江海 MEMO 全球缺口 20 幾%;台灣鋁電容廠擴產幅度超大是好事 — 缺貨時料最多最賺</span>
+    </div>
+
+    <div class="risk">擴產要看「擴什麼 + 時間點」:美光擴的是 niche market(不影響主流);但若記憶體這種已超缺的東西突然有廠商說大擴產,那就要小心(高檔擴產警訊)。同句話高檔 vs 低檔講感受不同。</div>
+
+    <div class="action">被動元件拉長看回歸基本面 — 押後面漲最多、毛利最高、最缺乏的(鋁電容),而非市場一窩蜂的 MLCC。鋁電容是討論度還沒跟上的補漲標的。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="ch">族群輪動</div>
+    <span class="card-num">6/10</span>
+    <h2>老AI復辟 + 軟體股大爆射,末日論被打臉</h2>
+    <p class="core">鴻海廣達漲停,<span class="hl">陳泰銘剛成台灣首富</span>。資金從光通撤回老AI(ODM/EMS),軟體股同步全面大爆射。</p>
+
+    <div class="mechanism">
+      <strong>族群輪動機制:</strong>資金前面撤出 ODM/EMS 去推光通(2025 光通最強)→ 現在光通休息 → 又輪回老AI。<span class="hl">Dell 成績好但市場早知道,不是意外 — 關鍵只是資金要在哪。</span><br>
+      老AI 營收獲利一直都有,只是之前市場不喜歡、不給 PE。批評見風轉舵仔:東西在地上時亂 dis(像 SR lab 跌到地上一堆人改口),漲上去 300 塊怎麼自洽?族群會輪動,要有耐心。
+    </div>
+
+    <div class="mechanism">
+      <strong>末日論 backfire:</strong>Dario(Anthropic)、Sam Altman 想轉末日論述但不敢轉太兇(怕打臉過去)。<br>
+      主持人站黃仁勳這派 — <span class="hl">AI 改善效率、會有更多 Hiring,不是取代</span>。末日論進實體政治圈反彈:年輕人沒資本沒未來還被 AI 威脅、Google 前高層大學演講被噓爆 → 政治人物給監管壓力,所以老闆開始收斂。
+    </div>
+
+    <h3>軟體股靠成績證明(不是靠論述)</h3>
+    <div class="stock-group">
+      <span class="ticker">Salesforce <code>CRM</code></span>
+      <span class="note">搞 Record High buyback 狂買自家股,用行動證明公司不爛</span>
+      <span class="ticker">ServiceNow <code>NOW</code></span>
+      <span class="ticker">Snowflake <code>SNOW</code></span>
+      <span class="ticker">Okta <code>OKTA</code></span>
+      <span class="ticker">IGV(軟體ETF)</span>
+      <span class="note">IGV 拉高帕數 = 軟體表態,資金可能往軟體跑。ThunderMode 公司能破釜沉舟轉 Token-base 計費</span>
+    </div>
+
+    <div class="action">多頭新高位百花齊放,大家都在 Cherry Picking 挑最會動的。老AI/軟體都表態了,問題是「敢不敢跟著再推」。但別只因鴻海廣達漲停就覺得資金該全往老AI — 要有輕重緩急。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="ch">Q&amp;A 觀念輪廓</div>
+    <span class="card-num">7/10</span>
+    <h2>紀律停損要有彈性 + 設備一律直上最頂</h2>
+
+    <h3>紀律停損:不同標的不同做法</h3>
+    <div class="mechanism">
+      主持人不過度強調紀律,甚至<span class="hl">停損點故意設在月線下面一點點</span> — 因為常常洗下去馬上就拉起來。<br>
+      <strong>關鍵分辨:</strong>「你在<span class="hl">台積電紀律停損五次,我真的會覺得你是白痴</span>(到底會不會搞股票);但你買一個小拐股跟我講紀律停損,我就說你本來就該這樣(怕被埋)。」→ 同一招在不同標的應用,想法完全不同,本來就要有彈性,別死板。
+    </div>
+
+    <h3>設備一律直上最頂(白衛呼吸器提問)</h3>
+    <div class="mechanism">
+      <span class="hl">設備不直上,你就會整天想「如果那時買最好的會怎樣」</span>。買次階或第三名的會一直後悔,所以一律直上。
+    </div>
+
+    <h3>賭主管(久成台股、想辭職的聽眾)</h3>
+    <p>主管一直不吃錢 → 繼續賭下去吧,搞不好後來你跟主管手牽手跑去日本看櫻花。(設備已直上最頂的呼吸器、賭主管,都是同一種「直接攻頂/順其自然」的態度)</p>
+
+    <div class="action">紀律停損的精髓不是「死守一條線」,是「分辨標的性質」— 好公司洗一下會回來不該亂砍,爛拐股該果斷停損。設備消費則相反:一次到位避免後悔成本。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="ch">Q&amp;A 觀念輪廓</div>
+    <span class="card-num">8/10</span>
+    <h2>紅酒樂花心得 — 與投資進場時機的類比</h2>
+
+    <h3>樂花(Leroy)為何最強</h3>
+    <div class="mechanism">
+      主持人認為樂花是伯根蒂喝過最強(果香跟酸味掌握到極限)。去查才知用<strong>生物動力法</strong> — <span class="hl">相信葡萄要快樂、讓它隨便長</span>(葡萄長得比別人高一倍)。會有鳥害蟲害、曝曬不均,但花很多心力照顧,沒什麼大秘密,就是特別用心(樂花夫人從 DRC 出來)。
+    </div>
+
+    <h3>價格與生不逢時</h3>
+    <div class="mechanism">
+      村莊級約 <span class="hl">10 萬</span> / Richebourg(Grand Cru)<span class="hl">4-50 萬</span> / Montrachet 破百萬(現在最貴的紅酒)。30 年前喝樂花只要 3000 塊 — 生不逢時。<br>
+      酒神的酒不錯但全是老酒可惜(不太喜歡老酒味道,放太久味道斷崖式下跌,像帆船看路上微弱燈火)。
+    </div>
+
+    <h3>投資類比(這才是重點)</h3>
+    <blockquote>「類似投資吧,最好的時間就是 10 年前,再來就是當下。你再不買的話,指數後面又要再到更高的地方。」</blockquote>
+    <p>樂花會控貨 + 阿婆年事已高(變傳奇後昇華到另一等級)→ 未來更貴。主持人不囤貨,買來喝掉,真喜歡的留一瓶等對的時間。<span class="hl">慢慢喝、喝得夠長,才感受得到很多不一樣的東西</span>(呼應開場儀式感)。</p>
+
+    <div class="action">建議村莊級找 5 個朋友分享尻一下。紅酒心法本質是投資心法:最好時機是 10 年前、再來是當下;會控貨的稀缺標的趁早入坑。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="ch">Q&amp;A 觀念輪廓 + 生活</div>
+    <span class="card-num">9/10</span>
+    <h2>創業心境 + 交易節奏反思(儀式感)</h2>
+
+    <h3>創業資金無法投股市怎麼平衡?</h3>
+    <div class="mechanism">
+      聽眾因創業資金無法進場,看神人賺爛很焦慮。<br>
+      主持人:<span class="hl">有些錢丟出去就丟出去,會有另一番風景</span>。生命不是只在股票裡累積錢(自己投資小生意、開校男也走得很好),做別的事很快樂。跟自己比就好,別跟別人比 — 你覺得多時一堆人比你更多,錢賺不完。
+    </div>
+
+    <h3>交易節奏反思(開場儀式感的延伸)</h3>
+    <div class="mechanism">
+      主持人練習放慢生活、專注小細節(摸咖啡封膜熱熱的、吸管插準),意外發現對下背痛也有幫助(物理治療師教深呼吸引導氣到下背支撐)。<br>
+      <strong>延伸到交易:</strong><span class="hl">「你感覺交易量打得很大很充實,但報酬率很好笑 — 用很大筆交易量換很小報酬率,你又不是做量化的。」</span>不如放慢節奏,別把每件事當反射動作。
+    </div>
+
+    <h3>創業過早起床(4 點自然醒)</h3>
+    <p>非常常見,initiate 新東西時就會這樣(有 idea 就想跳起來)。順應它,過一段時間會習慣然後睡得比較好。</p>
+
+    <div class="action">交易量 ≠ 報酬率,放慢節奏專注品質。重押單一焦慮時,記得錢投別處有另一番風景,跟自己比不跟別人比。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="ch">行動清單</div>
+    <span class="card-num">10/10</span>
+    <h2>持倉警示 + 下一步行動</h2>
+
+    <h3>本集主持人持倉動作</h3>
+    <p style="font-size: 14.5px;">
+      <span class="own">⭐ 被動元件</span>:本波主力,部位鎖住快一個月(券商收額度)<br>
+      <span class="own">⭐ 處置股部位</span>:90% 資金、很多 20 分鐘處置,動彈不得<br>
+      <span>狀態</span>:被動降槓桿(非主動減碼),認命做好這段<br>
+      <span>紅酒</span>:買來喝掉非囤貨,真喜歡的留一瓶
+    </p>
+
+    <h3>下一步行動</h3>
+    <div class="three-col">
+      <div class="col">
+        <h4>🎯 觀察名單</h4>
+        <ul>
+          <li>鋁電容(SP-Cap/OS-CON/牛角)— 房間裡的大象</li>
+          <li>江海股份 — 缺口 20 幾% MEMO</li>
+          <li>軟體股 IGV — 資金表態方向</li>
+          <li>Neo Cloud / TPU as a Service</li>
+          <li>聯發科 (2454) — TerraFab 合作消息</li>
+          <li>老AI(鴻海/廣達)— 族群輪動</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🟢 進場訊號</h4>
+        <ul>
+          <li>鋁電容討論度跟上(補漲)</li>
+          <li>被動元件回檔後線圖交叉確認</li>
+          <li>軟體股財報持續超預期</li>
+          <li>處置股解除後資金可動</li>
+          <li>FDE/客製化軟體接到大單</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🚫 停損 / 不該做</h4>
+        <ul>
+          <li>記憶體等超缺品若喊大擴產要警覺</li>
+          <li>好公司(台積電)別亂紀律停損</li>
+          <li>別只看模型強弱選軟體股</li>
+          <li>別在族群盤整時亂 dis</li>
+          <li>高位融資雙面刃(額度被收跑不掉)</li>
+          <li>別被 AI garbage 資訊餵到還說讚</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<a href="#top" class="float-top" title="回頂部">↑</a>
+</body>
+</html>
