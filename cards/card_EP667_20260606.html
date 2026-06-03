@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP667 筆記</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif; color: #1f2937; line-height: 1.75; padding: 32px 16px 80px; }
+  .container { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px 30px; margin-bottom: 16px; position: relative; }
+  .card-num { position: absolute; top: 18px; right: 22px; font-size: 11.5px; color: #b0b0b0; font-weight: 500; }
+  .ch { font-size: 12px; color: #888; margin-bottom: 8px; letter-spacing: 1px; }
+  h1 { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 4px; letter-spacing: -0.5px; }
+  .subtitle { color: #888; font-size: 13px; margin-bottom: 20px; }
+  h2 { font-size: 19px; font-weight: 700; color: #111; margin-bottom: 14px; line-height: 1.45; padding-right: 40px; }
+  h3 { font-size: 13.5px; font-weight: 700; color: #6b7280; margin: 18px 0 8px; letter-spacing: 0.5px; }
+  p { margin-bottom: 10px; color: #374151; }
+  .core { font-size: 15px; color: #1f2937; margin: 10px 0 14px; }
+  .mechanism { background: #f7f7f4; padding: 14px 18px; margin: 14px 0; border-radius: 6px; font-size: 14.5px; color: #374151; }
+  .mechanism strong { color: #111; }
+  .stocks { margin: 10px 0; }
+  .stock-group { margin: 8px 0; line-height: 1.9; }
+  .stock-group .gl { display: inline-block; font-weight: 700; color: #6b7280; font-size: 13px; margin-right: 6px; }
+  .ticker { display: inline-block; background: #f4f4f0; border: 1px solid #e5e5e0; border-radius: 5px; padding: 2px 8px; margin: 2px 3px 2px 0; font-size: 13px; color: #1f2937; }
+  .ticker code { color: #888; font-size: 11.5px; margin-left: 4px; }
+  .note { display: block; margin: 5px 0 5px 20px; font-size: 12.5px; color: #888; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; padding: 11px 16px; margin: 12px 0; border-radius: 6px; color: #735c2e; font-size: 13.5px; }
+  .risk::before { content: "⚠️  "; }
+  .action { background: #fff5ec; padding: 13px 18px; margin: 14px 0; border-radius: 6px; color: #9a4f0e; font-weight: 500; font-size: 14.5px; }
+  .action::before { content: "📌 "; }
+  .own { color: #c2410c; font-weight: 700; }
+  .hl { color: #c2410c; font-weight: 700; }
+  blockquote { padding: 8px 14px; margin: 10px 0; color: #6b7280; font-style: italic; font-size: 13.5px; background: #f7f7f4; border-radius: 6px; }
+  .pills { display: flex; flex-direction: column; gap: 7px; margin-top: 10px; }
+  .pill { background: #f7f7f4; color: #1f2937; padding: 10px 15px; border-radius: 7px; text-decoration: none; font-size: 13.5px; line-height: 1.5; }
+  .pill:hover { background: #efeee9; }
+  .pill .pn { display: inline-block; width: 22px; color: #999; font-size: 12px; font-weight: 600; }
+  .companies { display: grid; grid-template-columns: 56px 1fr; gap: 6px 10px; margin: 12px 0 4px; font-size: 13px; }
+  .companies .lb { font-weight: 700; color: #888; padding-top: 3px; font-size: 12.5px; }
+  .three-col { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 14px 0 4px; }
+  .three-col .col { background: #f7f7f4; border-radius: 7px; padding: 12px 14px; }
+  .three-col h4 { font-size: 13px; font-weight: 700; color: #4b5563; margin-bottom: 7px; }
+  .three-col ul { padding-left: 16px; font-size: 12.5px; }
+  .three-col li { margin: 4px 0; color: #374151; line-height: 1.55; }
+  .float-top { position: fixed; bottom: 22px; right: 22px; background: #1f2937; color: white; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); }
+  @media (max-width: 600px) {
+    .three-col { grid-template-columns: 1fr; }
+    .companies { grid-template-columns: 1fr; }
+    .companies .lb { padding-top: 0; }
+    body { padding: 16px 8px 80px; }
+    .card { padding: 20px 22px; }
+    h1 { font-size: 21px; }
+    h2 { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="container">
+
+  <div class="card" id="card-1">
+    <span class="card-num">1/10</span>
+    <h1>股癌 EP667 筆記</h1>
+    <p class="subtitle">2026/06/06 · Computex Marvell 飛天 × 光是主軸 × AIPC 第二次挑戰</p>
+
+    <h3>提及公司</h3>
+    <div class="companies">
+      <div class="lb">美股</div>
+      <div>
+        <span class="ticker">NVIDIA <code>NVDA</code></span>
+        <span class="ticker">Marvell <code>MRVL</code></span>
+        <span class="ticker">Broadcom <code>AVGO</code></span>
+        <span class="ticker">Snowflake <code>SNOW</code></span>
+        <span class="ticker">ON Semi <code>ON</code></span>
+        <span class="ticker">ADI <code>ADI</code></span>
+      </div>
+      <div class="lb">台股</div>
+      <div>
+        <span class="ticker">台積電 <code>2330</code></span>
+        <span class="ticker">聯發科 <code>2454</code></span>
+      </div>
+      <div class="lb">主題</div>
+      <div>
+        <span class="ticker">光通訊族群</span>
+        <span class="ticker">AIPC(DGX Spark/N1X)</span>
+        <span class="ticker">功率半導體/IDM</span>
+        <span class="ticker">被動元件</span>
+      </div>
+    </div>
+
+    <h3>三句話總結</h3>
+    <div class="pills">
+      <a href="#card-3" class="pill"><span class="pn">1.</span>Computex:老黃喊 Marvell 是下一個造園企業直接飛天,光是未來主軸(與銅非零和),NVIDIA 從賣 GPU 進化到賣所有 Infra</a>
+      <a href="#card-4" class="pill"><span class="pn">2.</span>AIPC 第二次挑戰 + 地端模型崛起 — 開源追上閉鎖約半年,爬到 sweet spot 後地端就夠多數人用,省巨量 token fee</a>
+      <a href="#card-5" class="pill"><span class="pn">3.</span>功率半導體是下波題材但缺全面性;NVDA/TSMC 形態轉強可能補漲(投信資金將進)</a>
+    </div>
+
+    <h3>章節導覽</h3>
+    <div class="pills">
+      <a href="#card-2" class="pill"><span class="pn">2.</span>市場現況 — 被動橫盤整理是好事</a>
+      <a href="#card-3" class="pill"><span class="pn">3.</span>Computex:Marvell 飛天 + 光是主軸</a>
+      <a href="#card-4" class="pill"><span class="pn">4.</span>AIPC 第二次挑戰 + 地端模型</a>
+      <a href="#card-5" class="pill"><span class="pn">5.</span>功率半導體 + NVDA/TSMC 補漲</a>
+      <a href="#card-6" class="pill"><span class="pn">6.</span>NVIDIA 論述演進 + 最後一棒</a>
+      <a href="#card-7" class="pill"><span class="pn">7.</span>QA — 凹月線 / 再平衡 / 降槓訊號</a>
+      <a href="#card-8" class="pill"><span class="pn">8.</span>QA — 品酒 human algorithm / 威航往事</a>
+      <a href="#card-9" class="pill"><span class="pn">9.</span>QA — 紅酒清酒遊戲 / fake it till you make it</a>
+      <a href="#card-10" class="pill"><span class="pn">10.</span>持倉警示 + 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <span class="card-num">2/10</span>
+    <div class="ch">市場現況</div>
+    <h2>被動元件開始橫盤整理,主持人說這是好事</h2>
+    <p class="core">前面每天睡醒一直賺錢,現在熱門題材(被動元件)開始橫盤整理 — <span class="hl">主持人認為這是好事,被拉回現實反而健康。</span></p>
+
+    <div class="mechanism">
+      <strong>為何整理是好事:</strong>① 一直噴在台灣又會被處置,沒辦法加碼又要圈錢 ② 一直噴會擔心結束時下雨很重。有些整理算好事。<br>
+      <span class="hl">指數以這斜率衝上去,今年可能還是走多 — 過程會有修正盤整,但直接終結較難。</span>重點是把軟蛋捏好獲得市場報酬,最差拿平均報酬。
+    </div>
+
+    <h3>本集主持人持倉狀態</h3>
+    <div class="stocks">
+      <span class="ticker"><span class="own">⭐</span> CPU(大量)</span>
+      <span class="ticker"><span class="own">⭐</span> 被動元件(大量)</span>
+      <span class="ticker"><span class="own">⭐</span> Marvell:挑戰多次失敗、這次成功拉出</span>
+      <span class="note">回檔連十日線都沒破不出;成本夠遠想凹到月線(大波段最終常踩月線再往上)</span>
+    </div>
+
+    <div class="action">這波拉太兇太猛,所以不做太多積極調整。過往大盤出長黑K會調整,但這波不調;碰月線且幾天沒站回才減碼。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="ch">Computex(本集主軸)</div>
+    <span class="card-num">3/10</span>
+    <h2>老黃喊 Marvell 飛天,光是 AI 未來主軸</h2>
+    <p class="core">Computex 最大震撼:<span class="hl">老黃講 Marvell 可能是下一個造園企業 — Marvell 像大牛車突然變飛天神牛直接射出去。</span></p>
+
+    <div class="mechanism">
+      <strong>機制(老黃點石成金):</strong>主持人完全沒預期到。Marvell 在 DSP 不錯,但 ASIC 還在發展路上,沒 MediaTek/Broadcom 那麼明確。<br>
+      → <span class="hl">老黃喊盤能力極強,踢到誰誰就噴。</span>本來主持人假設 Marvell 是「某程度反應」(看估值推到哪),意外被 Jensen 加持直接拉出去。股票有時有超出想像的發展。
+    </div>
+
+    <h3>光是未來主軸(非零和)</h3>
+    <div class="mechanism">
+      NVIDIA + Marvell 演講核心都強調<span class="hl">光</span>:RAC 內、跨 RAC、Data Center 間連線。<br>
+      雖然 NVIDIA 說「能用銅就用銅」,但<span class="hl">光的成長速率與可能性持續拉大,已形成強勁共識,資金可能再往光跑</span>。重點:光跟銅<strong>非零和、一起成長</strong>(光成長性好一點),別用「一個起另一個死」的零和思維看市場。
+    </div>
+
+    <h3>關聯個股</h3>
+    <div class="stock-group">
+      <span class="ticker">Marvell <code>MRVL</code></span>
+      <span class="ticker">光通訊族群</span>
+      <span class="ticker">NVIDIA <code>NVDA</code></span>
+      <span class="note">Marvell ASIC 成色不如 Broadcom 明確,飛天主要靠老黃加持題材</span>
+    </div>
+
+    <div class="action">光是後面的主軸,資金可能再往光跑。但 Marvell 這種「靠老黃喊出來」的要分辨基本面成色 — ASIC 還在發展路上,不像 Broadcom 明確。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="ch">AIPC + 地端模型</div>
+    <span class="card-num">4/10</span>
+    <h2>AIPC 第二次挑戰 — 地端模型可能省下巨量 token fee</h2>
+    <p class="core">NVIDIA 端出 DGX Spark(地緣產品 N1X)。<span class="hl">第一批高通 AIPC 完全不成氣候、只是好玩談資;這次經一兩年算力+技術+軟體優化,來觀察地端模型能不能真的用。</span></p>
+
+    <div class="mechanism">
+      <strong>地端模型機制(Snowflake 員工分享):</strong><br>
+      開源模型約落後閉鎖式<span class="hl">半年</span> — AI 指數成長半年差很多,但<strong>爬到 sweet spot 後對絕大多數個人/企業就夠用</strong>,只有 cutting edge 研究、前端馬農需要最高階。<br>
+      → 若那天到來:買一台夠好的地端伺服器或 AIPC 跑地端模型,省大量 token fee。閉鎖模型拿 1 萬分,但人類需求 9000 分,開源追上就能滿足。
+    </div>
+
+    <div class="mechanism">
+      <strong>Snowflake 的 Data Lake 模式:</strong>用戶提問先傳 LLM 理解語境(這段外包、只抽一點),爬資料時用自己 Data Lake +內建模型(<span class="hl">這段錢他賺</span>)。付給 LLM 的費用若地端化會變成它的存異。
+    </div>
+
+    <h3>AIPC 概念與用料</h3>
+    <div class="stock-group">
+      <span class="gl">概念股:</span>
+      <span class="ticker">NVIDIA <code>NVDA</code></span>
+      <span class="ticker">MediaTek <code>2454</code></span>
+      <span class="note">市場從賭資產股(辦公室設哪)變成「看老黃手上拿哪牌筆電就衝進去鎖漲停」</span>
+    </div>
+    <div class="mechanism">
+      AIPC 用料較好(晶片端+板子被動元件各種元件材料提升),<span class="hl">ASP 高、一台抵傳統消費 1.5 台</span>。若銷量比之前增速,可 offset 今年手機筆電的弱勢。題材可幫 re-rate,但實務帶動筆電 OEM 要再觀察。
+    </div>
+
+    <div class="action">非零和:地端崛起不代表 Data Center 死,用量仍成長好幾倍,但很多使用會落到地端。觀察 AIPC 第二次挑戰能否成,以及用料提升的供應鏈。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="ch">下一波題材</div>
+    <span class="card-num">5/10</span>
+    <h2>功率半導體是下波匯聚點,NVDA/TSMC 可能補漲</h2>
+    <p class="core">聽眾問下波漲價題材會不會延伸到功率半導體 IDM(ON/ADI)。<span class="hl">主持人:敏感度非常好,功率半導體基本面顯著改善中,確實可能是下一波題材匯聚點。</span></p>
+
+    <div class="mechanism">
+      <strong>但光芒沒 CPU/被動全面 — 因為缺「戴維斯雙擊+缺貨」三合一:</strong>市場最愛 <span class="hl">ASP 拉上去 + PU Ratio 拉上去 + 搭配缺貨</span>。功率元件有漲價,但目前沒看到全面屌缺。<br>
+      → 若後面電源櫃表現好、產生大量拉貨,可能性就提高。
+    </div>
+
+    <h3>NVDA/TSMC 補漲</h3>
+    <div class="mechanism">
+      最近盤有這味道:<span class="hl">TSMC 形態明顯轉強、NVIDIA 突破往上</span>。加上金管會開門,投信公司必須改公發書(一兩月完成),<strong>投信資金進來後可能把它推上去</strong>。
+    </div>
+
+    <h3>關聯個股</h3>
+    <div class="stock-group">
+      <span class="gl">下波題材:</span>
+      <span class="ticker">ON Semi <code>ON</code></span>
+      <span class="ticker">ADI <code>ADI</code></span>
+      <span class="ticker">功率半導體/IDM</span>
+      <span class="gl" style="margin-left:8px;">補漲:</span>
+      <span class="ticker">台積電 <code>2330</code></span>
+      <span class="ticker">NVIDIA <code>NVDA</code></span>
+    </div>
+
+    <div class="action">抓功率半導體+電源櫃這兩個題材還 OK,但要等「全面缺貨」訊號才會像 CPU/被動那樣全面。NVDA/TSMC 等投信資金進場的補漲機會。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="ch">資金輪動</div>
+    <span class="card-num">6/10</span>
+    <h2>NVIDIA 論述與時俱進,大龍頭可能擔綱最後一棒</h2>
+    <p class="core"><span class="hl">NVIDIA 論述不停與時俱進:從「買越多省越多瘋狂建置」→ Agentic → Robotics → 生活應用;從賣 GPU → 賣 Horax Solution → 現在賣所有 Infra 的供應商。</span></p>
+
+    <div class="mechanism">
+      <strong>大龍頭最後一棒機制:</strong>NVIDIA 跟 TSM 像(晶片AI龍頭 vs 代工龍頭),都交易在相對便宜位置。<br>
+      主持人猜:<span class="hl">會不會他們擔綱最後一棒?</span>大家都知道 TSM/NVDA 好,但去買小標股(因為比較會動)。類比比特幣 — 多少人真信它未來?大家只是覺得它會跑很快。市場百花齊放時都想找跑最快的,所以先往別的地方跑。
+    </div>
+
+    <h3>盤勢:稱估值 vs 上修動能</h3>
+    <div class="mechanism">
+      這波盤石碰到這階段,<span class="hl">「稱估值」的可能性遠大於找到新的上修動能</span> — 上修動能應該還沒有,要有技術突破才能把數字往上調。偏向「盤面好+資金多」持續往上推,不是基本面上修。市場討論已蠻充分反應。
+    </div>
+
+    <div class="action">大龍頭便宜但市場愛追會動的小標股 — 留意 NVDA/TSM 是否在投信資金進場後補漲。但要意識到這階段是「稱估值」推升,非新動能,需技術突破才會再上調數字。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="ch">Q&amp;A 操作觀念</div>
+    <span class="card-num">7/10</span>
+    <h2>凹到月線 + 再平衡要有目的性</h2>
+
+    <h3>降槓桿/減碼訊號(回檔不調整會狼來了嗎)</h3>
+    <div class="mechanism">
+      手上一大堆 CPU 跟被動,開始不約而同回檔(有些還在右上角)。<br>
+      <span class="hl">連十日線都沒破,為什麼要出?</span>以主持人成本來講想凹到月線看看 — 有些大波段的東西最終會踩月線再繼續往上(跟成本位置有關)。<br>
+      <strong>這波拉太兇太猛所以不做積極調整。</strong>過往大盤出長黑K會調整,這波出長黑K不調;<span class="hl">碰月線且幾天沒站回去,才會減碼。</span>
+    </div>
+
+    <h3>再平衡時間點(看佔比還是週期性)</h3>
+    <div class="mechanism">
+      <span class="hl">不會沒事把長得好好的東西剪掉 — 再平衡要有目的性。</span><br>
+      通常因為:① 有東西要買(像 SpaceX 要上、要參加申購或二級市場買),沒錢就壓低部位替款 ② 真認為市場 FOMO,減碼去買剛掉下來的。其他時間點不一定會沒事調整,不是有事沒事就亂殺。
+    </div>
+
+    <div class="action">回檔連十日線沒破不出、成本遠凹月線;碰月線幾天沒站回才減碼。再平衡要有明確目的(籌錢買新標的/FOMO換倉),別沒事剪好部位。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="ch">Q&amp;A 生活觀念</div>
+    <span class="card-num">8/10</span>
+    <h2>品酒 human algorithm + 威航往事的化悲憤為力量</h2>
+
+    <h3>品酒像學語言 → human algorithm</h3>
+    <div class="mechanism">
+      自費去樂花品酒會,本來自卑怕丟臉只想躲角落,結果被熱情大哥大姐引導,<span class="hl">終於聽懂品酒像學語言</span> — 不懂時覺得形容味道的是裝逼仔,懂了之後真能聞出金針菇(巔峰期下滑的酒)、茶味(乾掉後)、果香松露土壤。<br>
+      <span class="hl">悟出 human algorithm:</span>把味覺嗅覺語言參透後,能在腦中跑演算法,立刻聯想推薦對方(自己/愛的人/新朋友)會喜歡的東西 — 像 Amazon 購物車「猜你喜歡」。
+    </div>
+    <blockquote>用節目輸出檢驗真懂:「我只要有辦法在節目跟大家分享、講得出來,代表我真的懂了;講不出來,很多時候是你看完以為懂了,但不一定能理解。」</blockquote>
+
+    <h3>被掐脖子無能為力(威航往事)</h3>
+    <div class="mechanism">
+      威航(父親航空)摔兩架飛機,要逼簽自願離職省資遣費,跑來訓練基地各種理由幹他們罵廢物。<br>
+      <span class="hl">當時死老百姓沒管道只能忍耐;有錢有餘裕後一定會修理這種人</span>(年輕沒資源沒時間上法院,人家比你有餘裕)。路見不平拔刀相助 — 這種事發生在朋友家人小孩身上,就去修理那個人。那把火會變成督促往前的能量(化悲憤為力量)。
+    </div>
+
+    <div class="action">學習像學語言,參透後成識人演算法;最高指導原則是「能不接觸人就不接觸」(接觸人常讓自己失望)。年輕無資源只能忍,有餘裕才能伸張正義。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="ch">Q&amp;A 推薦 + 心態</div>
+    <span class="card-num">9/10</span>
+    <h2>平價紅酒清酒遊戲推薦 + fake it till you make it</h2>
+
+    <h3>平價紅酒/清酒</h3>
+    <div class="stock-group">
+      <span class="gl">平價紅酒:</span>
+      <span class="ticker">卡蒂娜 Rebirth(重生)</span>
+      <span class="note">Malbec 葡萄、阿根廷、平價;多數還沒認真研究的人會喜歡。高價不等於厲害(岳母男友酒莊幾百到一兩千就有極好的)</span>
+    </div>
+    <div class="stock-group">
+      <span class="gl">清酒:</span>
+      <span class="ticker">新政</span>
+      <span class="ticker">俄金</span>
+      <span class="ticker">富久井(900 塊超好喝)</span>
+      <span class="note">沒說過只喝十四代,研究清酒是因大家只喝十四代想說只有它嗎</span>
+    </div>
+
+    <h3>fake it till you make it(鼓勵投履歷)</h3>
+    <div class="mechanism">
+      <span class="hl">不是假裝成不是的自己,是從模仿開始</span> — 先假想取得這工作該是什麼樣子,然後別想太多。<br>
+      <span class="hl">能被邀進會議室面試,已擊敗非常多人</span> — 光能坐這就已被選到,人家問意見就勇敢回答。精心準備的不一定被喜歡(像節目嘔心瀝血之作,大家反而喜歡後面隨意的)。
+    </div>
+
+    <h3>遊戲推薦</h3>
+    <div class="stock-group">
+      <span class="ticker">紅眼路比</span>
+      <span class="ticker">暗花夜戰(明後年)</span>
+      <span class="ticker">妮姬(故事性最佳)</span>
+      <span class="ticker">棕色塵埃</span>
+      <span class="note">手遊每日任務從作業感變儀式感,每天解一下蠻高興</span>
+    </div>
+
+    <div class="action">捐獻別太大方(年輕累積期多幫自己想,賺錢找適合地方捐或給服務者小費就好);fake it 是從模仿開始,能被面試已勝很多人。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="ch">行動清單</div>
+    <span class="card-num">10/10</span>
+    <h2>持倉警示 + 下一步行動</h2>
+
+    <h3>本集主持人持倉動作</h3>
+    <p style="font-size: 14.5px;">
+      <span class="own">⭐ CPU + 被動元件</span>:主力,開始回檔但連十日線沒破不出<br>
+      <span class="own">⭐ Marvell</span>:挑戰多次失敗、這次成功拉出(被老黃加持)<br>
+      <span>操作</span>:成本夠遠想凹月線;碰月線幾天沒站回才減碼<br>
+      <span>紅酒</span>:品酒會喝特級園、非囤貨
+    </p>
+
+    <h3>下一步行動</h3>
+    <div class="three-col">
+      <div class="col">
+        <h4>🎯 觀察名單</h4>
+        <ul>
+          <li>光通訊族群(NVIDIA/Marvell 共同主軸)</li>
+          <li>AIPC(DGX Spark)+ 用料供應鏈</li>
+          <li>功率半導體/IDM(ON/ADI)</li>
+          <li>NVDA/TSMC(投信資金補漲)</li>
+          <li>Snowflake(Data Lake 地端化)</li>
+          <li>電源櫃拉貨訊號</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🟢 進場訊號</h4>
+        <ul>
+          <li>資金再往光跑的確認</li>
+          <li>功率半導體出現全面缺貨</li>
+          <li>投信公發書改完資金進場</li>
+          <li>AIPC 銷量增速 offset 筆電弱勢</li>
+          <li>被動元件整理完再起</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🚫 停損 / 不該做</h4>
+        <ul>
+          <li>Marvell 飛天要分辨基本面(ASIC 成色不足)</li>
+          <li>連十日線沒破不亂出</li>
+          <li>再平衡別沒目的亂剪好部位</li>
+          <li>別用零和思維看光/銅、地端/雲端</li>
+          <li>這階段是稱估值非新動能,別追到失控</li>
+          <li>正二盤整持有長期自損</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<a href="#top" class="float-top" title="回頂部">↑</a>
+</body>
+</html>
