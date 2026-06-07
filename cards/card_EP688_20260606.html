@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP688 筆記</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif; color: #1f2937; line-height: 1.75; padding: 32px 16px 80px; }
+  .container { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px 30px; margin-bottom: 16px; position: relative; }
+  .card-num { position: absolute; top: 18px; right: 22px; font-size: 11.5px; color: #b0b0b0; font-weight: 500; }
+  .ch { font-size: 12px; color: #888; margin-bottom: 8px; letter-spacing: 1px; }
+  h1 { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 4px; letter-spacing: -0.5px; }
+  .subtitle { color: #888; font-size: 13px; margin-bottom: 20px; }
+  h2 { font-size: 19px; font-weight: 700; color: #111; margin-bottom: 14px; line-height: 1.45; padding-right: 40px; }
+  h3 { font-size: 13.5px; font-weight: 700; color: #6b7280; margin: 18px 0 8px; letter-spacing: 0.5px; }
+  p { margin-bottom: 10px; color: #374151; }
+  .core { font-size: 15px; color: #1f2937; margin: 10px 0 14px; }
+  .mechanism { background: #f7f7f4; padding: 14px 18px; margin: 14px 0; border-radius: 6px; font-size: 14.5px; color: #374151; }
+  .mechanism strong { color: #111; }
+  .stocks { margin: 10px 0; }
+  .stock-group { margin: 8px 0; line-height: 1.9; }
+  .stock-group .gl { display: inline-block; font-weight: 700; color: #6b7280; font-size: 13px; margin-right: 6px; }
+  .ticker { display: inline-block; background: #f4f4f0; border: 1px solid #e5e5e0; border-radius: 5px; padding: 2px 8px; margin: 2px 3px 2px 0; font-size: 13px; color: #1f2937; }
+  .ticker code { color: #888; font-size: 11.5px; margin-left: 4px; }
+  .note { display: block; margin: 5px 0 5px 20px; font-size: 12.5px; color: #888; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; padding: 11px 16px; margin: 12px 0; border-radius: 6px; color: #735c2e; font-size: 13.5px; }
+  .risk::before { content: "⚠️  "; }
+  .action { background: #fff5ec; padding: 13px 18px; margin: 14px 0; border-radius: 6px; color: #9a4f0e; font-weight: 500; font-size: 14.5px; }
+  .action::before { content: "📌 "; }
+  .own { color: #c2410c; font-weight: 700; }
+  .hl { color: #c2410c; font-weight: 700; }
+  blockquote { padding: 8px 14px; margin: 10px 0; color: #6b7280; font-style: italic; font-size: 13.5px; background: #f7f7f4; border-radius: 6px; }
+  .pills { display: flex; flex-direction: column; gap: 7px; margin-top: 10px; }
+  .pill { background: #f7f7f4; color: #1f2937; padding: 10px 15px; border-radius: 7px; text-decoration: none; font-size: 13.5px; line-height: 1.5; }
+  .pill:hover { background: #efeee9; }
+  .pill .pn { display: inline-block; width: 22px; color: #999; font-size: 12px; font-weight: 600; }
+  .companies { display: grid; grid-template-columns: 56px 1fr; gap: 6px 10px; margin: 12px 0 4px; font-size: 13px; }
+  .companies .lb { font-weight: 700; color: #888; padding-top: 3px; font-size: 12.5px; }
+  .three-col { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 14px 0 4px; }
+  .three-col .col { background: #f7f7f4; border-radius: 7px; padding: 12px 14px; }
+  .three-col h4 { font-size: 13px; font-weight: 700; color: #4b5563; margin-bottom: 7px; }
+  .three-col ul { padding-left: 16px; font-size: 12.5px; }
+  .three-col li { margin: 4px 0; color: #374151; line-height: 1.55; }
+  .float-top { position: fixed; bottom: 22px; right: 22px; background: #1f2937; color: white; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); }
+  @media (max-width: 600px) {
+    .three-col { grid-template-columns: 1fr; }
+    .companies { grid-template-columns: 1fr; }
+    .companies .lb { padding-top: 0; }
+    body { padding: 16px 8px 80px; }
+    .card { padding: 20px 22px; }
+    h1 { font-size: 21px; }
+    h2 { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="container">
+
+  <div class="card" id="card-1">
+    <span class="card-num">1/10</span>
+    <h1>股癌 EP688 筆記</h1>
+    <p class="subtitle">2026/06/06 · Computex 2026 心得 × RTX Spark 是 AIPC 起點 × 人重回舞台中央</p>
+
+    <h3>提及公司</h3>
+    <div class="companies">
+      <div class="lb">美股</div>
+      <div>
+        <span class="ticker">NVIDIA <code>NVDA</code></span>
+        <span class="ticker">Adobe <code>ADBE</code></span>
+        <span class="ticker">Anthropic</span>
+        <span class="ticker">AMD <code>AMD</code></span>
+      </div>
+      <div class="lb">台股</div>
+      <div>
+        <span class="ticker">聯發科 <code>2454</code></span>
+        <span class="ticker">華碩 <code>2357</code></span>
+      </div>
+      <div class="lb">主題</div>
+      <div>
+        <span class="ticker">RTX Spark(N1X/N1)</span>
+        <span class="ticker">CPU Rack</span>
+        <span class="ticker">LPU</span>
+        <span class="ticker">Power Rack/超級電容</span>
+        <span class="ticker">ROG 眼鏡</span>
+      </div>
+    </div>
+
+    <h3>三句話總結</h3>
+    <div class="pills">
+      <a href="#card-2" class="pill"><span class="pn">1.</span>Computex 2026 是過去兩三年最喜歡的一場 — 今年把「人重新放到舞台正中央」,不再吹無人化/全自動取代,每個東西超實際 future is now</a>
+      <a href="#card-4" class="pill"><span class="pn">2.</span>RTX Spark 是 AIPC 真正起點 — unified memory 是關鍵,建議直上頂規;地端模型省 token、幾個月回本是購買動機</a>
+      <a href="#card-7" class="pill"><span class="pn">3.</span>週一台股 brace for impact(夜盤摸負 10%),但洗籌碼是好事(殺槓桿仔),產業端沒問題、Computex 更添信心</a>
+    </div>
+
+    <h3>章節導覽</h3>
+    <div class="pills">
+      <a href="#card-2" class="pill"><span class="pn">2.</span>展會總覽 — 出圈是好事 + 人重回中央</a>
+      <a href="#card-3" class="pill"><span class="pn">3.</span>Enterprise — CPU Rack / LPU / Power Rack</a>
+      <a href="#card-4" class="pill"><span class="pn">4.</span>RTX Spark — AIPC 真正起點</a>
+      <a href="#card-5" class="pill"><span class="pn">5.</span>AI Slop 反思 + Adobe 反成夥伴</a>
+      <a href="#card-6" class="pill"><span class="pn">6.</span>ROG 精緻化 + 眼鏡超越 Vision Pro</a>
+      <a href="#card-7" class="pill"><span class="pn">7.</span>盤勢 — 週一 brace for impact</a>
+      <a href="#card-8" class="pill"><span class="pn">8.</span>QA — 別把選擇外包 + 別追不知為何漲的</a>
+      <a href="#card-9" class="pill"><span class="pn">9.</span>QA — 腰背痛解方 + 夫妻互相扶持</a>
+      <a href="#card-10" class="pill"><span class="pn">10.</span>持倉揭露 + 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <span class="card-num">2/10</span>
+    <div class="ch">展會總覽(本集主軸)</div>
+    <h2>Computex 2026 — 出圈是好事,人重回舞台正中央</h2>
+    <p class="core"><span class="hl">主持人說這是過去兩三年最喜歡的一場展會。</span>今年看下來每個東西都超級實際,看完就 shut up take my money。</p>
+
+    <div class="mechanism">
+      <strong>出圈是好事:</strong>一堆死老百姓、追星仔湧入(黃仁勳變 Superstar、走到哪都是仁勳簽名、一管四樓像仁勳展)。有人嫌不純粹,但<span class="hl">越多不相關的人介入,代表這東西紅了、不是圈內自己玩,會產生額外機會</span>。<br>
+      第一線解說人員會煩躁(做無效溝通),但老闆很開心、富光度更高 — 搞不好那個大媽小弟背後爸爸是誰你不知道,回去說「爸爸這很酷」就在公司建一個。別以偏概全、以貌取人。
+    </div>
+
+    <div class="mechanism">
+      <strong>人重回舞台正中央:</strong>過去一兩年到處機械狗、不明所以的 AI 應用,看了<span class="hl">審美疲勞、覺得有泡沫</span>。今年越來越少人強調「走向沒有人的世界/全自動取代人類」,反而把人重新放到舞台正中間 — 強調人機結合。<br>
+      → 主持人:這也是為什麼我反感 Anthropic 老闆的末日論發文。我很討厭聽到開口閉口「未來未來」,你直接告訴我現在能做什麼。
+    </div>
+
+    <div class="action">今年展會核心訊號:從「無人化願景」轉向「實際加速生產力」。把生產力持續往上點,點到某地方就開枝散葉產生新應用,不用坐那邊想像未來。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="ch">Enterprise(TICC)</div>
+    <span class="card-num">3/10</span>
+    <h2>CPU Rack 的 Jevons 反駁 + LPU 全封起來</h2>
+    <p class="core">Enterprise 整體跟過去差不多,重點看 Power Rack、LPU、光通、CPU Rack。</p>
+
+    <h3>CPU Rack:偏空看法被 Jevons 反駁</h3>
+    <div class="mechanism">
+      Whole Rack 推出,用在 Agentic AI Workflow。<strong>市場偏空說法:</strong>現在 Agentic 做不好、模型瘋狂撞牆找路線才用掉很多 CPU,等優化後就不用這麼多。<br>
+      <strong>主持人引 Satya 反駁:</strong><span class="hl">把成本降低用的人會更多(Jevons)</span> — 現在用 AI 的只是極小百分比 geek,你少用一點 CPU as a person,但更多人用,整體數字更大。CPU configuration 後面仍可持續關注。
+    </div>
+
+    <h3>LPU / Power Rack / Kyber</h3>
+    <div class="stock-group">
+      <span class="ticker">LPU</span>
+      <span class="note">全封起來看不到內件(黑媽媽一片+管線散熱板),完成收購後的新路線,估一年量 1-1.5 萬 Rack,量不大但好奇內部元件;Cube 也用在 LPU</span>
+      <span class="ticker">Power Rack / 超級電容</span>
+      <span class="note">超級電容超大一顆、尺寸大 5 倍、ASP 是以前快 100 倍</span>
+      <span class="ticker">Kyber</span>
+      <span class="note">工藝複雜可能遞延、折衷慢慢推;關注正焦結構背板 Midplane/Cube,遞延時有人不注意但有朝一日會回來</span>
+    </div>
+
+    <div class="risk">前面的人別矛盾:看膩 OEM/ODM/EMS 的 EPS 會錯過後面漲幅(好還會更好)。類比台積電從十幾塊看到兩百塊,覺得到不了一千,結果真的到一千兩千三千。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="ch">消費端(南港)</div>
+    <span class="card-num">4/10</span>
+    <h2>RTX Spark 是 AIPC 真正起點 — unified memory 是關鍵</h2>
+    <p class="core">主持人非常喜歡消費端展示。<span class="hl">RTX Spark 靠 unified memory(整個記憶體 pool 都能用、放更大模型、處理更多參數)。</span></p>
+
+    <div class="mechanism">
+      <strong>展示威力:</strong>瞬間 render 紐約 30-50 街區地貌、超順不卡頓。沒用 RTX Spark 的筆電跑 Premiere/Photoshop 要很久,<span class="hl">它只要 1/3 到 1/5 時間</span>。
+    </div>
+
+    <h3>規格與購買建議</h3>
+    <div class="mechanism">
+      N1X 高規(<span class="hl">9-10 萬台幣</span>)、N1 低規(5-6 萬)。<strong>主持人強烈建議直上頂規</strong> — 重點是要夠大的 unified memory pool 才能跑 local agentic AI / 超快剪片修圖 / 遊戲補正。<span class="hl">買低規會失望、會幹掉。</span><br>
+      聯發哥展示:RTX Spark 雖小但<span class="hl">等效 5070</span>,可打遊戲 + 大記憶體導入 AI 優化。
+    </div>
+
+    <h3>地端模型的購買動機(關鍵邏輯)</h3>
+    <div class="mechanism">
+      主持人自己每月付 6000 還額外加買 AI(被動儲值、太好用,查紅酒拍賣價/評價用 agent AI 超快準,每月幾萬塊)。<br>
+      → 若能把東西結合地端模型(像 snowflake 有些外包 LM、等 data 建進來可地端跑),<span class="hl">每月省 1 萬、省 10 個月筆電就回本</span>(類比 xAI Colossus 租 Anthropic 一年回本)。所以有強烈動機買硬體。
+    </div>
+
+    <div class="action">當「AI 筆電 slash 電競筆電」砍:比一般電競筆電貴一點但輕薄,GTA6 要出了,買這台無痛打 + 順便搞 AI = shut up take my money。成功機率比前幾款 AIPC 高(高通失敗是時間沒到),但缺臨門一腳。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="ch">AI 應用判斷</div>
+    <span class="card-num">5/10</span>
+    <h2>AI Slop 反噬 + 被喊取代的 Adobe 反成 NVIDIA 夥伴</h2>
+
+    <h3>AI Slop 反思(主持人價值觀)</h3>
+    <div class="mechanism">
+      主持人<span class="hl">絕不把網路形象完全自動化</span> — 用 Claude 自動發文像自殺,千篇一律會被看穿、互動觸及暴跌。越來越多人憎恨 AI Slop、想找有人味的東西。<br>
+      <strong>光譜:</strong>折扣訊息/每日推播可全自動(像全聯特價);但<span class="hl">有人格特質的創作者/導演/老師用 AI 自動化,是把自己推進棺材</span>。
+    </div>
+    <blockquote>「我不會看 AI 導演,沒有,老子要看諾蘭。就算他的味道比較頓一點。」</blockquote>
+
+    <h3>遊戲:設計好的體驗 vs 隨機生成</h3>
+    <div class="mechanism">
+      一兩年前就逆風提出:<span class="hl">玩遊戲是要玩設計好的體驗,不是隨機券出來的東西</span>。隨機性頂多放在部分對話(telemate)。今年果然展會不再強調 AI 隨機生成劇情/客製場景,改強調工作流加強。
+    </div>
+
+    <h3>Adobe 反成夥伴</h3>
+    <div class="stock-group">
+      <span class="ticker">Adobe <code>ADBE</code></span>
+      <span class="note">市場一直喊 Adobe 被 AI 取代第一棒,Computex 卻看到 NVIDIA 跟它深度合作大量曝光、硬體為 Adobe 應用調整。主持人不熟此領域不敢說低點到,但點出反差</span>
+    </div>
+
+    <div class="action">AI 自動化要分辨「有沒有人格特質」:無差異的重複推播可全自動,有個人色彩的內容自動化會反噬。被市場喊「淘汰」的不一定真淘汰(Adobe 反成 NVIDIA 深度夥伴)。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="ch">消費電子</div>
+    <span class="card-num">6/10</span>
+    <h2>ASUS ROG 精緻化 + 眼鏡超越 Vision Pro</h2>
+    <p class="core">ROG 精銳盡出跟對手宣戰 — <span class="hl">消費級表現不好,所以使出全力吸引消費者。</span></p>
+
+    <div class="mechanism">
+      <strong>精緻化軍備:</strong>客製化鍵帽像盲盒抽、<span class="hl">24K 鍍金背板</span>(藏在看不到的地方,但低調奢華 — 女生來看貓時翻鍵盤露金卡直接結婚)、跟 T1 聯名顯卡、面板可放自選影片(天鑽法師當場被說服要買 — 法師看線型叼基本面根本不用看展卻直接買 20 萬電腦)。
+    </div>
+
+    <h3>ROG 眼鏡(future is now)</h3>
+    <div class="mechanism">
+      像輕量化 Apple Vision Pro,但只有眼鏡重量、<span class="hl">畫面流暢度甚至超越 Vision Pro</span>。<br>
+      對比主持人自己買 Vision Pro 當盤子(太重養灰塵,只感動在錄兒子回放有幻知效應)→ <strong>什麼東西能 daily basis 使用非常重要</strong>。眼鏡真有搞頭,再給一兩年不知會玩成什麼樣。
+    </div>
+
+    <div class="mechanism">
+      <strong>ASUS 私展:</strong>秀軟體應用(快速識別哪排伺服器哪環節有問題立刻排除),印證主持人講的「<span class="hl">不是有 AI 就不需要軟體,有些下去有些上來,AI coding 協助下做出很多實用軟體</span>」。
+    </div>
+
+    <div class="action">消費級廠商因表現不好被迫精緻化突圍(ROG/客製化)。眼鏡是過去看 VR/AR demo 覺得太遠、現在 future is now 的代表 — 可daily使用才是關鍵。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="ch">盤勢</div>
+    <span class="card-num">7/10</span>
+    <h2>週一台股 brace for impact,但洗籌碼是好事</h2>
+    <p class="core"><span class="hl">昨天夜盤大場面,台指最深摸到負 10%、後拉到負 6-8%。下禮拜一台股 brace for impact。</span></p>
+
+    <div class="mechanism">
+      <strong>主持人態度:</strong>舒服久了就會有天罰天譴。老聽眾早有心理準備、新人不信股票只會漲(每天疊 1% 在那邊幹幹叫)。<br>
+      <span class="hl">這樣洗籌碼絕對是好事</span> — 禮拜一殺一殺,把鎖死的、<strong>融資融最大/股息槓最大的槓桿仔清掉</strong>(已經在殺股息,開超低就是那些人自殺被洗掉)。後面還會有腥風血雨。
+    </div>
+
+    <div class="mechanism">
+      <strong>但產業端沒問題:</strong>整體看下來產業端沒看到太多問題,<span class="hl">這次去 Computex 更充滿信心</span>。漲多跌多、整理之後再看新方向在哪裡。
+    </div>
+
+    <div class="action">高位回檔殺槓桿是健康洗盤(融資/股息槓最大的先被洗)。產業基本面沒壞,把回檔當洗籌碼,整理後找新方向。美股的(含主持人)週五先承受了,週一換台股。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="ch">Q&amp;A 投資心態</div>
+    <span class="card-num">8/10</span>
+    <h2>別把選擇外包給別人 + 別追不知為何漲的股票</h2>
+
+    <h3>別把投資選擇外包(SDR Labs 案例)</h3>
+    <div class="mechanism">
+      SDR Labs 從 200 多直接摔到 100(摔成狗)。主持人半年前看它 Killing Spree 表現好、後來沒再看好。當時一堆人說「過去超強、無腦跟就對了」。<br>
+      <span class="hl">「什麼叫無腦跟?你賺錢與否跟我一點關係都沒有,我又沒收費。」</span>蠻多人把自己的選擇外包給我(因為相信夢工所以幹嘛)— 這種人就是<strong>拿槍跟敗的,沒看過最後走得好的</strong>。
+    </div>
+
+    <h3>別追不知為何漲的股票(龍眼案例)</h3>
+    <div class="mechanism">
+      聽眾問龍眼每年凶狠漲勢但不懂為何漲,如何抓停損停利。<br>
+      <span class="hl">「為什麼要買一個不知道為什麼在漲的?買這種很容易受傷。」</span>龍眼這種像玩樂透(勝率比樂透高一點)。技術面進、技術面出,前後邏輯一致 OK,但<strong>主持人不做也不鼓勵</strong>(像不做無本當沖/每日當沖,期望值不高別浪費生命)。
+    </div>
+
+    <h3>績效不好別糾結細部</h3>
+    <p>25 歲聽眾 YTD 25% 自覺偏爛、常賣飛。主持人:你自己都知道績效沒到很好,再問細部操作沒用,<span class="hl">有時要從大方向改變,選擇比較重要,再來才能努力</span>。</p>
+
+    <div class="action">投資自己負責,別無腦跟、別把選擇外包(拿槍跟敗沒好下場)。別買不知為何漲的(像樂透);績效差先改大方向選擇,不是糾結細部操作。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="ch">Q&amp;A 生活</div>
+    <span class="card-num">9/10</span>
+    <h2>腰背痛解方 + 夫妻是唯一能選的家人</h2>
+
+    <h3>腰酸背痛功能性解方</h3>
+    <div class="mechanism">
+      關鍵字:<span class="hl">功能性訓練 + 物理治療師 + 整骨師全包</span>。不要只是暫時不痛,要解決問題。<br>
+      <strong>最誇張是跟呼吸有關:</strong>腹式呼吸要 cue 到背 — 久坐族把拳頭放在會痛的下背,吸氣時讓氣去鼓那邊頂著,一瞬間背變舒服。有阻力的弓箭步(右手膝蓋頂東西往右扭,把左寬炫回來)解左下背。<br>
+      → 問題從 10 個解到剩 2 個就要認真解決,主持人的已解決超過一半。
+    </div>
+
+    <h3>夫妻是唯一能自己選的家人</h3>
+    <div class="mechanism">
+      聽眾老婆貪幣圈傳直銷貸款、清每日股還貸。主持人:會蠻生氣,但發生了就要處理。<br>
+      <span class="hl">爸媽、小孩不能選(天注定),但老公老婆是這輩子唯一可以自己選的家人。</span>他犯的錯拿錢還一還就解決,搞不好之後你犯錯是臥病在床換老婆照顧。<strong>有悔悟有修正就散口、互相扶持</strong>;沒悔悟一直往死裡去另當別論。
+    </div>
+
+    <h3>有些事錢解決不了(胎停安慰)</h3>
+    <p>試管胎停的聽眾。主持人:很多苦難只要轉念/有選擇就不算什麼,但<span class="hl">有些事再多錢、意志力、人定勝天都沒辦法解決</span>(二兒子遇事的體會)。錢能解決的真的不是問題;維持樂觀才有燃料面對每一天,好事終將發生。</p>
+
+    <div class="action">腰背痛找功能性訓練+物理治療師+整骨,腹式呼吸 cue 到背。夫妻有悔悟就散口互相扶持。錢能解決的不是問題,維持樂觀。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="ch">行動清單</div>
+    <span class="card-num">10/10</span>
+    <h2>持倉揭露 + 下一步行動</h2>
+
+    <h3>本集主持人持倉/消費揭露</h3>
+    <p style="font-size: 14.5px;">
+      <span class="own">⭐ AI 訂閱</span>:每月付 6000 還額外加買(被動儲值、重度使用 agent AI)<br>
+      <span class="own">⭐ Apple Vision Pro</span>:買來當盤子、養灰塵(太重)<br>
+      <span class="own">⭐ RTX Spark(N1X)</span>:強烈考慮買(有強烈動機)<br>
+      <span>每日股</span>:清掉幫老婆還貸款(QA 提及類似情境會生氣但要處理)
+    </p>
+
+    <h3>下一步行動</h3>
+    <div class="three-col">
+      <div class="col">
+        <h4>🎯 觀察名單</h4>
+        <ul>
+          <li>RTX Spark / AIPC(NVDA/2454)</li>
+          <li>CPU Rack(Jevons 邏輯持續關注)</li>
+          <li>LPU(完成收購新路線,內部元件)</li>
+          <li>Power Rack / 超級電容</li>
+          <li>Adobe(NVIDIA 深度夥伴)</li>
+          <li>ASUS/ROG(消費精緻化、眼鏡)</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🟢 進場訊號</h4>
+        <ul>
+          <li>RTX Spark 上市後高規銷量</li>
+          <li>地端模型省 token 動機擴散</li>
+          <li>週一洗籌碼後槓桿仔清乾淨</li>
+          <li>整理後新方向確立</li>
+          <li>GTA6 帶動電競筆電</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🚫 停損 / 不該做</h4>
+        <ul>
+          <li>RTX Spark 別買低規(會幹掉)</li>
+          <li>別把投資選擇外包、無腦跟</li>
+          <li>別追不知為何漲的(像樂透)</li>
+          <li>別用偏空看 CPU 用量(Jevons)</li>
+          <li>有人格特質的內容別 AI 自動化</li>
+          <li>融資/股息槓最大的高位危險</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<a href="#top" class="float-top" title="回頂部">↑</a>
+</body>
+</html>
