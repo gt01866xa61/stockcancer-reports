@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP669 筆記</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif; color: #1f2937; line-height: 1.75; padding: 32px 16px 80px; }
+  .container { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px 30px; margin-bottom: 16px; position: relative; }
+  .card-num { position: absolute; top: 18px; right: 22px; font-size: 11.5px; color: #b0b0b0; font-weight: 500; }
+  .ch { font-size: 12px; color: #888; margin-bottom: 8px; letter-spacing: 1px; }
+  h1 { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 4px; letter-spacing: -0.5px; }
+  .subtitle { color: #888; font-size: 13px; margin-bottom: 20px; }
+  h2 { font-size: 19px; font-weight: 700; color: #111; margin-bottom: 14px; line-height: 1.45; padding-right: 40px; }
+  h3 { font-size: 13.5px; font-weight: 700; color: #6b7280; margin: 18px 0 8px; letter-spacing: 0.5px; }
+  p { margin-bottom: 10px; color: #374151; }
+  .core { font-size: 15px; color: #1f2937; margin: 10px 0 14px; }
+  .mechanism { background: #f7f7f4; padding: 14px 18px; margin: 14px 0; border-radius: 6px; font-size: 14.5px; color: #374151; }
+  .mechanism strong { color: #111; }
+  .stocks { margin: 10px 0; }
+  .stock-group { margin: 8px 0; line-height: 1.9; }
+  .stock-group .gl { display: inline-block; font-weight: 700; color: #6b7280; font-size: 13px; margin-right: 6px; }
+  .ticker { display: inline-block; background: #f4f4f0; border: 1px solid #e5e5e0; border-radius: 5px; padding: 2px 8px; margin: 2px 3px 2px 0; font-size: 13px; color: #1f2937; }
+  .ticker code { color: #888; font-size: 11.5px; margin-left: 4px; }
+  .note { display: block; margin: 5px 0 5px 20px; font-size: 12.5px; color: #888; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; padding: 11px 16px; margin: 12px 0; border-radius: 6px; color: #735c2e; font-size: 13.5px; }
+  .risk::before { content: "⚠️  "; }
+  .action { background: #fff5ec; padding: 13px 18px; margin: 14px 0; border-radius: 6px; color: #9a4f0e; font-weight: 500; font-size: 14.5px; }
+  .action::before { content: "📌 "; }
+  .own { color: #c2410c; font-weight: 700; }
+  .hl { color: #c2410c; font-weight: 700; }
+  blockquote { padding: 8px 14px; margin: 10px 0; color: #6b7280; font-style: italic; font-size: 13.5px; background: #f7f7f4; border-radius: 6px; }
+  .pills { display: flex; flex-direction: column; gap: 7px; margin-top: 10px; }
+  .pill { background: #f7f7f4; color: #1f2937; padding: 10px 15px; border-radius: 7px; text-decoration: none; font-size: 13.5px; line-height: 1.5; }
+  .pill:hover { background: #efeee9; }
+  .pill .pn { display: inline-block; width: 22px; color: #999; font-size: 12px; font-weight: 600; }
+  .companies { display: grid; grid-template-columns: 56px 1fr; gap: 6px 10px; margin: 12px 0 4px; font-size: 13px; }
+  .companies .lb { font-weight: 700; color: #888; padding-top: 3px; font-size: 12.5px; }
+  .three-col { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 14px 0 4px; }
+  .three-col .col { background: #f7f7f4; border-radius: 7px; padding: 12px 14px; }
+  .three-col h4 { font-size: 13px; font-weight: 700; color: #4b5563; margin-bottom: 7px; }
+  .three-col ul { padding-left: 16px; font-size: 12.5px; }
+  .three-col li { margin: 4px 0; color: #374151; line-height: 1.55; }
+  .float-top { position: fixed; bottom: 22px; right: 22px; background: #1f2937; color: white; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); }
+  @media (max-width: 600px) {
+    .three-col { grid-template-columns: 1fr; }
+    .companies { grid-template-columns: 1fr; }
+    .companies .lb { padding-top: 0; }
+    body { padding: 16px 8px 80px; }
+    .card { padding: 20px 22px; }
+    h1 { font-size: 21px; }
+    h2 { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="container">
+
+  <div class="card" id="card-1">
+    <span class="card-num">1/10</span>
+    <h1>股癌 EP669 筆記</h1>
+    <p class="subtitle">2026/06/10 · 修正週復盤 × Semi-Analysis 事件 × Apple WWDC 折衷路線</p>
+
+    <h3>提及公司</h3>
+    <div class="companies">
+      <div class="lb">美股</div>
+      <div>
+        <span class="ticker">Apple <code>AAPL</code></span>
+        <span class="ticker">NVIDIA <code>NVDA</code></span>
+        <span class="ticker">Google <code>GOOGL</code></span>
+        <span class="ticker">Semi-Analysis</span>
+      </div>
+      <div class="lb">台股</div>
+      <div>
+        <span class="ticker">台積電 <code>2330</code></span>
+        <span class="ticker">聯發科 <code>2454</code></span>
+        <span class="ticker">國巨 <code>2327</code></span>
+        <span class="ticker">大立光 <code>3008</code></span>
+      </div>
+      <div class="lb">主題</div>
+      <div>
+        <span class="ticker">被動元件</span>
+        <span class="ticker">光通訊</span>
+        <span class="ticker">800VDC / CPU Rack</span>
+        <span class="ticker">機器人</span>
+        <span class="ticker">PMIC</span>
+        <span class="ticker">避風港 / 低估值老牌</span>
+      </div>
+    </div>
+
+    <h3>三句話總結</h3>
+    <div class="pills">
+      <a href="#card-2" class="pill"><span class="pn">1.</span>修正週三部曲(週一摔/週二漲停/週三新高壓回)— 拉長看沒事、當下驚心動魄;下跌時鬼故事丟出來,考驗的是你的記憶力</a>
+      <a href="#card-4" class="pill"><span class="pn">2.</span>Semi-Analysis 變大空頭被圍剿 — 但受惠的也一起跌=市場整體回調,故事只是搭配丟出來;消息改股價不改長線敘事</a>
+      <a href="#card-3" class="pill"><span class="pn">3.</span>資金被嚇到後轉向「流動性好+有數字+低估值」= 避風港甚至下波領頭羊;等指數新高大家又會衝夢想類</a>
+    </div>
+
+    <h3>章節導覽</h3>
+    <div class="pills">
+      <a href="#card-2" class="pill"><span class="pn">2.</span>修正週復盤 — 拉長看沒事、當下驚心動魄</a>
+      <a href="#card-3" class="pill"><span class="pn">3.</span>資金 location 變化 — 流動性新偏好</a>
+      <a href="#card-4" class="pill"><span class="pn">4.</span>Semi-Analysis 事件 — 講空方要小心</a>
+      <a href="#card-5" class="pill"><span class="pn">5.</span>台積電漲價 + 大公司兩條路線</a>
+      <a href="#card-6" class="pill"><span class="pn">6.</span>Apple WWDC — 折衷路線 + 螢幕感知</a>
+      <a href="#card-7" class="pill"><span class="pn">7.</span>34 歲生日 — 5 年後還全職搞股票會失望</a>
+      <a href="#card-8" class="pill"><span class="pn">8.</span>QA — 破釜沉舟要維持彈性</a>
+      <a href="#card-9" class="pill"><span class="pn">9.</span>QA — 玻璃心暴露療法 + 衝動消費紀律</a>
+      <a href="#card-10" class="pill"><span class="pn">10.</span>持倉揭露 + 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <span class="card-num">2/10</span>
+    <div class="ch">修正週復盤</div>
+    <h2>週一摔、週二漲停、週三新高壓回 — 鬼故事考驗記憶力</h2>
+    <p class="core"><span class="hl">週一重摔(上集 Brace for Impact 應驗,跌停/殺融資爆掉)、週二一堆漲停(到底沙小)、週三新高完又全壓回</span> — 盤中剩大立光屌漲,國巨漲停中午打開往下破,但今天還是創新高、還在五日線上。<strong>拉長三天看好像沒發生事,當下卻驚心動魄。</strong></p>
+
+    <div class="mechanism">
+      <strong>下跌時鬼故事考驗記憶力:</strong>下跌時一定有很多鬼故事丟出來。<span class="hl">拉加權指數看過去幾個讓你痛過的回檔 — 當時的故事是什麼?說不定你都忘記了</span>,因為新高後就沒人記得、no one cares。<br>
+      → 消息是短線衝擊,不改長線敘事。<strong>會改變的是股價,受傷的是買在高位的高成本部位</strong>,對公司前瞻性沒影響。
+    </div>
+
+    <div class="mechanism">
+      <strong>主持人狀態:</strong>處置股關著、比手速也不能動,成本拉太遠蠻不在意(看到跌停就去運動)。週一直接跟營業員講:「若這波很多融資/質押被殺出來,記得跟我講,<span class="hl">我要把額度卡起來</span>」— 結果沒額度放出來,還是被控管(前面太多人借錢借光)。
+    </div>
+
+    <div class="action">這幾天沒操作(不能動,可以動也不會動)。還在新高的東西不太擔心 — 一直刷新高、沒出貨大黑K爆量,就繼續等。最好再破一次底、大量屍檢後「立刻反彈走出去的族群」= 下一波想追蹤的。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="ch">資金結構</div>
+    <span class="card-num">3/10</span>
+    <h2>資金 location 變化 — 流動性 + 有數字 + 低估值成新偏好</h2>
+    <p class="core">量化朋友觀察:過去 4-5 月眼睛閉起來隨便點都賺(只擔心額度不夠);這次<span class="hl">殺下去攤起來再殺、反覆搞之後,大家開始被嚇到 → 更注意流動性</span>(新櫃大崩跌、櫃板關起來跌停連出都出不掉)。</p>
+
+    <div class="mechanism">
+      <strong>資金轉向猜想:</strong>後面資金傾向往「<span class="hl">相對大型、流動性好、有數字(下個月開得出來而非三年後)、低估值</span>」跑 = <strong>避風港甚至下一波多頭的領頭羊</strong>。<br>
+      等信心回來(指數再創新高),大家又會衝「夢想類」— 現在算不出數字的東西(泛光類蠻多是)。
+    </div>
+
+    <div class="mechanism">
+      <strong>風控警訊(均線拉平):</strong>若信仰考驗+態度矯正越來越多、盤沒繼續往上 → 均線拉平 → <span class="hl">後面可能就真的來一個超大的</span>。到時東西全卡在流動性超低的,非常恐怖。所以想往更大、流動性好、營收獲利在那邊的方向。
+    </div>
+
+    <h3>洗籌碼是好事</h3>
+    <div class="mechanism">
+      24年7月、關稅戰前例:<span class="hl">籌碼上面卡一堆人,洗掉之後才會繼續走下一波</span> — 不然每個人都在車上,到底換誰進來抬轎?大洗一波說不定是蠻好的事情。真給你機會(車回來給你上)時,絕大多數人根本不敢上。
+    </div>
+
+    <div class="action">謝孟恭本位:蠻多股票拉出去,現在想注意「有流動性 + 有成績 + 紮實的老牌名牌」;不想再買處置的(要等關出來)。盤變好可能有新想法。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="ch">事件解讀</div>
+    <span class="card-num">4/10</span>
+    <h2>Semi-Analysis 變大空頭被圍剿 — 受惠的也跌 = 整體回調</h2>
+    <p class="core">Semi-Analysis 跑到舞台中央:Cue 了 <span class="hl">CPU Rack/800VDC 遞延 + VR Rubin 記憶體數量下修</span>,全部被包起來變成大空頭的感覺。</p>
+
+    <div class="mechanism">
+      <strong>主持人解讀:</strong>他們提的其實算合理的市場意見,只是搭配回檔被放大。<span class="hl">CPU 的數字本來就是投資圈喊高、日期拉前(市場 overshoot 現象)</span> — 節目早講過 CPU:GPU 不是 1:1。一個東西在炒作時,大家就會把數字講到超級無敵誇張。<br>
+      <strong>立刻有反駁:</strong>韓國人 substack 引 Computex 訪問 NVIDIA 網通光通主管 — 後面就要開始 shipment,量沒投資圈假設大,但 <span class="hl">delay 到出不來不會發生</span>。
+    </div>
+
+    <div class="mechanism">
+      <strong>關鍵判讀(受惠的也跌):</strong>理論上 CPU 遞延 → plugable 可以再多旺幾年,可是為什麼連 plugable 都一起掉?<br>
+      → <span class="hl">明明受惠的東西也一起下去 = 市場的整體回調,故事只是搭配丟出來。</span>死多軍把這視為洗籌碼、考驗信仰。多頭股票走一走會休息,甚至 30 幾% 大回檔再繼續走(記憶體前例)。
+    </div>
+
+    <h3>講空方要小心(AYZ 前例)</h3>
+    <div class="mechanism">
+      前例 AYZ:佛心訂閱平台,發文被認為打擊中國光通股(其實根本沒太大關係、回檔也不多),卻收到嚴重威脅後收掉。<br>
+      主持人自評:<span class="hl">我們是很溫柔的多軍</span> — 不修理空方;甚至假消息把股價打下去,反省的是自己(搞不好是漲多了,所以假消息也打得下來)。
+    </div>
+
+    <div class="action">800VDC 慢幾個 Q 沒問題,大趨勢方向不變、該用的 components 還是會發生。回檔搭配壞消息殺最重,但受惠的也跌時就知道是整體回調 — 別把短線消息當成產業路線的死刑。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="ch">產業判斷</div>
+    <span class="card-num">5/10</span>
+    <h2>台積電暗示漲價 + 大公司兩條路線</h2>
+
+    <h3>台積電:CFO 提可能漲價、魏哲家提不暴利</h3>
+    <div class="mechanism">
+      月營收開得不錯;CFO 受訪提到<span class="hl">可能漲價、不會用幾倍的方式漲</span>;魏哲家在同一說法中提到不會用很暴利的漲價方式(這樣做生意不持久,要跟夥伴維持長期關係)。<br>
+      → 市場合理期待(看記憶體廠毛利衝七八十趴);有機會推升營收獲利數字 + PE 估值。<strong>產業端沒看到敗象。</strong>
+    </div>
+
+    <h3>大公司兩條路線(產業大哥提醒)</h3>
+    <div class="mechanism">
+      <span class="hl">研發持續走 + 量產拿現有成熟的。</span>某技術到量產時沒成熟,不代表要死 — 只是下一代才端出來。<br>
+      可是投資角度會看成「大 miss、設計大更改」,市場腥風血雨、回檔 30-50% 常見。<strong>但技術路線不會因此掛掉。</strong>
+    </div>
+
+    <h3>週三盤面識別(下一波還看不出)</h3>
+    <div class="stock-group">
+      <span class="ticker"><span class="own">⭐</span> 被動元件:還是非常強勢</span>
+      <span class="ticker">光通:全部轉弱</span>
+      <span class="ticker">台積電:本來覺得有機會領跑,也轉弱</span>
+      <span class="ticker">發哥 <code>2454</code>:往下跳</span>
+      <span class="ticker">避風港/低估值:也沒拉出去</span>
+      <span class="note">還無法明確識別下一波資金方向,要眼見為憑 — 等族群走出去就知道</span>
+    </div>
+
+    <div class="action">市場還沒非常瘋狂、相對中性。等大家都開始買「衛星 AI data center、機器人類股」變主軸時才真的要擔心(短期難看到數字)。美光某會議已釋出大量看好機器人的 PDF(3-5 年後)、開始注意規格。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="ch">Apple WWDC</div>
+    <span class="card-num">6/10</span>
+    <h2>折衷路線(做半套)+ 螢幕感知是殺手鐧</h2>
+    <p class="core">WWDC 沒太多新亮點。重點:蘋果<span class="hl">沒走純過路費模式,選擇折衷(半套)</span> — 一部分用自家模型 + 一部分跟 Google 合作,主控權放自己身上(桃園航空城附近有搞精品等級伺服器)。</p>
+
+    <div class="mechanism">
+      <strong>為何不擔心它沒頂尖模型:</strong><span class="hl">模型之間的差異,走到越尖端後已經越來越不明顯</span>(迭代間互相超越)。不去做自己的模型也不會不好;折衷換取市場信心,看似保守牌但或許是正確路線。
+    </div>
+
+    <div class="mechanism">
+      <strong>螢幕感知 = 殺手鐧:</strong>主持人已長期用 Agentic AI(念孩子故事生圖、做調查,色後不理做得很好),差臨門一腳 — <span class="hl">若手機畫面能被螢幕感知立刻自動化,跟手機的綁定就更高</span>(像薩爾達的行動裝置,除了傳送什麼都幫你做好)。<br>
+      → 擴大用戶 base + 記憶體大漲價下蘋果數量贏同業非常多 → 拿下 base 做 tailor-made 個人化,<strong>AI 時代站在很好的位置</strong>。
+    </div>
+
+    <div class="mechanism">
+      <strong>「AI 殺掉蘋果」說法的教訓:</strong>之前「安卓 AI 功能厲害誰還換 iPhone」— 看銷量就知道說法很怪。<span class="hl">當下大家會把說法當真相解釋下跌</span>;類比現在光通/800V 跌怪 Semi-Analysis,等創新高 no one cares。
+    </div>
+
+    <div class="action">非常看好蘋果,但等資金跑回消費性才想進(前面試往 PMIC 跑立刻被掐死;PMIC 有故事再看)。每波修正要學會:當下擔心的事後看沒什麼大不了 — 只要不對公司本質毀滅性破壞/違約/倒掉,都是小風風雨雨。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="ch">生日宣告</div>
+    <span class="card-num">7/10</span>
+    <h2>34 歲 — 「5 年後還在全職搞股票,我會失望」</h2>
+    <p class="core">驗血報告紅字全不見(飲食控制+運動),身體素質持續變好。生日禮物:金色皮卡丘(兒子的黃色系)、Latash 紅酒(投資閒達朋友送、已喝好幾瓶)。</p>
+
+    <div class="mechanism">
+      <strong>重要人生宣告:</strong>跟法師聊到 —「<span class="hl">如果 5 年後我還在全職很專心的搞股票,我會覺得有點失望</span>」。階段性目標早就達成,後面都是多的。<br>
+      熱衷投資小生意、去年成立<strong>蕭南資本</strong>往創投方向走。不喜歡 never enough 把所有精力丟在同一個地方(50 億、100 億不會是目標)。
+    </div>
+
+    <blockquote>「這個節目會到什麼時間點,我也不知道。即便廣告 Lead Time 已經排到明年,如果時間到的話,我也是會突然跟 sponsor 說差不多到這了 — 那時候應該也只有一個 short notice 就跟大家說再見。」</blockquote>
+
+    <div class="mechanism">
+      今年願望依然<span class="hl">身體健康</span> — 這幾年的行情,沒發財的人可能是少數(生活圈觀察),所以身體健康變成最重要的東西、闔家平安。人只有活一次,不要完全沉溺在同一件事裡。
+    </div>
+
+    <div class="action">在很輕鬆的狀況下做各種嘗試(小生意/投資遊戲),不沖煙沖難。找到生命中有趣的事、探索更多未知。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="ch">Q&amp;A 心法</div>
+    <span class="card-num">8/10</span>
+    <h2>破釜沉舟有階段性 — 條件改變要維持彈性</h2>
+
+    <h3>「死了算了」= 破釜沉舟(大四生提問)</h3>
+    <div class="mechanism">
+      過去累積 30 分,下一把就<span class="hl">拿 30 分全下去賭,不會留 20 分</span> — 先退的就輸了(像川普 never back off,一直往前衝)。在工作上幫助很大。
+    </div>
+
+    <h3>但現在有 second thoughts — 因為條件改變了</h3>
+    <div class="mechanism">
+      <span class="hl">你開始有人要顧,你知道你絕對不能倒</span> — 以前倒了就從頭來過,現在倒了小孩學費誰付?所以會做更保守的決定。<br>
+      <strong>不是被調教,是條件變了:</strong>「你 18 歲會試著倒過來屌,你現在這樣做就腰閃到。有些事那時候可以做、現在不能做了 — <span class="hl">你會說你在打臉過去的自己嗎?沒有,條件不一樣了。人要維持彈性。</span>」
+    </div>
+
+    <h3>魏哲家信仰</h3>
+    <p>聽眾:「相信魏哲家,明年換新家」— 主持人:信了我信了。(呼應台積電漲價題)</p>
+
+    <div class="action">破釜沉舟是階段性策略:沒人要顧時 all-in 衝;有家庭責任後轉保守不是慫,是條件變了。打法跟著人生階段調整,維持彈性不是打臉過去。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="ch">Q&amp;A 心態 + 紀律</div>
+    <span class="card-num">9/10</span>
+    <h2>玻璃心暴露療法 + 衝動消費要有餘裕</h2>
+
+    <h3>玻璃心怎麼練(主持人自己也是玻璃心)</h3>
+    <div class="mechanism">
+      靠<span class="hl">大量暴露療法</span>走出(2022 低潮:認真分享沒收錢、回檔賠得比 99.9% 的人多)。以前會去查罵的人是誰 — 查完就釋懷。<br>
+      <strong>現在的標準:</strong><span class="hl">批評者是你 lookup 的偶像/榜樣 → 難過、反思;只是網友或不 lookup 的人 → 童言童語很好笑。</span>黃仁勳開啟 AI 盛世,他爸媽都還是說他哪裡可以做更好。<br>
+      Radiohead 的 No Surprises、Fake Plastic Trees 都有人按倒讚 — <strong>頂尖作品都有人倒讚,在意每個人會爆炸。</strong>
+    </div>
+    <blockquote>「要 mute 掉一些人 — 不只 line 靜音,甚至淘汰掉一些朋友或家人,降低接觸負面的東西。比馬龍效應:大家都看好你,你真的會越做越好。把自己放在對的環境裡。」</blockquote>
+
+    <h3>衝動消費的紀律(信貸還卡債 QA)</h3>
+    <div class="mechanism">
+      信貸還卡債是對的(循環利率更高),但變兩個債去買公仔陀螺不行 — 要先解決壓力源(Coping Mechanism、事出必有因、解鈴還需繫鈴人)。<br>
+      主持人也衝動消費,<span class="hl">但一定有餘裕、用工作表現決定可不可以花錢</span> —「今天是回檔日、賠錢的,老子今天只能吃便當。」岳母說早可退休,但「<strong>就是因為跟你想的不一樣,才有辦法持續累積</strong>」(net worth 每年上去)。不透支未來拼一發大的。
+    </div>
+
+    <div class="action">玻璃心:lookup 標準篩批評 + mute 負面 + 放對環境(比馬龍)。消費:有餘裕才花、用表現決定額度、絕不透支未來。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="ch">行動清單</div>
+    <span class="card-num">10/10</span>
+    <h2>持倉揭露 + 下一步行動</h2>
+
+    <h3>本集主持人持倉動作</h3>
+    <p style="font-size: 14.5px;">
+      <span class="own">⭐ 處置股部位(被動/CPU 主力)</span>:關著不能動、成本拉太遠蠻不在意<br>
+      <span class="own">⭐ 額度</span>:想卡殺出來的額度,結果沒放出來(仍被控管)<br>
+      <span class="own">⭐ 衛星類股</span>:年初只做一到三月那段,後面放給別人(不屬於我)<br>
+      <span>下一步偏好</span>:流動性好 + 成績好 + 紮實的老牌名牌<br>
+      <span>人生</span>:蕭南資本創投方向;Latash 紅酒生日禮(已喝好幾瓶)
+    </p>
+
+    <h3>下一步行動</h3>
+    <div class="three-col">
+      <div class="col">
+        <h4>🎯 觀察名單</h4>
+        <ul>
+          <li>修正後「立刻反彈走出去」的族群</li>
+          <li>流動性好+有數字+低估值(避風港=領頭羊)</li>
+          <li>台積電(漲價推升營收+PE)</li>
+          <li>Apple(螢幕感知,等資金回消費性)</li>
+          <li>PMIC(有故事,被掐死再看)</li>
+          <li>機器人(美光 PDF,3-5 年規格)</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🟢 進場訊號</h4>
+        <ul>
+          <li>破底+大量屍檢後的反彈族群</li>
+          <li>處置股解除(關出來才買)</li>
+          <li>資金往消費性跑(進 Apple 時機)</li>
+          <li>指數再創新高(夢想類再起)</li>
+          <li>還在新高的續抱(沒大黑K爆量)</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🚫 停損 / 不該做</h4>
+        <ul>
+          <li>別把短線鬼故事當產業死刑</li>
+          <li>受惠的也跌=整體回調,別亂歸因</li>
+          <li>均線拉平+信仰考驗多→提防超大回檔</li>
+          <li>別卡流動性超低的東西</li>
+          <li>衛星算力/機器人變主軸=過熱警訊</li>
+          <li>別在市場講空方(AYZ 前例)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<a href="#top" class="float-top" title="回頂部">↑</a>
+</body>
+</html>
