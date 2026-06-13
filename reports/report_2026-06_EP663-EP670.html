@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌月報 2026/06 — EP663-EP670</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif; color: #1f2937; line-height: 1.75; padding: 0 0 80px; }
+  .container { max-width: 800px; margin: 0 auto; padding: 0 16px; }
+  header { background: #1f2937; color: #fafaf7; padding: 32px 20px 26px; text-align: center; margin-bottom: 20px; }
+  header h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; }
+  header .sub { opacity: 0.7; margin-top: 6px; font-size: 13px; }
+  .kpi-bar { display: grid; grid-template-columns: repeat(7,1fr); gap: 8px; margin: 20px 0; }
+  .kpi { background: #ffffff; border: 1px solid #ececec; border-radius: 8px; padding: 14px 8px; text-align: center; }
+  .kpi .num { font-size: 24px; font-weight: 700; color: #1f2937; line-height: 1.2; }
+  .kpi .label { font-size: 11px; color: #888; margin-top: 4px; line-height: 1.3; }
+  .kpi.warn .num { color: #c2410c; font-size: 15px; line-height: 1.4; }
+  .toc-block { background: #ffffff; border: 1px solid #ececec; border-radius: 8px; padding: 12px 16px; margin-bottom: 22px; font-size: 13px; }
+  .toc-block a { color: #4b5563; text-decoration: none; margin-right: 6px; display: inline-block; padding: 4px 9px; border-radius: 5px; font-weight: 500; background: #f4f4f0; }
+  .toc-block a:hover { background: #efeee9; }
+  section { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 24px 26px; margin-bottom: 16px; }
+  h2 { font-size: 19px; font-weight: 700; color: #111; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid #f0f0ec; }
+  h3 { font-size: 14px; font-weight: 700; color: #6b7280; margin: 16px 0 8px; }
+  p { margin-bottom: 10px; color: #374151; }
+  .hot-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+  .hot-card { background: #f7f7f4; border-radius: 8px; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; }
+  .hot-card .name { font-weight: 600; color: #1f2937; font-size: 13.5px; }
+  .hot-card .count { background: #1f2937; color: white; border-radius: 11px; padding: 2px 10px; font-size: 12px; font-weight: 600; }
+  .flow-block { margin-bottom: 22px; }
+  .flow-header { display: inline-block; padding: 5px 14px; border-radius: 20px; font-weight: 700; font-size: 13.5px; margin-bottom: 12px; background: #f4f4f0; color: #4b5563; }
+  .chip-cloud { display: flex; flex-wrap: wrap; gap: 7px; }
+  .stock-chip { background: #f7f7f4; border: 1px solid #ececec; border-radius: 14px; padding: 4px 11px; font-size: 12.5px; color: #1f2937; display: inline-flex; align-items: center; gap: 5px; }
+  .stock-chip .cover { background: white; color: #888; font-size: 11px; padding: 1px 6px; border-radius: 8px; border: 1px solid #ececec; }
+  .stock-chip .own { color: #c2410c; font-weight: 700; }
+  .stock-chip code { color: #888; font-size: 11px; }
+  .flow-note { font-size: 12px; color: #888; margin-bottom: 14px; }
+  .pivot { margin: 14px 0; padding: 13px 16px; background: #f7f7f4; border-radius: 7px; }
+  .pivot-name { font-weight: 700; color: #111; margin-bottom: 6px; font-size: 14.5px; }
+  .sentiment-flow { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; margin: 8px 0; }
+  .sent-chip { background: #ececec; border-radius: 12px; padding: 3px 10px; font-size: 11.5px; font-weight: 500; color: #4b5563; }
+  .sent-bull { background: #d4e8d4; color: #2d5a2d; }
+  .sent-bear { background: #e8d4d4; color: #5a2d2d; }
+  .sent-watch { background: #ede5cf; color: #6a571f; }
+  .sent-arrow { color: #b0b0b0; font-weight: 700; }
+  .pivot-why { font-size: 13px; color: #4b5563; margin-top: 5px; line-height: 1.6; }
+  .action-group { margin-bottom: 18px; }
+  .action-title { font-weight: 700; font-size: 13.5px; padding: 5px 12px; border-radius: 5px; display: inline-block; margin-bottom: 8px; background: #f4f4f0; color: #4b5563; }
+  .action-table { width: 100%; border-collapse: collapse; margin: 6px 0 14px; font-size: 13px; }
+  .action-table th { background: #f7f7f4; padding: 7px 10px; text-align: left; font-weight: 700; color: #4b5563; border-bottom: 1px solid #ececec; }
+  .action-table td { padding: 7px 10px; border-bottom: 1px dashed #f0f0ec; color: #374151; }
+  .action-table td:first-child { width: 60px; }
+  .action-table td:nth-child(2) { font-weight: 500; color: #111; }
+  .action-table .ep { background: #4b5563; color: white; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .principle { margin: 14px 0; padding: 14px 16px; background: #f7f7f4; border-radius: 7px; }
+  .principle-title { font-weight: 700; color: #111; margin-bottom: 6px; font-size: 14.5px; }
+  .principle-quote { color: #6b7280; font-size: 13px; font-style: italic; margin: 6px 0; padding-left: 10px; border-left: 2px solid #d4d4d0; }
+  .principle-from { font-size: 12px; color: #888; }
+  .watch-item { padding: 10px 14px; margin: 8px 0; background: #f7f7f4; border-radius: 6px; font-size: 13.5px; }
+  .market-summary { background: #f7f7f4; padding: 18px; border-radius: 8px; line-height: 1.8; font-size: 14px; }
+  .float-top { position: fixed; bottom: 22px; right: 22px; background: #1f2937; color: white; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); z-index: 100; }
+  @media (max-width: 600px) {
+    .kpi-bar { grid-template-columns: repeat(2,1fr); }
+    .hot-grid { grid-template-columns: 1fr 1fr; }
+    header h1 { font-size: 21px; }
+  }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<header>
+  <h1>股癌月報 · 2026/06</h1>
+  <div class="sub">滾動 8 集回顧 · EP663 → EP670 · 修正後反彈,SpaceX 上市、被動漲價超預期</div>
+</header>
+
+<div class="container">
+
+  <div class="kpi-bar">
+    <div class="kpi"><div class="num">8</div><div class="label">熱題數</div></div>
+    <div class="kpi"><div class="num">40</div><div class="label">強勢標的<br>(累計 cover 數)</div></div>
+    <div class="kpi"><div class="num">7</div><div class="label">弱勢標的</div></div>
+    <div class="kpi"><div class="num">11</div><div class="label">觀望標的</div></div>
+    <div class="kpi"><div class="num">23</div><div class="label">持倉動作</div></div>
+    <div class="kpi"><div class="num">8</div><div class="label">觀點轉折</div></div>
+    <div class="kpi warn"><div class="num">跌完了<br>持續買</div><div class="label">主持人狀態</div></div>
+  </div>
+
+  <div class="toc-block">
+    <a href="#narrative">敘事弧</a>
+    <a href="#topics">熱題</a>
+    <a href="#flow">資金流向</a>
+    <a href="#actions">持倉動作</a>
+    <a href="#pivots">觀點轉折</a>
+    <a href="#principles">心法</a>
+    <a href="#watchlist">下一步觀察</a>
+    <a href="#market">市場氣氛</a>
+  </div>
+
+  <section id="narrative">
+    <h2>本月敘事弧</h2>
+    <p><strong>5月下(EP663-664)</strong>:被動元件第二階段 — Panasonic 漲價函流出、必旺證實高階斷供。AI 算力商業化三連發:Anthropic 轉獲利、xAI 算力出租回本、Google + Blackstone TPU Cluster Cloud。TPU 自用:外銷 3:1 共識。玻璃基板停止 cover。</p>
+    <p><strong>5月末(EP665)</strong>:國巨 BB Ratio 確認(稼動率 90%),2018 大潮類比。SpaceX IPO 主軸 — 賭 Neo Cloud 衛星算力,先買一半卡位、降 Tesla。機器人類股噴。</p>
+    <p><strong>5月底(EP666)</strong>:90% 資金鎖處置股。老AI復辟(陳泰銘成首富)+ 軟體股全面爆射 + 末日論 backfire。被動定調「需求driven」,鋁電容房間裡的大象。軟體四大心得:掌握資料+業務能力凌駕模型。</p>
+    <p><strong>6月初(EP667-668)</strong>:Computex 雙週 — 老黃喊 Marvell 飛天、光是未來主軸(非零和)、NVIDIA 賣所有 Infra。人重回舞台中央。RTX Spark 是 AIPC 真正起點(unified memory、地端省 token)。CPU 用量 Jevons 反駁。Adobe 反成 NVIDIA 夥伴。週一 brace for impact。</p>
+    <p><strong>6月中(EP669)</strong>:修正週三部曲(週一摔/週二漲停/週三新高壓回)。Semi-Analysis 變大空頭被圍剿,但受惠的也跌=整體回調。資金轉向流動性+有數字+低估值。台積電 CFO 提漲價、魏哲家提不暴利。Apple WWDC 折衷路線、螢幕感知殺手鐧。生日:5 年後還全職搞股票會失望。</p>
+    <p><strong>6月中(EP670)</strong>:<strong>SpaceX 上市操作(申購+盤中加碼、相挺持有不算估值)+ 估值哲學(估在別人前面、成長 vs 價值界線模糊)。被動元件漲價超預期 — 本來算複製 2018 要漲六到七次到 terminal,照速度只要兩次就到,業內沒大擴產走得長,日韓配貨驗證供需。台股某程度跌完了(壞消息一次出完、不等季線持續買)。Anthropic Fable 吃監管鐵拳(訴諸恐懼後果現)+ Edge computing 那天不遠了(開放落後閉鎖半年、若前沿吃監管偏好轉 Edge)。衛星股大逃殺(Rumor 實現後提款)。</strong></p>
+  </section>
+
+  <section id="topics">
+    <h2>熱門題材 Top 8</h2>
+    <div class="hot-grid">
+      <div class="hot-card"><span class="name">被動元件</span><span class="count">8</span></div>
+      <div class="hot-card"><span class="name">AI 算力 / Infra</span><span class="count">5</span></div>
+      <div class="hot-card"><span class="name">軟體 / 模型 / Edge</span><span class="count">5</span></div>
+      <div class="hot-card"><span class="name">衛星 / SpaceX</span><span class="count">4</span></div>
+      <div class="hot-card"><span class="name">修正 / 估值哲學</span><span class="count">3</span></div>
+      <div class="hot-card"><span class="name">光通訊</span><span class="count">3</span></div>
+      <div class="hot-card"><span class="name">AIPC / RTX Spark</span><span class="count">2</span></div>
+      <div class="hot-card"><span class="name">Computex / 展會</span><span class="count">2</span></div>
+    </div>
+  </section>
+
+  <section id="flow">
+    <h2>資金流向(最新 sentiment)</h2>
+    <div class="flow-note">⭐ 標記為主持人有持倉。括號內為 cover 集數。</div>
+
+    <div class="flow-block">
+      <div class="flow-header">強勢(看多)</div>
+      <div class="chip-cloud">
+        <span class="stock-chip"><span class="own">⭐</span> 被動元件族群 <span class="cover">8集</span></span>
+        <span class="stock-chip"><span class="own">⭐</span> 國巨 <code>2327</code> <span class="cover">4集</span></span>
+        <span class="stock-chip"><span class="own">⭐</span> 春田 <span class="cover">2集</span></span>
+        <span class="stock-chip"><span class="own">⭐</span> 美光 <code>MU</code> <span class="cover">2集</span></span>
+        <span class="stock-chip"><span class="own">⭐</span> SpaceX <code>SPCX</code>(上市+加碼)</span>
+        <span class="stock-chip"><span class="own">⭐</span> 特斯拉 <code>TSLA</code>(相挺)</span>
+        <span class="stock-chip">台積電 <code>2330</code> <span class="cover">4集</span></span>
+        <span class="stock-chip">NVIDIA <code>NVDA</code> <span class="cover">3集</span></span>
+        <span class="stock-chip">江海股份(中) <span class="cover">2集</span></span>
+        <span class="stock-chip">Panasonic <code>6752.T</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">華新科 <code>2492</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">Google <code>GOOGL</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">Apple <code>AAPL</code>(折衷路線)</span>
+        <span class="stock-chip">Salesforce <code>CRM</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">ServiceNow <code>NOW</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">Snowflake <code>SNOW</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">聯發科 <code>2454</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">DDR4 / DDR5 <span class="cover">2集</span></span>
+        <span class="stock-chip">AMD <code>AMD</code> <span class="cover">2集</span></span>
+        <span class="stock-chip">記憶體股(成長vs價值模糊)</span>
+        <span class="stock-chip">RTX Spark / AIPC</span>
+        <span class="stock-chip">CPU Rack(Jevons)</span>
+        <span class="stock-chip">800VDC(慢幾Q沒問題)</span>
+        <span class="stock-chip">Adobe <code>ADBE</code></span>
+        <span class="stock-chip">Power Rack / 超級電容</span>
+        <span class="stock-chip">ASUS / ROG <code>2357</code></span>
+        <span class="stock-chip">Marvell <code>MRVL</code></span>
+        <span class="stock-chip">Broadcom <code>AVGO</code></span>
+        <span class="stock-chip">IGV(軟體ETF)</span>
+        <span class="stock-chip">鴻海 <code>2317</code></span>
+        <span class="stock-chip">廣達 <code>2382</code></span>
+        <span class="stock-chip">功率半導體(ON/ADI)</span>
+        <span class="stock-chip">Edge computing / 地端裝置</span>
+        <span class="stock-chip">Neo Cloud / TPU as a Service</span>
+        <span class="stock-chip">大立光 <code>3008</code></span>
+        <span class="stock-chip">0050(已成飆股)</span>
+      </div>
+    </div>
+
+    <div class="flow-block">
+      <div class="flow-header">弱勢(看空 / 避開)</div>
+      <div class="chip-cloud">
+        <span class="stock-chip">衛星/火箭股(RKLB/ASTS/Fly,大逃殺出貨)</span>
+        <span class="stock-chip">散熱族群</span>
+        <span class="stock-chip">玻璃基板(已停止 cover)</span>
+        <span class="stock-chip">末日論者敘事(Dario/Altman 吃監管)</span>
+        <span class="stock-chip">SDR Labs(打落水狗後 V 轉)</span>
+        <span class="stock-chip">流動性超低小型股</span>
+        <span class="stock-chip">見風轉舵免洗帳號股</span>
+      </div>
+    </div>
+
+    <div class="flow-block">
+      <div class="flow-header">觀望</div>
+      <div class="chip-cloud">
+        <span class="stock-chip">光通訊族群 <span class="cover">3集</span>(修正週轉弱)</span>
+        <span class="stock-chip">Intel <code>INTC</code>(就是CPU)</span>
+        <span class="stock-chip">老 AI 族群(輪動)</span>
+        <span class="stock-chip">記憶體擴產警訊</span>
+        <span class="stock-chip">LPU(封起來,新路線)</span>
+        <span class="stock-chip">Kyber(工藝複雜遞延)</span>
+        <span class="stock-chip">PMIC(有故事,被掐死再看)</span>
+        <span class="stock-chip">Anthropic(Fable 吃監管)</span>
+        <span class="stock-chip">茂聯KY(買 Datacom)</span>
+        <span class="stock-chip">機器人(美光 PDF 3-5年;變主軸=警訊)</span>
+        <span class="stock-chip">低基期籌碼乾淨股(待大模型吃監管)</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="actions">
+    <h2>主持人持倉動作(23 筆)</h2>
+
+    <div class="action-group">
+      <div class="action-title">買入 / 加碼</div>
+      <table class="action-table">
+        <tr><td><span class="ep">EP664</span></td><td>被動元件族群</td><td>處置股關 20 分鐘也跌停加碼,結果又繼續噴出</td></tr>
+        <tr><td><span class="ep">EP665</span></td><td>被動元件處置股</td><td>加碼(拉太遠不減碼,5月績效再刷新高)</td></tr>
+        <tr><td><span class="ep">EP665</span></td><td>SpaceX(IPO)</td><td>計畫先買一半卡位(類比 Palantir)</td></tr>
+        <tr><td><span class="ep">EP667</span></td><td>CPU + 被動元件</td><td>回檔連十日線沒破不出,站加碼方</td></tr>
+        <tr><td><span class="ep">EP667</span></td><td>Marvell (MRVL)</td><td>挑戰多次失敗,這次成功拉出(老黃加持)</td></tr>
+        <tr><td><span class="ep">EP668</span></td><td>RTX Spark(N1X)</td><td>強烈考慮買(有動機結合地端省錢)</td></tr>
+        <tr><td><span class="ep">EP670</span></td><td>SpaceX (SPCX)</td><td>申購+盤中160幾加碼,接下來持續點(相挺太空夢想)</td></tr>
+        <tr><td><span class="ep">EP670</span></td><td>被動元件(主力)</td><td>持續推籌碼買進、不等季線(這波拉太遠)</td></tr>
+      </table>
+    </div>
+
+    <div class="action-group">
+      <div class="action-title">賣出 / 減碼</div>
+      <table class="action-table">
+        <tr><td><span class="ep">EP663</span></td><td>玻璃基板</td><td>停止 cover(網路酸出完貨)</td></tr>
+        <tr><td><span class="ep">EP665</span></td><td>Tesla (TSLA)</td><td>計畫降低持股(資金轉去 SpaceX)</td></tr>
+        <tr><td><span class="ep">EP665</span></td><td>衛星族群</td><td>年初做的大多已出脫(賺魚頭)</td></tr>
+        <tr><td><span class="ep">EP666</span></td><td>整體部位</td><td>被動降槓桿(券商收額度,鎖原地快一個月)</td></tr>
+        <tr><td><span class="ep">EP669</span></td><td>衛星類股(回顧)</td><td>只做一到三月那段,後面放給別人</td></tr>
+        <tr><td><span class="ep">EP670</span></td><td>Starlink 鏈(回顧)</td><td>1月買、2-3月已賣(台股太熱選項多提早動)</td></tr>
+      </table>
+    </div>
+
+    <div class="action-group">
+      <div class="action-title">持有 / 觀望</div>
+      <table class="action-table">
+        <tr><td><span class="ep">EP666</span></td><td>被動元件(主力)</td><td>90% 資金鎖處置股,動不了</td></tr>
+        <tr><td><span class="ep">EP667</span></td><td>CPU + 被動(主力)</td><td>成本夠遠想凹月線</td></tr>
+        <tr><td><span class="ep">EP668</span></td><td>AI 訂閱(每月6000+加買)</td><td>被動儲值、重度使用 agent AI</td></tr>
+        <tr><td><span class="ep">EP669</span></td><td>處置股部位(主力)</td><td>關著不能動、成本拉太遠蠻不在意</td></tr>
+        <tr><td><span class="ep">EP670</span></td><td>特斯拉 (TSLA)</td><td>相挺持有(SpaceX 心態類比)</td></tr>
+        <tr><td><span class="ep">EP670</span></td><td>春田</td><td>持有但自評貴(看漲價兌現,PE 可能20倍以下)</td></tr>
+        <tr><td><span class="ep">EP670</span></td><td>整體</td><td>持續推籌碼、不等季線(認為跌完了)</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="pivots">
+    <h2>觀點轉折(同檔股跨集 sentiment 變化)</h2>
+
+    <div class="pivot">
+      <div class="pivot-name">被動元件族群(台股)</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip sent-bull">EP663-665 bullish</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP666 需求driven</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-watch">EP669 修正仍強</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP670 漲價超預期</span>
+      </div>
+      <div class="pivot-why">一路噴(必旺斷供→國巨BB Ratio→需求driven);EP669 修正週仍強勢;EP670 漲價超預期(本來算六七次到terminal、照速度兩次就到、料號擴到周邊、業內沒大擴產走得長、日韓配貨驗證供需)。主持人持續推籌碼不等季線</div>
+    </div>
+
+    <div class="pivot">
+      <div class="pivot-name">SpaceX / 衛星股</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip sent-bull">EP665 Neo Cloud 卡位</span><span class="sent-arrow">→</span>
+        <span class="sent-chip">EP669 回顧(只賺頭段)</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP670 上市加碼(相挺)</span>
+      </div>
+      <div class="pivot-why">EP665 賭 Neo Cloud 衛星算力先買一半;EP670 上市後申購+盤中160幾加碼、持續點(類比特斯拉相挺不算估值)。但衛星/火箭股(RKLB/ASTS)大逃殺=Rumor 實現後題材股提款,SpaceX 本體看多、衛星鏈看出貨</div>
+    </div>
+
+    <div class="pivot">
+      <div class="pivot-name">台積電 (2330)</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip sent-bull">EP667 轉強(投信)</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-watch">EP669 漲價利多但週三轉弱</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP670 目標價梗(2330)</span>
+      </div>
+      <div class="pivot-why">EP667 形態轉強+投信;EP669 CFO提漲價、魏哲家提不暴利但週三盤中轉弱;EP670 成被動元件報告目標價數字梗、創投界『為什麼不投台積電』的幹話對象。持續看多</div>
+    </div>
+
+    <div class="pivot">
+      <div class="pivot-name">Anthropic(模型)</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip sent-bull">EP663-664 商業化(轉獲利)</span><span class="sent-arrow">→</span>
+        <span class="sent-chip">EP669 (算力合約題材)</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-watch">EP670 Fable 吃監管</span>
+      </div>
+      <div class="pivot-why">EP663-664 Anthropic 轉獲利、算力商業化;EP670 Fable 模型好用但海外受美國出口管制(Perplexity也被鎖)— Dario 訴諸恐懼吃監管鐵拳,後果已現,嚴重會影響市場觸及度、某次修正被當故事</div>
+    </div>
+
+    <div class="pivot">
+      <div class="pivot-name">Edge computing / 地端</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip sent-watch">EP667 AIPC第二次挑戰</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP668 RTX Spark 起點</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP670 那天不遠了</span>
+      </div>
+      <div class="pivot-why">EP667-668 AIPC/RTX Spark unified memory;EP670 明確說 Edge computing 那天不遠(開放落後閉鎖半年、都拉強後地端夠用、一年回推);若前沿模型吃監管,偏好可能從大模型轉去 Edge(籌碼乾淨低基期)</div>
+    </div>
+
+    <div class="pivot">
+      <div class="pivot-name">大盤位階判讀</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip sent-watch">EP668 brace for impact</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-watch">EP669 修正週驚心動魄</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP670 某程度跌完了</span>
+      </div>
+      <div class="pivot-why">EP668 週一 brace for impact;EP669 修正三部曲拉長看沒事;EP670 認為某程度跌完了(壞消息一次出完、摸跌停沒消息、CPI限縮、川普奪島又不打淡化),持續推籌碼買進不等季線</div>
+    </div>
+
+    <div class="pivot">
+      <div class="pivot-name">記憶體股</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip sent-bull">EP669 30幾%回檔再走</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP670 成長vs價值案例</span>
+      </div>
+      <div class="pivot-why">EP669 多頭股票30幾%大回檔再走的前例;EP670 七張點覺得貴現在便宜=成長股價值放後面的經典案例(估值是藝術、估在別人前面)</div>
+    </div>
+
+    <div class="pivot">
+      <div class="pivot-name">SDR Labs</div>
+      <div class="sentiment-flow">
+        <span class="sent-chip sent-bear">EP668 200摔到100</span><span class="sent-arrow">→</span>
+        <span class="sent-chip sent-bull">EP670 V轉到300-400</span>
+      </div>
+      <div class="pivot-why">EP668 摔成狗、一堆人無腦跟被批;EP670 從100又拉到300-400(Sexy Back)— 當時打落水狗的人現在怎麼自洽?印證『短線故事是noise、不該太在意』</div>
+    </div>
+  </section>
+
+  <section id="principles">
+    <h2>本月 5 大投資心法</h2>
+
+    <div class="principle">
+      <div class="principle-title">1. 估值的重點是估在別人前面(後面有人接才能出貨)</div>
+      <div class="principle-quote">「估值的重點並不是在估的當下去正一個對錯,而是你估在別人的前面...你買進之後,後面還會有源源不絕的人進來買,然後你可以出貨給他們」</div>
+      <div class="principle-from">來自 EP670(6月中)— SpaceX 估值哲學;成長vs價值界線模糊</div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-title">2. 修正時把壞消息一次丟出,炸完沒破底就是跌完了</div>
+      <div class="principle-quote">「在掉下來的時候,他把所有的壞消息都一次丟出來了...炸一炸,然後之後沒有再繼續破底的話,你就覺得說可能修正就到這個地方」</div>
+      <div class="principle-from">來自 EP670 — 持續推籌碼買進不等季線</div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-title">3. 資訊邊際效益遞減,抓大方向勝過追投片數字(noise)</div>
+      <div class="principle-quote">「某大分析師說他不看投片數字...他說那個叫noise...我只要抓到大方向,我只要知道說哪些廠商可以吃到這些大單,我這樣下就可以」</div>
+      <div class="principle-from">來自 EP670 — 2023-24掌握封裝段數字能賺、現在鈍化;短線消息也是noise</div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-title">4. 訴諸恐懼會吃監管鐵拳(Dario/Altman 後果已現)</div>
+      <div class="principle-quote">「你一直講自己東西很危險很恐怖,你就是會去吃監管鐵拳」Fable 海外受出口管制、Perplexity也被鎖</div>
+      <div class="principle-from">來自 EP670 — 認同 Alex Karp;Edge computing 可能因此受惠</div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-title">5. Rumor 實現後題材股趁機提款(預判你的預判)</div>
+      <div class="principle-quote">「等到一個本來是Rumor的東西,然後開始實現之後,過去跟著題材以上的東西,蠻多就會趁機的提款...預判你的預判,然後就給人家出貨出到爆炸」</div>
+      <div class="principle-from">來自 EP670 — SpaceX 上市後衛星股大逃殺;呼應1月買2-3月賣</div>
+    </div>
+  </section>
+
+  <section id="watchlist">
+    <h2>下一步觀察重點</h2>
+    <div class="watch-item">1. <strong>SpaceX 上市後表現</strong> — 主持人持續點(相挺);衛星鏈(RKLB/ASTS)持續軟=資金趁 Rumor 實現出貨,SpaceX 能否帶動新一波待商榷</div>
+    <div class="watch-item">2. <strong>被動元件漲價兌現(兩次到 terminal)</strong>:券商目標價上修(2454/2330/2327);配貨機制 run 下去驗證真實供需;業內沒大擴產→週期較長</div>
+    <div class="watch-item">3. <strong>台股是否真跌完了</strong>:壞消息一次出完、沒再破底=修正到這;主持人持續推籌碼不等季線</div>
+    <div class="watch-item">4. <strong>Edge computing / 地端裝置</strong>:開放落後閉鎖半年、都拉強後地端夠用;那天不遠了</div>
+    <div class="watch-item">5. <strong>Anthropic Fable 監管後續</strong>:訴諸恐懼吃監管鐵拳,嚴重會影響市場觸及度、某次修正被當故事</div>
+    <div class="watch-item">6. <strong>低基期籌碼乾淨股</strong>:若前沿大模型吃監管,資金可能轉去成長性沒這麼好但籌碼乾淨、相對低基期的 Edge 概念</div>
+    <div class="watch-item">7. <strong>記憶體 / 成長vs價值</strong>:估在別人前面;成長股價值放後面,等發現是價值股已過最甜階段</div>
+    <div class="watch-item">8. <strong>SpaceX 季報</strong>:有趣變化會在節目分享(類比持有特斯拉的相挺心態)</div>
+  </section>
+
+  <section id="market">
+    <h2>市場氣氛總結</h2>
+    <div class="market-summary">
+      <p><strong>位階</strong>:修正後 — 主持人認為台股<strong>某程度跌完了</strong>(壞消息一次出完:摸跌停沒消息、CPI 限縮、川普奪島又不打淡化),炸完沒再破底就是修正到這。持續推籌碼買進、不等季線(這波拉太遠,等完美點位反而錯過)。SpaceX 6/12 上市點火太空題材。</p>
+      <p><strong>主軸</strong>:SpaceX 上市操作(申購+盤中加碼、相挺持有不算估值)+ 估值哲學(估在別人前面、成長vs價值界線模糊)。被動元件漲價超預期(本來算六七次到terminal、照速度兩次就到、料號擴到周邊、業內沒大擴產走得長、日韓配貨驗證供需)。Anthropic Fable 吃監管鐵拳(訴諸恐懼後果現)+ Edge computing 那天不遠了(開放落後閉鎖半年、若前沿吃監管偏好轉 Edge 籌碼乾淨低基期)。</p>
+      <p><strong>風險訊號</strong>:① 衛星/火箭股大逃殺(Rumor 實現後提款,別接最後一棒) ② 訴諸恐懼的大模型吃監管(Dario/Altman) ③ 短線消息都是 noise、別太在意(SDR Labs V 轉打臉打落水狗的) ④ 別追投片數字(鈍化的 noise) ⑤ 別比絕對估值(便宜不一定漲)。</p>
+      <p><strong>機會點</strong>:① 被動元件漲價兌現(兩次到terminal、週期長) ② SpaceX 相挺持有 ③ Edge computing / 地端裝置 ④ 低基期籌碼乾淨股(若大模型吃監管) ⑤ 記憶體(成長vs價值模糊、估在別人前面) ⑥ 台股跌完了的持續買進。</p>
+      <p><strong>主持人狀態</strong>:認為跌完了、持續推籌碼買進不等季線。SpaceX 申購+盤中加碼當相挺太空夢想(類比特斯拉)。被動元件主力持有。投資哲學:估在別人前面、資訊邊際效益遞減(投片數字是noise)、洗手場認錯追回(跌20%也巴上面)、Rumor 實現後題材股提款。財富心態:有餘裕的人很自在(路邊攤到包機)、別當炫耀貶低的暴發戶、注意力是資產。生活:看說明書教訓(瘦瘦針兩次出包)、做好隨時抽身不被影響的準備、孩子不必討好每個人。</p>
+    </div>
+  </section>
+
+</div>
+<a href="#top" class="float-top" title="回頂部">↑</a>
+</body>
+</html>

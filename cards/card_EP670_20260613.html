@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP670 筆記</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif; color: #1f2937; line-height: 1.75; padding: 32px 16px 80px; }
+  .container { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px 30px; margin-bottom: 16px; position: relative; }
+  .card-num { position: absolute; top: 18px; right: 22px; font-size: 11.5px; color: #b0b0b0; font-weight: 500; }
+  .ch { font-size: 12px; color: #888; margin-bottom: 8px; letter-spacing: 1px; }
+  h1 { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 4px; letter-spacing: -0.5px; }
+  .subtitle { color: #888; font-size: 13px; margin-bottom: 20px; }
+  h2 { font-size: 19px; font-weight: 700; color: #111; margin-bottom: 14px; line-height: 1.45; padding-right: 40px; }
+  h3 { font-size: 13.5px; font-weight: 700; color: #6b7280; margin: 18px 0 8px; letter-spacing: 0.5px; }
+  p { margin-bottom: 10px; color: #374151; }
+  .core { font-size: 15px; color: #1f2937; margin: 10px 0 14px; }
+  .mechanism { background: #f7f7f4; padding: 14px 18px; margin: 14px 0; border-radius: 6px; font-size: 14.5px; color: #374151; }
+  .mechanism strong { color: #111; }
+  .stocks { margin: 10px 0; }
+  .stock-group { margin: 8px 0; line-height: 1.9; }
+  .stock-group .gl { display: inline-block; font-weight: 700; color: #6b7280; font-size: 13px; margin-right: 6px; }
+  .ticker { display: inline-block; background: #f4f4f0; border: 1px solid #e5e5e0; border-radius: 5px; padding: 2px 8px; margin: 2px 3px 2px 0; font-size: 13px; color: #1f2937; }
+  .ticker code { color: #888; font-size: 11.5px; margin-left: 4px; }
+  .note { display: block; margin: 5px 0 5px 20px; font-size: 12.5px; color: #888; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; padding: 11px 16px; margin: 12px 0; border-radius: 6px; color: #735c2e; font-size: 13.5px; }
+  .risk::before { content: "⚠️  "; }
+  .action { background: #fff5ec; padding: 13px 18px; margin: 14px 0; border-radius: 6px; color: #9a4f0e; font-weight: 500; font-size: 14.5px; }
+  .action::before { content: "📌 "; }
+  .own { color: #c2410c; font-weight: 700; }
+  .hl { color: #c2410c; font-weight: 700; }
+  blockquote { padding: 8px 14px; margin: 10px 0; color: #6b7280; font-style: italic; font-size: 13.5px; background: #f7f7f4; border-radius: 6px; }
+  .pills { display: flex; flex-direction: column; gap: 7px; margin-top: 10px; }
+  .pill { background: #f7f7f4; color: #1f2937; padding: 10px 15px; border-radius: 7px; text-decoration: none; font-size: 13.5px; line-height: 1.5; }
+  .pill:hover { background: #efeee9; }
+  .pill .pn { display: inline-block; width: 22px; color: #999; font-size: 12px; font-weight: 600; }
+  .companies { display: grid; grid-template-columns: 56px 1fr; gap: 6px 10px; margin: 12px 0 4px; font-size: 13px; }
+  .companies .lb { font-weight: 700; color: #888; padding-top: 3px; font-size: 12.5px; }
+  .three-col { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 14px 0 4px; }
+  .three-col .col { background: #f7f7f4; border-radius: 7px; padding: 12px 14px; }
+  .three-col h4 { font-size: 13px; font-weight: 700; color: #4b5563; margin-bottom: 7px; }
+  .three-col ul { padding-left: 16px; font-size: 12.5px; }
+  .three-col li { margin: 4px 0; color: #374151; line-height: 1.55; }
+  .float-top { position: fixed; bottom: 22px; right: 22px; background: #1f2937; color: white; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); }
+  @media (max-width: 600px) {
+    .three-col { grid-template-columns: 1fr; }
+    .companies { grid-template-columns: 1fr; }
+    .companies .lb { padding-top: 0; }
+    body { padding: 16px 8px 80px; }
+    .card { padding: 20px 22px; }
+    h1 { font-size: 21px; }
+    h2 { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="container">
+
+  <div class="card" id="card-1">
+    <span class="card-num">1/10</span>
+    <h1>股癌 EP670 筆記</h1>
+    <p class="subtitle">2026/06/13 · SpaceX 上市操作 × 估值估在別人前面 × 被動元件漲價超預期</p>
+
+    <h3>提及公司</h3>
+    <div class="companies">
+      <div class="lb">美股</div>
+      <div>
+        <span class="ticker">SpaceX <code>SPCX</code></span>
+        <span class="ticker">特斯拉 <code>TSLA</code></span>
+        <span class="ticker">Rocket Lab <code>RKLB</code></span>
+        <span class="ticker">ASTS</span>
+        <span class="ticker">Anthropic(Fable)</span>
+      </div>
+      <div class="lb">台股</div>
+      <div>
+        <span class="ticker">國巨 <code>2327</code></span>
+        <span class="ticker">聯發科 <code>2454</code></span>
+        <span class="ticker">台積電 <code>2330</code></span>
+        <span class="ticker">春田</span>
+      </div>
+      <div class="lb">主題</div>
+      <div>
+        <span class="ticker">被動元件漲價</span>
+        <span class="ticker">衛星/火箭股</span>
+        <span class="ticker">Edge computing</span>
+        <span class="ticker">記憶體</span>
+      </div>
+    </div>
+
+    <h3>三句話總結</h3>
+    <div class="pills">
+      <a href="#card-2" class="pill"><span class="pn">1.</span>SpaceX 上市:申購+盤中 160 幾加碼,當支持太空夢想(類比持有特斯拉,相挺+不算估值)。估值重點是「估在別人前面」,不是比絕對數字</a>
+      <a href="#card-4" class="pill"><span class="pn">2.</span>被動元件漲價超預期 — 本來算複製 2018 要漲六到七次到 terminal,照現在速度只要兩次就到,還有上修空間;業內沒大擴產→走得比過往循環長</a>
+      <a href="#card-3" class="pill"><span class="pn">3.</span>台股某程度跌完了(壞消息一次丟出、沒再破底),持續推籌碼買進不等季線;Edge computing 那天不遠了</a>
+    </div>
+
+    <h3>章節導覽</h3>
+    <div class="pills">
+      <a href="#card-2" class="pill"><span class="pn">2.</span>SpaceX 上市 + 估值估在別人前面</a>
+      <a href="#card-3" class="pill"><span class="pn">3.</span>台股跌完了 + 不等季線持續買</a>
+      <a href="#card-4" class="pill"><span class="pn">4.</span>被動元件漲價超預期 + 配貨驗證供需</a>
+      <a href="#card-5" class="pill"><span class="pn">5.</span>衛星股大逃殺(Rumor 實現後提款)</a>
+      <a href="#card-6" class="pill"><span class="pn">6.</span>Anthropic Fable 吃監管 + Edge computing</a>
+      <a href="#card-7" class="pill"><span class="pn">7.</span>QA — 資訊是 noise + 洗手場追回</a>
+      <a href="#card-8" class="pill"><span class="pn">8.</span>QA — 有餘裕很自在 + 別當暴發戶</a>
+      <a href="#card-9" class="pill"><span class="pn">9.</span>QA — 隨時抽身 + 注意力是資產</a>
+      <a href="#card-10" class="pill"><span class="pn">10.</span>持倉揭露 + 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <span class="card-num">2/10</span>
+    <div class="ch">SpaceX + 估值哲學(本集主軸)</div>
+    <h2>SpaceX 上市操作 + 估值的重點是「估在別人前面」</h2>
+    <p class="core"><span class="hl">主持人有去申購(深購價)+ 盤中 160 幾也加碼,接下來幾天會持續點一點 — 當作支持太空夢想。</span></p>
+
+    <div class="mechanism">
+      <strong>類比持有特斯拉:</strong>相挺它 + 題材很酷的背景 + 目標也是賺錢,但<span class="hl">不針對估值做太多討論</span>。<br>
+      <strong>拆解 SpaceX:</strong>衛星(賺錢引擎)+ 火箭(夢想較遠)+ AI(本夢比,若能在低軌衛星放 Data Center 或重新拋算力出租)。除衛星外都是本夢比,這種公司不用認真算估值。
+    </div>
+
+    <h3>估值是藝術:估在別人前面</h3>
+    <div class="mechanism">
+      <span class="hl">估值的重點不是估的當下正一個對錯,是估在別人的前面</span> — 你買進後,後面還有源源不絕的人進來買、你可以出貨給他們、賣在更高的地方,這才是好估值。<br>
+      不要比絕對數字 — 市場一堆超便宜、高殖利率但連漲都不會漲的東西。
+    </div>
+
+    <div class="mechanism">
+      <strong>成長股 vs 價值股界線越來越模糊:</strong>成長股的價值常放在後面,<span class="hl">等你發現它是價值股時,已過完最甜的階段</span>。記憶體七張點時你覺得貴、現在看很便宜;春田現在看貴,但若 EPS 狂拉漲價成功,回頭看 PE 可能 20 倍以下。
+    </div>
+
+    <div class="action">會信 SpaceX 的就會信、不信的就不信(買紡織股 vs 買太空股是兩種人),沒必要也沒辦法說服對方。Portfolio 裡有些是便宜的、有些是賣夢題材對的,看市場表現用加減碼調整。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="ch">台股盤面</div>
+    <span class="card-num">3/10</span>
+    <h2>某程度跌完了 — 壞消息一次丟出,持續買不等季線</h2>
+    <p class="core"><span class="hl">主持人認為行情某程度上「跌完了」(除非後面有新事件)。</span></p>
+
+    <div class="mechanism">
+      <strong>判斷依據(壞消息一次出完):</strong>① 大跌摸跌停那天市場其實沒什麼消息 ② CPI 公布影響慢慢限縮 ③ 川普威脅奪島後又說不打了、影響淡化。<br>
+      → <span class="hl">這波掉下來時把所有壞消息一次丟出來,炸一炸之後沒再破底,就是修正到這。</span>
+    </div>
+
+    <div class="mechanism">
+      <strong>操作:</strong>持續把籌碼推進去、繼續買進,<span class="hl">不等季線</span>。市場有人看會回季線,真回去這部分會被套,但這波拉太遠、整體沒差 — 不想等季線,現在就持續買進(市場還有很多故事題材可看)。
+    </div>
+
+    <div class="action">把回檔當壞消息一次出清的修正,沒再破底就是跌完了。持續分批買進、不糾結季線那個價位 — 這波拉太遠,等完美點位反而錯過。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="ch">被動元件</div>
+    <span class="card-num">4/10</span>
+    <h2>漲價超預期 — 只要兩次就到 terminal</h2>
+    <p class="core">本週新消息:大型 ODM/EMS 漲價成功。花旗、JP、GS 都寫報告,下週 A 加的也要進來寫(用目標價數字當關鍵字:聯發科 2454、台積電 2330、國巨 2327)。</p>
+
+    <div class="mechanism">
+      <strong>漲價超出主持人預期:</strong>本來算複製 2018 行情(營收翻倍 + 毛利率翻倍),要<span class="hl">漲六到七次才到 terminal;照現在速度,只要兩次漲價就直接達到 terminal 數字</span> — 還有上修空間。<br>
+      漲的料號不只最缺的 AI 核心料,連周邊、中小尺寸小東西也開始漲;台系也開始當漲價領頭羊。
+    </div>
+
+    <div class="mechanism">
+      <strong>走得比過往循環長:</strong>業內大廠目前<span class="hl">還沒太多大擴產計畫</span> → 有機會走得比過往週期長。對比過去大潮:辦公室競標喊價、殺雞取卵導致稼動率掉很低;這波大家相對節制,暴利漲價(中位數到幾十%)是談判確認需求後才發生。
+    </div>
+
+    <div class="mechanism">
+      <strong>配貨驗證真實供需:</strong>日系跟韓系一樣開始配貨(產業圈朋友說一兩個月前就在做,投資圈消息慢)。<span class="hl">全面配貨機制 run 下去會驗證真實供需</span> — 釐清終端客戶(不能出中國、防 overbooking)。目前看價格還在上漲過程中。
+    </div>
+
+    <div class="action">被動元件漲價速度超預期(兩次到 terminal),料號從 AI 核心擴到周邊。業內沒大擴產→週期較長。配貨機制 run 下去會驗證需求真假,持續追蹤漲價兌現。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="ch">衛星股</div>
+    <span class="card-num">5/10</span>
+    <h2>衛星/火箭股大逃殺 — Rumor 實現後趁機提款</h2>
+    <p class="core">盤中有趣現象:<span class="hl">過去跟衛星火箭相關的股票(RKLB/ASTS/Fly)出現大逃殺。</span></p>
+
+    <div class="mechanism">
+      <strong>機制(Rumor 實現後提款):</strong>等一個本來是 Rumor 的東西開始實現後,過去跟著題材上去的東西,蠻多會<span class="hl">趁機提款</span>。<br>
+      呼應 1 月節目:主持人那時買了蠻多 Starlink 相關股(供應鏈看到變化),2-3 月左右就賣了(理論上做到現在再出更好,但台股今年太熱、選項太多所以提早動)。
+    </div>
+
+    <div class="mechanism">
+      <strong>判讀:</strong>SpaceX 上市後這些衛星通訊股的表現,一天不準,但<span class="hl">持續軟掉就是有蠻多資金趁這機會出貨</span>(人家從前面蹲點蠻久了)。SpaceX 能否帶動新一波衛星火箭類股有待商榷 — 趁大家看報紙要找衛星股時,<strong>預判你的預判,出貨出到爆炸</strong>。
+    </div>
+
+    <div class="action">Rumor 實現(SpaceX 上市)反而是題材股出貨點。衛星股這波從 1 月就一路反應,別在大家看報紙才進場時接最後一棒。持續軟=資金出貨,要再觀察幾天。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="ch">AI 產業</div>
+    <span class="card-num">6/10</span>
+    <h2>Anthropic Fable 吃監管 + Edge computing 那天不遠了</h2>
+
+    <h3>Fable 受美國出口管制</h3>
+    <div class="mechanism">
+      Anthropic Fable 模型好用、全面、速度快但 token 燒很快;但<span class="hl">海外受美國出口管制</span>,本來在 Perplexity 還能間接用,錄節目前測試發現也被鎖了。<br>
+      <span class="hl">「你一直講自己東西很危險很恐怖,你就是會去吃監管鐵拳。」</span>認同 Palantir 的 Alex Karp 講的 — OpenAI 的 Sam Altman 跟 Anthropic 的 Dario 不知道自己有多討人厭(訴諸恐懼)。後果已現(海外被禁),嚴重會影響市場觸及度、某次修正會被當故事。
+    </div>
+
+    <h3>Edge computing 那天不遠了</h3>
+    <div class="mechanism">
+      前沿模型拉很強 + 開放模型落後閉鎖<span class="hl">約半年</span>;等閉鎖摸到新結界、開放也拉到相對強,地端算力就能完成多數人一兩年前 AI 能辦到的事。<br>
+      <strong>一年回推:</strong>2028 回看 2027 模型,對絕大多數人非常夠用、可完全 run 在地端 → <span class="hl">地端裝置迎來爆發</span>。
+    </div>
+
+    <div class="mechanism">
+      <strong>監管可能催生 Edge 趨勢:</strong>若前沿模型開始吃監管鐵拳,市場偏好可能從追大模型/大 cluster <span class="hl">轉去 Edge</span> — 成長性沒這麼好但也不錯、同時籌碼乾淨、相對低基期的東西。現在摳這個可能太早,但已聞到味道。
+    </div>
+
+    <div class="action">Dario 訴諸恐懼吃監管鐵拳,後果已現。Edge computing 的那天不遠(開放落後閉鎖半年、都拉強後地端夠用)。留意若大模型吃監管,資金可能轉去籌碼乾淨、低基期的 Edge 概念。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="ch">Q&amp;A 投資方法</div>
+    <span class="card-num">7/10</span>
+    <h2>資訊邊際效益遞減(投片數字是 noise)+ 洗手場追回</h2>
+
+    <h3>小菜雞收集資訊 + 投片數字是 noise</h3>
+    <div class="mechanism">
+      管道:<span class="hl">多開戶拿券商報告 → 交易量大開法人戶拿 call memo → 同好交換情報</span>(你 call ABC 我 call DEF)。沒有一步登天,靠累積。<br>
+      <strong>但邊際效益會遞減</strong>,甚至受害於資訊太多變雜訊。某大分析師說他<span class="hl">不看投片數字 — 那叫 noise</span>(一下上修一下下修意義在哪)。2023-24 掌握封裝段數字能賺,現在這招鈍化了;<strong>抓大方向、知道哪些廠商吃大單就好,甚至看新聞就夠</strong>。資訊不是絕對必要、考驗眼光。
+    </div>
+
+    <h3>洗手場現在會認錯追回</h3>
+    <div class="mechanism">
+      洗手場一定有且很常見:達到條件停利/停損出去後立刻開走 = 洗手場。<br>
+      <span class="hl">以前被動接手,現在會把它追回來 — 追回的部位就洗不掉了,就算跌掉 20% 也巴在上面,甚至追在漲停價也沒關係。</span>蠻敢認錯追回。
+    </div>
+
+    <div class="action">資訊靠累積但邊際效益遞減,抓大方向勝過追投片數字(noise)。被洗出場後若看好就認錯追回、追回就抱住(跌 20% 也不放)。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="ch">Q&amp;A 財富心態</div>
+    <span class="card-num">8/10</span>
+    <h2>有餘裕的人很自在 + 別當炫耀貶低的暴發戶</h2>
+
+    <h3>商務艙:有餘裕很自在</h3>
+    <div class="mechanism">
+      第一次搭商務艙很新鮮想把飲料都點一次,現在上去直接睡覺、有些餐不吃;孩子短程還是搭經濟艙。<br>
+      <span class="hl">資產有餘裕的人很自在:可吃路邊攤也可吃貴的、可商務艙也可包機也可經濟艙,看當下感受。</span>一味追求「沒什麼我不做、不吃、不喝」的,<strong>是才剛起來的暴發戶,自卑就會變這樣</strong>。
+    </div>
+
+    <h3>價值觀崩壞?別當討人厭的人</h3>
+    <div class="mechanism">
+      現在但凡投報率不高的生意都說不如放股票、萬物飛漲連價值觀也飛漲。主持人:現在還是賺錢時間點(搞不好持續到 2027/2028)先尻錢,<span class="hl">空頭再來竹林七賢清談人情道德</span>。<br>
+      創投界最常被問「為什麼投你不投台積電」是幹話 —<span class="hl">你要不就去投台積電,來做創投就是要 go big 賭大的</span>。沒錢的最愛講「什麼我不投/不吃/不搭」顯得屌;真有錢的會分散、做創投是理念或好玩。
+    </div>
+
+    <div class="action">有餘裕的人很自在(路邊攤到包機都行);別當炫耀「什麼我不做」或貶低人的暴發戶(房地產好時也一堆無腦買房)。別 flashy(台灣相對安全所以很多人愛 po 甚至造假),專注自身價值跟過去比。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="ch">Q&amp;A 心態 + 教養</div>
+    <span class="card-num">9/10</span>
+    <h2>隨時抽身不被影響 + 注意力是重要資產</h2>
+
+    <h3>停播感想:做好隨時抽身的準備</h3>
+    <div class="mechanism">
+      不是要塑造跟大家分開的氛圍;4-5 年如一日態度都一樣。維持這心態的好處是不太怕失去 —<span class="hl">不是做好失去一切的準備,是做好隨時可以抽身、不被影響的準備</span>。<br>
+      節目/小投資哪天不做都知道找誰接手;用<strong>中性、過客的態度</strong>看它(它會來也可能會走),不會死抱著一定要維持它。一定會有說再見的一天,但不是立刻。
+    </div>
+
+    <h3>注意力是重要資產(玻璃心補充)</h3>
+    <div class="mechanism">
+      <span class="hl">把注意力當成重要資產 — Meta/Google 都想買、很值錢,別浪費在不值得的人身上。</span>YT/FB 看到白痴直接封鎖、別吵架(那是揮霍注意力);馬特鴻鋒不會管誰按一星(山太高、太冷、沒酒吧)。mute 掉負面的人(line 靜音、不該見的朋友家人也減少接觸)。
+    </div>
+
+    <h3>教養:孩子不必討好每個人</h3>
+    <div class="mechanism">
+      老婆罵醒他:「<span class="hl">為什麼兒子要去討好不認識的人?那是你朋友不是他朋友。</span>」孩子做到有禮貌(打招呼、正眼看人)就好,不必態度多好、不必抱抱。讓身邊每個人都好受,你就是最難受的那個 —<strong>能量是守恆的</strong>。
+    </div>
+
+    <div class="action">對節目/投資都用「隨時抽身不被影響」的中性態度。注意力是資產,mute 負面的人別浪費注意力。教養:孩子有禮貌就好,不必討好每個人。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="ch">行動清單</div>
+    <span class="card-num">10/10</span>
+    <h2>持倉揭露 + 下一步行動</h2>
+
+    <h3>本集主持人持倉動作</h3>
+    <p style="font-size: 14.5px;">
+      <span class="own">⭐ SpaceX</span>:申購 + 盤中 160 幾加碼,接下來持續點(相挺太空夢想)<br>
+      <span class="own">⭐ 特斯拉</span>:相挺持有(SpaceX 心態類比)<br>
+      <span class="own">⭐ 被動元件(主力)</span>:持續推籌碼買進、不等季線<br>
+      <span class="own">⭐ 春田</span>:持有但自評貴(看漲價兌現)<br>
+      <span>Starlink 鏈</span>:1 月買、2-3 月已賣
+    </p>
+
+    <h3>下一步行動</h3>
+    <div class="three-col">
+      <div class="col">
+        <h4>🎯 觀察名單</h4>
+        <ul>
+          <li>SpaceX(持續點,相挺)</li>
+          <li>被動元件漲價兌現(兩次到 terminal)</li>
+          <li>券商目標價上修(2454/2330/2327)</li>
+          <li>配貨機制驗證真實供需</li>
+          <li>Edge computing / 地端裝置</li>
+          <li>低基期籌碼乾淨股(若大模型吃監管)</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🟢 進場訊號</h4>
+        <ul>
+          <li>台股沒再破底(壞消息出完=跌完了)</li>
+          <li>持續推籌碼買進,不等季線</li>
+          <li>被動元件漲價速度維持</li>
+          <li>洗手場被洗出去後認錯追回</li>
+          <li>估在別人前面(後面有人接)</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🚫 停損 / 不該做</h4>
+        <ul>
+          <li>衛星股別在 Rumor 實現後接最後一棒</li>
+          <li>別追投片數字(那是 noise)</li>
+          <li>別比絕對估值數字(便宜不一定漲)</li>
+          <li>別當炫耀/貶低人的暴發戶</li>
+          <li>短線消息只是 noise,別太在意</li>
+          <li>別 flashy(惹麻煩)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<a href="#top" class="float-top" title="回頂部">↑</a>
+</body>
+</html>
