@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP671 筆記</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif; color: #1f2937; line-height: 1.75; padding: 32px 16px 80px; }
+  .container { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px 30px; margin-bottom: 16px; position: relative; }
+  .card-num { position: absolute; top: 18px; right: 22px; font-size: 11.5px; color: #b0b0b0; font-weight: 500; }
+  .ch { font-size: 12px; color: #888; margin-bottom: 8px; letter-spacing: 1px; }
+  h1 { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 4px; letter-spacing: -0.5px; }
+  .subtitle { color: #888; font-size: 13px; margin-bottom: 20px; }
+  h2 { font-size: 19px; font-weight: 700; color: #111; margin-bottom: 14px; line-height: 1.45; padding-right: 40px; }
+  h3 { font-size: 13.5px; font-weight: 700; color: #6b7280; margin: 18px 0 8px; letter-spacing: 0.5px; }
+  p { margin-bottom: 10px; color: #374151; }
+  .core { font-size: 15px; color: #1f2937; margin: 10px 0 14px; }
+  .mechanism { background: #f7f7f4; padding: 14px 18px; margin: 14px 0; border-radius: 6px; font-size: 14.5px; color: #374151; }
+  .mechanism strong { color: #111; }
+  .stocks { margin: 10px 0; }
+  .stock-group { margin: 8px 0; line-height: 1.9; }
+  .stock-group .gl { display: inline-block; font-weight: 700; color: #6b7280; font-size: 13px; margin-right: 6px; }
+  .ticker { display: inline-block; background: #f4f4f0; border: 1px solid #e5e5e0; border-radius: 5px; padding: 2px 8px; margin: 2px 3px 2px 0; font-size: 13px; color: #1f2937; }
+  .ticker code { color: #888; font-size: 11.5px; margin-left: 4px; }
+  .note { display: block; margin: 5px 0 5px 20px; font-size: 12.5px; color: #888; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; padding: 11px 16px; margin: 12px 0; border-radius: 6px; color: #735c2e; font-size: 13.5px; }
+  .risk::before { content: "⚠️  "; }
+  .action { background: #fff5ec; padding: 13px 18px; margin: 14px 0; border-radius: 6px; color: #9a4f0e; font-weight: 500; font-size: 14.5px; }
+  .action::before { content: "📌 "; }
+  .own { color: #c2410c; font-weight: 700; }
+  .hl { color: #c2410c; font-weight: 700; }
+  blockquote { padding: 8px 14px; margin: 10px 0; color: #6b7280; font-style: italic; font-size: 13.5px; background: #f7f7f4; border-radius: 6px; }
+  .pills { display: flex; flex-direction: column; gap: 7px; margin-top: 10px; }
+  .pill { background: #f7f7f4; color: #1f2937; padding: 10px 15px; border-radius: 7px; text-decoration: none; font-size: 13.5px; line-height: 1.5; }
+  .pill:hover { background: #efeee9; }
+  .pill .pn { display: inline-block; width: 22px; color: #999; font-size: 12px; font-weight: 600; }
+  .companies { display: grid; grid-template-columns: 56px 1fr; gap: 6px 10px; margin: 12px 0 4px; font-size: 13px; }
+  .companies .lb { font-weight: 700; color: #888; padding-top: 3px; font-size: 12.5px; }
+  .three-col { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 14px 0 4px; }
+  .three-col .col { background: #f7f7f4; border-radius: 7px; padding: 12px 14px; }
+  .three-col h4 { font-size: 13px; font-weight: 700; color: #4b5563; margin-bottom: 7px; }
+  .three-col ul { padding-left: 16px; font-size: 12.5px; }
+  .three-col li { margin: 4px 0; color: #374151; line-height: 1.55; }
+  .float-top { position: fixed; bottom: 22px; right: 22px; background: #1f2937; color: white; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); }
+  @media (max-width: 600px) {
+    .three-col { grid-template-columns: 1fr; }
+    .companies { grid-template-columns: 1fr; }
+    .companies .lb { padding-top: 0; }
+    body { padding: 16px 8px 80px; }
+    .card { padding: 20px 22px; }
+    h1 { font-size: 21px; }
+    h2 { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="container">
+
+  <div class="card" id="card-1">
+    <span class="card-num">1/10</span>
+    <h1>股癌 EP671 筆記</h1>
+    <p class="subtitle">2026/06/14 · 漲價題材擴散 × 離散元件/功率半導體新主軸 × 台積電娘家論</p>
+
+    <h3>提及公司</h3>
+    <div class="companies">
+      <div class="lb">美股</div>
+      <div>
+        <span class="ticker">英飛凌 <code>IFX</code></span>
+        <span class="ticker">安森美 <code>ON</code></span>
+        <span class="ticker">德州儀器 <code>TXN</code></span>
+        <span class="ticker">瑞薩</span>
+        <span class="ticker">SpaceX <code>SPCX</code></span>
+        <span class="ticker">Nexperia(安世)</span>
+      </div>
+      <div class="lb">台股</div>
+      <div>
+        <span class="ticker">台積電 <code>2330</code></span>
+        <span class="ticker">國巨 <code>2327</code></span>
+        <span class="ticker">富邦金 <code>2881</code></span>
+        <span class="ticker">順德</span>
+      </div>
+      <div class="lb">主題</div>
+      <div>
+        <span class="ticker">離散元件/功率半導體</span>
+        <span class="ticker">DRMOS</span>
+        <span class="ticker">800VDC / SiC</span>
+        <span class="ticker">被動元件</span>
+        <span class="ticker">載板</span>
+      </div>
+    </div>
+
+    <h3>三句話總結</h3>
+    <div class="pills">
+      <a href="#card-2" class="pill"><span class="pn">1.</span>被動元件從半信半疑到全面相信 = 籌碼面大於基本面;要買新東西不去超級熱鬧的地方參一咖,往場外找下一個窟</a>
+      <a href="#card-3" class="pill"><span class="pn">2.</span>新主軸:離散元件/功率半導體(Nexperia 缺口+DRMOS)— 供應商多不斷貨但新供需結構;要啟動先看美國 IDM 動起來</a>
+      <a href="#card-5" class="pill"><span class="pn">3.</span>台積電像娘家媽媽,外面世界崩壞錢才灌回(萬箭歸宗);投信法規打開比重將拉高,等垃圾盤訊號</a>
+    </div>
+
+    <h3>章節導覽</h3>
+    <div class="pills">
+      <a href="#card-2" class="pill"><span class="pn">2.</span>漲價題材擴散 — 籌碼面大於基本面</a>
+      <a href="#card-3" class="pill"><span class="pn">3.</span>離散元件/功率半導體新主軸</a>
+      <a href="#card-4" class="pill"><span class="pn">4.</span>Semi-Analysis 5% — 幫洗籌碼</a>
+      <a href="#card-5" class="pill"><span class="pn">5.</span>台積電娘家論 + Tier 資金輪動</a>
+      <a href="#card-6" class="pill"><span class="pn">6.</span>SpaceX 全宇宙 TAM + 想像力罩門</a>
+      <a href="#card-7" class="pill"><span class="pn">7.</span>闢謠冒名 + 林口在地生意讓利</a>
+      <a href="#card-8" class="pill"><span class="pn">8.</span>QA — 成年孩子信用消費</a>
+      <a href="#card-9" class="pill"><span class="pn">9.</span>QA — 翻身失敗 + 人生是運氣</a>
+      <a href="#card-10" class="pill"><span class="pn">10.</span>持倉揭露 + 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <span class="card-num">2/10</span>
+    <div class="ch">市場主軸</div>
+    <h2>漲價題材擴散 — 籌碼面大於基本面,找下一個窟</h2>
+    <p class="core"><span class="hl">被動元件從半信半疑到全面相信,社群河道全在討論這東西。</span></p>
+
+    <div class="mechanism">
+      <strong>到這時間點:</strong>會依賴的<span class="hl">籌碼面成分稍微大於基本面</span> — 雖然基本面後面還有肉,但參與的人變多、籌碼會亂(中小開始出現大到貨,但完貨幾天又站回)。不是說它結束,但要買新東西<strong>不會再去那種超級熱鬧的地方參一咖</strong>。
+    </div>
+
+    <div class="mechanism">
+      <strong>主持人狀態:</strong>過去兩個月「沒事幹」(主流族群埋好+全關處置+錢卡住=大量去運動)。最近開始出處置,與其再被關起來,不如往場外找別的。<span class="hl">出來看才發現載板、離散元件、PMIC/Power 表現都很好,市場百花齊放</span>(大家各自關在各自領域)。
+    </div>
+
+    <div class="mechanism">
+      <strong>同一市場不同人感受天差地別:</strong>被動元件上週五早就新高=對你沒跌過;滿手是光的覺得跌成狗。<span class="hl">持股高度集中單一族群會大好大壞、對盤面判斷失據</span>(看手上不好就覺得整盤不好,但整盤其實很多故事)。
+    </div>
+
+    <div class="action">漲價題材全面相信時,籌碼面成分大於基本面 — 別在最熱鬧處參一咖。往場外找下一個窟(離散元件/載板/PMIC)。別讓持股集中扭曲你對整盤的判斷。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="ch">新主軸</div>
+    <span class="card-num">3/10</span>
+    <h2>離散元件/功率半導體 — Nexperia 缺口 + DRMOS</h2>
+    <p class="core">起始點像被動元件(最早只是成本轉嫁漲價),但有大事件種下原因。</p>
+
+    <div class="mechanism">
+      <strong>缺口怎麼來:</strong>去年底 <span class="hl">Nexperia(安世半導體)被制裁管控,訂單被丟出來</span>(主持人當時在日本有感、有去布局但太早沒賺到);加上中國半導體遇歐盟制裁(不希望用中國料)。當時車用/消費不好沒拉貨,所以沒人在意=失敗的事件交易。但餘味仍在,<span class="hl">現在很多廠商要做 non-China 布局,美系/台系/歐系受惠醞釀放大</span>。
+    </div>
+
+    <div class="mechanism">
+      <strong>跟前面缺貨漲價不同:</strong>Power discrete 供應商多、<span class="hl">不會 bottleneck 斷貨</span>(不像高階被動/鋁電容/牛角電容有斷供危險),但會產生新供需結構。<br>
+      <strong>熱門話題 DRMOS(Driver MOS):</strong>用在板端 GPU/ASIC,一次用十幾二十顆、後面更多;板上空間珍貴,DRMOS <span class="hl">毛利 40-50% 以上、高端</span>。大廠往 DRMOS 跟高壓 section(800VDC 用 SiC MOSFET+高壓 Super Junction)擠,自然沒空做其他環節 → 台廠有機會補(第一次變惡工)。
+    </div>
+
+    <div class="mechanism">
+      <strong>缺貨驗證新廠商:</strong>鋁電容也是 Sancon/Chemicon/Nichicon 拿不到就驗證台系(大型 EMS 已在採用);Nexperia 同理 — 以前習慣用、料不貴又穩,出問題就驗證新廠商 = for others 的機會。
+    </div>
+
+    <div class="action">離散元件/功率半導體是新主軸:non-China 布局受惠、不斷貨但新供需結構、DRMOS 高毛利。要啟動先看美國 IDM(英飛凌/安森美/德儀/瑞薩)動起來,它們過去兩個月已拉一波、現在橫盤。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="ch">事件解讀</div>
+    <span class="card-num">4/10</span>
+    <h2>Semi-Analysis 5% penetration — 某程度幫洗籌碼</h2>
+    <p class="core">Semi-Analysis 的 Dylan Patel 在 X 回應:<span class="hl">800VDC 明年只有 5% penetration rate(滲透率)。</span></p>
+
+    <div class="mechanism">
+      <strong>主持人:5% 很多!</strong>傳給產業朋友,對方覺得 too early/市場預期太高(確實有股票把數字喊超高)。但 ——<span class="hl">「我們連 SpaceX(火箭不知何時賺錢)都買了,你說明年就有 5%,這是很真實的題材。」</span>5% 就像破冰船,直接車進去。
+    </div>
+
+    <div class="mechanism">
+      <strong>判讀(幫洗籌碼):</strong>前面攻略半導體外資持股減超多,剛好搭配 Semi-Analysis 講 800V/光通遞延。<span class="hl">這報告某程度幫大家洗籌碼,把信仰不堅的丟下車</span> — 丟完之後,說不定美國 IDM 全部再動起來。
+    </div>
+
+    <div class="mechanism">
+      <strong>增量市場:</strong>800V/400V 不管哪種,功率元件數量、PSU 裡功率元件密度都大幅上升 = <span class="hl">增量市場+價增可能</span>(成本轉嫁或供需結構轉變);過去大廠做的,現在台系有機會補。
+    </div>
+
+    <div class="action">5% penetration 對投資是很真實的題材(連 SpaceX 都買了)。空頭報告某程度幫洗籌碼,把信仰不堅的丟下車 — 呼應 noise 論。要啟動先看美國 IDM 重新動起來。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="ch">資金輪動</div>
+    <span class="card-num">5/10</span>
+    <h2>台積電娘家論 + Tier 邏輯(老大休息才看老三)</h2>
+
+    <h3>台積電像娘家媽媽</h3>
+    <div class="mechanism">
+      投信法規已打開、內規改好,後面配合監管會<span class="hl">把台積電比重拉高</span> — 但要搭配市場現象(垃圾盤:台積電特別強、其他轉弱,資金才會往這灌)。<br>
+      台積電像娘家媽媽 ——<span class="hl">平常不會想到,在外面吃辣受傷後才回去找無條件接受你的媽媽</span>。要看外面世界稍微崩壞、錢才會灌進去(昨天主流族群修正時台積電就拉尾盤)。資金會萬箭歸宗回台積電,只是比想像慢。
+    </div>
+
+    <h3>金融股接棒(台灣錢淹腳目)</h3>
+    <div class="mechanism">
+      <span class="hl">富邦金噴近 50%</span> — 連退休老人/學校老師最愛的金融股都參與到了。中小、金融一棒接一棒,沒料到能這樣接棒。
+    </div>
+
+    <h3>Tier 邏輯</h3>
+    <div class="mechanism">
+      被動/記憶體是 <span class="hl">Tier1 老大老二</span>(有斷貨所以最噴);234 受惠程度低一點。<strong>老大老二好時不會看老三老四老五,但老大老二休息時大家才會去看</strong>。前面 Tier 開始軟屌時很多東西都起來(一驚若萬物生,因為錢卡在裡面);被動元件開始橫盤休息,234 Tier 就會跟著上去,大家都休息時台積電就上去。
+    </div>
+
+    <div class="action">台積電比重將拉高但等垃圾盤訊號(外面崩壞錢才回);資金萬箭歸宗比想像慢。Tier 邏輯:盯前面 Tier(記憶體/被動)何時休息,234 中小才接棒。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="ch">估值視野</div>
+    <span class="card-num">6/10</span>
+    <h2>SpaceX 全宇宙 TAM + 想像力是罩門</h2>
+
+    <h3>別被視野的結界影響</h3>
+    <div class="mechanism">
+      馬斯克轉發法國人文章 —<span class="hl">用地球市值看 SpaceX 很貴,用全宇宙角度看 TAM 超高</span>(掌握的不只地球、是宇宙/太空資源)。SpaceX 一天噴一兩成 = 馬斯克花一兩天賺贏巴菲特一輩子。<br>
+      <span class="hl">「別被你的世界、視野的結界影響 — 世界上的錢可能超出你的想像。」</span>覺得某東西到價、炒過頭時,很多事件會告訴你還早。
+    </div>
+
+    <h3>想像力不足是罩門</h3>
+    <div class="mechanism">
+      呼應自己<span class="hl">記憶體賣太早</span>:台股一直盯著,看到廉價回檔就砍光,沒想到後面這麼大段(追回一部分但沒吃完);美光因美股不愛一直動而續抱。<strong>想像力不足,是要改善的罩門。</strong>
+    </div>
+
+    <div class="action">別被視野結界限制估值(SpaceX 全宇宙 TAM)。想像力不足會讓你賣太早 — 覺得到價/炒過頭時,提醒自己可能還早。台股部位太常盯反而砍太早,美股不愛動反而抱得住。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="ch">闢謠 + 在地生意</div>
+    <span class="card-num">7/10</span>
+    <h2>闢謠冒名推標的 + 林口生意讓利模式</h2>
+
+    <h3>闢謠:冒名推標的</h3>
+    <div class="mechanism">
+      有人在小群組講「我認識孟恭、他跟我推標的」。主持人駁斥:<span class="hl">我們是不同世界的人,以現在規模我點一點他就漲停了,根本不需要找一堆廢物一起推。</span>真做猥瑣事蓋不住(身邊聽眾很多是營業員/大戶)。<br>
+      <strong>非常講究:</strong>買市值百億左右的中小型<span class="hl">絕不在節目講</span>(會直接影響市場);但講台積電/鴻海/廣達/美股無所謂(那是肯定)。<span class="hl">「你兩根大紅K漲停戶自己就來相見,根本不需要拱人上車。」</span>
+    </div>
+
+    <h3>從講的話看人的狀態</h3>
+    <div class="mechanism">
+      說川普/馬斯克都還為了錢 = 你就是沒錢。<span class="hl">你是錘子就看什麼都是釘子</span>(孟哥語);到某位階,錢不一定比名聲/羽毛重要。
+    </div>
+
+    <h3>林口在地生意:讓利模式</h3>
+    <div class="mechanism">
+      想在林口找地引進複合式小吃攤(他出裝潢錢、確定東西好吃就行、風險他扛)。投資模式:<span class="hl">投生意常出全資但只拿 20-30% 股份(讓利給創辦人),像無息借款、倒了不用還</span>(因為是股權)。純資本方出錢拿多數股份,賠掉沒事、賺錢就出事(人性)。跟蕭南資本同邏輯 — 本業有收穫就拿出來做有趣 side project、賭大的,但別每年增資狂賠。
+    </div>
+
+    <div class="action">冒名推標的一律是假(他規模點一點就漲停,中小自己有閃)。投資模式:出全資只拿 20-30%、讓利創辦人=無息借款。房東不是貪婪是卡位早,創業找折衷點、不爽不要幹。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="ch">Q&amp;A 教養</div>
+    <span class="card-num">8/10</span>
+    <h2>成年孩子信用消費 — 最低程度干涉</h2>
+
+    <h3>大四孩子 8 萬無息分期,父母怎麼拿捏?</h3>
+    <div class="mechanism">
+      主持人爸媽相對嚴格(嘴上說土雞飼養其實管蠻多),到他這裡會更放手。但放手就勢必看到孩子受傷跌倒求救,那時很想說 I told you so —<span class="hl">可是講了孩子就被你推走</span>(被講過的孩子下次什麼都不跟你講)。
+    </div>
+
+    <div class="mechanism">
+      <strong>大原則:最低程度干涉,只有真的要 BBQ 時才出手;出手絕不邀功、不講早就告訴你。</strong><br>
+      只要不是去找高利貸、不是買浮誇張揚的東西(那是價值觀偏差才介入)。8 萬若<span class="hl">買工作設備甚至會默默贊助</span>;完全亂花才稍微講。接受他有引爆可能、密集看著,引爆時第一時間救。
+    </div>
+
+    <blockquote>「地方爸媽其實心中都有答案,只是想聽別人怎麼做 — 像看遊戲攻略,但你不要破關攻略,因為每個孩子都是很特別的存在。」</blockquote>
+
+    <div class="action">教養:最低程度干涉、只在 BBQ 時出手、出手不邀功不說 I told you so(會把孩子推走)。買設備甚至贊助、亂花才介入。同事性騷(對女同事手腳亂來)直接走檢舉處理。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="ch">Q&amp;A 人生</div>
+    <span class="card-num">9/10</span>
+    <h2>翻身失敗會怎樣 + 人生很大程度是運氣</h2>
+
+    <h3>翻身失敗會繼續熬</h3>
+    <div class="mechanism">
+      若開大槓桿時大落賽:會繼續熬、再多熬一陣子,但相信會熬出來。因為<span class="hl">個性愛找新鮮(像在市場整天找新題材)+心臟相對大</span>(有人說他 reckless、在自己身上亂打針)。<br>
+      <strong>但他不是少年股神開大槓桿打死不退型</strong> —<span class="hl">很大膽,但知道哪裡翻過車、下次不這樣</span>(打針第一次沒事、第二次就意識到不對)= 最終會修正到能做這件事。
+    </div>
+
+    <h3>一開始不缺錢會做什麼</h3>
+    <div class="mechanism">
+      會延續大學興趣(搖滾文青/聽團仔):搞黑膠唱片行、Live House、<span class="hl">室內滑板廠</span>(苗栗圈地蓋板廠+Live House+黑膠+調酒,真的討論過)。生意成功就一直做,失敗也會發現新方向往那切。
+    </div>
+
+    <h3>人生很大程度是運氣</h3>
+    <div class="mechanism">
+      <span class="hl">「每個人蠻大程度都是運氣的產物。」</span>如果你在八布吉納法索或獅子山共和國,有辦法做到今天這樣嗎?沒有。過得不錯別全覺得自己厲害,是環境造成的。馬斯克若留南非還會是一方之霸,但絕不是首富。
+    </div>
+
+    <div class="action">翻身失敗會繼續熬(愛新鮮+心臟大+知道哪翻過車就修正,非打死不退型)。過得不錯別全歸功自己 — 人生很大程度是運氣與環境。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="ch">行動清單</div>
+    <span class="card-num">10/10</span>
+    <h2>持倉揭露 + 下一步行動</h2>
+
+    <h3>本集主持人持倉動作</h3>
+    <p style="font-size: 14.5px;">
+      <span class="own">⭐ 被動元件(主力)</span>:開始出處置、考慮往場外移(參與的人變多籌碼亂)<br>
+      <span class="own">⭐ 台積電</span>:想加碼但等垃圾盤訊號(外面崩壞才灌)<br>
+      <span class="own">⭐ 離散元件/功率半導體</span>:觀察中(找新窟)<br>
+      <span class="own">⭐ 美光 (MU)</span>:續抱(美股不習慣一直動)<br>
+      <span>記憶體(台股)</span>:賣太早砍光、追回一部分(想像力不足)<br>
+      <span>Nexperia 事件相關</span>:去年底布局太早沒賺到
+    </p>
+
+    <h3>下一步行動</h3>
+    <div class="three-col">
+      <div class="col">
+        <h4>🎯 觀察名單</h4>
+        <ul>
+          <li>離散元件/功率半導體(新主軸)</li>
+          <li>美國 IDM(英飛凌/安森美/德儀/瑞薩)</li>
+          <li>DRMOS / 800VDC SiC</li>
+          <li>台積電(等垃圾盤訊號)</li>
+          <li>234 Tier 中小(前面 Tier 休息才接棒)</li>
+          <li>載板族群</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🟢 進場訊號</h4>
+        <ul>
+          <li>美國 IDM 重新動起來(全面性先動)</li>
+          <li>垃圾盤(台積電特別強其他轉弱)→ 進台積電</li>
+          <li>被動元件橫盤休息 → 234 接棒</li>
+          <li>Power discrete 缺口驗證台系廠商</li>
+          <li>非China 布局受惠醞釀放大</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🚫 停損 / 不該做</h4>
+        <ul>
+          <li>別在最熱鬧處(被動)參一咖</li>
+          <li>別讓持股集中扭曲整盤判斷</li>
+          <li>事件交易別太早進(題材沒醞釀)</li>
+          <li>別被視野結界限制(想像力罩門)</li>
+          <li>冒名推標的一律是假</li>
+          <li>百花齊放下小心沒真故事只是飆股</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<a href="#top" class="float-top" title="回頂部">↑</a>
+</body>
+</html>
