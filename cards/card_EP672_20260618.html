@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP672 筆記</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif; color: #1f2937; line-height: 1.75; padding: 32px 16px 80px; }
+  .container { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px 30px; margin-bottom: 16px; position: relative; }
+  .card-num { position: absolute; top: 18px; right: 22px; font-size: 11.5px; color: #b0b0b0; font-weight: 500; }
+  .ch { font-size: 12px; color: #888; margin-bottom: 8px; letter-spacing: 1px; }
+  h1 { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 4px; letter-spacing: -0.5px; }
+  .subtitle { color: #888; font-size: 13px; margin-bottom: 20px; }
+  h2 { font-size: 19px; font-weight: 700; color: #111; margin-bottom: 14px; line-height: 1.45; padding-right: 40px; }
+  h3 { font-size: 13.5px; font-weight: 700; color: #6b7280; margin: 18px 0 8px; letter-spacing: 0.5px; }
+  p { margin-bottom: 10px; color: #374151; }
+  .core { font-size: 15px; color: #1f2937; margin: 10px 0 14px; }
+  .mechanism { background: #f7f7f4; padding: 14px 18px; margin: 14px 0; border-radius: 6px; font-size: 14.5px; color: #374151; }
+  .mechanism strong { color: #111; }
+  .stocks { margin: 10px 0; }
+  .stock-group { margin: 8px 0; line-height: 1.9; }
+  .stock-group .gl { display: inline-block; font-weight: 700; color: #6b7280; font-size: 13px; margin-right: 6px; }
+  .ticker { display: inline-block; background: #f4f4f0; border: 1px solid #e5e5e0; border-radius: 5px; padding: 2px 8px; margin: 2px 3px 2px 0; font-size: 13px; color: #1f2937; }
+  .ticker code { color: #888; font-size: 11.5px; margin-left: 4px; }
+  .note { display: block; margin: 5px 0 5px 20px; font-size: 12.5px; color: #888; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; padding: 11px 16px; margin: 12px 0; border-radius: 6px; color: #735c2e; font-size: 13.5px; }
+  .risk::before { content: "⚠️  "; }
+  .action { background: #fff5ec; padding: 13px 18px; margin: 14px 0; border-radius: 6px; color: #9a4f0e; font-weight: 500; font-size: 14.5px; }
+  .action::before { content: "📌 "; }
+  .own { color: #c2410c; font-weight: 700; }
+  .hl { color: #c2410c; font-weight: 700; }
+  blockquote { padding: 8px 14px; margin: 10px 0; color: #6b7280; font-style: italic; font-size: 13.5px; background: #f7f7f4; border-radius: 6px; }
+  .pills { display: flex; flex-direction: column; gap: 7px; margin-top: 10px; }
+  .pill { background: #f7f7f4; color: #1f2937; padding: 10px 15px; border-radius: 7px; text-decoration: none; font-size: 13.5px; line-height: 1.5; }
+  .pill:hover { background: #efeee9; }
+  .pill .pn { display: inline-block; width: 22px; color: #999; font-size: 12px; font-weight: 600; }
+  .companies { display: grid; grid-template-columns: 56px 1fr; gap: 6px 10px; margin: 12px 0 4px; font-size: 13px; }
+  .companies .lb { font-weight: 700; color: #888; padding-top: 3px; font-size: 12.5px; }
+  .three-col { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 14px 0 4px; }
+  .three-col .col { background: #f7f7f4; border-radius: 7px; padding: 12px 14px; }
+  .three-col h4 { font-size: 13px; font-weight: 700; color: #4b5563; margin-bottom: 7px; }
+  .three-col ul { padding-left: 16px; font-size: 12.5px; }
+  .three-col li { margin: 4px 0; color: #374151; line-height: 1.55; }
+  .float-top { position: fixed; bottom: 22px; right: 22px; background: #1f2937; color: white; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); }
+  @media (max-width: 600px) {
+    .three-col { grid-template-columns: 1fr; }
+    .companies { grid-template-columns: 1fr; }
+    .companies .lb { padding-top: 0; }
+    body { padding: 16px 8px 80px; }
+    .card { padding: 20px 22px; }
+    h1 { font-size: 21px; }
+    h2 { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="container">
+
+  <div class="card" id="card-1">
+    <span class="card-num">1/10</span>
+    <h1>股癌 EP672 筆記</h1>
+    <p class="subtitle">2026/06 端午前 · 功率半導體深入(99週 lead time)× Vishay 復盤 × 思維放需求端</p>
+
+    <h3>提及公司</h3>
+    <div class="companies">
+      <div class="lb">美股</div>
+      <div>
+        <span class="ticker">德州儀器 <code>TXN</code></span>
+        <span class="ticker">意法半導體 <code>STM</code></span>
+        <span class="ticker">安森美 <code>ON</code></span>
+        <span class="ticker">英飛凌 <code>IFX</code></span>
+        <span class="ticker">羅姆</span>
+        <span class="ticker">Vishay <code>VSH</code></span>
+        <span class="ticker">Marvell <code>MRVL</code></span>
+        <span class="ticker">NVIDIA <code>NVDA</code></span>
+      </div>
+      <div class="lb">台股</div>
+      <div>
+        <span class="ticker">台積電 <code>2330</code></span>
+        <span class="ticker">聯電 <code>2303</code></span>
+        <span class="ticker">世界先進 <code>5347</code></span>
+      </div>
+      <div class="lb">主題</div>
+      <div>
+        <span class="ticker">功率半導體/MOSFET</span>
+        <span class="ticker">機器人/工具機</span>
+        <span class="ticker">矽智財/生計股</span>
+        <span class="ticker">軟體(AI agent)</span>
+      </div>
+    </div>
+
+    <h3>三句話總結</h3>
+    <div class="pills">
+      <a href="#card-3" class="pill"><span class="pn">1.</span>功率半導體深入:歐美 IDM lead time 跑到 99 週(根本買不到)→找二工就近台灣;做高壓/伺服器 MOSFET 台廠被認證一起出貨,最缺最好仍落歐美(台廠雞犬升天=排擠效應)</a>
+      <a href="#card-5" class="pill"><span class="pn">2.</span>思維放需求端:沒這料伺服器就拼不出來=最穩妥判準;誰手握產能、或手握客戶 secure 產能,就是大受惠者(設計端溢價權大)</a>
+      <a href="#card-6" class="pill"><span class="pn">3.</span>消費性/車用相對鳥,反而讓這波走更遠 — 單箭頭衝(若多箭頭同時衝會很快撞價格崩壞點);別把市場當笨蛋,族群性表態對的機率高</a>
+    </div>
+
+    <h3>章節導覽</h3>
+    <div class="pills">
+      <a href="#card-2" class="pill"><span class="pn">2.</span>台股創新高 — 看持股決定景氣是盲點</a>
+      <a href="#card-3" class="pill"><span class="pn">3.</span>功率半導體深入(99週 lead time)</a>
+      <a href="#card-4" class="pill"><span class="pn">4.</span>別把市場當笨蛋 + Vishay 復盤</a>
+      <a href="#card-5" class="pill"><span class="pn">5.</span>思維放需求端 + 誰握產能/客戶</a>
+      <a href="#card-6" class="pill"><span class="pn">6.</span>消費車用弱反而走更遠(限制器論)</a>
+      <a href="#card-7" class="pill"><span class="pn">7.</span>QA — 機器人萌芽 + 買菜流言行一致</a>
+      <a href="#card-8" class="pill"><span class="pn">8.</span>QA — AI 取代工程師是組織重整</a>
+      <a href="#card-9" class="pill"><span class="pn">9.</span>QA — 跟爸媽出門 + 生計股深水區</a>
+      <a href="#card-10" class="pill"><span class="pn">10.</span>持倉揭露 + 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <span class="card-num">2/10</span>
+    <div class="ch">市場動態</div>
+    <h2>台股又創新高 — 看手上持股決定景氣是盲點</h2>
+    <p class="core"><span class="hl">台股指數又創新高,證實之前『修正結束』的猜想對了。</span></p>
+
+    <div class="mechanism">
+      <strong>盲點:</strong>有些人覺得修正沒結束,可能是因為<span class="hl">手上持股轉弱,就以為這邊才正要開始跌</span>(甚至下空單)。這是用手上的東西決定整個景氣 — 類似做實體生意辛苦的人覺得經濟很差,但<strong>不是經濟差,可能就是你這邊差</strong>。<br>
+      盤面都新高了,新高就代表整體加權平均是蠻不錯的結果。
+    </div>
+
+    <h3>主持人狀態(被動元件主力)</h3>
+    <div class="mechanism">
+      過去花蠻多時間看被動元件,直到中小開始震盪(大型國巨照樣鎖漲停)。<span class="hl">當發現自己持股有『幫皮』出來,就知道這邊不是重點,開始注意下一個機會</span> — 相信市場蠻多資金跟他想法類似,甚至小弟稍微走在前面一點,所以會看到市場突然集體表態一個東西。
+    </div>
+
+    <div class="action">盤面新高別太悲觀。看手上持股回檔就覺得盤不好=盲點,要克服。主力族群出現幫皮就知道不是重點,提早找下一個機會(資金會做出類似反應、集體表態)。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="ch">功率半導體(本集主軸)</div>
+    <span class="card-num">3/10</span>
+    <h2>功率半導體深入 — 歐美 lead time 99 週,台廠近水樓台</h2>
+    <p class="core">承上集深入講功率半導體。德儀/STM/安森美設成範圍、<span class="hl">每次電話會議都看</span>。</p>
+
+    <div class="mechanism">
+      <strong>產業 feedback(跟一兩個月前被動元件像):</strong>前端 IFX/STM/ON/羅姆有些料非常缺非常好(AI 用量大、價高毛利好),但大家覺得台灣東西『應該還好』。<br>
+      <strong>但管到工廠端的聽眾解釋了為何台灣會急起來:</strong>歐美一工(IDM)的 lead time 跑到超噁數字 ——<span class="hl">有些已拉到一年以上、甚至 99 週/99+(根本買不到)</span>。買不到只好找二工,海外二工也找不到 → 就近找台灣(<strong>近水樓台先得月</strong>),做高壓環節 MOSFET 或伺服器 MOSFET 的台廠被認證、一起出貨受惠。
+    </div>
+
+    <div class="mechanism">
+      <strong>大架構(排擠效應):</strong>最缺最好的還是落在歐美廠商 — 就像記憶體本來最強是韓系+美光,<span class="hl">台灣 D4/D3/模組廠跟著雞犬升天受惠=排擠效應</span>(最高階產能全投某領域,其他訂單丟出來)。兩三年前也有 IDM 釋單給台灣 IDM/Fabless(再找聯電/世界先進代工),這次 cycle 更大。
+    </div>
+
+    <div class="action">功率半導體跟被動元件邏輯可類推:歐美 lead time 爆掉→台廠補。做高壓/伺服器 MOSFET 被認證的台廠受惠。但最缺最好仍歐美(台廠是排擠效應受惠)。IDM 自給自足看稼動率拉滿=漲價循環,非 IDM 要注意能否拿到 6吋8吋外包代工產能。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="ch">市場判讀</div>
+    <span class="card-num">4/10</span>
+    <h2>別把市場當笨蛋 + Vishay 歪打正著</h2>
+
+    <h3>待越久越不把話說死</h3>
+    <div class="mechanism">
+      過去會說『一個族群整個上去一定有假貨(沒這麼好卻跟著噴)』,但<span class="hl">待越久越不這樣講,因為很多意外發展當下看不到</span>。被動元件案例:大家共識最缺是鉭電、鋁電、高容值高階 MLCC,消費級 MLCC/電阻還好;<strong>結果一些電阻類股、消費性 MLCC 公司反而噴最兇</strong>。就像 HBM 最缺最好,有人買 DDR4/DDR5 被罵買錯 — 但<span class="hl">特定時間內排擠效應讓做 D5 的毛利/EPS 跑贏做 HBM 的</span>。
+    </div>
+
+    <h3>族群性表態 = 對的機率高</h3>
+    <div class="mechanism">
+      別把市場當笨蛋。<span class="hl">一個東西正式表態、一堆法人衝進去時,所有研究力量+眼光+call 公司考察都上了 — 假貨會在未來一陣子立刻被 A 下來,真的會持續上去</span>。族群性代表叮的人夠多;單一個股突然大噴再被 A 爆才是人為瞎炒。
+    </div>
+
+    <h3>Vishay 復盤(歪打正著)</h3>
+    <div class="mechanism">
+      <span class="hl">過去追 Vishay 以為在看它的被動元件,但 Vishay 是綜合體 — 被動+功率半導體都有。</span>懷疑自己因滿手都是 Passive 就以為它漲被動,搞不好蠻多時候是在漲功率半導體 — 因為注意到 Vishay 有些料的 lead time 比它的被動元件還恐怖非常多。<strong>歪打正著,提醒留意混合型公司的真實驅動力。</strong>
+    </div>
+
+    <div class="action">別把市場當笨蛋:族群性表態對的機率高,假貨會被研究力量 A 下來(有人私訊說 IDM 是假的,但這是國際現象、美股 IDM 上週末全噴)。混合型公司(如 Vishay)要拆清楚真實驅動力,別用既定印象套。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="ch">投資方法</div>
+    <span class="card-num">5/10</span>
+    <h2>思維放需求端 — 誰握產能或握客戶就大受惠</h2>
+    <p class="core"><span class="hl">最穩妥的判準:如果沒有這些料,這個伺服器就是拼不出來,那就是了。</span></p>
+
+    <div class="mechanism">
+      <strong>需求端 vs 成本端:</strong>若是貴金屬導致的漲價,續航力一定不會太好;<span class="hl">需求端(沒料伺服器拼不出來)最穩妥當</span>。AI 伺服器是最大用量(VR Rubin 密集拉貨→大家審視每個環節)。IDM/Fabless/晶圓代工/封測都是一整個 chain。
+    </div>
+
+    <div class="mechanism">
+      <strong>溢價權落在哪個環節:</strong>產能很重要,但<span class="hl">有產能不一定是王</span>。漲價有時只落在某環節 — <strong>設計端直接對客戶漲價,反映成本上升外再加 markup,受惠程度更大</strong>、資本利得表現最好。
+    </div>
+
+    <div class="mechanism">
+      <strong>誰是最大受惠者:</strong>等消費車用站起來一起搶料會有新變化。<span class="hl">誰手握產能、或自己不一定有產能但手握客戶(客戶不計代價買=能 secure 很多產能),就是大受惠者</span> — 即便自己沒晶圓/封測產能。6吋8吋代工廠股價提早走強=市場已想到沒產能一切是空。
+    </div>
+
+    <div class="action">用需求端思考(沒這料伺服器拼不出來)最穩妥,別追貴金屬成本漲價(續航差)。找溢價權大的環節(設計端 markup)。誰握產能或握客戶 secure 產能就大受惠,留意 6吋8吋代工廠(資金提早卡位)。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="ch">市場判讀</div>
+    <span class="card-num">6/10</span>
+    <h2>消費車用相對鳥 — 反而讓這波走更遠</h2>
+    <p class="core">一個重要心得:<span class="hl">消費性跟車用相對疲弱,反而讓這波漲價走更遠更長。</span></p>
+
+    <div class="mechanism">
+      <strong>單箭頭 vs 多箭頭:</strong>消費車用疲弱,所以市場<span class="hl">只有一個箭頭在衝,就已經是漲價潮</span>;如果它們也好,就是<strong>多箭頭同時衝,很快拉到價格崩壞的點</strong>。<br>
+      身邊做量化/超會看市場的朋友也沒想到能走這麼遠 — 主因就是消費車用軟,沒很快撞到需求爆炸點。
+    </div>
+
+    <div class="mechanism">
+      <strong>限制器論(類比):</strong>① 油價不會無限漲 — 還沒到那位置需求就被破壞(大家沒錢買)。② Gavin Baker 講<span class="hl">台積電像限制器</span> — 若台積電瘋狂大擴產這波 AI 會走更猛但很快結束;反而產能開不出來、消費車用軟這些『負面』讓東西走更遠。③ iPhone 前面忍記憶體、後來撐不住要漲價=消費者口袋只有限。
+    </div>
+
+    <div class="action">消費車用弱是『好的負面』— 讓漲價走更遠。等它們站起來一起搶料,會看到新一波變化(誰握產能/握客戶 secure 產能就受惠)。別期待單一東西無限漲(需求會先破壞撞崩壞點)。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="ch">Q&amp;A 題材 + 紀律</div>
+    <span class="card-num">7/10</span>
+    <h2>機器人萌芽偏好營收灌爆 + 買菜流言行一致</h2>
+
+    <h3>機器人/工具機(等財報還是先佈局?)</h3>
+    <div class="mechanism">
+      早期 Tesla Optimus 量上去時買日股斜坡減速器(當避險、蹲很久才表態)。<span class="hl">這種族群不用財報驗證,一定在半夢半醒之間先炒,等營收獲利出來都還有大段</span>(機器人若是真的,不可能營收剛出來就下去)。<br>
+      最近 IPC/工業零件廠開始出現<strong>低個位數機器人佔比=萌芽階段</strong>(廠商透過客戶回饋才知 module 被拿去拼機器人)。正向看多、算中大型趨勢,但<span class="hl">偏好半年一年內營收大量灌爆的</span>(漲比較快、偏交易)。
+    </div>
+
+    <h3>收集有趣美股(買菜流)</h3>
+    <div class="mechanism">
+      台股超過 100 檔,但<span class="hl">80-90% 資金集中前 5-10 檔</span>;其他像衛星股 1-3 月做完留幾張(對報酬率沒影響,可視為配 10% 大盤)。<br>
+      真帶來驚喜的一定是<strong>買很多又噴的</strong> — 只留一點點就算報酬 500% 也不影響勝敗。近期:Marvell(掌握的消息事後都對但每次上不去,第三次遠征成功、漲幅遠超想像)、CPU 類股也是。
+    </div>
+
+    <blockquote>「真的最喜歡的,一定就會買最多,所以是言行一致的。不會說我很喜歡它,結果只買兩張、哈拉一堆講話屌屌 — 這不是好事情。」</blockquote>
+
+    <div class="action">機器人萌芽(低個位數佔比)正向看多,但偏好半年一年內營收灌爆的(這種半夢半醒先炒、不用財報驗證)。買菜流但資金 80-90% 集中前 5-10 檔=言行一致,真喜歡就買最多。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="ch">Q&amp;A AI 趨勢</div>
+    <span class="card-num">8/10</span>
+    <h2>AI 取代軟體工程師 — 是組織重整不是末日</h2>
+
+    <h3>hiring 下降的真相</h3>
+    <div class="mechanism">
+      軟體 hiring 下降,<span class="hl">蠻大部分是疫情 over hiring 還業障</span> — 馬斯克裁 X 七八成還 run like clockwork(水分太多)。科技廠養了一些吸血蟲(work from hotel、開箱辦公室=太閒)。AI 是加速讓大家明白不需這麼多人。
+    </div>
+
+    <div class="mechanism">
+      <strong>但 hiring 數字其實在增加:</strong>觀察公開數字,軟體工程師數字持續增加 — 因為<span class="hl">找到新定位、投入新賽道</span>(coding 交給機器,人花時間思考好產品)。像種田從鏟子變開機器,人力少但生產力更多;有新工具可拓荒,<strong>TAM 變更大</strong>。
+    </div>
+
+    <div class="mechanism">
+      <strong>非零和思維:</strong>抱零和思維做投資/職涯會錯失 Big Picture(賺不到大錢)。<span class="hl">軟體股有新高有右下角=市場已幫你汰弱留強</span>,硬體也不是全在右上角(只有吃到 AI 的才是)。能 Harness AI 工具的工程師沒問題;<strong>想藏在組織過快樂日子的會有問題</strong>。實體經濟要考慮成本,Token Maxing 不可能,有些東西最終發現功能智慧比人工智慧好用。
+    </div>
+
+    <div class="action">軟體不是末日是組織重整。AI 焦慮別抱零和思維(錯失 Big Picture)。能 Harness AI 工具的工程師沒問題、藏組織混日子的有問題。對投資啟示:軟體股市場已汰弱留強(看新高 vs 右下角),硬體也只有吃到 AI 的在右上角。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="ch">Q&amp;A 生活 + 深水區</div>
+    <span class="card-num">9/10</span>
+    <h2>跟爸媽出門 + 矽智財是深水區</h2>
+
+    <h3>跟爸媽出門不快樂</h3>
+    <div class="mechanism">
+      <span class="hl">七八年級的爸媽愛念、輸出負能量是正常的,連黃仁勳爸媽都覺得他不夠好</span>、哪裡可以做更好。接受爸媽就這樣(他們已優化過自己,小時候受的待遇更誇張)。不舒服就稍微遠離、跟爸媽講不想出門。<br>
+      <strong>發現爸媽有極限、不是無所不能時,就是你真正長大、準備換你當爸媽那天。</strong>自己當爸爸對青少年孩子盡量不訓、不因比他有經驗有錢就輸出。
+    </div>
+
+    <h3>矽智財/生計股(有正期望值策略嗎?)</h3>
+    <div class="mechanism">
+      老實講不太懂他們在幹嘛、做的東西更複雜。<span class="hl">更進階、更深水區 — 要預判別人的預判、預期別人的預期</span>。難透過供應鏈推營收(供應鏈是產業的人知道東西很缺、營收一定上來,能拱很多人自己衝進來;生計沒這些,更要 trade 消息)。<strong>賺很多錢的標的很多最後開不出營收獲利;沒相當程度,被割機率偏高。</strong>
+    </div>
+
+    <h3>其他 QA(快速)</h3>
+    <div class="mechanism">
+      <strong>無痛腸鏡:</strong>不可怕(數到 4-5 斷片),唯一麻煩是半夜爬起來喝瀉藥;攝護腺檢查該在睡著時併做。<strong>體味:</strong>止汗劑香水外,衣服穿久纖維壞了藏細菌要丟(運動衣尤其)。<strong>行情幾局下半:</strong>反對預測、見招拆招(強者都隨機應變非預言家);AI 幼年期可能先 30% 修正再上。<strong>GTA6/PS5:</strong>買 Pro 畫質感受不大,但喜歡硬碟擴充+數位版。
+    </div>
+
+    <div class="action">爸媽愛念正常(連黃仁勳爸媽也嫌他),不爽就遠離。矽智財/生計股是深水區(預判別人的預判)、難推營收,沒相當程度別碰。行情別猜局數(見招拆招),AI 幼年期可能先 30% 修正。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="ch">行動清單</div>
+    <span class="card-num">10/10</span>
+    <h2>持倉揭露 + 下一步行動</h2>
+
+    <h3>本集主持人持倉動作</h3>
+    <p style="font-size: 14.5px;">
+      <span class="own">⭐ 被動元件(主力)</span>:持有,注意到中小震盪、找下一個機會<br>
+      <span class="own">⭐ 功率半導體/MOSFET</span>:資金/眼光放這方向,觀察 IDM 產能<br>
+      <span class="own">⭐ Vishay (VSH)</span>:過去追蹤(以為看被動、可能是功率半導體)<br>
+      <span class="own">⭐ Marvell (MRVL)</span>:第三次遠征成功、漲幅遠超想像<br>
+      <span class="own">⭐ CPU 類股</span>:驚喜標的之一<br>
+      <span>衛星股(台股)</span>:1-3 月做完留幾張<br>
+      <span>日股斜坡減速器</span>:早期買當機器人避險、蹲很久才表態
+    </p>
+
+    <h3>下一步行動</h3>
+    <div class="three-col">
+      <div class="col">
+        <h4>🎯 觀察名單</h4>
+        <ul>
+          <li>功率半導體 IDM 產能狀態(稼動率)</li>
+          <li>做高壓/伺服器 MOSFET 被認證台廠</li>
+          <li>6吋8吋外包代工廠(產能卡位)</li>
+          <li>設計端溢價權大的環節</li>
+          <li>機器人萌芽(IPC/工業零件低個位數佔比)</li>
+          <li>消費車用何時站起來(搶料新變化)</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🟢 進場訊號</h4>
+        <ul>
+          <li>IDM 稼動率拉滿=漲價循環</li>
+          <li>需求端確認(沒料伺服器拼不出來)</li>
+          <li>族群性表態(對的機率高)</li>
+          <li>非 IDM 能拿到 6吋8吋代工產能</li>
+          <li>誰握產能/握客戶 secure 產能</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>🚫 停損 / 不該做</h4>
+        <ul>
+          <li>別看手上持股決定整個景氣</li>
+          <li>別追貴金屬成本漲價(續航差)</li>
+          <li>別把市場當笨蛋(族群性表態)</li>
+          <li>有產能不一定是王(看溢價權)</li>
+          <li>矽智財/生計股沒相當程度別碰</li>
+          <li>別抱零和思維(錯失 Big Picture)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<a href="#top" class="float-top" title="回頂部">↑</a>
+</body>
+</html>
