@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP673 筆記</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #fafaf7;
+    font-family: 'Noto Sans TC', 'PingFang TC', sans-serif;
+    color: #1f2937;
+    line-height: 1.75;
+    padding: 32px 16px 80px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .card {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto 20px;
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    padding: 28px;
+  }
+  .card-num {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 12px;
+    color: #c4c4c4;
+    letter-spacing: 1px;
+  }
+  .section-label {
+    font-size: 12px;
+    color: #9a9a9a;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+  }
+  .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2937;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+  .cover-title {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .cover-date {
+    font-size: 14px;
+    color: #9a9a9a;
+    margin-bottom: 2px;
+  }
+  .block-label {
+    font-size: 13px;
+    color: #888;
+    letter-spacing: 1px;
+    margin: 22px 0 10px;
+    font-weight: 600;
+  }
+  .claim { font-size: 15.5px; margin-bottom: 4px; }
+  .claim .em { font-size: 16px; }
+  .mechanism {
+    background: #f7f7f4;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    font-size: 15px;
+  }
+  .row { margin: 10px 0; font-size: 15px; }
+  .row .ic { font-style: normal; }
+  .risk {
+    background: #fdf6e3;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 14.5px;
+  }
+  .action {
+    background: #fff5ec;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 14.5px;
+  }
+  .note {
+    color: #8a8a8a;
+    font-size: 13.5px;
+    padding-left: 18px;
+    margin: 6px 0;
+    line-height: 1.6;
+  }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .hl { color: #c2410c; font-weight: 600; }
+  .own { color: #c2410c; font-weight: 700; }
+  .ticker {
+    display: inline-block;
+    background: #f4f4f0;
+    border-radius: 4px;
+    padding: 2px 9px;
+    margin: 3px 4px 3px 0;
+    font-size: 13.5px;
+    white-space: nowrap;
+  }
+  .ticker code {
+    color: #a3a3a3;
+    font-size: 12.5px;
+    margin-left: 3px;
+  }
+  .stock-group { margin: 8px 0; }
+  .gl {
+    display: inline-block;
+    color: #888;
+    font-size: 13px;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  /* 封面：提及公司 grid */
+  .company-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 18px 0;
+  }
+  .company-col {
+    background: #f7f7f4;
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+  .company-col h4 {
+    font-size: 12px;
+    color: #9a9a9a;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .company-col .ticker { font-size: 12.5px; }
+  /* 封面：三句話 + 章節導覽 灰底 pills */
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+  .pill {
+    background: #f7f7f4;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 14.5px;
+    line-height: 1.65;
+  }
+  .navpills { flex-direction: row; flex-wrap: wrap; }
+  .navpills .pill { padding: 6px 13px; font-size: 13px; }
+  .navpills .pill a { color: #555; text-decoration: none; }
+  /* 封面：核心洞見 insight-pill 藍底左藍條可點 */
+  .insights { margin: 18px 0 6px; }
+  .insight-pill {
+    display: block;
+    background: #eef3fa;
+    border-left: 4px solid #6f9fd0;
+    border-radius: 0 6px 6px 0;
+    padding: 12px 16px;
+    margin-bottom: 9px;
+    font-size: 14.5px;
+    color: #2c3e52;
+    text-decoration: none;
+    line-height: 1.6;
+  }
+  .insight-pill:hover { background: #e4eef8; }
+  .insight-pill b { color: #1f2d3d; }
+  /* 三欄行動清單 統一灰底 */
+  .action-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .action-col {
+    background: #f7f7f4;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .action-col h4 {
+    font-size: 13px;
+    color: #555;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .action-col ul { list-style: none; }
+  .action-col li {
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-left: 14px;
+    position: relative;
+  }
+  .action-col li::before {
+    content: "·";
+    position: absolute;
+    left: 2px;
+    color: #b0b0b0;
+    font-weight: 700;
+  }
+  .hold-list { margin: 6px 0; }
+  .hold-list .row { padding: 8px 0; border-bottom: 1px solid #f0f0ed; }
+  .hold-list .row:last-child { border-bottom: none; }
+  .totop {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    background: #1f2937;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 9px 14px;
+    border-radius: 20px;
+    opacity: 0.9;
+  }
+  @media (max-width: 560px) {
+    .company-grid, .action-grid { grid-template-columns: 1fr; }
+    .card { padding: 22px 18px; }
+    .cover-title { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div id="top"></div>
+
+<!-- ===== 卡 1 封面 ===== -->
+<div class="card" id="card-1">
+  <div class="card-num">1 / 10</div>
+  <div class="cover-title">股癌 EP673 筆記</div>
+  <div class="cover-date">2026.06.24</div>
+  <div class="note">發布日以 SoundOn RSS 為準，官方標題待補</div>
+
+  <div class="company-grid">
+    <div class="company-col">
+      <h4>美股</h4>
+      <span class="ticker">NVIDIA <code>NVDA</code></span>
+      <span class="ticker">Broadcom <code>AVGO</code></span>
+      <span class="ticker">Marvell <code>MRVL</code></span>
+      <span class="ticker">Micron <code>MU</code></span>
+      <span class="ticker">Lumentum <code>LITE</code></span>
+      <span class="ticker">Coherent <code>COHR</code></span>
+      <span class="ticker">VIAVI <code>VIAV</code></span>
+      <span class="ticker">Nokia <code>NOK</code></span>
+    </div>
+    <div class="company-col">
+      <h4>台股</h4>
+      <span class="ticker">台積電 <code>2330</code></span>
+      <span class="ticker">聯發科 <code>2454</code></span>
+      <span class="ticker">國巨 <code>2327</code></span>
+    </div>
+    <div class="company-col">
+      <h4>其他</h4>
+      <span class="ticker">SK海力士 <code>000660.KS</code></span>
+      <span class="ticker">被動元件族群</span>
+      <span class="ticker">功率元件族群</span>
+    </div>
+  </div>
+
+  <div class="block-label">三句話總結</div>
+  <div class="pills">
+    <div class="pill">台股 6000 點漲幅後拉回、主要均線未破，孟恭判定是<span class="hl">創新高週的休息、不是假突破</span>；下跌觸發點他偏向韓國狼（類比比爾黃 Archegos），不信美銀升息三次報告。</div>
+    <div class="pill">半導體題材偏發哥：漲價性 + TriggerFish／WellFish 這條 ASIC 線；被動元件由電容轉向<span class="hl">電阻接棒、7 月初恐再一波</span>；功率元件卡在 8 吋晶圓產能。</div>
+    <div class="pill">孟恭總水位不動、只做內部換股，<span class="hl">自評本波 TSM↔中小是憑感覺、沒邏輯</span>；記憶體轉觀望，光通已大幅減碼但偏好 Lumentum + Coherent。</div>
+  </div>
+
+  <div class="block-label">核心洞見</div>
+  <div class="insights">
+    <a class="insight-pill" href="#card-2"><b>① 這波是漲多拉回的休息，不是假突破</b>——別急著找下跌理由，V 上來就打臉。</a>
+    <a class="insight-pill" href="#card-3"><b>② 聯發科漲價 + 多拿 Google 案</b>——ASIC「小屁孩」確實打出自己的市場，股價暫不反應只因前面漲太多。</a>
+    <a class="insight-pill" href="#card-4"><b>③ 電阻接棒成被動短期漲價主軸</b>——電容已成功反映，地方採購怕料卡開始加單。</a>
+    <a class="insight-pill" href="#card-6"><b>④ 連孟恭都承認在憑感覺換股</b>——TSM 買了又降回中小，自評「沒邏輯」，是手癢的鏡子。</a>
+    <a class="insight-pill" href="#card-8"><b>⑤ 記憶體立場鬆動</b>——很久沒買，對美光 vs 海力士 ADR 不給建議，「續抱記憶體」前提已淡。</a>
+  </div>
+
+  <div class="block-label">章節導覽</div>
+  <div class="pills navpills">
+    <div class="pill"><a href="#card-2">市場動態</a></div>
+    <div class="pill"><a href="#card-3">晶片市場</a></div>
+    <div class="pill"><a href="#card-4">被動元件</a></div>
+    <div class="pill"><a href="#card-5">功率元件</a></div>
+    <div class="pill"><a href="#card-7">Q&amp;A 觀念輪廓</a></div>
+    <div class="pill"><a href="#card-9">持倉警示</a></div>
+    <div class="pill"><a href="#card-10">行動清單</a></div>
+  </div>
+</div>
+
+<!-- ===== 卡 2 市場動態 ===== -->
+<div class="card" id="card-2">
+  <div class="card-num">2 / 10</div>
+  <div class="section-label">市場動態</div>
+  <div class="card-title">這波不是假突破，是 6000 點漲幅後的拉回休息</div>
+
+  <div class="claim"><span class="ic">🎯</span> <span class="em">均線都還沒跌破，比較像創新高週的休息；觸發點不是升息報告，是韓國狼。</span></div>
+
+  <div class="mechanism">
+    <span class="ic">🔍</span> 假突破的定義是「盤整很久 → 突然拉上去 → 直接灌破 → 往下破底」；現在是 6 月上旬從 42000 噴到 48000 多點（短時間 <span class="hl">拉了 6000 點</span>）後拉回，主要均線都還沒破，所以是漲多休息、不是假突破。<br><br>
+    至於下跌理由，孟恭不採信美銀「升息三次」報告，傾向是<span class="hl">韓國狼</span>造成：韓國指數已變全民賭場、玩槓桿 ETF，而且會外溢去搞美股小票與加密貨幣，類似當年比爾黃（Bill Hwang）Archegos 槓桿爆倉的連鎖效應——一個人就能引爆全球連鎖。
+  </div>
+
+  <div class="stock-group">
+    <span class="gl">外溢標的</span>
+    <span class="ticker">Tesla <code>TSLA</code></span>
+    <span class="ticker">Palantir <code>PLTR</code></span>
+    <span class="ticker">WallStreetBets 小票</span>
+    <span class="ticker">加密貨幣</span>
+  </div>
+
+  <div class="risk"><span class="ic">⚠️</span> 這是孟恭的體感推測，他自己說「沒找到 solid 的理由」。真的大場面出來就往生了，但目前離大場面非常遠。</div>
+
+  <div class="action"><span class="ic">📌</span> 下跌別急著找理由解釋（解釋完 V 上來就打臉）；別因為一個回檔就翻空滿手放空；<span class="hl">如果你的情緒兩三禮拜變換三四次以上，代表哪裡做錯了</span>。</div>
+
+  <div class="note">心理基準：孟恭總水位沒做大調整，續抱被動／功率、不因小回檔清倉。</div>
+</div>
+
+<!-- ===== 卡 3 晶片市場 ===== -->
+<div class="card" id="card-3">
+  <div class="card-num">3 / 10</div>
+  <div class="section-label">晶片市場</div>
+  <div class="card-title">聯發科漲價 + 多拿 Google 案，ASIC 小屁孩打出自己的市場</div>
+
+  <div class="claim"><span class="ic">🎯</span> <span class="em">漲價性（全產品線）＋ TriggerFish（Google 新案）雙利多，但股價暫不反應，因為前面漲太多。</span></div>
+
+  <div class="mechanism">
+    <span class="ic">🔍</span> <b>漲價性：</b>新聞已報、未載明調整的晶片項目與幅度，按慣例視為全產品線都有機會、不同客戶不同幅度（像被動元件）。漲得動客戶就是加分項。<br><br>
+    <b>TriggerFish：</b>聯發科從 Google 再拿到的案子，但調查後屬<span class="hl">非常 early phase、不是 standalone 晶片</span>，而是在既有晶片（如 Memory）加量加料，可視為跟前面 Zeebra／Hummel 那條線算一起。意義不在新增量，在於它在 Google「又多拿一個案、開發順利」。<br><br>
+    <b>對照博通：</b>Broadcom 老闆把這些（Marvell、聯發科）講成「小屁孩」，但小屁孩確實打出市場。博通自己第九代原本看似少一顆，後來跑出 WellFish（把前一個 Fish 變雙拼、二拼一），解開市場「博通是否被跳過一代」的疑問，在載板有題材。
+  </div>
+
+  <div class="stock-group">
+    <span class="gl">台股</span>
+    <span class="ticker">聯發科 <code>2454</code></span>
+  </div>
+  <div class="stock-group">
+    <span class="gl">美股</span>
+    <span class="ticker">Broadcom <code>AVGO</code></span>
+    <span class="ticker">Marvell <code>MRVL</code></span>
+    <span class="ticker">NVIDIA <code>NVDA</code></span>
+  </div>
+
+  <div class="risk"><span class="ic">⚠️</span> 漲價、拿案股價都沒反應——前面真的漲很多（類似 NVIDIA 好消息也推不上去）。TriggerFish 太早期，無法單獨量化貢獻。</div>
+
+  <div class="action"><span class="ic">📌</span> 盯<span class="hl">盤面結構是否轉成偏好大型股</span>——一旦轉了，聯發科的漲價故事就有機會被拿出來炒。</div>
+</div>
+
+<!-- ===== 卡 4 被動元件 ===== -->
+<div class="card" id="card-4">
+  <div class="card-num">4 / 10</div>
+  <div class="section-label">被動元件</div>
+  <div class="card-title">漲價主軸由電容轉向電阻，7 月初恐再一波</div>
+
+  <div class="claim"><span class="ic">🎯</span> <span class="em">電容漲價已成功反映，接下來短期主軸是電阻；地方採購怕料卡開始加單。</span></div>
+
+  <div class="mechanism">
+    <span class="ic">🔍</span> 電阻原本被看衰：<span class="hl">稼動率相對低</span>，券商普遍認為擴產簡單、不會有事——電容、電感沒先噴你講電阻太怪。<br><br>
+    但機制翻轉了：電容已相當程度漲價、且成功反映到大型 EMS／ODM（中位數超乎預期）→ 地方採購意識到後面的料可能叫不到 → <span class="hl">立刻加單下單 → 電阻供需轉緊、漲價壓不住要噴</span>。所以短期漲價主軸由電容接棒到電阻。
+  </div>
+
+  <div class="stock-group">
+    <span class="gl">代表 / 族群</span>
+    <span class="ticker">國巨 <code>2327</code></span>
+    <span class="ticker">被動元件族群</span>
+    <span class="ticker">電容 / 電阻 / 電感</span>
+  </div>
+
+  <div class="risk"><span class="ic">⚠️</span> 漲價反映到財報需要時間；回檔盤中看訊號不一定準。</div>
+
+  <div class="action"><span class="ic">📌</span> 盯 <span class="hl">7 月初是否如期再發漲價信</span>、電阻廠接單與報價是否轉緊；國巨這波「基本上等於沒跌」，可當族群強弱指標。</div>
+</div>
+
+<!-- ===== 卡 5 功率元件 ===== -->
+<div class="card" id="card-5">
+  <div class="card-num">5 / 10</div>
+  <div class="section-label">功率元件</div>
+  <div class="card-title">回檔但多頭結構沒變，勝負手在 8 吋晶圓產能</div>
+
+  <div class="claim"><span class="ic">🎯</span> <span class="em">產能是關鍵：拿不到 8 吋晶圓，營收獲利不一定開得出來。</span></div>
+
+  <div class="mechanism">
+    <span class="ic">🔍</span> 延續上集觀點，功率元件的核心問題偏產能：最密集使用的是 8 吋晶圓，<span class="hl">拿不到 → 營收獲利開不出來</span>。能不能勝出，看你有沒有垂直代工的製造能力，或有沒有 Secure 到成熟製程廠房與後段封測產能。近兩天休息，但型態仍是漂亮的多頭結構。
+  </div>
+
+  <div class="stock-group">
+    <span class="gl">族群</span>
+    <span class="ticker">功率元件族群</span>
+  </div>
+
+  <div class="risk"><span class="ic">⚠️</span> 8 吋產能緊是雙面刃——有產能者受惠，無產能者直接被卡住開不出量。</div>
+
+  <div class="action"><span class="ic">📌</span> 篩功率標的，看「<span class="hl">能不能拿到／鎖定成熟製程與封測產能</span>」，不是只看漲價題材。孟恭不因小回檔清倉。</div>
+</div>
+
+<!-- ===== 卡 6 操作自白 ===== -->
+<div class="card" id="card-6">
+  <div class="card-num">6 / 10</div>
+  <div class="section-label">市場動態</div>
+  <div class="card-title">孟恭自評 TSM↔中小換股「沒邏輯、憑感覺」——這是手癢的鏡子</div>
+
+  <div class="claim"><span class="ic">🎯</span> <span class="em">連主持人都承認自己在憑感覺換股，正好拿來照自己。</span></div>
+
+  <div class="mechanism">
+    <span class="ic">🔍</span> 流程是這樣：他擔心資金會低調躲進台積電 → 前幾天丟掉一些東西換進 TSM → 今天盤中又覺得「中小沒死透」→ 把買進的 TSM 再降一點、把錢弄回中小。他原話自評<span class="hl">「比較沒有邏輯、比較偏向自己一個感受」</span>。本來以為垃圾盤會出現，現在覺得不會，所以又跑回中小。
+  </div>
+
+  <div class="stock-group">
+    <span class="gl">本段持倉</span>
+    <span class="own">⭐ 台積電 <code style="color:#d8a07e;">2330 / TSM</code></span>
+    <span class="own">⭐ 中小型股族群</span>
+  </div>
+
+  <div class="risk"><span class="ic">⚠️</span> 看別人（包括孟恭）在換，不代表你該跟著換。換股要講得出基本面理由，不是看股價漲跌。</div>
+
+  <div class="action"><span class="ic">📌</span> 孟恭的條件是<span class="hl">「等台積電再過小波段新高」才再介入</span>——別在回檔中憑感覺追殺。</div>
+</div>
+
+<!-- ===== 卡 7 Q&A 心法群 ===== -->
+<div class="card" id="card-7">
+  <div class="card-num">7 / 10</div>
+  <div class="section-label">Q&amp;A 觀念輪廓</div>
+  <div class="card-title">沉默、不依賴、不被秒殺——孟恭的風控與獨立心法</div>
+
+  <div class="block-label">風控鐵律</div>
+  <div class="mechanism">
+    <span class="ic">🔍 機制：</span>地緣黑天鵝（川普開打、習近平弄金門這類）半年後回頭可能沒事，但<span class="hl">當下大恐慌跌停，槓桿太大會一兩根直接歸零</span>。<br>
+    <span class="ic">👁 觀點：</span>孟恭強調自己「從沒被追繳過」（很罕見），屬相對保守；再來一次會更小心、不開大槓桿。<br>
+    <span class="ic">✅ 可執行：</span>不要做任何「會讓自己立刻被秒殺」的事——這是最基礎的底線。
+  </div>
+
+  <div class="block-label">數字心態</div>
+  <div class="mechanism">
+    <span class="ic">🔍 機制：</span>只有「百到千」那一階段有印象，後面數字往上加都無感；到千萬反而因為認識一堆「怪物」而比百萬更不快樂。<br>
+    <span class="ic">👁 觀點：</span>不再想追趕別人，生活夠用就好，<span class="hl">不應該只有股票</span>；心態抱 fake it till you make it——不是假裝成不是自己的人，是模仿強者怎麼做。<br>
+    <span class="ic">✅ 可執行：</span>把「賺更多」換成「做有意義的事」當目標，反而走得穩。
+  </div>
+
+  <div class="block-label">獨立</div>
+  <div class="mechanism">
+    <span class="ic">🔍 機制：</span>很多做股票的人仍要依附組織、還是有老闆；他刻意不要——即便有升遷機會也拒絕。<br>
+    <span class="ic">👁 觀點：</span><span class="hl">隨時抱持失去一切的準備</span>，不為流量道歉、不怕得罪業配廠商、被 cancel 就 cancel，才能為自己工作。<br>
+    <span class="ic">✅ 可執行：</span>檢查自己的決策有沒有被「怕失去某個收入／關係」綁架——那就是不自由的根。
+  </div>
+</div>
+
+<!-- ===== 卡 8 個股 Q&A ===== -->
+<div class="card" id="card-8">
+  <div class="card-num">8 / 10</div>
+  <div class="section-label">Q&amp;A 觀念輪廓</div>
+  <div class="card-title">記憶體轉觀望、光通已減碼但偏好 Lumentum + Coherent</div>
+
+  <div class="block-label">記憶體 / 美光（聽眾問 SK 海力士 8 月上 ADR 要不要減美光）</div>
+  <div class="mechanism">
+    <span class="ic">🔍 機制：</span>孟恭說自己<span class="hl">已經很久沒有再買進記憶體股票</span>，美光後來都在弄別的題材。<br>
+    <span class="ic">✅ 可執行：</span>他不給買賣建議、「你喜歡就自己多買」——別再把「股癌續抱記憶體」當成現在的背書，立場已經鬆動。
+  </div>
+  <div class="stock-group">
+    <span class="ticker">Micron <code>MU</code></span>
+    <span class="ticker">SK海力士 <code>000660.KS</code></span>
+  </div>
+
+  <div class="block-label">美股光通佔比 / Nokia</div>
+  <div class="mechanism">
+    <span class="ic">🔍 機制：</span>光通比例現在低（後來跑去買 CPU），曾經佔比很高；最近較少看光通，update 不一定即時。<br>
+    <span class="ic">👁 觀點：</span>最喜歡 <span class="hl">Lumentum 跟 Coherent</span>；Marvell 不放在「光通純度高」那一類；Nokia 有轉機（切了較酷的業務、有機會在 CSP 拿東西）。<br>
+    <span class="ic">✅ 可執行：</span>要押光通，孟恭的偏好是 LITE / COHR；Tyrada（原音）可關注但標的待確認。
+  </div>
+  <div class="stock-group">
+    <span class="ticker">Lumentum <code>LITE</code></span>
+    <span class="ticker">Coherent <code>COHR</code></span>
+    <span class="ticker">Marvell <code>MRVL</code></span>
+    <span class="ticker">Nokia <code>NOK</code></span>
+    <span class="ticker">VIAVI <code>VIAV</code></span>
+  </div>
+
+  <div class="block-label">年底要當兵，短線要不要換 ETF</div>
+  <div class="action"><span class="ic">📌</span> 如果你會一直想看、會心神不寧，<span class="hl">就換成大盤 ETF</span> 比較好——重點是進去後盯不盯得到、會不會分心。</div>
+</div>
+
+<!-- ===== 卡 9 持倉警示 ===== -->
+<div class="card" id="card-9">
+  <div class="card-num">9 / 10</div>
+  <div class="section-label">持倉警示</div>
+  <div class="card-title">本集主持人持倉動作一覽</div>
+
+  <div class="hold-list">
+    <div class="row"><span class="own">⭐ 台積電（2330 / TSM）</span>　加碼後又部分減碼回吐，淨回中小。</div>
+    <div class="row"><span class="own">⭐ 中小型股族群</span>　把資金從台積電拉回、再次回補中小。</div>
+    <div class="row"><span class="own">⭐ 被動元件 + 功率元件</span>　續抱，不因小回檔清倉。</div>
+    <div class="row"><span class="own">⭐ 光通（Lumentum / Coherent）</span>　已大幅減碼（轉去買 CPU），曾經佔比很高。</div>
+    <div class="row"><span>記憶體 / 美光（MU）</span>　長期未再加碼；對 SK 海力士 ADR vs 減美光不給建議。</div>
+    <div class="row"><span>總水位</span>　不動，只做內部換股；新東西還很多在排隊，沒特別緊張。</div>
+  </div>
+
+  <div class="note">⭐ = 主持人本集明確表達持有或有部位動作。</div>
+</div>
+
+<!-- ===== 卡 10 行動清單 ===== -->
+<div class="card" id="card-10">
+  <div class="card-num">10 / 10</div>
+  <div class="section-label">行動清單</div>
+  <div class="card-title">本集可執行三欄整理</div>
+
+  <div class="action-grid">
+    <div class="action-col">
+      <h4>觀察名單</h4>
+      <ul>
+        <li><b>國巨 (2327)</b>：被動元件族群強弱指標，這波等於沒跌。</li>
+        <li><b>聯發科 (2454)</b>：漲價故事待盤面轉偏好大型股才會啟動。</li>
+        <li><b>Lumentum (LITE) / Coherent (COHR)</b>：孟恭光通最愛兩檔。</li>
+        <li><b>功率元件族群</b>：盯能否鎖定 8 吋與成熟製程／封測產能。</li>
+        <li><b>SK海力士 (000660.KS)</b>：8 月上美國 ADR。</li>
+      </ul>
+    </div>
+    <div class="action-col">
+      <h4>進場訊號</h4>
+      <ul>
+        <li>7 月初被動元件是否如期再發<b>新一波漲價信</b>；電阻廠接單／報價轉緊。</li>
+        <li>盤面結構是否<b>轉成偏好大型股</b>——聯發科漲價故事被拿出來炒的觸發點。</li>
+        <li>台積電<b>再過小波段新高</b>（孟恭再介入的條件）。</li>
+      </ul>
+    </div>
+    <div class="action-col">
+      <h4>停損 / 不該做</h4>
+      <ul>
+        <li>別在回檔中<b>憑感覺追殺換股</b>——孟恭都自認沒邏輯了。</li>
+        <li>別把「股癌續抱記憶體」當<b>現在的背書</b>，立場已鬆。</li>
+        <li>別滿手放空、別開<b>會被一兩根跌停秒殺</b>的槓桿。</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<a class="totop" href="#top">↑ 目錄</a>
+</body>
+</html>
