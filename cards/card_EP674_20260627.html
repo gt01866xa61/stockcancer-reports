@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP674 筆記</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#fafaf7; font-family:'Noto Sans TC','PingFang TC',sans-serif; color:#1f2937; line-height:1.75; padding:32px 16px 80px; -webkit-font-smoothing:antialiased; }
+  .card { position:relative; max-width:720px; margin:0 auto 20px; background:#fff; border:1px solid #ececec; border-radius:10px; padding:28px; }
+  .card-num { position:absolute; top:16px; right:20px; font-size:12px; color:#c4c4c4; letter-spacing:1px; }
+  .section-label { font-size:12px; color:#9a9a9a; letter-spacing:3px; margin-bottom:8px; }
+  .card-title { font-size:20px; font-weight:700; color:#1f2937; line-height:1.5; margin-bottom:18px; }
+  .cover-title { font-size:26px; font-weight:800; letter-spacing:1px; margin-bottom:4px; }
+  .cover-date { font-size:14px; color:#9a9a9a; margin-bottom:2px; }
+  .block-label { font-size:13px; color:#888; letter-spacing:1px; margin:22px 0 10px; font-weight:600; }
+  .claim { font-size:15.5px; margin-bottom:4px; }
+  .claim .em { font-size:16px; }
+  .mechanism { background:#f7f7f4; border-radius:6px; padding:14px 18px; margin:12px 0; font-size:15px; }
+  .row { margin:10px 0; font-size:15px; }
+  .risk { background:#fdf6e3; border-radius:6px; padding:12px 16px; margin:12px 0; font-size:14.5px; }
+  .action { background:#fff5ec; border-radius:6px; padding:12px 16px; margin:12px 0; font-size:14.5px; }
+  .note { color:#8a8a8a; font-size:13.5px; padding-left:18px; margin:6px 0; line-height:1.6; }
+  .note::before { content:"➤ "; color:#b0b0b0; }
+  .hl { color:#c2410c; font-weight:600; }
+  .own { color:#c2410c; font-weight:700; }
+  .ticker { display:inline-block; background:#f4f4f0; border-radius:4px; padding:2px 9px; margin:3px 4px 3px 0; font-size:13.5px; white-space:nowrap; }
+  .ticker code { color:#a3a3a3; font-size:12.5px; margin-left:3px; }
+  .stock-group { margin:8px 0; }
+  .gl { display:inline-block; color:#888; font-size:13px; margin-right:6px; vertical-align:middle; }
+  .company-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin:18px 0; }
+  .company-col { background:#f7f7f4; border-radius:6px; padding:12px 14px; }
+  .company-col h4 { font-size:12px; color:#9a9a9a; letter-spacing:2px; margin-bottom:8px; font-weight:600; }
+  .company-col .ticker { font-size:12.5px; }
+  .pills { display:flex; flex-direction:column; gap:8px; margin:10px 0; }
+  .pill { background:#f7f7f4; border-radius:6px; padding:10px 14px; font-size:14.5px; line-height:1.65; }
+  .navpills { flex-direction:row; flex-wrap:wrap; }
+  .navpills .pill { padding:6px 13px; font-size:13px; }
+  .navpills .pill a { color:#555; text-decoration:none; }
+  .insights { margin:18px 0 6px; }
+  .insight-pill { display:block; background:#eef3fa; border-left:4px solid #6f9fd0; border-radius:0 6px 6px 0; padding:12px 16px; margin-bottom:9px; font-size:14.5px; color:#2c3e52; text-decoration:none; line-height:1.6; }
+  .insight-pill:hover { background:#e4eef8; }
+  .insight-pill b { color:#1f2d3d; }
+  .action-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-top:8px; }
+  .action-col { background:#f7f7f4; border-radius:8px; padding:16px; }
+  .action-col h4 { font-size:13px; color:#555; letter-spacing:1px; margin-bottom:10px; font-weight:700; }
+  .action-col ul { list-style:none; }
+  .action-col li { font-size:13.5px; line-height:1.6; margin-bottom:10px; padding-left:14px; position:relative; }
+  .action-col li::before { content:"·"; position:absolute; left:2px; color:#b0b0b0; font-weight:700; }
+  .hold-list { margin:6px 0; }
+  .hold-list .row { padding:8px 0; border-bottom:1px solid #f0f0ed; }
+  .hold-list .row:last-child { border-bottom:none; }
+  .totop { position:fixed; bottom:22px; right:22px; background:#1f2937; color:#fff; text-decoration:none; font-size:13px; padding:9px 14px; border-radius:20px; opacity:.9; }
+  @media (max-width:560px) { .company-grid, .action-grid { grid-template-columns:1fr; } .card { padding:22px 18px; } .cover-title { font-size:22px; } }
+</style>
+</head>
+<body>
+<div id="top"></div>
+
+<!-- 卡 1 封面 -->
+<div class="card" id="card-1">
+  <div class="card-num">1 / 9</div>
+  <div class="cover-title">股癌 EP674 筆記</div>
+  <div class="cover-date">2026.06.27　·　上半年總結</div>
+  <div class="note">發布日以 SoundOn RSS 為準,官方標題待補</div>
+
+  <div class="company-grid">
+    <div class="company-col">
+      <h4>美股</h4>
+      <span class="ticker">SpaceX <code>SPCX</code></span>
+      <span class="ticker">Tesla <code>TSLA</code></span>
+      <span class="ticker">Palantir <code>PLTR</code></span>
+      <span class="ticker">CrowdStrike <code>CRWD</code></span>
+      <span class="ticker">Google <code>GOOGL</code></span>
+      <span class="ticker">Apple <code>AAPL</code></span>
+      <span class="ticker">Microsoft <code>MSFT</code></span>
+      <span class="ticker">Marvell <code>MRVL</code></span>
+      <span class="ticker">Micron <code>MU</code></span>
+    </div>
+    <div class="company-col">
+      <h4>台股</h4>
+      <span class="ticker">國巨 <code>2327</code></span>
+      <span class="ticker">被動元件族群</span>
+      <span class="ticker">功率元件族群</span>
+    </div>
+    <div class="company-col">
+      <h4>其他</h4>
+      <span class="ticker">科技巨頭整體</span>
+      <span class="ticker">Data center / AI server</span>
+    </div>
+  </div>
+
+  <div class="block-label">三句話總結</div>
+  <div class="pills">
+    <div class="pill">上半年高光(4–6 月 Beta 加分、5 月<span class="hl">處置股反成飆股、被迫抱住大魚</span>);近期挪錢買 SpaceX、賣 Tesla,CPU/Marvell 調節,軟體 Palantir 轉弱、CrowdStrike 走強。</div>
+    <div class="pill">週五國巨期貨先跌停 + 台積急殺 = 槓桿斷頭恐慌大逃殺,很多熱門族群跌破季線;孟恭手上強勢漲價元件離季線遠,但<span class="hl">自認加碼太快、若週一續跌反手丟出</span>。</div>
+    <div class="pill">修正歸因<span class="hl">主權基金 rebalance</span>(非戰爭/升息/泡沫);蘋果跟進漲價 10–20%(Markup 非專利、看銷量);提出「巨頭股東會不會坐不住」待追蹤論述。</div>
+  </div>
+
+  <div class="block-label">核心洞見</div>
+  <div class="insights">
+    <a class="insight-pill" href="#card-3"><b>① 持倉大調動:挪錢買 SpaceX、賣 Tesla</b>——「壓馬斯克」角色從 Tesla 轉給 SpaceX;CPU/Marvell 調節、Palantir 轉弱換 CrowdStrike。</a>
+    <a class="insight-pill" href="#card-4"><b>② 修正不是戰爭也不是升息</b>——看油價已善後、川普喜歡通膨;最接近的理由是主權基金季度 rebalance。</a>
+    <a class="insight-pill" href="#card-4"><b>③ 待追蹤:科技巨頭股東會不會坐不住</b>——美光毛利率 80 幾要上 90 幾(暴利),但付錢的巨頭股價差、cash flow 有的轉負。</a>
+    <a class="insight-pill" href="#card-5"><b>④ 蘋果跟進漲價 10–20%</b>——Markup 不是蘋果專利,嚇到人不代表嚇到果粉,最後看銷量這個結果。</a>
+    <a class="insight-pill" href="#card-2"><b>⑤ 週五全面恐慌、勇氣盡失</b>——連孟恭都認加碼太快,若週一續跌會反手認賠、協助砸盤。</a>
+  </div>
+
+  <div class="block-label">章節導覽</div>
+  <div class="pills navpills">
+    <div class="pill"><a href="#card-2">市場動態</a></div>
+    <div class="pill"><a href="#card-3">持倉大調動</a></div>
+    <div class="pill"><a href="#card-4">修正診斷</a></div>
+    <div class="pill"><a href="#card-5">蘋果漲價</a></div>
+    <div class="pill"><a href="#card-6">Q&amp;A 觀念輪廓</a></div>
+    <div class="pill"><a href="#card-8">持倉警示</a></div>
+    <div class="pill"><a href="#card-9">行動清單</a></div>
+  </div>
+</div>
+
+<!-- 卡 2 市場動態 -->
+<div class="card" id="card-2">
+  <div class="card-num">2 / 9</div>
+  <div class="section-label">市場動態</div>
+  <div class="card-title">週五全面恐慌、勇氣盡失——連孟恭都認加碼太快</div>
+
+  <div class="claim"><span class="ic">🎯</span> <span class="em">很多熱門族群跌破季線,做多意願轉弱;孟恭手上強勢漲價元件離季線遠,但若週一續跌會反手認賠。</span></div>
+
+  <div class="mechanism">
+    <span class="ic">🔍</span> 本以為週三、週四就反彈:週四 11 點半後台股中小與強勢股拉尾盤,孟恭已把錢打進去。週五早盤先殺,9–10 點<span class="hl">國巨期貨直接跌停(現股還沒跌)</span>+ 台積電急殺——期貨先跌停代表槓桿超大的要自斷/斷頭、恐慌大逃殺。他以為籌碼洗差不多了再打部位,中午相對強勢股試著站回、他被套在日內高點,事後覺得<span class="hl">打太快</span>。<br><br>
+    週五一大根讓很多過去熱門族群直接跌到季線下面:這些跌破季線的東西做多意願偏低、反彈摸到大均線會遇套牢盤解套賣壓,後面上去力道小——「做壞掉了就被丟壞掉了」。
+  </div>
+
+  <div class="stock-group">
+    <span class="gl">本集持倉狀態</span>
+    <span class="own">⭐ 被動 + 功率元件</span>(強勢、離季線遠、相對抗跌)
+    <span class="own">⭐ 週五加碼部位</span>(被套日內高點)
+  </div>
+
+  <div class="risk"><span class="ic">⚠️</span> 孟恭原話:若下週一又開低續走,「我那個加碼的應該有把它丟出來,反正你們不要玩,老子也不要玩,協助把這個盤砸掉」——他自己就可能是賣壓。</div>
+
+  <div class="action"><span class="ic">📌</span> 檢查自己手上部位:若<span class="hl">一路灌破季線、反彈站不回去</span>,即便是 AI 大題材也要小心(資金沒在這、上去難);跌破季線是價值投資相對好買點,但要等。留意現金水位、有東西要買先騰錢。</div>
+</div>
+
+<!-- 卡 3 持倉大調動 -->
+<div class="card" id="card-3">
+  <div class="card-num">3 / 9</div>
+  <div class="section-label">持倉大調動</div>
+  <div class="card-title">挪錢買 SpaceX、賣 Tesla——「壓馬斯克」角色換人</div>
+
+  <div class="claim"><span class="ic">🎯</span> <span class="em">近期最大調動:賣弱勢持股 + 賣 Tesla 換進 SpaceX;CPU/Marvell 調節;軟體 Palantir 轉弱、CrowdStrike 走強。</span></div>
+
+  <div class="mechanism">
+    <span class="ic">🔍</span> <b>SpaceX:</b>挪錢加碼,把表現差的持股與 Tesla 賣一賣換進——買 Tesla 原本就是為了「壓住馬斯克」,現在有 SpaceX 可以壓,角色替換。<br><br>
+    <b>CPU / Marvell:</b>有壓到整個 CPU、ASIC 壓 Marvell,但近期都做了一點調節,因美股走勢分化。操作邏輯:<span class="hl">台股轉弱就賣、美股轉弱反而接刀</span>(砍相對強勢、換掉下來弱到不錯價位的科技巨頭)。<br><br>
+    <b>軟體:</b>本以為 Palantir 這種估值超高、大家最不信想放空的會持續領頭,但近期疲弱;Portfolio 裡走得好的是 CrowdStrike——好的持續點、沒那麼好的<span class="hl">不減碼但也不加碼</span>。
+  </div>
+
+  <div class="stock-group">
+    <span class="gl">加碼 ⭐</span>
+    <span class="own">SpaceX <code style="color:#d8a07e;">SPCX</code></span>
+    <span class="ticker">CrowdStrike <code>CRWD</code></span>
+  </div>
+  <div class="stock-group">
+    <span class="gl">減碼 / 調節 ⭐</span>
+    <span class="own">Tesla <code style="color:#d8a07e;">TSLA</code></span>
+    <span class="own">Marvell <code style="color:#d8a07e;">MRVL</code></span>
+    <span class="own">CPU 族群</span>
+  </div>
+  <div class="stock-group">
+    <span class="gl">持有不動 ⭐</span>
+    <span class="own">Palantir <code style="color:#d8a07e;">PLTR</code></span>(疲弱、不減不加)
+  </div>
+
+  <div class="risk"><span class="ic">⚠️</span> Tesla 是資金調度與角色替換,非看壞基本面;Palantir 疲弱是「不加碼」而非看空。別把孟恭的調節讀成方向性看法。</div>
+
+  <div class="action"><span class="ic">📌</span> 美股劇本:相對難做,他相信後面要<span class="hl">轉進應用層面</span>,巨頭有機會;最喜歡 Google(降本增效/自家晶片/配置佳)、蘋果(Edge 端領導、等轉強切入);週五跌深的微軟、蘋果若持續上去他會把錢移過去。</div>
+</div>
+
+<!-- 卡 4 修正診斷 -->
+<div class="card" id="card-4">
+  <div class="card-num">4 / 9</div>
+  <div class="section-label">修正診斷</div>
+  <div class="card-title">不是戰爭也不是升息,最接近的是主權基金 rebalance</div>
+
+  <div class="claim"><span class="ic">🎯</span> <span class="em">排除戰爭、升息、AI 泡沫;歸因季度再平衡。另提出「巨頭股東會不會坐不住」待追蹤論述。</span></div>
+
+  <div class="mechanism">
+    <span class="ic">🔍</span> <b>不是戰爭:</b>直接看油價就好——已跌到七八十塊、是善後階段,革命衛隊新聞多偏假消息。<b>不是升息:</b>川普本人喜歡通膨、不會大幅升息;漲價狂潮集中在 Data center(一台 AI server 記憶體 BOM cost 已爬到 30%,但巨頭照買),消費端則是遞延消費。<b>AI 泡沫論:</b>聽聽就好,泡沫論者 2023 講到現在總會有對的一天、但錯過這麼大段。<br><br>
+    <b>最接近 = rebalance:</b>過去一季科技股賺太多→漲多的標的淨值佔比變高→保守策略機械式減碼、挪去買淨值佔比低的,<span class="hl">資金弱流強</span>。
+  </div>
+
+  <div class="block-label">⭐ 值得追蹤的論述:巨頭股東會不會坐不住</div>
+  <div class="mechanism">
+    <span class="ic">🔍</span> 美光毛利率 80 幾、接下來幾個 Q 甚至可能<span class="hl">上 90 幾(暴利、隨便賣隨便賺)</span>;但這些付錢的科技巨頭股價表現不好、有些 cash flow 要跑負值,會不會出現檢討聲音「錢都付給零組件廠賺走、成效不一定看到、還要不要推這麼快」(DeepSeek 那波有類似討論但沒燒大)。<br>但孟恭掃了巨頭 deploy AI 伺服器數字 + 台系供應鏈拉貨,目前沒太多問題→比較像市場信心短期丟失(類 2026/3、6 月初)。
+  </div>
+
+  <div class="stock-group">
+    <span class="gl">關聯</span>
+    <span class="ticker">Micron <code>MU</code></span>
+    <span class="ticker">科技巨頭整體</span>
+    <span class="ticker">Data center / AI server</span>
+  </div>
+
+  <div class="action"><span class="ic">📌</span> 盯<span class="hl">盤面是否續轉差</span>——若轉差,「巨頭坐不住」論述可能被醞釀出來、影響 sentiment;同時盯巨頭 deploy 伺服器數字與台系拉貨有無轉弱(目前沒問題)。</div>
+</div>
+
+<!-- 卡 5 蘋果漲價 -->
+<div class="card" id="card-5">
+  <div class="card-num">5 / 9</div>
+  <div class="section-label">消費電子</div>
+  <div class="card-title">蘋果跟進漲價 10–20%,Markup 不是專利,最後看銷量</div>
+
+  <div class="claim"><span class="ic">🎯</span> <span class="em">蘋果在記憶體高漲下上修 MacBook 等 10–20%;漲價剛出一度跌隔天又漲,孟恭判 neutral、要看銷量。</span></div>
+
+  <div class="mechanism">
+    <span class="ic">🔍</span> 選在這時間漲「舊品」,可能是替<span class="hl">新品漲價先預熱</span>。關鍵:嚇到一些人不代表嚇到果粉——討論話題要先定義「客人是誰」、對方是不是跟你同類型(井水不犯河水,蘋果與安卓用戶彼此不影響)。<br><br>
+    Markup 不是蘋果專利(愛馬仕加幾個鉚釘能多賣上萬、華強北包就不行):蘋果是<span class="hl">價格黏性高、毛利肥</span>,不用這麼快反映成本;中系 OEM 才老實反映(用低價搶市佔)。所以之前蘋果反而相對划算、衝了一波銷量;現在它跟進漲價,要看後續銷量判斷消費者吃不吃得下。
+  </div>
+
+  <div class="stock-group">
+    <span class="gl">關聯</span>
+    <span class="ticker">Apple <code>AAPL</code></span>
+    <span class="ticker">Micron <code>MU</code></span>
+    <span class="ticker">中系手機 OEM</span>
+  </div>
+
+  <div class="risk"><span class="ic">⚠️</span> 供應鏈漲價≈好消息(巨頭照買),但消費端漲價要小心——面對普羅百姓,貴 20–30% 有些就不買,血淋淋反映在銷量。</div>
+
+  <div class="action"><span class="ic">📌</span> 判斷漲價會不會傷消費,<span class="hl">直接看銷量這個結果</span>(像看戰爭就看油價);蘋果漲價現在 neutral,等銷量數字出來再下判斷。</div>
+</div>
+
+<!-- 卡 6 QA 市場心法 -->
+<div class="card" id="card-6">
+  <div class="card-num">6 / 9</div>
+  <div class="section-label">Q&amp;A 觀念輪廓</div>
+  <div class="card-title">修正時的四個元規則:鬼故事別當真、消息跟在價格後</div>
+
+  <div class="block-label">① 鬼故事知道就好、別太認真</div>
+  <div class="mechanism"><span class="ic">🔍</span> 大盤往下 5–8% 機會很多,每次下跌都有鬼故事(戰爭/升息/泡沫),但<span class="hl">新高後回頭看根本沒人在討論</span>——不好的時候被拿出來當談資而已。</div>
+
+  <div class="block-label">② 下跌蔓延時消息是跟在後面的</div>
+  <div class="mechanism"><span class="ic">🔍</span> 價格變化常跑在基本面前面,不能純 fundamental。參考去年關稅地震:3 月美股整天跌、沒消息,他的做法是「<span class="hl">找個還 OK 的反彈、有尊嚴地出去</span>」,後面才看到關稅地震的消息。</div>
+
+  <div class="block-label">③ 財富效應擴張時大家其實不花錢</div>
+  <div class="mechanism"><span class="ic">🔍</span> 盤好時不把錢丟進市場「機會成本太高」,所以大家持續往市場丟、不消費;要等盤面震盪、修理人頻率變高、產生「<span class="hl">賠掉不如花掉</span>」的想法,消費才會發生——那時候看漲價會不會衝擊消費才準。</div>
+
+  <div class="block-label">④ 討論話題先定義「你的客人是誰」</div>
+  <div class="mechanism"><span class="ic">🔍</span> 先定義客人是誰、對方是不是跟你同類型;看漲價先看是不是<span class="hl">客戶已拒絕吃</span>——供應鏈漲價=好消息,消費端漲價最後直接看銷量這個結果。</div>
+</div>
+
+<!-- 卡 7 QA 生活心法 -->
+<div class="card" id="card-7">
+  <div class="card-num">7 / 9</div>
+  <div class="section-label">Q&amp;A 觀念輪廓</div>
+  <div class="card-title">越來越沉默、喊停的人停不下來、事業要單純</div>
+
+  <div class="block-label">錢 vs 自由(MTK 換工作)</div>
+  <div class="mechanism"><span class="ic">🔍</span> 年輕人賺錢比較重要;工作很難非常快樂,只要不會壓力大到憂鬱,就是可接受的 trade off。覺得自己沒錢常是<span class="hl">比較對象是資產階級</span>(長年累積);換地方說不定一樣不滿、錢又少、不爽指數更高。</div>
+
+  <div class="block-label">省錢心態與資產無關(York)</div>
+  <div class="mechanism"><span class="ic">🔍</span> 股票漲時沒人想把錢拿出來花(每筆都能賺更多、反感踩煞車);這心態<span class="hl">百萬到十億都一樣不夠</span>。只見過一個人真賺到目標後退休買債券完全退出,其餘喊停的都停不下來——要刻意找平衡、善待家人(你一天的震盪可能遠超家人許願的東西)。</div>
+
+  <div class="block-label">越來越沉默(Pack)</div>
+  <div class="mechanism"><span class="ic">🔍</span> 不需要跟任何人講太多或說服任何人——不同位階/資產/家庭背景沒辦法對話,<span class="hl">真正需要說服的只有自己家庭最核心的人</span>。</div>
+
+  <div class="block-label">事業要單純(Andy)</div>
+  <div class="mechanism"><span class="ic">🔍</span> 股東不要太複雜(複雜就麻煩);創辦人要 <span class="hl">skin in the game</span>(自己投錢才會百分百認真);別為拿一堆人的錢迎合一堆人、失去初衷。林口投資是社會服務學習態度(投報率沒股票好)。</div>
+</div>
+
+<!-- 卡 8 持倉警示 -->
+<div class="card" id="card-8">
+  <div class="card-num">8 / 9</div>
+  <div class="section-label">持倉警示</div>
+  <div class="card-title">本集主持人持倉動作一覽</div>
+
+  <div class="hold-list">
+    <div class="row"><span class="own">⭐ SpaceX(SPCX)</span>　挪錢加碼買進(賣弱勢持股 + 賣 Tesla 換)。</div>
+    <div class="row"><span class="own">⭐ Tesla(TSLA)</span>　減碼:壓馬斯克角色轉給 SpaceX，非看壞基本面。</div>
+    <div class="row"><span class="own">⭐ CPU 族群 + Marvell（MRVL）</span>　有壓到、近期因美股分化做調節。</div>
+    <div class="row"><span class="own">⭐ CrowdStrike（CRWD）</span>　軟體裡走得好、持續在點。</div>
+    <div class="row"><span class="own">⭐ Palantir（PLTR）</span>　近期疲弱,不減碼但也不加碼。</div>
+    <div class="row"><span class="own">⭐ 被動 + 功率元件</span>　手上強勢部位、離季線遠、相對抗跌。</div>
+    <div class="row"><span class="own">⭐ 週五加碼部位（中小/強勢股）</span>　被套日內高點,若週一續跌會反手丟出。</div>
+  </div>
+
+  <div class="note">⭐ = 主持人本集明確表達持有或有部位動作。Google／Apple／Microsoft 為「考慮加碼/等切入」非已建倉。</div>
+</div>
+
+<!-- 卡 9 行動清單 -->
+<div class="card" id="card-9">
+  <div class="card-num">9 / 9</div>
+  <div class="section-label">行動清單</div>
+  <div class="card-title">本集可執行三欄整理</div>
+
+  <div class="action-grid">
+    <div class="action-col">
+      <h4>觀察名單</h4>
+      <ul>
+        <li><b>Google (GOOGL)</b>：孟恭最喜歡的巨頭,降本增效+自家晶片。</li>
+        <li><b>Apple (AAPL)</b>：等轉強切入;漲價後看銷量。</li>
+        <li><b>Microsoft (MSFT)</b>：週五跌深、大家不好時跳起來,續強就移錢過去。</li>
+        <li><b>Micron (MU)</b>：毛利率暴利,但是「巨頭坐不住」論述對照組。</li>
+        <li><b>被動 + 功率元件</b>：手上強勢、離季線遠的抗跌部位。</li>
+      </ul>
+    </div>
+    <div class="action-col">
+      <h4>進場 / 觀察訊號</h4>
+      <ul>
+        <li>盤面<b>是否續轉差</b>——「巨頭坐不住」論述會否被醞釀、影響 sentiment。</li>
+        <li>跌深的<b>微軟/蘋果是否持續上去</b>（孟恭移錢過去的條件）。</li>
+        <li>蘋果漲價後的<b>銷量數字</b>;台系供應鏈拉貨有無轉弱。</li>
+      </ul>
+    </div>
+    <div class="action-col">
+      <h4>停損 / 不該做</h4>
+      <ul>
+        <li>別在最恐慌時砍到最低點;但<b>灌破季線且反彈站不回</b>的要小心。</li>
+        <li>別純 fundamental 死抱——<b>價格變化會跑在消息前面</b>。</li>
+        <li>別把鬼故事當真;留現金水位,<b>有東西要買先騰錢</b>。</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<a class="totop" href="#top">↑ 目錄</a>
+</body>
+</html>
