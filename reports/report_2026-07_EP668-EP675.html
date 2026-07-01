@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌月報 · EP668–EP675</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#fafaf7; font-family:'Noto Sans TC','PingFang TC',sans-serif; color:#1f2937; line-height:1.7; padding:0 0 90px; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:800px; margin:0 auto; padding:0 16px; }
+  .hd { background:#1f2937; color:#fff; padding:26px 0 22px; }
+  .hd .wrap { display:flex; flex-direction:column; gap:4px; }
+  .hd h1 { font-size:23px; letter-spacing:1px; font-weight:800; }
+  .hd .sub { font-size:13.5px; color:#b9c0c9; }
+  .hd .win { font-size:12.5px; color:#8d96a1; margin-top:2px; }
+  .kpi { display:grid; grid-template-columns:repeat(7,1fr); gap:10px; margin:20px 0 6px; }
+  .kpi .cell { background:#fff; border:1px solid #ececec; border-radius:10px; padding:14px 10px; text-align:center; }
+  .kpi .num { font-size:21px; font-weight:800; color:#1f2937; line-height:1.2; }
+  .kpi .num.sm { font-size:13px; line-height:1.35; }
+  .kpi .lab { font-size:11px; color:#9a9a9a; margin-top:5px; letter-spacing:.5px; }
+  .toc { display:flex; flex-wrap:wrap; gap:7px; margin:14px 0 22px; }
+  .toc a { background:#26303f; color:#dfe5ec; text-decoration:none; font-size:12.5px; padding:6px 12px; border-radius:16px; }
+  .sec { background:#fff; border:1px solid #ececec; border-radius:10px; padding:24px 26px; margin-bottom:18px; }
+  .sec > h2 { font-size:17px; font-weight:700; color:#1f2937; margin-bottom:14px; display:flex; align-items:center; gap:8px; }
+  .arc p { font-size:15px; margin-bottom:10px; }
+  .arc .hl, .sec .hl { color:#c2410c; font-weight:600; }
+  .topics { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+  .topic { background:#f7f7f4; border:1px solid #ececec; border-radius:8px; padding:13px 14px; display:flex; justify-content:space-between; align-items:center; gap:6px; }
+  .topic .tn { font-size:13.5px; font-weight:600; line-height:1.4; }
+  .topic .tc { background:#1f2937; color:#fff; font-size:11.5px; font-weight:700; border-radius:11px; padding:2px 9px; white-space:nowrap; }
+  .flow-group { margin-bottom:16px; }
+  .flow-head { display:inline-block; font-size:13.5px; font-weight:700; color:#374151; border-radius:16px; padding:5px 15px; margin-bottom:10px; }
+  .fh-bull { background:#d4e8d4; } .fh-bear { background:#e8d4d4; } .fh-watch { background:#ede5cf; } .fh-neu { background:#ececec; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; }
+  .chip { background:#f7f7f4; border:1px solid #ececec; border-radius:18px; padding:5px 12px; font-size:13px; white-space:nowrap; }
+  .chip code { color:#a3a3a3; font-size:12px; margin:0 2px; }
+  .chip .cover { color:#888; font-size:11.5px; margin-left:3px; }
+  .chip .star { color:#c2410c; }
+  .flow-note { font-size:12.5px; color:#999; margin-top:8px; line-height:1.5; }
+  .act-block { margin-bottom:16px; }
+  .act-head { display:inline-block; font-size:13.5px; font-weight:700; color:#374151; border-radius:16px; padding:5px 15px; margin-bottom:8px; }
+  table { width:100%; border-collapse:collapse; }
+  td { padding:8px 8px; font-size:13.5px; border-bottom:1px solid #f2f2ef; vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  .epc { background:#eef1f5; color:#4b5563; font-size:11.5px; font-weight:700; border-radius:5px; padding:2px 7px; white-space:nowrap; }
+  td.tk { font-weight:600; white-space:nowrap; width:1%; }
+  td.tk code { color:#a3a3a3; font-size:11.5px; font-weight:400; }
+  .own-star { color:#c2410c; }
+  .pivot { padding:13px 0; border-bottom:1px solid #f2f2ef; }
+  .pivot:last-child { border-bottom:none; }
+  .pivot .pname { font-size:14.5px; font-weight:700; margin-bottom:7px; }
+  .pivot .pname code { color:#a3a3a3; font-size:12px; font-weight:400; }
+  .traj { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:7px; }
+  .sc { font-size:11.5px; border-radius:13px; padding:3px 10px; font-weight:600; color:#3a3a3a; }
+  .sc-bull { background:#d4e8d4; } .sc-bear { background:#e8d4d4; } .sc-watch { background:#ede5cf; } .sc-neu { background:#ececec; }
+  .arrow { color:#c4c4c4; font-size:13px; }
+  .pivot .why { font-size:13px; color:#555; }
+  .pivot .why b { color:#c2410c; font-weight:600; }
+  .mm { background:#f7f7f4; border-radius:8px; padding:15px 17px; margin-bottom:12px; }
+  .mm .mh { display:flex; align-items:center; gap:8px; margin-bottom:7px; flex-wrap:wrap; }
+  .mm .mp { font-size:14.5px; font-weight:700; }
+  .mm .mq { font-size:13px; color:#555; line-height:1.6; border-left:3px solid #d8d8d3; padding-left:11px; margin-top:6px; }
+  .tag-ep { background:#1f2937; color:#fff; font-size:11px; font-weight:700; border-radius:5px; padding:2px 8px; }
+  .tag-cat { background:#ececec; color:#666; font-size:11px; border-radius:5px; padding:2px 8px; }
+  .watch-list { list-style:none; counter-reset:wl; }
+  .watch-list li { font-size:14px; line-height:1.65; margin-bottom:11px; padding-left:24px; position:relative; }
+  .watch-list li::before { content:counter(wl); counter-increment:wl; position:absolute; left:0; top:1px; background:#c2410c; color:#fff; font-size:11px; font-weight:700; width:18px; height:18px; border-radius:50%; text-align:center; line-height:18px; }
+  .mood p { font-size:14.5px; margin-bottom:10px; }
+  .totop { position:fixed; bottom:22px; right:22px; background:#1f2937; color:#fff; text-decoration:none; font-size:13px; padding:9px 14px; border-radius:20px; opacity:.9; }
+  @media (max-width:640px) { .kpi { grid-template-columns:repeat(2,1fr); } .topics { grid-template-columns:repeat(2,1fr); } .sec { padding:20px 18px; } }
+</style>
+</head>
+<body>
+<div id="top"></div>
+
+<div class="hd">
+  <div class="wrap">
+    <h1>股癌月報 · EP668–EP675</h1>
+    <div class="sub">滾動 8 集市場儀表板</div>
+    <div class="win">視窗 2026/6/6 – 2026/7/1　·　主持人 孟恭（Gooaye）</div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="kpi">
+    <div class="cell"><div class="num">8</div><div class="lab">熱門題材</div></div>
+    <div class="cell"><div class="num">62</div><div class="lab">強勢 cover</div></div>
+    <div class="cell"><div class="num">2</div><div class="lab">弱勢 cover</div></div>
+    <div class="cell"><div class="num">22</div><div class="lab">觀望 cover</div></div>
+    <div class="cell"><div class="num">43</div><div class="lab">持倉動作</div></div>
+    <div class="cell"><div class="num">10</div><div class="lab">觀點轉折</div></div>
+    <div class="cell"><div class="num sm">rebalance落幕<br>動能搶快修正中</div><div class="lab">持倉狀態</div></div>
+  </div>
+
+  <div class="toc">
+    <a href="#arc">本月敘事弧</a>
+    <a href="#topics">熱門題材</a>
+    <a href="#flow">資金流向</a>
+    <a href="#actions">持倉動作</a>
+    <a href="#pivots">觀點轉折</a>
+    <a href="#models">5 大心法</a>
+    <a href="#next">下一步觀察</a>
+    <a href="#mood">市場氣氛</a>
+  </div>
+
+  <!-- 1 敘事弧 -->
+  <div class="sec arc" id="arc">
+    <h2>📖 本月敘事弧</h2>
+    <p><b>開頭（EP668–670）：</b>Computex 2026 <span class="hl">RTX Spark 點燃 AIPC</span>、Power Rack 超級電容 ASP 近百倍;隨即遇修正週(Semi-Analysis 空頭被圍剿),SpaceX 上市孟恭申購加碼、衛星火箭股卻大逃殺,被動漲價超預期。</p>
+    <p><b>中段轉折（EP671–673）：</b>主軸從被動擴散到<span class="hl">離散／功率半導體</span>(lead time 99 週)、投信法規打開台積電比重;EP672 台股創新高證實修正結束、一線 IDM 爆起;但下半週業力引爆,EP673 漲多拉回(韓國狼觸發)、電阻接棒、記憶體轉觀望。</p>
+    <p><b>結尾現況（EP674–675）：</b>EP674 上半年總結遇第二波修正,孟恭挪錢買 SpaceX、賣 Tesla,把修正歸因主權基金 rebalance、拋出「巨頭坐不住」論述;EP675(7/1 下半年首集)確認 <span class="hl">rebalance 落幕、反彈確立</span>,IC Design 全面轉強、被動 7 月漲價連發、功率半導體接棒(MOSFET 缺貨),台積電法說成下一個關鍵。</p>
+  </div>
+
+  <!-- 2 熱門題材 -->
+  <div class="sec" id="topics">
+    <h2>🔥 熱門題材 Top 8</h2>
+    <div class="topics">
+      <div class="topic"><span class="tn">被動元件漲價<br>電阻接棒·7月連發</span><span class="tc">8</span></div>
+      <div class="topic"><span class="tn">台積電輪動<br>投信比重·法說</span><span class="tc">6</span></div>
+      <div class="topic"><span class="tn">功率半導體<br>99週·MOSFET缺貨</span><span class="tc">5</span></div>
+      <div class="topic"><span class="tn">IC Design 轉強<br>聯發科/創意/世芯</span><span class="tc">5</span></div>
+      <div class="topic"><span class="tn">記憶體/美光<br>毛利率暴利</span><span class="tc">5</span></div>
+      <div class="topic"><span class="tn">AIPC／Edge<br>RTX Spark</span><span class="tc">4</span></div>
+      <div class="topic"><span class="tn">SpaceX 上市<br>衛星鏈</span><span class="tc">3</span></div>
+      <div class="topic"><span class="tn">載板/玻璃基板<br>南電·TGV</span><span class="tc">3</span></div>
+    </div>
+  </div>
+
+  <!-- 3 資金流向 -->
+  <div class="sec" id="flow">
+    <h2>💰 資金流向</h2>
+
+    <div class="flow-group">
+      <span class="flow-head fh-bull">🟢 強勢</span>
+      <div class="chips">
+        <span class="chip"><span class="star">⭐</span>台積電<code>2330</code><span class="cover">6集</span></span>
+        <span class="chip"><span class="star">⭐</span>被動元件族群<span class="cover">6集</span></span>
+        <span class="chip">聯發科<code>2454</code><span class="cover">5集</span></span>
+        <span class="chip"><span class="star">⭐</span>功率元件族群<span class="cover">4集</span></span>
+        <span class="chip"><span class="star">⭐</span>SpaceX<code>SPCX</code><span class="cover">3集</span></span>
+        <span class="chip"><span class="star">⭐</span>Marvell<code>MRVL</code><span class="cover">3集</span></span>
+        <span class="chip">美光<code>MU</code><span class="cover">3集</span></span>
+        <span class="chip"><span class="star">⭐</span>CrowdStrike<code>CRWD</code><span class="cover">2集</span></span>
+        <span class="chip">記憶體族群<span class="cover">2集</span></span>
+        <span class="chip">英飛凌<code>IFX</code><span class="cover">2集</span></span>
+        <span class="chip">德州儀器<code>TXN</code><span class="cover">2集</span></span>
+        <span class="chip">創意<code>3443</code><span class="cover">1集</span></span>
+        <span class="chip">世芯<code>3661</code><span class="cover">1集</span></span>
+        <span class="chip">南電<code>5471</code><span class="cover">1集</span></span>
+        <span class="chip">載板／ABF<span class="cover">1集</span></span>
+        <span class="chip">一線 IDM<span class="cover">1集</span></span>
+        <span class="chip">Google<code>GOOGL</code><span class="cover">1集</span></span>
+        <span class="chip">富邦金<code>2881</code><span class="cover">1集</span></span>
+        <span class="chip">Lumentum<code>LITE</code><span class="cover">1集</span></span>
+        <span class="chip">Coherent<code>COHR</code><span class="cover">1集</span></span>
+      </div>
+      <div class="flow-note">被動元件橫跨 EP668–675 是本月最連貫主軸(電阻接棒、7 月漲價連發),cover 合計偏高。美光列強勢是 EP674「毛利率暴利」重新看多產業面,但孟恭個人仍久未加碼記憶體(產業看多、個人觀望)。</div>
+    </div>
+
+    <div class="flow-group">
+      <span class="flow-head fh-bear">🔴 弱勢</span>
+      <div class="chips">
+        <span class="chip">衛星／火箭股 RKLB·ASTS<span class="cover">1集</span></span>
+        <span class="chip">消費性電子／手機筆電<span class="cover">1集</span></span>
+      </div>
+    </div>
+
+    <div class="flow-group">
+      <span class="flow-head fh-watch">🟡 觀望</span>
+      <div class="chips">
+        <span class="chip"><span class="star">⭐</span>國巨<code>2327</code><span class="cover">4集</span></span>
+        <span class="chip">安森美<code>ON</code><span class="cover">3集</span></span>
+        <span class="chip">Broadcom<code>AVGO</code><span class="cover">2集</span></span>
+        <span class="chip"><span class="star">⭐</span>蘋果<code>AAPL</code><span class="cover">2集</span></span>
+        <span class="chip">TGV／玻璃基板<span class="cover">1集</span></span>
+        <span class="chip">光通訊族群<span class="cover">1集</span></span>
+        <span class="chip">微軟<code>MSFT</code><span class="cover">1集</span></span>
+      </div>
+      <div class="flow-note">安森美 EP675 因收購被殺轉觀望(市場情緒非基本面);TGV 為 EP675 新題材(題材對但買山頂受傷)。</div>
+    </div>
+
+    <div class="flow-group">
+      <span class="flow-head fh-neu">⚪ 中性觀察池</span>
+      <div class="chips">
+        <span class="chip">AIPC 概念／RTX Spark<span class="cover">4集</span></span>
+        <span class="chip"><span class="star">⭐</span>Tesla<code>TSLA</code><span class="cover">2集</span></span>
+        <span class="chip">消費性 IC Design／DDIC<span class="cover">1集</span></span>
+        <span class="chip">太陽能<span class="cover">1集</span></span>
+        <span class="chip">科技巨頭整體<span class="cover">1集</span></span>
+      </div>
+      <div class="flow-note">Tesla 列中性是 EP674 減碼(壓馬斯克角色轉給 SpaceX、非看壞基本面);消費性 DDIC 是 EP675 點名的成本導向漲價(動一下被灌)。</div>
+    </div>
+  </div>
+
+  <!-- 4 持倉動作 -->
+  <div class="sec" id="actions">
+    <h2>📊 主持人持倉動作</h2>
+
+    <div class="act-block">
+      <span class="act-head fh-bull">🟢 買入／加碼</span>
+      <table>
+        <tr><td><span class="epc">EP670</span></td><td class="tk"><span class="own-star">⭐</span>SpaceX <code>SPCX</code></td><td>申購 + 盤中 160 幾加碼</td></tr>
+        <tr><td><span class="epc">EP670</span></td><td class="tk"><span class="own-star">⭐</span>被動元件</td><td>持續推籌碼、不等季線</td></tr>
+        <tr><td><span class="epc">EP671</span></td><td class="tk">記憶體（台股）</td><td>之前賣太早、追回一部分</td></tr>
+        <tr><td><span class="epc">EP672</span></td><td class="tk">Marvell <code>MRVL</code></td><td>第三次遠征成功、漲幅遠超想像</td></tr>
+        <tr><td><span class="epc">EP673</span></td><td class="tk"><span class="own-star">⭐</span>中小型股</td><td>把資金從台積電拉回、回補</td></tr>
+        <tr><td><span class="epc">EP674</span></td><td class="tk"><span class="own-star">⭐</span>SpaceX <code>SPCX</code></td><td>挪錢加碼（賣弱勢+賣 Tesla 換）</td></tr>
+        <tr><td><span class="epc">EP674</span></td><td class="tk"><span class="own-star">⭐</span>CrowdStrike <code>CRWD</code></td><td>軟體裡走得好、持續在點</td></tr>
+        <tr><td><span class="epc">EP675</span></td><td class="tk"><span class="own-star">⭐</span>動能強勢股</td><td>過去幾天大力幹進去（搶快、後述修正）</td></tr>
+      </table>
+    </div>
+
+    <div class="act-block">
+      <span class="act-head fh-bear">🔴 賣出／減碼</span>
+      <table>
+        <tr><td><span class="epc">EP670</span></td><td class="tk">Starlink 衛星股</td><td>1 月買、2–3 月已賣</td></tr>
+        <tr><td><span class="epc">EP671</span></td><td class="tk"><span class="own-star">⭐</span>被動元件</td><td>開始出處置、考慮往場外移</td></tr>
+        <tr><td><span class="epc">EP673</span></td><td class="tk"><span class="own-star">⭐</span>台積電 <code>2330</code></td><td>加碼後部分減碼回吐</td></tr>
+        <tr><td><span class="epc">EP673</span></td><td class="tk"><span class="own-star">⭐</span>光通／Lumentum <code>LITE</code></td><td>已大幅減碼（轉去買 CPU）</td></tr>
+        <tr><td><span class="epc">EP674</span></td><td class="tk"><span class="own-star">⭐</span>Tesla <code>TSLA</code></td><td>賣一賣換 SpaceX（壓馬斯克角色轉移）</td></tr>
+        <tr><td><span class="epc">EP674</span></td><td class="tk"><span class="own-star">⭐</span>CPU + Marvell <code>MRVL</code></td><td>美股分化、做一點調節</td></tr>
+        <tr><td><span class="epc">EP675</span></td><td class="tk"><span class="own-star">⭐</span>動能操作部位</td><td>隔天軟就換、兩交易日賠掉蠻多錢</td></tr>
+      </table>
+    </div>
+
+    <div class="act-block">
+      <span class="act-head fh-watch">🟡 持有／觀望</span>
+      <table>
+        <tr><td><span class="epc">EP671</span></td><td class="tk">台積電 <code>2330</code></td><td>想加碼但等垃圾盤訊號</td></tr>
+        <tr><td><span class="epc">EP671</span></td><td class="tk"><span class="own-star">⭐</span>美光 <code>MU</code></td><td>續抱（美股不習慣一直動）</td></tr>
+        <tr><td><span class="epc">EP672</span></td><td class="tk">功率半導體／MOSFET</td><td>眼光放這方向、觀察 IDM 產能</td></tr>
+        <tr><td><span class="epc">EP673</span></td><td class="tk"><span class="own-star">⭐</span>被動 + 功率</td><td>續抱、不因小回檔清倉</td></tr>
+        <tr><td><span class="epc">EP674</span></td><td class="tk"><span class="own-star">⭐</span>Palantir <code>PLTR</code></td><td>疲弱、不減碼但也不加碼</td></tr>
+        <tr><td><span class="epc">EP675</span></td><td class="tk"><span class="own-star">⭐</span>被動 + 功率</td><td>手上強勢部位;被動今天新高軟掉</td></tr>
+        <tr><td><span class="epc">EP675</span></td><td class="tk"><span class="own-star">⭐</span>CrowdStrike <code>CRWD</code></td><td>續抱（曾突然崩後沒事）</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 5 觀點轉折 -->
+  <div class="sec" id="pivots">
+    <h2>🔄 觀點轉折</h2>
+
+    <div class="pivot">
+      <div class="pname">聯發科 <code>2454</code></div>
+      <div class="traj">
+        <span class="sc sc-bull">EP668 看多</span><span class="arrow">→</span>
+        <span class="sc sc-watch">EP669 觀望</span><span class="arrow">→</span>
+        <span class="sc sc-bull">EP670 看多</span><span class="arrow">→</span>
+        <span class="sc sc-bull">EP673 看多</span><span class="arrow">→</span>
+        <span class="sc sc-bull">EP675 看多</span>
+      </div>
+      <div class="why"><b>為什麼變：</b>法說 ASIC + 全產品線漲價 + 拿 TriggerFish 案,利多堆疊;EP675 破底後重新爬回、領 IC Design 轉強。</div>
+    </div>
+
+    <div class="pivot">
+      <div class="pname">功率元件／主動元件族群 <code>功率</code></div>
+      <div class="traj">
+        <span class="sc sc-watch">EP673 觀望</span><span class="arrow">→</span>
+        <span class="sc sc-bull">EP674 看多</span><span class="arrow">→</span>
+        <span class="sc sc-bull">EP675 看多</span>
+      </div>
+      <div class="why"><b>為什麼變：</b>從被動元件外溢的次主軸,EP675 <b>MOSFET 缺貨、lead time 全面引爆</b>正式接棒,自我實現預言啟動。</div>
+    </div>
+
+    <div class="pivot">
+      <div class="pname">安森美 <code>ON</code></div>
+      <div class="traj">
+        <span class="sc sc-bull">EP671 看多</span><span class="arrow">→</span>
+        <span class="sc sc-bull">EP672 看多</span><span class="arrow">→</span>
+        <span class="sc sc-watch">EP675 觀望</span>
+      </div>
+      <div class="why"><b>為什麼變：</b>EP675 因<b>收購被市場殺盤</b>(吃人的收購方遭殺),是市場情緒非基本面;業績大環境其實不錯。</div>
+    </div>
+
+    <div class="pivot">
+      <div class="pname">記憶體／美光 <code>MU</code></div>
+      <div class="traj">
+        <span class="sc sc-bull">EP672 看多</span><span class="arrow">→</span>
+        <span class="sc sc-neu">EP673 中性</span><span class="arrow">→</span>
+        <span class="sc sc-bull">EP674 看多</span>
+      </div>
+      <div class="why"><b>為什麼變：</b>EP673 孟恭個人降溫;EP674 以「<b>毛利率 80 幾上看 90 幾</b>」重新看多產業面——產業看多與個人觀望並存。</div>
+    </div>
+
+    <div class="pivot">
+      <div class="pname">國巨 <code>2327</code></div>
+      <div class="traj">
+        <span class="sc sc-bull">EP670 看多</span><span class="arrow">→</span>
+        <span class="sc sc-watch">EP671 觀望</span><span class="arrow">→</span>
+        <span class="sc sc-bull">EP673 看多</span><span class="arrow">→</span>
+        <span class="sc sc-watch">EP674 觀望</span>
+      </div>
+      <div class="why"><b>為什麼變：</b>籌碼過熱→EP673 抗跌轉強→EP674 週五<b>期貨直接跌停</b>(槓桿自殺訊號)、又回觀望。</div>
+    </div>
+
+    <div class="pivot">
+      <div class="pname">Marvell <code>MRVL</code></div>
+      <div class="traj">
+        <span class="sc sc-bull">EP672 看多</span><span class="arrow">→</span>
+        <span class="sc sc-watch">EP673 觀望</span><span class="arrow">→</span>
+        <span class="sc sc-bull">EP674 看多</span>
+      </div>
+      <div class="why"><b>為什麼變：</b>第三次遠征成功大漲→EP673 被移出光通純股轉觀望→EP674 ASIC 部位仍壓到、只做調節。</div>
+    </div>
+  </div>
+
+  <!-- 6 5大心法 -->
+  <div class="sec" id="models">
+    <h2>💡 本月 5 大投資心法</h2>
+
+    <div class="mm">
+      <div class="mh"><span class="tag-ep">EP669</span><span class="tag-cat">資金輪動</span></div>
+      <div class="mp">資金被嚇到後轉向「流動性 + 有數字 + 低估值」——避風港就是下一波領頭羊</div>
+      <div class="mq">修正週資金 location 改變:怕的時候先躲進流動性好、有實際數字、估值不貴的標的,而這些避風港往往就是下一波走出去的領頭羊。修正後立刻反彈的族群要重點追蹤。</div>
+    </div>
+
+    <div class="mm">
+      <div class="mh"><span class="tag-ep">EP671</span><span class="tag-cat">題材過熱訊號</span></div>
+      <div class="mp">當一個族群「全面相信」時,就是籌碼面大於基本面了</div>
+      <div class="mq">被動元件走到大家全面相信、沒有反對聲音時,股價驅動力已經從基本面轉為籌碼面。這種階段還有肉、但要清楚自己在賺哪一段的錢,別把籌碼行情當基本面行情抱。</div>
+    </div>
+
+    <div class="mm">
+      <div class="mh"><span class="tag-ep">EP672</span><span class="tag-cat">投資方法</span></div>
+      <div class="mp">思維放需求端:沒這料,伺服器就拼不出來</div>
+      <div class="mq">最穩妥的判準——從需求端反推:少了哪個料整台伺服器就組不起來,那個環節就是真受惠者;並注意誰手握產能、或 secure 到產能,那才是最大受惠方。</div>
+    </div>
+
+    <div class="mm">
+      <div class="mh"><span class="tag-ep">EP674</span><span class="tag-cat">市場心態</span></div>
+      <div class="mp">修正時鬼故事知道就好、別太認真——消息常跟在價格後面</div>
+      <div class="mq">大盤往下 5–8% 機會很多,每次都有鬼故事(戰爭/升息/泡沫),但新高後回頭看根本沒人在討論。價格變化常跑在基本面前面,不能純 fundamental;下跌持續蔓延時,有時消息是跟在後面的(如去年關稅地震)。</div>
+    </div>
+
+    <div class="mm">
+      <div class="mh"><span class="tag-ep">EP675</span><span class="tag-cat">風控／心態</span></div>
+      <div class="mp">別跟大盤共生死——大盤不會死,你的個股有可能會死</div>
+      <div class="mq">2022 跌一整年,好公司也先跌 50%;但指數成分股每十年換人,有些跌下去就此站不起來(像收費員被 ETC 取代)。汰弱留強是需要的:0050 被動可熬(機制會換人),持有現股要做好「有些東西不會回來」的準備、找新東西上。</div>
+    </div>
+  </div>
+
+  <!-- 7 下一步觀察 -->
+  <div class="sec" id="next">
+    <h2>🎯 下一步觀察重點</h2>
+    <ul class="watch-list">
+      <li>台積電法說的<b>毛利數字</b>、是否如前一兩 Q 美光般短 miss（EP675）——miss 洗盤反而可能是被擠掉票者的下車點。</li>
+      <li>被動元件<b>7 月漲價性數字實際跑到市場</b>（電阻中位數、各料號),以及是否續攻新高、確立領頭羊，或只是插針（EP675）。</li>
+      <li>功率半導體 <b>MOSFET 缺貨與 lead time 變化</b>、二線廠接外拋訂單的黑馬;歐美一線 IDM 99 週是否續拉長（EP672/675）。</li>
+      <li>投信法規打開後,<b>Q2–Q3 投信對台積電持股比重是否拉高</b>,以及是否出現孟恭等的「垃圾盤」訊號（EP671/673 加碼條件）。</li>
+      <li>rebalance 落幕後 <b>7 月資金往哪匯聚</b>——IC Design 誰先衝出、或回娘家 TSM;記憶體/美光孟恭態度（EP673 降溫、EP674 產業面重新看多）。</li>
+    </ul>
+  </div>
+
+  <!-- 8 市場氣氛 -->
+  <div class="sec mood" id="mood">
+    <h2>🌐 市場氣氛總結</h2>
+    <p>這 8 集從 Computex 題材噴發(RTX Spark／超級電容)走過<span class="hl">兩波修正</span>、再到 7 月反彈確立。前段(668–670)Computex 點燃 AIPC、隨即遇修正週(Semi-Analysis 空頭被圍剿),SpaceX 上市孟恭申購加碼、衛星火箭股大逃殺;中段(671–673)主軸從被動擴散到離散／功率半導體(99 週 lead time)、投信法規打開台積電比重,EP672 台股創新高證實修正結束、一線 IDM 爆起,但下半週業力引爆 EP673 漲多拉回(韓國狼)、電阻接棒、記憶體轉觀望;結尾(674–675)EP674 上半年總結遇第二波修正、歸因 rebalance、拋「巨頭坐不住」,EP675(7/1)確認 rebalance 落幕反彈確立、IC Design 全面轉強、被動 7 月漲價連發、功率接棒(MOSFET 缺貨),台積電法說成下一關鍵。</p>
+    <p><b>風險訊號：</b>被動「<span class="hl">全面相信 = 籌碼面大於基本面</span>」(671)、漲價到 terminal 題材有保鮮期(670);被動今天新高軟掉插針(675);跌破季線的台面下貸款不知跌多深(674)。<b>機會點：</b>功率／離散主軸擴散接棒、IC Design 轉強、台積電法說 + 投信比重、二線功率廠接外拋訂單的黑馬。</p>
+    <p>提醒一句:孟恭這 8 集<span class="hl">連續三集自省手癢</span>(EP673「沒邏輯」、EP674「加碼太快」、EP675「搶快兩交易日賠錢」)——連他都栽在回檔搶快,散戶回檔操作更要守紀律、等共識匯聚再動。</p>
+  </div>
+
+</div>
+
+<a class="totop" href="#top">↑ 目錄</a>
+</body>
+</html>

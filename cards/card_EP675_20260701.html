@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP675 筆記</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#fafaf7; font-family:'Noto Sans TC','PingFang TC',sans-serif; color:#1f2937; line-height:1.75; padding:32px 16px 80px; -webkit-font-smoothing:antialiased; }
+  .card { position:relative; max-width:720px; margin:0 auto 20px; background:#fff; border:1px solid #ececec; border-radius:10px; padding:28px; }
+  .card-num { position:absolute; top:16px; right:20px; font-size:12px; color:#c4c4c4; letter-spacing:1px; }
+  .section-label { font-size:12px; color:#9a9a9a; letter-spacing:3px; margin-bottom:8px; }
+  .card-title { font-size:20px; font-weight:700; color:#1f2937; line-height:1.5; margin-bottom:18px; }
+  .cover-title { font-size:26px; font-weight:800; letter-spacing:1px; margin-bottom:4px; }
+  .cover-date { font-size:14px; color:#9a9a9a; margin-bottom:2px; }
+  .block-label { font-size:13px; color:#888; letter-spacing:1px; margin:22px 0 10px; font-weight:600; }
+  .claim { font-size:15.5px; margin-bottom:4px; }
+  .claim .em { font-size:16px; }
+  .mechanism { background:#f7f7f4; border-radius:6px; padding:14px 18px; margin:12px 0; font-size:15px; }
+  .row { margin:10px 0; font-size:15px; }
+  .risk { background:#fdf6e3; border-radius:6px; padding:12px 16px; margin:12px 0; font-size:14.5px; }
+  .action { background:#fff5ec; border-radius:6px; padding:12px 16px; margin:12px 0; font-size:14.5px; }
+  .note { color:#8a8a8a; font-size:13.5px; padding-left:18px; margin:6px 0; line-height:1.6; }
+  .note::before { content:"➤ "; color:#b0b0b0; }
+  .hl { color:#c2410c; font-weight:600; }
+  .own { color:#c2410c; font-weight:700; }
+  .ticker { display:inline-block; background:#f4f4f0; border-radius:4px; padding:2px 9px; margin:3px 4px 3px 0; font-size:13.5px; white-space:nowrap; }
+  .ticker code { color:#a3a3a3; font-size:12.5px; margin-left:3px; }
+  .stock-group { margin:8px 0; }
+  .gl { display:inline-block; color:#888; font-size:13px; margin-right:6px; vertical-align:middle; }
+  .company-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin:18px 0; }
+  .company-col { background:#f7f7f4; border-radius:6px; padding:12px 14px; }
+  .company-col h4 { font-size:12px; color:#9a9a9a; letter-spacing:2px; margin-bottom:8px; font-weight:600; }
+  .company-col .ticker { font-size:12.5px; }
+  .pills { display:flex; flex-direction:column; gap:8px; margin:10px 0; }
+  .pill { background:#f7f7f4; border-radius:6px; padding:10px 14px; font-size:14.5px; line-height:1.65; }
+  .navpills { flex-direction:row; flex-wrap:wrap; }
+  .navpills .pill { padding:6px 13px; font-size:13px; }
+  .navpills .pill a { color:#555; text-decoration:none; }
+  .insights { margin:18px 0 6px; }
+  .insight-pill { display:block; background:#eef3fa; border-left:4px solid #6f9fd0; border-radius:0 6px 6px 0; padding:12px 16px; margin-bottom:9px; font-size:14.5px; color:#2c3e52; text-decoration:none; line-height:1.6; }
+  .insight-pill:hover { background:#e4eef8; }
+  .insight-pill b { color:#1f2d3d; }
+  .action-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-top:8px; }
+  .action-col { background:#f7f7f4; border-radius:8px; padding:16px; }
+  .action-col h4 { font-size:13px; color:#555; letter-spacing:1px; margin-bottom:10px; font-weight:700; }
+  .action-col ul { list-style:none; }
+  .action-col li { font-size:13.5px; line-height:1.6; margin-bottom:10px; padding-left:14px; position:relative; }
+  .action-col li::before { content:"·"; position:absolute; left:2px; color:#b0b0b0; font-weight:700; }
+  .hold-list { margin:6px 0; }
+  .hold-list .row { padding:8px 0; border-bottom:1px solid #f0f0ed; }
+  .hold-list .row:last-child { border-bottom:none; }
+  .totop { position:fixed; bottom:22px; right:22px; background:#1f2937; color:#fff; text-decoration:none; font-size:13px; padding:9px 14px; border-radius:20px; opacity:.9; }
+  @media (max-width:560px) { .company-grid, .action-grid { grid-template-columns:1fr; } .card { padding:22px 18px; } .cover-title { font-size:22px; } }
+</style>
+</head>
+<body>
+<div id="top"></div>
+
+<!-- 卡 1 封面 -->
+<div class="card" id="card-1">
+  <div class="card-num">1 / 9</div>
+  <div class="cover-title">股癌 EP675 筆記</div>
+  <div class="cover-date">2026.07.01　·　下半年第一集</div>
+  <div class="note">發布日以 6/30=昨天推得 7/1;官方標題待 RSS 補</div>
+
+  <div class="company-grid">
+    <div class="company-col">
+      <h4>美股</h4>
+      <span class="ticker">安森美 <code>ON</code></span>
+      <span class="ticker">CrowdStrike <code>CRWD</code></span>
+      <span class="ticker">Corning</span>
+      <span class="ticker">Intel <code>INTC</code></span>
+      <span class="ticker">一線 IDM(歐美/日系)</span>
+    </div>
+    <div class="company-col">
+      <h4>台股</h4>
+      <span class="ticker">台積電 <code>2330</code></span>
+      <span class="ticker">聯發科 <code>2454</code></span>
+      <span class="ticker">創意 <code>3443</code></span>
+      <span class="ticker">世芯 <code>3661</code></span>
+      <span class="ticker">南電 <code>5471</code></span>
+      <span class="ticker">被動元件族群</span>
+      <span class="ticker">功率元件族群</span>
+    </div>
+    <div class="company-col">
+      <h4>其他</h4>
+      <span class="ticker">載板 / ABF</span>
+      <span class="ticker">記憶體</span>
+      <span class="ticker">TGV / 玻璃基板</span>
+      <span class="ticker">太陽能</span>
+    </div>
+  </div>
+
+  <div class="block-label">三句話總結</div>
+  <div class="pills">
+    <div class="pill">7/1 下半年首集:<span class="hl">rebalance 風潮落幕、反彈確立</span>(尾盤灌殺淡化);重點是資金往哪匯聚、誰帶頭攻新高(被動今天軟掉、TSM 轉強回娘家)。</div>
+    <div class="pill">IC Design 全面轉強(聯發科破底爬回/創意/世芯),要分<span class="hl">成本導向</span>(動一下被灌)vs<span class="hl">需求導向</span>(動得兇)漲價;被動元件 7 月漲價連發、全面外溢、魚尾超大;功率半導體接棒(MOSFET 缺貨、自我實現預言)。</div>
+    <div class="pill">台積電法說在即(市場猜毛利高、孟恭防 miss 但看終究到);孟恭<span class="hl">連續第三集自省手癢</span>——這集是搶快兩交易日賠錢,要等新高共識匯聚再搶。</div>
+  </div>
+
+  <div class="block-label">核心洞見</div>
+  <div class="insights">
+    <a class="insight-pill" href="#card-2"><b>① rebalance 落幕、反彈確立</b>——尾盤灌殺淡化;重點轉向誰帶頭攻新高、資金往哪匯聚。</a>
+    <a class="insight-pill" href="#card-3"><b>② IC Design 全面轉強,但要分成本 vs 需求導向漲價</b>——成本轉嫁動一下被灌,需求驅動才動得兇。</a>
+    <a class="insight-pill" href="#card-5"><b>③ 功率半導體接棒:MOSFET 缺貨、自我實現預言</b>——最缺是一線 IDM,但別忘二線廠可能吃到飽賺更多。</a>
+    <a class="insight-pill" href="#card-6"><b>④ 台積電法說在即</b>——市場猜毛利很高,孟恭防 miss(類美光)但看終究會到、短 miss so what。</a>
+    <a class="insight-pill" href="#card-2"><b>⑤ 孟恭連續第三集自省手癢</b>——這集是搶快、兩交易日賠掉蠻多錢,要等共識匯聚再搶。</a>
+  </div>
+
+  <div class="block-label">章節導覽</div>
+  <div class="pills navpills">
+    <div class="pill"><a href="#card-2">市場動態</a></div>
+    <div class="pill"><a href="#card-3">IC Design</a></div>
+    <div class="pill"><a href="#card-4">被動元件</a></div>
+    <div class="pill"><a href="#card-5">功率半導體</a></div>
+    <div class="pill"><a href="#card-6">台積電法說</a></div>
+    <div class="pill"><a href="#card-7">Q&amp;A 觀念輪廓</a></div>
+    <div class="pill"><a href="#card-8">持倉警示</a></div>
+    <div class="pill"><a href="#card-9">行動清單</a></div>
+  </div>
+</div>
+
+<!-- 卡 2 市場動態 -->
+<div class="card" id="card-2">
+  <div class="card-num">2 / 9</div>
+  <div class="section-label">市場動態</div>
+  <div class="card-title">rebalance 落幕、反彈確立——重點轉向誰帶頭攻新高</div>
+
+  <div class="claim"><span class="ic">🎯</span> <span class="em">6/30 結算日大漲、7/1 震盪但尾盤灌殺淡化;外資 rebalance 結束 + 投信法規改好→錢可能往台積電聚攏。</span></div>
+
+  <div class="mechanism">
+    <span class="ic">🔍</span> 台股尾盤已經沒有那種突然灌殺(昨天台積電還有、今天沒了)——上集講的 rebalance 風潮稍微落幕,後面尾盤搞人、盤中砸盤會慢慢淡化。這波反彈象徵意義大(他上集料週三四彈、只多殺一天,該彈的還是出現)。<br><br>
+    複習下跌歸因:戰爭週末美國又轟、週一大家以為完蛋結果 surprise 噴爛→<span class="hl">戰爭不重要(直接看油價)</span>;也沒宣示不升息;最合理還是 rebalance 影響最大。資金匯聚:本來明顯衝被動 + 功率,今天被動在新高附近軟掉(近鄉情怯);TSM 整個轉強、可能回娘家。
+  </div>
+
+  <div class="block-label">⚠️ 孟恭連續第三集自省手癢</div>
+  <div class="risk"><span class="ic">⚠️</span> 他自評最近搶快:過去幾天找轉強的<span class="hl">大力幹進去</span>、隔天軟又看別的轉強就換,<span class="hl">兩個交易日賠掉蠻多錢</span>。修正方向:大多頭可以搶錢,但要等盤面有新高、共識匯聚後再做——太早搶快會被修理。(承 EP673「沒邏輯」、EP674「加碼太快」同一模式)</div>
+
+  <div class="action"><span class="ic">📌</span> 新部位<span class="hl">停看一下、等新趨勢啟動再進</span>,波段的抱著不用管。盯誰帶頭攻新高——若被動續往上=再一次確定領頭羊、帶頭大哥衝特別遠。</div>
+</div>
+
+<!-- 卡 3 IC Design -->
+<div class="card" id="card-3">
+  <div class="card-num">3 / 9</div>
+  <div class="section-label">IC Design</div>
+  <div class="card-title">IC Design 全面轉強,但要分「成本 vs 需求導向」漲價</div>
+
+  <div class="claim"><span class="ic">🎯</span> <span class="em">聯發科破底爬回、創意世芯走多頭;選股關鍵是分辨誰是成本轉嫁、誰是需求驅動。</span></div>
+
+  <div class="mechanism">
+    <span class="ic">🔍</span> 聯發科前面短波段破底後重新爬回,創意、世芯等 IC Design 走出新多頭或站上關鍵均線。但要區分:<br><br>
+    <b>成本導向</b>(如消費性 DDIC):代工廠漲它、它去漲客戶,財務結構會變好看,但通常<span class="hl">動一下就被灌掉</span>。<br>
+    <b>需求導向</b>:代表更長遠的漲價預期,所以<span class="hl">動得特別兇猛</span>。<br><br>
+    朋友金句:「現在市場你<span class="hl">年增率沒有 50% 的,你到底算個殺小</span>」——好東西太多,成長率不夠好的不被選(就算過往表現不錯)。
+  </div>
+
+  <div class="stock-group">
+    <span class="gl">IC Design 轉強</span>
+    <span class="ticker">聯發科 <code>2454</code></span>
+    <span class="ticker">創意 <code>3443</code></span>
+    <span class="ticker">世芯 <code>3661</code></span>
+  </div>
+
+  <div class="risk"><span class="ic">⚠️</span> 掌握產業不等於一定續漲——記憶體台股曾盤整幾個月、基本面越來越好但資金選別的;漲多的不確定是否已反應。</div>
+
+  <div class="action"><span class="ic">📌</span> 在 IC Design 裡找<span class="hl">哪些後面會持續炸營收獲利</span>,避開只是短期反映代工漲價、pass 給客戶的那種。</div>
+</div>
+
+<!-- 卡 4 被動元件 -->
+<div class="card" id="card-4">
+  <div class="card-num">4 / 9</div>
+  <div class="section-label">被動元件</div>
+  <div class="card-title">7 月漲價性連發、全面外溢,但魚尾超大還在初中期</div>
+
+  <div class="claim"><span class="ic">🎯</span> <span class="em">7 月台系日系巨頭各式產品漲價;全面性外溢到非 critical 料號、台系取代日系。</span></div>
+
+  <div class="mechanism">
+    <span class="ic">🔍</span> 這波是<span class="hl">全面性漲價</span>、蔓延到非 critical 料號(之前聚焦 AI 相關),加上大廠產品 EOL(如 Panasonic 某些料件不再支援)→外溢到 tier 2 供應商、原本只拿日系的跑去拿台系。<br><br>
+    小作文判讀:統稱「某公司漲價 100%」一定是亂寫;有<span class="hl">拆料號、寫中位數</span>的可信度較高。大題材結束的訊號是「開營收、大家猜營收」的階段(類記憶體),目前被動還在初/中期、<span class="hl">魚尾超大</span>。
+  </div>
+
+  <div class="stock-group">
+    <span class="gl">族群</span>
+    <span class="own">⭐ 被動元件族群</span>
+    <span class="ticker">電容 / 電阻 / 電感</span>
+  </div>
+
+  <div class="risk"><span class="ic">⚠️</span> 昨天一堆漲停、今天在新高附近軟掉(近鄉情怯),可能只是插針要觀察;孟恭不評論股價、也提醒別回檔就屌追(有人買國巨賠錢還來問)。</div>
+
+  <div class="action"><span class="ic">📌</span> 最晚可等<span class="hl">漲價性數字實際跑到市場</span>(均一化漲價談判後價格會公開)再確認,不用搶在小作文階段。</div>
+</div>
+
+<!-- 卡 5 功率半導體 -->
+<div class="card" id="card-5">
+  <div class="card-num">5 / 9</div>
+  <div class="section-label">功率半導體</div>
+  <div class="card-title">功率接棒:MOSFET 缺貨、自我實現預言,別只盯一線 IDM</div>
+
+  <div class="claim"><span class="ic">🎯</span> <span class="em">功率半導體像稍早的被動元件;MOSFET 缺貨、lead time 全面引爆。最缺是一線 IDM,但二線廠可能吃到飽賺更多。</span></div>
+
+  <div class="mechanism">
+    <span class="ic">🔍</span> <b>自我實現預言:</b>本來有缺但沒這麼缺,因為股價噴、公司派/採購<span class="hl">相信自己很缺→跑去拉貨→缺貨骨牌啟動</span>。過去一兩週價格與 lead time 全面引爆。<br><br>
+    <b>選股別只盯龍頭:</b>no-brainer 保守講一線 IDM(歐美/日系,高壓高功率 AI 伺服器料)是缺料核心;但一線 IDM 若專注做那些料、可能<span class="hl">外拋訂單→中小/二線廠一吃吃到飽、甚至賺得比一線多</span>(類最早記憶體大家只聚焦 HBM、沒想到 D4/D5 更賺)。
+  </div>
+
+  <div class="stock-group">
+    <span class="gl">關聯</span>
+    <span class="own">⭐ 功率元件族群</span>
+    <span class="ticker">一線 IDM(歐美/日系)</span>
+    <span class="ticker">安森美 <code>ON</code></span>
+  </div>
+
+  <div class="risk"><span class="ic">⚠️</span> 功率比被動難審視(不像被動已知哪些料號缺、lead time 多少),還在採購拉貨階段。安森美因收購股價掉是市場情緒、非基本面(業績大環境其實不錯)。</div>
+
+  <div class="action"><span class="ic">📌</span> 盯 lead time 與缺料狀況變化;既找一線 IDM 核心,也<span class="hl">留意接外拋訂單的中小/二線廠</span>(可能是賺最多的黑馬)。</div>
+</div>
+
+<!-- 卡 6 台積電法說 -->
+<div class="card" id="card-6">
+  <div class="card-num">6 / 9</div>
+  <div class="section-label">半導體</div>
+  <div class="card-title">台積電法說在即:市場猜毛利高,孟恭防 miss 但看終究會到</div>
+
+  <div class="claim"><span class="ic">🎯</span> <span class="em">TSM 整個轉強、壓盤告一段落;法說市場猜毛利很高甚至更上層樓,孟恭心態是「就算短 miss so what」。</span></div>
+
+  <div class="mechanism">
+    <span class="ic">🔍</span> 市場已丟出很多數字、猜台積電毛利很高甚至更上一層樓。孟恭的猜法:<span class="hl">類似前一兩 Q 美光大家提早把毛利猜很高、最後 miss</span>,當下很多人把票丟出;但終究該到就會到(要漲價→營收上修→毛利改善),就算短期一兩季 miss so what、只是擠掉一些人的票。<br><br>
+    資金面助攻:外資 rebalance 結束(TSM 昨天還被壓盤、今天壓盤告一段落甚至拉尾)+ 投信法規改好→錢可能往台積電聚攏。
+  </div>
+
+  <div class="stock-group">
+    <span class="gl">關聯</span>
+    <span class="ticker">台積電 <code>2330</code></span>
+    <span class="ticker">TSM</span>
+  </div>
+
+  <div class="risk"><span class="ic">⚠️</span> 法說毛利若如美光般 miss,短線會有人丟票、震盪;孟恭是「暫時往終究會到的方向看待」,不是保證不 miss。</div>
+
+  <div class="action"><span class="ic">📌</span> 把台積電法說當<span class="hl">下半年資金能否回娘家的關鍵事件</span>看;短 miss 造成的洗盤,對長線反而可能是被擠掉票的人的下車點。</div>
+</div>
+
+<!-- 卡 7 QA 心法 -->
+<div class="card" id="card-7">
+  <div class="card-num">7 / 9</div>
+  <div class="section-label">Q&amp;A 觀念輪廓</div>
+  <div class="card-title">別跟大盤共生死、別追共識、別當反指標笑人</div>
+
+  <div class="block-label">別跟大盤共生死(滿倉現貨遇長期回檔)</div>
+  <div class="mechanism"><span class="ic">🔍</span> 2022 跌一整年,好公司也先跌 50%,純現股就軟蛋捏著跟下去。但指數成分股每十年換人,<span class="hl">有些跌下去就此站不起來</span>(像收費員被 ETC 取代、不是它不認真)。汰弱留強是需要的:0050 被動可熬(機制會換人),持有現股要做好「有些東西不會回來」的準備。<b>大盤不會死,你的個股有可能會死。</b></div>
+
+  <div class="block-label">別追共識(彙整各路 Podcaster 跟單)</div>
+  <div class="mechanism"><span class="ic">🔍</span> 「越聽越廣才客觀」他持相反意見——短線博弈太容易<span class="hl">跟散戶站同一邊</span>。策略近期好用是因大多頭 beta 好。寧找幾個純度高的 follow,別追共識(盤不好時共識常買在已反映);反指標就是等事情發生才講。重點是<span class="hl">賺多賠少</span>:錯的損失控制好、對的讓它放飛。</div>
+
+  <div class="block-label">別當反指標笑人 all in(阿伯天罰論)</div>
+  <div class="mechanism"><span class="ic">🔍</span> 別把身邊每個人當白癡——比丘尼成本超低、上山唸經下山贖回超賺;餐廳隔壁可能是看過無數次熱度的少年董。<span class="hl">持續參與市場</span>比空手等崩盤重要:從 2020 看空到現在什麼都沒買到,就算崩 50% 人家還贏你好幾倍。</div>
+
+  <div class="block-label">缺貨骨牌 & 別只盯龍頭(產業心法)</div>
+  <div class="mechanism"><span class="ic">🔍</span> 缺貨會自我實現(股價噴→相信自己很缺→拉貨);龍頭外拋訂單時,<span class="hl">二線廠可能吃到飽賺更多</span>(HBM vs D4/D5)。看漲價要分成本 vs 需求導向。</div>
+</div>
+
+<!-- 卡 8 持倉警示 -->
+<div class="card" id="card-8">
+  <div class="card-num">8 / 9</div>
+  <div class="section-label">持倉警示</div>
+  <div class="card-title">本集主持人持倉動作一覽</div>
+
+  <div class="hold-list">
+    <div class="row"><span class="own">⭐ 被動 + 功率元件</span>　昨天最強族群、手上強勢部位;但被動今天在新高附近軟掉。</div>
+    <div class="row"><span class="own">⭐ 波段強勢股</span>　修正後反彈續抱、離新高近。</div>
+    <div class="row"><span class="own">⭐ 動能操作部位(搶快)</span>　過去幾天大力幹進去、隔天軟又換,兩交易日賠掉蠻多錢→修正做法。</div>
+    <div class="row"><span class="own">⭐ CrowdStrike（CRWD）</span>　持股,曾突然崩後來沒事。</div>
+    <div class="row"><span>被動元件(消費性大哥那檔)</span>　當時嫌消費性沒買→結果是最噴的之一(沒買到)。</div>
+    <div class="row"><span>太陽能</span>　抓過、弄不起來就放棄走了(不是他要的東西)。</div>
+  </div>
+
+  <div class="note">⭐ = 主持人本集明確表達持有或有部位動作。台積電為「關注法說、暫往終究會到方向看待」非明確加碼。</div>
+</div>
+
+<!-- 卡 9 行動清單 -->
+<div class="card" id="card-9">
+  <div class="card-num">9 / 9</div>
+  <div class="section-label">行動清單</div>
+  <div class="card-title">本集可執行三欄整理</div>
+
+  <div class="action-grid">
+    <div class="action-col">
+      <h4>觀察名單</h4>
+      <ul>
+        <li><b>台積電 (2330)</b>：法說 + 資金回娘家的關鍵事件。</li>
+        <li><b>被動 + 功率元件</b>：7 月漲價連發、MOSFET 缺貨,誰帶頭攻新高。</li>
+        <li><b>IC Design(聯發科/創意/世芯)</b>：轉強,找需求導向、會炸營收的。</li>
+        <li><b>一線 IDM + 二線功率廠</b>：核心缺料 + 接外拋訂單的黑馬。</li>
+        <li><b>南電 / ABF 載板</b>：南電上修觸發、重新強勢。</li>
+      </ul>
+    </div>
+    <div class="action-col">
+      <h4>進場 / 觀察訊號</h4>
+      <ul>
+        <li>被動元件<b>是否續往上突破新高</b>（確定領頭羊）,或只是插針。</li>
+        <li>台積電法說<b>毛利數字</b>與 miss 與否;短 miss 洗盤反而可能是下車點。</li>
+        <li>被動<b>漲價性數字實際跑到市場</b>、功率 lead time 變化。</li>
+      </ul>
+    </div>
+    <div class="action-col">
+      <h4>停損 / 不該做</h4>
+      <ul>
+        <li>別<b>太早搶快、大力幹進去</b>——等新高共識匯聚(孟恭都賠了兩天)。</li>
+        <li>別跟大盤共生死、別回檔就屌追被動;<b>個股會死、大盤不會</b>。</li>
+        <li>別追共識/當反指標笑人;別用社群當<b>主要</b>消息來源。</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<a class="totop" href="#top">↑ 目錄</a>
+</body>
+</html>
