@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP676 筆記|2026-07-04</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2a2a2a; line-height: 1.75; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 24px; position: relative; }
+  .card-no { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 8px; }
+  h1 { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+  h2 { font-size: 19px; font-weight: 700; margin-bottom: 14px; line-height: 1.5; }
+  .date { font-size: 13px; color: #9a9a9a; margin-bottom: 20px; }
+  .gl { font-size: 12px; color: #9a9a9a; letter-spacing: 1px; margin: 14px 0 6px; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+  .pill, .insight-pill { background: #f7f7f4; border: 1px solid #ececec; border-radius: 8px; padding: 10px 14px; font-size: 14px; color: #3a3a3a; text-decoration: none; display: block; }
+  a.insight-pill { border-left: 3px solid #c2410c; }
+  a.insight-pill:hover { background: #f0f0eb; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 8px 0 4px; }
+  .grid3 .col { background: #f7f7f4; border-radius: 8px; padding: 10px 12px; font-size: 13px; }
+  .grid3 .col b { display: block; font-size: 12px; color: #8a8a8a; font-weight: 500; margin-bottom: 6px; letter-spacing: 1px; }
+  .ticker { background: #f4f4f0; border-radius: 6px; padding: 2px 8px; font-size: 13px; display: inline-block; margin: 2px 3px 2px 0; white-space: nowrap; }
+  .ticker code { color: #9a9a9a; font-size: 12px; font-family: 'SF Mono', Consolas, monospace; }
+  .core { font-size: 15px; margin: 10px 0; }
+  .core b, .hl { color: #c2410c; font-weight: 700; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: 14.5px; }
+  .mechanism .mtitle { font-size: 12.5px; color: #8a8a8a; letter-spacing: 1px; margin-bottom: 6px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 16px; margin: 8px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 10px 14px; font-size: 13.5px; margin: 10px 0; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; font-size: 14px; margin: 12px 0; }
+  .own { color: #c2410c; font-weight: 700; }
+  blockquote { border-left: 3px solid #ddd; padding: 6px 14px; color: #6a6a6a; font-size: 14px; margin: 12px 0; }
+  .cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px; }
+  .cols3 .c { background: #f7f7f4; border-radius: 8px; padding: 14px; font-size: 13.5px; }
+  .cols3 .c h3 { font-size: 13px; color: #6a6a6a; margin-bottom: 10px; letter-spacing: 1px; }
+  .cols3 li { margin-bottom: 8px; margin-left: 16px; }
+  .totop { position: fixed; right: 20px; bottom: 20px; background: #1f2937; color: #fff; border-radius: 8px; padding: 10px 14px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="wrap">
+
+<!-- 卡 1 封面 -->
+<div class="card" id="card-1">
+  <div class="card-no">1/10</div>
+  <h1>股癌 EP676 筆記</h1>
+  <div class="date">2026-07-04|修正尾聲・功率白熱化・Meta 反向解讀</div>
+
+  <div class="gl">提及公司</div>
+  <div class="grid3">
+    <div class="col"><b>美股</b>
+      <span class="ticker">Meta <code>META</code></span>
+      <span class="ticker">Lumentum <code>LITE</code></span>
+      <span class="ticker">Coherent <code>COHR</code></span>
+      <span class="ticker">NVIDIA <code>NVDA</code></span>
+      <span class="ticker">Amkor(音) <code>AMKR</code></span>
+    </div>
+    <div class="col"><b>台股</b>
+      <span class="ticker">台積電 <code>2330</code></span>
+      <span class="ticker">日月光投控 <code>3711</code></span>
+      <span class="ticker">京元電子 <code>2449</code></span>
+      <span class="ticker">聯發科 <code>2454</code></span>
+      <span class="ticker">國巨 <code>2327</code></span>
+      <span class="ticker">華新科 <code>2492</code></span>
+    </div>
+    <div class="col"><b>族群/其他</b>
+      <span class="ticker">功率元件/MOSFET</span>
+      <span class="ticker">封測族群</span>
+      <span class="ticker">DDIC 龍頭</span>
+      <span class="ticker">Neo Cloud 業者</span>
+      <span class="ticker">記憶體模組廠</span>
+    </div>
+  </div>
+
+  <div class="gl">三句話總結</div>
+  <div class="pills">
+    <div class="pill">修正接近尾聲,解套賣壓漸洗淨,<span class="hl">大盤創新高就是確認訊號</span>,孟恭已完成相對應布局。</div>
+    <div class="pill">功率元件缺貨白熱化(MOSFET 斷貨、7 月密集漲價信),封測被漲 30-50% 接棒——<span class="hl">資金輪動:被動→功率→封裝</span>。</div>
+    <div class="pill">Meta 進軍 Neo Cloud 不是退出 AI,是 <span class="hl">double down</span>:學 Elon 的 Colossus 把 legacy 算力變現。</div>
+  </div>
+
+  <div class="gl">章節導覽</div>
+  <div class="pills">
+    <a class="insight-pill" href="#card-2">市場動態|布局已完成,質押被鎖是被動去槓桿,搶快錯誤已修正</a>
+    <a class="insight-pill" href="#card-3">晶片市場|功率是「房間裡的大象」:斷貨白熱化,掌握產能者為王</a>
+    <a class="insight-pill" href="#card-4">晶片市場|封測漲價 30-50%:AI 排擠效應下的下一棒</a>
+    <a class="insight-pill" href="#card-5">晶片市場|Meta 做 Neo Cloud 該緊張的不是 AI 建置,是同行</a>
+    <a class="insight-pill" href="#card-6">資金地圖|好產業不會漲就沒用:光通在等資金回家</a>
+    <a class="insight-pill" href="#card-7">Q&A|凹單攤平與逢低加碼是同一個動作,差在你是誰</a>
+    <a class="insight-pill" href="#card-8">Q&A|股市是經濟的櫥窗:股價先跑,earning 後到</a>
+    <a class="insight-pill" href="#card-9">Q&A|360 萬夠不夠全職?錢夠了,缺的是空頭驗證</a>
+    <a class="insight-pill" href="#card-10">行動清單|觀察名單・進場訊號・不該做什麼</a>
+  </div>
+</div>
+
+<!-- 卡 2 市場動態 -->
+<div class="card" id="card-2">
+  <div class="card-no">2/10</div>
+  <div class="sec">市場動態</div>
+  <h2>修正尾聲的三個狀態:布局完成、槓桿被動受限、搶快已修正</h2>
+
+  <div class="core">🎯 週三說做強勢股會被修理,週四五盤面氣勢轉變——<b>「看起來蠻有可能準備要射出去」</b>,等大盤供出新高確認修正結束。</div>
+
+  <div class="mechanism">
+    <div class="mtitle">機制|為什麼強勢股先做不動</div>
+    小型修正 → 重新拉起時<b>解套盤傾巢而出</b>(亂追被套的人終於損益兩平就丟)→ 進攻者被打成新賣壓 → 震盪一陣子 → 籌碼洗乾淨 → 下一波拉升才有<span class="hl">延續性</span>。這不是趨勢壞掉,是換手的必經過程。
+  </div>
+
+  <div class="gl">持倉狀態(本集揭露)</div>
+  <div class="core"><span class="own">⭐ 被動元件族群</span>:過去數月盯被動為主,持倉延續。<br>
+  <span class="own">⭐ 未指名布局</span>:「總之我也去完成了相對應的一個布局」——對應被動/功率/封裝轉強方向。<br>
+  <span class="own">⭐ 光通訊</span>:自己的資金目前不在,等市場資金回流。</div>
+
+  <div class="gl">槓桿與心理基準</div>
+  <div class="mechanism">
+    質押額度遭四大券商(富邦/國泰/統一/凱基)同步調降:<b>可借 2 億只給 6000 萬</b>,送質押金不收但可續約;身邊大戶申請不限用途借貸只核 50 萬。孟恭定性:<span class="hl">沒被收傘、只是不讓放大槓桿=被動風控</span>,散戶還款潮影響市場是想太多。
+  </div>
+
+  <div class="note">上集檢討「太搶快」後立刻修正,「過去幾天就蠻舒服的」——EP673 沒邏輯 → EP674 加碼太快 → EP675 搶快賠錢 → EP676 修正完成,手癢三連的收尾。</div>
+
+  <div class="action">📌 跟著他的確認訊號走:<span class="hl">大盤新高前不急著追強勢股</span>,讓解套盤把籌碼洗完。</div>
+</div>
+
+<!-- 卡 3 功率 -->
+<div class="card" id="card-3">
+  <div class="card-no">3/10</div>
+  <div class="sec">晶片市場</div>
+  <h2>功率是「房間裡的大象」:斷貨白熱化,掌握產能者為王</h2>
+
+  <div class="core">🎯 ODM/EMS 反映 <b>MOSFET 部分應用已買不到、直接斷貨</b>;lead time 拉長+漲價醞釀,程度不輸被動元件,近一個月持續惡化。</div>
+
+  <div class="mechanism">
+    <div class="mtitle">機制|誰吃得到這波缺貨</div>
+    功率元件多為 <b>IDM 一條龍</b>(設計→製造→封測→出貨)→ 缺貨時<span class="hl">自己掌握產能=優勢</span>。台廠 fabless 不是不行,但要能 secure 產能:靠母公司、集團資源、或早年簽約的海內外晶圓廠——<b>所以要去看大股東是誰、集團能不能 share 資源</b>。
+  </div>
+
+  <div class="note">7 月會看到密集漲價信——但他強調這是「產業面」,股價很多已噴兩三倍,<span class="hl">發漲價信不代表繼續噴</span>。</div>
+
+  <div class="gl">關聯個股</div>
+  <div class="core">
+    <span class="ticker">MOSFET/功率 IDM(未點名)</span>
+    <span class="ticker">台廠 fabless 功率(看集團)</span>
+    <span class="ticker">功率封裝/導線架</span>
+  </div>
+
+  <div class="risk">⚠️ 反例提醒:記憶體那波,理論上沒產能的模組廠「賣完庫存就沒了」,結果他們敢賭大 cycle、漲價後仍重金搶料甚至向股東募資,最後賺贏原廠——<b>產業結構是傾向,不是判決;事在人為</b>。</div>
+
+  <div class="action">📌 選功率標的先問兩件事:自有產能嗎?沒有的話,<span class="hl">集團裡誰能給他產能?</span>——答不出來就跳過。</div>
+</div>
+
+<!-- 卡 4 封測 -->
+<div class="card" id="card-4">
+  <div class="card-no">4/10</div>
+  <div class="sec">晶片市場</div>
+  <h2>封測被 AI 排擠出的新地位:報價一口氣漲 30-50%</h2>
+
+  <div class="core">🎯 IC Design House 被後段封裝廠漲下季報價 <b>30%起跳、高的四五十%</b>——疫情最缺時也才漲 10-20%。封裝廠現在可以挑客人:「多少錢我才要做」。</div>
+
+  <div class="mechanism">
+    <div class="mtitle">機制|同一套「巴結台積電」邏輯往下複製</div>
+    AI 要贏不只產品好,重點是<b>做得出來</b> → 先進製程大家巴結台積電 → 現在同樣邏輯套到<span class="hl">成熟製程 6/8 吋晶圓廠、後段封測、導線架</span> → 這些廠的敘事會長得像 TSM 後面的 Amkor(音)。毛利輪動:Design House → 晶圓廠 → 現在輪到「以前被當便宜小料」的環節。
+  </div>
+
+  <div class="note">封測產業 bottom 大約就在現在或稍早,但股價已從底部先走一大段——櫥窗先亮燈(見卡 8)。</div>
+
+  <div class="note">功率元件的封裝廠也有類似漲價「正在準備發生中」。</div>
+
+  <div class="gl">關聯個股</div>
+  <div class="core">
+    <span class="ticker">日月光投控 <code>3711</code></span>
+    <span class="ticker">京元電子 <code>2449</code></span>(幫 NVIDIA 做,household name)
+    <span class="ticker">Amkor(音) <code>AMKR</code></span>
+    <span class="ticker">導線架相關</span>
+  </div>
+
+  <div class="risk">⚠️ 「有機會是下一棒」是假設不是結論——他自己的驗證法:剛修正完,<b>看誰轉強帶頭跟大盤一起行高,「就是了」,下週見分曉</b>。</div>
+
+  <div class="action">📌 下週盯一件事:<span class="hl">封測能不能領漲創高</span>。能=下一棒確認;拉起來馬上軟=還不是。</div>
+</div>
+
+<!-- 卡 5 Meta -->
+<div class="card" id="card-5">
+  <div class="card-no">5/10</div>
+  <div class="sec">晶片市場</div>
+  <h2>Meta 做 Neo Cloud:該緊張的不是 AI 建置,是同行</h2>
+
+  <div class="core">🎯 市場主流解讀「Meta 不玩了」;孟恭反向:這是 <b>double down</b>——把 Hopper 等 legacy 算力外租變現,然後<span class="hl">建更多</span>。</div>
+
+  <div class="mechanism">
+    <div class="mtitle">機制|一個出海口如何解開內部僵局</div>
+    Meta 內部本有分歧:有人想衝、CFO 踩煞車 → 算力可外租後,「用不到=浪費」的顧慮消失 → <b>公司變共識,可以盡量衝</b>。模仿對象就是 Elon:SpaceX/X 旗下 Colossus 出租<b>一年回本</b>,「媽的我也要賺」——這跟他抄 IG、抄 Reels 的行為模式一致,絕不缺席。
+  </div>
+
+  <blockquote>因為他們其實不怕花錯錢,只怕沒有花到錢沒有跟到,花錯錢對我來講是小事情。</blockquote>
+
+  <div class="note">反面思考:如果多一個玩家就能讓算力供需平衡,反而代表算力沒想像中緊俏——所以短期是消息面衝擊,長期建置故事不變,甚至換檔加速。</div>
+
+  <div class="note">半認真的補充:臉書詐騙帳號封不掉(後台關鍵字也擋不掉),金主很大部分是詐騙——真找不到正規客戶,<b>灰色經濟也是出海口</b>,Meta 的下限可能比純 Neo Cloud 業者更能打。</div>
+
+  <div class="gl">關聯個股</div>
+  <div class="core">
+    <span class="ticker">Meta <code>META</code></span>(long-term bullish 解讀)
+    <span class="ticker">Neo Cloud 業者(未點名)</span>(bearish:超級癡漢入場,會少掉一些玩家)
+  </div>
+
+  <div class="risk">⚠️ xAI 有點卡關、Meta 是否卡關「看起來像」但未確認——他自己說這只是當下資訊的判斷,後面要用各系列動向驗證。</div>
+
+  <div class="action">📌 別跟著「Meta 退出 AI」的標題交易;<span class="hl">盯 Meta 後續 capex 指引</span>——加速=他的解讀對,縮手=市場對。</div>
+</div>
+
+<!-- 卡 6 資金地圖 -->
+<div class="card" id="card-6">
+  <div class="card-no">6/10</div>
+  <div class="sec">資金地圖</div>
+  <h2>好產業不會漲就沒用:光通在等資金回家</h2>
+
+  <div class="core">🎯 一直被敲碗聊光通,不聊的理由只有一個:<b>「資金不在,故事就不在」</b>——這麼會抓題材的人為什麼不聊?想一下嘛。</div>
+
+  <div class="mechanism">
+    <div class="mtitle">機制|資金輪動的當前路徑</div>
+    被動元件(已確定)→ <span class="hl">功率元件(醞釀發生中)</span> → 封裝(候選下一棒)→ 或是後面<b>錢回台積</b>。光通這種「你說好不好?好啊,不會漲啊」的標的,產業再對,法人資金不在就是橫盤——記憶體當年也橫盤一大段才走後面那波。
+  </div>
+
+  <div class="note">之前光通超熱時不聊是市場敏感度:那時候聊,跌下來一定被怪「高檔拱人」,即便低檔早講過。</div>
+
+  <div class="note">新催化劑:SemiAnalysis(音)跟發行商搞了光通 ETF+另一檔,選股內容可以看,「有機會短彈」。</div>
+
+  <div class="gl">關聯個股</div>
+  <div class="core">
+    <span class="ticker">Lumentum <code>LITE</code></span>
+    <span class="ticker">Coherent <code>COHR</code></span>
+    <span class="ticker">台股光通相關</span>
+    <span class="ticker">台積電 <code>2330</code></span>(輪動終站候選)
+  </div>
+
+  <div class="risk">⚠️ 給抱怨仔的兩句話:「之前這麼貴你都願意追,現在便宜了為什麼不要?」以及「你可以選擇抱怨,你也可以選擇加入」。</div>
+
+  <div class="action">📌 光通測試法:<span class="hl">ETF 消息拉起來若馬上軟掉=資金仍不在</span>,不用急著卡位;守住就再評估。</div>
+</div>
+
+<!-- 卡 7 QA 紀律 -->
+<div class="card" id="card-7">
+  <div class="card-no">7/10</div>
+  <div class="sec">Q&A 觀念輪廓</div>
+  <h2>凹單攤平與逢低加碼是同一個動作,差在你是誰</h2>
+
+  <div class="core">🎯 同一行為:CEO 做叫<b>人中龍虎</b>,高中生做叫 <b>reckless stupid</b>——凹單攤平 vs 逢低加碼,差在「<span class="hl">你是不是廢韭菜</span>」。</div>
+
+  <div class="mechanism">
+    <div class="mtitle">機制|工具無罪,人分強弱</div>
+    左側交易(越跌越買、疊半年一年)有人做得跟鬼一樣,有人做得跟屎一樣——<b>光選標的的眼光就不一樣</b>。有 conviction、真懂公司的人跌破成本一直買=沒問題;跑來 QA 問「被套越買越多怎麼辦」的=就算後來對了也是賽到。0050 持續攤平,換個角度叫<span class="hl">定期定額</span>。追高也是可行策略。別糾結名詞。
+  </div>
+
+  <div class="note">右側動能(漲就買)過去幾年好用,但過去一兩週被修理——不同階段適用不同策略,單策略的人要認得出環境變了。</div>
+
+  <blockquote>任何一個錯,然後你還會持續的一直去踩……你就是賭狗,簡單來講是這樣,所以就注定失敗。</blockquote>
+
+  <div class="note">他自認的美德:不重複犯錯。上集檢討太搶快 → 立刻修正 → 這集「過去幾天就蠻舒服的」。檢討要有動作,不是儀式。</div>
+
+  <div class="action">📌 自我檢測一題:你的攤平有<span class="hl">出場劇本</span>嗎?有=策略;沒有=凹單,別騙自己。</div>
+</div>
+
+<!-- 卡 8 QA 櫥窗 -->
+<div class="card" id="card-8">
+  <div class="card-no">8/10</div>
+  <div class="sec">Q&A 觀念輪廓</div>
+  <h2>股市是經濟的櫥窗:股價先跑,earning 後到</h2>
+
+  <div class="core">🎯 聽眾研究 DDIC 龍頭發現 2027 展望都差,股價卻右上——研究沒錯,<b>錯在用 earning 的尺去量 re-rating 的行情</b>。</div>
+
+  <div class="mechanism">
+    <div class="mtitle">機制|三層拆解</div>
+    ① <b>成本導向漲價</b>:DDIC 被上游漲,轉嫁「幾乎都有出去」→ 業績平淡但獲利改善 → transition 階段<span class="hl">股價先跑</span>。<br>
+    ② <b>PE re-rating</b>:工具機切機器人,營收佔比 3-5% 卻用機器人估值乘本業 EPS——「earning 並沒有跟,可是 PER 那個 ratio 先拉上去了」。<br>
+    ③ <b>博弈資金</b>:聯發科手機下修大逃殺後,市場買單 AI 故事連拉漲停——賭到直接拉、賭錯殺回來,<span class="hl">轉折發生時你等不到便宜價</span>。
+  </div>
+
+  <div class="note">「股市是經濟的櫥窗」在大多數環境成立——別看短線,拉三個月半年,趨勢形成=有東西正在巧妙改變中。封測就是實例:產業 bottom 在現在,股價已先走一大段。</div>
+
+  <div class="risk">⚠️ 消費性還沒好轉:HP/Lenovo 拉貨只是補庫存,不會持續——補庫存能炒短線,但「要有延續性,一定要有後面的東西」。</div>
+
+  <div class="action">📌 看到「基本面差但股價強」先分類:<span class="hl">成本轉嫁?re-rating?博弈卡位?</span>——三種行情三種玩法,別用同一把尺。</div>
+</div>
+
+<!-- 卡 9 QA 全職 -->
+<div class="card" id="card-9">
+  <div class="card-no">9/10</div>
+  <div class="sec">Q&A 觀念輪廓</div>
+  <h2>360 萬夠不夠全職?錢夠了,缺的是空頭驗證</h2>
+
+  <div class="core">🎯 台股淨值 12 萬做到 360 萬想離職——以他自身經驗<b>「絕對是可以」</b>,前提:沒家庭、沒孩子、沒人跟你要生活費。很多人本金更小就出來了。</div>
+
+  <div class="mechanism">
+    <div class="mtitle">機制|真正的門檻不是錢</div>
+    2023 至今是大多頭——<b>「沒有經歷過空頭的洗禮,你不太能夠確定到底你適不適合做這一行」</b>。多頭裡的 30 倍,無法區分實力與環境。但反過來說,哪個工作不是做了才知道?<span class="hl">可能五十中選一、百中選一適合全職,想試就試</span>,選擇之後自己承擔。
+  </div>
+
+  <div class="note">態度的轉變值得注意:「以前我可能會講你這樣忽視風險,現在我都覺得,你覺得可以試就試看看」——不再用過來人經驗擋別人的路。</div>
+
+  <div class="note">同場加映他的 AI 工作流:研究型任務清一色 Perplexity Comet(音)、分析用 Claude、影片長文 NotebookLM、快答 Google——「過往要看 5-10 個網頁才有結論的,全部丟給它」。</div>
+
+  <div class="action">📌 想全職先做壓力測試:<span class="hl">把 2022 那種年份套在你的策略上</span>,回撤扛得住再遞辭呈。</div>
+</div>
+
+<!-- 卡 10 行動清單 -->
+<div class="card" id="card-10">
+  <div class="card-no">10/10</div>
+  <div class="sec">行動清單</div>
+  <h2>本週追什麼、等什麼、不做什麼</h2>
+
+  <div class="gl">持倉警示(本集)</div>
+  <div class="core"><span class="own">⭐ 被動元件</span> 持有中|<span class="own">⭐ 未指名轉強布局</span> 已完成|<span class="own">⭐ 搶快部位</span> 已修正|質押額度被四大券商調降(被動風控)|光通資金不在。</div>
+
+  <div class="cols3">
+    <div class="c">
+      <h3>觀察名單</h3>
+      <ul>
+        <li><b>功率 IDM/集團 fabless</b>——MOSFET 斷貨白熱化,看誰有產能</li>
+        <li><b>封測</b> 日月光 <code>3711</code>、京元電 <code>2449</code>——漲價 30-50%,下一棒候選</li>
+        <li><b>被動</b> 國巨 <code>2327</code>、華新科 <code>2492</code>——7 月漲價信兌現度</li>
+        <li><b>光通</b> LITE/COHR——ETF 催化測試</li>
+        <li><b>台積電 <code>2330</code></b>——資金輪動終站候選</li>
+      </ul>
+    </div>
+    <div class="c">
+      <h3>進場訊號</h3>
+      <ul>
+        <li>大盤<b>供出新高</b>=修正結束確認</li>
+        <li>功率 <b>7 月漲價信連發</b>+封測領漲跟大盤行高=下一棒確認</li>
+        <li>光通 ETF 消息<b>拉起不軟</b>=資金回流初步訊號</li>
+        <li>Meta capex 指引<b>上修</b>=double down 解讀獲驗證</li>
+      </ul>
+    </div>
+    <div class="c">
+      <h3>不該做什麼</h3>
+      <ul>
+        <li>漲價信見報才追——<b>股價已噴 2-3 倍,產業面≠股價面</b></li>
+        <li>拉起馬上軟的題材硬凹——資金不在就是不在</li>
+        <li>同一個錯再踩一次——<b>賭狗,注定失敗</b></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+<a class="totop" href="#top">↑ 目錄</a>
+</body>
+</html>
