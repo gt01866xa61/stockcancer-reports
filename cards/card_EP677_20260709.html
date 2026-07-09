@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP677 筆記|2026-07-09</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="wrap">
+
+<!-- 卡 1 封面 -->
+<div class="card" id="card-1">
+  <div class="num">1/12</div>
+  <h1>股癌 EP677 筆記</h1>
+  <div class="date">2026-07-09|降槓震盪・SemiAnalysis 戰犯化・軟體劇本兌現</div>
+
+  <div class="grid3">
+    <div class="col">
+      <h4>美股</h4>
+      <span class="ticker">NVIDIA <code>NVDA</code></span>
+      <span class="ticker">CrowdStrike <code>CRWD</code></span>
+      <span class="ticker">Palantir <code>PLTR</code></span>
+      <span class="ticker">Cloudflare <code>NET</code></span>
+      <span class="ticker">Apple <code>AAPL</code></span>
+      <span class="ticker">Google <code>GOOGL</code></span>
+      <span class="ticker">特斯拉 <code>TSLA</code></span>
+      <span class="ticker">SpaceX <code>SPCX</code></span>
+    </div>
+    <div class="col">
+      <h4>台股</h4>
+      <span class="ticker">台積電 <code>2330</code></span>
+      <span class="ticker">國巨 <code>2327</code></span>
+      <span class="ticker">華新科 <code>2492</code></span>
+      <span class="ticker">功率元件族群</span>
+      <span class="ticker">CCL 族群</span>
+      <span class="ticker">封測族群</span>
+    </div>
+    <div class="col">
+      <h4>其他</h4>
+      <span class="ticker">光通訊 <code>LITE/COHR</code></span>
+      <span class="ticker">Wafer 族群</span>
+      <span class="ticker">IPC 族群</span>
+      <span class="ticker">韓股(類比)</span>
+      <span class="ticker">SemiAnalysis</span>
+    </div>
+  </div>
+
+  <div class="pills">
+    <div class="pill">中小震盪不是行情終結,是<b>劇烈降槓</b>+輪動換棒——強勢族群還在,沒牌可打才要怕。</div>
+    <div class="pill">SemiAnalysis 在燒 credit:報告都有但書,錯在<b>不對的時間丟爭議內容</b>;真兇是沒 faith 的閱聽人。</div>
+    <div class="pill">EP457 的軟體劇本正在兌現,但孟恭自己沒上車——資金卡在 CPU,<b>CPU 軟掉才會移</b>。</div>
+  </div>
+
+  <div class="sec">章節導覽</div>
+  <a class="insight-pill" href="#card-2">02 質押被鎖=強制 chill:滿倉微調的修正生存學</a>
+  <a class="insight-pill" href="#card-3">03 中小殺盤的真相:槓桿打滿的人只能亂殺</a>
+  <a class="insight-pill" href="#card-4">04 輪動換棒+資金牌型:法人塞得進哪裡,錢就去哪裡</a>
+  <a class="insight-pill" href="#card-5">05 SemiAnalysis 的 credit 危機:對的內容,錯的時間</a>
+  <a class="insight-pill" href="#card-6">06 Trade R&D Project:Kyber 遞延為什麼不是新聞</a>
+  <a class="insight-pill" href="#card-7">07 槓桿世代論:2.5 倍的人,被五六倍的人掃成保守派</a>
+  <a class="insight-pill" href="#card-8">08 軟體 narrative 大翻轉:市場超常犯錯的活教材</a>
+  <a class="insight-pill" href="#card-9">09 長抱雙軌:NVDA 理性抱 vs TSLA 信仰抱</a>
+  <a class="insight-pill" href="#card-10">10 熊市必然論+爆掉重建流程</a>
+  <a class="insight-pill" href="#card-11">11 持倉警示</a>
+  <a class="insight-pill" href="#card-12">12 行動清單</a>
+</div>
+
+<!-- 卡 2 市場動態 -->
+<div class="card" id="card-2">
+  <div class="num">2/12</div>
+  <div class="sec">市場動態</div>
+  <h2>質押被鎖=強制 chill:滿倉微調的修正生存學</h2>
+  <div class="core"><span class="tag">🎯</span>孟恭 4 月起質押額度被券商一路鎖到現在,滿倉、無法加碼上槓——這波比別人 chill,不是心態好,是<span class="hl">根本沒有籌碼可以動</span>。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 機制</span>
+    額度被鎖 → 沒錢加碼 → 前面買的成本已拉遠 → 回檔無感 → 只能在族群輪動間微調。反過來說:若額度沒被卡,他<b>反而可能做降槓桿操作</b>——被動鎖槓意外變成風控。身邊超多人這陣子減碼甚至退場放暑假,他無動作純粹因為無彈藥。
+  </div>
+  <div class="note">修正判準不變:不敢說結束,但「不破前低+可放大錢的族群與 5 日 10 日線上的強勢族群持續攻新高」=市場還沒走完。</div>
+  <div class="note">反向警訊只有一個:哪天發現<b>沒牌可打</b>(找不到任何主流),才是系統性風險要出現——去年三四月的經典感受。</div>
+  <div class="risk">⚠️ 越來越多人討論行情是否到頂。他的答案:預判無意義,宣稱猜到高點的人過去講了十幾次,總有一次會中。</div>
+  <div class="action">📌 把「還有沒有主流族群」當成唯一的系統性風險溫度計,而不是聽誰喊頂。</div>
+</div>
+
+<!-- 卡 3 降槓 -->
+<div class="card" id="card-3">
+  <div class="num">3/12</div>
+  <div class="sec">晶片市場</div>
+  <h2>中小殺盤的真相:槓桿打滿的人只能亂殺</h2>
+  <div class="core"><span class="tag">🎯</span>市場找不到夠大的壞消息 justify 這波中小回檔——最合理的解釋是一場<span class="hl">劇烈的降槓行為</span>。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 機制</span>
+    追短期轉強的人習慣一次把槓桿打滿 → 扛不了任何回檔 → 只要一回檔就必須亂殺 → 現股明明只跌 3-5%,股期卻先摸跌停。這就是「最近追搶就被修理」的結構性原因:殺你的不是基本面,是<b>別人的保證金</b>。
+  </div>
+  <div class="note">韓股是這套玩法的完全體:槓桿 ETF 盛行到官方點名、整個市場被玩成大賭場,近期在降槓;台股是縮小版,投機氣息同步被掐。</div>
+  <blockquote>市場才不是一定是對的,市場超常犯錯的。</blockquote>
+  <div class="action">📌 降槓環境下,股期比現股先跌停=槓桿斷頭訊號而非基本面訊號,別跟著恐慌出貨。</div>
+</div>
+
+<!-- 卡 4 輪動+資金牌型 -->
+<div class="card" id="card-4">
+  <div class="num">4/12</div>
+  <div class="sec">晶片市場</div>
+  <h2>輪動換棒+資金牌型:法人塞得進哪裡,錢就去哪裡</h2>
+  <div class="core"><span class="tag">🎯</span>光通集體轉弱、被動進入修正——但功率、CCL、Wafer、封測都還強。這不是行情結束,是<span class="hl">換下個東西</span>,輪動才是主軸。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 資金牌型(本集新框架)</span>
+    法人總是要找地方去。<b>塞得進的</b>:被動龍頭(國巨、華新科市值夠大可 parking)、CCL、封測;<b>塞不進的</b>:功率強勢主流股 market cap 多在數百億——再強也吃不到大法人的錢。「我在 AI 這麼多牌可以打,到底加碼哪一張」要先看這張牌吃不吃得到大資金。
+  </div>
+  <div class="stock-group">
+    <div class="gl">強勢在線(5 日 10 日線上)</div>
+    <span class="ticker">功率元件族群</span>
+    <span class="ticker">CCL 族群</span>
+    <span class="ticker">Wafer 族群</span>
+    <span class="ticker">封測族群</span>
+  </div>
+  <div class="stock-group">
+    <div class="gl">修正中(季線上)/ 轉弱</div>
+    <span class="ticker">被動元件族群(需橫盤整理)</span>
+    <span class="ticker">光通訊 <code>LITE/COHR</code>(集體轉弱)</span>
+  </div>
+  <div class="note">判準兩極:掉季線以下=轉弱、大哥換人當;守 5 日 10 日線直接往上=主流。</div>
+  <div class="note">左側買家買季線下的東西也是一種策略(horizon 更遠),與動能派互不吹——動能派最近才是被修理的一群。</div>
+  <div class="action">📌 加碼順位參考:先挑「強勢 × 法人塞得進」的交集(CCL、封測),功率的強是散戶行情的強。</div>
+</div>
+
+<!-- 卡 5 SemiAnalysis A -->
+<div class="card" id="card-5">
+  <div class="num">5/12</div>
+  <div class="sec">晶片市場</div>
+  <h2>SemiAnalysis 的 credit 危機:對的內容,錯的時間</h2>
+  <div class="core"><span class="tag">🎯</span>市場把這波修正怪到 SemiAnalysis 頭上。孟恭的裁決:報告內容多半站得住腳,但它正在<span class="hl">快速燒掉多年累積的 credit</span>。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 燒 credit 的機制</span>
+    報告內文都有「big picture 不變」的但書 → 速食時代大家只看標題 → 被刺激性包裝轉發 → 在盤面脆弱的時點引爆 → 市場需要戰犯,抓到這個不長眼的。真正的因果:到底是報告打下去,還是閱聽人沒 faith 看到風吹草動就亂賣?<b>是後者,但大家一定怪前者</b>。
+  </div>
+  <div class="note">孟恭與它的淵源:2023-24 就是訂戶、和 Dylan Patel 聊過天;後來退訂——AI agent 已能全開圖取得資訊,訂閱報告拿不到消息 alpha。</div>
+  <div class="note">當兵教過:不打勤不打懶只打不長眼。在關鍵時點連丟爭議內容,X/Reddit 燒起來可能引來檢舉調查——對照中國某三字分析師講光通看法被人肉到收攤。</div>
+  <div class="note">自家的生存法則因此而來:被空頭叫囂過之後,只講長期產業趨勢、不摸頭不喊空,「不方便評論」是保命句。</div>
+  <div class="risk">⚠️ 對持股人的實戰意義:未來 SemiAnalysis 每發一篇,市場短線波動都可能被放大——這是情緒週期,不是基本面週期。</div>
+</div>
+
+<!-- 卡 6 R&D project -->
+<div class="card" id="card-6">
+  <div class="num">6/12</div>
+  <div class="sec">晶片市場</div>
+  <h2>Trade R&D Project:Kyber 遞延為什麼不是新聞</h2>
+  <div class="core"><span class="tag">🎯</span>Kyber NVL144 midplane 遞延傳聞讓市場緊張——但在產業圈這<span class="hl">根本不是新聞</span>,Computex 時節目就提過。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 Technology ≠ Product(產業朋友框架)</span>
+    很多人在 trade R&D project:東西還在實驗研發 → 市場高度預期先炒上去 → 再因「無法如期量產」殺下來。公司派視角:產品從頭到尾還沒登場,你們自嗨完自己殺下來,<b>時間到該推的還是會推</b>。GB200 當年市場喊一年 7-10 萬 rack,後來下調股價崩,大家喊有人打擊——其實是自己把預期墊太高。
+  </div>
+  <div class="note">Kyber 細節:正交背板的 PTFE 材料混搭仍在測試(成本+耐熱),原定搭 VR Rubin,現在說可能到 Rubin Ultra 甚至 Feynman;中國廠商持續測料中。</div>
+  <div class="note">同樂會比喻:全班期待 7/10 同樂會,有同學說颱風改 7/12——同樂會還是會開,只是那位同學惹到人了。</div>
+  <div class="note">800VDC 滲透率明年 5%,悲觀派說要完;孟恭:5% 叫很好——市場連一兩年內看不到營收的東西都在買。</div>
+  <div class="action">📌 判讀所有「遞延/下修」新聞的框架:短期逆風 vs 長線改變。前者是雜音甚至買點,後者才需要動部位。</div>
+</div>
+
+<!-- 卡 7 槓桿世代 -->
+<div class="card" id="card-7">
+  <div class="num">7/12</div>
+  <div class="sec">槓桿世代</div>
+  <h2>2.5 倍的人,被五六倍的人掃成保守派</h2>
+  <div class="core"><span class="tag">🎯</span>孟恭當年「槓桿開爆、死了算」的巔峰=融資 2.5 倍(自備款四成買十成)。看完新世代的玩法,他正式改口:<span class="hl">以後自稱保守派投資人</span>。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 新世代的槓桿工程</span>
+    四代同堂、槓上加槓、股期保證金回衝再買、融資沖掉再融回去的不停 roll、企業識別證信貸疊融資——隨便算五六倍起跳。代價:遇一兩根跌停整個部位直接被掃掉,爆掉再站回來對他們是家常便飯。他當年被催繳過但從未被斷頭,都提早自己處理。
+  </div>
+  <div class="note">他不想當提醒風險的老人:風險大家自己要知道,不知道的早晚被抬出去,多說無益。</div>
+  <div class="note">但給聽眾的底線:貪快衝一發之前,先想 downside 會不會讓全家進負債地獄——慢慢來比較快,快快上去全家可能受影響。</div>
+  <div class="note">時代註腳:SpaceX 上市後,一天的震盪就是一個巴菲特一輩子的錢。</div>
+  <blockquote>你要知道你建立的一切都是不容易的,要守住,守住是最重要的事情。</blockquote>
+  <div class="action">📌 槓桿上限自我檢查:你的部位能不能扛兩根跌停?不能,就是在賭命不是在投資。</div>
+</div>
+
+<!-- 卡 8 軟體翻轉 -->
+<div class="card" id="card-8">
+  <div class="num">8/12</div>
+  <div class="sec">Q&A 觀念輪廓</div>
+  <h2>軟體 narrative 大翻轉:市場超常犯錯的活教材</h2>
+  <div class="core"><span class="tag">🎯</span>EP457 預告的「Token 成本下降→軟體股數字變好」已在財報與電話會議兌現;SaaSpocalypse 與 AI 搶工作兩大恐慌 narrative 同步翻轉。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 資安案例:一次完整的市場錯判</span>
+    Mythos 模型發布 → 市場喊資安要完蛋 → 資安股殺 → 事後全部走回右上角。孟恭當時手上有 CrowdStrike、自認有愛與偏見地不信邪,結果對了。結論:市場超常犯錯,<b>犯錯時抓到對的東西,報酬最巨額的在這邊</b>;投資不健忘,回測集體誤判是最好的教材。
+  </div>
+  <div class="note">SaaS 不能籠統打包,硬體同理:IPC 有出 server 但 CPU 叫不到照樣出不了貨,跑不贏五哥十哥——有做 server ≠ 好標的。</div>
+  <div class="note">他的軟體名單:Palantir、CrowdStrike、Cloudflare(兩支型態蠻好)。但當時規劃布局軟體最後沒去——資金跑進 CPU 且還好好的,「搭車搭到一半」。</div>
+  <div class="stock-group">
+    <div class="gl">軟體優先名單</div>
+    <span class="ticker">Palantir <code>PLTR</code></span>
+    <span class="ticker">CrowdStrike <code>CRWD</code> <span class="own">⭐</span></span>
+    <span class="ticker">Cloudflare <code>NET</code></span>
+  </div>
+  <div class="stock-group">
+    <div class="gl">CPU 軟掉後的候選去處</div>
+    <span class="ticker">Apple <code>AAPL</code></span>
+    <span class="ticker">Google <code>GOOGL</code></span>
+    <span class="ticker">軟體轉強者</span>
+  </div>
+  <div class="action">📌 追蹤條件觸發:CPU 部位轉弱+PLTR/CRWD/NET 續攻=他的資金移轉訊號,也是你的觀察模板。</div>
+</div>
+
+<!-- 卡 9 長抱雙軌 -->
+<div class="card" id="card-9">
+  <div class="num">9/12</div>
+  <div class="sec">Q&A 觀念輪廓</div>
+  <h2>長抱雙軌:NVDA 理性抱 vs TSLA 信仰抱</h2>
+  <div class="core"><span class="tag">🎯</span>同樣長期持有,理由可以完全不同——重點是<span class="hl">自己要分清楚哪些部位是哪種抱法</span>。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 兩種持有邏輯</span>
+    <b>NVDA(理性抱)</b>:2018 買顯卡時代進場,AI transition 後更愛;一直是超級便宜的公司+AI 強者,便宜 factor 到現在還在。2023-24 自承:從頭抱著會比挑來挑去績效更好(後見之明)。<br><br>
+    <b>TSLA(信仰抱)</b>:老實講是信仰股,懶得屌估值,就是要買一點。SpaceX 出現後賣掉一些 Tesla 換進去;最想要的劇本是 SpaceX 回頭把 Tesla 收進去——一個母艦,對馬斯克的資金一份打進去,不用拆兩份。
+  </div>
+  <div class="note">GG 聖盔谷論(本集最有畫面的比喻):出事時大家跑進聖盔谷;台積電像你老媽,被女友甩了被上司羞辱才想起媽媽的好——修正時市場的本能是躲回 GG。</div>
+  <div class="note">AI 核心的估值悖論:台股最核心 TSMC、美股最核心 NVIDIA,都交易在最便宜估值,快樂好朋友的交易成數反而高很多——市場喜好度問題,不是資訊落差。</div>
+  <div class="action">📌 幫每檔長抱部位貼標籤:理性抱要定期驗證便宜 factor 還在不在;信仰抱要誠實承認它不受估值紀律管轄,並控制倉位。</div>
+</div>
+
+<!-- 卡 10 熊市+重建 -->
+<div class="card" id="card-10">
+  <div class="num">10/12</div>
+  <div class="sec">Q&A 觀念輪廓</div>
+  <h2>熊市必然論+爆掉重建流程</h2>
+  <div class="core"><span class="tag">🎯</span>回檔兩萬點(四成多)會不會發生?「<span class="hl">不久的將來一定都是有機會</span>」——但預測時點沒有意義,心理準備才有。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 熊市座標</span>
+    定義:高檔 -20%。2025 關稅與 2020 肺炎都算但 recover 快;真痛的是 2018 與 2022(時間久)。2022 他自己也毀了兩三成、全年沒賺——同期卻有空神遇季線無腦屌空賺翻。每個人都有不屬於自己的盤。真跌四成大家一定喊 AI 泡沫,到時見招拆招。一兩萬點就有人喊崩盤,一路喊到四萬多點;怕修正就不投資,修正可能發生在五六萬點之後。
+  </div>
+  <div class="mechanism">
+    <span class="tag">🔍 爆掉重建流程(給重回一百萬起點的聽眾)</span>
+    ① 會反思的一定不是邊角料——識別問題=解決問題的一半 ② 先穩住、先不要把洞放大 ③ 藉由小小的嘗試把信心做回來,再放大 ④ 當一個擊不倒的人:開花結果前面通常最黑暗 ⑤ 或者承認不是做交易的料——買指數放著也是不錯的選項。
+  </div>
+  <div class="note">上半年座標:兩位來家泡茶的少年股神都漲成大戶;沒吃到輪動也別遺憾,大盤 +50%(以前一年期待 8-12%),知足常樂。</div>
+  <div class="action">📌 現在就寫下你的熊市 SOP(減碼順序、保命金、不做什麼),因為它一定會來,只是不知道何時。</div>
+</div>
+
+<!-- 卡 11 持倉警示 -->
+<div class="card" id="card-11">
+  <div class="num">11/12</div>
+  <div class="sec">持倉警示</div>
+  <h2>本集持倉揭露 <span class="own">⭐ 8 筆</span></h2>
+  <table>
+    <tr><th>標的</th><th>動作/狀態</th></tr>
+    <tr><td><span class="own">⭐</span> 質押額度(整體)</td><td>4 月起被券商一路鎖到現在,無法加碼上槓</td></tr>
+    <tr><td><span class="own">⭐</span> 整體持倉</td><td>滿倉,只能在族群輪動間微調,無法大額加碼</td></tr>
+    <tr><td>整體槓桿(假設)</td><td>若額度未被卡,反而可能做降槓桿操作</td></tr>
+    <tr><td><span class="own">⭐</span> CPU 部位(未指名)</td><td>持有中(光通轉入),目前都還好好的</td></tr>
+    <tr><td><span class="own">⭐</span> CrowdStrike <code>CRWD</code></td><td>持有中,自認有愛與偏見</td></tr>
+    <tr><td><span class="own">⭐</span> NVIDIA <code>NVDA</code></td><td>2018 顯卡時代進場長抱至今,過程有調節</td></tr>
+    <tr><td><span class="own">⭐</span> 特斯拉 <code>TSLA</code> → SpaceX <code>SPCX</code></td><td>信仰股;SpaceX 出現後賣部分 TSLA 轉入 SPCX</td></tr>
+    <tr><td>軟體股(PLTR/NET 方向)</td><td>曾規劃布局但未執行——資金跑進 CPU</td></tr>
+  </table>
+  <div class="note">狀態總結:被動風控延續(EP676 額度遭調降 → EP677 確認 4 月起就被鎖)、滿倉、無彈藥,chill 是結構性的。</div>
+</div>
+
+<!-- 卡 12 行動清單 -->
+<div class="card" id="card-12">
+  <div class="num">12/12</div>
+  <div class="sec">行動清單</div>
+  <h2>觀察・訊號・紀律</h2>
+  <div class="cols3">
+    <div class="box">
+      <h4>觀察名單</h4>
+      <ul>
+        <li><b>CCL/封測</b>——強勢 × 法人塞得進的交集,加碼優先順位</li>
+        <li><b>功率族群</b>——5 日 10 日線守住與否,主流地位的生命線</li>
+        <li><b>被動元件</b>——季線上橫盤整理是否完成</li>
+        <li><b>PLTR/CRWD/NET</b>——型態續強=軟體劇本第二階段</li>
+        <li><b>台積電 2330</b>——法說內容與市場消化方式</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>進場訊號</h4>
+      <ul>
+        <li>大盤不破前低+強勢族群續攻新高=行情未完,續留</li>
+        <li>TSM 法說開出、預期墊高的殺盤若快速收復=多方確認</li>
+        <li>CPU 轉弱同時軟體轉強=資金移轉窗口開啟</li>
+        <li>被動橫盤完成再上=第二波入場點</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>停損/不該做</h4>
+      <ul>
+        <li>降槓環境別追短期轉強——隔天轉弱殺爆是結構不是意外</li>
+        <li>別當預言家提前猜頂,見招拆招</li>
+        <li>槓桿別學 roll 派:扛不了兩根跌停的部位不要建</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+<a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
