@@ -54,10 +54,15 @@
   .watchlist li { font-size: 14.5px; margin: 0 0 12px 20px; }
   .mood { font-size: 15px; }
   .foot { text-align: center; font-size: 12px; color: #b0b0b0; margin-top: 32px; }
+  .toc { background: #1f2937; border-radius: 10px; padding: 14px 18px; margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .toc a { color: #fff; background: rgba(255,255,255,.12); border-radius: 6px; padding: 4px 12px; font-size: 13px; text-decoration: none; }
+  .toc a:hover { background: rgba(255,255,255,.24); }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #1f2937; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
   @media (max-width: 720px) { .kpi { grid-template-columns: repeat(4, 1fr); } .tgrid { grid-template-columns: repeat(2, 1fr); } }
 </style>
 </head>
 <body>
+<div id="top"></div>
 <div class="wrap">
 
 <!-- Header + KPI -->
@@ -75,8 +80,20 @@
   </div>
 </div>
 
+<!-- 目錄 -->
+<div class="toc">
+  <a href="#narrative">故事線</a>
+  <a href="#topics">熱門題材</a>
+  <a href="#flow">資金流向</a>
+  <a href="#shifts">看法轉變</a>
+  <a href="#moves">持倉動作</a>
+  <a href="#laws">5 大心法</a>
+  <a href="#watch">觀察重點</a>
+  <a href="#mood">氣氛總結</a>
+</div>
+
 <!-- 故事線 -->
-<div class="block story">
+<div class="block story" id="narrative">
   <h2>這 8 集的故事線<span class="en">NARRATIVE</span></h2>
   <p><span class="date-tag">6/13 EP670</span> SpaceX 上市,申購+盤中 160 幾加碼,「當支持太空夢想」;衛星/火箭股同步大逃殺,示範 rumor 實現後題材股提款。被動元件漲價速度超預期——本來估六七次到 terminal,照這速度兩次就到。估值心法定錨:「估在別人前面」才是重點。</p>
   <p><span class="date-tag">6/14–6/18 EP671–672</span> 功率半導體浮出水面:歐美 IDM lead time 跑到 99 週,國際現象非單一喊盤;台股指數再創新高,<span class="hl">證實修正結束</span>。方法論定錨:「沒這料伺服器就拼不出來」——思維放需求端。台積電像娘家媽媽,錢在外面受傷才會萬箭歸宗。</p>
@@ -88,7 +105,7 @@
 </div>
 
 <!-- 熱門題材 -->
-<div class="block">
+<div class="block" id="topics">
   <h2>熱門題材 Top 8<span class="en">HOT TOPICS</span></h2>
   <div class="tgrid">
     <div class="t"><b>被動元件:漲價→修正</b><span><span class="cnt">7 集</span>|漲價信連發、兩次到 terminal→677 進入修正、季線上待橫盤</span></div>
@@ -103,7 +120,7 @@
 </div>
 
 <!-- 資金流向 -->
-<div class="block">
+<div class="block" id="flow">
   <h2>資金流向<span class="en">FLOW MAP</span></h2>
   <div class="flowgroup">
     <div class="gtitle">🟢 強勢(最新看多|累計 60 cover)</div>
@@ -192,7 +209,7 @@
 </div>
 
 <!-- 看法轉變 -->
-<div class="block">
+<div class="block" id="shifts">
   <h2>看法轉變<span class="en">SENTIMENT SHIFTS</span></h2>
   <div class="shift"><b>被動元件族群</b> <span class="own">⭐</span>
     <div class="path"><span class="schip bull">EP670 看多</span>→<span class="schip watch">EP671 觀望</span>→<span class="schip bull">EP673-676 看多</span>→<span class="schip watch">EP677 觀望</span></div>
@@ -265,7 +282,7 @@
 </div>
 
 <!-- 持倉動作 -->
-<div class="block">
+<div class="block" id="moves">
   <h2>持倉動作總表<span class="en">POSITION MOVES・49 筆</span></h2>
   <div class="grp buy">▲ 加碼/買進(9)</div>
   <table>
@@ -331,7 +348,7 @@
 </div>
 
 <!-- 心法 -->
-<div class="block">
+<div class="block" id="laws">
   <h2>本期 5 大心法<span class="en">MENTAL MODELS</span></h2>
   <div class="law">
     <div class="ep-tag">EP670・6/13|估值觀</div>
@@ -361,7 +378,7 @@
 </div>
 
 <!-- 觀察重點 -->
-<div class="block">
+<div class="block" id="watch">
   <h2>下一步觀察重點<span class="en">WATCHLIST</span></h2>
   <ul class="watchlist">
     <li><b>大盤前低攻防</b>——EP677 判準:不破前低+強勢族群續攻新高=行情未完;跌破前低則修正劇本重寫。</li>
@@ -373,7 +390,7 @@
 </div>
 
 <!-- 氣氛總結 -->
-<div class="block mood">
+<div class="block mood" id="mood">
   <h2>市場氣氛總結<span class="en">MOOD</span></h2>
   <p>這 8 集是一條完整的輪動長征:SpaceX 上市的煙火開場,功率缺貨接棒被動,rebalance 大逃殺洗出結算日大漲,然後劇本翻頁——中小降槓震盪,光通被換下場,CCL/封測站上打擊區。加權指數始終在右上角,孟恭的座標系從頭到尾只有一句:<span class="hl">強勢族群還在,就不是行情結束,是換下個東西</span>。個人狀態是被動風控的極致:質押 4 月起被鎖、滿倉無彈藥,chill 是結構性的;手癢三連在 676 修正完畢,677 看完新世代五六倍槓桿後正式改口自稱保守派。風險訊號只認一個——哪天發現沒牌可打;機會點在 TSM 法說與被動橫盤後的第二波。用兩條線撐過震盪:還在新高的不擔心、不做會讓自己立刻被秒殺的事。氣氛評語:<span class="hl">降槓的雜訊,蓋不住輪動的主旋律</span>。</p>
 </div>
@@ -381,5 +398,6 @@
 <div class="foot">股癌月報 2026-07|來源:EP670–EP677 逐字稿彙整|產出 2026-07-09|本報告僅為 Podcast 內容整理,非投資建議</div>
 
 </div>
+<a class="backtop" href="#top">↑ 目錄</a>
 </body>
 </html>
