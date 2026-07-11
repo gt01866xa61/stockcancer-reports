@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP678 筆記|2026-07-11</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="wrap">
+
+<!-- 卡 1 封面 -->
+<div class="card" id="card-1">
+  <div class="num">1/12</div>
+  <h1>股癌 EP678 筆記</h1>
+  <div class="date">2026-07-11|Meta 證實 double down・漲價總盤點・光通內部輪動</div>
+
+  <div class="grid3">
+    <div class="col">
+      <h4>美股</h4>
+      <span class="ticker">Meta <code>META</code></span>
+      <span class="ticker">NVIDIA <code>NVDA</code></span>
+      <span class="ticker">Credo <code>CRDO</code></span>
+      <span class="ticker">Astera Labs <code>ALAB</code></span>
+      <span class="ticker">Amphenol <code>APH</code></span>
+      <span class="ticker">ADI <code>ADI</code></span>
+    </div>
+    <div class="col">
+      <h4>台股/族群</h4>
+      <span class="ticker">功率元件族群</span>
+      <span class="ticker">被動元件族群</span>
+      <span class="ticker">封測族群</span>
+      <span class="ticker">導線架族群</span>
+      <span class="ticker">記憶體族群</span>
+    </div>
+    <div class="col">
+      <h4>光通拆分</h4>
+      <span class="ticker">光通訊 <code>LITE/COHR</code></span>
+      <span class="ticker">矽光/InP 雷射</span>
+      <span class="ticker">VCSEL/AOC</span>
+      <span class="ticker">MicroLED</span>
+      <span class="ticker">Neo Cloud</span>
+    </div>
+  </div>
+
+  <div class="pills">
+    <div class="pill">Zuckerberg 親口證實:Meta 不退出、要<b>滿倉殺進去</b>——EP676 的反向判讀對了。</div>
+    <div class="pill">漲價擴散到最上游:導線架 lead time <b>3-4 個月拉到 7-8 個月</b>,封裝轉單被它卡死。</div>
+    <div class="pill">光通沒死,死的是舊敘事:narrow-fast 被賣、wide-slow 撐盤——<b>大家不要的是你手上的那個光通</b>。</div>
+  </div>
+
+  <div class="sec">核心洞見</div>
+  <a class="insight-pill" href="#card-4">投報率算得出來的那天,朦朧美就死了——Neo Cloud 四五十倍的估值要面對現實鐵拳</a>
+  <a class="insight-pill" href="#card-5">「營收平、獲利跳」是漲價循環的財報指紋——封測已現形,功率是下一個驗證場</a>
+  <a class="insight-pill" href="#card-8">光進銅退殺爛的 Credo/Astera 如今全在新高:市場會做白痴的事,錯殺是輪動的固定戲碼</a>
+  <a class="insight-pill" href="#card-9">一百條雜訊線不如兩條純線;先做,打嘴砲的人一輩子停在打嘴砲的地方</a>
+
+  <div class="sec">章節導覽</div>
+  <div class="navpills">
+    <a href="#card-2">02 市場動態</a>
+    <a href="#card-3">03 Meta 證實</a>
+    <a href="#card-4">04 朦朧美終結</a>
+    <a href="#card-5">05 漲價盤點</a>
+    <a href="#card-6">06 導線架瓶頸</a>
+    <a href="#card-7">07 光通輪動</a>
+    <a href="#card-8">08 錯殺教訓</a>
+    <a href="#card-9">09 先做+純線</a>
+    <a href="#card-10">10 信仰風控</a>
+    <a href="#card-11">11 持倉警示</a>
+    <a href="#card-12">12 行動清單</a>
+  </div>
+</div>
+
+<!-- 卡 2 市場動態 -->
+<div class="card" id="card-2">
+  <div class="num">2/12</div>
+  <div class="sec">市場動態</div>
+  <h2>散漲、區間盤,資金全塞「短期看得到營收獲利」的東西</h2>
+  <div class="core"><span class="tag">🎯</span>颱風休市遇上富台指週五+3 點多%——以前放假是散崩,這次是<span class="hl">散漲</span>。但區間盤本質沒變:上追被幹、下又跌不下去。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 當前資金取向</span>
+    他與身邊朋友的資金全鎖定「短期內看得到營收獲利噴出」的標的。<b>記憶體是例外</b>:數字雖好但太擁擠,中大資金不再往裡塞,改塞「記憶體之後」準備開獎的元件。高估值族群要輪到,條件只有一個:大盤新高——NASDAQ 與加權其實都不遠。
+  </div>
+  <div class="note">別想靠關市場閃危險:東南亞某國股市跌深關市場,一開盤直接一波跌到位。該來的閃不掉。</div>
+  <div class="note">週一不代表照噴富台的幅度,夜盤已收斂,還要看國際盤,只是少了跳空的氣氛味。</div>
+  <div class="action">📌 盤面策略:區間盤別追突破,等新高確認;現階段選股緊貼「下一兩季就開獎」的營收獲利能見度。</div>
+</div>
+
+<!-- 卡 3 Meta 證實 -->
+<div class="card" id="card-3">
+  <div class="num">3/12</div>
+  <div class="sec">晶片市場</div>
+  <h2>Zuckerberg 親口蓋章:不是退出,是滿倉殺進去</h2>
+  <div class="core"><span class="tag">🎯</span>EP676 頂著 X 上「Meta要退出算力的競賽」的聲浪做反向判讀;本週 Zuckerberg 訪問親口證實——<span class="hl">要更用力做多</span>。Meta 跳上去,NVIDIA 同步攻 200、連紅 K 重新站上季線。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 為什麼節目當時敢反向</span>
+    論據從沒變過:① Meta 未來 booking 的 data center GW 數很高——要縮不會這樣 book ② 舊 Hopper 不會浪費:訓練換 VR Rubin/Feynman 後,舊卡做 inferencing 或外租 ③ Meta 本身就是 AI 最大買方之一,找到出海口是加碼不是撤退。
+  </div>
+  <div class="note">順手回擊 Michael Burry 的折舊質疑:GPU 是有機會賺錢的資產——後段還能出租變現,年限拉長與巨額投資都可被 justify。</div>
+  <div class="note">自我節制:走勢已破解看空敘事,但不用短線走勢講故事——回檔兩根就會被說敘事又變了,長線訊號才適合觀察。</div>
+  <div class="stock-group">
+    <div class="gl">本段標的</div>
+    <span class="ticker">Meta <code>META</code></span>
+    <span class="ticker">NVIDIA <code>NVDA</code></span>
+  </div>
+  <div class="action">📌 判讀模板:巨頭的真實意圖看 booking 與 capex 承諾,不看 X 上意見領袖的標題。</div>
+</div>
+
+<!-- 卡 4 朦朧美終結 -->
+<div class="card" id="card-4">
+  <div class="num">4/12</div>
+  <div class="sec">晶片市場</div>
+  <h2>投報率算得出來的那天,朦朧美就死了</h2>
+  <div class="core"><span class="tag">🎯</span>Meta 進場的二階效應:算力單價下行、價格趨穩、投報率可計算——<span class="hl">Neo Cloud 的朦朧美正式終結</span>。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 朦朧美定律</span>
+    股票在朦朧美時最會漲:算不到終局、不知道紅多久的東西特別噴。當賣鏟子的玩家變多、Legacy GPU 租金強烈回落、預期投報率算得出來——過去交易四五十倍的 Neo Cloud 與炒本夢比的供應鏈,要面對現實鐵拳。倍數收斂後,只有真的更賺錢,低倍數才推得動股價。
+  </div>
+  <div class="note">受惠面:算力單價更便宜(總價不一定——reasoning 燒更多 token),AI native 軟體的 margin floor(現抓 5、60%)有機會上修。</div>
+  <div class="note">「越爛越噴」迷思一併破解:絕大多數是你資訊能力不好、還不知道它噴什麼——當年 ODM/OEM 買方早就在買,散戶看到營收衝進去,買在水岸第一排。</div>
+  <div class="risk">⚠️ 持有 Neo Cloud 或高倍數算力供應鏈者:估值錨已從夢想切換到現金流,舊倍數回不去是基準情境。</div>
+  <div class="action">📌 檢查手上每檔高估值持股:它的投報率還算不出來嗎?算得出來的,用價值股標準重新審它。</div>
+</div>
+
+<!-- 卡 5 漲價盤點 -->
+<div class="card" id="card-5">
+  <div class="num">5/12</div>
+  <div class="sec">晶片市場</div>
+  <h2>漲價總盤點:「營收平、獲利跳」是循環的財報指紋</h2>
+  <div class="core"><span class="tag">🎯</span>AI 關鍵零組件連老梗題材都還在漲,<span class="hl">非常恐怖</span>。四條線同時進行,成熟度各異。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 四線狀態</span>
+    <b>記憶體</b>:下季續漲但合約報價有相當收斂;產業無敗象(巨頭採購決心不受影響),年增率因基期收斂——已射到宇宙。<br>
+    <b>被動</b>:絕大多數漲價成功(少數失敗、不點名),後一兩季持續;母雞帶小雞,大廠漲、中小跟調。<br>
+    <b>功率</b>:ADI 發漲價信=全面漲價確認,缺貨持續擴張。<br>
+    <b>封測</b>:部分廠營收年增持平、獲利大跳——這就是漲價循環或稼動率拉滿的<b>財報指紋</b>;稼動率是這類廠最關鍵指標,放滿後毛利獲利跳很快。
+  </div>
+  <div class="stock-group">
+    <div class="gl">漲價確認中</div>
+    <span class="ticker">被動元件族群</span>
+    <span class="ticker">功率元件族群</span>
+    <span class="ticker">封測族群</span>
+    <span class="ticker">ADI <code>ADI</code>(漲價信)</span>
+  </div>
+  <div class="note">美台反差:理論上最缺的美股 IDM 反而軟掉,台股功率/MOSFET/封裝走得漂亮——市場 lag 重演(當年日美被動先動,台灣一動射到爛)。</div>
+  <div class="action">📌 掃功率元件財報:出現「營收平、獲利跳」組合的,就是漲價循環進行中的鐵證。</div>
+</div>
+
+<!-- 卡 6 導線架 -->
+<div class="card" id="card-6">
+  <div class="num">6/12</div>
+  <div class="sec">晶片市場</div>
+  <h2>導線架:最上游的新瓶頸,但最缺不一定最漲</h2>
+  <div class="core"><span class="tag">🎯</span>lead time 從 3-4 個月拉到 <span class="hl">7-8 個月</span>(精英廠商),漲價約 10-20%(隨國際銅價)——多方 source 拼湊出的產業實況。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 為什麼卡在它</span>
+    產業端朋友找封裝 source:封裝廠都很滿,轉去 B 廠——B 有封裝產能,卻買不到導線架。特殊環節卡住整條轉單路徑,被動元件與功率元件都有類似情形。
+  </div>
+  <div class="note">資金面潑冷水:他手上觀察的導線架相關標的偏橫盤(前面漲過、現在休息)。最缺不一定最漲——市場在搶資金,故事太多,sentiment 轉差時好東西也沒人買。</div>
+  <div class="note">相關標的合計約四五檔(原話「司機檔」判讀,待確認)。</div>
+  <div class="risk">⚠️ 產業缺貨(基本面)與股價表現(資金面)是兩條線,別把前者直接當買進理由。</div>
+  <div class="action">📌 導線架可當封測強度的先行指標:它的 lead time 若續拉,封測的獲利跳行情就有延續性。</div>
+</div>
+
+<!-- 卡 7 光通輪動 -->
+<div class="card" id="card-7">
+  <div class="num">7/12</div>
+  <div class="sec">晶片市場</div>
+  <h2>光通內部輪動:narrow-fast 讓位 wide-slow</h2>
+  <div class="core"><span class="tag">🎯</span>週末拉整個族群看(聽眾服務、自己不介入):過去最香的矽光+磷化銦雷射(narrow and fast)轉弱被賣,<span class="hl">VCSEL/AOC/MicroLED(wide and slow)相對硬</span>——光通內部自己在換大哥。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 兩種技術路線</span>
+    <b>narrow and fast</b>:矽本身不發光,放磷化銦雷射打光;頻寬迭代=每代重新設計元件,成本指數化提升。<br>
+    <b>wide and slow</b>:VCSEL 便宜、消費性行之多年;速率不夠就多打幾層,配 fiber array unit 或透鏡收斂,把瓶頸移走。<br>
+    應用場域本不衝突:in-rack 用銅(已證實)、scale out/across 用光;narrow-fast 打遠、wide-slow 用在 scale up/in——光銅並行論的延伸版。
+  </div>
+  <div class="note">市場的選擇很誠實:放量、狀況變好的矽光被賣;更遠更夢的 MicroLED(2030 後、比 CPU 還遠)反而撐在上面——朦朧美定律又一例。</div>
+  <div class="note">催化劑:把光通喊下去的 SemiAnalysis 自己發了含光通元件的 ETF,可能用資金行情 jumpstart;前提是大盤新高(高估值族群的通行證)。</div>
+  <div class="stock-group">
+    <div class="gl">族群拆分</div>
+    <span class="ticker">矽光/InP 雷射(轉弱)</span>
+    <span class="ticker">VCSEL/AOC(相對硬)</span>
+    <span class="ticker">MicroLED(遠夢)</span>
+    <span class="ticker">光通訊 <code>LITE/COHR</code></span>
+  </div>
+  <div class="action">📌 手上有光通的先分類:你的是 narrow-fast 還是 wide-slow?同名族群、不同命運。</div>
+</div>
+
+<!-- 卡 8 錯殺教訓 -->
+<div class="card" id="card-8">
+  <div class="num">8/12</div>
+  <div class="sec">晶片市場</div>
+  <h2>光進銅退的屍體都在新高:市場會做白痴的事</h2>
+  <div class="core"><span class="tag">🎯</span>當年「光進銅退」吵翻,銅相關全被殺爛——他自己的持股 Credo 與 Astera Labs 跌到爛掉。如今回頭看:<span class="hl">兩檔全部在新高位置,還漲蠻多</span>。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 錯殺的解剖</span>
+    Credo 與 Astera 根本不是百分之百的銅,只是聯想性高(真正高純度銅概念是 Amphenol);但市場瘋炒一個敘事時,把不純血的對手全部當狗賣,賣得很狠甚至破底。輪動殺高估值是固定戲碼,理性上不衝突的東西,市場照殺。
+  </div>
+  <blockquote>其實不是大家不要光通訊,大家可能不要的是,你手上的那個光通訊。</blockquote>
+  <div class="note">同樣的劇本正在光通內部重演:矽光被賣不代表矽光技術死了,narrow-fast 與 wide-slow 應用場域根本不同。</div>
+  <div class="note">投機者的自我檢查:整天問基本面卻做短線=用基本面安撫自己、不承認投機。投機該看的是資金流向,錢要回來需要 a while。</div>
+  <div class="stock-group">
+    <div class="gl">本段標的</div>
+    <span class="ticker">Credo <code>CRDO</code></span>
+    <span class="ticker">Astera Labs <code>ALAB</code></span>
+    <span class="ticker">Amphenol <code>APH</code>(真銅概念)</span>
+  </div>
+  <div class="action">📌 建一份「被敘事錯殺」觀察清單:基本面沒壞、只因聯想性被輪動殺破底的,是下一輪的新高候選。</div>
+</div>
+
+<!-- 卡 9 先做+純線 -->
+<div class="card" id="card-9">
+  <div class="num">9/12</div>
+  <div class="sec">Q&A 觀念輪廓</div>
+  <h2>先做,然後把一百條雜訊線砍到剩兩條純的</h2>
+  <div class="core"><span class="tag">🎯</span>兩個相連的紀律:行動面「先做」、資訊面「砍到剩純線」——都是對抗<span class="hl">清談陷阱</span>的武器。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 先做哲學</span>
+    永遠在問問題=根本沒下場的證據。先用最低曝險方式下場(部位控小),做了才會產生更多真問題與新想法;工作、生活、投資同一套。
+  </div>
+  <blockquote>你與其有所謂的100條線,然後這100條線都是雜訊,你不如有兩條超級純的。</blockquote>
+  <div class="mechanism">
+    <span class="tag">🔍 純線標準</span>
+    某個 Design House 或某個 Fab 的線,兩條就能做股票。訊源管理像交友:久了自然識別誰帶好料、誰只索取;達到 reach limit(知道太多反而沒幫助)就主動砍。他自己現在完全不聽投資 Podcast——沒時間、幫助不大;菜逼八多聽多看仍有益。
+  </div>
+  <div class="action">📌 盤點你的資訊源:標出真正影響過你決策的前兩名,其餘降級或退訂。</div>
+</div>
+
+<!-- 卡 10 信仰風控 -->
+<div class="card" id="card-10">
+  <div class="num">10/12</div>
+  <div class="sec">Q&A 觀念輪廓</div>
+  <h2>信仰是風控的延伸:只外包無法掌控的尾部風險</h2>
+  <div class="core"><span class="tag">🎯</span>被問為何拜觀音不拜祖先,答案意外揭露一套完整的<span class="hl">風險分層哲學</span>。</div>
+  <div class="mechanism">
+    <span class="tag">🔍 分層邏輯</span>
+    可掌控的一律自己扛(人定勝天);無法掌控且順位最前的(孩子健康),能做的全做了才轉向神靈——半夜衝林口觀音廟的起點。功利主義信仰:有 answer 就信、沒用就換一個,對我好就湧泉以報(神明 KPI=香油錢與回訪)。核心永遠先謝醫生,神靈是迷惘時的能量,不是歸因對象。
+  </div>
+  <div class="note">絕不許願財富資產(早期會、現在完全不會):萬物等價交換、不貪心——許願清單只留無法掌控的事。</div>
+  <div class="note">生涯附贈題:婚前單身無家累,就該做外人看來猖狂的事(數位遊牧)——以後會被家庭 slash 掉的選項,要趁年輕用掉;薪水差三倍才需要猶豫。</div>
+  <div class="action">📌 照抄這套分層:列出你的擔憂清單,可掌控的排行動、不可掌控的排接受——中間不留灰色地帶。</div>
+</div>
+
+<!-- 卡 11 持倉警示 -->
+<div class="card" id="card-11">
+  <div class="num">11/12</div>
+  <div class="sec">持倉警示</div>
+  <h2>本集持倉揭露 <span class="own">⭐ 5 筆</span></h2>
+  <table>
+    <tr><th>標的</th><th>動作/狀態</th></tr>
+    <tr><td><span class="own">⭐</span> 記憶體(整體)</td><td>早早已下車絕大多數,僅定期轉述產業訊息</td></tr>
+    <tr><td>光通訊族群</td><td>維持不介入,資金與注意力皆未投入(本集研究屬聽眾服務)</td></tr>
+    <tr><td>Credo <code>CRDO</code> + Astera Labs <code>ALAB</code></td><td>光進銅退殺盤期的持股、當時跌爛;現兩檔皆新高,本集未明示現況</td></tr>
+    <tr><td>導線架相關標的</td><td>手上有觀察、標的偏橫盤;持有與否語意未明(待確認)</td></tr>
+    <tr><td><span class="own">⭐</span> 整體資金取向</td><td>與友人均鎖定短期營收獲利噴出標的;記憶體因擁擠除外</td></tr>
+  </table>
+  <div class="note">與 EP677 銜接:質押 4 月起被鎖、滿倉微調的結構未變;本集揭露的是「微調的方向」——往短期開獎能見度靠攏。</div>
+</div>
+
+<!-- 卡 12 行動清單 -->
+<div class="card" id="card-12">
+  <div class="num">12/12</div>
+  <div class="sec">行動清單</div>
+  <h2>觀察・訊號・紀律</h2>
+  <div class="cols3">
+    <div class="box">
+      <h4>觀察名單</h4>
+      <ul>
+        <li><b>封測+導線架</b>——「營收平獲利跳」指紋擴散度;導線架 lead time 是先行指標</li>
+        <li><b>功率(台股)</b>——ADI 漲價信後的續航;美台 lag 是否收斂</li>
+        <li><b>Meta/NVDA</b>——double down 證實後的長線訊號(不看短線)</li>
+        <li><b>光通 wide-slow 組</b>——VCSEL/AOC 相對強度是否延續</li>
+        <li><b>Neo Cloud</b>——估值收斂的節奏(反面教材追蹤)</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>進場訊號</h4>
+      <ul>
+        <li>大盤(NASDAQ/加權)供出新高=高估值族群通行證,光通才有進攻條件</li>
+        <li>功率元件財報出現「營收平、獲利跳」=漲價循環確認</li>
+        <li>SemiAnalysis 光通 ETF 若帶量=資金行情 jumpstart 訊號</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>停損/不該做</h4>
+      <ul>
+        <li>區間盤不追突破——上追被幹是本季常態</li>
+        <li>別把「產業最缺」直接當買進理由——資金面是另一條線</li>
+        <li>高估值持股投報率一旦算得出來,舊倍數就別再指望</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+<a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
