@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP679 筆記|2026-07-18</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="wrap">
+
+<!-- 卡 1 封面 -->
+<div class="card" id="card-1">
+  <div class="num">1/12</div>
+  <h1>股癌 EP679 筆記</h1>
+  <div class="date">2026-07-18|殺人誅心盤・韓國去槓桿傳染・守成劇本</div>
+
+  <div class="grid3">
+    <div class="col">
+      <h4>強勢陣營</h4>
+      <span class="ticker">台積電 <code>2330</code></span>
+      <span class="ticker">載板/ABF</span>
+      <span class="ticker">CCL 族群</span>
+      <span class="ticker">封測族群</span>
+      <span class="ticker">京元電 <code>2449</code></span>
+      <span class="ticker">設備族群</span>
+      <span class="ticker">功率元件(台)</span>
+    </div>
+    <div class="col">
+      <h4>觀望陣營</h4>
+      <span class="ticker">被動元件族群</span>
+      <span class="ticker">矽晶圓/Wafer</span>
+      <span class="ticker">光通訊族群</span>
+      <span class="ticker">廠務族群</span>
+      <span class="ticker">美股/Nasdaq</span>
+    </div>
+    <div class="col">
+      <h4>觀察池/警示</h4>
+      <span class="ticker">力積電 <code>6770</code></span>
+      <span class="ticker">精材(待確認)</span>
+      <span class="ticker">記憶體族群</span>
+      <span class="ticker">韓國股市</span>
+    </div>
+  </div>
+
+  <div class="pills">
+    <div class="pill">大盤距高點 <b>10% 以內、嚴格說根本沒回檔</b>——哀鴻遍野的是槓桿堆疊的熱門股,不是指數。</div>
+    <div class="pill">兇手抓到了:韓國劇烈去槓桿的全球傳染——指數波動×ETF 槓桿×信貸本金,<b>疊到十倍以上</b>的被迫平倉人踩人。</div>
+    <div class="pill">AI 使用心得:Fable 跟 Opus 4.8 對他已差不多——<b>甜蜜點已到</b>,開始往 cost down 方向走。</div>
+  </div>
+
+  <div class="sec">核心洞見</div>
+  <a class="insight-pill" href="#card-4">糖豆人踩板理論:季線上的板子越踩越少,資金全擠進碩果僅存的強勢股=預約下一波修正——他不追</a>
+  <a class="insight-pill" href="#card-3">融資該減兩三百億只減一百多、額度沒人釋出=沒人斷頭=大家賺太多,只是賣多賣少的差別</a>
+  <a class="insight-pill" href="#card-7">風險偏好正式改寫:不再忍受大回吐,犧牲上檔也 OK——從最大獲利思考轉向守成</a>
+  <a class="insight-pill" href="#card-8">CCL/載板 vs 封測:一個是講到爛的老多頭,一個是表態剛開始的新故事——他兩個都看好,但只把長期的放投資公司</a>
+
+  <div class="sec">章節導覽</div>
+  <div class="navpills">
+    <a href="#card-2">02 韓國解剖</a>
+    <a href="#card-3">03 台灣拆彈</a>
+    <a href="#card-4">04 區間劇本</a>
+    <a href="#card-5">05 抄底止損</a>
+    <a href="#card-6">06 現金預警</a>
+    <a href="#card-7">07 2022 復盤</a>
+    <a href="#card-8">08 CCL vs 封測</a>
+    <a href="#card-9">09 台積+輪動</a>
+    <a href="#card-10">10 AI 侷限</a>
+    <a href="#card-11">11 持倉揭露</a>
+    <a href="#card-12">12 行動清單</a>
+  </div>
+</div>
+
+<!-- 卡 2 韓國解剖 -->
+<div class="card" id="card-2">
+  <div class="num">2/12</div>
+  <div class="sec">市場動態</div>
+  <h2>韓國去槓桿解剖:十倍疊加的金融恐怖份子</h2>
+  <div class="core"><span class="tag">🎯</span>通膨、升息、美伊都不是重點——這波修正的核心是<span class="hl">韓國劇烈去槓桿影響全世界</span>,韓股噴到爛掉後的業力引爆,連半山腰都還沒跌到。</div>
+  <div class="mechanism"><span class="tag">🔍 槓桿疊加試算</span>韓指集中度極高(記憶體約佔一半)、天然波動是各國 2-3 倍=<b>指數本身就是類槓桿</b>;散戶在上面開 2-3 倍 ETF/融資=6-9 倍;本金搞不好還是信貸借來——與朋友試算<span class="hl">保底九倍十倍以上、甚至十幾倍</span>。所以漲跌都極端,被迫平倉、人踩人。</div>
+  <div class="note">前科累累:Archegos(Bill Hwang)槓桿爆掉觸發連鎖 de-leverage(當時他的部位也大幅回吐)、Luna、Tesla/Palantir 每次最高檔的光速回檔、加密貨幣——韓資群聚處把流動性抽爆後出事是慣例。</div>
+  <div class="note">最爽的是誰:各地量化資金賺到翻掉——套利吃韓國散戶,跟台灣 ETF 溢價被套利收割同款。</div>
+  <div class="risk">⚠️ 對照組:去年三月美國人的 de-leverage 是「有序的」(每天慢慢賣、有人道走廊可減碼);韓國是待宰羔羊式的被迫平倉——結構未解,未來仍會週期性輸出波動。</div>
+</div>
+
+<!-- 卡 3 台灣拆彈 -->
+<div class="card" id="card-3">
+  <div class="num">3/12</div>
+  <div class="sec">市場動態</div>
+  <h2>台灣提早拆彈:風控鎖喉與「沒人斷頭」的真相</h2>
+  <div class="core"><span class="tag">🎯</span>台灣算提早拆彈:券商風控全面收緊,讓槓桿根本堆不起來——所以殺得兇、但<span class="hl">斷頭潮沒有出現</span>。</div>
+  <div class="mechanism"><span class="tag">🔍 風控三重鎖</span>①下單直接被風控擋(要打電話簽呈解鎖,朋友氣得要死);②融資單檔上限(數千萬級天花板,要再往上又要簽呈);③質押額度凍結動用——他自己 2 億額度只給下 6000 萬,新申請不給、<b>舊額度不敢還</b>(怕還了被調降)。營業員內部甚至討論比照詐騙防制設白名單:少數人違約交割/爆倉,拖累全體被降門檻。</div>
+  <div class="note">融資照妖鏡:昨天血腥大屠殺、一堆跌到綠燈尾盤奇蹟拉回——體感融資該減兩三百億以上,實際只減一百多億;跟營業員約定「你等到有人被斷頭的時候你跟我講」——要搶額度;至今每次回盪問都沒有。</div>
+  <div class="note">結論:大家真的賺太多錢,只是什麼時候賣、賣多賣少的差別——這不是 2022 式的踩踏,是獲利了結的秩序性調節。</div>
+  <div class="action">📌 融資餘額減幅 vs 跌幅的比值,是判斷「恐慌 or 調節」的第一手指標——減幅遠小於跌幅=沒人被迫下車=籌碼其實穩。</div>
+</div>
+
+<!-- 卡 4 區間劇本 -->
+<div class="card" id="card-4">
+  <div class="num">4/12</div>
+  <div class="sec">操作策略</div>
+  <h2>區間劇本:糖豆人踩板,他選擇不上板</h2>
+  <div class="core"><span class="tag">🎯</span>修正定性=<span class="hl">資金面全面大提款</span>,不是 AI 需求或產業基本面被破壞;大盤視為區間來做——區間底假定在這附近、允許再往下一部分,但破季線破大支撐就不加。</div>
+  <div class="mechanism"><span class="tag">🔍 糖豆人踩板理論</span>像糖豆人的關卡:地板的板子被踩過就掉,<b>還在季線上的標的越踩越少、月線上的碩果僅存</b>。剩下的強勢股(矽晶圓/載板/設備)猴子都知道最強→槓超大的全鑽進去→<span class="hl">預約好下一波就換這邊修正</span>。進去就要開始想什麼時候出場的行情,不如不進——與汰弱留強的慣性邏輯相反的例外時刻。</div>
+  <blockquote>在下跌的時候你是開心的,你覺得你可以買更多,就是有faith跟conviction</blockquote>
+  <div class="note">為什麼熱門股修正特別殘忍:絕大多數人(包括他自己)交易都放了動能成分——大家不要的就從善如流砍掉;盜聽途說買中小型標的的人,遇到半年來最大回檔就想跳車。</div>
+  <div class="note">彈不起來的=上面人太多:今天反彈裡彈不動的族群,高機率要花很長時間「超渡」套牢的槓桿客。</div>
+  <div class="risk">⚠️ 最怕的劇本:盤面最後停在正負 5%,你的錢卻負 30%——「這個盤就是你越追越死,越是動能就越容易被修理」。</div>
+</div>
+
+<!-- 卡 5 抄底止損 -->
+<div class="card" id="card-5">
+  <div class="num">5/12</div>
+  <div class="sec">操作策略</div>
+  <h2>抄底進行式+破底砍加碼單的止損機制</h2>
+  <div class="core"><span class="tag">🎯</span>過去幾個假日<span class="hl">持續抄底</span>(「他媽我還在買啊」);買太早是後論,人沒有水晶球——加碼三條件:<b>殺特別重+部位還沒買滿+自己喜歡的</b>。</div>
+  <div class="mechanism"><span class="tag">🔍 加碼單止損規則</span>例:原有 500 張、這陣子加到 750 張——若之後再破底,<b>先砍 250 張加碼單回到原部位</b>,等於先認賠一部分;繼續出狀況再慢慢剪。提早做部位調整、把下檔控緊,而不是等整體崩潰才動。</div>
+  <div class="note">今天反彈之後,絕大多數都還沒彈到他的加碼位置——帳面仍套,但機制在跑。</div>
+  <div class="note">同步減碼另一邊:手上心態疊壞、出現大頭部的標的先減——「總是需要錢去買新的東西」;新錢方向=財報季業績股,不是這波最強的族群。</div>
+  <div class="action">📌 加碼單與原始部位分開記帳,破底時只砍加碼那段——止損有明確的量與序,不是情緒性全砍。</div>
+</div>
+
+<!-- 卡 6 現金預警 -->
+<div class="card" id="card-6">
+  <div class="num">6/12</div>
+  <div class="sec">操作策略</div>
+  <h2>現金水位與代價意識:預警線比 2022 快很多</h2>
+  <div class="core"><span class="tag">🎯</span>現在<span class="hl">還沒扣什麼現金</span>;預警線設定:這波反彈上不去+大盤從季線往下灌→提早扣現金。券商把融資管道卡死反而讓他老神在在——「現在也沒什麼槓可以縮」。</div>
+  <div class="mechanism"><span class="tag">🔍 代價意識</span>每個決定都有代價,知道代價是什麼就好:提早避險的代價=若只是洗深後全面開走、部位沒及時補回,<b>帶著 20% cash drag</b> 追行情(他非常不喜歡);不避險的代價=再吃一次 2022 式回吐。他選了前者的風險換後者的保護。</div>
+  <div class="note">無空單:2022 當時開過 long short(多單為主、配空單對沖捨不得賣的持股);這波能見之處都還很好,要先回 10-20% 才會調策略——今年前面賺得夠多,還沒到 15-20% 的門檻。</div>
+  <div class="note">8 月放假(北海道+峇里島)時,部位會再降到更低水位——身邊蠻多朋友已經不玩先去放假。</div>
+  <div class="risk">⚠️ 這套規劃「不要太迷信」——他自己強調:洗深開走 vs 真轉空,兩種劇本都要有對應動作,規劃是框架不是預言。</div>
+</div>
+
+<!-- 卡 7 2022 復盤 -->
+<div class="card" id="card-7">
+  <div class="num">7/12</div>
+  <div class="sec">心法內核</div>
+  <h2>2022 復盤:從最大獲利思考到不再忍受回吐</h2>
+  <div class="core"><span class="tag">🎯</span>2022 的病根:被 2020+2021 養到膨脹——「就是知道說自己看的東西會對,那我只要敢買就會賺錢」;烏俄戰爭影響錯估、一路接刀,被殺了一兩季才開 long short 補救。</div>
+  <div class="mechanism"><span class="tag">🔍 風險偏好的正式改寫</span>以前往最大獲利思考;現在願意<b>犧牲一些上檔換取不再忍受大回吐</b>——不是全面規避風險,是稍微規避一點點。這波的預警與部位動作,全部比 2022 提早。</div>
+  <blockquote>我已經不想再去忍受太大的回吐,即便這代表的犧牲掉我一些上檔,但是我ok</blockquote>
+  <div class="note">態度矯正論:研究暈船的解方是市場——買了立刻崩你就會反省;瞎推的人只要股價一直漲,你說他錯大家還覺得你是笨蛋,「因為股價就是他硬道理」。</div>
+  <div class="note">早期挫折是人格疫苗:長太大才犯致命錯+自尊已形成=萬劫不復;寧願戰戰兢兢、反覆驗證。過去兩週的踩煞車,讓人不會無限膨脹(這個盤讓他漲兩年,說不定講話就往「賺錢我最屌」的方向靠攏)。</div>
+  <div class="note">在家自營唯一對答案的對象是市場;上班族有公司修正——buy side 朋友買美光太早被砍部位,公司後來貴 20-30% 追回反而划算(那一年可以賺更多)。但注意:「盤面有時候會是錯的」,時間錯配同樣磨人。</div>
+</div>
+
+<!-- 卡 8 CCL vs 封測 -->
+<div class="card" id="card-8">
+  <div class="num">8/12</div>
+  <div class="sec">產業對決</div>
+  <h2>CCL/載板 vs 封測:老多頭與新表態,他兩個都要</h2>
+  <div class="core"><span class="tag">🎯</span>聽眾問二選一,他的答案是<span class="hl">兩個都很看好</span>——差別在故事的年齡與籌碼的重量。</div>
+  <div class="stock-group">
+    <div class="gl">老多頭:講到爛掉的最缺</div>
+    <span class="ticker">載板/ABF</span>
+    <span class="ticker">CCL 族群</span>
+  </div>
+  <div class="note">市場上最缺的東西、從去年缺到現在;漲價信發到「頓化」——懶得看是哪一封,反正一直漲。人盡皆知、法人戰場(推到上千上萬),不是新鮮事所以節目不再刻意聊,「就像沒有必要整天跟你聊台積電一樣」。新 drama:中國勝宏(原音待確認)材料出狀況、部分訂單轉進台系。</div>
+  <div class="stock-group">
+    <div class="gl">新表態:剛開始的強勢</div>
+    <span class="ticker">封測族群</span>
+    <span class="ticker">京元電 <code>2449</code></span>
+    <span class="ticker">力積電 <code>6770</code></span>
+    <span class="ticker">精材(待確認)</span>
+  </div>
+  <div class="note">力積電開一場會等於幫很多人開了法說:功率封裝非常緊繃、MOSFET 滿載很久、客戶一直催;AI/NVIDIA 端的 KYEC 狀況也很好;消費性較弱,但整體稼動拉得不錯、後面持續漲價。封測籌碼相對沒這麼重、表態剛開始。</div>
+  <div class="note"><span class="own">⭐</span>他的處理方式:長期故事的放一點在投資公司、「放著不屌它」——不做短線進出。</div>
+  <div class="risk">⚠️ 被動元件對照組:基本面 no change(lead time 更長、有暫停交貨)但股價能否 justify 不評論——設太遠的東西,巨大迴盪是常態(華新科腰斬案例)。</div>
+</div>
+
+<!-- 卡 9 台積+輪動 -->
+<div class="card" id="card-9">
+  <div class="num">9/12</div>
+  <div class="sec">個股與輪動</div>
+  <h2>台積電法說前瞻+這波輪動的完整地圖</h2>
+  <div class="core"><span class="tag">🎯</span>台積電隨後開講:<span class="hl">講的東西不會差、展望也是好的</span>;有人把毛利率預期喊到 70——像當時美光喊很高一樣,短期不會發生,但方向上非常有機會。盤不好時大家想起績優股的美好、衝進台積電,看事件能不能把它往上推。</div>
+  <div class="mechanism"><span class="tag">🔍 輪動地圖(本波)</span>過去:被動→功率;這波轉強:<b>矽晶圓+載板+設備</b>。矽晶圓偏貴偏早、庫存偏高(但市場拉一定有道理);設備與光通設備盤整已到末端、可能變新領頭;廠務欲振乏力——他猜是海外 Hedge Fund/主權基金(把它當殖利率穩定股)站在賣方一直丟。</div>
+  <div class="stock-group">
+    <div class="gl">輪動快照</div>
+    <span class="ticker">矽晶圓/Wafer</span>
+    <span class="ticker">設備族群</span>
+    <span class="ticker">廠務族群</span>
+    <span class="ticker">光通訊族群</span>
+    <span class="ticker">功率元件(台)</span>
+  </div>
+  <div class="note">光通:不破底的話可以進入橫盤;功率:產業狀況是好的、但台股功率這波回檔也大——七月底一票 IDM 出來講話,是修正較深族群的反彈催化劑。</div>
+  <div class="note">與年初比:輪動太快、族群切換也切太快——過去會趕快換過去,現在會怕「越追越死」;有些東西已經選擇放掉。</div>
+  <div class="action">📌 激情段要等大盤新高之後;推不上去就是區間盤——業績股方向做集中,防守規劃繼續掛著。</div>
+</div>
+
+<!-- 卡 10 AI 侷限 -->
+<div class="card" id="card-10">
+  <div class="num">10/12</div>
+  <div class="sec">工具觀察</div>
+  <h2>AI 甜蜜點已到:token 帳單教會他的事</h2>
+  <div class="core"><span class="tag">🎯</span>Fable 跟 Opus 4.8 在他的使用情境(找資料/餵資料統整/爬東西)已經差不多——<span class="hl">邊際效益有感遞減</span>,開始往 cost down 走;用 Fable 反而平白燒一大堆 token。</div>
+  <div class="mechanism"><span class="tag">🔍 token 失控案例</span>讓 agent 聽 20 幾分鐘的電話會議:為了追求準確,它把音檔切成十幾個片段反覆驗證、每個沒說明的縮寫(LT=lead time)和名詞(三大廠)都去查——燒掉的錢去找工讀生「可能找十個都還有得找」;後來發現是自動儲值沒關。理解了科技巨頭為什麼要限制 token maxing。</div>
+  <div class="note">驗證 AI 的正確姿勢:先問你最熟的領域(果農問水果、投資人問投資理論)——你滿高機率會抓到它的錯;拿 AI 的答案去跟人吵架前先想這件事。</div>
+  <div class="note">周杰倫紅酒案例:朋友的 AI 把一排酒估到一兩千萬,他一眼看出約一百多萬——AI 撈到離群值(保存不良的低價拍品)就全部重跑,沒有 domain knowledge 分不出該 rule out 的資料。</div>
+  <div class="risk">⚠️ AI governance 不是口號:通用模型直接上工作(看合約、對法規)是會雷你的——聯想到近期社會事件,放任類智慧體自行決策的代價可能是人命。</div>
+</div>
+
+<!-- 卡 11 持倉揭露 -->
+<div class="card" id="card-11">
+  <div class="num">11/12</div>
+  <div class="sec">持倉揭露</div>
+  <h2>孟恭本集持倉動作與規劃(10 筆)</h2>
+  <table>
+    <tr><th>部位</th><th>動作/狀態</th></tr>
+    <tr><td><span class="own">⭐</span>質押/融資額度</td><td>三四月起遭凍結動用:2 億只給下 6000 萬、新的不給、舊的不敢還</td></tr>
+    <tr><td><span class="own">⭐</span>整體持倉</td><td>過去幾個假日持續抄底——殺重+沒買滿+喜歡的就加;絕大多數還沒彈到加碼位</td></tr>
+    <tr><td><span class="own">⭐</span>加碼單</td><td>止損規則:破底先砍加碼部分(750→500 例)先認賠,再壞再慢慢剪</td></tr>
+    <tr><td><span class="own">⭐</span>弱勢持股</td><td>心態疊壞、出現大頭部的→減碼,騰錢買新的</td></tr>
+    <tr><td>強勢族群(矽晶圓/載板)</td><td>不追——猴子都知道的強勢=槓大的全鑽入=預約下波修正</td></tr>
+    <tr><td>空單</td><td>本波不用;回 15-20% 才調策略(2022 曾開 long short)</td></tr>
+    <tr><td>現金水位</td><td>尚未扣現金;反彈失敗+季線下灌→提早扣,比 2022 快</td></tr>
+    <tr><td><span class="own">⭐</span>風險偏好</td><td>宣告轉向:不再忍大回吐、犧牲上檔 OK</td></tr>
+    <tr><td><span class="own">⭐</span>投資公司</td><td>長期故事標的(CCL/載板語境)放著不動</td></tr>
+    <tr><td>部位總水位</td><td>8 月放假時降到更低,慢慢觀察</td></tr>
+  </table>
+  <div class="note">新錢方向:財報季業績股——「比較激情的那一段,還是要等到大盤新高以後」。</div>
+</div>
+
+<!-- 卡 12 行動清單 -->
+<div class="card" id="card-12">
+  <div class="num">12/12</div>
+  <div class="sec">行動清單</div>
+  <h2>接下來盯什麼</h2>
+  <div class="cols3">
+    <div class="box">
+      <h4>本週盯</h4>
+      <ul>
+        <li>台積電法說:預期偏高(毛利喊 70 級),殺盤能否被快速收復=多方確認</li>
+        <li>反彈品質:彈不動的族群=上面人太多,列入超渡名單</li>
+        <li>融資餘額減幅 vs 跌幅:持續遠小於跌幅=沒人斷頭=調節不是恐慌</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>中期觀察</h4>
+      <ul>
+        <li>區間底守不守:破季線+破大支撐→不加碼、提早扣現金劇本啟動</li>
+        <li>七月底 IDM 財報:功率等修正深的族群反彈催化劑</li>
+        <li>封測新表態的延續性;勝宏(待確認)轉單台系的載板效應</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>心法內化</h4>
+      <ul>
+        <li>守成:別讓試錯成本在震盪期失控——今年已經非常好</li>
+        <li>糖豆人:板子越少越不上板;conviction 檢測=下跌時你開心嗎</li>
+        <li>每個決定都有代價,知道代價是什麼就好</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+<a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
