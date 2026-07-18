@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP680 筆記|2026-07-18</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+
+<body>
+<div id="top"></div>
+<div class="wrap">
+
+<!-- 卡 1 封面 -->
+<div class="card" id="card-1">
+  <div class="num">1/12</div>
+  <h1>股癌 EP680 筆記</h1>
+  <div class="date">2026-07-18|台積法說無敗相卻炸 6%・防守模式啟動</div>
+
+  <div class="grid3">
+    <div class="col">
+      <h4>強勢陣營</h4>
+      <span class="ticker">台積電 <code>2330</code></span>
+      <span class="ticker">SpaceX <code>SPCX</code></span>
+      <span class="ticker">科技巨頭(美)</span>
+      <span class="ticker">軟體/SaaS(美)</span>
+    </div>
+    <div class="col">
+      <h4>觀望陣營</h4>
+      <span class="ticker">台股大盤(指數)</span>
+      <span class="ticker">記憶體族群</span>
+      <span class="ticker">被動元件族群</span>
+      <span class="ticker">光通訊族群</span>
+      <span class="ticker">IPC 族群</span>
+      <span class="ticker">美股/Nasdaq</span>
+    </div>
+    <div class="col">
+      <h4>觀察池</h4>
+      <span class="ticker">飛捷 <code>6206</code></span>
+      <span class="ticker">聯發科 <code>2454</code></span>
+    </div>
+  </div>
+
+  <div class="pills">
+    <div class="pill">台積電法說:EPS 27.25、毛利 67.7%、CapEx 上修到 60-64B——<b>看不到任何敗相,隔天照樣炸 6%</b>。</div>
+    <div class="pill">他的持股<b>過半已是台積電</b>、聖盔谷持續加大;淨值回檔達 15% 門檻,防守模式正式觸發。</div>
+    <div class="pill">獲利面回到約 5 月底 6 月初、DD 約 15%——「今年一定要好好把他收起來」。</div>
+  </div>
+
+  <div class="sec">核心洞見</div>
+  <a class="insight-pill" href="#card-3">好數字催不動就是氛圍已變的定錘:吃 CapEx 上修的設備股隔天反而跌停、7 月漲價信集體失效</a>
+  <a class="insight-pill" href="#card-4">防守模式啟動:淨值回 15% 觸發+大盤破季線——人道走廊開出來也不追標的拼績效</a>
+  <a class="insight-pill" href="#card-6">forward PE 25 倍別想回去:18-20 是合理期待、可能下探 12-13——戴維斯雙擊暫停,改靠 Earnings 上修</a>
+  <a class="insight-pill" href="#card-7">Kimi K3 = DeepSeek 翻版的市場錯判:Jevons Paradox,效率提升只會讓總消耗更大</a>
+
+  <div class="sec">章節導覽</div>
+  <div class="navpills">
+    <a href="#card-2">02 法說全解</a>
+    <a href="#card-3">03 氛圍轉變</a>
+    <a href="#card-4">04 防守模式</a>
+    <a href="#card-5">05 指數工具</a>
+    <a href="#card-6">06 估值常態</a>
+    <a href="#card-7">07 鬼故事</a>
+    <a href="#card-8">08 分化結構</a>
+    <a href="#card-9">09 長投本質</a>
+    <a href="#card-10">10 SpaceX</a>
+    <a href="#card-11">11 持倉揭露</a>
+    <a href="#card-12">12 行動清單</a>
+  </div>
+</div>
+
+<!-- 卡 2 法說全解 -->
+<div class="card" id="card-2">
+  <div class="num">2/12</div>
+  <div class="sec">個股解剖</div>
+  <h2>台積電法說全解:CapEx 上修才是真 surprise</h2>
+  <div class="core"><span class="tag">🎯</span>EPS 27.25、毛利率 67.7%——與多數預期差不多;喊到 70 的本就不切實際(上集判讀兌現),就像當年美光:數字要後面幾季才會真的出現。<span class="hl">真正的 surprise 是 CapEx 從 52-56B 上修到 60-64B</span>——很少人預期到這個。</div>
+  <div class="mechanism"><span class="tag">🔍 指引的閱讀法</span>Q3 毛利指引 65-67、營業利益率 56-58——他判讀為<b>低報高開(low-ball high beat)</b>:能見度高,最後開出來應高於 67 或上緣;全年營收年增預測從 30% 上調到 40%。盤後 ADR 跌讓市場解讀成「毛利衰退」,但拉長看不是問題——下跌就一定要找個理由來說明。</div>
+  <div class="note">封測彩蛋:後段先進封裝<b>超級緊俏</b>;被問到競爭對手(Intel EMIB)時的回答是二階思維——對手把後段做好,台積電前段反而可以放更大的量,「希望客戶要贏」。</div>
+  <div class="note">羨慕記憶體廠的毛利數字,但言下之意:對現在的毛利已相對滿意、沒有要搶客戶。</div>
+  <div class="note">CC 定調:好到 29 甚至 30 沒問題——但過程中會不會有 correction,沒人能保證;重點是好好 navigate、好好活下來。</div>
+  <div class="risk">⚠️ 他認為台積電根本不該在 2300 這個價格——但「不應該」跟「市場願不願意」是兩回事,這正是本集的核心矛盾。</div>
+</div>
+
+<!-- 卡 3 氛圍轉變 -->
+<div class="card" id="card-3">
+  <div class="num">3/12</div>
+  <div class="sec">市場動態</div>
+  <h2>無敗相卻炸 6%:氛圍轉變的三個定錘</h2>
+  <div class="core"><span class="tag">🎯</span>法說內容、展望、Q&A 都看不到敗相,卻難以解釋隔天為什麼跌 6%——答案不在公司,在<span class="hl">市場氛圍已經改變</span>,契機是韓國人戳泡泡後的全球估值下修。</div>
+  <div class="mechanism"><span class="tag">🔍 三個證據</span>①<b>不理性殺盤</b>:CapEx 上修理論上是設備股利多,吃 CapEx 的公司隔天反而好幾家往跌停衝;②<b>漲價信集體失效</b>:7 月 ADI、被動、載板、玻纖布漲價信齊發,救不了市場;③<b>強催化催不動</b>:台積電這麼好的數字本身就是強 catalyst,竟然催不上去——外加標普在右上角、川普政府沒有喊盤的動機,可能等不到新的催化劑。</div>
+  <div class="note">歷史對照:美股一堆開完財報崩 20% 然後等一段時間碰回去;Apple 出記憶體消息先跌後新高——不用幫短期股價做太多解釋,但要尊重它作為指標。</div>
+  <div class="note">同時保留敬畏:資金導向大屠殺是主判,但「可能有一些我們不知道的事情」——去年 3 月人道走廊離場後真的有事,前科在此。</div>
+</div>
+
+<!-- 卡 4 防守模式 -->
+<div class="card" id="card-4">
+  <div class="num">4/12</div>
+  <div class="sec">操作策略</div>
+  <h2>防守模式啟動:15% 門檻+破季線的雙觸發</h2>
+  <div class="core"><span class="tag">🎯</span>預設規則發動:<span class="hl">淨值從高點回檔 15% 以上→轉防守模式</span>。週五「不知道買什麼先買台積」被炸 6% 遭重擊、正式達標;搭配大盤跌破季線,切換為不以進攻為本質。</div>
+  <div class="mechanism"><span class="tag">🔍 季線劇本</span>理論上高速破季線+斜率仍為正,可以期待不錯的人道走廊反彈;但他最怕的劇本是:<b>站回去之後橫盤→季線拉平→再跌破就蠻大</b>。事與願違的參照是 2022:俄烏影響並不長遠,市場卻修了一年、痛苦指數很高——所以要提前規劃。</div>
+  <div class="note">人道走廊開出來,他不會去找標的追進去拼績效——已轉防守+8 月要出國,想法是貫通的。</div>
+  <div class="note">不追高 beta:PE 下修的時候「會疊到你媽都不認得」;除非大盤回穩要攻新高,才會再往本夢比/高估值方向推——不然就是業績股,至少知道自己套什麼。</div>
+  <div class="risk">⚠️ 高 beta 從高點回 30-40% 的滿地都是、基本面也不錯,真反彈可能彈很大——但估值成長被壓制下,不信超光速 V 上去的劇本,那不是他要選的東西。</div>
+</div>
+
+<!-- 卡 5 指數工具 -->
+<div class="card" id="card-5">
+  <div class="num">5/12</div>
+  <div class="sec">操作策略</div>
+  <h2>抄底改加指數:台指期與 0050 的工具化</h2>
+  <div class="core"><span class="tag">🎯</span>後面偏向<span class="hl">不選個股——抄底或加碼時先加指數</span>,用台指期或 0050 當工具;這是過去幾次崩殺又無法識別族群時的老方法。</div>
+  <div class="mechanism"><span class="tag">🔍 為什麼是指數</span>大盤結構占比最高的就是台積電;而且不管裡面誰率先反彈領漲、帶指數回穩,你都吃得到那一段——在選股變得很困難的時刻,這是勝率最高的載具。找到方向之後再做調整。</div>
+  <blockquote>現金為王我從他媽1萬點,停到4萬多點,你拿越多現金的,你真的就是越賠</blockquote>
+  <div class="note">停現金的真實代價:短期看起來聰明,但沒在對的時間切回股票就輸最大——少一點 drawdown,上檔全部沒有。他是市場長期向上的信奉者:「可以給我借越多錢,我一定是把錢借爆」。</div>
+  <div class="note">持倉哲學:持有大量股票、最多無槓桿+少量現金、絕不呼籲空手;有些標的根本無法賣——流動性會被抽乾、規模大到懶得動、光領股息就能生活。小資聽眾參考就好,配比與量體不同。</div>
+</div>
+
+<!-- 卡 6 估值常態 -->
+<div class="card" id="card-6">
+  <div class="num">6/12</div>
+  <div class="sec">框架更新</div>
+  <h2>估值新常態:25 倍別想回去,靠 Earnings 說話</h2>
+  <div class="core"><span class="tag">🎯</span>假設最高點的平均 forward PE 是 25 倍——<span class="hl">別期待回到 25</span>;合理期待是回 18-20、過程可能掉到 12-13;要回 25「讓你超級瘋狂」,需要一段時間的休養。</div>
+  <div class="mechanism"><span class="tag">🔍 戴維斯雙擊暫停</span>過去半年的打法是買題材、買夢、買未來預期,讓 Ratio 修上去(估值與獲利雙升);現在 Ratio 上調會變得不明顯、甚至持續下調或停在原地——<b>要靠 Earnings 上修去帶動</b>。過往相對穩健、大家不要的東西,有可能被拿出來作為新一波市場主軸。</div>
+  <div class="note">這就是往業績股靠的主因——即便業績股不一定在股價表現上是好的,至少套得明白。</div>
+  <div class="note">還不確定,所以先去指數、找到方向再調整——不確定時不下重註,是防守模式的一致邏輯。</div>
+  <div class="action">📌 記憶體、被動、光通這些回檔深的族群,產業面都沒有超級大的問題(他會出來闢謠)——視為循環股殺便宜了,但破季線之下,他不喜歡現在就抄的想法。</div>
+</div>
+
+<!-- 卡 7 鬼故事 -->
+<div class="card" id="card-7">
+  <div class="num">7/12</div>
+  <div class="sec">敘事拆解</div>
+  <h2>Kimi K3 鬼故事:DeepSeek 翻版的市場錯判</h2>
+  <div class="core"><span class="tag">🎯</span>市場開始丟各式壞消息(成熟製程、記憶體、AI 整體),最熱的是中國模型 Kimi K3——他定性:<span class="hl">跟 DeepSeek 事件同一個道理,又是再一次的市場錯判</span>,不用太久回頭看就會發現一堆人在瞎說。</div>
+  <div class="mechanism"><span class="tag">🔍 為什麼是錯判</span>①Kimi K3 參數高達 <b>2.8 兆</b>,仍需要高規格 AI 伺服器、消耗量非常大;②KV cache 用量減少的說法= <b>Jevons Paradox</b>:東西變便宜、單次用量變少,只代表更多人採用、更願意投入,實際總消耗更大;③模式演進本身吃 token——從 Chatbot 到 Reasoning、Mission 導向的 Agentic AI,消耗只增不減。</div>
+  <div class="note">刪去法示範:有人用美伊戰爭解釋回檔——但油價根本沒有暴衝,所以一定不是那個。</div>
+  <div class="note">他的主判:資金導向的大屠殺、韓國戳泡泡改變全球氛圍;同時尊重市場——可能有我們不知道的事。</div>
+  <div class="risk">⚠️ 錯判會導致回檔到什麼程度,他不知道——敘事對錯與股價修多深是兩個問題。</div>
+</div>
+
+<!-- 卡 8 分化結構 -->
+<div class="card" id="card-8">
+  <div class="num">8/12</div>
+  <div class="sec">市場結構</div>
+  <h2>分化確立:指數新高附近,中小跌到爆</h2>
+  <div class="core"><span class="tag">🎯</span>標普在新高附近、台指扣掉週五也還在新高——但一大堆中小已經跌到爆掉;<span class="hl">指數回檔僅 5-6%,很多人的中小配置回檔兩成多以上</span>,週五的 Final Blow 打擊特別大。</div>
+  <div class="mechanism"><span class="tag">🔍 兩地的撐盤者</span>美股:SOXX 成分股衰得蠻重(CPU、ASIC 相關類股跌重),但組成廣——巨頭與軟體再次轉強、把指數撐在高位;台灣:電子零組 AI 高度相關的占絕大多數,<b>只剩台積電撐</b>——台積電夠強,指數就維持在相對高的地方。</div>
+  <div class="stock-group">
+    <div class="gl">聖盔谷戰法(他的實際操作)</div>
+    <span class="ticker">台積電 <code>2330</code></span>
+    <span class="ticker">台指期</span>
+    <span class="ticker">0050</span>
+  </div>
+  <div class="note">過去一陣子持續把中小的錢撤往台積電堆,前面有效平滑化中小下跌——直到週五台積電自己炸 6%,「算是我自己也遭受重擊」;但規劃不變:聖盔谷+台指期,「聖盔谷爆掉,其他人一定爆」。</div>
+  <div class="note">受傷者畫像:高檔才加入、FOMO 進來的人;融資沒掉多少=絕大多數人其實還在賺,是賣多賣少的差別。</div>
+</div>
+
+<!-- 卡 9 長投本質 -->
+<div class="card" id="card-9">
+  <div class="num">9/12</div>
+  <div class="sec">心法內核</div>
+  <h2>長投本質課:因為價格錯,你才買他</h2>
+  <div class="core"><span class="tag">🎯</span>聽眾問基本面好為什麼股價不漲、要不要停損——他的回答直指本質:<span class="hl">股價不如你的預期,那正是你做長投的理由</span>。</div>
+  <blockquote>他就是因為價格錯,你覺得他應該是500塊的東西,要加100塊,你才買他,如果要100塊跌到80塊,應該是要高興的</blockquote>
+  <div class="mechanism"><span class="tag">🔍 認知失調的根源</span>把投資跟投機/動能搞混:明明看基本面、知道後來會好,卻用動能的心態要求股價立刻反應。他不是說不能搞動能(自己也搞),但<b>搞混就會認知失調</b>。被誤會才有肉——「如果他都沒有被誤會的話,那後面怎麼還有肉」。</div>
+  <div class="note">耐性的渣男風險:建立耐性的路上很多人沉掉,因為不確定耐性的對象對不對——「你可能愛錯人了,你把自己託付在一個渣男的手裡」;解法:先小量試單,確定眼光好、分析能力強,再慢慢放大部位。</div>
+  <div class="note">市場現況的誠實註腳:現在這麼多好東西不會漲、跌到便宜還一直跌——「我也不知道到底發生什麼事」;連台積電他都認為不該在 2300、老大哥們認為聯發科該是八九千一萬的東西。</div>
+</div>
+
+<!-- 卡 10 SpaceX -->
+<div class="card" id="card-10">
+  <div class="num">10/12</div>
+  <div class="sec">持股信念</div>
+  <h2>SpaceX 文化課:速度就是一切,成本不是事</h2>
+  <div class="core"><span class="tag">🎯</span>股價持續落地,但參訪 Hawthorne 工廠+內部朋友深聊後,結論是<span class="hl">「應該要再買更多」</span>——持續勇敢加碼中。</div>
+  <div class="mechanism"><span class="tag">🔍 文化切片</span>①<b>兵貴神速用到極限</b>:工程師開 spec 不走慢慢實驗,直接開 Mass Production,整批丟掉沒關係——我要你快;②兩個月交期比六個月貴十倍,也選兩個月的;③組織極平面化:junior 工程師白目催件,元老級大頭 Gwynne 直接回「好,立刻執行」;④自有 shuttle plane 往返德州加州、退休軍官開氣墊船接駁 U 型海灣。</div>
+  <div class="note">馬斯克的 cost down 悖論:一般成本導向會搞出垃圾,但他自己夠懂,砍完的東西還是蠻屌——Tesla FSD 板從兩顆 AI5 改成一顆 AI5+一顆 AI4.1,供應鏈頭大,但你不得不佩服。</div>
+  <div class="note">周邊彩蛋:Starship 第一代機械臂(Mechazilla 筷子)融掉做成 4500 副筷子限量給員工——朋友幫他搞到——他自嘲:這個時間點拿著筷子跟碗去路邊乞討,可以少買一個道具。</div>
+  <div class="risk">⚠️ 火箭通勤 10-30 年內有機會看到,但看到不代表做到——協和號很快,最後 not working;商業化是另一關。</div>
+</div>
+
+<!-- 卡 11 持倉揭露 -->
+<div class="card" id="card-11">
+  <div class="num">11/12</div>
+  <div class="sec">持倉揭露</div>
+  <h2>孟恭本集持倉動作與規劃(10 筆)</h2>
+  <table>
+    <tr><th>部位</th><th>動作/狀態</th></tr>
+    <tr><td><span class="own">⭐</span>SpaceX <code>SPCX</code></td><td>股價落地持續勇敢加碼;參訪後「應該要再買更多」</td></tr>
+    <tr><td><span class="own">⭐</span>台積電 <code>2330</code></td><td>持股過半集中,聖盔谷持續加大;週五炸 6% 遭重擊</td></tr>
+    <tr><td><span class="own">⭐</span>防守模式</td><td>淨值回檔達 15% 門檻+大盤破季線→正式啟動</td></tr>
+    <tr><td>獲利回吐狀態</td><td>回到約 5 月底 6 月初水位,DD 約 15%;今年一定要收好</td></tr>
+    <tr><td><span class="own">⭐</span>指數工具</td><td>抄底/加碼改先加指數:台指期或 0050,不選個股</td></tr>
+    <tr><td>高 beta 部位</td><td>不追;等大盤回穩攻新高才回本夢比方向</td></tr>
+    <tr><td><span class="own">⭐</span>中小部位</td><td>顯著回檔中;資金持續撤往台積電</td></tr>
+    <tr><td>人道走廊</td><td>反彈開出不追標的拼績效;8 月出國串接</td></tr>
+    <tr><td>現金與槓桿</td><td>最多無槓桿+少量現金、絕不空手;部分標的無法賣</td></tr>
+    <tr><td>守成目標</td><td>守住上半年戰果;業績股+指數+台積電為後續主軸</td></tr>
+  </table>
+  <div class="note">生存法則附註:標的一直出現在 QA 就知道有人要借聲量——直接不評論;免費平台不收割、聊多不聊空、噴了就下警語。</div>
+</div>
+
+<!-- 卡 12 行動清單 -->
+<div class="card" id="card-12">
+  <div class="num">12/12</div>
+  <div class="sec">行動清單</div>
+  <h2>接下來盯什麼</h2>
+  <div class="cols3">
+    <div class="box">
+      <h4>本週盯</h4>
+      <ul>
+        <li>季線攻防:立刻站回+進攻=多方;站回後橫盤=季線拉平警戒</li>
+        <li>人道走廊品質:反彈由誰領漲——台積電領=指數劇本有效</li>
+        <li>台積電 2300 保衛戰:他認為根本不該在這個價格</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>中期觀察</h4>
+      <ul>
+        <li>估值下修的深度:forward PE 12-13 是他給的下緣參考</li>
+        <li>Earnings 上修接棒:穩健業績股能否成為新主軸</li>
+        <li>Kimi K3 敘事退潮的時點——回頭驗證市場錯判</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>心法內化</h4>
+      <ul>
+        <li>因為價格錯你才買他;100 跌到 80 該高興</li>
+        <li>投資投機分開用,搞混=認知失調;耐性先小量試單</li>
+        <li>停現金最傻;守成:今年一定要好好收起來</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+<a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
