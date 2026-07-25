@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股癌 EP682 筆記｜2026-07-25</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="wrap">
+
+<div class="card" id="card-1">
+  <div class="num">1/12</div>
+  <div class="sec">本集總覽</div>
+  <h1>股癌 EP682 筆記</h1>
+  <div class="date">2026-07-25｜魂系 everywhere｜科技股回撤、AI 成本重估、功率鏈復甦</div>
+  <div class="grid3">
+    <div class="col">
+      <h4>偏多／基本面續強</h4>
+      <span class="ticker">Google <code>GOOGL</code></span>
+      <span class="ticker">台積電 <code>2330／TSM</code></span>
+      <span class="ticker">Texas Instruments <code>TXN</code></span>
+      <span class="ticker">功率／800V／封測</span>
+      <span class="ticker">Nichicon <code>主持人持有</code></span>
+    </div>
+    <div class="col">
+      <h4>觀望／等價格確認</h4>
+      <span class="ticker">記憶體 <code>漲幅收斂</code></span>
+      <span class="ticker">AI 軟體 <code>token 成本</code></span>
+      <span class="ticker">Tesla／Optimus <code>長期投資</code></span>
+      <span class="ticker">Palantir <code>產品好、估值難</code></span>
+      <span class="ticker">設備／PCB <code>7–10x</code></span>
+    </div>
+    <div class="col">
+      <h4>偏空／型態已破壞</h4>
+      <span class="ticker">SOX／泛科技 <code>低點近 -30%</code></span>
+      <span class="ticker">台指／NQ <code>再破底</code></span>
+      <span class="ticker">櫃買／中小型 <code>流動性弱</code></span>
+      <span class="ticker">光通訊 <code>部分近 -50%</code></span>
+    </div>
+  </div>
+  <div class="pills">
+    <div class="pill"><b>組合 DD：</b>已逾 20%</div>
+    <div class="pill"><b>防守門檻：</b>約 25–30%</div>
+    <div class="pill"><b>現金：</b>規劃提高、尚未執行</div>
+    <div class="pill"><b>本集明示持有：</b>AMD 概念股／Nichicon</div>
+  </div>
+  <div class="sec">核心洞見</div>
+  <a class="insight-pill" href="#card-2"><b>市場進入魂系難度：</b>基本面好消息失效，價格與流動性優先。</a>
+  <a class="insight-pill" href="#card-3"><b>風控門檻具體化：</b>DD 約 25–30%轉向騰現金，現在先降頻率。</a>
+  <a class="insight-pill" href="#card-4"><b>AI 已能賺錢：</b>但 token 與推論成本讓軟體毛利邏輯重寫。</a>
+  <a class="insight-pill" href="#card-7"><b>功率鏈仍有基本面：</b>TI 復甦、800V 與 6／8 吋外包同步改善。</a>
+  <div class="sec">章節導覽</div>
+  <div class="navpills">
+    <a href="#card-2">02 科技股殺盤</a>
+    <a href="#card-3">03 25–30%防守線</a>
+    <a href="#card-4">04 Google AI 變現</a>
+    <a href="#card-5">05 AI 成本與毛利</a>
+    <a href="#card-6">06 記憶體路徑</a>
+    <a href="#card-7">07 TI 與 800V</a>
+    <a href="#card-8">08 Nichicon</a>
+    <a href="#card-9">09 紅眼露比</a>
+    <a href="#card-10">10 等待領頭羊</a>
+    <a href="#card-11">11 持倉揭露</a>
+    <a href="#card-12">12 行動清單</a>
+  </div>
+</div>
+
+<div class="card" id="card-2">
+  <div class="num">2/12</div>
+  <div class="sec">市場結構</div>
+  <h2>SOX 近跌三成：不是單一公司，是泛科技去槓桿</h2>
+  <div class="core"><span class="tag">🎯</span><b>標普仍在相對高位，但 AI 權重市場已進入另一個世界。</b>台、韓、日科技成分股、台灣中小型與櫃買同步重傷；主持人整體持倉每天受損，僅少數新題材提供正報酬。</div>
+  <blockquote>過去一陣子是在各種部位之間調一調去可是有點發現說好像也沒有什麼意義多調多錯</blockquote>
+  <div class="mechanism"><span class="tag">🔍 判讀順序</span><ol><li>先看 benchmark：SOX 低點近 -30%。</li><li>個股若沒有顯著弱於 benchmark，不急著硬找公司特定利空。</li><li>台指與 NQ 再破底，短線必須快速站回主要均線。</li></ol></div>
+  <div class="stock-group">
+    <div class="gl">價格面偏空</div>
+    <span class="ticker">SOX／泛科技 <code>近 -30%</code></span>
+    <span class="ticker">光通訊 <code>部分近 -50%</code></span>
+    <span class="ticker">台指／NQ <code>破底</code></span>
+  </div>
+  <div class="note"><b>估值很低仍可繼續跌：</b>小型設備約 7–8 倍明年 EPS、PCB／板材約 10 倍，仍不能排除市場先反映未知事件。</div>
+<div class="note"><b>本集不是全面翻空基本面：</b>價格與技術面轉弱，和公司長期產業邏輯要分開。</div>
+  <div class="risk"><b>風險：</b>若低點加速下破，可能再觸發流動性與停損賣壓。</div>
+  <div class="action"><b>應對：</b>先停止頻繁換股；比較相對強弱，等市場出現可驗證的修復。</div>
+</div>
+
+<div class="card" id="card-3">
+  <div class="num">3/12</div>
+  <div class="sec">風控</div>
+  <h2>DD 已逾兩成：25–30%是更強防守門檻</h2>
+  <div class="core"><span class="tag">🎯</span><b>主持人的整體回撤已往兩成多發展。</b>若繼續擴大到上下文約 25–30%，預計調整策略並騰出現金；截至錄音時仍在個股間切換，尚未真正提高現金。</div>
+  <blockquote>所以為什麼就是說可能在每次的大跌你不應該去開太大的槓桿去搶當然一定有些人會開槓桿去搶然後搶到之後就跟你講說你看這個地方本來就是要開槓桿什麼但我們不喜歡把自己放在險境裡面有時候可能慢一點也是一種做法至少可以活得久一點</blockquote>
+  <div class="mechanism"><span class="tag">🛡️ 三層防守</span><ol><li><b>槓桿：</b>不以大槓桿搶反彈。</li><li><b>頻率：</b>多調多錯後，降低交易頻率。</li><li><b>現金：</b>若 DD 續深，採騰現金而非空單的路徑。</li></ol></div>
+
+  <div class="note"><b>保命框架：</b>高信心校正為維持零槓桿、可能留些現金，再降低交易頻率。</div>
+<div class="note"><b>數字註記：</b>逐字稿為兩成五三成／兩層五三層，依上下文解讀約 25–30%。</div>
+<div class="note"><b>今年前段績效：</b>七月以前很好，因此現在目標由追求更多報酬轉成保住戰果。</div>
+  <div class="risk"><b>風險：</b>把計畫中的現金誤當成已完成，會高估目前防守程度。</div>
+  <div class="action"><b>應對：</b>把 25–30%視為主持人自己的風控敘事，不是聽眾通用停損數字。</div>
+</div>
+
+<div class="card" id="card-4">
+  <div class="num">4/12</div>
+  <div class="sec">Google／AI</div>
+  <h2>Google 好財報仍跌：AI 已變現，CapEx 仍非選配</h2>
+  <div class="core"><span class="tag">🎯</span><b>Google Cloud 與 AI 的商業化被高度肯定。</b>現金流轉負不是突發事故，而是市場早知道的基建投入；對 Google、Amazon、Microsoft 與中國 BAT 而言，不投資才可能輸掉下一輪競爭。</div>
+
+  <div class="mechanism"><span class="tag">☁️ 投資邏輯</span><ol><li>AI 服務已能產生營收與需求。</li><li>模型、資料中心與推論資源需要持續 CapEx。</li><li>投入越完整，後續越有機會形成產品與分發優勢。</li></ol></div>
+  <div class="stock-group">
+    <div class="gl">公司／平台</div>
+    <span class="ticker">Alphabet <code>GOOGL</code></span>
+    <span class="ticker">Amazon <code>AMZN</code></span>
+    <span class="ticker">Microsoft <code>MSFT</code></span>
+    <span class="ticker">Apple <code>策略例外</code></span>
+  </div>
+  <div class="note"><b>Apple 是例外：</b>終端生態與用戶黏著使它能借力外部模型，不必複製其他 CSP 的完整自建路徑。</div>
+<div class="note"><b>股價仍可能跌：</b>公司投資合理，不代表短線市場必須買單。</div>
+  <div class="risk"><b>風險：</b>高 CapEx、現金流轉負與毛利壓力會放大估值波動。</div>
+  <div class="action"><b>觀察：</b>把 AI 變現、資本支出效率與每次推論成本放在同一張表看。</div>
+</div>
+
+<div class="card" id="card-5">
+  <div class="num">5/12</div>
+  <div class="sec">AI 經濟學</div>
+  <h2>TAM 可以變大，毛利率也可以同時下降</h2>
+  <div class="core"><span class="tag">🎯</span><b>AI 軟體不再是複製一次、近乎零成本賣無限次。</b>每個 token、每次推論與高階模型都有成本；若終端售價無法提高，模型越強反而可能吃掉更多利潤。</div>
+
+  <div class="mechanism"><span class="tag">🧮 兩種毛利迷思</span><ol><li><b>軟體：</b>TAM 擴張，但 token 成本壓縮毛利。</li><li><b>AI server：</b>Buy-and-Sell 料值上升會壓低毛利率。</li><li><b>絕對獲利：</b>毛利率下降時，單價與總毛利仍可能增加。</li></ol></div>
+
+  <div class="note"><b>主持人口述案例：</b>人工約 10 分鐘抓摘要、20–30 分鐘完整閱讀；Fable 5 整理同一活動一次 token fee 約新台幣 400 元，金額不是平台正式報價查核。</div>
+<div class="note"><b>循環終局：</b>AI 基建最終仍會經歷冷卻與淘汰，當前修正未必等於完整週期走完。</div>
+  <div class="risk"><b>風險：</b>只用傳統 SaaS 毛利率或只看單季毛利率，都可能錯讀 AI 商業模式。</div>
+  <div class="action"><b>應對：</b>同時追蹤單次服務成本、客戶價格、總毛利與資本支出回收。</div>
+</div>
+
+<div class="card" id="card-6">
+  <div class="num">6/12</div>
+  <div class="sec">記憶體</div>
+  <h2>漲幅逐季收斂：flat 不等於需求立刻崩潰</h2>
+  <div class="core"><span class="tag">🎯</span><b>主持人估計記憶體報價由上半年極端上漲，轉向下半年增幅收斂。</b>1Q、2Q約 +100%，3Q約 +10–30%，4Q低於 +10%，之後至明年 1Q可能趨平。</div>
+
+  <div class="mechanism"><span class="tag">📉 主持人口述路徑</span><ol><li><b>1Q／2Q：</b>約 +100%。</li><li><b>3Q：</b>約 +10–30%。</li><li><b>4Q：</b>低於 +10%。</li><li><b>Q4→明年 Q1：</b>可能 flat，除非 AI 再有爆發需求。</li></ol></div>
+  <div class="stock-group">
+    <div class="gl">供應與需求線索</div>
+    <span class="ticker">Samsung</span>
+    <span class="ticker">CXMT</span>
+    <span class="ticker">Kimi／月之暗面 <code>算力不足</code></span>
+  </div>
+  <div class="note"><b>不是官方指引：</b>百分比與 flat 路徑均為主持人／供應鏈判斷。</div>
+<div class="note"><b>原廠毛利：</b>主持人推測部分原廠毛利率可能接近 80%，同樣不是公司正式指引。</div>
+<div class="note"><b>需求反證：</b>月之暗面表達算力不足，被用來反駁效率提升會讓伺服器需求消失。</div>
+  <div class="risk"><b>風險：</b>市場可能在基本面真正轉弱前，先交易報價增幅下滑。</div>
+  <div class="action"><b>觀察：</b>把價格水準、增幅、原廠毛利與 AI 需求分開追蹤。</div>
+</div>
+
+<div class="card" id="card-7">
+  <div class="num">7/12</div>
+  <div class="sec">功率半導體</div>
+  <h2>TI 全面復甦＋800V：6／8 吋與封測接外溢</h2>
+  <div class="core"><span class="tag">🎯</span><b>Texas Instruments 釋出全面復甦、data center 強與開始漲價的訊號。</b>400V 升級 800V 後，高階 IDM 把產能轉往高電壓產品，中低階與溢出需求可轉向 foundry 與後段封測。</div>
+
+  <div class="mechanism"><span class="tag">⚡ 供應鏈傳導</span><ol><li>800V 提高功率元件需求與規格。</li><li>IDM 優先配置高壓、高階產能。</li><li>中低階需求外包至 6／8 吋晶圓廠。</li><li>後段封測跟隨量能與產品數增加。</li></ol></div>
+  <div class="stock-group">
+    <div class="gl">本集確定可寫</div>
+    <span class="ticker">Texas Instruments <code>TXN</code></span>
+    <span class="ticker">功率元件 <code>400V→800V</code></span>
+    <span class="ticker">6／8 吋 foundry</span>
+    <span class="ticker">封測</span>
+  </div>
+  <div class="note"><b>個股邊界：</b>聽眾列舉 ON、ADI、VSH、VIC、強茂、德微、漢磊與傑敏；主持人只肯定產業趨勢，未逐檔背書。</div>
+<div class="note"><b>分類校正：</b>強茂、德微被主持人歸在 IDM，而非單純 foundry。</div>
+  <div class="risk"><b>風險：</b>產業趨勢持續向好，股價仍可能跟隨科技股下殺。</div>
+  <div class="action"><b>應對：</b>先建族群籃子，等集體表態與價格站回，再評估個別公司。</div>
+</div>
+
+<div class="card" id="card-8">
+  <div class="num">8/12</div>
+  <div class="sec">明示持股</div>
+  <h2>Nichicon 沒有動：9 月漲價、鋁電容仍缺</h2>
+  <div class="core"><span class="tag">🎯</span><b>主持人明示 Nichicon 是本人持股，日本部位採長期持有且近期沒有調整。</b>他提到 9 月尚有新一輪漲價，鋁電容短缺與未具名台系化成箔 guidance 仍佳。</div>
+
+  <div class="mechanism"><span class="tag">🧾 三層證據</span><ol><li><b>持倉：</b>本人直接說是持股。</li><li><b>動作：</b>日本長期部位，沒有去動。</li><li><b>基本面：</b>9 月漲價、鋁電容仍缺、化成箔展望佳。</li></ol></div>
+  <div class="stock-group">
+    <div class="gl">日系／上游</div>
+    <span class="ticker">Nichicon <code>主持人持有</code></span>
+    <span class="ticker">Nippon Chemi-Con <code>聽眾提問</code></span>
+    <span class="ticker">鋁電容／化成箔</span>
+  </div>
+  <div class="note"><b>不要誤讀：</b>持有不動不是本集新增買進訊號。</div>
+<div class="note"><b>逐字稿註記：</b>長頭依語境疑為長投，仍保留待確認。</div>
+  <div class="risk"><b>風險：</b>好基本面不保證短線股價上漲，近期股價仍大幅回檔。</div>
+  <div class="action"><b>觀察：</b>9 月漲價落地、供需缺口與日本股價型態。</div>
+</div>
+
+<div class="card" id="card-9">
+  <div class="num">9/12</div>
+  <div class="sec">創投／遊戲</div>
+  <h2>《紅眼露比》上市：價值不只是一張銷量表</h2>
+  <div class="core"><span class="tag">🎯</span><b>《紅眼露比》是肖楠資本投後第一款上市作品。</b>主持人明示投入資金，團隊需要時於相對後期介入，之後偏向不干預、幕後支持與推廣。</div>
+  <blockquote>就是不管最後面評價是怎麼樣不管最後面賣了幾套Steam的同時上線人數是多少或者是最後面在Twitch上面是有多少人去觀看它已經無法改變的就是我覺得它是我人生非常重要的一個里程碑我非常榮幸我有這樣的機會可以來參與</blockquote>
+  <div class="mechanism"><span class="tag">🎮 投資原則</span><ol><li>看見自己真心喜歡的作品與團隊。</li><li>在明確資金需求出現時介入。</li><li>資金投入後不以頻繁管理干擾開發。</li><li>商業 KPI 重要，但不抹去創作與人生里程碑。</li></ol></div>
+  <div class="stock-group">
+    <div class="gl">正式名稱已核對</div>
+    <span class="ticker">紅眼露比 <code>Rubinite</code></span>
+    <span class="ticker">杯狗遊戲 <code>Cup Dog Games</code></span>
+    <span class="ticker">GameWorks Ventures</span>
+    <span class="ticker">肖楠資本</span>
+  </div>
+  <div class="note"><b>本集邊界：</b>遊戲營運數字是主持人口述，不延伸為正式公司財務資料。</div>
+<div class="note"><b>主持人口述：</b>同時上線約 1,000 後摸到 2,000；Elajjaz 直播同看約 8,000，存檔逾 10 萬。</div>
+<div class="note"><b>實況主正名：</b>逐字稿的 Elijah 已由直播紀錄交叉核對為 Elajjaz；數字仍只按主持人口述。</div>
+  <div class="risk"><b>風險：</b>私人遊戲創投流動性低、單案不確定性高，不能用短線股票框架衡量。</div>
+  <div class="action"><b>理解：</b>這是一筆明示私人投資，也是本集情感主軸。</div>
+</div>
+
+<div class="card" id="card-10">
+  <div class="num">10/12</div>
+  <div class="sec">價格確認</div>
+  <h2>好公司不等於好買點：等族群集體站回</h2>
+  <div class="core"><span class="tag">🎯</span><b>台積電、Google、TI 財報與產業訊號都好，股價仍可下跌。</b>主持人尊重價格、以均線停利停損；當舊主流全面破壞時，不急著預判下一棒，等族群集體表態再找領頭羊。</div>
+
+  <div class="mechanism"><span class="tag">🧭 實戰框架</span><ol><li><b>基本面：</b>判斷公司與產業是否仍好。</li><li><b>估值：</b>產品好，不代表價格合理；Palantir 是典型。</li><li><b>價格：</b>主要均線、扣抵與相對強弱先修復。</li><li><b>族群：</b>集體站回後，再辨認誰是反彈領頭羊。</li></ol></div>
+  <div class="stock-group">
+    <div class="gl">基本面與價格分離</div>
+    <span class="ticker">台積電 <code>財報好</code></span>
+    <span class="ticker">Google <code>AI 已變現</code></span>
+    <span class="ticker">Texas Instruments <code>復甦／漲價</code></span>
+    <span class="ticker">Palantir <code>估值待驗</code></span>
+  </div>
+  <div class="note"><b>指數規則：</b>即使進入空頭，主持人的習慣也不是全部清空；這是條件式規則，不是本集現有指數持倉確認。</div>
+<div class="note"><b>人生時間：</b>淨值可以賺回來，一天過去就回不來；不要讓市場吞掉全部生活。</div>
+  <div class="risk"><b>風險：</b>沒有強反攻時，深跌科技股可能進入長時間盤整與套牢賣壓。</div>
+  <div class="action"><b>應對：</b>把預判改成條件單：站回、集體表態、相對強，再逐步提高曝險。</div>
+</div>
+
+<div class="card" id="card-11">
+  <div class="num">11/12</div>
+  <div class="sec">持倉揭露</div>
+  <h2>明示持倉、現金計畫與條件句分開</h2>
+  <table>
+    <tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr>
+    <tr>
+      <td><span class="own">⭐</span>AMD Advancing AI 相關概念股</td>
+      <td>本週買進／加碼；個股未指名</td>
+      <td>主持人明示往 AMD 相關概念股去壓並取得正報酬，不等於持有 AMD 本股。</td>
+    </tr>
+    <tr>
+      <td><span class="own">⭐</span>Nichicon</td>
+      <td>持有不動；日本長期部位</td>
+      <td>本人直接說也是持股，近期沒有去動。</td>
+    </tr>
+    <tr>
+      <td><span class="own">⭐</span>肖楠資本／《紅眼露比》</td>
+      <td>私人投資持有</td>
+      <td>團隊有資金需求時介入，資金投入後維持幕後支持。</td>
+    </tr>
+    <tr>
+      <td><span class="own">⭐</span>整體台美股持倉</td>
+      <td>drawdown 已逾 20%</td>
+      <td>每日持續虧損；少數新題材正報酬不足以抵銷整體回撤。</td>
+    </tr>
+    <tr>
+      <td>現金</td>
+      <td>規劃提高，尚未執行</td>
+      <td>若 DD 往約 25–30%發展，偏向騰現金避險；錄音時仍在個股間切換。</td>
+    </tr>
+    <tr>
+      <td>指數</td>
+      <td>條件式規則，不確認當下持有</td>
+      <td>只說即使進入空頭，依習慣可能仍握部分指數；不足以標示本集 hostOwned。</td>
+    </tr>
+  </table>
+  <div class="note"><b>核對原則：</b>本集沒有明示賣出任何一檔具名股票；均線觸發時砍出是規則，不可虛構成已完成的具名賣單。</div>
+</div>
+
+<div class="card" id="card-12">
+  <div class="num">12/12</div>
+  <div class="sec">行動清單</div>
+  <h2>先活著，再等價格把答案說清楚</h2>
+  <div class="cols3">
+    <div class="box">
+      <h4>現在做</h4>
+      <ul><li><b>降低交易頻率：</b>停止多調多錯，保住七月以前的戰果。</li><li><b>尊重價格：</b>用主要均線、扣抵與 benchmark 檢查市場是否真正修復。</li><li><b>維持低槓桿：</b>不在原因不明的破底段用大槓桿搶反彈。</li></ul>
+    </div>
+    <div class="box">
+      <h4>等待驗證</h4>
+      <ul><li><b>市場：</b>台指、NQ、SOX 是否快速站回主要均線。</li><li><b>族群：</b>誰先集體表態並成為反彈領頭羊。</li><li><b>基本面：</b>記憶體增幅收斂、TI／800V 漲價與 Google AI 成本是否照敘事走。</li><li><b>風控：</b>整體 DD 是否逼近約 25–30%現金門檻。</li></ul>
+    </div>
+    <div class="box">
+      <h4>明確避免</h4>
+      <ul><li><b>不要腦補：</b>提高現金尚未執行，指數也未確認當下持有。</li><li><b>不要追因：</b>泛科技共振下跌時，先比 benchmark 再找個股利空。</li><li><b>不要把產業看多當進出：</b>800V、鋁電容與 AI 需求仍需價格確認。</li></ul>
+    </div>
+  </div>
+</div>
+
+</div>
+<a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
