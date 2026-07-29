@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EP683｜🚑 AI 科技大屠殺下的風控重置｜2026-07-29</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>EP683｜🚑 AI 科技大屠殺下的風控重置</h1>
+    <div class="date">2026-07-29｜回撤 25–28%｜指數與現金防守｜Agentic CPU 新需求</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>本集持有揭露</h4>
+        <span class="ticker">台積電 <code>2330／TSM</code></span>
+        <span class="ticker">台股大盤／台指期 <code>INDEX</code></span>
+        <span class="ticker">台灣中小型股 <code>未指名</code></span>
+      </div>
+      <div class="col">
+        <h4>產業觀察</h4>
+        <span class="ticker">AMD <code>AMD</code></span>
+        <span class="ticker">Intel <code>INTC</code></span>
+        <span class="ticker">記憶體 <code>DRAM／HBM</code></span>
+        <span class="ticker">NVIDIA <code>NVDA</code></span>
+      </div>
+      <div class="col">
+        <h4>風險閘門</h4>
+        <span class="ticker">中國曝光設備 <code>DUV／EUV</code></span>
+        <span class="ticker">長鑫存儲 <code>CXMT</code></span>
+        <span class="ticker">Apple／CSP 採用政策 <code>條件式</code></span>
+      </div>
+    </div>
+    <div class="pills"><div class="pill">淨值回到約 5 月初，maximum drawdown 約 25–28%</div><div class="pill">過去一兩週把部分停泊資金轉買低估股，卻一路買、一路跌</div><div class="pill">若出現調整窗口：單檔不超過 10%、提高指數與現金、停止槓桿</div><div class="pill">台積電相對強，但估值與資金輪動都改列觀察</div></div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>先活下來：</b>回撤已進入策略重置區，風險承受度比猜底更重要。</a>
+    <a class="insight-pill" href="#card-5"><b>操作切換：</b>從集中個股轉向分散、指數、現金與零槓桿。</a>
+    <a class="insight-pill" href="#card-8"><b>產業亮點：</b>Agentic AI 讓 general-purpose CPU 需求有增量想像。</a>
+    <a class="insight-pill" href="#card-9"><b>政策風險：</b>中國 DUV 的外溢程度，取決於美國是否放行 Apple 或 CSP 使用 CXMT。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 回撤 25–28%</a>
+      <a href="#card-3">03 中小型殺盤</a>
+      <a href="#card-4">04 資金搬家</a>
+      <a href="#card-5">05 防守新規則</a>
+      <a href="#card-6">06 TSM 改列觀察</a>
+      <a href="#card-7">07 記憶體風險</a>
+      <a href="#card-8">08 CPU 增量</a>
+      <a href="#card-9">09 DUV／CXMT</a>
+      <a href="#card-10">10 風險先於獲利</a>
+      <a href="#card-11">11 持倉揭露</a>
+      <a href="#card-12">12 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">回撤現況</div>
+    <h2>淨值回到 5 月初：25–28% 是警報，不是答案</h2>
+    <div class="core"><span class="tag">重點</span>主持人估計本輪 maximum drawdown 約 25–28%，今年高點曾有約 200%多報酬；這是大幅回吐，且尚無法確認回撤已結束。</div>
+
+    <div class="mechanism"><span class="tag">判讀順序</span><ol><li>先把目前損失當成已發生，不以成本價決定下一步。</li><li>評估部位是否已影響睡眠、生活與決策品質。</li><li>再比較指數與個股誰更有機會帶回下一段新高。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">回撤背景</div>
+        <span class="ticker">主持人淨值 <code>DD 25–28%</code></span>
+        <span class="ticker">同業高報酬案例 <code>DD 50%+</code></span>
+      </div>
+    <div class="note">25–28%是主持人口述估算，不是經會計或券商對帳後的精確績效數字。</div>
+    <div class="note">即使已配置大量台積電與台指期，整體淨值仍明顯回撤。</div>
+    <div class="risk"><b>風險：</b>把過去最高報酬當安全墊，容易低估剩餘跌幅與流動性壓力。</div>
+    <div class="action"><b>應對：</b>先以目前淨值重新計算可承受損失，不用高點部位反推該抱多久。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">市場結構</div>
+    <h2>櫃買近月跌逾 20%：沒有爆量，不代表賣壓結束</h2>
+    <div class="core"><span class="tag">重點</span>台灣中小型與櫃買跌幅已接近歷史級修正，但許多持有人只是回吐 4–5 月漲幅，仍有獲利可賣，未必會立刻出現典型投降量。</div>
+
+    <div class="mechanism"><span class="tag">賣壓如何延長</span><ol><li>韓國高槓桿去化向台、日、美科技與 AI 供應鏈外溢。</li><li>早期低成本持有人持續獲利了結，市場不一定一次爆量清洗。</li><li>個股跌破多條均線後，反彈還會遇到解套賣壓。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">壓力區</div>
+        <span class="ticker">櫃買指數 <code>OTC</code></span>
+        <span class="ticker">台灣中小型股 <code>SMID</code></span>
+        <span class="ticker">SOX／AI 供應鏈 <code>TECH</code></span>
+      </div>
+    <div class="note">本集描述櫃買近一個月跌逾 20%、逼近 30%；這是錄音當下的主持人口述。</div>
+    <div class="note">單日尾盤急拉或漲停家數增加，仍不足以證明趨勢已反轉。</div>
+    <div class="risk"><b>風險：</b>在流動性被抽乾時，把便宜當作止跌訊號，可能持續接到下落中的刀。</div>
+    <div class="action"><b>應對：</b>等待量價、領漲族群與市場廣度同時改善，再提高個股風險。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">已執行調整</div>
+    <h2>停泊資金轉買低估股：一路買、一路跌</h2>
+    <div class="core"><span class="tag">重點</span>過去一兩週，主持人把部分停在台積電、台指期與 Apple 的資金挪去買未指名的台美低估個股；買進已執行，但標的、金額與剩餘部位未公開。</div>
+
+    <div class="mechanism"><span class="tag">本集可確認的語意</span><ol><li>低估個股：已持續承接，之後又下跌 15–20%甚至更多。</li><li>台積電與台指期：仍明示有大量持有，只是部分資金被挪出。</li><li>Apple：只證明曾作為停泊資產且有資金被挪出，不能證明現在仍持有，也不能推定已全數出清。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">資金來源</div>
+        <span class="ticker">台積電 <code>TSM</code></span>
+        <span class="ticker">台指期 <code>INDEX</code></span>
+        <span class="ticker">Apple <code>AAPL</code></span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">資金去向</div>
+        <span class="ticker">台美低估個股 <code>未指名</code></span>
+      </div>
+    <div class="note">不得把停泊資金被挪出，誤寫成 Apple 目前仍持有或已完全清倉。</div>
+    <div class="note">主持人已開始懷疑原本的估值 filter 是否足以抵擋評價制度下修。</div>
+    <div class="risk"><b>風險：</b>低估標準若整體失效，越跌越買會把研究信念轉成集中風險。</div>
+    <div class="action"><b>應對：</b>把每次加碼拆成小量試單，並明確設定策略失效的重新評估條件。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">防守重置</div>
+    <h2>單檔不超過 10%、提高指數與現金、停止槓桿</h2>
+    <div class="core"><span class="tag">重點</span>主持人規劃把組合由集中題材股改為分散配置；若反彈提供調整窗口，會把更多部位轉進台指期，甚至提高現金，且目前不再使用槓桿。</div>
+    <blockquote>然後再來就是一定是不要再去使用槓桿</blockquote>
+    <div class="mechanism"><span class="tag">三層防守</span><ol><li>集中度：單一持股壓到 10%以下。</li><li>工具：方向看不清時降低個股著墨，優先使用指數。</li><li>資金：反彈時才考慮增加台指期或現金；這是條件式計畫，不是已完成動作。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">已持有與規劃</div>
+        <span class="ticker">台指期 <code>持有／擬增加</code></span>
+        <span class="ticker">現金 <code>條件式計畫</code></span>
+        <span class="ticker">槓桿 <code>目前停用</code></span>
+      </div>
+    <div class="note">主持人平時自述槓桿多壓在約 1.3 倍以下，但本集新規則是現在不要再使用槓桿。</div>
+    <div class="note">提高現金尚未證明已執行，不能列為現有部位。</div>
+    <div class="risk"><b>風險：</b>反彈不一定回到原成本；若把調整窗口誤當反轉，仍可能再次承受下殺。</div>
+    <div class="action"><b>應對：</b>預先列出反彈時的減碼、轉指數與現金比例，避免盤中臨時改規則。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">估值框架</div>
+    <h2>台積電相對最強，但低本益比可能只是新的公定價</h2>
+    <div class="core"><span class="tag">重點</span>台積電仍是大量持股與相對強勢核心，本集卻不再把低 forward P/E 直接當成低估；它與 NVIDIA 的估值可能正成為整條 AI 供應鏈的新基準。</div>
+
+    <div class="mechanism"><span class="tag">評價下修鏈</span><ol><li>若最核心的台積電與 NVIDIA 只值目前倍數，其他供應鏈未必能維持更高評價。</li><li>原本 15 倍可買的公司，仍可能被市場壓到 10 倍甚至 7 倍。</li><li>中小型股反彈時，停泊在台積電的資金也可能被抽走。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">相對強、但改列觀察</div>
+        <span class="ticker">台積電 <code>2330／TSM</code></span>
+        <span class="ticker">NVIDIA <code>NVDA</code></span>
+      </div>
+    <div class="note">台積電本集結論是 watchful，不是看空；持有狀態與評價疑慮必須同時保留。</div>
+    <div class="note">便宜是條件，不是底部保證。</div>
+    <div class="risk"><b>風險：</b>以舊估值區間攤平，可能忽略市場已切換到更低的評價制度。</div>
+    <div class="action"><b>應對：</b>把估值區間改成情境帶，並為獲利高峰、資本支出反轉與資金輪動各設壓力測試。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">記憶體警訊</div>
+    <h2>基本面最強也能崩：韓國去槓桿與評價制度改寫</h2>
+    <div class="core"><span class="tag">重點</span>Samsung、SK Hynix 與記憶體族群的展望仍佳，股價卻劇烈下跌；主持人把這視為流動性去化或市場提前反映未知風險的警訊，而非直接宣告基本面反轉。</div>
+
+    <div class="mechanism"><span class="tag">兩條待驗證路徑</span><ol><li>流動性路徑：韓國高槓桿清算尚未完成，便宜股仍被迫賣出。</li><li>產業路徑：市場可能提前交易中國供給、政策放行或獲利高峰。</li><li>確認方式：等待報價、訂單、資本支出與政策資料交叉驗證。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">觀察標的</div>
+        <span class="ticker">Samsung <code>005930.KS</code></span>
+        <span class="ticker">SK Hynix <code>000660.KS</code></span>
+        <span class="ticker">DRAM／HBM <code>MEMORY</code></span>
+      </div>
+    <div class="note">股價大跌只能提出問題，不能單憑價格推導出未公開的基本面壞消息。</div>
+    <div class="note">美光與 Meta 白皮書在本集被用來支持記憶體仍重要，不代表所有記憶體股票已止跌。</div>
+    <div class="risk"><b>風險：</b>把產業供不應求直接等同股價安全，會忽略槓桿清算與估值壓縮。</div>
+    <div class="action"><b>應對：</b>把基本面、估值與流動性分開評分，任何一項惡化都要降低倉位上限。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">Agentic AI</div>
+    <h2>CPU／GPU 走向 1:1，要看整個資料中心，不是單一 tray</h2>
+    <div class="core"><span class="tag">重點</span>Agentic AI 可把工作卸載到 general-purpose CPU racks／trays，CPU 增量應從整個 AI data center 計算；Helios compute tray 為 1 顆 EPYC Venice CPU 對 4 顆 Instinct MI455X GPU，整櫃則有 72 顆 MI455X。</div>
+    <blockquote>所以它還是1比4</blockquote>
+    <div class="mechanism"><span class="tag">口徑拆解</span><ol><li>產品層：Helios compute tray 為 1 顆 EPYC Venice CPU 搭 4 顆 Instinct MI455X GPU，仍是 1:4。</li><li>系統層：AI rack 外可追加 general-purpose CPU racks／trays 承接 Agentic 工作流。</li><li>資料中心層：把兩類設備合計後，整體 CPU／GPU 才有逐步靠近 1:1 的可能。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">潛在受益</div>
+        <span class="ticker">AMD <code>AMD</code></span>
+        <span class="ticker">Intel <code>INTC</code></span>
+        <span class="ticker">CPU／Socket <code>SERVER</code></span>
+      </div>
+    <div class="note">Helios 的 1:4 是 compute tray 配置；整櫃有 72 顆 MI455X，不可把 1:4 誤寫成整櫃或整座資料中心的最終比例。</div>
+    <div class="note">管理層的 1:1 是方向性敘事，實際放量仍受產品時程與 CPU 產能約束。</div>
+    <div class="risk"><b>風險：</b>把長期資料中心口徑誤套到單一產品 BOM，會高估短期 CPU 放量速度。</div>
+    <div class="action"><b>應對：</b>追蹤 general-purpose server 追加量、CPU 產能與實際 rack／tray 配置，而非只看管理層口號。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">中國設備風險</div>
+    <h2>DUV 不是新故事：真正閘門在 Apple／CSP 能否採用 CXMT</h2>
+    <div class="core"><span class="tag">重點</span>中國用 DUV 多重曝光推進較小線寬會犧牲成本、缺陷與良率；對全球供應鏈的衝擊取決於設備量產，以及美國是否允許 Apple 或 CSP 採用 CXMT 等中國零組件。</div>
+
+    <div class="mechanism"><span class="tag">條件式情境</span><ol><li>若維持封禁：中國設備與記憶體主要服務內需，外溢影響較有限。</li><li>若政策開門：低價產能可能進入 Apple／CSP 供應鏈，全球記憶體競爭升高。</li><li>錄音當下：Apple 遊說、CSP 測試與政府放行都不是已核准採用的事實。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">觀察鏈</div>
+        <span class="ticker">中國 DUV／EUV <code>EQUIPMENT</code></span>
+        <span class="ticker">CXMT <code>MEMORY</code></span>
+        <span class="ticker">Apple／CSP <code>POLICY GATE</code></span>
+      </div>
+    <div class="note">多重曝光能推進線寬，不代表成本、良率與量產能力已等同頂尖設備。</div>
+    <div class="note">本段只保留主持人的條件式風險框架，不把傳聞改寫成已發生事件。</div>
+    <div class="risk"><b>風險：</b>將市場殺盤單因歸咎於 DUV 新聞，可能忽略整體盤面脆弱與去槓桿。</div>
+    <div class="action"><b>應對：</b>只在政策文件、公司採用公告與量產資料出現後，才調高此風險情境的權重。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">生存原則</div>
+    <h2>新手不是做錯人：先縮部位，讓自己活過修正</h2>
+    <div class="core"><span class="tag">重點</span>六月才進場、買 0050 成分股卻虧損約 30%的聽眾，不等於選股或人格失敗；重點是不用槓桿、先用小部位認識承受度，並把生活品質列入風控。</div>
+    <blockquote>風險絕對是放在獲利的前面</blockquote>
+    <div class="mechanism"><span class="tag">修正後的練習</span><ol><li>若部位讓人吃不下、睡不著，先降低曝險，不等市場替自己解套。</li><li>把未實現損失視為沉沒成本，重新選擇較可能回到新高的工具。</li><li>維持研究節奏；行情轉好時，才有能力辨認下一輪領頭羊。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">生活與長期能力</div>
+        <span class="ticker">小量試單 <code>POSITION SIZE</code></span>
+        <span class="ticker">零槓桿 <code>SURVIVAL</code></span>
+        <span class="ticker">紅眼露比 <code>LIFE BALANCE</code></span>
+      </div>
+    <div class="note">主持人也把家庭、遊戲與生活重心視為管理回撤壓力的一部分。</div>
+    <div class="note">活過一次修正不保證獲利，但能保留修正策略與累積經驗的資格。</div>
+    <div class="risk"><b>風險：</b>急著一次賺回損失，最容易在波動放大時重新加槓桿或集中押注。</div>
+    <div class="action"><b>應對：</b>先把部位縮到能正常生活的水位，再用固定檢查表檢討每筆持倉。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">持倉與計畫</div>
+    <h2>主持人本集持倉／操作揭露</h2>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><span class="own">⭐</span>台積電（2330／TSM）</td>
+        <td>持有／watchful</td>
+        <td>明示仍有大量台積電；相對抗跌，但估值公定價與資金輪動風險上升。</td>
+      </tr>
+      <tr>
+        <td><span class="own">⭐</span>台股大盤／台指期</td>
+        <td>持有；反彈時擬增加</td>
+        <td>明示仍有台指期；若出現調整窗口，計畫把更多部位轉往指數。</td>
+      </tr>
+      <tr>
+        <td><span class="own">⭐</span>台灣中小型股（未指名）</td>
+        <td>持有／承壓</td>
+        <td>明示手上仍有部分中小型股，本輪受流動性抽離重創。</td>
+      </tr>
+      <tr>
+        <td><span class="own">⭐</span>台美低估個股（未指名）</td>
+        <td>過去一兩週持續買進</td>
+        <td>資金來自部分台積電、台指期與 Apple 停泊部位；買後仍持續下跌。</td>
+      </tr>
+      <tr>
+        <td>Apple（AAPL）</td>
+        <td>目前持有未證實</td>
+        <td>只證明曾作為停泊資產且有部分資金被挪出；不推定仍持有或已全數出清。</td>
+      </tr>
+      <tr>
+        <td>現金</td>
+        <td>條件式計畫</td>
+        <td>只說若反彈提供調整機會會考慮提高現金，尚未證明已執行。</td>
+      </tr>
+      <tr>
+        <td>AMD／Intel</td>
+        <td>產業看多／未揭露持有</td>
+        <td>看好 Agentic AI 帶動 general-purpose CPU 增量，但未揭露建立部位。</td>
+      </tr>
+      <tr>
+        <td>CXMT／中國 DUV</td>
+        <td>條件式風險觀察</td>
+        <td>關注美國政策是否放行 Apple／CSP 採用，未揭露持有。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">橘色標記只代表逐字稿中有明確持有或已執行買進證據。</div>
+    <div class="note">計畫、產業看法與傳聞不會自動轉成持倉。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">行動清單</div>
+    <h2>本集可執行的三層檢查</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在先做</h4>
+        <ul><li>把單一持股上限壓到 10%，總曝險調到不影響生活。</li><li>停用槓桿，將未實現損失納入目前淨值。</li><li>分開標示已持有、已執行、條件式計畫與純觀察。</li></ul>
+      </div>
+      <div class="box">
+        <h4>反彈時做</h4>
+        <ul><li>依預案把部分個股轉往台指期或現金。</li><li>不以回到成本為唯一目標，改比較下一段相對勝率。</li><li>觀察市場廣度、量價與領漲族群是否同步改善。</li></ul>
+      </div>
+      <div class="box">
+        <h4>持續追蹤</h4>
+        <ul><li>TSM／NVDA 是否成為 AI 估值公定價。</li><li>Helios compute tray 1:4、整櫃 72 顆 MI455X 與資料中心 CPU／GPU 總量的差距。</li><li>美國是否正式放行 Apple／CSP 採用 CXMT 等中國零組件。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
