@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP684 筆記｜2026-08-01</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP684 筆記</h1>
+    <div class="date">2026-08-01｜去槓桿、流動性、處置股與被動停利</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>偏多／延續</h4>
+        <span class="ticker">聯發科</span>
+        <span class="ticker">AI 熱門股／算力鏈</span>
+        <span class="ticker">中長期仍以做多為主</span>
+      </div>
+      <div class="col">
+        <h4>觀望／等待修復</h4>
+        <span class="ticker">台股大盤</span>
+        <span class="ticker">韓國股市</span>
+        <span class="ticker">美股／SOX</span>
+        <span class="ticker">台灣中小型股</span>
+        <span class="ticker">軟體／SaaS</span>
+      </div>
+      <div class="col">
+        <h4>中性／風險優先</h4>
+        <span class="ticker">處置股制度</span>
+        <span class="ticker">0050／原型 ETF</span>
+        <span class="ticker">FCN／結構型商品</span>
+        <span class="ticker">高槓桿 AI 基金</span>
+      </div>
+    </div>
+    <div class="pills"><div class="pill">核心事件：全市場去槓桿，而非單一基本面利空</div><div class="pill">短線：深跌反彈後仍防其他基金與散戶的清算餘震</div><div class="pill">中長期：仍做多 AI，但接受均值回歸與真正 correction</div><div class="pill">本集沒有主持人目前具名持股、數量或成本的新揭露</div></div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>去槓桿：</b>AI 多倉跌、軟體空倉漲，擁擠策略在風控線前同步砍倉。</a>
+    <a class="insight-pill" href="#card-4"><b>流動性：</b>真正難的不是買進，而是部位變大、制度收窄時還能不能退出。</a>
+    <a class="insight-pill" href="#card-5"><b>處置制度：</b>個人可利用規則找機會，不代表抽走流動性對市場整體有利。</a>
+    <a class="insight-pill" href="#card-9"><b>被動停利：</b>不猜完美高點，把部分紙上獲利轉成住房與家庭生活。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 去槓桿核心</a>
+      <a href="#card-3">03 基金爆倉</a>
+      <a href="#card-4">04 退出能力</a>
+      <a href="#card-5">05 處置股</a>
+      <a href="#card-6">06 修復與均值</a>
+      <a href="#card-7">07 FCN</a>
+      <a href="#card-8">08 AI 出場</a>
+      <a href="#card-9">09 被動停利</a>
+      <a href="#card-10">10 FIRE</a>
+      <a href="#card-11">11 本人揭露</a>
+      <a href="#card-12">12 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">市場核心</div>
+    <h2>這波不是單一利空，而是全市場同步去槓桿</h2>
+    <div class="core"><span class="tag">重點</span>Situational Awareness 是最醒目的爆倉案例，但真正壓力還包括其他 multi-manager pods、韓國槓桿資金、質押與融資同時減倉。</div>
+
+    <div class="mechanism"><span class="tag">價格線索</span><ol><li>四至六月漲最多的動能股，七月成為被砍最多的標的。</li><li>多倉下跌時，空軟體的部位又被反彈軋到，形成雙殺。</li><li>風控線觸發後，基金砍多倉、補空倉，價格進一步脫離基本面。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">跨市場</div>
+        <span class="ticker">台股</span>
+        <span class="ticker">韓股</span>
+        <span class="ticker">美股／SOX</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">部位來源</div>
+        <span class="ticker">Momentum pods</span>
+        <span class="ticker">質押／融資</span>
+        <span class="ticker">高槓桿 AI 多空基金</span>
+      </div>
+    <div class="note">主持人認為這次核心不一定是基本面，而是部位與流動性失衡。</div>
+    <div class="note">Situational Awareness 不等於整個市場唯一的罪魁禍首。</div>
+    <div class="risk"><b>風險：</b>檯面下仍可能有中小型 pods 清算，反彈後不代表餘震立即結束。</div>
+    <div class="action"><b>應對：</b>先辨識價格是否由被迫交易主導，再決定要不要把短線下跌直接解讀成基本面惡化。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">基金案例</div>
+    <h2>高報酬仍可能被槓桿與流動性一次擊穿</h2>
+    <div class="core"><span class="tag">重點</span>Situational Awareness 過去報酬亮眼，卻因 AI 多倉下跌、軟體空倉反彈與槓桿過大，把公開股票部位轉交 Citadel 承接。</div>
+
+    <div class="mechanism"><span class="tag">風險鏈</span><ol><li>熱門 AI 多倉快速下跌，淨曝險與保證金壓力升高。</li><li>軟體空倉同步反彈，原本的對沖沒有發揮保護作用。</li><li>公開部位以 block trade／整包方式轉手，私募 Anthropic 部位仍保留。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">節目舉例的多倉</div>
+        <span class="ticker">Nebius</span>
+        <span class="ticker">SanDisk</span>
+        <span class="ticker">IREN</span>
+        <span class="ticker">Bloom Energy</span>
+        <span class="ticker">Micron</span>
+        <span class="ticker">SK Hynix</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">交易對手／私募</div>
+        <span class="ticker">Citadel</span>
+        <span class="ticker">Ken Griffin</span>
+        <span class="ticker">Anthropic</span>
+      </div>
+    <div class="note">好資產與好風控是兩個不同問題。</div>
+    <div class="note">主持人認為基金與投資人仍可能再起，但不能忽略槓桿教訓。</div>
+    <div class="risk"><b>風險：</b>歷史報酬再高，只要部位無法在市場深度內退出，仍會被迫用折價清算。</div>
+    <div class="action"><b>應對：</b>評估策略時同時看 gross leverage、流動性、空頭曝險與單一方向的擁擠程度。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">流動性框架</div>
+    <h2>部位越大，最重要的問題從買什麼變成怎麼出來</h2>
+    <div class="core"><span class="tag">重點</span>鎖漲停能幫忙建立部位，但市場縮量、處置或恐慌時，缺乏對手方會讓大部位無法減碼，甚至自己越賣越砸價。</div>
+    <blockquote>可是重點就是那你要怎麼出來</blockquote>
+    <div class="mechanism"><span class="tag">退出三問</span><ol><li>正常成交量能否容納預計賣出的張數？</li><li>處置、跌停或恐慌時，撮合頻率與買方是否還存在？</li><li>若槓桿觸發追繳，能否在不自我砸價的情況下降低曝險？</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">流動性約束</div>
+        <span class="ticker">成交量</span>
+        <span class="ticker">市場深度</span>
+        <span class="ticker">撮合頻率</span>
+        <span class="ticker">造市能力</span>
+      </div>
+    <div class="note">小資金在大跌時的真正優勢，是能快速退出而非判斷一定比較準。</div>
+    <div class="note">部位上漲時會創造自己的 momentum，下跌時也可能形成自我踩踏。</div>
+    <div class="risk"><b>風險：</b>用正常行情的成交量估算極端情境，會大幅低估實際退出天數。</div>
+    <div class="action"><b>應對：</b>建倉前先反推最差流動性下的退出計畫，再決定部位與槓桿上限。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">台股制度</div>
+    <h2>處置股可以有策略價值，制度本身仍可能放大風險</h2>
+    <div class="core"><span class="tag">重點</span>主持人早期非常反感處置股，理解規則 bug 後轉為中性；但本輪再次證明抽走流動性可能讓狂漲、狂跌與斷頭更嚴重。</div>
+
+    <div class="mechanism"><span class="tag">兩層判斷</span><ol><li>個人層：規則固定後，熟悉制度的人確實可能找到策略機會。</li><li>市場層：成交頻率下降會讓大部位更難退出，整體利益未必為正。</li><li>行為層：鎖漲停、鎖跌停與處置條件都會誘導參與者提前行動。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">高風險情境</div>
+        <span class="ticker">中小型股</span>
+        <span class="ticker">延長撮合</span>
+        <span class="ticker">鎖跌停</span>
+        <span class="ticker">融資／質押</span>
+      </div>
+    <div class="note">單一標的一千萬元，在小型處置股裡也可能成為難以退出的大部位。</div>
+    <div class="note">超跌可能形成局外人的做多機會，但不等於裡面的槓桿持有人已脫離危險。</div>
+    <div class="risk"><b>風險：</b>制度抽走流動性後，跌停與斷頭會互相強化，不能只用估值便宜判斷安全。</div>
+    <div class="action"><b>應對：</b>處置標的只用可承受完全卡住的部位參與，並事先列出撮合與退出限制。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">後市與 AI</div>
+    <h2>短線修復不改中長期均值回歸，仍做多但不否認大修正</h2>
+    <div class="core"><span class="tag">重點</span>台韓美股已深跌反彈，聯發科上修展望可提供新動能；主持人預期爆倉事件影響遞減，仍以做多 AI 為主。</div>
+    <blockquote>我們還是會以做多為主</blockquote>
+    <div class="mechanism"><span class="tag">時間尺度</span><ol><li>短線：公開部位轉手後，單一基金持續砸盤的壓力下降。</li><li>中期：其他 pods 與散戶仍可能整理槓桿，行情會有餘震。</li><li>長期：漲幅與長均線距離過大終將均值回歸，真正 AI correction 仍會出現。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">偏多</div>
+        <span class="ticker">聯發科</span>
+        <span class="ticker">AI 熱門股／算力鏈</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">等待確認</div>
+        <span class="ticker">台股大盤</span>
+        <span class="ticker">韓股</span>
+        <span class="ticker">SOX</span>
+        <span class="ticker">軟體／SaaS</span>
+      </div>
+    <div class="note">價格反轉不會自動把好公司變成壞公司。</div>
+    <div class="note">仍以做多為主，不等於否認循環終將下行或宣稱已找到底部。</div>
+    <div class="risk"><b>風險：</b>把去槓桿修復誤認為新一輪直線多頭，可能再次追進擁擠高位。</div>
+    <div class="action"><b>應對：</b>分開追蹤強迫賣壓是否消退，以及企業基本面與估值是否重新匹配。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">產品框架</div>
+    <h2>FCN 本質接近中介代做 sell put，結構越多層越要小心</h2>
+    <div class="core"><span class="tag">重點</span>FCN 可以讓閒置資金收息，但中介會抽成；多標的產品跌穿後，投資人可能被指定接到最差、最不想持有的標的。</div>
+
+    <div class="mechanism"><span class="tag">四項核對</span><ol><li>標的是單一還是多檔，最差者如何決定交割？</li><li>履約價、到期條件與跌穿後接貨金額是多少？</li><li>報價、手續費、酬庸與隱含波動率是否合理？</li><li>若直接做 sell put 或買原型商品，成本差多少？</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">比較工具</div>
+        <span class="ticker">0050</span>
+        <span class="ticker">單一標的 FCN</span>
+        <span class="ticker">多標的 FCN</span>
+        <span class="ticker">Sell put</span>
+      </div>
+    <div class="note">主持人原則上不推薦疊床架屋產品，但承認每個人的能力與便利需求不同。</div>
+    <div class="note">理解風險後可評估單一標的，不等於所有報價都值得接受。</div>
+    <div class="risk"><b>風險：</b>高息可能只是補償接到最弱標的、流動性不足與中介費用的風險。</div>
+    <div class="action"><b>應對：</b>拿到條款後逐項換算成自己做 sell put 的損益，再決定是否值得付中介成本。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">泡沫出場</div>
+    <h2>完美閃崩不實際，價格與基本面只能交換不同代價</h2>
+    <div class="core"><span class="tag">重點</span>技術面通常早於基本面；等 CapEx 或獲利趨勢完全反轉時，股價往往已跌很多，但太早離場又可能錯過最後一大段。</div>
+
+    <div class="mechanism"><span class="tag">兩種代價</span><ol><li>Panic early：訊號一出就先跑，回撤低但可能錯過最後噴出。</li><li>Panic later：等待更明確證據，參與完整波段但必須承受較深回撤。</li><li>價格停利：預先定義退出水位，避免事後隨情緒改規則。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">觀察變數</div>
+        <span class="ticker">價格趨勢</span>
+        <span class="ticker">技術面</span>
+        <span class="ticker">AI CapEx</span>
+        <span class="ticker">模型價格</span>
+        <span class="ticker">估值</span>
+      </div>
+    <div class="note">低 drawdown 與高上漲參與率通常不能同時最大化。</div>
+    <div class="note">最危險的是價格與基本面都已重擊，仍不停攤平。</div>
+    <div class="risk"><b>風險：</b>沒有事先定義取捨，容易早賣後追高，或在循環反轉時一路攤平。</div>
+    <div class="action"><b>應對：</b>把價格規則、基本面紅線與可承受回撤寫成同一張出場表。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">投資目的</div>
+    <h2>生活中的被動停利：把紙上富貴轉成不可逆的改善</h2>
+    <div class="core"><span class="tag">重點</span>股票上漲五倍、十倍若從未改善家人生活，仍只是帳面數字；買房與家庭支出能自然降低市場曝險，不需要猜最高點。</div>
+    <blockquote>投資的目的就是為了改善生活而不是不停的去累積紙上的富貴</blockquote>
+    <div class="mechanism"><span class="tag">執行方式</span><ol><li>多頭獲利時，固定把一部分資金轉出市場。</li><li>優先用在住房、健康、家庭體驗與降低生活壓力。</li><li>接受下一輪上漲少賺，換取修正時更穩定的家庭資產負債表。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">被動停利載體</div>
+        <span class="ticker">房產</span>
+        <span class="ticker">家庭生活</span>
+        <span class="ticker">健康</span>
+        <span class="ticker">現實資產</span>
+      </div>
+    <div class="note">主持人歷史上曾把股票獲利 cash out 買房。</div>
+    <div class="note">盤勢好時會後悔少賺，盤勢差時會慶幸已經轉出；這正是分散的交換。</div>
+    <div class="risk"><b>風險：</b>把財富全部留在同一個高波動帳戶，容易讓家人的生活品質跟著盤勢起伏。</div>
+    <div class="action"><b>應對：</b>為每次大幅獲利設定一筆家庭用途，不用等到財務自由才承認自己有錢。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">FIRE 規劃</div>
+    <h2>退休不是只算 4%提領，還要估人生支出高峰與回職場成本</h2>
+    <div class="core"><span class="tag">重點</span>現在一個人每月三萬元夠用，不代表未來伴侶、孩子、學區、房貸與車貸出現時仍夠；離開職場太久後再回去，也有技能與薪資成本。</div>
+
+    <div class="mechanism"><span class="tag">退休壓力測試</span><ol><li>以人生可能的最高支出，而不是現在最低支出估提領率。</li><li>加入家庭形成、醫療、住房與通膨情境。</li><li>估算熊市前幾年就發生時的順序風險與復職難度。</li><li>比較完全退休與低壓力工作加投資現金流。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">聽眾案例</div>
+        <span class="ticker">資產 1,200 萬</span>
+        <span class="ticker">0050 1,000 萬</span>
+        <span class="ticker">預備金 200 萬</span>
+        <span class="ticker">4%法則</span>
+      </div>
+    <div class="note">以上數字是聽眾案例，不是主持人部位。</div>
+    <div class="note">主持人偏好低壓力工作、收入加配息，並讓本金繼續複利。</div>
+    <div class="risk"><b>風險：</b>用單身低消費期直接外推一生，可能在支出高峰才發現必須重返已脫節的職場。</div>
+    <div class="action"><b>應對：</b>先把工作降壓而非一次歸零，保留收入、社會連結與未來選擇權。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">本人揭露</div>
+    <h2>本集部位、歷史配置與規則分流</h2>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td>整體方向／AI</td>
+        <td>仍以做多為主</td>
+        <td>只有方向性表態，沒有本集具名持股、數量或成本。</td>
+      </tr>
+      <tr>
+        <td>整體回撤／避風港</td>
+        <td>本輪相對部分大資金較小</td>
+        <td>本輪可轉向生技股且原部位仍出得掉；未明示具名股票或目前仍持有。</td>
+      </tr>
+      <tr>
+        <td><span class="own">⭐</span>股票獲利／房產</td>
+        <td>歷史已執行 cash out 買房</td>
+        <td>主持人明確回顧曾將股票獲利轉為房產。</td>
+      </tr>
+      <tr>
+        <td><span class="own">⭐</span>處置股策略</td>
+        <td>歷史曾利用規則找獲利機會</td>
+        <td>不是本集新交易，也沒有具名處置股。</td>
+      </tr>
+      <tr>
+        <td>FCN／0050</td>
+        <td>產品規則與聽眾案例</td>
+        <td>聽眾部位不得誤記為主持人持有。</td>
+      </tr>
+      <tr>
+        <td>Situational Awareness／Anthropic</td>
+        <td>第三方基金部位</td>
+        <td>不是主持人持股，不加本人持有標記。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">本集沒有明示主持人目前持有任何具名股票、數量、成本、現金水位或槓桿倍數。</div>
+    <div class="note">⭐只標歷史已執行策略／配置，不代表目前仍持有相關標的。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">行動清單</div>
+    <h2>EP684 可直接執行的三欄框架</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在做</h4>
+        <ul><li>用最差成交量反推每個部位需要幾天才能退出。</li><li>把價格停利、基本面紅線與可承受回撤寫成出場表。</li><li>為大幅獲利設定固定比例，轉成家庭生活與低波動資產。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>其他 momentum pods 與散戶降槓桿是否已完成。</li><li>聯發科上修展望能否轉成市場持續動能。</li><li>Microsoft CapEx 是否只是帳務分類調整。</li><li>AI 熱門股反彈是基本面重估還是強迫賣壓消退。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>把第三方基金、聽眾 0050 或前集持股當成本集本人持倉。</li><li>在處置與低流動性標的上使用無法承受卡死的槓桿。</li><li>只因高息買多標的 FCN，卻沒算最差交割標的。</li><li>價格與基本面都已重擊後仍沒有上限地攤平。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
