@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP685 筆記｜2026-08-06</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP685 筆記</h1>
+    <div class="date">2026-08-05｜指數參與、HBM 降規、光通管制與市場動態調整</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>偏多／參與</h4>
+        <span class="ticker">台股大盤／指數</span>
+        <span class="ticker">Palantir</span>
+        <span class="ticker">AI 高估值資產／風險偏好</span>
+      </div>
+      <div class="col">
+        <h4>觀望／驗證</h4>
+        <span class="ticker">台灣中小型股</span>
+        <span class="ticker">HBM／記憶體</span>
+        <span class="ticker">800V DC／電源</span>
+        <span class="ticker">光通訊／中國加一</span>
+      </div>
+      <div class="col">
+        <h4>中性／拆開看</h4>
+        <span class="ticker">Google TPU／ASIC</span>
+        <span class="ticker">軟體／SaaS</span>
+        <span class="ticker">台股處置規則</span>
+      </div>
+    </div>
+    <div class="pills"><div class="pill">目前配置：繼續趴在指數裡面，兼顧行情參與與生活壓力</div><div class="pill">HBM 12Hi→8Hi、800V 延後都要分開看短期時程與長期方向</div><div class="pill">光通禁令若不含海外產能，直接影響有限；政策與材料反制才是變數</div><div class="pill">市場觀點應隨新資訊調整，不把未知急跌與已釐清事件混為一談</div></div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>部位選擇：</b>中小有便宜機會，但壓力位與生活安排讓核心暫留指數。</a>
+    <a class="insight-pill" href="#card-4"><b>供應鏈：</b>HBM 降規、800V 時程與光通管制不是同一種風險。</a>
+    <a class="insight-pill" href="#card-7"><b>軟體：</b>AI 有成本，薄弱套皮承壓；企業整合與資安不會自動消失。</a>
+    <a class="insight-pill" href="#card-9"><b>心法：</b>利多不漲要警覺；先依資訊防守，再隨事件釐清調整。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 指數配置</a>
+      <a href="#card-3">03 動態調整</a>
+      <a href="#card-4">04 HBM</a>
+      <a href="#card-5">05 800V</a>
+      <a href="#card-6">06 光通風險</a>
+      <a href="#card-7">07 軟體模型</a>
+      <a href="#card-8">08 Palantir</a>
+      <a href="#card-9">09 市場心法</a>
+      <a href="#card-10">10 生活框架</a>
+      <a href="#card-11">11 本人揭露</a>
+      <a href="#card-12">12 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">市場配置</div>
+    <h2>不追求每一段最強，先用指數保留參與資格</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為中小型股仍有便宜機會，但部分已到壓力位；在帶孩子出遊、不想承受過多壓力的條件下，暫時繼續以指數參與行情。</div>
+    <blockquote>所以就繼續趴在指數裡面</blockquote>
+    <div class="mechanism"><span class="tag">選擇框架</span><ol><li>比較中小型股的估值機會與壓力位置。</li><li>把時間、生活負荷與部位管理一起納入，而非只比預期報酬。</li><li>用指數維持市場參與，待後續資訊與價格結構更清楚再調整。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">目前較偏好</div>
+        <span class="ticker">台股大盤／指數</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">仍有機會但未作核心</div>
+        <span class="ticker">台灣中小型股</span>
+        <span class="ticker">高 beta 個股</span>
+      </div>
+    <div class="note">這是主持人自身配置選擇，未揭露商品、金額、成本或槓桿。</div>
+    <div class="note">回撤從最深近三成收復至約負 16%–17%為自述約略數字。</div>
+    <div class="risk"><b>風險：</b>指數不是無風險資產；把反彈或自述回撤改善外推為後續必漲，會忽略市場仍可能再變。</div>
+    <div class="action"><b>應對：</b>先決定自己能承受多少研究與生活負荷，再選擇個股、族群或指數工具。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">市場狀態</div>
+    <h2>未知時先防守，事件釐清後再更新，而不是硬守原判斷</h2>
+    <div class="core"><span class="tag">重點</span>主持人將一開始不知道急跌原因時的保守，與後來理解槓桿／爆倉脈絡後的重新評估分開；市場不是預言比賽，重要的是隨資訊與價格行為調整。</div>
+
+    <div class="mechanism"><span class="tag">三段流程</span><ol><li>原因未知：降低風險、避免把下跌硬解讀成必然便宜。</li><li>資訊補齊：辨識事件是否為暫時的強迫賣壓或基本面改變。</li><li>價格確認：視事件影響與市場反應，再評估是否加回曝險。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">需要同時看</div>
+        <span class="ticker">事件來源</span>
+        <span class="ticker">槓桿／流動性</span>
+        <span class="ticker">財報反應</span>
+        <span class="ticker">價格趨勢</span>
+      </div>
+    <div class="note">改變看法是資訊更新，不自動代表前一個判斷毫無根據。</div>
+    <div class="note">快速反彈也不等於可忽略再度波動的風險。</div>
+    <div class="risk"><b>風險：</b>把『後來知道原因』誤當成能精準買在低點，容易在新事件出現時失去風控。</div>
+    <div class="action"><b>應對：</b>將未知、已知與已被價格驗證的資訊分欄記錄，避免事後把所有判斷混寫成必然。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">記憶體</div>
+    <h2>HBM 12Hi 回到 8Hi：短期規格調整，不等於長線容量需求消失</h2>
+    <div class="core"><span class="tag">重點</span>主持人稱在 ASIC、GPGPU 場景確認部分 HBM 從 12Hi 回到 8Hi；其理解偏向缺貨、成本與良率下的暫時選擇，長線仍會往更高規格走。</div>
+
+    <div class="mechanism"><span class="tag">拆解問題</span><ol><li>堆疊層數影響容量與推論環境的快取空間。</li><li>短期缺貨、成本與良率會影響實際採用規格。</li><li>短期採用回調與長線規格升級是不同時間尺度。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">討論範圍</div>
+        <span class="ticker">HBM</span>
+        <span class="ticker">ASIC</span>
+        <span class="ticker">GPGPU</span>
+        <span class="ticker">12Hi</span>
+        <span class="ticker">8Hi</span>
+      </div>
+    <div class="note">節目未提供客戶、供應商、數量或正式規格文件。</div>
+    <div class="note">不能把部分場景的訊息推成所有 HBM 需求全面下降。</div>
+    <div class="risk"><b>風險：</b>產品組合、供給瓶頸與客戶驗證變動，都可能讓單一規格訊息被過度解讀。</div>
+    <div class="action"><b>應對：</b>追蹤正式產品規格、供應鏈量體與公司說法，區分『降規』是短期供應解法還是結構性需求改變。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">電源架構</div>
+    <h2>800V 可能慢一點，但導入方向與短期時程要分開看</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為 400V 可能比原先預期存續更久，800V DC 導入有遞延可能；但客戶切換與產業回應仍讓他判斷最終方向向更高電壓架構前進。</div>
+
+    <div class="mechanism"><span class="tag">雙軸判讀</span><ol><li>方向：電力密度與架構需求仍推動規格升級。</li><li>時程：既有 400V 可延長週期，導入不必然直線發生。</li><li>驗證：以客戶切換、產品出貨與財報口徑，取代單一市場傳聞。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">節目舉例</div>
+        <span class="ticker">400V</span>
+        <span class="ticker">800V DC</span>
+        <span class="ticker">台達電</span>
+        <span class="ticker">光寶</span>
+      </div>
+    <div class="note">台達電、光寶為節目口述例子，未附單一公司數字。</div>
+    <div class="note">延後不等於取消；方向不等於短期業績已發生。</div>
+    <div class="risk"><b>風險：</b>將長期技術方向直接套進近季營收與估值，容易忽略認證、供應與客戶採用節奏。</div>
+    <div class="action"><b>應對：</b>以架構切換的可觀察證據建立時間表，並保留時程延後的情境。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">光通訊</div>
+    <h2>禁令若只限中國本地出貨，直接衝擊有限；真正變數是範圍與反制</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為對美光通供貨多已從泰國、馬來西亞等海外產能出貨，若管制不涵蓋海外產能，直接影響有限；但若限制擴大，才可能提高中國加一的受惠機會。</div>
+
+    <div class="mechanism"><span class="tag">情境樹</span><ol><li>有限管制：海外供貨不受影響，直接衝擊較小。</li><li>擴大管制：海外產能也被納入，替代供應鏈才可能受惠。</li><li>反制情境：中國可從高階光通或上游材料供應施壓，增加供應鏈震盪。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">關鍵變數</div>
+        <span class="ticker">中國本地產能</span>
+        <span class="ticker">泰國／馬來西亞產能</span>
+        <span class="ticker">中國加一</span>
+        <span class="ticker">高階光通</span>
+        <span class="ticker">上游材料</span>
+      </div>
+    <div class="note">政策文字、產地認定與反制範圍未定，不能先把受惠寫成事實。</div>
+    <div class="note">光纖與光通供應也被主持人視為 AI 競爭的重要限制條件。</div>
+    <div class="risk"><b>風險：</b>關稅、禁令與材料供應通常不是單向利多，可能同時推高成本、限制供給與拉長驗證。</div>
+    <div class="action"><b>應對：</b>等待正式政策範圍，再分別追蹤出貨地、客戶認證、材料供應與替代產能。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">AI 軟體</div>
+    <h2>AI 不會自動殺死所有軟體，但每次輸出開始有真實成本</h2>
+    <div class="core"><span class="tag">重點</span>主持人反對 AI 會一掃所有軟體的論述：企業流程、資料整合、資安與穩定性仍有價值；但 token 與算力成本會讓原本近乎無邊際成本的軟體毛利承壓。</div>
+
+    <div class="mechanism"><span class="tag">脆弱與韌性</span><ol><li>脆弱：純套皮、單一功能、沒有資料或流程整合的產品。</li><li>韌性：高監管、資安、資料脈絡與企業既有系統深度整合。</li><li>財務：AI 輸出帶來 token／算力成本，需要重新看毛利與定價能力。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">節目案例</div>
+        <span class="ticker">Palantir</span>
+        <span class="ticker">Cloudflare</span>
+        <span class="ticker">企業軟體</span>
+        <span class="ticker">資安</span>
+      </div>
+    <div class="note">這是產業框架，不是宣布所有軟體股轉多。</div>
+    <div class="note">少數公司財報強勁，不代表單一功能產品已脫離競爭壓力。</div>
+    <div class="risk"><b>風險：</b>只談 AI 機會卻忽略運算成本，或只談替代風險卻忽略資料與流程護城河，兩者都會使評價偏離。</div>
+    <div class="action"><b>應對：</b>逐家公司檢查 AI 功能的成本歸屬、提價能力、資料優勢與客戶工作流黏著度。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">風險偏好</div>
+    <h2>Palantir 的市場反應不是單一驚喜，而是風險胃納仍在的訊號</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為 Palantir 的數字本身未必讓研究者意外，但市場願意用兩三成級別的上漲回應；這代表高估值資產仍有買盤，對整體風險偏好具參考性。</div>
+
+    <div class="mechanism"><span class="tag">訊號與限制</span><ol><li>財報後的價格反應可觀察市場是否願意承接高估值資產。</li><li>短線漲幅可能混有軋空，不能只歸因於基本面。</li><li>軟體、醫療等族群支撐指數，也會影響半導體投資人感受到的市場溫度。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">觀察族群</div>
+        <span class="ticker">Palantir</span>
+        <span class="ticker">Cloudflare</span>
+        <span class="ticker">軟體</span>
+        <span class="ticker">Healthcare</span>
+        <span class="ticker">AI infrastructure</span>
+      </div>
+    <div class="note">本集沒有主持人買進 Palantir 的揭露。</div>
+    <div class="note">市場能承接高估值，不代表每一檔公司或每個價格都值得追。</div>
+    <div class="risk"><b>風險：</b>把高估值股的一次強勢反應直接當成全面牛市確認，可能低估估值、流動性與後續財報風險。</div>
+    <div class="action"><b>應對：</b>把財報數字、價格反應、空頭部位與估值一起看，而非只用漲幅下結論。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">交易心理</div>
+    <h2>利多不漲要警覺；市場不是猜對一次，而是能隨資訊調整</h2>
+    <div class="core"><span class="tag">重點</span>主持人提醒，多頭經驗容易讓人以為拉回必然是買點；若開始出現利多不漲，就要提高警覺。市場判斷可能對也可能錯，重點是建立可承擔錯誤的調整能力。</div>
+    <blockquote>開始有一些利多不漲的狀況你就要有一點警覺</blockquote>
+    <div class="mechanism"><span class="tag">避免兩個極端</span><ol><li>不要因為一開始保守，就永遠拒絕承認事件已被釐清。</li><li>不要因為反彈，就否定前面未知時先防守的必要性。</li><li>不要把市場當作唯一標準答案，先確保錯了仍能留下來。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">檢查訊號</div>
+        <span class="ticker">利多不漲</span>
+        <span class="ticker">財報後反應</span>
+        <span class="ticker">流動性</span>
+        <span class="ticker">槓桿</span>
+        <span class="ticker">市場狀態</span>
+      </div>
+    <div class="note">主持人稱自己相對彈性，但也提到有人寧可等事情明朗、上漲後再追回。</div>
+    <div class="note">策略取捨應與承受下檔的能力一致。</div>
+    <div class="risk"><b>風險：</b>把過去幾年『拉回就賣／就買』的單一經驗當作固定規則，可能在不同市場結構下受傷。</div>
+    <div class="action"><b>應對：</b>預先寫下何時轉保守、何時重新加回、何時承認判斷失效，讓調整不只靠情緒。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">生活與自由</div>
+    <h2>工具再強，投資與人生仍要處理情緒、選擇與平靜</h2>
+    <div class="core"><span class="tag">重點</span>從家庭壓力到 AI 自由意志的提問，主持人的結論不是追逐戲劇化討論，而是保留能選擇的能力、面對自己的欲望與情緒，並珍惜平靜無急事的日常。</div>
+    <blockquote>幸福的人就是過得非常的無聊</blockquote>
+    <div class="mechanism"><span class="tag">三個提醒</span><ol><li>有資源時可幫助他人，但不把所有外部 drama 變成自己的核心負擔。</li><li>AI 是工具；所有人都能使用工具後，差異仍回到選擇與執行。</li><li>生活品質不只由資產或效率決定，也由平靜、關係與自主性決定。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">主題</div>
+        <span class="ticker">平靜</span>
+        <span class="ticker">選擇權</span>
+        <span class="ticker">情緒</span>
+        <span class="ticker">AI 工具</span>
+        <span class="ticker">家庭</span>
+      </div>
+    <div class="note">此卡是主持人生活觀整理，不是投資建議。</div>
+    <div class="note">不要把科幻情境當成能取代眼前風險與關係的答案。</div>
+    <div class="risk"><b>風險：</b>把效率、報酬或外界衝突無限制塞入生活，可能反而犧牲原本想透過投資獲得的自由。</div>
+    <div class="action"><b>應對：</b>每次調整部位時，同步問自己：這個選擇是否也保留了生活的時間、注意力與平靜。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">本人揭露</div>
+    <h2>本集部位、回撤與規則嚴格分流</h2>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><span class="own">⭐</span>台股指數</td>
+        <td>目前繼續以指數參與行情</td>
+        <td>主持人明示『繼續趴在指數裡面』；未揭露 ETF、期貨、金額、成本或槓桿。</td>
+      </tr>
+      <tr>
+        <td>台灣中小型股</td>
+        <td>認為有便宜機會，但非目前核心</td>
+        <td>主持人提及部分已在壓力位置，選擇以指數取代作為現階段核心。</td>
+      </tr>
+      <tr>
+        <td>整體投資組合</td>
+        <td>自述回撤約負 16%–17%，最深近三成</td>
+        <td>僅為主持人約略自述；未提供完整帳務或成分。</td>
+      </tr>
+      <tr>
+        <td>Palantir／軟體／光通／HBM</td>
+        <td>產業與市場判讀</td>
+        <td>本集沒有目前具名持有、數量、成本或新交易揭露。</td>
+      </tr>
+      <tr>
+        <td>處置規則</td>
+        <td>政策觀點偏向利大於弊</td>
+        <td>這是對流動性的觀點，不是標的部位。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">⭐僅標主持人明示的目前指數曝險；不是把方向性談論、第三方公司或聽眾案例誤標為本人持倉。</div>
+    <div class="note">所有未揭露工具、金額、成本與槓桿的地方維持空白，不用前集資料補齊。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">行動清單</div>
+    <h2>EP685 可直接執行的三欄框架</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在做</h4>
+        <ul><li>把個股、族群與指數各自可承受的研究／生活負荷寫下來。</li><li>利多不漲時回查價格、流動性與槓桿，而不是只看消息標題。</li><li>把 AI 軟體的成本、定價與資料／流程護城河拆開比較。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>HBM 12Hi→8Hi 的正式規格、客戶與量體。</li><li>800V 導入時程與 400V 延長週期的公司證據。</li><li>光通禁令的政策範圍、海外產能與材料反制。</li><li>高估值資產財報後的價格承接能否延續。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>把主持人回撤自述當成可複製績效或市場保證。</li><li>把 HBM、800V 或光通的片段訊息直接推成全產業結論。</li><li>把產業評論、政策觀點或第三方公司誤記為主持人持倉。</li><li>因市場反彈就忘記未知事件初期先降低風險的必要。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
