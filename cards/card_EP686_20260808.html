@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP686 筆記｜2026-08-08</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP686 筆記</h1>
+    <div class="date">2026-08-08｜從滿倉科技到保本配置：軟體、光通、800V 與輪動確認</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>偏多／輪動</h4>
+        <span class="ticker">美股軟體／資安</span>
+        <span class="ticker">光通訊／散熱</span>
+        <span class="ticker">被動／功率元件</span>
+        <span class="ticker">800V／光寶科</span>
+      </div>
+      <div class="col">
+        <h4>觀望／等確認</h4>
+        <span class="ticker">台灣中小型股</span>
+        <span class="ticker">台達電</span>
+        <span class="ticker">HBM／記憶體</span>
+        <span class="ticker">聯發科 MicroLED</span>
+      </div>
+      <div class="col">
+        <h4>配置／降波動</h4>
+        <span class="ticker">long-short／hedge</span>
+        <span class="ticker">股債／低相關資產</span>
+        <span class="ticker">指數停泊</span>
+        <span class="ticker">停止短線追殺</span>
+      </div>
+    </div>
+    <div class="pills"><div class="pill">七月不是基本面崩壞也能重挫：真正 AI correction 的傷害只會更大</div><div class="pill">主持人從滿倉科技，開始把保本、家庭計畫與回撤一起放進配置</div><div class="pill">軟體、光通、散熱已現輪動；台股等待誰先突破歷史新高</div><div class="pill">800V／Power 再受關注，記憶體價格趨緩不等於需求轉差</div></div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>配置：</b>用部分上檔換較小下檔，讓資產與家庭計畫能穿越修正。</a>
+    <a class="insight-pill" href="#card-4"><b>輪動：</b>美股軟體與光通率先回流，台股領頭族群仍待新高確認。</a>
+    <a class="insight-pill" href="#card-5"><b>電源：</b>800V、高規格 Power Shelf／Rack 與 BBU 增加元件量價想像。</a>
+    <a class="insight-pill" href="#card-9"><b>心法：</b>盤面變難先降部位，先知道何時停，再談追不追。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 保本配置</a>
+      <a href="#card-3">03 七月警鐘</a>
+      <a href="#card-4">04 輪動主線</a>
+      <a href="#card-5">05 800V Power</a>
+      <a href="#card-6">06 SiCap／MLCC</a>
+      <a href="#card-7">07 光通確認</a>
+      <a href="#card-8">08 記憶體</a>
+      <a href="#card-9">09 MicroLED</a>
+      <a href="#card-10">10 何時停止</a>
+      <a href="#card-11">11 本人揭露</a>
+      <a href="#card-12">12 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">資產配置</div>
+    <h2>保本開始比賺更多重要：用上檔交換較小下檔</h2>
+    <div class="core"><span class="tag">重點</span>主持人自述過去長期滿倉科技股，但資產、家庭責任與人生階段改變後，開始把保本、回撤痛苦與財務計畫納入同一個配置問題。</div>
+    <blockquote>其實我要如何的去保本</blockquote>
+    <div class="mechanism"><span class="tag">可能的三層工具</span><ol><li>降低單一科技方向的集中度與組合 beta。</li><li>以 long-short 的三成、五成或七成空頭部位示意不同程度避險。</li><li>研究股債或低相關資產，用部分上檔換取較穩定的下檔。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">目前揭露</div>
+        <span class="ticker">科技股整體曝險</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">研究中、未稱已執行</div>
+        <span class="ticker">long-short</span>
+        <span class="ticker">股債配置</span>
+        <span class="ticker">低相關資產</span>
+      </div>
+    <div class="note">主持人沒有揭露避險標的、金額、成本或槓桿。</div>
+    <div class="note">七比三配置未說明哪個方向占七，不自行補成大小型固定比例。</div>
+    <div class="risk"><b>風險：</b>避險有成本、基差與方向判斷風險；分散也不代表市場壓力時所有資產一定低相關。</div>
+    <div class="action"><b>應對：</b>先定義可承受回撤與家庭現金需求，再決定集中、指數、避險與低相關資產的比例。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">七月警鐘</div>
+    <h2>基本面沒壞都能跌成這樣，真正修正只會更痛</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為七月的主因是擁擠、槓桿與流動性，而不是產業基本面明顯轉壞；即便如此，中小型股指數仍出現近三成級別回撤、許多個股下跌五至六成。</div>
+
+    <div class="mechanism"><span class="tag">傷害來源</span><ol><li>多人持有同一批高 beta 標的，去槓桿時賣壓互相放大。</li><li>原本看似強勢或避風港的族群也必須補跌。</li><li>若未來 AI 成長真的停頓，基本面與估值可能同時修正。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集觀察</div>
+        <span class="ticker">台灣中小型股</span>
+        <span class="ticker">矽晶圓</span>
+        <span class="ticker">科技高 beta</span>
+        <span class="ticker">AI 成分股</span>
+      </div>
+    <div class="note">近三成、五至六成是主持人的市場描述，不是每檔個股的精確統計。</div>
+    <div class="note">反彈不會抹掉集中度與流動性風險。</div>
+    <div class="risk"><b>風險：</b>把基本面未變直接等同安全，會忽略價格、槓桿與持有人結構也能觸發強迫賣出。</div>
+    <div class="action"><b>應對：</b>替組合建立『基本面沒壞但價格與流動性惡化』的獨立降風險條件。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">資金輪動</div>
+    <h2>軟體、光通、散熱先回流，台股還在等真正領頭者</h2>
+    <div class="core"><span class="tag">重點</span>Palantir、Cloudflare 財報後強勢，光通率先修正也率先轉強，散熱隨後跟上；主持人推測資金可能重新走過前波主流，但台股目前仍偏全面反彈。</div>
+
+    <div class="mechanism"><span class="tag">確認順序</span><ol><li>先看美股軟體、資安與光通能否延續財報後承接。</li><li>再看台股光通、散熱是否出現成員創歷史新高。</li><li>最後觀察被動、功率與電源是否接棒，而非看到風就追。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">已轉強</div>
+        <span class="ticker">Palantir</span>
+        <span class="ticker">Cloudflare</span>
+        <span class="ticker">光通訊</span>
+        <span class="ticker">散熱</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">後段候選</div>
+        <span class="ticker">被動元件</span>
+        <span class="ticker">功率元件</span>
+        <span class="ticker">Power</span>
+      </div>
+    <div class="note">光通後續條件佳，但主持人也明說目前不便宜。</div>
+    <div class="note">輪動鏈是盤面框架，不是每個族群必然依序上漲。</div>
+    <div class="risk"><b>風險：</b>用前一輪順序機械式追價，可能在估值高檔或假突破時再次受傷。</div>
+    <div class="action"><b>應對：</b>把創高、量價、財報與估值設成共同條件，未確認前維持較小曝險。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">電源架構</div>
+    <h2>800V 再升溫：規格提高，元件用量與 ASP 一起變</h2>
+    <div class="core"><span class="tag">重點</span>主持人轉述匿名美系 AI 業者可能較同業早採用 800V；更高規格的 Power Shelf／Power Rack 與 BBU 需要更多、更高規格元件，單價也可能數倍提升，因此重新研究 Power 公司。</div>
+
+    <div class="mechanism"><span class="tag">量價傳導</span><ol><li>資料中心功率密度提高，電源架構朝更高電壓與整合升級。</li><li>Power Shelf／Rack 與 BBU 的數量、規格與單價可能同步提高。</li><li>光寶財報後轉強可作資金訊號；台達電仍等價格與資金確認。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">偏多觀察</div>
+        <span class="ticker">800V DC</span>
+        <span class="ticker">光寶科</span>
+        <span class="ticker">功率元件</span>
+        <span class="ticker">BBU</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">等待確認</div>
+        <span class="ticker">台達電</span>
+      </div>
+    <div class="note">匿名客戶、訂單量、供應商與導入時程均未揭露。</div>
+    <div class="note">Power Shelf／Power Rack 為語境校正，原音仍列待確認。</div>
+    <div class="risk"><b>風險：</b>產業 rumor 可能提早反映或落空；規格方向正確也不代表近季營收立即兌現。</div>
+    <div class="action"><b>應對：</b>等待具名客戶、認證、訂單、出貨與財報證據，再估算量價貢獻。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">被動元件</div>
+    <h2>SiCap 與 MLCC 不是零和：資料中心升級可能一起增加用量</h2>
+    <div class="core"><span class="tag">重點</span>市場傳聞矽電容會取代高階 MLCC，主持人認為兩者位於不同應用位置；隨資料中心功率提升，多類被動與功率元件都可能增加，而不是單一元件吃掉全部需求。</div>
+
+    <div class="mechanism"><span class="tag">避免零和敘事</span><ol><li>先拆解元件的實際位置、容量、頻率與可靠度需求。</li><li>再看系統功率提高是否讓整體 BOM 同時擴張。</li><li>最後用料號、滲透率與出貨驗證，而不是只看『取代』標題。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">可能共同受惠</div>
+        <span class="ticker">SiCap</span>
+        <span class="ticker">高階 MLCC</span>
+        <span class="ticker">被動元件</span>
+        <span class="ticker">功率元件</span>
+      </div>
+    <div class="note">逐字稿對 SiCap 材料描述有『鋁／矽』聽辨歧義。</div>
+    <div class="note">本集未提供正式 BOM、料號、滲透率或單一公司量體。</div>
+    <div class="risk"><b>風險：</b>把技術替代簡化成單一贏家，會忽略系統規格、供給與成本共同變化。</div>
+    <div class="action"><b>應對：</b>追蹤正式料號、應用位置與每機櫃價值量，先驗證增量再談受惠公司。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">光通訊</div>
+    <h2>基本面佳但不便宜，大資金等歷史新高確認</h2>
+    <div class="core"><span class="tag">重點</span>光通率先轉強、後續需求條件也佳，但主持人沒有因此直接用大資金追入；他的關鍵條件是族群中有人創歷史新高，代表價格真正突破前高壓力。</div>
+
+    <div class="mechanism"><span class="tag">Growth 與 Value</span><ol><li>成長好不等於價格便宜，估值與價格結構要一起看。</li><li>創高可提高趨勢延續機率，但不是無條件買進保證。</li><li>磷化銦等上游材料短缺仍可能限制可交付量與營收。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">偏多條件</div>
+        <span class="ticker">光通訊</span>
+        <span class="ticker">歷史新高</span>
+        <span class="ticker">資金回流</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">供給限制</div>
+        <span class="ticker">磷化銦／InP</span>
+      </div>
+    <div class="note">主持人沒有揭露具名光通持股或進場價格。</div>
+    <div class="note">磷化銦校正來自語境，缺口量與公司未揭露。</div>
+    <div class="risk"><b>風險：</b>假突破、高估值與材料瓶頸都可能讓好產業無法立即轉成好報酬。</div>
+    <div class="action"><b>應對：</b>等待族群創高、上游供給與公司出貨三項同時改善，再決定大部位。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">記憶體</div>
+    <h2>漲價速度放緩不等於需求壞掉，先拆價格與數量</h2>
+    <div class="core"><span class="tag">重點</span>記憶體前段價格曾有約翻倍級漲幅，第三、四季增速可能放緩；主持人把 Sandisk 指引略低於部分預期理解為價格趨平，而不是需求受損。</div>
+
+    <div class="mechanism"><span class="tag">三件事分開</span><ol><li>價格：高基期後漲幅放緩，不等於價格必然反轉。</li><li>數量：需求是否受損要看出貨、庫存與客戶拉貨。</li><li>規格：HBM 12Hi→8Hi 仍可能是缺貨與交付速度選擇。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">觀察項目</div>
+        <span class="ticker">Sandisk／SNDK</span>
+        <span class="ticker">HBM 12Hi／8Hi</span>
+        <span class="ticker">第三季／第四季價格</span>
+      </div>
+    <div class="note">節目未提供 Sandisk 正式財測數字或完整共識區間。</div>
+    <div class="note">約翻倍是前段價格描述，不是第三、四季預測。</div>
+    <div class="risk"><b>風險：</b>價格增速趨緩仍可能影響近季營收與估值，不能只用需求未壞忽略財務敏感度。</div>
+    <div class="action"><b>應對：</b>把 ASP、bit shipment、庫存與規格組合分開更新，避免用單一指引標題判斷整個記憶體循環。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">前瞻技術</div>
+    <h2>MicroLED 機櫃互連值得追，但技術展示離量產還很遠</h2>
+    <div class="core"><span class="tag">重點</span>聯發科展示 MicroLED 資料中心機櫃互連 SoC 解決方案；主持人認為它可能是未來互連路線之一，但商業量產仍可能需要數年，不能把展示直接換算成近期營收。</div>
+
+    <div class="mechanism"><span class="tag">從展示到營收</span><ol><li>先驗證技術效率、成本、可靠度與封裝整合。</li><li>再看客戶認證、標準與量產良率。</li><li>最後才估算採用率、出貨量與公司財務貢獻。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">追蹤標的</div>
+        <span class="ticker">聯發科</span>
+        <span class="ticker">MicroLED</span>
+        <span class="ticker">資料中心機櫃互連</span>
+        <span class="ticker">主動光纜</span>
+      </div>
+    <div class="note">主持人口中的『M 公司』未自行指定為特定合作方。</div>
+    <div class="note">技術路線並非唯一，採用時程與規模仍未知。</div>
+    <div class="risk"><b>風險：</b>題材可能遠早於商業化；把多年後的可選方案提前計入估值，容易造成期待落差。</div>
+    <div class="action"><b>應對：</b>用技術里程碑、客戶驗證與量產節點更新，不用概念展示直接推導訂單。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">交易心法</div>
+    <h2>先知道何時停：盤面變難就降部位，別全砍全換</h2>
+    <div class="core"><span class="tag">重點</span>四、五月的順風讓人習慣立即漲停、頻繁切換，七月卻讓同一套習慣反覆砍在低點；主持人提醒，重點不是完全禁止追動能，而是預先知道何時停止與降風險。</div>
+    <blockquote>那所以重點是when to stop</blockquote>
+    <div class="mechanism"><span class="tag">修正流程</span><ol><li>把容易賺的市場視為極端值，降低每次都要立即上漲的期待。</li><li>盤面變 bumpy 時先降部位，部分停泊指數，不做滿倉砍換滿倉。</li><li>回到產業、基本面與估值，持續修正退出規則。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">明確避免</div>
+        <span class="ticker">追風</span>
+        <span class="ticker">滿倉砍換</span>
+        <span class="ticker">無條件攤平</span>
+        <span class="ticker">把麻木當冷靜</span>
+      </div>
+    <div class="note">主持人度假期間明示不再做短線追殺，先配置後等待。</div>
+    <div class="note">受傷後重點是改善流程，不是用下一筆交易立刻翻本。</div>
+    <div class="risk"><b>風險：</b>若沒有停止條件，順風期有效的集中與動能策略會在環境改變時放大損失。</div>
+    <div class="action"><b>應對：</b>事前寫下盤面轉難、部位降低、停泊指數與策略失效的具體觸發條件。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">本人揭露</div>
+    <h2>本集現況、研究動作與規則嚴格分流</h2>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><span class="own">⭐</span>科技股整體曝險</td>
+        <td>主持人明示自己一向屬滿倉科技股型投資人</td>
+        <td>未揭露逐檔、金額、成本或槓桿；本集核心是重新檢查集中風險。</td>
+      </tr>
+      <tr>
+        <td>long-short／股債／低相關資產</td>
+        <td>正在研究與思考</td>
+        <td>只表示可能往此方向配置，沒有明示已建立空頭、債券或其他資產部位。</td>
+      </tr>
+      <tr>
+        <td>台股大小型七比三</td>
+        <td>度假前的約略配置構想</td>
+        <td>逐字稿未指明哪一個方向占七，因此不補成大盤七或中小型七。</td>
+      </tr>
+      <tr>
+        <td>光通訊</td>
+        <td>等待歷史新高後才考慮大資金</td>
+        <td>條件式進場規則，不是已持有揭露。</td>
+      </tr>
+      <tr>
+        <td>Power／800V</td>
+        <td>近期重新研究</td>
+        <td>沒有明示買進台達電、光寶或任何具名 Power 公司。</td>
+      </tr>
+      <tr>
+        <td>健策／群聯／Palantir／Cloudflare</td>
+        <td>公司好感或產業判讀</td>
+        <td>本集沒有主持人具名持有、數量、成本或新交易揭露。</td>
+      </tr>
+      <tr>
+        <td>短線交易</td>
+        <td>度假期間停止短線追殺，先配置後等待</td>
+        <td>這是近期操作頻率安排，不代表所有長線部位已賣出。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">⭐僅標主持人逐字明示的科技股整體曝險；未把研究、條件式規則、聽眾持股或公司好感誤標為本人持倉。</div>
+    <div class="note">所有未揭露工具、金額、成本與槓桿的欄位維持空白，不以歷史資料自動補齊。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">行動清單</div>
+    <h2>EP686 可直接執行的三欄框架</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在做</h4>
+        <ul><li>重算組合的科技集中度、beta、最大可承受回撤與家庭現金需求。</li><li>替盤面變顛簸時的降部位、指數停泊與停止追價寫下觸發條件。</li><li>將產業基本面、價格結構、槓桿與流動性分欄追蹤。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>光通、散熱與軟體能否延續強勢並創歷史新高。</li><li>800V 匿名客戶、Power Shelf／Rack、BBU 的具名訂單與出貨。</li><li>記憶體價格、需求、庫存與 HBM 規格組合是否分化。</li><li>聯發科 MicroLED 互連的客戶、量產與商業化里程碑。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>把七比三自行補成主持人未說過的大小型固定比例。</li><li>把研究 Power、健策好感或光通條件式規則誤寫成持倉。</li><li>用單一 rumor 直接推算 800V 或元件公司的近期營收。</li><li>盤面轉難時仍滿倉砍換滿倉，或把虧損麻木當作冷靜。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
