@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP687 筆記｜2026-08-12</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP687 筆記</h1>
+    <div class="date">2026-08-12｜指數轉中小型、宙斯法則與 Google 算力房東敘事</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>本輪實際布局</h4>
+        <span class="ticker">光通較多</span>
+        <span class="ticker">AI Power／散熱</span>
+        <span class="ticker">設備少量</span>
+        <span class="ticker">中小型成長股</span>
+      </div>
+      <div class="col">
+        <h4>輪動與選股</h4>
+        <span class="ticker">2026–2027 獲利</span>
+        <span class="ticker">forward P/E</span>
+        <span class="ticker">歷史新高</span>
+        <span class="ticker">稍微靠價值</span>
+      </div>
+      <div class="col">
+        <h4>風控與等待</h4>
+        <span class="ticker">現股零融資</span>
+        <span class="ticker">質押逐年下降</span>
+        <span class="ticker">PCB／載板擁擠</span>
+        <span class="ticker">處置新制互信</span>
+      </div>
+    </div>
+    <div class="pills"><div class="pill">度假前原想持有指數休息，實際在飛機上減碼指數、重新買進個股</div><div class="pill">市場仍相對樂觀，但好營收也被拿來出貨，宙斯法則與互信尚待重建</div><div class="pill">光通、Power、散熱與中小型成長是本輪重點；老 AI 撤出、載板暫不追</div><div class="pill">Google 人事改組不必只看成 AI 退場，也可能是把風險外包、強化算力收租</div></div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>配置：</b>從大部位指數轉回個股，以低槓桿分散布局新一輪主線。</a>
+    <a class="insight-pill" href="#card-3"><b>互信：</b>好營收若只剩出貨功能，所有人都會搶先算計，盤面更難操作。</a>
+    <a class="insight-pill" href="#card-6"><b>Google：</b>模型風險可外包，雲端算力則像數位鐵路與電網持續收租。</a>
+    <a class="insight-pill" href="#card-9"><b>槓桿：</b>睡不好、緊張與沉迷國際雜訊，是部位超出承受力的身體訊號。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 指數轉個股</a>
+      <a href="#card-3">03 宙斯法則</a>
+      <a href="#card-4">04 本輪主線</a>
+      <a href="#card-5">05 獲利與價值</a>
+      <a href="#card-6">06 Google 改組</a>
+      <a href="#card-7">07 算力收租</a>
+      <a href="#card-8">08 處置股博弈</a>
+      <a href="#card-9">09 身體訊號</a>
+      <a href="#card-10">10 能力圈擴張</a>
+      <a href="#card-11">11 本人揭露</a>
+      <a href="#card-12">12 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">配置轉向</div>
+    <h2>原想用指數度假，最後還是減碼指數、重回個股</h2>
+    <div class="core"><span class="tag">重點</span>主持人原定把大部位留在指數後休息，卻在飛機上清掉不少指數、重新買進個股；目前低槓桿、稍微分散，因此能接受短期套牢而不必頻繁盯盤。</div>
+    <blockquote>又再一次的跑去買個股</blockquote>
+    <div class="mechanism"><span class="tag">本輪資金路徑</span><ol><li>先前較大的指數部位減碼，但未說全部清倉。</li><li>資金轉向個股與中小型成長，分散押在數個方向。</li><li>低槓桿降低被盤中波動強迫調整的壓力。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">已執行</div>
+        <span class="ticker">指數減碼</span>
+        <span class="ticker">個股買進</span>
+        <span class="ticker">中小型輪動</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">未揭露</div>
+        <span class="ticker">剩餘比例</span>
+        <span class="ticker">逐檔成本</span>
+        <span class="ticker">完整名單</span>
+      </div>
+    <div class="note">蠻多指數部位清掉不等於全部清倉。</div>
+    <div class="note">主持人承認自己仍喜歡研究與交易，度假停止操作的原計畫未實現。</div>
+    <div class="risk"><b>風險：</b>從指數轉回中小型個股會提高個別公司、流動性與波動風險，即使沒有融資也可能有大幅回撤。</div>
+    <div class="action"><b>應對：</b>把指數、族群與個股的實際比例寫清楚，確認新增報酬潛力是否值得承擔更高集中與波動。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">市場互信</div>
+    <h2>宙斯法則崩壞：好營收也被出貨，人人開始搶先互搞</h2>
+    <div class="core"><span class="tag">重點</span>主持人把市場共識與互信稱為宙斯法則：好營收理應得到正向價格反應；若利多總被拿來出貨，下一次所有人都會提早賣，盤面就變成互相算計。</div>
+    <blockquote>大家不可以互搞</blockquote>
+    <div class="mechanism"><span class="tag">互信崩壞循環</span><ol><li>營收高於預期卻沒有漲停，先知資金與隔日沖開始互猜。</li><li>參與者預期別人會賣，便搶先把利多當出場點。</li><li>反覆幾次後，基本面看好也只剩極短持有期。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">目前症狀</div>
+        <span class="ticker">利多出貨</span>
+        <span class="ticker">基本面隔日沖</span>
+        <span class="ticker">區間震盪</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">可能修復</div>
+        <span class="ticker">大盤新高</span>
+        <span class="ticker">營收正回饋</span>
+        <span class="ticker">趨勢延續</span>
+      </div>
+    <div class="note">某 AWS 概念股只作案例，節目未揭露公司名稱。</div>
+    <div class="note">市場仍有不少族群轉強，因此互信差不等於全面看空。</div>
+    <div class="risk"><b>風險：</b>若用隔日結果否定完整產業研究，可能在形態真正轉強前把部位洗掉；反之，忽略利多出貨也會承擔短線流動性風險。</div>
+    <div class="action"><b>應對：</b>把基本面、事件反應與持有週期分開：先定義利多不漲的處理規則，不用單日漲跌推翻全部論證。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">台股輪動</div>
+    <h2>光通較多、Power 與散熱都有；設備少量，載板與老 AI 退場</h2>
+    <div class="core"><span class="tag">重點</span>主持人完整揭露本輪族群配置：設備只買少量、光通較多、AI Power 與散熱都有；PCB／載板因做過且擁擠而沒興趣，老 AI 小做一段後已把資金撤出。</div>
+
+    <div class="mechanism"><span class="tag">資金排序</span><ol><li>光通是本輪相對較大的族群曝險。</li><li>Power 與散熱同屬 AI 基建輪動，設備則小部位參與。</li><li>載板擁擠與老 AI 已做過，使資金轉向較新的中小型主線。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">目前布局</div>
+        <span class="ticker">光通訊</span>
+        <span class="ticker">AI Power</span>
+        <span class="ticker">散熱</span>
+        <span class="ticker">設備</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">降低興趣／退出</div>
+        <span class="ticker">PCB／載板</span>
+        <span class="ticker">老 AI／ODM</span>
+      </div>
+    <div class="note">聽眾列舉的奇鋐、台達電、智邦與貿聯-KY 不能直接標成主持人逐檔持有。</div>
+    <div class="note">族群部位只揭露相對大小，沒有金額、成本與完整清單。</div>
+    <div class="risk"><b>風險：</b>主線輪動快、個股差異大；族群方向正確不代表所有公司都能兌現訂單、EPS 與估值。</div>
+    <div class="action"><b>應對：</b>逐檔確認 2026–2027 獲利、forward P/E、創高強度與流動性，不用族群標籤取代公司研究。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">選股框架</div>
+    <h2>七月留下 PTSD：只等 2026–2027，稍微往價值靠</h2>
+    <div class="core"><span class="tag">重點</span>前波急跌後，主持人更重視可在 2026–2027 年開出成績的公司；若故事要等到 2028–2029 才兌現，即使可能上漲也不想買，選股刻意往價值靠近。</div>
+
+    <div class="mechanism"><span class="tag">三層篩選</span><ol><li>獲利時點：兩年內能由營收與 EPS 驗證。</li><li>估值支撐：forward P/E 與成長能互相匹配。</li><li>價格確認：急跌後出現創歷史新高者優先辨識。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">優先</div>
+        <span class="ticker">2026 EPS</span>
+        <span class="ticker">2027 EPS</span>
+        <span class="ticker">仍在上修</span>
+        <span class="ticker">尚未完全回高點</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">降低興趣</div>
+        <span class="ticker">2028–2029 故事</span>
+        <span class="ticker">只靠遠期夢想</span>
+      </div>
+    <div class="note">節目沒有提供統一 P/E 或 EPS 成長率門檻。</div>
+    <div class="note">往價值靠不等於只買低本益比，也不保證波動較低。</div>
+    <div class="risk"><b>風險：</b>市場可能提前反映遠期成長；過度縮短驗證期會錯過長週期機會，但過度相信遠期故事也會放大估值回撤。</div>
+    <div class="action"><b>應對：</b>把 2026、2027 與更遠期預估分欄，標示訂單可見度、預估修正與估值敏感度。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">Google AI</div>
+    <h2>人事大搬風不等於退出：模型風險外包，Cloud 拉回母公司</h2>
+    <div class="core"><span class="tag">重點</span>Demis Hassabis 轉任新角色、Jeff Dean 等人離開成立 Discovery Loop，DeepMind 新任 SVP 直接向 Sundar Pichai 報告；主持人認為這更像由雙軌轉單軌與風險外包，不是放棄前沿模型。</div>
+
+    <div class="mechanism"><span class="tag">組織與資本拆分</span><ol><li>前沿研究留在外部公司，由多方投資人分擔燒錢風險。</li><li>Google 保留投資、雲端與合作關係，成功時仍能分享收益。</li><li>公司本體把更多資源放到較快產生收入的 Cloud 與算力。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">關鍵角色</div>
+        <span class="ticker">Demis Hassabis</span>
+        <span class="ticker">Jeff Dean</span>
+        <span class="ticker">Koray Kavukcuoglu</span>
+        <span class="ticker">Sundar Pichai</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">關鍵組織</div>
+        <span class="ticker">Google DeepMind</span>
+        <span class="ticker">Discovery Loop</span>
+        <span class="ticker">Google Cloud</span>
+      </div>
+    <div class="note">風險外包與單軌掌控是主持人依事件推演，不是 Alphabet 的正式策略名稱。</div>
+    <div class="note">Google 仍可能持續推進前沿模型，不能把職務改組直接等同退出。</div>
+    <div class="risk"><b>風險：</b>若市場原本給 Google 前沿 AI 買權較高估值，把研究移出本體可能造成 P/E 下修；現金流改善幅度也尚未證實。</div>
+    <div class="action"><b>應對：</b>追蹤新組織權責、Discovery Loop 合作、Google Cloud 成長、資本支出與自由現金流，而非只看離職標題。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">算力房東</div>
+    <h2>數位鐵路與電網：模型誰贏未知，房東先把算力租出去</h2>
+    <div class="core"><span class="tag">重點</span>主持人把算力視為新時代的鐵路與電網；押注單一前沿模型像買高風險選擇權，Google 與 Meta 若轉向雲端、API 與算力租賃，收入與現金流路徑可能更可見。</div>
+
+    <div class="mechanism"><span class="tag">從模型到基建</span><ol><li>OpenAI、Anthropic 與中國追兵使模型終局高度不確定。</li><li>不論哪個模型勝出，都需要資料中心、雲端與算力資源。</li><li>大規模先買房、後期收租，是基建投資者的核心敘事。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">房東路線</div>
+        <span class="ticker">Google Cloud</span>
+        <span class="ticker">Meta</span>
+        <span class="ticker">TPU</span>
+        <span class="ticker">算力租賃</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">高不確定性</div>
+        <span class="ticker">OpenAI</span>
+        <span class="ticker">Anthropic</span>
+        <span class="ticker">中國低價模型</span>
+        <span class="ticker">前沿模型終局</span>
+      </div>
+    <div class="note">波克夏持股與私募被主持人用來支持基建收租敘事，但決策細節不自行補完。</div>
+    <div class="note">Meta 的 CoreWeave 加 AWS 路線仍是推演，須由實際租賃與採購驗證。</div>
+    <div class="risk"><b>風險：</b>房東也會承擔過度建置、利用率不足、折舊、融資與自由現金流轉負風險；重資產不等於穩賺。</div>
+    <div class="action"><b>應對：</b>用利用率、長約、雲端成長、CapEx、折舊與自由現金流驗證收租，而不是把基建比喻直接換算成估值。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">處置新制</div>
+    <h2>兩分鐘撮合後假單更多：巨人在互毆，散戶只是站在旁邊</h2>
+    <div class="core"><span class="tag">重點</span>主持人觀察處置股改成兩分鐘撮合後，假單與交易對手互相誘導更明顯；一般散戶不會因規則改變突然取得優勢，真正競爭的是熟悉制度的資金彼此算計。</div>
+
+    <div class="mechanism"><span class="tag">降低單點風險</span><ol><li>假單會在撮合前改變表面供需，誘導對手下單。</li><li>長線布局可拆成多單，降低全壓單一撮合價的風險。</li><li>若要做制度博弈，必須先理解緩撮、流動性與對手行為。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">主要風險</div>
+        <span class="ticker">假單</span>
+        <span class="ticker">兩分鐘撮合</span>
+        <span class="ticker">對手誘導</span>
+        <span class="ticker">流動性</span>
+      </div>
+    <div class="note">主持人認為一般分批布局尚可處理，真正受影響較大的是想進去博弈的人。</div>
+    <div class="note">節目沒有把任何特定掛單認定為違法操縱。</div>
+    <div class="risk"><b>風險：</b>看到表面大單追進，可能在撮合前被撤單與價格跳動反向傷害；制度熟悉度不足時不應提高槓桿。</div>
+    <div class="action"><b>應對：</b>先以觀察與小單測試新制度，紀錄撮合前後差異；無法說明優勢來源時，不把新規則當套利機會。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">槓桿風控</div>
+    <h2>身體會告訴你答案：睡不好、變國際專家，就該降曝險</h2>
+    <div class="core"><span class="tag">重點</span>主持人現股已完全沒有融資，質押仍有但逐年降低且未借滿額度；他把失眠、緊張與不停追國際雜訊視為部位超出認知與實力的警報。</div>
+    <blockquote>我覺得就要去傾聽這個訊號</blockquote>
+    <div class="mechanism"><span class="tag">三個警報</span><ol><li>睡眠與情緒開始被盤中波動破壞。</li><li>每次下跌都急著從政治、戰爭與國際事件找理由。</li><li>部位大小迫使人把普通漲跌解讀成生存危機。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">目前揭露</div>
+        <span class="ticker">現股零融資</span>
+        <span class="ticker">仍有質押</span>
+        <span class="ticker">逐年還款</span>
+        <span class="ticker">額度未借滿</span>
+      </div>
+    <div class="note">沒有揭露質押金額、利率、維持率與帳戶分布。</div>
+    <div class="note">沒有融資不等於沒有市場風險，也不等於所有形式的槓桿皆為零。</div>
+    <div class="risk"><b>風險：</b>忽視身體與行為警報，會在資訊過載下做出頻繁、互相矛盾的調整；質押仍可能遇到價格與流動性壓力。</div>
+    <div class="action"><b>應對：</b>替睡眠、焦慮、盯盤頻率與質押維持率設預警；出現警報時先降槓桿與部位，再找原因。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">研究複利</div>
+    <h2>不必一次懂上千檔：先研究熟悉、正熱，而且能反覆用的題材</h2>
+    <div class="core"><span class="tag">重點</span>市場題材會循環，光、散熱、設備、載板、PCB 與被動元件反覆登場；第一次研究最難，但即使當時沒賺錢，知識仍會在下一輪降低辨識成本。</div>
+
+    <div class="mechanism"><span class="tag">有效率的擴張順序</span><ol><li>從工作、生活與既有興趣能直接接觸的產業開始。</li><li>優先研究市場正熱、資訊量充足且有報酬動機的方向。</li><li>每輪保存供應鏈、財務與催化劑框架，下一輪只更新變化。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">可複用題材</div>
+        <span class="ticker">光通</span>
+        <span class="ticker">散熱</span>
+        <span class="ticker">設備</span>
+        <span class="ticker">載板／PCB</span>
+        <span class="ticker">被動元件</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">起手式</div>
+        <span class="ticker">熟悉</span>
+        <span class="ticker">有興趣</span>
+        <span class="ticker">市場正熱</span>
+        <span class="ticker">資訊充足</span>
+      </div>
+    <div class="note">主持人沒有宣稱自己認識全部上千檔股票。</div>
+    <div class="note">老題材重新上漲時，過度熟悉也可能讓人因偏見而不敢上車。</div>
+    <div class="risk"><b>風險：</b>只追熱門可能忽略估值與擁擠；只守舊知識也可能錯過技術、供應鏈與財務結構已經改變的新循環。</div>
+    <div class="action"><b>應對：</b>建立題材研究卡：保留舊框架，每季只更新公司、產能、毛利、訂單與估值差異。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">本人揭露</div>
+    <h2>本集交易、族群部位與融資狀態逐筆分流</h2>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><span class="own">⭐</span>台股大盤／指數</td>
+        <td>已清掉不少指數部位</td>
+        <td>並非明示全部清倉；剩餘比例、工具與成交價未揭露。</td>
+      </tr>
+      <tr>
+        <td><span class="own">⭐</span>個股整體曝險</td>
+        <td>已重新買進個股並稍微分散</td>
+        <td>逐檔名單、金額與成本未完整揭露。</td>
+      </tr>
+      <tr>
+        <td><span class="own">⭐</span>設備族群</td>
+        <td>本輪只買少量</td>
+        <td>沒有具名公司與占比。</td>
+      </tr>
+      <tr>
+        <td><span class="own">⭐</span>光通訊族群</td>
+        <td>本輪布局較多</td>
+        <td>沒有具名公司、成本與是否全數仍持有。</td>
+      </tr>
+      <tr>
+        <td><span class="own">⭐</span>AI Power／散熱</td>
+        <td>兩個方向都有布局</td>
+        <td>聽眾列舉個股不等於主持人逐檔持有。</td>
+      </tr>
+      <tr>
+        <td><span class="own">⭐</span>台灣中小型股</td>
+        <td>把部分指數資金轉入</td>
+        <td>未揭露完整比例與具名清單。</td>
+      </tr>
+      <tr>
+        <td><span class="own">⭐</span>老 AI／ODM</td>
+        <td>前段小做一波，現在已撤資</td>
+        <td>是已執行退出，不代表永久看空。</td>
+      </tr>
+      <tr>
+        <td>PCB／載板</td>
+        <td>本輪因做過且擁擠而沒有興趣</td>
+        <td>配置取捨，不是具名空單或永久看空。</td>
+      </tr>
+      <tr>
+        <td><span class="own">⭐</span>融資／質押</td>
+        <td>現股零融資；仍有質押但逐年償還</td>
+        <td>質押金額、利率、維持率與帳戶分布未揭露。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">⭐只標本集有實際交易、持有或融資狀態證據者；研究、聽眾列舉與未執行觀察不加星。</div>
+    <div class="note">族群層級持倉不往下補成奇鋐、台達電、智邦、貿聯-KY 或任何未明示公司。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">行動清單</div>
+    <h2>EP687 可直接執行的三欄框架</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在做</h4>
+        <ul><li>重算指數減碼後，中小型、光通、Power、散熱與設備的實際權重。</li><li>逐檔核對 2026–2027 EPS、forward P/E、預估修正與新高強度。</li><li>把睡眠、焦慮、盯盤頻率、融資與質押列入每日風險儀表。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>更多中小型成長股能否創歷史新高，讓主流族群真正成形。</li><li>好營收是否重新得到正向價格反應，宙斯法則與市場互信能否修復。</li><li>Google Cloud、Discovery Loop、TPU 與 Meta 採購是否支持算力房東敘事。</li><li>AI Power、散熱、光通與設備的訂單、出貨、EPS 與估值是否同步。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>把聽眾列舉個股自動寫成主持人持倉。</li><li>用超短線結果洗掉仍在成形、且基本面未失效的部位。</li><li>把 Google 人事改組直接等同退出 AI，或把算力房東比喻直接當獲利保證。</li><li>忽略失眠與資訊成癮，繼續用超出承受力的槓桿解釋每次波動。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
