@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP688 筆記｜2026-08-15</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP688 筆記</h1>
+    <div class="date">2026-08-15｜800V DC 的落地路徑、推論分工與不猜絕對底</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>本集市場線索</h4>
+        <span class="ticker">SpaceX 解禁</span>
+        <span class="ticker">Cerebras 解禁</span>
+        <span class="ticker">流動性擴大</span>
+        <span class="ticker">籌碼先於故事</span>
+      </div>
+      <div class="col">
+        <h4>800V DC 路徑</h4>
+        <span class="ticker">2026–2027 Power Rack</span>
+        <span class="ticker">Power Center</span>
+        <span class="ticker">SiC／GaN</span>
+        <span class="ticker">2030+ DC Power Block</span>
+      </div>
+      <div class="col">
+        <h4>操作框架</h4>
+        <span class="ticker">被動元件需求</span>
+        <span class="ticker">分批抄底</span>
+        <span class="ticker">保留子彈</span>
+        <span class="ticker">只抓相對位置</span>
+      </div>
+    </div>
+    <div class="pills"><div class="pill">800V 是高功耗機櫃的物理瓶頸解法，不只是新題材；但既有資料中心、成本與規格會決定落地速度。</div><div class="pill">近期先看 Power Rack；中期再看 Power Center 的整流、GaN／SiC、DC UPS 與配電環節。</div><div class="pill">被動元件基本面改善仍要區分 AI 與非 AI 需求端，不能只用反彈解釋一切。</div><div class="pill">事件與走勢只能判讀相對位置；分批與可用資金比猜中最低點重要。</div></div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-4"><b>800V：</b>Power Rack 是 2026–2027 的先行段，長期 Power Center／DC Power Block 不可混成即期營收。</a>
+    <a class="insight-pill" href="#card-6"><b>物理：</b>54V 在 350–400kW 以上面對的是低壓大電流的體積、熱與空間問題。</a>
+    <a class="insight-pill" href="#card-2"><b>籌碼：</b>解禁的第一次衝擊較大，流動性擴大後仍要回到技術、基本面與估值。</a>
+    <a class="insight-pill" href="#card-9"><b>抄底：</b>不可能抓絕對位置；分批、保留子彈，才有能力等待市場驗證。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 解禁籌碼</a>
+      <a href="#card-3">03 Cerebras／AMD</a>
+      <a href="#card-4">04 800V 時程</a>
+      <a href="#card-5">05 Power Rack</a>
+      <a href="#card-6">06 中長期電力</a>
+      <a href="#card-7">07 為何升壓</a>
+      <a href="#card-8">08 被動元件</a>
+      <a href="#card-9">09 分批與底部</a>
+      <a href="#card-10">10 尊重市場</a>
+      <a href="#card-11">11 本人揭露</a>
+      <a href="#card-12">12 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">籌碼與流動性</div>
+    <h2>SpaceX 解禁後反而上行：先看首次衝擊，不把賣壓自動等同利空</h2>
+    <div class="core"><span class="tag">重點</span>主持人觀察 SpaceX 在解禁前已有賣壓，解禁後卻打底再上；他的重點不是預測每次供給，而是首次大規模流通的衝擊較大，流動性擴大後價格才更有共識。</div>
+
+    <div class="mechanism"><span class="tag">籌碼觀察順序</span><ol><li>先辨識是否為首次或較大的釋股節點。</li><li>觀察賣壓是否被承接、持有人是否增加。</li><li>把後續釋股視為持續事件，不能只用一個日期預判全部。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">未揭露</div>
+        <span class="ticker">本人持股</span>
+        <span class="ticker">成本</span>
+        <span class="ticker">解禁完整條件</span>
+      </div>
+    <div class="note">主持人沒有把 SpaceX 的籌碼討論變成個人交易指令。</div>
+    <div class="risk"><b>風險：</b>流動性增加也可能帶來持續供給壓力；籌碼結構不取代基本面研究。</div>
+    <div class="action"><b>應對：</b>逐次記錄供給、承接與價格反應，避免只因『解禁』兩字做方向交易。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">推論架構</div>
+    <h2>Cerebras 配 AMD：Prompt／長 context 與 Decode 分工，先等採用與籌碼驗證</h2>
+    <div class="core"><span class="tag">重點</span>主持人介紹 Cerebras 用 SRAM 強化低延遲 Decode，AMD Helios 處理 Prompt 與長 context 的分離式推論架構；技術敘事有吸引力，但他也把大量解禁列為需觀察的市場變數。</div>
+
+    <div class="mechanism"><span class="tag">推論工作拆分</span><ol><li>Prefill 著重長 context 與總吞吐量。</li><li>Decode 著重逐 token 的延遲與記憶體頻寬。</li><li>架構可行不等於訂單、量產與獲利已兌現。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">驗證項</div>
+        <span class="ticker">客戶採用</span>
+        <span class="ticker">產能</span>
+        <span class="ticker">解禁</span>
+        <span class="ticker">產品經濟性</span>
+      </div>
+    <div class="note">AMD 與 Cerebras 在本集是產業架構描述，不是主持人的持股揭露。</div>
+    <div class="risk"><b>風險：</b>AI 推論方案變化快，技術路線、客戶選擇與供應鏈都可能改變。</div>
+    <div class="action"><b>應對：</b>把技術優勢、實際部署、收入與籌碼供給拆成不同追蹤欄位。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">800V DC</div>
+    <h2>白皮書是方向，不是明天全部重蓋：先分清落地時程與商業條件</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為 800V DC 是資料中心功耗上升下的合理方向，但既有資料中心已建成，改造受設備、預算、良率與價格限制；新建資料中心才較有機會完整採用。</div>
+    <blockquote>在商業裡面最終都是會回到價格的討論</blockquote>
+    <div class="mechanism"><span class="tag">先拆三件事</span><ol><li>一至兩年內能落地的既有架構升級。</li><li>成本、良率與客戶規格是否允許導入。</li><li>新建與既有資料中心的導入速度不同。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">不要混用</div>
+        <span class="ticker">白皮書方向</span>
+        <span class="ticker">即期營收</span>
+        <span class="ticker">既有改造</span>
+        <span class="ticker">新建資料中心</span>
+      </div>
+    <div class="note">主持人未提供白皮書正式發布時間與完整內容，這裡只保留節目拆解。</div>
+    <div class="risk"><b>風險：</b>以遠期架構直接外推當期營收或估值，容易忽略導入延遲。</div>
+    <div class="action"><b>應對：</b>每個環節都標註預計時點、客戶、成本與規格驗證。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">第一階段</div>
+    <h2>2026–2027 先看 Power Rack：PSU、轉換、連接器與 BPU</h2>
+    <div class="core"><span class="tag">重點</span>主持人把 Power Rack 定為近期主流：AC 至 800V PSU、800V 至 54V 的轉換、連接器與 BPU 是第一階段受惠環節；這部分已被市場交易一段時間，更接近估值打底而非全新夢想。</div>
+
+    <div class="mechanism"><span class="tag">近期受惠環節</span><ol><li>AC 至 800V PSU。</li><li>800V 至 54V 的轉換與相關元件。</li><li>連接器與 BPU，但是否標配仍取決於客戶。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">時程</div>
+        <span class="ticker">2026</span>
+        <span class="ticker">2027</span>
+        <span class="ticker">Power Rack</span>
+        <span class="ticker">客戶規格</span>
+      </div>
+    <div class="note">BPU 的標配化仍是主持人提出的產業演進判讀，並非已完成的統一規格。</div>
+    <div class="risk"><b>風險：</b>先行題材可能已有估值反映，個別公司仍受規格、份額與毛利差異影響。</div>
+    <div class="action"><b>應對：</b>核對產品位置、客戶採用與營收貢獻，不用同一主題涵蓋所有公司。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">第二與第三階段</div>
+    <h2>Power Center 走向 SiC／GaN 與 DC UPS；DC Power Block 偏更遠期</h2>
+    <div class="core"><span class="tag">重點</span>中期架構轉向 Power Center，主持人點出集中式整流器、SiC、GaN、DC UPS、Busway、Tencan 與 SSCB；2030 年後或新建資料中心才更接近 DC Power Block、BESS、DC Switchboard 與設施級控制。</div>
+
+    <div class="mechanism"><span class="tag">分期而非一鍋煮</span><ol><li>中期：Power Center 與功率半導體、UPS、配電。</li><li>遠期：DC Power Block 與儲能、重電、系統整合。</li><li>時程會受新建案、成本、規格與產能影響。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">中期</div>
+        <span class="ticker">SiC</span>
+        <span class="ticker">GaN</span>
+        <span class="ticker">DC UPS</span>
+        <span class="ticker">Busway</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">遠期</div>
+        <span class="ticker">BESS</span>
+        <span class="ticker">DC Switchboard</span>
+        <span class="ticker">重電</span>
+        <span class="ticker">系統整合</span>
+      </div>
+    <div class="note">Tencan、SSCB 等口述名詞的正式全名未在逐字稿雙源確認，未擴寫。</div>
+    <div class="risk"><b>風險：</b>長期受惠鏈最容易被過早交易；時間錯配本身就是風險。</div>
+    <div class="action"><b>應對：</b>以專案、規格、訂單和資本支出來確認階段推進。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">物理瓶頸</div>
+    <h2>不是效率小數點：54V 在高功耗機櫃會卡在電流、尺寸、熱與空間</h2>
+    <div class="core"><span class="tag">重點</span>當機櫃走向 350–400kW 以上，主持人認為 54V 面臨低壓大電流的 busbar 截面、線纜重量與彎折、connector 尺寸及插拔力問題；升到 800V 可降低安培數，也把部分轉換移到機櫃外。</div>
+    <blockquote>它其實是有蠻多問題要解決</blockquote>
+    <div class="mechanism"><span class="tag">升壓解決的限制</span><ol><li>低壓大電流推高導體與連接器尺寸。</li><li>Power shelf、均流控制與散熱會占掉機櫃運算空間。</li><li>功耗升高後液冷需求從 GPU 延伸至電源與導體環節。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">壓力來源</div>
+        <span class="ticker">Busbar</span>
+        <span class="ticker">Cable</span>
+        <span class="ticker">Connector</span>
+        <span class="ticker">液冷</span>
+      </div>
+    <div class="note">節目數字用於物理關係說明，未寫成任何單一產品的正式規格。</div>
+    <div class="risk"><b>風險：</b>升壓也會帶來新的設計、絕緣、安全與供應鏈要求。</div>
+    <div class="action"><b>應對：</b>用系統級功耗、空間、散熱與轉換位置，檢查真正受惠環節。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">被動元件</div>
+    <h2>營收與獲利條件改善，但 AI 與非 AI 需求不能混為一談</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為被動元件族群的營收持續創高、獲利成長快於營收，反映價格與產品組合改善；AI 需求轉強是重點，車用、PC、消費電子則可能有不同的漲價與需求彈性。</div>
+
+    <div class="mechanism"><span class="tag">基本面檢查</span><ol><li>營收是否持續創高。</li><li>獲利成長是否快於營收，反映產品組合與價格條件。</li><li>AI 與非 AI 終端需求、價格彈性要分開看。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">支持線索</div>
+        <span class="ticker">營收新高</span>
+        <span class="ticker">獲利快於營收</span>
+        <span class="ticker">AI 需求</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">需拆開</div>
+        <span class="ticker">車用</span>
+        <span class="ticker">PC</span>
+        <span class="ticker">消費電子</span>
+        <span class="ticker">價格破壞</span>
+      </div>
+    <div class="note">聽眾原音中另一路族群名稱無法雙源確證，未納入個別標的結論。</div>
+    <div class="risk"><b>風險：</b>族群反彈與基本面改善不代表每家公司都可持續漲價或擴張毛利。</div>
+    <div class="action"><b>應對：</b>逐公司核對產品組合、產能、報價、庫存與 AI 相關營收占比。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">市場操作</div>
+    <h2>事件加走勢只給相對位置：分批、留子彈，別要求市場給你完美底部</h2>
+    <div class="core"><span class="tag">重點</span>主持人把事件與反彈強度放進初步判讀，但反覆強調無法百分之百確定底部；他過去曾太早抄底而資金用盡，因此本輪更重視分批與保留資金。</div>
+    <blockquote>你不可能會百分之百完美的抓到底部</blockquote>
+    <div class="mechanism"><span class="tag">底部判讀的邊界</span><ol><li>事件與走勢一起看，而不是只讀新聞。</li><li>分批進場，接受先買後仍可能更便宜。</li><li>資金與承受力要留到市場真正出現驗證。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">避免</div>
+        <span class="ticker">一次押滿</span>
+        <span class="ticker">絕對底</span>
+        <span class="ticker">資金耗盡</span>
+        <span class="ticker">事後歸因</span>
+      </div>
+    <div class="note">大盤 Beta 的反彈可能讓人誤認為選股無敵，應把市場與個股效果拆開。</div>
+    <div class="risk"><b>風險：</b>相對便宜仍可能繼續下跌；分批不是無限攤平。</div>
+    <div class="action"><b>應對：</b>預先設定分批數、最大曝險、停手條件與剩餘資金下限。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">不確定性</div>
+    <h2>市場值得尊重：不求百分之百，才有餘裕面對波動</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為投資者無法抓到完整的波峰波谷，真正要面對的是不確定性與波動；把可驗證的基本面、事件、價格與資金管理放一起，比宣稱精準更有用。</div>
+
+    <div class="mechanism"><span class="tag">健康的判讀方式</span><ol><li>承認判斷只能提高機率，不能保證。</li><li>用樣本、價格反應與基本面持續更新。</li><li>讓部位與資金安排能承受自己也可能判錯。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">核心</div>
+        <span class="ticker">相對位置</span>
+        <span class="ticker">分批</span>
+        <span class="ticker">基本面</span>
+        <span class="ticker">風險承受</span>
+      </div>
+    <div class="note">本集沒有新增具名個股買賣指令，避免把產業說明包裝成操作承諾。</div>
+    <div class="risk"><b>風險：</b>把單次反彈當成全知全能，會放大追價與過度槓桿風險。</div>
+    <div class="action"><b>應對：</b>每次操作都留下事件、論點、部位與否證條件，讓未來修正有依據。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">本人揭露</div>
+    <h2>本集唯一明確的帳戶狀態：保留可分批承接的資金</h2>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><span class="own">⭐</span>可用資金／抄底資金</td>
+        <td>本輪底部區域仍保有可分批承接的資金</td>
+        <td>未揭露金額、帳戶、標的、成本或已成交明細；不延伸為特定個股持倉。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">⭐只標本集有明確本人資金狀態證據者；SpaceX、Cerebras、AMD、800V 與被動元件都是研究或市場觀察，不標為主持人持倉。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">行動清單</div>
+    <h2>EP688 可直接執行的三欄框架</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在做</h4>
+        <ul><li>把 800V 受惠環節依 Power Rack、Power Center、DC Power Block 分期。</li><li>被動元件逐檔核對營收、毛利、產品組合與 AI 占比。</li><li>設定分批數、資金下限與最大曝險，避免提早耗盡子彈。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>Power Rack 的客戶規格、PSU／轉換／連接器與 BPU 的實際採用。</li><li>GaN／SiC、DC UPS、Busway 與新建資料中心專案是否走向中期架構。</li><li>Cerebras 的量產、客戶採用與解禁後籌碼承接。</li><li>被動元件 AI 與非 AI 需求端的價格與獲利差異。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>把白皮書的 2030 年後架構當作明年營收。</li><li>把聽眾未清楚辨識的族群名稱硬補成標的。</li><li>只看事件或新聞就宣告利空消失。</li><li>為了猜中最低點一次把資金用完。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
