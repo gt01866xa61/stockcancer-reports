@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP689 筆記｜2026-08-19</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP689 筆記</h1>
+    <div class="date">2026-08-19｜三種市場主線、AI 表外槓桿與回吐風控</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>市場風險</h4>
+        <span class="ticker">殖利率壓估值</span>
+        <span class="ticker">AI 表外承諾</span>
+        <span class="ticker">3T 報導</span>
+        <span class="ticker">年度回吐</span>
+      </div>
+      <div class="col">
+        <h4>三條主線</h4>
+        <span class="ticker">Component</span>
+        <span class="ticker">Bottleneck</span>
+        <span class="ticker">Value Add</span>
+        <span class="ticker">前高突破</span>
+      </div>
+      <div class="col">
+        <h4>驗證門檻</h4>
+        <span class="ticker">記憶體強勢</span>
+        <span class="ticker">後段封測</span>
+        <span class="ticker">打底不破</span>
+        <span class="ticker">新領頭族群</span>
+      </div>
+    </div>
+    <div class="pills"><div class="pill">科技股反彈數十個百分點後的小回檔尚可接受；若不加速破底並開始打底，才進入找機會劇本。</div><div class="pill">AI 變現正在發生，但租約、採購承諾與供應商融資讓部分槓桿留在表外，不能只看當期 CapEx。</div><div class="pill">Component 看記憶體能否維持強勢，Bottleneck 看後段封測能否續推，Value Add 看誰先突破前高。</div><div class="pill">用年度回吐幅度決定何時停手；基本面正向也不能無限承受績效被吃掉。</div></div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-4"><b>風控：</b>七月約回吐三成仍留場，不代表永遠不停手；年度成果被大量吃掉就是休息訊號。</a>
+    <a class="insight-pill" href="#card-5"><b>元件：</b>最缺、展望最明確的記憶體若無法擴張估值，其他 Component 更難取得高乘數。</a>
+    <a class="insight-pill" href="#card-6"><b>瓶頸：</b>time to compute 使客戶接受漲價、包產能，甚至直接買設備放到後段供應商。</a>
+    <a class="insight-pill" href="#card-7"><b>輪動：</b>三條主線誰先突破這波回檔前高，才更接近下一個多頭主流。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 市場與利率</a>
+      <a href="#card-3">03 AI 表外風險</a>
+      <a href="#card-4">04 年度風控</a>
+      <a href="#card-5">05 供需警訊</a>
+      <a href="#card-6">06 記憶體門檻</a>
+      <a href="#card-7">07 後段瓶頸</a>
+      <a href="#card-8">08 下一個主流</a>
+      <a href="#card-9">09 研究怎麼累積</a>
+      <a href="#card-10">10 報告怎麼做</a>
+      <a href="#card-11">11 本人揭露</a>
+      <a href="#card-12">12 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">市場判讀</div>
+    <h2>殖利率是估值地心引力，但幾天回檔還不能抹掉八月的快速修復</h2>
+    <div class="core"><span class="tag">重點</span>台美市場近期震盪集中在科技股；殖利率上升確實會壓縮高乘數，但主持人認為很多股票已從七月低點反彈數十個百分點、回到前高或創高，現在的拉回仍屬正常檢驗。</div>
+
+    <div class="mechanism"><span class="tag">先分三層</span><ol><li>利率上升是估值壓力，但不是唯一因果。</li><li>反彈幅度大後，幾天小幅回檔不等於趨勢反轉。</li><li>真正的否證是加速破底，而不是單日波動。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集觀察</div>
+        <span class="ticker">台股</span>
+        <span class="ticker">櫃買</span>
+        <span class="ticker">美股科技</span>
+        <span class="ticker">前高／新高</span>
+      </div>
+    <div class="note">主持人沒有說風險消失，只是拒絕把每個回檔都立刻解讀成大事。</div>
+    <div class="risk"><b>風險：</b>殖利率、高估值與流動性仍會互相放大；若價格加速向下，原判讀需立即更新。</div>
+    <div class="action"><b>應對：</b>記錄回檔是否破底、何時止穩，以及哪些族群率先收復前高。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">AI 槓桿</div>
+    <h2>3T 水下承諾是房間裡的大象；AI 已能變現，也不代表槓桿可以忽略</h2>
+    <div class="core"><span class="tag">重點</span>節目引用標題含 3 Trillion 的報導：未開始租約、採購承諾與供應商融資可能讓真實槓桿未完整顯示在表內。主持人認為風險不一定很快爆發，同時也看到 Anthropic 證明 AI 能更快變現。</div>
+
+    <div class="mechanism"><span class="tag">兩面同時成立</span><ol><li>AI 商業化比一兩年前預期更快。</li><li>表外承諾與融資會放大未來固定義務。</li><li>當債務被包裝成面向一般投資人的保本商品，風險可能更接近尾端。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">分開驗證</div>
+        <span class="ticker">變現</span>
+        <span class="ticker">CapEx</span>
+        <span class="ticker">租約</span>
+        <span class="ticker">採購承諾</span>
+        <span class="ticker">供應商融資</span>
+      </div>
+    <div class="note">正式媒體名稱與英文標題有轉錄疑義；只保留節目明示的 3T／3 Trillion 概念。</div>
+    <div class="risk"><b>風險：</b>泡沫何時轉成破壞性去槓桿無法預測；完全不參與與無視風險都是極端。</div>
+    <div class="action"><b>應對：</b>追蹤現金流、未開始租約、採購承諾、融資結構與零售化商品，而非只看帳面 CapEx。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">回吐風控</div>
+    <h2>七月約回吐三成仍留場：停手門檻看年度成果，不靠完美逃頂</h2>
+    <div class="core"><span class="tag">重點</span>主持人因上半年成果仍佳，七月約回吐三成後選擇留在市場；若未來一次回檔吃掉太多年度績效，即使基本面指標正向，也可能先休息。這類機制接近基金對 PM 的回撤限制。</div>
+    <blockquote>你直接去看你的回吐程度</blockquote>
+    <div class="mechanism"><span class="tag">可執行的停手機制</span><ol><li>以年度績效與回吐幅度做共同基準。</li><li>跌幅超過承受門檻時先限制操作，不等壞消息完全揭露。</li><li>接受通常要吃到第一段下跌，才有可能離開狂熱派對。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">不要追求</div>
+        <span class="ticker">完美高點</span>
+        <span class="ticker">完美低點</span>
+        <span class="ticker">事後全知</span>
+        <span class="ticker">無限續抱</span>
+      </div>
+    <div class="note">原音 230% 無法確定是二、三十％或 230％，本卡不採用。</div>
+    <div class="risk"><b>風險：</b>只看年度獲利也可能讓人容忍過大單次風險；停手機制仍需事前量化。</div>
+    <div class="action"><b>應對：</b>預設最大年度回吐、觸發後的降曝險幅度與重新進場條件。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">供需循環</div>
+    <h2>2022 的教訓不是需求歸零，而是需求拉平時，已投下的產能與融資開始反咬</h2>
+    <div class="core"><span class="tag">重點</span>主持人回看 2021–2022：庫存曾被當成贏家資產，需求增速一旦拉平，已投入的廠房、設備與融資便形成痛苦；戰爭可能是 trigger，但最後仍回到庫存調整。</div>
+
+    <div class="mechanism"><span class="tag">早期警訊</span><ol><li>需求沒有消失，只是不再加速。</li><li>原先暴漲的報價先停止上行，不必等到下跌。</li><li>供應鏈仍喊缺貨時，也要同步看產能與庫存何時進場。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">對照</div>
+        <span class="ticker">2021 庫存</span>
+        <span class="ticker">2022 修正</span>
+        <span class="ticker">需求拉平</span>
+        <span class="ticker">產能過剩</span>
+      </div>
+    <div class="note">現階段各種元件報價仍在上升，因此這是監測框架，不是已確認反轉。</div>
+    <div class="risk"><b>風險：</b>把歷史類比當成時間預測，可能太早離場；真正關鍵是供需與價格變化。</div>
+    <div class="action"><b>應對：</b>建立報價、交期、庫存、擴產與需求增速的同一張追蹤表。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">Component Trade</div>
+    <h2>記憶體是整條元件交易的估值錨：最缺的都漲不動，其他更難說服市場</h2>
+    <div class="core"><span class="tag">重點</span>記憶體的成績、報價與展望仍最清楚，但主持人擔心股價乘數能否繼續上修；若最缺的品項都只能停在某個本益比，其他 Component 很難得到更高乘數。</div>
+
+    <div class="mechanism"><span class="tag">元件交易的順序</span><ol><li>先看記憶體報價與成績是否維持。</li><li>再看股價與估值乘數能否反映基本面。</li><li>最後才外推到其他相對沒那麼缺的元件。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">風險詞</div>
+        <span class="ticker">較低堆疊</span>
+        <span class="ticker">良率</span>
+        <span class="ticker">供給改善</span>
+        <span class="ticker">短期解讀</span>
+      </div>
+    <div class="note">de-stack、12-high／16-high 的正式原音未確證，不把它寫成既定規格改版。</div>
+    <div class="risk"><b>風險：</b>改善良率與供給的工程選擇，可能被市場短期解讀為需求或價格轉弱。</div>
+    <div class="action"><b>應對：</b>同時追蹤報價、出貨、良率、堆疊策略與估值，避免只看成績單。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">Bottleneck Trade</div>
+    <h2>time to compute 比設備所有權更重要：漲價、包產能、客戶自購設備都能解瓶頸</h2>
+    <div class="core"><span class="tag">重點</span>前後段都缺，但市場焦點偏後段。為了更快上線，客戶可能接受漲價、包下產能，或由 NVIDIA 直接買設備放到封裝測試廠，降低供應商不敢擴產的問題。</div>
+
+    <div class="mechanism"><span class="tag">瓶頸改善手段</span><ol><li>付更高價格或預先保留產能。</li><li>大客戶直接購買設備交由供應商生產。</li><li>透過策略性下單，壓縮競爭者可取得的關鍵元件。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">驗證端</div>
+        <span class="ticker">OSAT</span>
+        <span class="ticker">封裝</span>
+        <span class="ticker">測試</span>
+        <span class="ticker">設備</span>
+        <span class="ticker">光通</span>
+      </div>
+    <div class="note">NVIDIA 多下光通元件以排擠競爭者，是主持人判斷，不是已確認用途。</div>
+    <div class="risk"><b>風險：</b>若後段股價無法續推，Bottleneck Trade 可能休息；外包份額、ASP 與 EPS 也常被過度上修。</div>
+    <div class="action"><b>應對：</b>核對設備所有權、實際產能、客戶承諾、外包份額與 ASP，不用缺貨敘事代替模型。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">Value Add</div>
+    <h2>缺貨交易若休息，資金可能回到產品加值；突破回檔前高者才是下一個領頭</h2>
+    <div class="core"><span class="tag">重點</span>Value Add 靠晶片、軟體與產品迭代創造無形差異，不只是缺貨漲價。主持人觀察七月後較強者偏向這一塊與部分高本益比族群；三條主線誰先突破本輪回檔前高，可能定調下一段多頭。</div>
+
+    <div class="mechanism"><span class="tag">三條線的驗證錨</span><ol><li>Component：記憶體能否維持強勢。</li><li>Bottleneck：後段封裝測試能否續推。</li><li>Value Add：產品迭代與客戶價值能否支撐高乘數。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">輪動候選</div>
+        <span class="ticker">Component</span>
+        <span class="ticker">Bottleneck</span>
+        <span class="ticker">Value Add</span>
+        <span class="ticker">價值 Parking</span>
+      </div>
+    <div class="note">休息不等於崩跌；可能只是橫盤，等待成績與估值重新接軌。</div>
+    <div class="risk"><b>風險：</b>高本益比領先也可能只是短期風險偏好；未突破前高前仍只是候選。</div>
+    <div class="action"><b>應對：</b>以相對強度與前高突破排序族群，再回頭驗證產品、獲利與估值。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">研究複利</div>
+    <h2>Busbar、線纜與連接器不是看一篇 800V 報告就懂：底層知識要跨公司累積</h2>
+    <div class="core"><span class="tag">重點</span>主持人以浸沒式散熱、貿聯與連接器研究為例，說明新題材的理解來自過去公司與產品研究的疊加；懂手機後再看 PC、伺服器與 AI 伺服器，許多元件邏輯可以重用。</div>
+    <blockquote>聲量的優勢沒有辦法幫你做好這些功課</blockquote>
+    <div class="mechanism"><span class="tag">累積路徑</span><ol><li>從一個產品平台建立元件地圖。</li><li>沿上下游、同業與相鄰應用橫向延伸。</li><li>把穩定性、微縮、功耗與成本等底層限制保存成可重用框架。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">聲量能做的</div>
+        <span class="ticker">消息更快</span>
+        <span class="ticker">早期線索</span>
+      </div>
+    <div class="stock-group">
+        <div class="gl">聲量不能做的</div>
+        <span class="ticker">基本功</span>
+        <span class="ticker">產品拆解</span>
+        <span class="ticker">模型驗證</span>
+      </div>
+    <div class="note">特殊管道影響速度，不自動提高研究品質。</div>
+    <div class="risk"><b>風險：</b>只追最新題材容易知道名詞卻不知道產品位置、商業條件與估值。</div>
+    <div class="action"><b>應對：</b>每研究一家公司，都留下產品、客戶、單價、替代品與相鄰供應鏈的永久筆記。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">研究與報酬</div>
+    <h2>平均 ASP 不夠：拆產品、量、毛利；也別把精準報告誤當成必賺交易</h2>
+    <div class="core"><span class="tag">重點</span>財務模型要從公司平均 ASP 拆到新舊產品的單價、量與毛利貢獻，再以同業、上下游與電話會議補參數；但市場常 overshoot，精準研究若選到不漲的公司，仍不保證報酬。</div>
+    <blockquote>一個完全正確的報告不代表在你的投資上面可以去獲得一些收益</blockquote>
+    <div class="mechanism"><span class="tag">兩條評分軸</span><ol><li>研究真實性：參數、產品、量價與毛利能否被驗證。</li><li>投資有效性：產業是否在風口、估值與資金是否支持。</li><li>特別檢查外包份額、ASP 與 EPS 是否被刻意放大。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">Q&amp;A 延伸</div>
+        <span class="ticker">薪資先到位</span>
+        <span class="ticker">AI 練英文</span>
+        <span class="ticker">遊戲團隊投資</span>
+      </div>
+    <div class="note">工作選擇先看報酬；英文可用 AI 語音練習；遊戲投資目標是讓台灣團隊做出能成功且獲利的作品。</div>
+    <div class="risk"><b>風險：</b>公開資訊多為過去資料，但非公開線索也不能免除查證；管道快不等於正確。</div>
+    <div class="action"><b>應對：</b>模型保留來源、假設與敏感度；另設產業趨勢、估值與價格行為欄位，不混成單一分數。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">本人揭露</div>
+    <h2>本集唯一明確的部位狀態：七月約回吐三成後仍留在市場</h2>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><span class="own">⭐</span>整體市場部位／年度風控</td>
+        <td>七月約回吐三成後仍選擇留在場內</td>
+        <td>因上半年成果仍佳而續留；若年度成果被一次回檔吃掉過多，可能先休息。未揭露個別標的、金額、成本或交易明細。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">⭐只標本集明確的整體市場參與狀態；記憶體、封測、NVIDIA、光通、Anthropic 與 Value Add 都是研究或市場觀察，不標為具名持股。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">行動清單</div>
+    <h2>EP689 可直接執行的三欄框架</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在做</h4>
+        <ul><li>把市場候選拆成 Component、Bottleneck、Value Add 三組，逐日比較相對強度。</li><li>設定年度最大回吐與觸發後的降曝險規則。</li><li>把研究模型拆到產品單價、量、毛利與 EPS 貢獻，不只看公司平均 ASP。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>台美科技與櫃買回檔是否停止加速、開始橫向打底。</li><li>記憶體報價、成績與估值乘數能否同步維持。</li><li>後段封裝測試能否續推，設備與外包份額是否真正落地。</li><li>三條主線中誰先突破本輪回檔前高。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>把殖利率或 3T 報導當成單一必跌答案。</li><li>把模糊的 230% 原音寫成已確認績效。</li><li>用缺貨敘事高估外包 share、ASP 與 EPS。</li><li>只因報告精準就忽略產業、估值與市場主線。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
