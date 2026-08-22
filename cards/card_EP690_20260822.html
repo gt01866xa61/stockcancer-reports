@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP690 筆記｜2026-08-22</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP690 筆記</h1>
+    <div class="date">2026-08-22｜Google COT 擴張、IC 設計重分工與生存型交易框架</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>盤面狀態</h4>
+        <span class="ticker">偏黏但健康</span>
+        <span class="ticker">失土收復</span>
+        <span class="ticker">基本面墊高</span>
+        <span class="ticker">拒絕追停板</span>
+      </div>
+      <div class="col">
+        <h4>COT 重分工</h4>
+        <span class="ticker">Google</span>
+        <span class="ticker">Marvell</span>
+        <span class="ticker">聯發科</span>
+        <span class="ticker">Broadcom</span>
+      </div>
+      <div class="col">
+        <h4>操作底線</h4>
+        <span class="ticker">分散配置</span>
+        <span class="ticker">週期生存</span>
+        <span class="ticker">基本面核心</span>
+        <span class="ticker">均線出場</span>
+      </div>
+    </div>
+    <div class="pills"><div class="pill">七月底原估第四季甚至明年才收復，現在已有不少人收回約一半；盤雖不 FOMO，基本面有數字的個股仍在慢慢墊高。</div><div class="pill">Google 更確定往 Customer-Owned Tooling 走：高價值設計與採購留在內部，外部夥伴轉向 NRE、IP 與設計服務。</div><div class="pill">Marvell 的新增周邊案不是既有 TPU 主晶片 roadmap 的直接掠奪；IC 設計夥伴普遍受惠，Broadcom 的 turnkey 肉可能被削薄。</div><div class="pill">沒有任何分享能檔檔命中；先配置、活過週期，再用自己熟悉的基本面核心加技術工具與機械出場。</div></div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>盤面：</b>缺少四、五月追漲就賺的 FOMO，但有數字的個股仍可漲、休息、再墊高。</a>
+    <a class="insight-pill" href="#card-4"><b>分工：</b>COT 不是不要夥伴，而是 Google 把高價值環節抓回來，外部設計商改收服務型收入。</a>
+    <a class="insight-pill" href="#card-6"><b>勝負：</b>Marvell 與聯發科等夥伴面對更多案子；Broadcom 需承受 turnkey 可包辦範圍縮小。</a>
+    <a class="insight-pill" href="#card-10"><b>風控：</b>單壓一檔與無規則續抱，才是把可修正的判斷錯誤放大成生存危機。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 黏而健康</a>
+      <a href="#card-3">03 協議範圍</a>
+      <a href="#card-4">04 COT 是什麼</a>
+      <a href="#card-5">05 新案或搶案</a>
+      <a href="#card-6">06 博通的利空</a>
+      <a href="#card-7">07 普遍利多</a>
+      <a href="#card-8">08 Google 硬體化</a>
+      <a href="#card-9">09 先活下來</a>
+      <a href="#card-10">10 混合打法</a>
+      <a href="#card-11">11 本人揭露</a>
+      <a href="#card-12">12 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">市場判讀</div>
+    <h2>盤很黏、沒有 FOMO，卻仍在收復失土：有數字的個股用漲一段、休息、再墊高的方式前進</h2>
+    <div class="core"><span class="tag">重點</span>七月底深跌時，主持人原估可能要到第四季甚至明年才收復；現在不少人已收回約一半。漲停追價隔日容易被修理，但波段與基本面標的仍逐步墊高，因此整體由觀望轉為相對樂觀。</div>
+    <blockquote>我還是覺得其實這個盤算是蠻不錯的</blockquote>
+    <div class="mechanism"><span class="tag">盤面三層</span><ol><li>情緒：沒有追漲就賺的全面 FOMO。</li><li>結構：強勢標的不連續，常漲一段後盤整。</li><li>基本面：有數字支撐者仍能逐步墊高。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">操作區分</div>
+        <span class="ticker">追漲停</span>
+        <span class="ticker">搶短</span>
+        <span class="ticker">波段</span>
+        <span class="ticker">基本面個股</span>
+      </div>
+    <div class="note">相對樂觀不等於每檔都能追；本集明確警告隔日反殺。</div>
+    <div class="risk"><b>風險：</b>若把慢漲誤認為落後補漲而追高，仍可能被無延續性的盤面修理。</div>
+    <div class="action"><b>應對：</b>只追蹤有數字驗證的標的，等待盤整後再墊高，不用漲停板代替研究。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">事件拆解</div>
+    <h2>Google–Marvell 合作不只是一張權證：合作範圍瞄準 TPU 主晶片外圍的多種專用晶片</h2>
+    <div class="core"><span class="tag">重點</span>節目轉述合作涵蓋 attached to TPU ecosystem 的推論晶片、記憶體控制器、NIC 與 near-memory compute，重點是 main die 之外的周邊。權證約 7%、2033 年歸屬等條款只列為節目轉述，未冒充外部核實。</div>
+
+    <div class="mechanism"><span class="tag">先分兩層</span><ol><li>公開層：合作方向與廣泛周邊晶片範圍。</li><li>待驗層：行使價、稀釋比例、股東順位與營收歸屬細節。</li><li>投資層：真正決定價值的是量產、收入、毛利與持續年限。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">可能範圍</div>
+        <span class="ticker">Inference</span>
+        <span class="ticker">Memory Controller</span>
+        <span class="ticker">NIC</span>
+        <span class="ticker">Near-memory compute</span>
+      </div>
+    <div class="note">Frozen、MPU、CPU 與約 million 級數量是主持人考察，公開資訊未必可見。</div>
+    <div class="risk"><b>風險：</b>把權證上限直接當成已持股比例，或把所有周邊晶片都算進近期營收，會嚴重高估。</div>
+    <div class="action"><b>應對：</b>等待正式契約、財報與量產揭露，分別建模 vesting、收入與毛利，不用單一 TAM 倍乘。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">商業模式</div>
+    <h2>從 Turnkey 到 Full-COT：Google 把高價值環節抓回來，設計夥伴轉收 NRE、IP 與服務費</h2>
+    <div class="core"><span class="tag">重點</span>Turnkey 由夥伴包設計、HBM、基板、封裝、料件與投片，靠總包與逐項加價取得豐厚毛利；COT 則由 Google 自己掌握主晶片設計、光罩、關鍵料件採購乃至投片，外部夥伴做 I/O、SerDes、介面與設計服務。</div>
+    <blockquote>決心要往COT的方向去走</blockquote>
+    <div class="mechanism"><span class="tag">價值鏈重分配</span><ol><li>Google：保留主晶片與高單價決策權。</li><li>設計夥伴：取得 NRE、IP 授權與工程服務收入。</li><li>供應鏈：封裝、投片與產能仍可能由有能力的夥伴協助。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">兩種模式</div>
+        <span class="ticker">Turnkey 總包</span>
+        <span class="ticker">Semi-COT</span>
+        <span class="ticker">Full-COT</span>
+        <span class="ticker">Customer-Owned Tooling</span>
+      </div>
+    <div class="note">COT 不等於外部夥伴消失；台積電產能與設計能力仍讓多夥伴模式有價值。</div>
+    <div class="risk"><b>風險：</b>客戶掌握更多價值鏈後，會更能規定供應商可賺的錢；服務收入的毛利結構不能照 turnkey 套用。</div>
+    <div class="action"><b>應對：</b>模型分開估 NRE、IP、設計服務、封裝投片與料件加價，避免把兩種模式混成同一毛利率。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">Marvell／聯發科</div>
+    <h2>新增周邊晶片不等於搶走既有 TPU roadmap：短線 TAM 被分，長線案子可能變更多</h2>
+    <div class="core"><span class="tag">重點</span>主持人看到的 Marvell MPU、CPU、推論與搜尋特殊晶片偏向主晶片旁的新案，不是聯發科或 Broadcom 既有 V8／V9／V10 roadmap 的直接取代。更多參與者會壓縮未證實的未來 TAM 想像，但也反映 Google 正擴大硬體版圖。</div>
+
+    <div class="mechanism"><span class="tag">判讀順序</span><ol><li>先問是否從既有 roadmap 搶走。</li><li>再問是主晶片、周邊晶片或 IP／chiplet。</li><li>最後才估新增專案能否放量與貢獻毛利。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">角色</div>
+        <span class="ticker">Marvell <code>MRVL</code></span>
+        <span class="ticker">聯發科</span>
+        <span class="ticker">AMD</span>
+        <span class="ticker">Google</span>
+      </div>
+    <div class="note">AMD 參與 CPU chiplet／IP 的說法是市場傳聞；所有專案代號均不當作確定 design win。</div>
+    <div class="risk"><b>風險：</b>市場可能先交易競爭者增加，實際案子卻尚未證實；也可能反過來把所有新案都提前算成營收。</div>
+    <div class="action"><b>應對：</b>以專案類型、既有或新增、量產時間與服務範圍四欄追蹤，不用一個總 TAM 包辦。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">Broadcom</div>
+    <h2>真正受壓的是 Turnkey 的肉：案子未必被奪走，但可總包、加價的範圍可能縮小</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為把事件視為 Broadcom 的偏負面因素合理：Google 若把部分未來案子改走 COT，Broadcom 能從 HBM、基板、封裝與料件逐項加價的 turnkey 總量會下降。這不是既有主晶片 roadmap 已失守的證據。</div>
+
+    <div class="mechanism"><span class="tag">負面從哪裡來</span><ol><li>不是主晶片被直接換人。</li><li>而是客戶把更多高價值環節收回。</li><li>同一案子的可服務範圍與可加價項目變少。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">需拆模型</div>
+        <span class="ticker">主晶片設計</span>
+        <span class="ticker">HBM</span>
+        <span class="ticker">基板</span>
+        <span class="ticker">封裝</span>
+        <span class="ticker">Turnkey markup</span>
+      </div>
+    <div class="note">主持人用五案中兩三案改走 COT 作情境例子，並非公司正式案量指引。</div>
+    <div class="risk"><b>風險：</b>只用事件把 Broadcom 整體轉空會過度延伸；需求強、IP 與大型專案能力仍可能保住重要案子。</div>
+    <div class="action"><b>應對：</b>把 Broadcom 估值敏感度拆成案量、turnkey 比例、每案內容與毛利率，不只看客戶名單。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">IC 設計服務</div>
+    <h2>COT 不是設計服務末日：需求夠強時，小朋友也能分案，議價權仍來自替代機會與產能</h2>
+    <div class="core"><span class="tag">重點</span>Google 開更多晶片、把案子拆細後，Marvell、聯發科與其他 design house 可承接 NRE、IP、I/O、SerDes、記憶體介面、封裝與投片。主持人的結論是普遍有利 IC Design，Broadcom 因原模式太美好才相對吃虧。</div>
+
+    <div class="mechanism"><span class="tag">夥伴仍有價值</span><ol><li>設計與 IP 能力縮短開案時間。</li><li>卡到先進產能可協助客戶量產。</li><li>需求強時，供應商有其他客戶選項，不必無條件接受壓價。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">收入池</div>
+        <span class="ticker">NRE</span>
+        <span class="ticker">IP licensing</span>
+        <span class="ticker">Design service</span>
+        <span class="ticker">Packaging／tape-out</span>
+      </div>
+    <div class="note">客戶可先算好供應商能賺多少；利多不等於毛利必然高於 turnkey。</div>
+    <div class="risk"><b>風險：</b>需求轉弱或產能鬆動後，客戶議價權會更大；設計服務業者也可能為搶案承擔前期成本。</div>
+    <div class="action"><b>應對：</b>同時追蹤 backlog、NRE 認列、IP royalty、量產分潤、產能與客戶集中度。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">Google 算力</div>
+    <h2>從 Frontier Model House 到硬體房東：雲端租賃與 Token 生產，可能讓 Google 越開越多晶片</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為 Google 仍做前沿模型，但更認真投入伺服器與雲端租賃、AI token 生產；當硬體端成為更可賺錢的存在，資源會推動更多自研晶片與 COT 專案，外部設計夥伴也可同步受惠。</div>
+
+    <div class="mechanism"><span class="tag">正向循環</span><ol><li>雲端與 token 需求增加硬體利用率。</li><li>更多硬體資源支持更多專用晶片。</li><li>COT 降低每顆晶片的總包成本，再擴大專案數。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">驗證端</div>
+        <span class="ticker">Cloud rental</span>
+        <span class="ticker">Server rental</span>
+        <span class="ticker">AI token</span>
+        <span class="ticker">Custom silicon</span>
+      </div>
+    <div class="note">晶片越開越多是主持人情境推演；仍須以量產、利用率與現金流驗證。</div>
+    <div class="risk"><b>風險：</b>CapEx 回收、雲端競爭與專案執行都可能拖慢循環；便宜開案不代表每顆都能商業成功。</div>
+    <div class="action"><b>應對：</b>追蹤 Google Cloud 成長、CapEx、折舊、利用率、自研晶片量產與外部夥伴營收。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">職涯與週期</div>
+    <h2>全職投資沒有固定薪水；半導體終究均值回歸，真正的優勢是撐得到下一輪</h2>
+    <div class="core"><span class="tag">重點</span>全職投資換來時間自由，卻把所有收入與市場結果綁在自己身上，盤差時心理壓力可能比上班更大。半導體這輪很大仍是週期；錯過過去只是可惜，槓桿與集中讓自己出局才是永久損失。</div>
+    <blockquote>重點是你有辦法活下來</blockquote>
+    <div class="mechanism"><span class="tag">生存條件</span><ol><li>生活費與投資資金分離。</li><li>不把單一產業大週期視為永久成長。</li><li>預先限制集中度、槓桿與最大可承受回吐。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">壓力來源</div>
+        <span class="ticker">無固定收入</span>
+        <span class="ticker">盤差</span>
+        <span class="ticker">均值回歸</span>
+        <span class="ticker">集中風險</span>
+      </div>
+    <div class="note">全職投資不是不用工作，而是沒有保證薪水的另一份工作。</div>
+    <div class="risk"><b>風險：</b>用過去大多頭績效估生活費，可能在週期反轉時被迫低點變現。</div>
+    <div class="action"><b>應對：</b>先準備生活緩衝、收入情境與停手機制，再評估全職；不要用全押補回錯過行情。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">方法與出場</div>
+    <h2>基本面當核心、技術面當工具；很會買但不會賣，就用均線與分批先機械化</h2>
+    <div class="core"><span class="tag">重點</span>主持人不否認看線、量能與動能也能賺錢；他仍以基本面為核心，只融入有效的技術工具，不整套切換。對買點強、賣點弱者，先把十日線或月線跌破後賣三成或五成寫成規則並回測。</div>
+
+    <div class="mechanism"><span class="tag">從問題到規則</span><ol><li>確認優勢在買點而非整套交易。</li><li>選一條均線與固定減碼比例。</li><li>用歷史交易回測，再以前瞻小部位驗證。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">保留與吸收</div>
+        <span class="ticker">基本面核心</span>
+        <span class="ticker">圖形</span>
+        <span class="ticker">量能</span>
+        <span class="ticker">動能</span>
+        <span class="ticker">均線出場</span>
+      </div>
+    <div class="note">逐字稿的實力線依後文月線與出場語境校正為十日線；聽眾 72%／PF 1.6 原音未確證，不採用。</div>
+    <div class="risk"><b>風險：</b>用技術面替基本面壞化找藉口，或用基本面阻止規則出場，都是混合方法最常見的失控點。</div>
+    <div class="action"><b>應對：</b>明定哪個訊號負責進場、加碼、減碼與否證，避免兩套方法只在虧損時互相救援。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">本人揭露</div>
+    <h2>當下未具名持股、歷史新藥傷痕與條件式員工認股偏好，三種證據分開標</h2>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><span class="own">⭐</span>台股個股持倉（未具名）</td>
+        <td>部分已站上五日線，等待蓄勢上攻</td>
+        <td>本集唯一明確的當下持股狀態；未揭露公司、數量、成本、金額或新交易。</td>
+      </tr>
+      <tr>
+        <td>2018 生技／新藥股</td>
+        <td>歷史曾投入很大部分 AUM，現已不打算研究</td>
+        <td>臨床、解盲與上市都成功，最終仍因銷售不佳受傷；不是 EP690 現有持股。</td>
+      </tr>
+      <tr>
+        <td>未上市 RF／高頻零件員工認股</td>
+        <td>條件成立時傾向多認</td>
+        <td>匿名聽眾案例的假設性回答；公司、上市與交易均未確認，不是主持人已下單部位。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">⭐只標本集明確存在的未具名當下持股；Google、Marvell、Broadcom、聯發科、AMD、台積電、美光與匿名 RF 公司均不標本人持有。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">行動清單</div>
+    <h2>EP690 可直接執行的三欄框架</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在做</h4>
+        <ul><li>把 Google 自研晶片合作拆成 main die、周邊晶片、NRE、IP、封裝與投片六欄。</li><li>把當前盤面候選限制在已有基本面數字且能盤整墊高的標的。</li><li>設定單一持股上限、生活資金隔離與週期反轉時的最大回吐。</li><li>為不會賣的交易測試十日線／月線與三成／五成分批出場。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>Google–Marvell 正式協議的權證條款、合作產品、收入歸屬與量產節奏。</li><li>Marvell 新案是否真為新增周邊晶片，而非既有 TPU roadmap 重分配。</li><li>Google 的 COT 比例提高後，Broadcom turnkey 內容與毛利是否實際下降。</li><li>AI 雲端利用率、Google Cloud 現金流與更多自研晶片是否形成正循環。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>把節目轉述的 7%、2033 或晶片代號當成已核實公司公告。</li><li>把 Broadcom 單一事件利空延伸成整家公司必然轉空。</li><li>因錯過大週期而單壓一檔、借槓桿或動用必要生活資金。</li><li>用私人朋友技法、聽眾回測數字或匿名公司線索冒充可複製答案。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
