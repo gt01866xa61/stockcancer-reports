@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP691 筆記｜2026-08-26</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP691 筆記</h1>
+    <div class="date">2026-08-26｜AI 投資工作流、人機分工與把感覺量化的下一階段</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>市場狀態</h4>
+        <span class="ticker">震盪無方向</span>
+        <span class="ticker">近兩日反彈</span>
+        <span class="ticker">由看多降觀望</span>
+        <span class="ticker">Power 改選股</span>
+      </div>
+      <div class="col">
+        <h4>研究分工</h4>
+        <span class="ticker">人找訊號</span>
+        <span class="ticker">社群追即時</span>
+        <span class="ticker">AI 讀財報</span>
+        <span class="ticker">Drive 補私有料</span>
+      </div>
+      <div class="col">
+        <h4>執行底線</h4>
+        <span class="ticker">低擁擠</span>
+        <span class="ticker">突破下單</span>
+        <span class="ticker">感覺量化</span>
+        <span class="ticker">拒絕大槓桿</span>
+      </div>
+    </div>
+    <div class="pills"><div class="pill">市場比七月好，但本集只形容震盪、沒有方向、近兩日反彈；EP690 的相對樂觀先降為觀望。</div><div class="pill">AI 把財報、年報與後端研究壓到約 10–20 分鐘，卻沒有自動換來超額報酬、更多休閒或更短工時。</div><div class="pill">人眼找量價與事件訊號，社群補即時資訊，AI 做概覽、Drive 檢索與情境；最後仍由人決定部位與開槍。</div><div class="pill">約三至五成買賣帶有盤中 improvise；下一階段不是再換工具，而是把感覺量化成可重複流程。</div></div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>市場：</b>震盪與反彈不等於趨勢；Power 白皮書也只帶少數股，從族群押注收斂到選股。</a>
+    <a class="insight-pill" href="#card-4"><b>分工：</b>社群擅長快，AI 擅長深；把兩者放在對的位置，比要求單一工具包辦更有效率。</a>
+    <a class="insight-pill" href="#card-6"><b>流程：</b>訊號→overview→Drive→社群→估值／擁擠→突破，是主持人目前的盤中研究鏈。</a>
+    <a class="insight-pill" href="#card-10"><b>風控：</b>AI 帶來的踏實感不是槓桿額度；研究再深，部位過大仍可能把判斷錯誤變成爆倉。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 震盪觀望</a>
+      <a href="#card-3">03 效率悖論</a>
+      <a href="#card-4">04 社群快 AI 深</a>
+      <a href="#card-5">05 財報交給 AI</a>
+      <a href="#card-6">06 六段研究鏈</a>
+      <a href="#card-7">07 3–5 成即興</a>
+      <a href="#card-8">08 Jarvis 入場券</a>
+      <a href="#card-9">09 Hybrid 量化</a>
+      <a href="#card-10">10 最後仍是人</a>
+      <a href="#card-11">11 揭露邊界</a>
+      <a href="#card-12">12 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">市場判讀</div>
+    <h2>比七月好，但仍只是震盪、沒有方向：近兩日反彈讓體驗還 OK，不足以延續全面看多</h2>
+    <div class="core"><span class="tag">重點</span>主持人在北海道期間把市場形容為停留在差不多位置，昨天與今天出現反彈；這比七月連跌舒服，但缺乏方向性。台股大盤由 EP690 看多降為觀望，不外推成趨勢翻空。</div>
+
+    <div class="mechanism"><span class="tag">短評三層</span><ol><li>比較基準：明顯優於七月連跌體驗。</li><li>現在狀態：震盪、沒有方向。</li><li>正面線索：近兩日反彈，但尚無趨勢條件。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">立場</div>
+        <span class="ticker">台股大盤</span>
+        <span class="ticker">觀望</span>
+        <span class="ticker">不猜底</span>
+        <span class="ticker">不追反彈</span>
+      </div>
+    <div class="note">本集未揭露指數點位、均線、估值或指數持倉。</div>
+    <div class="risk"><b>風險：</b>用兩日反彈延續 EP690 的看多，或反過來把無方向寫成看空，都是超過逐字稿的推論。</div>
+    <div class="action"><b>應對：</b>把市場列為觀望；等待方向、量價、領頭族群與基本面同時出現，再調整曝險。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">AI 兩年回顧</div>
+    <h2>單一工作從兩小時縮到幾分鐘，總工時卻可能更長：生產力提升不等於時間自由或投資報酬</h2>
+    <div class="core"><span class="tag">重點</span>AI 可快速回測、找資料、讀財報與做總結，但使用者會拿省下的時間狩獵更多題目、學更多工具。工作本身繼續，少數成功案例也不能證明使用 AI 就能普遍大發財。</div>
+    <blockquote>但整體在工作你花的時間是變多的</blockquote>
+    <div class="mechanism"><span class="tag">為何沒變輕鬆</span><ol><li>任務時間下降，工作範圍同步擴張。</li><li>老闆與競爭者也知道工具變快。</li><li>更多資訊與產品，不保證對應報酬。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">不要混為一談</div>
+        <span class="ticker">任務速度</span>
+        <span class="ticker">總工時</span>
+        <span class="ticker">超額報酬</span>
+        <span class="ticker">生活自由</span>
+      </div>
+    <div class="note">Vibe coding 的個別成功者不能代表整體分布。</div>
+    <div class="risk"><b>風險：</b>只量化節省幾分鐘，卻忽略 token、工具學習、覆核與新增工作，會高估 AI 的真實 ROI。</div>
+    <div class="action"><b>應對：</b>同時追蹤研究週期、錯誤率、總工時、決策品質與實際 P&amp;L，不只看生成速度。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">資訊分工</div>
+    <h2>社群負責『現在發生什麼』，AI 負責『這件事怎麼運作』：快訊與深研不要用同一支槌子</h2>
+    <div class="core"><span class="tag">重點</span>主持人用客製化 X 與 Facebook feed 追最新事件、推播與靈感，認為比逐題問 AI 快；AI 再把事件展開成產業 overview、情境與研究問題。兩者並進，但社群必須過濾假消息。</div>
+
+    <div class="mechanism"><span class="tag">兩層資訊流</span><ol><li>發現層：X／Facebook／推播抓事件與異動。</li><li>研究層：AI 整理機制、情境、財報與問題清單。</li><li>驗證層：回到原始資料、價格與市場反應。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">工具</div>
+        <span class="ticker">X</span>
+        <span class="ticker">Facebook</span>
+        <span class="ticker">AI</span>
+        <span class="ticker">人工 filter</span>
+      </div>
+    <div class="note">Threads 雜訊與心理負擔較高，是主持人的個人體驗，不是平台品質統計。</div>
+    <div class="risk"><b>風險：</b>快訊容易假、AI 容易慢或把公開資訊包裝成新洞見；兩者都不能取代來源與時間戳。</div>
+    <div class="action"><b>應對：</b>先設定可信來源清單與刪除規則；社群線索必須回到正式文件與市場資料才能下判斷。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">財報研究</div>
+    <h2>AI 最有感的場景是跨產業讀財報：框架、合約項目與關鍵數字交給模型，熟悉欄位仍 Ctrl+F</h2>
+    <div class="core"><span class="tag">重點</span>題材股研究會碰到不熟產業，合約資產負債、收付款周期與違約風險又隨客戶結構改變。主持人用 Perplexity Computer／Claude Fable 5 快速拆框架，但定型化數字自己搜更快。</div>
+
+    <div class="mechanism"><span class="tag">選工具規則</span><ol><li>陌生產業與複雜關係：先讓強模型展開。</li><li>已知關鍵字與固定格式：Ctrl+F 直接定位。</li><li>所有結論：回到原頁面、期間與會計語境。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">研究物件</div>
+        <span class="ticker">財報</span>
+        <span class="ticker">年報</span>
+        <span class="ticker">合約資產</span>
+        <span class="ticker">P／Q</span>
+        <span class="ticker">市占率</span>
+      </div>
+    <div class="note">模型過度自信是主持人明示的主要風險；Fable 5 名稱經官方資料交叉確認。</div>
+    <div class="risk"><b>風險：</b>跨產業套同一會計直覺、忽略客戶屬性或讓模型自行補數字，都會把效率變成更快的錯誤。</div>
+    <div class="action"><b>應對：</b>要求模型列來源頁、期間、公式、產業例外與反例；已知欄位直接人工查找並雙重對帳。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">盤中工作流</div>
+    <h2>訊號→Overview→Drive→社群→估值／擁擠→突破：AI 在後端加速，人仍決定什麼值得研究</h2>
+    <div class="core"><span class="tag">重點</span>主持人先從盤中量價、族群與事件找到正在發生的故事，再請 AI 解釋產業、搜尋 Google Drive 裡的報告與 memo、補社群討論，確認資訊深度、估值與擁擠度優於市場後，配合突破買進。</div>
+
+    <div class="mechanism"><span class="tag">六段漏斗</span><ol><li>1 訊號／2 產業 overview／3 私有資料檢索。</li><li>4 社群核對／5 估值與擁擠度／6 突破執行。</li><li>任何一步無法證明優勢，就不把研究完整感當買點。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">資料層</div>
+        <span class="ticker">量價</span>
+        <span class="ticker">Google Drive</span>
+        <span class="ticker">報告／Memo</span>
+        <span class="ticker">社群</span>
+        <span class="ticker">估值</span>
+      </div>
+    <div class="note">Power、光通可插拔元件只是 Drive 檢索例子，沒有具名公司或新持股。</div>
+    <div class="risk"><b>風險：</b>流程很快容易把相關性、突破與資訊差混成同一件事；盤中壓力也會放大確認偏誤。</div>
+    <div class="action"><b>應對：</b>每次交易留存訊號時間、資料來源、估值差、擁擠判斷、觸發價格與否證條件。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">即興交易</div>
+    <h2>約三至五成買賣帶有 Improvise：研究速度變快不是隨便買，而是把原本盤後補課壓進盤中</h2>
+    <div class="core"><span class="tag">重點</span>部分標的會深思熟慮後慢慢收，另有約三至五成買賣是在盤中看到訊號、立刻查資料與問 AI，再看社群、估值與突破後執行。這是流程揭露，不是三至五成資產配置。</div>
+    <blockquote>我現在可能有高達三到五成左右的買賣</blockquote>
+    <div class="mechanism"><span class="tag">即興不等於無規則</span><ol><li>已有產業概論，才能壓縮理解時間。</li><li>資訊深度與估值要優於市場共識。</li><li>低擁擠加突破才形成執行條件。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">兩種節奏</div>
+        <span class="ticker">深思熟慮慢慢收</span>
+        <span class="ticker">盤中即興快速查</span>
+        <span class="ticker">突破執行</span>
+      </div>
+    <div class="note">三至五成指買賣行為比例，不是持倉比重、勝率或資金報酬。</div>
+    <div class="risk"><b>風險：</b>把快速研究誤當盡職調查完成，或把自信當資訊優勢，仍可能立刻停損與減碼。</div>
+    <div class="action"><b>應對：</b>替即興交易設較小初始部位、時間上限與事後審查，分開統計它與深研交易的績效。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">競爭優勢</div>
+    <h2>人人都帶 Jarvis，市場反應也變快：AI 是基本配備，不是自動產生 Alpha 的私人武器</h2>
+    <div class="core"><span class="tag">重點</span>AI 讓更多跨領域競爭者進場，也讓題材比過往更早一次反映；即使擁有資訊優勢，仍可能因價格先噴、後續回檔而受傷。工具普及後，真正差異在判斷與風控。</div>
+
+    <div class="mechanism"><span class="tag">優勢被壓縮</span><ol><li>同一工具降低所有人的研究門檻。</li><li>市場更快折價新資訊。</li><li>訊號品質、部位與退出成為剩餘差異。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">護城河檢查</div>
+        <span class="ticker">專有資訊源</span>
+        <span class="ticker">市場敏感度</span>
+        <span class="ticker">Sizing</span>
+        <span class="ticker">Execution</span>
+      </div>
+    <div class="note">AI 讓人更有踏實感，可能帶有安慰劑效應，不能直接當績效證據。</div>
+    <div class="risk"><b>風險：</b>把人人看得到的公開資訊誤認為自己的 edge，容易在擁擠交易中追到一次反映完的價格。</div>
+    <div class="action"><b>應對：</b>把每項資訊標成公開／私有、首次取得時間、可驗證程度與價格已反映程度。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">人機混合</div>
+    <h2>人看訊號、資金跟隨與賣壓，AI 處理後端：下一階段是把感覺量化，而不是把人拿掉</h2>
+    <div class="core"><span class="tag">重點</span>目前仍由人判斷訊號、是否有人跟單、資金是否推動與賣壓大小，AI 負責後端研究。主持人擔心感覺型績效未必永久，開始思考如何轉成可重複、可驗證的量化流程。</div>
+
+    <div class="mechanism"><span class="tag">量化四步</span><ol><li>定義訊號：族群、量價、事件與突破。</li><li>記錄上下文：擁擠、估值、資金跟隨與賣壓。</li><li>回測與前瞻：檢查穩健性、成本與 regime。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">分工</div>
+        <span class="ticker">Human signal</span>
+        <span class="ticker">AI backend</span>
+        <span class="ticker">Backtest</span>
+        <span class="ticker">Forward test</span>
+      </div>
+    <div class="note">量化仍是規劃，沒有已完成模型、績效或資金部署。</div>
+    <div class="risk"><b>風險：</b>事後才替感覺取名，容易產生過度擬合；市場因 AI 變快，歷史參數也可能迅速失效。</div>
+    <div class="action"><b>應對：</b>先記錄原始決策，不事後改標；用樣本外與小部位前瞻驗證，再決定是否放大。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">風控與生活</div>
+    <h2>AI 讓研究更有自信，不能換成大槓桿；真正要優化的還包括清閒感、家庭與一次性的時間</h2>
+    <div class="core"><span class="tag">重點</span>Situational Awareness 的案例再次說明，對 AI 再懂、研究再透徹，槓桿過大仍會爆炸。職涯與生活也一樣：工具效率若只換來更多工作，沒有清閒感與陪伴，就沒有完成真正的優化。</div>
+    <blockquote>最終你都還是那個開槍的人</blockquote>
+    <div class="mechanism"><span class="tag">兩種風控</span><ol><li>資本風控：限制部位、槓桿、停損與回吐。</li><li>時間風控：限制總工時、on-call 與不可預期壓力。</li><li>責任原則：AI 提供材料，人承擔最後選擇。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">不可外包</div>
+        <span class="ticker">Sizing</span>
+        <span class="ticker">Leverage</span>
+        <span class="ticker">Stop</span>
+        <span class="ticker">家庭時間</span>
+      </div>
+    <div class="note">醫院與診所回答是主持人將心比心的直覺，不是職涯專業建議。</div>
+    <div class="risk"><b>風險：</b>研究越完整越容易增加自信與部位；工作越有效率越容易吞掉休息，兩者都是把工具紅利反向變成風險。</div>
+    <div class="action"><b>應對：</b>為投資與工作同時設上限：最大部位／槓桿／回吐，以及每日研究時數與不可被工作占用的家庭時間。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">本人揭露</div>
+    <h2>本集沒有具名持股；唯一星號只證明未具名買賣行為，AI 工具、量化與遊戲都不是證券部位</h2>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><span class="own">⭐</span>題材股盤中買賣（未具名）</td>
+        <td>約三至五成買賣帶盤中即興研究性質</td>
+        <td>主持人明示目前約三至五成買賣採此流程，故以星號標記實際交易證據；沒有公司、數量、成本、金額、日期或當下持有狀態。</td>
+      </tr>
+      <tr>
+        <td>台股大盤／指數</td>
+        <td>震盪、無方向、近兩日反彈，降為觀望</td>
+        <td>只是市場體感；本集沒有說持有、加碼或減碼指數。</td>
+      </tr>
+      <tr>
+        <td>800V DC／Power</td>
+        <td>白皮書只帶少數股，改採選股式觀望</td>
+        <td>沒有具名股票，也沒有說目前仍持有 EP687 的 AI Power 部位。</td>
+      </tr>
+      <tr>
+        <td>Perplexity Computer／Claude Fable 5</td>
+        <td>目前研究工具</td>
+        <td>產品使用不等於持有相關公司股票；本集沒有 Anthropic 或 Perplexity 股權揭露。</td>
+      </tr>
+      <tr>
+        <td>蕭南資本／手機遊戲</td>
+        <td>規劃自行開發</td>
+        <td>只有商業規劃，未揭露產品、投資金額、公司股權或已執行交易。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">本集零筆具名現有持股、零筆可核對的具名買進或減碼；唯一 ⭐ 只代表未具名買賣行為確實存在，不代表目前仍持有。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">行動清單</div>
+    <h2>EP691 可直接執行的人機混合研究框架</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在做</h4>
+        <ul><li>把每筆盤中交易記成訊號、來源、時間、估值、擁擠、突破與否證七欄。</li><li>將即時發現交給可信社群 feed，財報、年報與情境展開交給 AI，固定回到原始頁核對。</li><li>分開統計深研交易與約三至五成即興交易的勝率、盈虧比、持有期與最大不利變動。</li><li>為 AI 工具記錄總成本、總工時、錯誤率與 P&amp;L，不以單一任務變快當 ROI。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>台股震盪是否形成方向、量價與新領頭族群，而非只有兩日反彈。</li><li>NVIDIA Power／800V 是否由少數個股擴散到訂單、營收與更多供應鏈成員。</li><li>主觀感覺能否被穩定定義、回測並通過樣本外與小部位前瞻驗證。</li><li>低延遲、視覺式 AI 是否真的進入手機／耳機並改善使用率，而非停留在傳聞。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>把 AI 生成的完整感、模型自信或漂亮報告直接當成資訊優勢。</li><li>把三至五成買賣誤寫成持倉比重、勝率或資產配置。</li><li>因研究速度變快而放大槓桿、取消停損或忽略市場已一次反映。</li><li>把 Power、光通、HBM、AirPods 或遊戲規劃的舉例硬猜成具名持股與公司指引。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
