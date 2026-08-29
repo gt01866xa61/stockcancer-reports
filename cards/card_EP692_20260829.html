@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP692 筆記｜2026-08-29</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP692 筆記</h1>
+    <div class="date">2026-08-29｜Claudeforce、光互連與 GPU／ASIC 搶料下的下一波多頭候選</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>市場訊號</h4>
+        <span class="ticker">震盪轉偏多</span>
+        <span class="ticker">事件數字轉佳</span>
+        <span class="ticker">等待領頭標的</span>
+        <span class="ticker">返台續戰</span>
+      </div>
+      <div class="col">
+        <h4>本集主軸</h4>
+        <span class="ticker">Claudeforce</span>
+        <span class="ticker">Marvell</span>
+        <span class="ticker">Jalapeño</span>
+        <span class="ticker">NVIDIA</span>
+      </div>
+      <div class="col">
+        <h4>供應鏈瓶頸</h4>
+        <span class="ticker">光互連</span>
+        <span class="ticker">載板／ABF</span>
+        <span class="ticker">HBM</span>
+        <span class="ticker">伺服器組裝</span>
+      </div>
+    </div>
+    <div class="pills"><div class="pill">盤面仍偏震盪，但事件與財務數字轉佳，主持人明示已有資格發展下一波多頭；EP691 的觀望升為看多。</div><div class="pill">Claudeforce 證明 AI 不會把 SaaS 一鍋端：模型與介面會洗牌，企業資料、信任、治理和行動層仍有價值。</div><div class="pill">Jalapeño 推論很強，不等於 NVIDIA 失去競爭力；訓練、通用 GPU、研發規模與供應鏈掌控仍是核心護城河。</div><div class="pill">GPU 與 ASIC 同時搶光通、載板和組裝產能；降低 HBM 堆疊只可能把缺貨由記憶體搬到更大載板。</div></div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>市場：</b>從震盪觀望升為條件式看多：機會變多，但仍要等真正領頭標的把行情拉出來。</a>
+    <a class="insight-pill" href="#card-3"><b>軟體：</b>價值不是只在模型層；誰掌握閉鎖企業資料、know-how 與行動能力，誰就保有拆帳權。</a>
+    <a class="insight-pill" href="#card-7"><b>算力：</b>ASIC 市占上升與 GPU 成長可以同時發生；總市場擴大，比單一跑分勝負更重要。</a>
+    <a class="insight-pill" href="#card-9"><b>瓶頸：</b>替代方案常只把缺口移位；記憶體降堆疊後，載板面積與供應反而成為下一個約束。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 條件式轉多</a>
+      <a href="#card-3">03 Claudeforce</a>
+      <a href="#card-4">04 SaaS 非歸零</a>
+      <a href="#card-5">05 光互連續攻</a>
+      <a href="#card-6">06 Jalapeño 邊界</a>
+      <a href="#card-7">07 供應鏈護城河</a>
+      <a href="#card-8">08 算力非零和</a>
+      <a href="#card-9">09 載板新瓶頸</a>
+      <a href="#card-10">10 日誌與動態觀點</a>
+      <a href="#card-11">11 揭露邊界</a>
+      <a href="#card-12">12 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">市場判讀</div>
+    <h2>盤面還在震盪，卻已有資格發展下一波多頭：事件與數字轉佳，等待領頭標的確認</h2>
+    <div class="core"><span class="tag">重點</span>主持人沒有說新多頭已成立，而是認為市場從 EP691 的無方向震盪，走到事件與財務數字改善、機會突然增多的階段。立場升為看多，但觸發條件仍是有標的真正帶頭。</div>
+
+    <div class="mechanism"><span class="tag">轉多三層</span><ol><li>現況：盤面仍偏震盪。</li><li>改善：事件與開出的數字不錯。</li><li>確認：領頭標的帶出下一波多頭。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">立場</div>
+        <span class="ticker">台股大盤</span>
+        <span class="ticker">看多</span>
+        <span class="ticker">等待領頭</span>
+        <span class="ticker">不預設點位</span>
+      </div>
+    <div class="note">本集沒有指數點位、均線、成交量或大盤部位。</div>
+    <div class="note">有資格與期待都是條件式語氣，不等於行情已確認。</div>
+    <div class="risk"><b>風險：</b>如果沒有新領頭、量價不跟或電話會議利多已反映，偏多預期仍可能退回震盪。</div>
+    <div class="action"><b>應對：</b>先列偏多觀察；只在領頭族群、量價與基本面同向時增加曝險，不因一句期待提前滿倉。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">企業 AI</div>
+    <h2>Claudeforce 把 Claude 與 Salesforce 的企業資料接起來：模型負責推理，CRM 負責信任、流程與行動</h2>
+    <div class="core"><span class="tag">重點</span>Salesforce in Claude 提供三十七項銷售 Skills。主持人把合作拆成兩種稀缺資產：Anthropic 的模型能力，與 Salesforce 累積多年的企業資料、商業 know-how、權限和執行層。</div>
+    <blockquote>誰有數據誰就有黃金</blockquote>
+    <div class="mechanism"><span class="tag">價值鏈拆分</span><ol><li>介面／模型層：由新的 AI 公司競爭。</li><li>資料／治理層：企業是否願意交付資料。</li><li>應用／行動層：把建議變成受控的企業動作。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">合作兩端</div>
+        <span class="ticker">Salesforce</span>
+        <span class="ticker">Anthropic</span>
+        <span class="ticker">Claude</span>
+        <span class="ticker">Claudeforce</span>
+      </div>
+    <div class="note">正式產品名與三十七項 Skills 已用 Salesforce 第一手資料校正。</div>
+    <div class="note">外部資料只校正名稱；價值判讀全部來自主持人逐字稿。</div>
+    <div class="risk"><b>風險：</b>客戶資料不一定願意交給前沿模型商；雙重計費、模型可替換與企業治理都會改變拆帳。</div>
+    <div class="action"><b>應對：</b>研究企業 AI 時，分開估資料所有權、模型成本、權限治理、行動完成率與每一層的議價權。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">SaaS 重估</div>
+    <h2>不是 SaaSpocalypse，而是價值大洗牌：不能用軟體／硬體一刀切，必須逐層判斷誰被取代</h2>
+    <div class="core"><span class="tag">重點</span>主持人明確反對 AI 讓所有軟體一起死亡。沒有資料、信任或行動能力的產品會被壓縮，但能掌握企業脈絡、串接多模型並執行工作的 SaaS 仍可能受惠。</div>
+
+    <div class="mechanism"><span class="tag">四層檢查</span><ol><li>介面是否被生成式 UI 取代。</li><li>模型是否能自由切換。</li><li>資料是否閉鎖且具有信任門檻。</li><li>軟體是否掌握應用與行動結果。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">立場</div>
+        <span class="ticker">軟體／SaaS</span>
+        <span class="ticker">延續看多</span>
+        <span class="ticker">分化而非全滅</span>
+        <span class="ticker">逐家公司驗證</span>
+      </div>
+    <div class="note">非全面滅亡不等於所有 SaaS 公司都會上漲。</div>
+    <div class="note">Salesforce 產品口碑與模型商議價仍是風險。</div>
+    <div class="risk"><b>風險：</b>只要資料與工作流不具黏性，模型商仍可能直接跨入；高估值軟體也可能先被重估。</div>
+    <div class="action"><b>應對：</b>把 SaaS 公司拆成資料、治理、工作流、行動與模型成本五張表，不再用單一產業標籤決定多空。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">Marvell／光通</div>
+    <h2>Marvell 上修展望，scale-up 光互連成長動能被確認：光通股創高後，電話會議成為續攻測試</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為 Marvell 的主要驅動來自 Google XPU 由 design win 走向放量，以及 scale-up 光互連交換晶片。多份電話會議讓光通股票率先轉強、部分創高，族群維持看多。</div>
+
+    <div class="mechanism"><span class="tag">催化鏈</span><ol><li>XPU 設計案逐步放量。</li><li>scale-up 互連帶動交換與 DSP。</li><li>上游材料、封裝與整櫃元件共同受惠。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">公司／族群</div>
+        <span class="ticker">Marvell</span>
+        <span class="ticker">光通訊</span>
+        <span class="ticker">DSP</span>
+        <span class="ticker">scale-up interconnect</span>
+      </div>
+    <div class="note">Marvell 與 scale-up optical interconnect 已用公司第一手資料校正名稱。</div>
+    <div class="note">主持人沒有揭露 Marvell 或光通具名持股。</div>
+    <div class="risk"><b>風險：</b>放量時點仍不確定；新高股可能已提前反映電話會議，個股不能只靠產業故事追價。</div>
+    <div class="action"><b>應對：</b>對照 design win、量產時間、光互連收入、客戶集中、庫存與估值，區分確認成長與預期交易。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">自研晶片</div>
+    <h2>Jalapeño 推論效率很強，但跑分不是全面勝負：推論專用晶片與訓練型通用 GPU 要分開比較</h2>
+    <div class="core"><span class="tag">重點</span>主持人接受 OpenAI Jalapeño 的推論測試大致公允，也肯定每瓦 token 與延遲表現；但它針對推論最佳化，暴力訓練算力仍可能不足，不能直接外推 NVIDIA 失勢。</div>
+
+    <div class="mechanism"><span class="tag">比較前先對齊</span><ol><li>工作負載：訓練或推論。</li><li>指標：吞吐、延遲、每瓦效能與利用率。</li><li>系統：記憶體、網路、軟體與量產條件。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">比較標的</div>
+        <span class="ticker">OpenAI Jalapeño</span>
+        <span class="ticker">Broadcom</span>
+        <span class="ticker">NVIDIA GPU</span>
+        <span class="ticker">SemiAnalysis</span>
+      </div>
+    <div class="note">Jalapeño 正式名稱與推論定位已由 OpenAI 第一手資料校正。</div>
+    <div class="note">逐字稿中的比較系統沒有完整配置，不能自行補成同條件測試。</div>
+    <div class="risk"><b>風險：</b>特定 benchmark、模型與功耗區間的領先，不保證量產成本、軟體生態與所有工作負載都領先。</div>
+    <div class="action"><b>應對：</b>只比較相同模型、延遲目標、系統邊界與功耗條件；把訓練、推論和整體部署成本分表。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">NVIDIA 護城河</div>
+    <h2>真正難複製的不只 GPU：大規模採購、供應鏈管理、研發回饋與通用市場形成系統優勢</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為 NVIDIA 能一次大量、甚至不計代價地鎖住產能，並透過台灣供應鏈把光通、雷射、載板、交換機與組裝能力握在手上；競爭者即使晶片很好，也可能卡在量產。</div>
+
+    <div class="mechanism"><span class="tag">四重優勢</span><ol><li>通用 GPU 同時服務多客戶與多模型。</li><li>銷售規模持續回灌研發。</li><li>大宗採購優先取得缺貨元件。</li><li>成熟管理降低整機遞延風險。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">平台</div>
+        <span class="ticker">NVIDIA</span>
+        <span class="ticker">Vera Rubin</span>
+        <span class="ticker">CPU</span>
+        <span class="ticker">Connectivity</span>
+        <span class="ticker">GPU</span>
+      </div>
+    <div class="note">Vera Rubin 正式名稱已由 NVIDIA 第一手資料校正。</div>
+    <div class="note">看多 NVIDIA 不等於否認 ASIC 市占上升。</div>
+    <div class="risk"><b>風險：</b>不計代價搶產能會增加成本；若需求放緩或產品爬坡延遲，採購優勢也可能變成庫存壓力。</div>
+    <div class="action"><b>應對：</b>同時追蹤平台爬坡、供應取得、庫存、毛利、研發效率與競品量產，不只看單顆晶片跑分。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">GPU／ASIC 共存</div>
+    <h2>ASIC 吃市占，不代表 GPU 收入縮小：TAM 擴大讓兩者同時成長，真正約束變成誰能拿到料</h2>
+    <div class="core"><span class="tag">重點</span>主持人接受 first-party ASIC 持續取得市占，但認為 AI 算力總市場仍擴大；開源模型依賴通用 GPU，閉源模型也需要大量訓練算力。份額與絕對價值必須分開看。</div>
+
+    <div class="mechanism"><span class="tag">兩條式子</span><ol><li>公司收入＝總市場 × 市占 × 單位經濟。</li><li>產品落地＝晶片能力 × 供應取得 × 系統整合。</li><li>市占下降時，只要總市場擴大更快，絕對收入仍可成長。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">需求端</div>
+        <span class="ticker">開源模型</span>
+        <span class="ticker">閉源模型</span>
+        <span class="ticker">訓練</span>
+        <span class="ticker">推論</span>
+        <span class="ticker">AI 雲端</span>
+      </div>
+    <div class="note">GPU／ASIC 立場為看多整體市場，不是兩邊每家公司都同樣受惠。</div>
+    <div class="risk"><b>風險：</b>若 TAM 成長不及預期，份額轉移會重新成為零和；雲端利用率、融資和電力也會限制需求。</div>
+    <div class="action"><b>應對：</b>每季同時更新算力需求總量、GPU／ASIC 比例、利用率、每瓦效能與實際部署進度。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">瓶頸轉移</div>
+    <h2>記憶體降堆疊可能需要更大板面：HBM 壓力沒有消失，只是把缺貨從記憶體搬到載板</h2>
+    <div class="core"><span class="tag">重點</span>主持人點名載板是目前最明顯的缺口。若 HBM 由 12Hi、8Hi 再降到 4Hi，以頻寬換容量並放大板面，用量會增加；載板因此由觀望升為看多，記憶體仍因替代與需求破壞維持觀望。</div>
+    <blockquote>但它只是把缺貨從A移到B</blockquote>
+    <div class="mechanism"><span class="tag">瓶頸移位</span><ol><li>記憶體價格與供應限制促成降堆疊討論。</li><li>較低堆疊犧牲容量，KV cache 仍需要容量。</li><li>為補需求使用更大板面，載板短缺被放大。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">環節</div>
+        <span class="ticker">HBM</span>
+        <span class="ticker">12Hi／8Hi／4Hi</span>
+        <span class="ticker">KV cache</span>
+        <span class="ticker">載板／ABF</span>
+      </div>
+    <div class="note">主持人對 4Hi 說法明確打問號，不能當成正式 roadmap。</div>
+    <div class="note">載板看多是產業方向，不代表具名公司訂單已確認。</div>
+    <div class="risk"><b>風險：</b>若降堆疊方案未採用、板面積沒有增加或供給快速開出，載板緊張邏輯會弱化；記憶體高價也可能破壞需求。</div>
+    <div class="action"><b>應對：</b>驗證 HBM 規格、板面積、載板良率與產能；將記憶體漲價與載板用量放在同一張供需表。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">決策紀錄</div>
+    <h2>隔日漲停不能抹去前一日的自我懷疑：用 Journal 保存原始決策，並讓觀點隨證據更新</h2>
+    <div class="core"><span class="tag">重點</span>主持人曾在早上操作未具名股票，當下覺得自己像韭菜，隔日標的漲停後情緒完全反轉。Journal 的功能是把兩個時點都留下，避免好結果替錯誤流程鍍金。</div>
+    <blockquote>我覺得世界是動態</blockquote>
+    <div class="mechanism"><span class="tag">原始紀錄四欄</span><ol><li>當時資訊與進場理由。</li><li>自我懷疑、風險與否證條件。</li><li>結果發生後的新證據。</li><li>流程對錯與盈虧分開評分。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">工具／心法</div>
+        <span class="ticker">Apple Journal</span>
+        <span class="ticker">交易日誌</span>
+        <span class="ticker">避免 sugar coat</span>
+        <span class="ticker">動態更新</span>
+      </div>
+    <div class="note">唯一具體交易完全未具名，不能猜公司或目前持股。</div>
+    <div class="note">Jensen Huang、Elon Musk 與 Gavin Baker 是目前偏好來源，不是永久信仰。</div>
+    <div class="risk"><b>風險：</b>若只記結果、不記當下資訊與情緒，漲停會讓錯誤流程看似正確，虧損也會讓正確流程被錯殺。</div>
+    <div class="action"><b>應對：</b>交易當下立即寫理由、風險、預期與退出；事後只新增結果，不回頭改寫原紀錄。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">本人揭露</div>
+    <h2>本集只有一筆未具名已執行交易；其餘公司與族群均為產業判讀，不得冒充持股</h2>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><span class="own">⭐</span>未具名股票交易</td>
+        <td>早上已執行操作；隔日買進標的漲停</td>
+        <td>主持人明示有操作且隔日開燈，故星號只證明曾有實際交易；公司、數量、成本、日期與現在是否仍持有均未揭露。</td>
+      </tr>
+      <tr>
+        <td>台股大盤／指數</td>
+        <td>由觀望升為條件式看多</td>
+        <td>只有市場判斷與返台續戰計畫，沒有指數持倉、加碼或減碼。</td>
+      </tr>
+      <tr>
+        <td>Salesforce／Anthropic／Marvell／NVIDIA</td>
+        <td>公司與競爭力分析</td>
+        <td>本集完全沒有揭露上述公司股票持有、成本、數量或成交。</td>
+      </tr>
+      <tr>
+        <td>光通／載板／HBM／AI 伺服器供應鏈</td>
+        <td>產業方向與瓶頸判讀</td>
+        <td>看多或觀望均不等於主持人持有；沒有任何具名台股或美股部位。</td>
+      </tr>
+      <tr>
+        <td>Apple Journal</td>
+        <td>生活與交易日誌工具</td>
+        <td>App 使用心得不是 Apple 股票持有揭露。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">本集零筆具名現有持股、零筆具名可核對成交；唯一 ⭐ 僅代表未具名交易確實執行，不代表目前仍持有。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">行動清單</div>
+    <h2>EP692 可直接執行的研究與驗證框架</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在做</h4>
+        <ul><li>把 Salesforce／Anthropic 拆成模型、資料、治理、行動與計費五層，分別估議價權。</li><li>對 Marvell 與光通建立 design win、放量、收入、庫存、估值和價格反應對照表。</li><li>把 GPU／ASIC 比較固定為相同模型、延遲、功耗、系統邊界與量產條件。</li><li>交易當下用 Journal 留下理由、情緒、風險與否證，不事後覆寫。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>盤面是否真的出現領頭標的、量價與基本面同向，而非只有電話會議後的短線催化。</li><li>Claudeforce 的客戶採用、雙重計費與 Salesforce／Anthropic 實際拆帳。</li><li>Jalapeño 的量產、部署成本與不同工作負載表現，以及 Vera Rubin 的爬坡。</li><li>HBM 降堆疊是否成真、板面積是否增加、載板缺口能否轉成出貨與獲利。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>把 AI 非全面消滅 SaaS，誤寫成所有軟體公司都會上漲。</li><li>用 Jalapeño 單一推論跑分直接宣告 NVIDIA 衰退或 GPU 被取代。</li><li>把 4Hi、DryAzik、Bisite 等不確定原音補成正式規格、產品或來源。</li><li>把未具名隔日漲停交易、產業看多或 App 使用心得冒充具名持股。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
