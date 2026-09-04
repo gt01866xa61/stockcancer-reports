@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP693 筆記｜2026-09-04</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP693 筆記</h1>
+    <div class="date">2026-09-02｜聯發科可轉債、NVIDIA 萬能雜貨店與 NVHBM 價值移轉</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>市場與部位</h4>
+        <span class="ticker">震盪但好做</span>
+        <span class="ticker">淨值接近修復</span>
+        <span class="ticker">鏡頭小部位</span>
+        <span class="ticker">九月看風控</span>
+      </div>
+      <div class="col">
+        <h4>合作主軸</h4>
+        <span class="ticker">聯發科 ECB</span>
+        <span class="ticker">NVIDIA</span>
+        <span class="ticker">NVLink Fusion</span>
+        <span class="ticker">Google ICI／OCS</span>
+      </div>
+      <div class="col">
+        <h4>價值池重分配</h4>
+        <span class="ticker">NVHBM</span>
+        <span class="ticker">HBM base die</span>
+        <span class="ticker">Broadcom</span>
+        <span class="ticker">AI 基礎設施</span>
+      </div>
+    </div>
+    <div class="pills"><div class="pill">八月以來盤面震盪卻好做；主持人仍未完全收復七月高點，但距離已明顯縮小。</div><div class="pill">鏡頭與光通維持強勢；本人只確認有前述鏡頭脈絡的小部位，不能拆成兩檔都持有。</div><div class="pill">NVIDIA 接受客戶自研 XPU，轉而用互連、記憶體、CPU、網路、儲存與機櫃取得周邊價值。</div><div class="pill">Broadcom 由 EP690 看空升為觀望；競爭壓力仍在，但設計整合能力不能因新合作就被抹去。</div></div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>市場：</b>持有比追逐短線動能更有效；九月季節統計只作提醒，真正要管的是部位與退出。</a>
+    <a class="insight-pill" href="#card-4"><b>合作：</b>可轉債是未來轉股選擇權與策略插旗，轉換前不是 NVIDIA 已持有聯發科現股。</a>
+    <a class="insight-pill" href="#card-6"><b>平台：</b>XPU 自研不必然排除 NVIDIA；完整平台能在加速器之外繼續收取價值。</a>
+    <a class="insight-pill" href="#card-9"><b>決策：</b>價值、題材與動能模型會導出不同加減碼；先說清楚模型，才有可重複的動作。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 震盪但好做</a>
+      <a href="#card-3">03 鏡頭與光通</a>
+      <a href="#card-4">04 MediaTek ECB</a>
+      <a href="#card-5">05 兩條獨立合作</a>
+      <a href="#card-6">06 萬能雜貨店</a>
+      <a href="#card-7">07 NVHBM 邊界</a>
+      <a href="#card-8">08 Broadcom 升觀望</a>
+      <a href="#card-9">09 模型先行</a>
+      <a href="#card-10">10 突破與風控</a>
+      <a href="#card-11">11 揭露邊界</a>
+      <a href="#card-12">12 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">市場判讀</div>
+    <h2>八月後是震盪但好做：大盤靠近新高，個人淨值仍差最後一段，九月以盤整墊高為可接受路徑</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為近期主觀感受很磨，實際上只要持有、不一直追動能，淨值就會逐步墊高。個人仍未完全收復七月高點，但修復速度比原先預期快；九月只要盤整並慢慢往上就可以接受。</div>
+
+    <div class="mechanism"><span class="tag">三層拆解</span><ol><li>盤面：震盪，但大盤已在新高附近。</li><li>操作：持有優於頻繁追逐短線動能。</li><li>風控：季節性只參考，不預言九月必跌。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">立場</div>
+        <span class="ticker">台股大盤</span>
+        <span class="ticker">延續看多</span>
+        <span class="ticker">持有為主</span>
+        <span class="ticker">等待修復</span>
+      </div>
+    <div class="note">下月或下下月再創高是帶有自嘲插旗的期待，不是報酬保證。</div>
+    <div class="note">A 君赴日前換成指數是第三方狀態，不能列為主持人持倉。</div>
+    <div class="risk"><b>風險：</b>九月季節性、動能失靈與盤整反覆仍可能造成回撤；個人淨值尚未正式收復七月高點。</div>
+    <div class="action"><b>應對：</b>維持可承受的部位與流動性；不因月份統計預先清倉，也不因大盤靠近新高追逐落後動能。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">鏡頭／光通</div>
+    <h2>大立光、玉晶光與光通持續強勢：本人有前述鏡頭脈絡的小部位，但不能拆成兩檔確定持有</h2>
+    <div class="core"><span class="tag">重點</span>主持人先點名大立光與玉晶光，接著表示自己有買到、但不可能買多，只是配置一環。這句只能證明前述鏡頭方向有相關部位；光通則只有產業強勢判讀，沒有最新具名持股。</div>
+    <blockquote>人生是沒有這種後悔藥，或是說水晶球的</blockquote>
+    <div class="mechanism"><span class="tag">證據邊界</span><ol><li>大立光與玉晶光是同段複數 antecedent。</li><li>有買到不能拆成兩檔都持有。</li><li>光通強勢不等於本集揭露光通持倉。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">方向</div>
+        <span class="ticker">大立光</span>
+        <span class="ticker">玉晶光</span>
+        <span class="ticker">光通訊</span>
+        <span class="ticker">配置一環</span>
+      </div>
+    <div class="note">沒有成本、數量、比例，也沒有逐檔拆分。</div>
+    <div class="note">事後後悔沒重押不能回寫成當時應該滿手的交易規則。</div>
+    <div class="risk"><b>風險：</b>強勢股可能已反映預期；本集沒有新訂單、出貨、獲利或估值資料可支持追價。</div>
+    <div class="action"><b>應對：</b>研究鏡頭與光通時，把持股證據、產業強度、訂單與估值分開，不用一段模糊揭露替兩檔同時加星。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">聯發科可轉債</div>
+    <h2>零息可轉債像押注客製 XPU 成功的選擇權：重點是 NVIDIA 與聯發科深化合作，不是現股持有</h2>
+    <div class="core"><span class="tag">重點</span>主持人轉述 NVIDIA 認購三十五億美元、零票息並帶十多個百分點的轉換溢價；若聯發科客製 XPU 成功、股價上升，才有轉股價值。他因此把事件視為長期策略插旗，而非財務不健全公司靠融資續命。</div>
+    <blockquote>整體看下來是一個，我覺得蠻不錯的消息</blockquote>
+    <div class="mechanism"><span class="tag">可轉債三層</span><ol><li>現在：債券認購，不是現股持有。</li><li>未來：達到條件後才可能轉成股份。</li><li>策略：把客製 XPU 與平台合作綁得更深。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">合作方</div>
+        <span class="ticker">MediaTek</span>
+        <span class="ticker">NVIDIA</span>
+        <span class="ticker">ECB</span>
+        <span class="ticker">客製 XPU</span>
+      </div>
+    <div class="note">Alphabet 參與只保留為主持人轉述，官方公告沒有點名實際認購額。</div>
+    <div class="note">可轉債資金用途不能自行補成採購 NVIDIA 設備。</div>
+    <div class="risk"><b>風險：</b>轉股、客戶、tap-out、量產、營收貢獻與最終稀釋均須分開追蹤；消息公布後的股價反應可能快速消化預期。</div>
+    <div class="action"><b>應對：</b>把債券條件、轉股觸發、合作產品、客戶驗證與營收認列做成五欄追蹤，不把策略象徵直接換算成 EPS。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">合作架構</div>
+    <h2>NVIDIA 與聯發科往 AI 平台深化，Google 則有自己的 ICI／OCS：兩次認購不是三方結盟</h2>
+    <div class="core"><span class="tag">重點</span>聯發科與 NVIDIA 已有 RTX Spark、車用與資料中心合作，再延伸至 NVLink Fusion 客製 XPU。Google 同時是聯發科客戶、也是 NVIDIA GPU 客戶，卻擁有自己的 ICI 互聯與 OCS 光交換架構；主持人因此把兩個大咖的動機分開看。</div>
+
+    <div class="mechanism"><span class="tag">關係圖</span><ol><li>NVIDIA × MediaTek：平台、客製 XPU 與互連。</li><li>Google × MediaTek：既有客戶與自研晶片脈絡。</li><li>Google × NVIDIA：仍買 GPU，但互聯生態較獨立。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">架構</div>
+        <span class="ticker">NVLink Fusion</span>
+        <span class="ticker">Google ICI</span>
+        <span class="ticker">Google OCS</span>
+        <span class="ticker">RTX Spark</span>
+      </div>
+    <div class="note">TPU 8t 是正式名稱校正；Humufish 仍屬未正式確認的市場代號。</div>
+    <div class="note">本集更新 Google 架構競爭力，延續既有看多，不新增公司估值或具名交易。</div>
+    <div class="risk"><b>風險：</b>合作關係不是排他契約；客戶可同時採多套加速器與互聯，實際收入要看量產與採購。</div>
+    <div class="action"><b>應對：</b>把每一條合作分別追蹤產品、IP、互聯、客戶、時程與收入，拒絕用三方聯盟一句話包住不同動機。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">NVIDIA 平台</div>
+    <h2>客戶做自己的 XPU，NVIDIA 就賣完整 AI factory：從單顆 GPU 走向互連、CPU、網路、儲存與機櫃</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為 NVIDIA 不可能阻止客戶自研，因此改成讓客製 XPU 接入自己的平台。加速器只是其中一塊；互連、記憶體、CPU、networking、storage 與 rack 都能成為價值來源。</div>
+    <blockquote>所以它變成是一個那種萬能雜貨店的感覺啦</blockquote>
+    <div class="mechanism"><span class="tag">平台價值池</span><ol><li>運算：GPU 或客戶自研 XPU。</li><li>互連：NVLink Fusion 與 scale-up fabric。</li><li>系統：CPU、網路、儲存與 rack-scale 整合。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">正式產品脈絡</div>
+        <span class="ticker">MGX ETL</span>
+        <span class="ticker">Groq 3 LPX</span>
+        <span class="ticker">Vera CPU</span>
+        <span class="ticker">BlueField-4 STX</span>
+        <span class="ticker">Spectrum-6 SPX</span>
+      </div>
+    <div class="note">正式 rack 名稱已用 NVIDIA 第一手資料校正。</div>
+    <div class="note">XPU 市占上升與 NVIDIA 絕對收入成長可以同時發生。</div>
+    <div class="risk"><b>風險：</b>平台周邊能否被採用仍取決於開放性、價格、軟體、客戶議價與替代互聯；Google 是較難深度綁入的例外。</div>
+    <div class="action"><b>應對：</b>評估 NVIDIA 時分開計算加速器、互連、記憶體、CPU、網路、儲存與整櫃內容，不只看 GPU 市占。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">NVHBM</div>
+    <h2>NVHBM 把控制器與客製 base die 搬進記憶體堆疊：效能規格亮眼，但客戶、供應與價值分配仍待驗證</h2>
+    <div class="core"><span class="tag">重點</span>相較標準 HBM4E，主持人引用 NVIDIA 規格：頻寬增加三成、HBM 功耗降低一成半，並把部分控制器與介面移入客製 base die。這可能把價值由標準記憶體往 NVIDIA、設計夥伴與晶圓製造重新分配。</div>
+
+    <div class="mechanism"><span class="tag">可能的移轉鏈</span><ol><li>規格：客製控制器、PHY 與 base die。</li><li>設計：聯發科是否參與仍須驗證。</li><li>製造：台積電承接比例尚未確認。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">供應鏈</div>
+        <span class="ticker">NVIDIA NVHBM</span>
+        <span class="ticker">MediaTek</span>
+        <span class="ticker">TSMC</span>
+        <span class="ticker">SK hynix／Micron／Samsung</span>
+      </div>
+    <div class="note">官方摘要的頻寬、功耗與運算面積基準不可彼此混用。</div>
+    <div class="note">主持人明示新產品曾有雷聲大雨小，必須等客戶、tap-out 與市占。</div>
+    <div class="risk"><b>風險：</b>規格優勢不等於量產訂單；記憶體廠配合、成本、良率、供應商分工與標準生態反應都未確定。</div>
+    <div class="action"><b>應對：</b>建立客戶、規格凍結、tap-out、base die 設計、晶圓製造、量產與收入七道證據門，不在公告階段先算訂單。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">Broadcom／AI TAM</div>
+    <h2>競爭者都在搶 Broadcom 內容，不等於它必然失單：Jalapeño 反而證明設計整合 know-how，立場升為觀望</h2>
+    <div class="core"><span class="tag">重點</span>NVIDIA 拉攏聯發科、Marvell 等客製晶片夥伴，市場容易先交易 Broadcom 被侵蝕的故事；但主持人認為 OpenAI Jalapeño 的表現證明 Broadcom 的設計與統整能力仍強，實際影響要等電話會議。</div>
+
+    <div class="mechanism"><span class="tag">非零和框架</span><ol><li>份額：各家都在爭同一組價值池。</li><li>能力：設計、整合與量產 know-how 不會瞬間消失。</li><li>市場：AI TAM 若擴大，多方可同時成長。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">競合</div>
+        <span class="ticker">Broadcom</span>
+        <span class="ticker">NVIDIA</span>
+        <span class="ticker">MediaTek</span>
+        <span class="ticker">Marvell</span>
+        <span class="ticker">OpenAI Jalapeño</span>
+      </div>
+    <div class="note">由 EP690 看空升為 EP693 觀望，不等於已轉成買進建議。</div>
+    <div class="note">光銅之爭的歷史例子提醒：敘事受損不一定等於營收已掉。</div>
+    <div class="risk"><b>風險：</b>新平台確實可能削弱 turnkey、fabric 或周邊內容；若電話會議確認失單，觀望仍可能再降級。</div>
+    <div class="action"><b>應對：</b>等待 Broadcom 對客戶、設計案、互連內容、量產時程與毛利的正式回應，再判斷份額與絕對收入。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">加碼與退出</div>
+    <h2>不迷信固定目標價：價值模型越漲越減，動能模型可以看對加碼；美股設上限，台股看流動性</h2>
+    <div class="core"><span class="tag">重點</span>主持人把估值當尺，不把單一目標價當真理。價值、題材與動能策略的加減碼方向可能相反；他在美股先設集中上限，台股則更重視能否在合理深度內退出。</div>
+
+    <div class="mechanism"><span class="tag">決策四問</span><ol><li>目前使用的是哪一種交易模型。</li><li>價格上漲後，風險報酬是否仍成立。</li><li>財報跳空時，單一方向會傷多少。</li><li>需要退出時，市場深度是否足夠。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">風控</div>
+        <span class="ticker">價值</span>
+        <span class="ticker">題材</span>
+        <span class="ticker">動能</span>
+        <span class="ticker">美股上限</span>
+        <span class="ticker">台股流動性</span>
+      </div>
+    <div class="note">美股三至四成是單一方向上限示例，不是每檔固定配置。</div>
+    <div class="note">台股五至十檔是退出深度口語示例，不是所有股票都能安全成交。</div>
+    <div class="risk"><b>風險：</b>模型名稱不能替代執行細節；若流動性、波動與事件風險變化，原先上限也要重算。</div>
+    <div class="action"><b>應對：</b>每筆交易先寫模型、加碼條件、最大曝險、事件風險與退出深度；沒有這五欄就不談看對加碼。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">跑步與季節性</div>
+    <h2>第一次十公里把自我設限拆掉：能力上限要用行動驗證；市場月份統計則只能提醒，不能替代風控</h2>
+    <div class="core"><span class="tag">重點</span>主持人首次完成十公里，在最難的中段後進入近似冥想的第二段狀態，證明真實上限常高於預設。市場卻不能照搬意志力：九月常弱、十月常好只看參考，真正要做的是控制部位並接受波動。</div>
+
+    <div class="mechanism"><span class="tag">兩種問題分開</span><ol><li>訓練：在安全邊界內用行動測試上限。</li><li>投資：不把堅持變成拒絕停損。</li><li>統計：季節性只是分布，不是單次預言。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">心法</div>
+        <span class="ticker">十公里</span>
+        <span class="ticker">second wind</span>
+        <span class="ticker">九月季節性</span>
+        <span class="ticker">部位風控</span>
+      </div>
+    <div class="note">跑步完成是個人經驗，不代表忽略膝痛或訓練恢復。</div>
+    <div class="note">九月若下跌可找買點是條件式想法，不是逢跌必買。</div>
+    <div class="risk"><b>風險：</b>把意志力誤用在投資上，可能讓停損與否證失效；把季節性當必然，也可能錯過相反行情。</div>
+    <div class="action"><b>應對：</b>訓練追蹤身體負荷；投資追蹤部位、流動性與否證條件，任何月份統計都不得凌駕風控。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">本人揭露</div>
+    <h2>本集只有鏡頭脈絡能確認相關部位；其餘公司、架構與族群都是評論，不得冒充持股</h2>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><span class="own">⭐</span>大立光／玉晶光相關鏡頭部位</td>
+        <td>有買到但不多，只是配置一環</td>
+        <td>複數名稱後接模糊持有句，只能以合併標的加星；不能拆成大立光與玉晶光各一筆持股。</td>
+      </tr>
+      <tr>
+        <td>整體投資組合</td>
+        <td>七月回撤後持續修復，尚未完全回高點</td>
+        <td>屬整體淨值與持有狀態，沒有完整持股、資產規模或個別標的比例。</td>
+      </tr>
+      <tr>
+        <td>光通訊族群</td>
+        <td>維持看多／持續強勢</td>
+        <td>本集沒有最新具名光通持股、成本、數量或成交。</td>
+      </tr>
+      <tr>
+        <td>聯發科／NVIDIA／Google／Broadcom</td>
+        <td>合作、競爭與產業判讀</td>
+        <td>可轉債認購與公司評論都不是主持人本人股票持有證據。</td>
+      </tr>
+      <tr>
+        <td>A 君指數部位</td>
+        <td>第三方在赴日前改持指數</td>
+        <td>這是 A 君的部位，不是主持人持股，月報與卡片均不得錯掛星號。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">⭐ 只代表逐字稿有本人實際部位證據；看多、合作、可轉債認購與第三方持股一律不加星。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">行動清單</div>
+    <h2>EP693 可直接執行的研究與風控框架</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在做</h4>
+        <ul><li>把聯發科可轉債拆成條件、轉股、合作產品、客戶與營收五欄。</li><li>把 NVIDIA 內容拆成 GPU、互連、NVHBM、CPU、網路、儲存與 rack。</li><li>對美股寫最大方向曝險，對台股寫可退出深度與分批方式。</li><li>鏡頭持股只保留合併標的，不自行拆成兩檔。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>聯發科客製 XPU 的客戶、tap-out、量產與收入。</li><li>NVHBM 的採用率、base die 分工、晶圓製造與市占。</li><li>Broadcom 電話會議對客戶失單、fabric 與內容價值的回應。</li><li>九月盤整是否真的維持墊高，而非重新加速破底。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>把可轉債寫成 NVIDIA 已持有聯發科現股。</li><li>把 Google、NVIDIA 與聯發科寫成已確認三方聯盟。</li><li>把 NVHBM 推測寫成台積電或聯發科已取得訂單。</li><li>把 A 君的指數、聽眾資產或主持人玩笑寫成本人持倉。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
