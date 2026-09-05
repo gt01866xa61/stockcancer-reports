@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP694 筆記｜2026-09-05</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 15px; padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 12px; color: #b8b8b8; }
+  .sec { font-size: 12px; color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 13px; margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 13px; color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 13px; color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 14px; }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 12.5px; color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 13.5px; }
+  .ticker code { color: #a0a0a0; font-size: 12px; margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 14px; background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 14.5px; color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 13px; color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 12.5px; color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 13px; color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 13.5px; }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 12.5px; padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 13px; text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP694 筆記</h1>
+    <div class="date">2026-09-05｜Broadcom 強財報、MediaTek 被王者認證與 Snowflake 的可信任 AI 中層</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>盤面與操作</h4>
+        <span class="ticker">九月震盪</span>
+        <span class="ticker">動能難做</span>
+        <span class="ticker">縮小槓桿</span>
+        <span class="ticker">等待表態</span>
+      </div>
+      <div class="col">
+        <h4>AI 價值鏈</h4>
+        <span class="ticker">Broadcom</span>
+        <span class="ticker">MediaTek</span>
+        <span class="ticker">Frontier Labs</span>
+        <span class="ticker">TSMC／SoIC</span>
+      </div>
+      <div class="col">
+        <h4>軟體與內容</h4>
+        <span class="ticker">Snowflake</span>
+        <span class="ticker">Model Router</span>
+        <span class="ticker">FDE</span>
+        <span class="ticker">遊戲長尾 IP</span>
+      </div>
+    </div>
+    <div class="pills"><div class="pill">盤不差，但加權在前高附近遲遲沒選方向；主持人縮槓桿等表態，核心長抱者淨值仍墊高。</div><div class="pill">Broadcom 財報、AI 半導體與互連方向都強；股價未漲不等於基本面轉差，最新立場升為看多。</div><div class="pill">Hock Tan 首次把 MediaTek 當成需要公開評論的對手；主持人視為聯發科被 ASIC 王者正式認證。</div><div class="pill">Snowflake 的價值在可信任資料、模型路由與 FDE；AI 內容爆量後，信用與作品靈魂反而更稀缺。</div></div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>盤勢：</b>長抱與動能正在得到不同答案；策略逆風可縮小尺寸，不必把整套能力永久關掉。</a>
+    <a class="insight-pill" href="#card-4"><b>融資：</b>需求真實與客戶信用可以同時成立；供應商幫忙建置，不代表風險從此消失。</a>
+    <a class="insight-pill" href="#card-6"><b>軟體：</b>企業願意把資料與模型選擇交給誰，誰就可能掌握 router 的效率、毛利與黏著度。</a>
+    <a class="insight-pill" href="#card-9"><b>邊界：</b>TSMC 前段、SoIC 趨勢與 Tesla 次題材分開追蹤；on track 不等於今天就有新訂單。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 九月震盪</a>
+      <a href="#card-3">03 Broadcom 升看多</a>
+      <a href="#card-4">04 需求與信用分開</a>
+      <a href="#card-5">05 MediaTek 被認證</a>
+      <a href="#card-6">06 可信任 AI 中層</a>
+      <a href="#card-7">07 FDE 成為中型趨勢</a>
+      <a href="#card-8">08 內容反而更稀缺</a>
+      <a href="#card-9">09 供應鏈證據分級</a>
+      <a href="#card-10">10 守住稀缺資產</a>
+      <a href="#card-11">11 揭露邊界</a>
+      <a href="#card-12">12 行動清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">市場判讀</div>
+    <h2>九月不是壞盤，卻是動能逆風：長抱者淨值仍墊高，主持人縮槓桿等待前高附近真正選方向</h2>
+    <div class="core"><span class="tag">重點</span>九月前五天反覆震盪，照四月至七月的動能做法追上砍下，很容易連續受傷；反而傻傻抱住基本面改善的部位，淨值仍慢慢往上。主持人認為盤不差，但加權遲遲沒有突破，因此先把槓桿縮小。</div>
+
+    <div class="mechanism"><span class="tag">三種狀態</span><ol><li>長抱：基本面持續改善，淨值緩步墊高。</li><li>動能：形態剛成形就失敗，摩擦與停損增加。</li><li>指數：接近前高卻未表態，先等領頭者衝出。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">最新立場</div>
+        <span class="ticker">台股大盤降觀望</span>
+        <span class="ticker">槓桿縮小</span>
+        <span class="ticker">核心持有</span>
+        <span class="ticker">等待突破</span>
+      </div>
+    <div class="note">縮槓桿不是全面看空，也不是把動能策略永久停止。</div>
+    <div class="note">若只因手上族群沒動就說整個盤差，容易忽略其他補漲與基本面主線。</div>
+    <div class="risk"><b>風險：</b>指數若假突破或重新加速破底，觀望仍需再降級；第二、第三線補漲也可能缺乏基本面支撐。</div>
+    <div class="action"><b>應對：</b>核心與短打分帳；核心追蹤獲利趨勢，動能部位縮小並保留明確停損，等指數與領頭族群共同確認再提高曝險。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">Broadcom 財報</div>
+    <h2>財報、AI 半導體與 fabric 指引都強，股價卻沒漲：先把價格與基本面拆開，Broadcom 升為看多</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為 Broadcom 最新數字與較中長期展望非常好，AI 半導體、fabric 與互連需求也沒有敗象。市場已走到第三、第四年，不是每份好財報都要立刻大噴；當下沒漲，不能反向發明基本面壞理由。</div>
+    <blockquote>它就只是不會漲而已</blockquote>
+    <div class="mechanism"><span class="tag">判讀順序</span><ol><li>先看：營收、AI 需求、fabric 與指引是否改善。</li><li>再看：價格是否已提前反映、是否進入資本休息段。</li><li>最後：等 EPS 趨勢與催化，而非用股價倒推財報。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">立場變化</div>
+        <span class="ticker">EP690 看空</span>
+        <span class="ticker">EP693 觀望</span>
+        <span class="ticker">EP694 看多</span>
+        <span class="ticker">仍需耐心</span>
+      </div>
+    <div class="note">最新升級建立在主持人的財報與指引判讀，不是單日股價反應。</div>
+    <div class="note">好公司不會每季都立刻漲；耐心仍須搭配客戶、融資與競爭風險。</div>
+    <div class="risk"><b>風險：</b>前沿模型商信用、客戶集中、供應商融資、競爭者搶內容與 AI 資本循環，都可能讓估值與價格先震盪。</div>
+    <div class="action"><b>應對：</b>把 Broadcom 追蹤拆成 custom XPU、networking／fabric、融資平台、客戶集中與 EPS 五欄；股價沒動時只更新證據，不替市場硬編故事。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">Frontier Labs 融資</div>
+    <h2>Anthropic、OpenAI 像要送去念書的外蒙古學生：需求真實，但信用與建置融資仍需要大廠和資本協助</h2>
+    <div class="core"><span class="tag">重點</span>主持人轉述 Broadcom 六個 AI 客戶中，只有兩個需要特別安排融資；他指向尚未上市、資訊較不透明的 frontier labs。Broadcom 與 NVIDIA 有動機協助設備先落地，卻不能因此忽略借款條件、殘值與風險承擔。</div>
+
+    <div class="mechanism"><span class="tag">兩條證據軸</span><ol><li>需求軸：財報、設備建置與算力使用仍強。</li><li>信用軸：未上市客戶融資條件較差、透明度較低。</li><li>風險軸：供應商、金融夥伴與客戶如何分攤殘值。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">參與者</div>
+        <span class="ticker">Anthropic</span>
+        <span class="ticker">OpenAI</span>
+        <span class="ticker">Broadcom</span>
+        <span class="ticker">NVIDIA</span>
+        <span class="ticker">金融夥伴</span>
+      </div>
+    <div class="note">外蒙古學生是 Hock Tan 的比喻，不是地理或客戶正式分類。</div>
+    <div class="note">需求強與融資風險能同時存在，不能用其中一條取消另一條。</div>
+    <div class="risk"><b>風險：</b>若模型商商業化、利用率或募資不如預期，建置風險可能往供應商與資本提供者傳導；節目轉述不是完整契約。</div>
+    <div class="action"><b>應對：</b>追蹤每個專案的客戶、算力、融資主體、付款承諾、設備殘值與利用率，不把 seller financing 一句話直接判成利多或騙局。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">MediaTek 競爭地位</div>
+    <h2>Hock Tan 第一次把 MediaTek 拿出來講：被 ASIC 王者當成對手，本身就是進入新競爭圈的認證</h2>
+    <div class="core"><span class="tag">重點</span>主持人觀察，Hock Tan 過去常把小型對手稱作 ankle biters，甚至懶得點名；這次卻直接評論 MediaTek，表示它真的有東西、只是 Broadcom 認為自己更快更好。對聯發科而言，被最強者拿來比較就是地位升級。</div>
+
+    <div class="mechanism"><span class="tag">訊號與邊界</span><ol><li>訊號：競爭者第一次被既有王者具名評論。</li><li>解讀：設計能力與商業威脅已進入對方雷達。</li><li>邊界：不是新訂單、量產或營收公告。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">競爭</div>
+        <span class="ticker">MediaTek</span>
+        <span class="ticker">Broadcom</span>
+        <span class="ticker">ASIC</span>
+        <span class="ticker">客製 XPU</span>
+      </div>
+    <div class="note">主持人承認聯發科相關晶片進度可能較市場想像慢。</div>
+    <div class="note">公司常低報、再用實績超標管理預期；不能把口語示例寫成正式訂單數。</div>
+    <div class="risk"><b>風險：</b>被承認為對手只證明競爭存在，產品時程、客戶、良率、量產與內容價值仍需一關一關驗證。</div>
+    <div class="action"><b>應對：</b>建立具名客戶、設計案、tap-out、量產、營收與毛利六道證據門；沒有正式證據前，只保留競爭地位升級。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">Snowflake／Model Router</div>
+    <h2>企業 AI 的毛利不只來自模型：誰掌握可信任資料與預設 router，誰就能把成本、體驗與黏著度一起最佳化</h2>
+    <div class="core"><span class="tag">重點</span>主持人從 Snowflake 成績與展望上調，看到企業願意把資料治理與模型選擇交給平台。當客戶接受預設 router，平台能依任務選擇成本與能力最合適的模型；若客戶指定昂貴模型，毛利空間反而較窄。</div>
+
+    <div class="mechanism"><span class="tag">平台飛輪</span><ol><li>資料：企業願意把治理後的資料交給可信任平台。</li><li>路由：依任務選模型，避免所有問題都做昂貴深度推理。</li><li>商業：平台用效率換毛利，客戶用信任換省時與穩定。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">價值層</div>
+        <span class="ticker">Snowflake</span>
+        <span class="ticker">資料治理</span>
+        <span class="ticker">Model Router</span>
+        <span class="ticker">多模型</span>
+        <span class="ticker">企業信任</span>
+      </div>
+    <div class="note">主持人的請求售價與模型成本是示例，不是 Snowflake 公布的單位經濟。</div>
+    <div class="note">本集看多 Snowflake，但只確認軟體類是小比重部位，不能加成 SNOW 持股。</div>
+    <div class="risk"><b>風險：</b>客戶若自行指定模型、資料治理失誤、平台選錯模型或競爭者提供更低成本，router 的毛利與信任都可能被削弱。</div>
+    <div class="action"><b>應對：</b>追蹤預設路由採用率、AI 工作負載、治理能力、模型成本與產品毛利；不要只用接了多少模型判斷平台價值。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">FDE／軟體護城河</div>
+    <h2>Forward Deployed Engineer 是 PM、工程與業務的合體：AI 讓人人都有工具，真正稀缺的是把需求整合成可落地方案</h2>
+    <div class="core"><span class="tag">重點</span>不同企業的資料、流程與痛點都不一樣。FDE 進到客戶現場理解工作，再把需求包成能實際解決問題的方案；主持人認為 Snowflake 正跟進 Palantir 等公司的方向，這類通才需求會持續放大。</div>
+
+    <div class="mechanism"><span class="tag">FDE 三合一</span><ol><li>PM：理解客戶真正要解的問題。</li><li>工程：把資料、模型與流程接起來。</li><li>Sales：證明方案能創造可量化價值。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">公司與能力</div>
+        <span class="ticker">Snowflake</span>
+        <span class="ticker">Palantir</span>
+        <span class="ticker">FDE</span>
+        <span class="ticker">流程整合</span>
+        <span class="ticker">通才</span>
+      </div>
+    <div class="note">AI 讓各專業做到基本分，最後差異轉到整合、溝通與交付品質。</div>
+    <div class="note">軟體/SaaS 延續看多，但不是所有公司都具備可信任資料與 FDE 能力。</div>
+    <div class="risk"><b>風險：</b>FDE 是高接觸、高人力模式；若專案難複製、導入週期過長或人才供給不足，營收成長未必能同步轉成高毛利。</div>
+    <div class="action"><b>應對：</b>比較軟體公司時新增部署人效、專案複製率、導入時間與擴張收入，不只看模型功能或 demo。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">AI 內容／遊戲 IP</div>
+    <h2>Content inflation 不會讓好內容歸零：工具壓低成本後，信用、品味、作品靈魂與能否累積長尾 IP 反而更值錢</h2>
+    <div class="core"><span class="tag">重點</span>主持人不接受 AI 讓所有內容變便宜的線性推論。粗製濫造會快速消耗信任，但真正打磨的作品更像燈塔；小團隊可租用 AI 與開發工具、交給 Steam 全球分發，再由 evergreen portfolio 分散單一作品失敗。</div>
+    <blockquote>好的內容會變得更加的值錢</blockquote>
+    <div class="mechanism"><span class="tag">遊戲投資堆疊</span><ol><li>創作：小團隊把 AI 與引擎當可租用工具。</li><li>分發：Steam 把產品送到全球市場。</li><li>資本：多案 portfolio 與 IP catalog 累積長尾。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集案例</div>
+        <span class="ticker">肖楠資本 ⭐</span>
+        <span class="ticker">Rubinite</span>
+        <span class="ticker">台灣獨立遊戲</span>
+        <span class="ticker">Steam</span>
+        <span class="ticker">長尾 IP</span>
+      </div>
+    <div class="note">肖楠資本是主持人的私募／創投曝險，不是公開市場股票。</div>
+    <div class="note">未公開遊戲成功與 portfolio 表現為主持人自述，不可寫成已審計報酬。</div>
+    <div class="risk"><b>風險：</b>遊戲仍是 hit-driven 產業，會面臨開發延期、品質、平台抽成、行銷與單一作品失敗；低成本不等於低風險。</div>
+    <div class="action"><b>應對：</b>追蹤作品評價、銷量、願望清單、長尾收入、IP 延伸與整體 portfolio 命中率，不把單次社群熱度當永久價值。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">TSMC／SoIC／次題材</div>
+    <h2>Broadcom 前段仍以台積電為核心，SoIC 方向 on track 但缺乏新驚喜；Tesla 不含稀土馬達只列外圍觀察</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為 Broadcom 後段雖規劃部分自有製造與封裝，前段晶圓製造仍會持續下單台積電。SemiCon 的 SoIC 與整合方向只是已知趨勢重申，部分時程甚至較慢；Cybercab 馬達則有趣，但現階段仍是次題材。</div>
+
+    <div class="mechanism"><span class="tag">三層證據</span><ol><li>看多：台積電前段仍是 Broadcom 主要核心。</li><li>觀望：SoIC 趨勢確定，短期缺新訂單與催化。</li><li>次題材：Tesla 馬達不含稀土，供應鏈尚未具名。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">立場</div>
+        <span class="ticker">台積電升看多</span>
+        <span class="ticker">SoIC 觀望</span>
+        <span class="ticker">Tesla 觀望</span>
+        <span class="ticker">不點名受惠股</span>
+      </div>
+    <div class="note">後段自製不等於前段晶圓訂單消失；兩段供應鏈要分開。</div>
+    <div class="note">on track 與展場展示都不能直接換算營收，Tesla 工程敘事也不能直接換算具名訂單。</div>
+    <div class="risk"><b>風險：</b>Broadcom 供應分工、SoIC 量產節點與 Cybercab 馬達規格都缺乏完整數字；任何延後都可能讓市場先修正預期。</div>
+    <div class="action"><b>應對：</b>分別建立前段晶圓、後段封裝、SoIC 量產與 Tesla 馬達材料四張追蹤表；只有正式客戶、規格與收入證據才升級。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">信用／注意力／全職交易</div>
+    <h2>信用與注意力都是不可逆資產；全職交易也不是逃離工作，而是要先寫好資產與職涯的停損線</h2>
+    <div class="core"><span class="tag">重點</span>內容爆量時，一次粗製濫造就可能永久失去信任；生活裡，每個不必要互動也在消耗注意力。轉全職交易同樣要去除浪漫想像：它是一門更自主、也可能更耗時間的工作，必須預先設定回去上班的底線。</div>
+    <blockquote>注意力真的是一個超級重要的資產</blockquote>
+    <div class="mechanism"><span class="tag">三個停損</span><ol><li>信用：不為快錢砸掉長期名聲。</li><li>注意力：不回應每個低價值訊息。</li><li>職涯：資產跌到預設位置就重回工作。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">心法</div>
+        <span class="ticker">信用</span>
+        <span class="ticker">注意力</span>
+        <span class="ticker">物慾</span>
+        <span class="ticker">全職交易</span>
+        <span class="ticker">職涯停損</span>
+      </div>
+    <div class="note">財富自由先看物慾與生活成本，不只看帳面資產。</div>
+    <div class="note">可嘗試全職不等於保證成功；先保住能重新開始的本金與職涯選項。</div>
+    <div class="risk"><b>風險：</b>把自由誤認為沒有工作，會低估波動、研究時間與心理壓力；把每次外界反應都當義務，則會耗盡判斷品質。</div>
+    <div class="action"><b>應對：</b>替名聲、注意力與職涯各寫一條不能跨過的底線；全職前先壓測生活費、最大回撤與回職場條件。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">本人揭露</div>
+    <h2>本集只有軟體類小比重與肖楠資本可確認實際曝險；其他公司都是觀點或次題材</h2>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><span class="own">⭐</span>軟體類部位</td>
+        <td>portfolio 中有小比重曝險，持續關注</td>
+        <td>只能確認軟體類別不是大宗；不能推定持有 Snowflake、Salesforce、Palantir 或 Perplexity。</td>
+      </tr>
+      <tr>
+        <td><span class="own">⭐</span>肖楠資本／遊戲內容投資</td>
+        <td>願意持續增資、長期陪跑，不對外募資</td>
+        <td>屬主持人的私人創投曝險；portfolio 表現與未公開遊戲成績為主持人自述。</td>
+      </tr>
+      <tr>
+        <td>整體投資組合／動能部位</td>
+        <td>核心持有，動能縮小，整體槓桿再降</td>
+        <td>是整體風控與策略狀態，沒有完整持股、資產規模、槓桿率或成交明細。</td>
+      </tr>
+      <tr>
+        <td>Broadcom／MediaTek／NVIDIA／TSMC／Snowflake</td>
+        <td>財報、競爭、供應鏈與商業模式判讀</td>
+        <td>本集沒有這些具名上市公司的買進、持有、成本、數量或成交證據。</td>
+      </tr>
+      <tr>
+        <td>Tesla／Cybercab</td>
+        <td>不含稀土馬達列為次題材觀察</td>
+        <td>主持人明示只是次題材，未揭露 Tesla 股票或具名供應鏈部位。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">⭐ 只代表逐字稿有主持人實際曝險證據；看多、財報佳、競爭者認證、供應商融資與次題材一律不加星。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">行動清單</div>
+    <h2>EP694 可直接執行的研究與風控框架</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在做</h4>
+        <ul><li>把核心持有與動能短打分帳，降低短打尺寸並保留原策略觀察。</li><li>Broadcom 拆成 XPU、fabric、融資平台、客戶集中與 EPS 五欄。</li><li>Snowflake 追蹤資料治理、預設路由、AI 工作負載與 FDE 部署人效。</li><li>把肖楠資本的單一遊戲敘事改成 portfolio、IP catalog 與長尾收入。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>加權指數能否由領頭族群帶動、有效突破前高。</li><li>MediaTek 客製晶片的客戶、tap-out、量產、收入與時程。</li><li>Frontier labs 的融資主體、付款承諾、設備殘值與利用率。</li><li>台積電前段訂單、SoIC 量產節點與 Cybercab 馬達供應商。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>用 Broadcom 當日股價反推財報或指引不好。</li><li>把 Hock Tan 提到 MediaTek 寫成聯發科已拿到新訂單。</li><li>把軟體類小比重曝險拆成 Snowflake 等具名持股。</li><li>把 Tesla 不含稀土馬達直接寫成任何台美股供應商受惠。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
