@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>AI Agent 臨時專題報告｜Grok Bot、pstack 與可驗證工程</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: #fafaf7; color: #292929; font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif; line-height: 1.8; padding: 32px 16px 80px; overflow-wrap: anywhere; }
+    .wrap { max-width: 930px; margin: 0 auto; }
+    .block { background: #fff; border: 1px solid #ececec; border-radius: 12px; padding: 29px; margin-bottom: 24px; box-shadow: 0 2px 12px rgba(31,41,55,.025); }
+    h1 { font-size: 28px; line-height: 1.42; letter-spacing: -.02em; }
+    h2 { font-size: 20px; margin-bottom: 15px; line-height: 1.5; }
+    h3 { font-size: 16px; margin: 18px 0 8px; }
+    h2 .en { font-size: 11px; color: #999; font-weight: 500; letter-spacing: 1.6px; margin-left: 8px; }
+    p { margin-bottom: 12px; font-size: 14.5px; }
+    p:last-child { margin-bottom: 0; }
+    .sub { font-size: 13.5px; color: #858585; margin-top: 7px; }
+    .hl { color: #c2410c; font-weight: 800; }
+    .lead { font-size: 16px; font-weight: 650; padding: 15px 17px; margin-top: 18px; background: #fff3ea; border-left: 4px solid #c2410c; border-radius: 0 8px 8px 0; }
+    .kpi { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 9px; margin-top: 20px; }
+    .k { background: #f7f7f4; border: 1px solid #efefea; border-radius: 9px; padding: 12px 8px; text-align: center; }
+    .k .num { font-size: 21px; font-weight: 800; color: #c2410c; }
+    .k .lab { font-size: 11.5px; color: #747474; line-height: 1.45; }
+    .toc { background: #1f2937; border-radius: 10px; padding: 14px 18px; margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .toc a { color: #fff; background: rgba(255,255,255,.12); border-radius: 6px; padding: 4px 11px; font-size: 13px; text-decoration: none; }
+    .toc a:hover { background: rgba(255,255,255,.24); }
+    .callout { background: #f7f7f4; border-radius: 9px; padding: 15px 18px; margin: 13px 0; font-size: 14px; }
+    .warn { background: #fdf6e3; }
+    .good { background: #edf6ed; }
+    .grid2, .grid3 { display: grid; gap: 11px; margin: 13px 0; }
+    .grid2 { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .grid3 { grid-template-columns: repeat(3,minmax(0,1fr)); }
+    .box { background: #f7f7f4; border: 1px solid #efefea; border-radius: 9px; padding: 15px; }
+    .box b { display: block; margin-bottom: 5px; font-size: 14px; }
+    .box span { color: #666; font-size: 13px; }
+    ol, ul { padding-left: 21px; }
+    li { margin-bottom: 7px; font-size: 14px; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 3px; font-size: 13.5px; }
+    th { text-align: left; color: #767676; font-size: 12px; letter-spacing: .04em; font-weight: 650; padding: 8px 9px; border-bottom: 1px solid #e4e4e4; }
+    td { padding: 9px; border-bottom: 1px solid #f0f0ec; vertical-align: top; }
+    .time { color: #c2410c; font-weight: 800; white-space: nowrap; }
+    .badge { display: inline-block; border-radius: 5px; padding: 1px 8px; font-size: 12px; font-weight: 750; white-space: nowrap; }
+    .direct { background: #dcebdc; color: #356235; }
+    .self { background: #f2e7c8; color: #745b25; }
+    .missing { background: #eadada; color: #7a3a3a; }
+    .inference { background: #dfe8f1; color: #3d5f7d; }
+    .flow { display: flex; align-items: stretch; gap: 8px; margin: 15px 0; }
+    .step { flex: 1; background: #f7f7f4; border-radius: 8px; padding: 12px; font-size: 13px; text-align: center; }
+    .arrow { align-self: center; color: #aaa; font-weight: 800; }
+    .layer { border-left: 4px solid #b8c4d1; padding: 11px 15px; margin: 9px 0; background: #f7f9fb; border-radius: 0 8px 8px 0; }
+    .layer strong { color: #315d8a; }
+    .sources a { color: #315d8a; font-weight: 700; }
+    .sources li { margin-bottom: 10px; }
+    code { background: #f1f1ed; border-radius: 4px; padding: 1px 5px; font-family: Consolas,monospace; font-size: .92em; }
+    .foot { color: #929292; font-size: 12px; text-align: center; margin-top: 30px; }
+    .backtop { position: fixed; right: 18px; bottom: 18px; background: #1f2937; color: #fff; border-radius: 20px; padding: 8px 15px; font-size: 13px; text-decoration: none; opacity: .9; }
+    @media (max-width: 760px) { body { padding: 18px 10px 72px; } .block { padding: 21px 17px; margin-bottom: 16px; } h1 { font-size: 23px; } h2 { font-size: 18px; } h2 .en { display: block; margin-left: 0; } .kpi { grid-template-columns: repeat(2,1fr); } .grid2,.grid3 { grid-template-columns: 1fr; } .flow { flex-direction: column; } .arrow { transform: rotate(90deg); } table { display: block; overflow-x: auto; } }
+  </style>
+</head>
+<body>
+<div id="top"></div>
+<main class="wrap">
+  <header class="block">
+    <h1>AI Agent 臨時專題：從「我不敢放手」到可驗證、自主運作的工程系統</h1>
+    <div class="sub">Lauren Tan × Colin Matthews｜How Cursor Turned AI Agents Into Better Engineers｜工作坊 2026-08-12｜報告整理 2026-09-06</div>
+    <div class="lead">這支影片真正傳達的不是「開越多 Agent 越厲害」，而是：<span class="hl">先把驗證、知識、架構與 CI 做成 Agent 能自己使用的系統，信任才可能擴張。</span></div>
+    <div class="kpi">
+      <div class="k"><div class="num">55:03</div><div class="lab">原音長度</div></div>
+      <div class="k"><div class="num">1,606</div><div class="lab">X 英文字幕段落</div></div>
+      <div class="k"><div class="num">5</div><div class="lab">信任成熟階段</div></div>
+      <div class="k"><div class="num">4</div><div class="lab">病毒文案主張逐項查核</div></div>
+      <div class="k"><div class="num">2</div><div class="lab">獨立逐字來源交叉核對</div></div>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <a href="#verdict">核心結論</a><a href="#provenance">來源鏈</a><a href="#claims">文案查核</a><a href="#timeline">完整脈絡</a><a href="#trust">信任曲線</a><a href="#verify">驗證系統</a><a href="#skills">Skills／Evals</a><a href="#scale">擴張</a><a href="#architecture">Dune／CI</a><a href="#product">Grok Bot</a><a href="#numbers">數字／成本</a><a href="#risks">風險</a><a href="#apply">落地</a><a href="#sources">來源</a>
+  </nav>
+
+  <section class="block" id="verdict">
+    <h2>核心結論<span class="en">EXECUTIVE VERDICT</span></h2>
+    <p>Lauren 把 Agent 當成「程式能力強、但剛到職、沒有商業脈絡、而且會自信亂猜的新工程師」。如果人必須看它每一步、替它開程式、貼錯誤、判斷有沒有修好，那只是把寫程式的瓶頸換成驗收瓶頸，無法真正並行。</p>
+    <p>她的解法有四層：第一，讓 Agent 能操作真實產品並驗證自己的結果；第二，把產品地圖與工程經驗寫成 skills；第三，用 evals 測試 skills 是否真的有效；第四，把不能違反的規則推進架構、型別、lint 與 CI。當這些層次長期穩定後，才把工作送上雲端、增加並行，甚至讓部分 PR 自動合併。</p>
+    <div class="callout warn"><b>最容易看錯的地方：</b>爆紅 X 文案把影片包成「20 多個 Grok Bot、Chief of Staff、PM Agent」的多 Agent 教學；但這 55 分鐘的主軸其實是驗證工程、pstack、eval、重構與 Dune。把文案當逐字內容，會整個抓錯重點。</div>
+  </section>
+
+  <section class="block" id="provenance">
+    <h2>來源鏈與時間軸校正<span class="en">PROVENANCE</span></h2>
+    <table>
+      <thead><tr><th>日期</th><th>事件</th><th>意義</th></tr></thead>
+      <tbody>
+        <tr><td class="time">2026-08-11</td><td>SpaceXAI 正式推出 Grok Bot beta。</td><td>與影片中「昨天剛推出」互相吻合。</td></tr>
+        <tr><td class="time">2026-08-12</td><td>Maven 活動頁標示本工作坊於此日舉行；同日 Grok 4.6 公開。</td><td>影片中「今天宣布 4.6」再次鎖定真正錄製日。</td></tr>
+        <tr><td class="time">2026-08-14</td><td>Cursor 公告正式被 SpaceX 收購。</td><td>錄影當下 Maven 標示 Lauren 為 Cursor MTS；後來稱 SpaceXAI 工程師有公司時序背景。</td></tr>
+        <tr><td class="time">2026-09-03</td><td>Codez 將 55 分鐘影片重新上傳到 X，加入 99%／1% 與 20+ Bots 文案。</td><td>貼文時間不是錄製時間，文案也不是逐字稿。</td></tr>
+        <tr><td class="time">2026-09-04</td><td>Hux 再轉貼並摘要。</td><td>這是使用者提供連結的直接入口。</td></tr>
+      </tbody>
+    </table>
+    <div class="callout"><b>原料驗證：</b>已從 X 的 HLS 串流分別取得原始音軌與 720p 影像。音軌為 AAC、44.1 kHz、雙聲道、3,303.828 秒、53,572,231 bytes，SHA-256：<code>A487EDF57CACC03670F659A98E4F9BC598DE096CBE8C8C16E8F38914D5AF58C2</code>；影像為 H.264、1,236×720、3,303.767 秒、132,069,655 bytes，SHA-256：<code>C2C71DE2C30654AD6D01B5FBADB743AD10B16D1C4DA14CA3C750F0CE766888AC</code>。X 字幕與本機 Whisper medium 英文轉錄作雙源比對，另以每 120 秒取樣的 28 個畫面核對投影片。</div>
+  </section>
+
+  <section class="block" id="claims">
+    <h2>爆紅文案逐項查核<span class="en">CLAIM AUDIT</span></h2>
+    <table>
+      <thead><tr><th>轉貼主張</th><th>在本片的狀態</th><th>嚴格結論</th></tr></thead>
+      <tbody>
+        <tr><td>大多數人只用了 Grok Bot 極少能力</td><td><span class="badge missing">沒有說</span></td><td>「99%／1%」只出現在 Codez 貼文描述，不能包成 Lauren 的影片原話。</td></tr>
+        <tr><td>一人運作 20 多個 Grok Bot</td><td><span class="badge missing">沒有說</span></td><td>這支工作坊沒有給出 Grok Bot roster 數量。</td></tr>
+        <tr><td>Chief of Staff、PM 與 20 多個 worker</td><td><span class="badge missing">沒有說</span></td><td>本片沒有介紹這套角色圖；可能混入 Lauren 另一場團隊工作流訪談。</td></tr>
+        <tr><td>她大量使用並行 Agent</td><td><span class="badge direct">方向支持</span></td><td>她明確談本機到 cloud agents、sub-agents、eval 與自動合併，但核心前提是信任與驗證。</td></tr>
+        <tr><td>單月約 1,000 PR</td><td><span class="badge self">本人自述</span></td><td>片中可核對到；它是經驗證言，不是經第三方審計的 benchmark。</td></tr>
+      </tbody>
+    </table>
+    <p class="sub">「本片沒有說」不代表該主張在其他影片一定是假的，只代表不能拿這支片當證據。</p>
+  </section>
+
+  <section class="block" id="timeline">
+    <h2>55 分鐘完整脈絡<span class="en">CHAPTER MAP</span></h2>
+    <table>
+      <thead><tr><th>時間</th><th>段落</th><th>重點</th></tr></thead>
+      <tbody>
+        <tr><td class="time">00:00–03:42</td><td>AI 的位置與信任問題</td><td>AI 應是結對夥伴；如果省下寫碼時間卻增加審查與重工，不算真正效率。</td></tr>
+        <tr><td class="time">03:42–06:05</td><td>信任曲線</td><td>從逐步微管理走到部分 PR 自動合併；量能來自逐步建立的信任，不是一次放權。</td></tr>
+        <tr><td class="time">06:06–13:30</td><td>Verification 與 Feature Map</td><td>Agent 要能自己跑真實產品、抓效能證據、理解 UI 功能與程式位置。</td></tr>
+        <tr><td class="time">13:41–17:06</td><td>pstack 如何長出來</td><td>觀察固定失敗模式，逐個做成 skill，讓 Agent 少猜、先讀碼、依證據工作。</td></tr>
+        <tr><td class="time">17:07–23:23</td><td>Evals 與技能維護</td><td>用 rubric、多個子 Agent、不同模型 judge 與循環改進，測 skill 是否真的有效。</td></tr>
+        <tr><td class="time">23:24–29:28</td><td>本機到 cloud agents</td><td>先本機觀察；驗證成熟後再移到雲端。Benny 示範自動重現錯誤並比較版本。</td></tr>
+        <tr><td class="time">29:29–38:00</td><td>重構與 Greenfield 風險</td><td>成熟大型 repo 常已有護欄；全新 vibe-coded 專案反而可能快速失控。</td></tr>
+        <tr><td class="time">38:01–47:07</td><td>Dune、PR 與 CI</td><td>以共置功能、依賴邊界、靜態分析與硬性 CI，讓最短路徑就是正確路徑。</td></tr>
+        <tr><td class="time">47:08–52:23</td><td>Token 與 ROI</td><td>前期重構、eval 與環境建置很貴；是否值得要和人力、速度與長期維護一起算。</td></tr>
+        <tr><td class="time">52:24–55:03</td><td>Grok Bot 與非技術團隊</td><td>用類 iMessage 的介面讓 PM、設計、GTM 更容易使用 Agent，甚至在硬護欄下貢獻程式。</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="block" id="trust">
+    <h2>信任曲線：Autonomy 是驗證能力的輸出<span class="en">TRUST CURVE</span></h2>
+    <p>Lauren 的管理比喻很精準：不信任部屬時，主管會盯每一步；不信任 Agent 時，工程師也會盯每個 tool call。這時開更多 Agent，只是讓主管同時被更多人打斷。</p>
+    <div class="flow">
+      <div class="step"><b>1 微管理</b><br>逐步提示<br>人工驗每一步</div><div class="arrow">→</div>
+      <div class="step"><b>2 自我驗證</b><br>能跑產品<br>留下真實證據</div><div class="arrow">→</div>
+      <div class="step"><b>3 知識固化</b><br>Skills<br>Feature Map</div><div class="arrow">→</div>
+      <div class="step"><b>4 硬護欄</b><br>Type／Lint<br>CI／Architecture</div><div class="arrow">→</div>
+      <div class="step"><b>5 擴張</b><br>Cloud／Parallel<br>有限 Auto-merge</div>
+    </div>
+    <div class="callout good"><b>真正的轉折：</b>人的工作從「替每個 Agent 驗收」變成「設計環境、定義規則、抽查證據與決定優先順序」，像主廚設計廚房，而不是親自煮每一道菜。</div>
+  </section>
+
+  <section class="block" id="verify">
+    <h2>Verification：把「應該好了」改成可重現證據<span class="en">CLOSED LOOP</span></h2>
+    <div class="grid2">
+      <div class="box"><b>弱驗證</b><span>讀 diff、再問模型、跑一次編譯、看到綠燈就宣稱完成。這些只能證明局部條件。</span></div>
+      <div class="box"><b>強驗證</b><span>在真正執行環境重現問題，以相同路徑驗候選版本，保存畫面、log、trace、資料與版本。</span></div>
+    </div>
+    <p>Control Glass 讓 Agent 能透過 Chrome DevTools Protocol 或平台工具控制 Electron、Web、iOS 模擬器；Feature Map 再補上產品語意，讓它知道某個使用者名詞對應哪個功能、路徑與程式範圍。</p>
+    <div class="callout"><b>驗證閉環：</b>接收症狀 → 重現 → 收集證據 → 定位 → 修改 → 用同一套條件重跑 → 比對前後 → 交付可查證結果。少任何一段，都可能只是「看起來修好」。</div>
+  </section>
+
+  <section class="block" id="skills">
+    <h2>Skills 與 Evals：把人的品味變成可維護的操作系統<span class="en">KNOWLEDGE SYSTEM</span></h2>
+    <p>Skill 不只是提示詞收藏；它應把任務的入口、工具、證據、禁止事項與完成條件寫成 Agent 能執行的流程。Lauren 說 pstack 是從實際觀察失敗逐步累積：Agent 沒讀相關程式就下結論，就新增「先查碼、不要猜」的流程；驗證技能不知道 UI，就新增 Feature Map。</p>
+    <div class="grid3">
+      <div class="box"><b>觀察</b><span>閱讀 tool calls、推理與輸出，找出反覆失敗模式。</span></div>
+      <div class="box"><b>編碼</b><span>把真正會改變未來決策的教訓寫進 skill 或結構。</span></div>
+      <div class="box"><b>測試</b><span>用 eval、不同模型 judge 與真實任務檢查改動是否有效。</span></div>
+    </div>
+    <p>Eval 的用途像「Agent 行為的單元測試」。她讓協調 Agent 建 rubric、多個子 Agent 在不明示考題的環境執行，再用不同模型交叉評分，並循環改進。這比單純問同一模型「你有沒有照做」更可靠，但仍不能取代真實產品測試。</p>
+  </section>
+
+  <section class="block" id="scale">
+    <h2>從本機到雲端：先觀察，才委派；先隔離，才並行<span class="en">SCALING</span></h2>
+    <ol>
+      <li><b>挑一個有明確成功條件的小任務。</b>本機看清楚 Agent 怎麼失敗。</li>
+      <li><b>補驗證工具與產品地圖。</b>讓 Agent 能自己重現和證明。</li>
+      <li><b>把穩定流程移到雲端。</b>環境、依賴、資料與權限都需可重建。</li>
+      <li><b>只並行互不踩檔案與狀態的工作。</b>每個工作者要有隔離的 worktree 或 VM。</li>
+      <li><b>最後再決定自動合併。</b>低風險、可回復、硬性門檻完整的類型先試。</li>
+    </ol>
+    <h3>Benny 為什麼是好案例</h3>
+    <p>Benny 不是看到 Slack 訊息就亂改碼。它先在雲端環境操作 Cursor、重現問題、比較舊版與 main，然後回報「main 已修好，只差發布」。這消除了工程師最耗時間的前置鑑別，也把證據留給人抽查。</p>
+  </section>
+
+  <section class="block" id="architecture">
+    <h2>Dune 與 CI：把最佳實務從建議升級成物理邊界<span class="en">AGENT-FRIENDLY ARCHITECTURE</span></h2>
+    <p>Lauren 認為 Greenfield 專案同時是最大機會和最大風險。全新專案缺乏成熟框架、依賴邊界與測試時，Agent 會選眼前最短的捷徑；每次都能完成小任務，整體架構卻會快速腐化。Dune 的目標，是讓正確做法也成為最短路徑。</p>
+    <div class="layer"><strong>第 1 層｜架構：</strong>功能程式共置、清楚 entry point、main／renderer 邊界、模組依賴方向。</div>
+    <div class="layer"><strong>第 2 層｜機械檢查：</strong>型別、compiler diagnostics、static analysis、lint、dependency graph、CI。</div>
+    <div class="layer"><strong>第 3 層｜自動審查：</strong>BugBot 依規則發現風險；比純文字規則強，但仍可能漏掉。</div>
+    <div class="layer"><strong>第 4 層｜軟性知識：</strong>AGENTS.md、skills、style guide；負責解釋與引導，不能單獨當唯一護欄。</div>
+    <div class="callout warn"><b>別照抄局部禁令：</b>她在 Grok Bot 專案禁用 <code>useEffect</code> 與多數 code comments，是基於該架構觀察到的失敗模式；其他專案應先找自己的問題，再決定要不要設相同規則。</div>
+  </section>
+
+  <section class="block" id="product">
+    <h2>Grok Bot 在整套系統裡扮演什麼角色<span class="en">PRODUCT LAYER</span></h2>
+    <p>影片最後才集中談 Grok Bot。它把命名 Agent、工作委派與協作包進接近訊息 App 的介面，讓 PM、設計與 GTM 不必先學 IDE，也能交辦知識工作或把問題送進工程流程。官方文件則把每個 Bot 定義為具持久狀態、可使用雲端電腦的命名隊友，能與其他 Bots 交接。</p>
+    <div class="grid2">
+      <div class="box"><b>影片中的價值</b><span>降低非工程角色使用 Agent 的介面門檻；在硬護欄下，PM／設計甚至能送出可靠的小修正。</span></div>
+      <div class="box"><b>官方安全邊界</b><span>同一帳號的 Bots 共用一台持久雲端電腦、檔案與登入狀態；不同 Bot 名稱不是不同安全隔離區。</span></div>
+    </div>
+    <p>因此「Chief of Staff」比較像邏輯角色，不代表額外的 root 安全權限。設計團隊時要同時標示任務擁有者、實際執行環境、可見檔案與憑證邊界。</p>
+  </section>
+
+  <section class="block" id="numbers">
+    <h2>成果數字與經濟性：看方向，不把自述當 benchmark<span class="en">METRICS &amp; ECONOMICS</span></h2>
+    <table>
+      <thead><tr><th>片中數字</th><th>能支持</th><th>不能支持</th></tr></thead>
+      <tbody>
+        <tr><td>投影片：5 個月超過 3,000 PR</td><td>反映她描述的整段高頻交付歷程。</td><td>仍是講者投影片自述，未經 repo 級第三方稽核。</td></tr>
+        <tr><td>上月約 1,000 PR；本月 12 日前近 800</td><td>她在自己的環境達到極高交付頻率。</td><td>不等於每個 PR 的複雜度、缺陷率與商業價值相同。</td></tr>
+        <tr><td>早上看到約 20 個 PR 已自動合併</td><td>部分工作類型已進入高信任階段。</td><td>不證明任何 repo 開 auto-merge 都安全。</td></tr>
+        <tr><td>約 600 PR 重構 Grok Bot</td><td>她為 Agent-friendly 架構投入大量前置成本。</td><td>不證明全面重寫優於所有漸進方案。</td></tr>
+        <tr><td>PR 約 50～1,000 行</td><td>工作單位有意切小，但沒有絕對硬上限。</td><td>這不是數學平均，也不能拿來估算團隊產值。</td></tr>
+      </tbody>
+    </table>
+    <p>她明說自己在 AI 團隊裡有大量 token 可用；一般團隊應比較的是完整 ROI：模型與雲端成本＋建驗證系統＋維護 skill／eval＋失敗風險，對上節省的人力、等待時間、錯誤率與機會成本。</p>
+    <div class="callout"><b>目前官方基準：</b>Grok 4.6 API 基礎價格為每百萬 input token 2 美元、cached input 0.5 美元、output 6 美元；高於 200k prompt 的費率另計。影片裡「與 4.5 同價」帶有「希望沒有講錯」的保留，應以當期官方價格頁為準。</div>
+  </section>
+
+  <section class="block" id="risks">
+    <h2>六個不能被熱度掩蓋的風險<span class="en">RISK CHECK</span></h2>
+    <ol>
+      <li><b>產出量偏誤：</b>PR 數量容易量化，缺陷率、維護性與商業影響較難量化。</li>
+      <li><b>錯誤放大：</b>沒有隔離與硬門檻時，多 Agent 會更快地把同一錯誤擴散到多處。</li>
+      <li><b>Eval 過擬合：</b>反覆爬分可能只學會通過既有 rubric；仍需新案例與真實產品驗證。</li>
+      <li><b>Judge 偏差：</b>換模型能降低但不能消除盲點；高風險結果仍需外部證據或人工責任人。</li>
+      <li><b>架構教條化：</b>把一個 repo 的禁令照搬到所有專案，會把情境性經驗誤寫成普遍真理。</li>
+      <li><b>權限與秘密：</b>共享雲端電腦會共享檔案與登入；角色分工不等於安全隔離，必須另做最小權限。</li>
+    </ol>
+  </section>
+
+  <section class="block" id="apply">
+    <h2>套回你的工作流：這次專題本身就用同一套原則<span class="en">PRACTICAL APPLICATION</span></h2>
+    <table>
+      <thead><tr><th>門</th><th>本次實作</th><th>完成證據</th></tr></thead>
+      <tbody>
+        <tr><td>來源門</td><td>從 X Blob 追到 HLS 原音與影像，並回溯 Maven 原始工作坊。</td><td>音軌／影像時長、codec、bytes、SHA-256 與活動頁時間線。</td></tr>
+        <tr><td>內容門</td><td>X 字幕與本機 Whisper medium 雙源核對；28 個等距影像畫面核對投影片；外部產品資訊限官方頁。</td><td>逐字檔、時間碼、畫面聯絡表、主張類型與來源連結。</td></tr>
+        <tr><td>事實門</td><td>把本人自述、影片直接支持、外部官方事實與推論分開。</td><td>Claim Audit 表，不把 20+ Bots 文案冒充影片原話。</td></tr>
+        <tr><td>成品門</td><td>卡片與長報告獨立產出，不寫入 Podcast EP／滾動月報統計。</td><td>HTML 結構、桌機／手機渲染與連結驗證。</td></tr>
+        <tr><td>發布門</td><td>歸檔、Git 推送、Pages 實際內容與 hash 全部一致後才宣告完成。</td><td>commit、HTTP 200、遠端 bytes／SHA 與首頁入口。</td></tr>
+      </tbody>
+    </table>
+    <div class="callout good"><b>你真正該帶走的操作句：</b>不要只交代「做什麼」，還要一起給「怎樣才算完成」；不要只收「完成了」，要收可以重查的證據。</div>
+  </section>
+
+  <section class="block sources" id="sources">
+    <h2>來源與證據分級<span class="en">SOURCES</span></h2>
+    <ul>
+      <li><a href="https://maven.com/p/e23d9c/how-cursor-turned-ai-agents-into-better-engineers">Maven｜How Cursor Turned AI Agents Into Better Engineers</a> — 原始活動頁、日期、講者與官方章節。</li>
+      <li><a href="https://x.com/0xCodez/status/2095185610390573536">Codez 的 X 影片重傳</a> — 本報告音軌與平台字幕來源；貼文文案另行查核。</li>
+      <li><a href="https://x.com/huxlab/status/2095867276042154469/video/1">Hux 轉貼</a> — 使用者提供的直接入口。</li>
+      <li><a href="https://x.ai/news/introducing-grok-bot">SpaceXAI｜Introducing Grok Bot</a>、<a href="https://docs.x.ai/grok-bot/overview">Grok Bot 官方文件</a> — 上線日期、持久 Agent、雲端電腦、協作與共享環境。</li>
+      <li><a href="https://github.com/cursor/plugins/tree/main/pstack">Cursor 官方 plugins repo｜pstack</a>、<a href="https://github.com/cursor/plugins/blob/main/pstack/docs/guide/01-setup.md">pstack setup guide</a> — 作者、驗證技能、模型角色與公開操作方式。</li>
+      <li><a href="https://x.ai/news/grok-4-6">SpaceXAI｜Introducing Grok 4.6</a> — 發布日期、能力、基礎價格與官方 benchmark 說明。</li>
+      <li><a href="https://cursor.com/blog/joining-spacex">Cursor｜Cursor is now a part of SpaceX</a> — 2026-08-14 收購完成公告，用於校正講者身分時序。</li>
+    </ul>
+    <p class="sub">方法：影片內容以原音、X 字幕、本機轉錄與投影片畫面為主；產品現況只採官方文件。PR 數量、auto-merge 與重構規模標為講者自述，未冒充第三方審計結果。</p>
+  </section>
+
+  <div class="foot">AI Agent 臨時專題｜2026-09-06｜獨立於股癌 Podcast EP 與滾動月報統計｜僅供研究與工作流設計參考</div>
+</main>
+<a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
