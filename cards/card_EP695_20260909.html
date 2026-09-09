@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta name="stockcancer-font-scale" content="1.5">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP695 筆記｜2026-09-09</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 22.5px; /* stockcancer-font-base:15px */ padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 18px; /* stockcancer-font-base:12px */ color: #b8b8b8; }
+  .sec { font-size: 18px; /* stockcancer-font-base:12px */ color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 33px; /* stockcancer-font-base:22px */ margin-bottom: 4px; }
+  h2 { font-size: 27px; /* stockcancer-font-base:18px */ margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 19.5px; /* stockcancer-font-base:13px */ margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .ticker code { color: #a0a0a0; font-size: 18px; /* stockcancer-font-base:12px */ margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 21.75px; /* stockcancer-font-base:14.5px */ color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 19.5px; /* stockcancer-font-base:13px */ color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 18.75px; /* stockcancer-font-base:12.5px */ padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 19.5px; /* stockcancer-font-base:13px */ text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+  <style id="stockcancer-font-scale-layout">
+@media (max-width: 640px) {
+  .card, section { min-width: 0; }
+  table { table-layout: fixed; max-width: 100%; }
+  th, td { white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+  .ticker, code, a { max-width: 100%; overflow-wrap: anywhere; word-break: break-word; }
+
+  #card-11 table, #moves table, #card-11 tbody, #moves tbody { display: block; width: 100%; overflow: visible; }
+  #card-11 thead, #moves tr:has(th) { display: none; }
+  #card-11 tbody tr, #moves tr:has(td) { display: block; padding: 12px 0; border-bottom: 1px solid #ececec; }
+  #card-11 td, #moves td { display: block; width: auto; min-width: 0; padding: 4px 0; border: 0; white-space: normal; }
+  #card-11 td::before, #moves td::before { font-weight: 700; color: #777; }
+  #card-11 td:nth-child(1)::before { content: '標的／部位：'; }
+  #card-11 td:nth-child(2)::before { content: '本集狀態：'; }
+  #card-11 td:nth-child(3)::before { content: '依據：'; }
+  #moves td:nth-child(1)::before { content: '集數：'; }
+  #moves td:nth-child(2)::before { content: '標的／部位：'; }
+  #moves td:nth-child(3)::before { content: '動作／狀態：'; }
+}
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP695 筆記</h1>
+    <div class="date">2026-09-09｜雲端回本速度 × AI 資金循環 × 震盪盤買法｜官方發布 2026-09-09</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>基本面偏多</h4>
+        <span class="ticker">Google／AI 雲端</span>
+        <span class="ticker">GPU／ASIC 算力</span>
+        <span class="ticker">AI 伺服器供應鏈</span>
+        <span class="ticker">光通訊／散熱</span>
+        <span class="ticker">台積電：核心瓶頸</span>
+      </div>
+      <div class="col">
+        <h4>操作保持觀望</h4>
+        <span class="ticker">台股：缺明確突破棒</span>
+        <span class="ticker">追強：交易規模縮小</span>
+        <span class="ticker">買點：等回落再承接</span>
+        <span class="ticker">訂單：傳聞不等於落地</span>
+      </div>
+      <div class="col">
+        <h4>不可誤當新買單</h4>
+        <span class="ticker">Intel：歷史選擇權</span>
+        <span class="ticker">Palantir：非零和問答</span>
+        <span class="ticker">Coherent／Lumentum：聽眾提問</span>
+        <span class="ticker">本集無可確認具名現有持倉</span>
+      </div>
+    </div>
+    <div class="pills"><div class="pill">12 張完整筆記</div><div class="pill">字體基準 1.5 倍</div><div class="pill">逐字稿＋SRT 雙源核對</div><div class="pill">財務轉述與外部查證分開</div></div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>改的是買法：</b>需求好也可能天天洗追價；等回落、縮小動能尺寸。</a>
+    <a class="insight-pill" href="#card-3"><b>Google 核心敘事：</b>不到兩年回本、自研再減半；先辨認轉述口徑。</a>
+    <a class="insight-pill" href="#card-6"><b>拆開資金鏈：</b>晶片收款、雲商墊資、模型融資；最後要有用戶付費。</a>
+    <a class="insight-pill" href="#card-8"><b>CPO 不猜單一贏家：</b>完整價值鏈先看懂，再驗證瓶頸、定價權與真訂單。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 震盪盤買法</a>
+      <a href="#card-3">03 Google 回本</a>
+      <a href="#card-4">04 CapEx 與估值</a>
+      <a href="#card-5">05 模型與 TPU</a>
+      <a href="#card-6">06 資金循環</a>
+      <a href="#card-7">07 供應鏈驗證</a>
+      <a href="#card-8">08 CPO 與定價權</a>
+      <a href="#card-9">09 Intel 與槓桿</a>
+      <a href="#card-10">10 Palantir 與 TAM</a>
+      <a href="#card-11">11 操作揭露</a>
+      <a href="#card-12">12 觀察清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">盤面與操作｜08:49–11:09</div>
+    <h2>產業偏多，不代表今天就該追強</h2>
+    <div class="core"><span class="tag">重點</span>指數接近新高，卻沒有明確突破棒。個股前一天鎖住、隔天被倒貨，之後又慢慢墊高；主持人已改為耐心等低位，仍試動能但持續縮小尺寸。</div>
+    <blockquote>沒有買到就算了嘛</blockquote>
+    <div class="mechanism"><span class="tag">這種盤怎麼磨掉績效</span><ol><li>看到強勢而追進，隔日回落後停損。</li><li>相同股票數日後又漲，追價與停損反覆發生。</li><li>摩擦成本累積，基本面即使沒變也可能侵蝕淨值。</li><li>保留看多研究，調整承接位置與策略部位，等大盤表態。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集狀態</div>
+        <span class="ticker">台股指數：觀望</span>
+        <span class="ticker">題材動能：縮小</span>
+        <span class="ticker">未具名個股：低位承接</span>
+      </div>
+    <div class="note">節目舉淨值 5%、10% 以上的累積摩擦作警示，不是主持人本集實際回撤。</div>
+    <div class="note">他談到可以賣給追強者，但隨即說自己不習慣太短線；不能寫成已執行反向賣出。</div>
+    <div class="risk"><b>風險：</b>別把縮小動能交易誤解成全面看空、清倉，或擅自延用上集槓桿數字。</div>
+    <div class="action"><b>應對：</b>觀察突破後能否延續、追價是否仍被隔日倒貨；目前把想買與立即追價分開。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">Google Cloud｜11:09–13:09</div>
+    <h2>回收期，才是這集最重要的新論據</h2>
+    <div class="core"><span class="tag">重點</span>主持人轉述 Thomas Kurian 的分享：Google 雲端需求強，AI 伺服器回收期不到 2 年，自研晶片再減半，因而解讀成約 1 年。這強化他對算力基建能賺錢的信心。</div>
+
+    <div class="mechanism"><span class="tag">需求 → 支出 → 回本</span><ol><li>新客獲取速度：一年前的 2 倍。</li><li>大型交易：超過 1 億美元的交易，季比與年比均逾 2 倍。</li><li>超額使用：承諾 100 美元、最後花逾 150 美元是比例示例，重點是超支逾 50%。</li><li>回收速度：一般 AI 伺服器不到 2 年；自研晶片再減半、約 1 年是主持人的轉述及推算。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">論點對象</div>
+        <span class="ticker">Google Cloud</span>
+        <span class="ticker">TPU as a Service</span>
+        <span class="ticker">AI 伺服器租賃</span>
+      </div>
+    <div class="note">尚未取得該場官方會議全文逐項核對，所以這些財務數字明列為節目轉述，不冒充本報已驗證的公司實績。</div>
+    <div class="note">產品線營收都逾 10 億美元的涵蓋範圍與期間不明，不外推成 Google 所有產品。</div>
+    <div class="risk"><b>風險：</b>回收期不能直接換算成淨利率或保證報酬；伺服器成本、利用率、回款方式及客戶信用都會影響結果。</div>
+    <div class="action"><b>應對：</b>追蹤公司對回本口徑與利用率的完整揭露，再確認新增資本支出能否重複同樣經濟性。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">現金流與估值｜13:09–16:04</div>
+    <h2>自由現金流變差，可能是投資機會變好</h2>
+    <div class="core"><span class="tag">重點</span>主持人的推理是：若設備真的能快速回本，把錢投入伺服器可能比回購股票更划算。因此不能只看到資本支出擴大、自由現金流受壓，就判斷企業價值正在毀損。</div>
+
+    <div class="mechanism"><span class="tag">三個問題分開看</span><ol><li>業務經濟性：新增設備能不能創造可收回的收入與現金？</li><li>資金配置：擴充、回購、保留現金，何者的預期回報較高？</li><li>市場定價：算力房東可能有真現金流，卻不一定獲得模型明星的高估值倍數。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">主角與商業模式</div>
+        <span class="ticker">Google：基建收入</span>
+        <span class="ticker">模型服務：溢價變動</span>
+        <span class="ticker">CapEx／FCF／回購</span>
+      </div>
+    <div class="note">本卡整理主持人的資金配置判斷，不宣稱本期 Google 已正式停止回購，也不新增未查核財報值。</div>
+    <div class="note">Google 並非不做前沿模型；資源偏向 Infra 或 Flash 的說法，不等於已證實退出 Gemini。</div>
+    <div class="risk"><b>風險：</b>高成長仍可能伴隨估值倍數壓縮；若客戶承諾無法回款，帳面需求再大也不代表投資成功。</div>
+    <div class="action"><b>應對：</b>把獲利、現金回收與股票估值列成三張檢查表，不用單一 FCF 正負決定全部結論。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">模型與硬體成本｜16:19–19:56</div>
+    <h2>模型越像商品，便宜的算力越重要</h2>
+    <div class="core"><span class="tag">重點</span>領先模型會輪替，各家仍各有強項，但 API 溢價與費用若趨於接近，模型商就更需要降低底層硬體成本。TPU 的性價比，是主持人持續看好 Google 採購的另一條理由。</div>
+
+    <div class="mechanism"><span class="tag">成本傳導</span><ol><li>使用者願意支付的單位模型費用逐漸收斂。</li><li>模型商不再容易單靠短期領先維持大幅溢價。</li><li>算力成本越低，越能在價格競爭中保留空間。</li><li>TPU／ASIC 吸引力提升，但通用 GPU 仍有不同工作負載與平台價值。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">競爭關係，不是本集新買單</div>
+        <span class="ticker">Google TPU</span>
+        <span class="ticker">Anthropic／OpenAI</span>
+        <span class="ticker">NVIDIA：比較背景</span>
+        <span class="ticker">Broadcom：ASIC 合作背景</span>
+      </div>
+    <div class="note">外部校核：Google 官方將訓練最高 2.7 倍、推論最高改善 80% 界定為相對 Ironwood 的每美元效能，不是全面擊敗所有硬體；來源見月報文末。</div>
+    <div class="note">CPU 30% 與 ML 成本 2.5 倍的原始指標未確認；Fable、Extra、Gemini 跳代與後續硬體代號仍保留待確認，不擅自補名字。</div>
+    <div class="risk"><b>風險：</b>不同精度、延遲、模型與成本口徑不能直接相加或排名；市占競爭也不等於整個算力市場縮小。</div>
+    <div class="action"><b>應對：</b>比較同一工作負載的每單位有效產出成本；把廠商宣傳基準與可重複的實務測試分開。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">AI 資金鏈｜20:55–25:43</div>
+    <h2>誰先拿到錢，誰還在等客戶付錢？</h2>
+    <div class="core"><span class="tag">重點</span>主持人沒有否認循環融資，而是把風險位置拆開：晶片商出貨收款，雲商先買設備再收租，模型商融資買算力，最終仍要終端客戶願意持續付費。</div>
+
+    <div class="mechanism"><span class="tag">資金流與逆轉路徑</span><ol><li>投資人／雲商 → 模型商：融資支撐算力採購。</li><li>模型商 → 雲商：簽合約、租設備；主持人用 5 年合約示意回收時間差。</li><li>雲商 → 晶片與供應鏈：先投入設備，讓上游承接需求。</li><li>終端用戶 → 模型服務：帶入外部收入；若融資或使用成長停住，風險會反向傳回雲商與上游。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">不同角色</div>
+        <span class="ticker">晶片／零組件</span>
+        <span class="ticker">Google／Oracle／Microsoft 雲端</span>
+        <span class="ticker">模型商與投資人</span>
+        <span class="ticker">終端付費客戶</span>
+      </div>
+    <div class="note">這是主持人的簡化資金流框架，不表示所有晶片商即刻收現，也不表示三家雲商合約都固定五年。</div>
+    <div class="note">他的當前結論仍偏多：循環可能跑得比大家想像久；但模型商募資、增長指引與合約回款是重要警報。</div>
+    <div class="risk"><b>風險：</b>若終端需求追不上算力承諾，或外部資金不再進來，模型商、雲商與供應鏈的現金回收可能一起受傷。</div>
+    <div class="action"><b>應對：</b>同時看實際收款、終端使用、融資條件與供需，不能只看高額採購承諾，也別等壞消息全部公告才開始風控。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">供應鏈與股價｜19:56–20:55</div>
+    <h2>Google 越買越多，不等於每檔供應商都漲</h2>
+    <div class="core"><span class="tag">重點</span>主持人依自己的供應鏈查核，認為 Google 的需求持續增加、部分特殊零組件供應難以滿足預測；但股價只選擇性反映，他特別指出散熱是少數走強的環節。</div>
+
+    <div class="mechanism"><span class="tag">從故事到可交易證據</span><ol><li>客戶預測需求強，不等於每一張採購單都已確定。</li><li>確定訂單還要看交期、良率、營收認列與回款。</li><li>公司基本面改善，也不保證股價當天立即反應。</li><li>散熱的相對強勢是本集觀察，不能擴寫成整族群的新訂單保證。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">立場仍偏多</div>
+        <span class="ticker">AI 伺服器供應鏈</span>
+        <span class="ticker">Google 採購</span>
+        <span class="ticker">散熱族群</span>
+      </div>
+    <div class="note">主持人未公開查核廠名、訂單金額、樣本或交期，本報不自行補公司名單與精確供需缺口。</div>
+    <div class="note">價格與基本面可能有時間差；不漲不等於需求變差，需求好也不等於任何價格都值得追。</div>
+    <div class="risk"><b>風險：</b>若預測下修、訂單延後或產能過度擴張，原本被視為缺貨的環節也可能轉為庫存壓力。</div>
+    <div class="action"><b>應對：</b>用真訂單、實際出貨、獲利及現金流逐步提高信心，並保留買點與風控條件。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">CPO 問答｜26:14–29:26</div>
+    <h2>先畫完整價值鏈，再等瓶頸浮現</h2>
+    <div class="core"><span class="tag">重點</span>FAU、主動對位與封裝、COUPE 平台、光引擎都是觀察環節。主持人不預言單一贏家，而是先涵蓋自己理解的供應鏈；關鍵是誰真正拿到量、成為瓶頸，又能把瓶頸變成利潤。</div>
+    <blockquote>那只是你不太確定就是裡面的價值分配最終會落在哪</blockquote>
+    <div class="mechanism"><span class="tag">價值鏈與選擇順序</span><ol><li>FAU 光纖耦合 → FAU to PIC 高精度主動對位／封裝。</li><li>台積電 COUPE 平台整合 → 光引擎等環節；這是價值鏈地圖，不代表全由單一廠包辦。</li><li>辨認真正量產、外包比例、瓶頸與定價權，避免把供應鏈傳聞當成已獲訂單。</li><li>主持人舉每環節 1–2 檔、總配置 30% 或 50% 作方法示例；並未公開本集按此比例持有。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">分清身分</div>
+        <span class="ticker">光通族群：偏多</span>
+        <span class="ticker">台積電：核心瓶頸</span>
+        <span class="ticker">Coherent／Lumentum：聽眾列舉</span>
+      </div>
+    <div class="note">台積電節制定價、與客戶共同成長，未必最有短期漲價彈性；激進漲價者也可能逼客戶找第二、第三來源。</div>
+    <div class="note">PE 30 倍是未具名高精度廠商的重估舉例，不能指定成大立光或玉晶光。COUPE／CPO 專名已核對台積電官方資料。</div>
+    <div class="risk"><b>風險：</b>一籃子可降低押錯單一贏家的風險，但不能避免整體題材失靈；高股價也不是訂單證據。</div>
+    <div class="action"><b>應對：</b>先問何時出貨、誰付錢、誰掌握關鍵製程，再看漲價是否可持續；不直接照抄示例配置比例。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">槓桿問答｜36:46–37:42</div>
+    <h2>Intel 是歷史交易，不是本集持股公告</h2>
+    <div class="core"><span class="tag">重點</span>主持人回顧先前一波 Intel 選擇權操作結果很好，也說很多選擇權交易會小賠、偶爾大賺補回。一般美股槓桿用 options 加 margin，偏交易觀點與消息。</div>
+
+    <div class="mechanism"><span class="tag">使用前先拆三件事</span><ol><li>交易方向：本集沒說 Intel 是買權或賣權，更沒披露履約價、到期日與當前剩餘部位。</li><li>資金成本：主持人概括台灣約 2–3%、目前約 3%；美股有時十幾個百分點，不是全市場券商報價。</li><li>績效分布：不能只記得一次大賺，要計入所有小賠、融資成本及最大可能損失。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集紀錄方式</div>
+        <span class="ticker">Intel：歷史選擇權</span>
+        <span class="ticker">options＋margin：一般方法</span>
+        <span class="ticker">無具名現有持倉證據</span>
+      </div>
+    <div class="note">沒揭露本集新下單，也沒有 Intel 股票現有持倉，因此不加持有星號、不把成功案例列為目前看多評價。</div>
+    <div class="note">本卡整理節目，不構成鼓勵加槓桿；實際條款、利率、保證金與選擇權風險要另查交易帳戶。</div>
+    <div class="risk"><b>風險：</b>高成本持有與選擇權到期損失，可能在觀點還沒反映前耗掉本金；個別成功交易不代表策略可複製。</div>
+    <div class="action"><b>應對：</b>先確認自己的完整績效與可承受損失，再決定是否需要槓桿；不可拿未披露資訊補成一筆可跟單交易。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">Palantir 問答｜49:24–49:54</div>
+    <h2>有新玩家，不代表舊玩家就得死亡</h2>
+    <div class="core"><span class="tag">重點</span>聽眾擔心 Google DeepMind 切入政府、軍工會傷害 Palantir。主持人回答的核心是市場不是固定大小的餅：經濟與 TAM 會擴大，有更多競爭者是正常現象。</div>
+    <blockquote>本來就會越來越多player進來</blockquote>
+    <div class="mechanism"><span class="tag">別把兩個問題混成一個</span><ol><li>總市場是否繼續變大？新玩家可能是需求值得投入的訊號。</li><li>個別公司能留住多少價值？仍需看客戶、產品、交付、利潤與估值。</li><li>因此不能因競爭者進來就宣判原公司死亡，也不能反推所有公司都保證受惠。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">中性記錄，保留正面競爭解讀</div>
+        <span class="ticker">Palantir</span>
+        <span class="ticker">Google DeepMind：聽眾提問前提</span>
+        <span class="ticker">TAM：總可服務市場</span>
+      </div>
+    <div class="note">本集沒有新增 Palantir 的估值、財報、買進價或操作指令，因此保守列中性，不自行升成買進建議。</div>
+    <div class="note">聽眾所述切入政府與軍工，並非本報已獨立查核的新合約公告；也不能藉此替整個 SaaS 族群新增立場。</div>
+    <div class="note">開場私人事業逐段篩查後僅保留背景與學習心法，不加入二級市場投資主線或持倉統計。</div>
+    <div class="risk"><b>風險：</b>總餅變大仍可能伴隨市占流失、價格競爭與成本上升；非零和不是免驗證通行證。</div>
+    <div class="action"><b>應對：</b>把市場擴張與個別公司競爭力分開追蹤，避免只看到強大新對手就直接下零和結論。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">部位與風控揭露</div>
+    <h2>哪些已做、哪些只是示例？</h2>
+    <div class="note no-confirmed-holdings">本集未揭露可確認的具名現有持倉；不加持有星號。</div>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td>未具名個股</td>
+        <td>等待低位後買進</td>
+        <td>主持人自述已調整買法並買在相對低位；未公開名稱、數量與現有餘額。</td>
+      </tr>
+      <tr>
+        <td>盤中動能策略</td>
+        <td>持續縮小尺寸</td>
+        <td>仍有試單，但交易規模持續縮小；不代表總持股全部退出。</td>
+      </tr>
+      <tr>
+        <td>Intel 選擇權</td>
+        <td>回顧先前成功交易</td>
+        <td>沒有方向、履約價、到期日及現有部位，不當成 Intel 股票持倉。</td>
+      </tr>
+      <tr>
+        <td>美股 options／margin</td>
+        <td>一般操作方式</td>
+        <td>先看歷史績效與成本，主要交易觀點或消息；非本集新增槓桿公告。</td>
+      </tr>
+      <tr>
+        <td>CPO／光通一籃子</td>
+        <td>條件式配置方法</td>
+        <td>各環節 1–2 檔、30% 或 50% 是例子，不是本集實際配置。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">本表是本集揭露，不是主持人完整帳戶快照；沒有足夠證據的項目不加星號，也不把過去持股自動延伸到現在。</div>
+    <div class="note">Google、台積電、散熱與光通的偏多觀點，不等於本集公開買入或持有。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">本集可帶走的觀察框架</div>
+    <h2>保留研究方向，收緊執行條件</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在整理</h4>
+        <ul><li>分開記錄產業需求、股價反應與實際操作。</li><li>把追強停損的累積成本算進策略績效。</li><li>畫出 AI 收付款鏈及 CPO 價值鏈，標記未知處。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>大盤有效突破、動能是否開始延續。</li><li>Google 回本口徑、利用率及現金回收證據。</li><li>模型商融資、終端付費成長與雲端合約回款。</li><li>CPO 真訂單、量產、瓶頸及可持續定價權。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>把轉述、跑分或需求預測當成財報實績。</li><li>把 Intel 歷史交易與 CPO 配置示例寫成持股。</li><li>把具名新對手直接解讀為原公司必死。</li><li>把私人基金與遊戲投資列入二級市場統計。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
