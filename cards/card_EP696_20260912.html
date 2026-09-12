@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta name="stockcancer-font-scale" content="1.5">
+  <meta name="stockcancer-layout" content="wide-1320-v1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP696 筆記｜2026-09-12</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 22.5px; /* stockcancer-font-base:15px */ padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 18px; /* stockcancer-font-base:12px */ color: #b8b8b8; }
+  .sec { font-size: 18px; /* stockcancer-font-base:12px */ color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 33px; /* stockcancer-font-base:22px */ margin-bottom: 4px; }
+  h2 { font-size: 27px; /* stockcancer-font-base:18px */ margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 19.5px; /* stockcancer-font-base:13px */ margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .ticker code { color: #a0a0a0; font-size: 18px; /* stockcancer-font-base:12px */ margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 21.75px; /* stockcancer-font-base:14.5px */ color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 19.5px; /* stockcancer-font-base:13px */ color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 18.75px; /* stockcancer-font-base:12.5px */ padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 19.5px; /* stockcancer-font-base:13px */ text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+<style id="stockcancer-font-scale-layout">
+@media (max-width: 640px) {
+  .card, section { min-width: 0; }
+  table { table-layout: fixed; max-width: 100%; }
+  th, td { white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+  .ticker, code, a { max-width: 100%; overflow-wrap: anywhere; word-break: break-word; }
+
+  #card-11 table, #moves table, #card-11 tbody, #moves tbody { display: block; width: 100%; overflow: visible; }
+  #card-11 thead, #moves tr:has(th) { display: none; }
+  #card-11 tbody tr, #moves tr:has(td) { display: block; padding: 12px 0; border-bottom: 1px solid #ececec; }
+  #card-11 td, #moves td { display: block; width: auto; min-width: 0; padding: 4px 0; border: 0; white-space: normal; }
+  #card-11 td::before, #moves td::before { font-weight: 700; color: #777; }
+  #card-11 td:nth-child(1)::before { content: '標的／部位：'; }
+  #card-11 td:nth-child(2)::before { content: '本集狀態：'; }
+  #card-11 td:nth-child(3)::before { content: '依據：'; }
+  #moves td:nth-child(1)::before { content: '集數：'; }
+  #moves td:nth-child(2)::before { content: '標的／部位：'; }
+  #moves td:nth-child(3)::before { content: '動作／狀態：'; }
+}
+  </style>
+  <style id="stockcancer-wide-layout">
+.wrap { width: 100%; max-width: 1320px; }
+.card, .block, .grid3 > *, .cols3 > * { min-width: 0; }
+.grid3, .cols3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ticker { max-width: 100%; overflow-wrap: anywhere; }
+
+.story p, .why, .watchlist li, .mood,
+.card > .core, .card > .note, .card > .mechanism,
+.card > .risk, .card > .action, .card > blockquote {
+  max-inline-size: 40em;
+  overflow-wrap: anywhere;
+}
+.law .p, .law .q { max-inline-size: 40em; }
+.kpi .lab, .law .q { line-break: strict; overflow-wrap: anywhere; padding-inline-end: 1em; }
+
+@media (min-width: 1024px) {
+  .grid3, .cols3 { gap: 24px; }
+  .kpi { gap: 12px; }
+  .tgrid { gap: 16px; }
+}
+@media (max-width: 900px) and (min-width: 641px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+  .kpi { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kpi .k.txt { grid-column: 1 / -1; }
+  .tgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP696 筆記</h1>
+    <div class="date">2026-09-12｜Apple 平台價值 × AI 基建風險拆解 × 地端推論｜官方發布 2026-09-12</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>基本面偏多</h4>
+        <span class="ticker">Apple</span>
+        <span class="ticker">AI 雲端／算力基礎設施</span>
+        <span class="ticker">Oracle</span>
+        <span class="ticker">企業地端 AI／推論</span>
+        <span class="ticker">群聯</span>
+      </div>
+      <div class="col">
+        <h4>保留條件</h4>
+        <span class="ticker">台股：仍多單但看破位</span>
+        <span class="ticker">摺疊供應鏈：不追題材</span>
+        <span class="ticker">電力／許可：現實瓶頸</span>
+        <span class="ticker">融資：需求不能只看出貨</span>
+      </div>
+      <div class="col">
+        <h4>不可誤當新買單</h4>
+        <span class="ticker">NVIDIA：維持既有立場</span>
+        <span class="ticker">台積電：市場例示</span>
+        <span class="ticker">能源供應鏈：傳聞背景</span>
+        <span class="ticker">本集無可確認具名現有持倉</span>
+      </div>
+    </div>
+    <div class="pills"><div class="pill">12 張完整筆記</div><div class="pill">字體基準 1.5 倍</div><div class="pill">寬版閱讀 1320px</div><div class="pill">逐字稿＋SRT 雙源核對</div></div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>Apple 與供應鏈分開看：</b>平台價值偏正面，零組件仍受壓價與資金排擠。</a>
+    <a class="insight-pill" href="#card-5"><b>AI 基建不是二選一：</b>需求真實也可能有融資、許可與回款風險。</a>
+    <a class="insight-pill" href="#card-8"><b>地端 AI 新支線：</b>企業推論可降成本，先看採用與放量。</a>
+    <a class="insight-pill" href="#card-10"><b>多單不是不風控：</b>看破位再防守，不用摸頭式做空。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 本集主線</a>
+      <a href="#card-3">03 Apple</a>
+      <a href="#card-4">04 摺疊供應鏈</a>
+      <a href="#card-5">05 模型分工</a>
+      <a href="#card-6">06 Oracle 與融資</a>
+      <a href="#card-7">07 電力與許可</a>
+      <a href="#card-8">08 地端 AI</a>
+      <a href="#card-9">09 群聯</a>
+      <a href="#card-10">10 多單與避險</a>
+      <a href="#card-11">11 操作揭露</a>
+      <a href="#card-12">12 觀察清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">總結｜本集投資主線</div>
+    <h2>產品、基建與風控是三條不同的線</h2>
+    <div class="core"><span class="tag">重點</span>Apple 的產品與通路價值獲正面評價，但主持人不想用消費題材和 AI 搶資金。AI 基建維持偏多，同時新增融資、電力與地方政治的檢查；地端推論則是企業成本架構的新支線。</div>
+
+    <div class="mechanism"><span class="tag">先分層，再判讀</span><ol><li>公司平台價值不等於供應鏈都受惠。</li><li>需求強不等於資金鏈與回款無風險。</li><li>概念好不等於採用立刻放量。</li><li>多單與防守可以並存，不等於改做空。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集架構</div>
+        <span class="ticker">Apple</span>
+        <span class="ticker">AI 基建</span>
+        <span class="ticker">企業地端 AI</span>
+        <span class="ticker">風控方法</span>
+      </div>
+    <div class="note">本集未把聽眾的個人績效、未驗證成本或傳聞能源訂單寫入二級市場結論。</div>
+    <div class="risk"><b>風險：</b>把產業敘事、公司立場與交易揭露混在一起，最容易讓閱讀者誤以為有可跟單的新買單。</div>
+    <div class="action"><b>應對：</b>每條主線都保留一個可驗證條件：產品銷售、真實回款、採用放量或市場破位。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">Apple｜產品與平台</div>
+    <h2>Apple 偏正面，關鍵不只是一支新手機</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為 Apple 的整合、使用體驗與相對定價，可能讓摺疊產品吸引更多客戶。當日常模型逐漸像商品，平台與通路掌握者仍有價值分配空間。</div>
+
+    <div class="mechanism"><span class="tag">產品到平台</span><ol><li>成熟技術加上直覺操作，降低使用門檻。</li><li>用產品把客戶留在平台，再承接後續服務。</li><li>零組件成本變動時，品牌與供應鏈的毛利彈性不同。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">偏多解讀</div>
+        <span class="ticker">Apple</span>
+        <span class="ticker">平台／通路價值</span>
+        <span class="ticker">日常 AI 應用</span>
+      </div>
+    <div class="note">中國消費與高價產品接受度仍是要追蹤的驗證點。</div>
+    <div class="note">本集是公司觀點，不是公開持股或價格目標。</div>
+    <div class="risk"><b>風險：</b>產品敘事若沒有銷售、價格與毛利的後續驗證，不能直接替代財報。</div>
+    <div class="action"><b>應對：</b>追蹤產品需求、平台黏著與毛利防守，而非只看發表會後的短線討論。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">摺疊供應鏈｜產品不等於利潤</div>
+    <h2>賣得好，供應商也可能只是在幫忙打工</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為摺疊市場可能成長，卻不想把資金押在消費題材。原因是 Apple 對供應鏈的價格與第二來源掌控力強，題材也可能早在傳聞期先反映。</div>
+
+    <div class="mechanism"><span class="tag">供應鏈的三道關卡</span><ol><li>先有產品需求，才有零組件出貨。</li><li>出貨後還要看份額、價格與毛利能否留下。</li><li>新產品可能帶來技術門檻，也可能吸引第二來源與自製。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集判讀</div>
+        <span class="ticker">摺疊手機供應鏈：觀望</span>
+        <span class="ticker">消費性題材：資金排擠</span>
+        <span class="ticker">客戶壓價：需驗證</span>
+      </div>
+    <div class="note">未把音近轉錄的個別供應商、份額或美系公司名補成確定標的。</div>
+    <div class="note">產品銷量上修和個股獲利上修必須分開。</div>
+    <div class="risk"><b>風險：</b>把供應鏈亮點直接翻成單一公司訂單或保證獲利，會忽略價值分配。</div>
+    <div class="action"><b>應對：</b>先追真正量產、報價、份額與獲利，再判斷市場是否已充分反映。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">模型商業化｜不是單一勝者的問題</div>
+    <h2>模型競爭會分工，成本仍是核心</h2>
+    <div class="core"><span class="tag">重點</span>主持人不完全接受閉源模型最後只剩單一贏家的說法。前沿模型會競爭，更多日常或特化工作負載則可能走向不同模型與成本結構。</div>
+
+    <div class="mechanism"><span class="tag">模型與算力</span><ol><li>不同領域可由不同模型勝出。</li><li>日常應用不一定需要最前沿模型。</li><li>模型價格若靠攏，底層算力成本更重要。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">保留多路徑</div>
+        <span class="ticker">GPU／ASIC 算力市場</span>
+        <span class="ticker">閉源模型</span>
+        <span class="ticker">開源／特化模型</span>
+      </div>
+    <div class="note">本卡不把轉錄不穩的人名、貨幣口徑或比較數字寫成可核對的公司事實。</div>
+    <div class="risk"><b>風險：</b>商業模型、資金來源與價格競爭尚在演化，不能用單一跑分或敘事判定最後價值歸屬。</div>
+    <div class="action"><b>應對：</b>把模型能力、單位成本、客戶付費與資金需求放在同一張檢查表。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">Oracle 與資金鏈｜需求還要看誰付錢</div>
+    <h2>雲端擴張的槓桿，會放大好也會放大壞</h2>
+    <div class="core"><span class="tag">重點</span>主持人評價 Oracle 表現正面，但也拆解客戶預付、客戶自帶硬體、代管費與供應商融資。這些安排可支持成長，卻也可能在反轉時放大需求的虛胖感。</div>
+
+    <div class="mechanism"><span class="tag">資金鏈分層</span><ol><li>設備商與供應鏈承接擴張需求。</li><li>雲端先投入設備，再等待租賃與服務回收。</li><li>模型商與終端客戶是否持續付費，決定循環能否續跑。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">偏多但有條件</div>
+        <span class="ticker">Oracle</span>
+        <span class="ticker">AI 雲端／算力基礎設施</span>
+        <span class="ticker">終端付費</span>
+        <span class="ticker">供應商融資</span>
+      </div>
+    <div class="note">本集不把節目轉述的財務數字冒充為本報獨立驗證。</div>
+    <div class="note">利多在震盪市場未必即刻反映為股價上漲。</div>
+    <div class="risk"><b>風險：</b>融資、回款或終端採用若轉弱，可能由模型商與雲端一路傳導到上游供應鏈。</div>
+    <div class="action"><b>應對：</b>同時追蹤真實利用率、合約回收、資金條件與終端使用，不只看高額出貨。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">資料中心｜電力與許可是物理瓶頸</div>
+    <h2>AI 資料中心最難的，未必是把機器買進來</h2>
+    <div class="core"><span class="tag">重點</span>電力、許可與地方政治成為建置速度的實際限制。企業可能尋找自建供電或替代能源方案，但這是解方方向，不等於已落到特定公司訂單。</div>
+
+    <div class="mechanism"><span class="tag">從需求到可落地</span><ol><li>先有算力需求，才會規劃資料中心。</li><li>電網、許可與居民接受度決定可否建置。</li><li>替代供電可能是解法，仍要回到專案與採購驗證。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集定位</div>
+        <span class="ticker">資料中心電力／許可：觀望</span>
+        <span class="ticker">AI 基建：偏多</span>
+        <span class="ticker">能源解方：待驗證</span>
+      </div>
+    <div class="note">能源供應鏈的說法包含傳聞背景，未升格成具名標的買賣結論。</div>
+    <div class="risk"><b>風險：</b>地方政治與許可時程可讓需求延後；以傳聞追逐能源題材，容易略過專案落地風險。</div>
+    <div class="action"><b>應對：</b>追蹤電力可得性、許可進度、資本支出與實際採購，不直接把宏觀瓶頸當交易訊號。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">地端 AI｜企業推論的新支線</div>
+    <h2>尖端模型上雲，日常工作可能往地端走</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為企業的日常翻譯、推論與成本敏感工作負載，未必每次都要上雲。地端運算、儲存與模型切分，可望成為降低導入成本的組合。</div>
+    <blockquote>但我覺得整個概念是蠻好的</blockquote>
+    <div class="mechanism"><span class="tag">適用場景分流</span><ol><li>前沿訓練與最尖端需求仍走雲端。</li><li>企業日常工作負載更在乎可控成本與資料位置。</li><li>地端硬體、儲存與整合能力決定採用門檻。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">偏多方向</div>
+        <span class="ticker">企業地端 AI／推論</span>
+        <span class="ticker">儲存架構</span>
+        <span class="ticker">模型切分</span>
+        <span class="ticker">成本控制</span>
+      </div>
+    <div class="note">方向正面不等於每個企業都會立刻導入。</div>
+    <div class="note">導入速度、資料治理與可重複的投資回收仍是硬門檻。</div>
+    <div class="risk"><b>風險：</b>若客戶缺乏整合能力或看不到明確經濟效益，概念可能長期停在試點。</div>
+    <div class="action"><b>應對：</b>把採用客戶、部署規模、實際成本與服務模式列為後續驗證項。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">群聯｜從控制器到地端解方</div>
+    <h2>群聯是概念正面，不是本集已買入</h2>
+    <div class="core"><span class="tag">重點</span>主持人回顧群聯從儲存與控制器延伸到地端模型與推論的想法，認為以儲存協助模型切分、降低企業成本有機會；合作與放量仍要等後續證據。</div>
+
+    <div class="mechanism"><span class="tag">概念到商業化</span><ol><li>儲存與控制器是既有能力。</li><li>地端模型與推論是延伸應用。</li><li>最終仍看客戶採用、夥伴分工與量產節奏。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">公司級判讀</div>
+        <span class="ticker">群聯：偏多</span>
+        <span class="ticker">研華合作：過往背景</span>
+        <span class="ticker">地端 AI：採用待驗證</span>
+      </div>
+    <div class="note">主持人未公開持股、成本、數量或本集買入。</div>
+    <div class="note">提及研華為過往合作背景，沒有最新進度確認。</div>
+    <div class="risk"><b>風險：</b>技術概念、合作消息與實際收入之間仍有採用曲線與執行風險。</div>
+    <div class="action"><b>應對：</b>只在客戶採用、產品化、收入與毛利逐步浮現後提高信心。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">市場風控｜多單也要有規則</div>
+    <h2>不要用猜頂取代風控</h2>
+    <div class="core"><span class="tag">重點</span>主持人確認仍維持多單，但防守強度會跟著績效與市況變化。做空不是常態答案；只有趨勢明顯惡化、做多勝率不足時，才可能用來保護既有多單。</div>
+    <blockquote>買進並等待</blockquote>
+    <div class="mechanism"><span class="tag">先判斷條件</span><ol><li>先看市況是否真的轉弱再往下破。</li><li>再依自身績效與承受度調整防守。</li><li>空單以保護為主，不把崩盤當主要獲利來源。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集操作框架</div>
+        <span class="ticker">台股大盤：偏多</span>
+        <span class="ticker">空單：罕見工具</span>
+        <span class="ticker">好公司：等待報酬</span>
+      </div>
+    <div class="note">滿手多單不等於公開總曝險比例。</div>
+    <div class="note">夜盤與期貨只可作早期參考，不能精確決定每一檔個股。</div>
+    <div class="risk"><b>風險：</b>過度避險與摸頭做空，可能在多頭延續時先把報酬磨掉。</div>
+    <div class="action"><b>應對：</b>把選股、買點、曝險與防守條件分開記錄，讓績效而非情緒檢驗策略。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">部位與風控揭露</div>
+    <h2>已揭露的是方法，不是可跟單帳戶</h2>
+    <div class="note no-confirmed-holdings">本集未揭露可確認的具名現有持倉；不加持有星號。</div>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td>台股大盤(指數)</td>
+        <td>維持多單、條件式防守</td>
+        <td>主持人自述仍是滿手多單；未公開總曝險、槓桿或完整持股清單。</td>
+      </tr>
+      <tr>
+        <td>空單／避險策略</td>
+        <td>罕見工具，未公告新增空單</td>
+        <td>僅在明確惡化且做多勝率不足時，才可能用於保護多單。</td>
+      </tr>
+      <tr>
+        <td>群聯</td>
+        <td>概念評價與參訪回顧</td>
+        <td>未揭露持股、成本、數量或本集買入；不能加持有星號。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">本表不是主持人完整帳戶快照。</div>
+    <div class="note">Apple、Oracle、NVIDIA 與台積電的立場，不等於本集公開買入。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">本集可帶走的觀察框架</div>
+    <h2>先拆風險，再提高信心</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在整理</h4>
+        <ul><li>分開記錄公司平台、供應鏈與產業題材。</li><li>畫出 AI 的資金、設備、雲端與終端付費鏈。</li><li>把地端 AI 的採用條件寫成可驗證清單。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>Apple 摺疊產品的需求與中國市場表現。</li><li>雲端利用率、回款與模型商資金條件。</li><li>資料中心電力、許可與實際採購進度。</li><li>群聯與企業地端 AI 的客戶採用與放量。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>把供應鏈傳聞寫成確定訂單。</li><li>把融資擴張直接當成無風險需求。</li><li>把概念評價、歷史參訪或市場例示寫成持股。</li><li>用摸頭做空取代事前風控規則。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
