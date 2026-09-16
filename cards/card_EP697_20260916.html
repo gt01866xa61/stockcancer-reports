@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta name="stockcancer-font-scale" content="1.5">
+  <meta name="stockcancer-layout" content="wide-1320-v1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP697 筆記｜2026-09-16</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 22.5px; /* stockcancer-font-base:15px */ padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 18px; /* stockcancer-font-base:12px */ color: #b8b8b8; }
+  .sec { font-size: 18px; /* stockcancer-font-base:12px */ color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 33px; /* stockcancer-font-base:22px */ margin-bottom: 4px; }
+  h2 { font-size: 27px; /* stockcancer-font-base:18px */ margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 19.5px; /* stockcancer-font-base:13px */ margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .ticker code { color: #a0a0a0; font-size: 18px; /* stockcancer-font-base:12px */ margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 21.75px; /* stockcancer-font-base:14.5px */ color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 19.5px; /* stockcancer-font-base:13px */ color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 18.75px; /* stockcancer-font-base:12.5px */ padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 19.5px; /* stockcancer-font-base:13px */ text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+<style id="stockcancer-font-scale-layout">
+@media (max-width: 640px) {
+  .card, section { min-width: 0; }
+  table { table-layout: fixed; max-width: 100%; }
+  th, td { white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+  .ticker, code, a { max-width: 100%; overflow-wrap: anywhere; word-break: break-word; }
+
+  #card-11 table, #moves table, #card-11 tbody, #moves tbody { display: block; width: 100%; overflow: visible; }
+  #card-11 thead, #moves tr:has(th) { display: none; }
+  #card-11 tbody tr, #moves tr:has(td) { display: block; padding: 12px 0; border-bottom: 1px solid #ececec; }
+  #card-11 td, #moves td { display: block; width: auto; min-width: 0; padding: 4px 0; border: 0; white-space: normal; }
+  #card-11 td::before, #moves td::before { font-weight: 700; color: #777; }
+  #card-11 td:nth-child(1)::before { content: '標的／部位：'; }
+  #card-11 td:nth-child(2)::before { content: '本集狀態：'; }
+  #card-11 td:nth-child(3)::before { content: '依據：'; }
+  #moves td:nth-child(1)::before { content: '集數：'; }
+  #moves td:nth-child(2)::before { content: '標的／部位：'; }
+  #moves td:nth-child(3)::before { content: '動作／狀態：'; }
+}
+  </style>
+<style id="stockcancer-wide-layout">
+.wrap { width: 100%; max-width: 1320px; }
+.card, .block, .grid3 > *, .cols3 > * { min-width: 0; }
+.grid3, .cols3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ticker { max-width: 100%; overflow-wrap: anywhere; }
+
+.story p, .why, .watchlist li, .mood,
+.card > .core, .card > .note, .card > .mechanism,
+.card > .risk, .card > .action, .card > blockquote {
+  max-inline-size: 40em;
+  overflow-wrap: anywhere;
+}
+.law .p, .law .q { max-inline-size: 40em; }
+.kpi .lab, .law .q { line-break: strict; overflow-wrap: anywhere; padding-inline-end: 1em; }
+
+@media (min-width: 1024px) {
+  .grid3, .cols3 { gap: 24px; }
+  .kpi { gap: 12px; }
+  .tgrid { gap: 16px; }
+}
+@media (max-width: 900px) and (min-width: 641px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+  .kpi { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kpi .k.txt { grid-column: 1 / -1; }
+  .tgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP697 筆記</h1>
+    <div class="date">2026-09-16｜AI 安全驗證 × 算力需求反轉 × 被動元件漲價｜官方發布 2026-09-16</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>基本面偏多</h4>
+        <span class="ticker">AI 雲端／算力基礎設施</span>
+        <span class="ticker">GPU／ASIC 算力市場</span>
+        <span class="ticker">AI 安全驗證／監控算力</span>
+        <span class="ticker">被動元件族群</span>
+      </div>
+      <div class="col">
+        <h4>保留條件</h4>
+        <span class="ticker">台股：資金回流未必扭轉全球弱勢</span>
+        <span class="ticker">資安族群：合作模式未確認</span>
+        <span class="ticker">監管：落地節奏與成本待驗證</span>
+        <span class="ticker">硬體：需求擴張仍要看價格與供給</span>
+      </div>
+      <div class="col">
+        <h4>不可誤當新買單</h4>
+        <span class="ticker">本集無可確認具名現有持倉</span>
+        <span class="ticker">中國 A 股：偏負面市場評價</span>
+        <span class="ticker">IPO 抽籤：非本集操作建議</span>
+        <span class="ticker">安全論述：含主持人動機推論</span>
+      </div>
+    </div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-3"><b>主線反轉：</b>安全要求增加，不必然等於算力需求變少。</a>
+    <a class="insight-pill" href="#card-4"><b>新增工作量：</b>過濾、驗證、重測與監控，都可能成為額外運算。</a>
+    <a class="insight-pill" href="#card-8"><b>產業線索：</b>被動元件漲價趨勢仍在，但不能直接當買進訊號。</a>
+    <a class="insight-pill" href="#card-12"><b>風控底線：</b>市場觀察與可跟單交易必須分開。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 本集主線</a>
+      <a href="#card-3">03 大盤與流動性</a>
+      <a href="#card-4">04 安全與算力</a>
+      <a href="#card-5">05 驗證工作流</a>
+      <a href="#card-6">06 GPU／ASIC</a>
+      <a href="#card-7">07 資安族群</a>
+      <a href="#card-8">08 被動元件</a>
+      <a href="#card-9">09 中國 A 股</a>
+      <a href="#card-10">10 權限與風控</a>
+      <a href="#card-11">11 操作揭露</a>
+      <a href="#card-12">12 觀察清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">總結｜本集投資主線</div>
+    <h2>安全不是 AI 基建的反義詞</h2>
+    <div class="core"><span class="tag">重點</span>市場先把安全監管理解成 AI 放慢、硬體受壓；主持人的反向觀點是，若流程真的變嚴格，模型從資料到部署的每個關卡都可能增加運算工作量。</div>
+
+    <div class="mechanism"><span class="tag">先拆成兩件事</span><ol><li>訓練速度是否放慢，是一個問題。</li><li>驗證與監控是否新增工作量，是另一個問題。</li><li>硬體需求最後仍須回到實際資本支出與利用率。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集架構</div>
+        <span class="ticker">AI 雲端／算力基礎設施</span>
+        <span class="ticker">GPU／ASIC 算力市場</span>
+        <span class="ticker">AI 安全驗證／監控算力</span>
+      </div>
+    <div class="note">主持人對公司與政治人物動機的拆解屬觀點，不是已證實事實。</div>
+    <div class="risk"><b>風險：</b>把『安全』直接等同『需求減速』，會略過驗證、測試與部署監控的新增成本。</div>
+    <div class="action"><b>應對：</b>後續分開追蹤監管落地、雲端資本支出、推論利用率與安全工具的實際預算。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">台股大盤｜低波動與資金</div>
+    <h2>資金可能回流，但全球盤勢仍是上限</h2>
+    <div class="core"><span class="tag">重點</span>主持人把盤面形容為低波動，認為大型抽籤資金解除圈存後可能帶來活水；但他同時對海外市場偏弱保留，因此本集大盤由偏多降為觀望。</div>
+
+    <div class="mechanism"><span class="tag">流動性不是單一開關</span><ol><li>本地資金解除圈存可能改善交易動能。</li><li>海外風險偏好仍會影響台股。</li><li>短線資金變化不能取代趨勢與基本面判斷。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">最新定位</div>
+        <span class="ticker">台股大盤(指數)：觀望</span>
+        <span class="ticker">IPO 資金回流：可能因素</span>
+        <span class="ticker">全球市場：仍需確認</span>
+      </div>
+    <div class="note">本集沒有指數點位、槓桿比例或具名成交揭露。</div>
+    <div class="risk"><b>風險：</b>把流動性預期當成趨勢反轉確認，容易忽略海外市場拖累。</div>
+    <div class="action"><b>應對：</b>先觀察市場是否真的放量與領頭，再決定是否調整風險曝險。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">AI 安全｜反向需求判讀</div>
+    <h2>模型要更安全，先多出一整串工作</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為人類無法只靠人工管理越來越強的模型，安全流程本身也會大量使用 AI。這使監管或驗證不只是一道煞車，也可能變成新的運算需求來源。</div>
+
+    <div class="mechanism"><span class="tag">需求從哪裡增加</span><ol><li>訓練資料先過濾與清理。</li><li>候選模型完成後再被測試與評估。</li><li>部署後仍要持續監控與必要時重測。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">偏多框架</div>
+        <span class="ticker">AI 雲端／算力基礎設施</span>
+        <span class="ticker">AI 安全驗證／監控算力</span>
+        <span class="ticker">推論工作負載</span>
+      </div>
+    <div class="note">本卡整理的是主持人的機制推論，沒有把額外需求寫成已確認訂單。</div>
+    <div class="risk"><b>風險：</b>實際政策與企業流程可能比節目假設鬆或慢，新增工作量也未必全部轉為外部硬體採購。</div>
+    <div class="action"><b>應對：</b>看安全與合規預算是否真的進入雲端、模型商與企業的資本支出。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">模型流程｜驗證比訓練更長</div>
+    <h2>從資料消毒到部署監考，算力不只用一次</h2>
+    <div class="core"><span class="tag">重點</span>主持人把安全流程具象化：資料過濾後才進訓練，候選模型需經第三方與危險能力測試，對齊與可解釋性還可能要求反覆重跑；部署後也不能停止監看。</div>
+
+    <div class="mechanism"><span class="tag">工作流檢查表</span><ol><li>資料品質與訓練環境。</li><li>候選模型與第三方評估。</li><li>危險能力、對齊與可解釋性檢查。</li><li>部署後監控、隔離與重測。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">可能的受益環節</div>
+        <span class="ticker">推論算力</span>
+        <span class="ticker">模型測試</span>
+        <span class="ticker">監控工具</span>
+        <span class="ticker">資料治理</span>
+      </div>
+    <div class="note">本集沒有量化每個環節的算力占比或外包比例。</div>
+    <div class="risk"><b>風險：</b>流程變複雜不保證全部使用最尖端硬體，也不代表每一類供應商能留下相同價值。</div>
+    <div class="action"><b>應對：</b>比較新增流程是否帶來可計費服務、持續性用量與可辨識的供應鏈瓶頸。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">GPU／ASIC｜市場情緒與實際用量</div>
+    <h2>訓練可能慢一點，推論與監控未必會少</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為市場把硬體賣壓直接連到安全監管，忽略了推論本來就是高用量環節；若再加上驗證與監控，總運算使用量可能反而增加。</div>
+
+    <div class="mechanism"><span class="tag">不要只看單一需求端</span><ol><li>訓練節奏可能受共識或監管影響。</li><li>既有推論需求不會因此自動消失。</li><li>安全流程會再增加測試與監控型推論。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">最新判讀</div>
+        <span class="ticker">GPU／ASIC 算力市場：偏多</span>
+        <span class="ticker">AI 硬體：需求與估值分開</span>
+        <span class="ticker">推論：關鍵用量</span>
+      </div>
+    <div class="note">本集沒有新增 NVIDIA、AMD 或自研晶片公司的獨立買賣結論。</div>
+    <div class="risk"><b>風險：</b>需求機制偏正面，仍可能被市占、供應、價格與高估值壓縮抵銷。</div>
+    <div class="action"><b>應對：</b>將硬體投資拆成用量、單位經濟、供給與估值四項，不用單日價格判斷全部基本面。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">資安族群｜不要先判它被取代</div>
+    <h2>安全驗證可能是合作需求，而非直接消失</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為把 AI 解讀成會直接消滅資安的說法過度簡化；若模型安全要求提高，資安能力可能成為流程的一環。但本集沒有具名公司或商業化證據，因此只列觀望。</div>
+
+    <div class="mechanism"><span class="tag">從敘事到收入的距離</span><ol><li>安全需求存在，不代表採購一定落在資安軟體。</li><li>企業可能自建、雲端整合或交由第三方。</li><li>真正受益者仍要看預算、產品與客戶導入。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集定位</div>
+        <span class="ticker">資安族群：觀望</span>
+        <span class="ticker">AI 安全：需求線索</span>
+        <span class="ticker">合作模式：待確認</span>
+      </div>
+    <div class="note">沒有用模糊的產品與公司名稱延伸出受惠名單。</div>
+    <div class="risk"><b>風險：</b>短線股價反應不等於可重複營收，也不等於整個族群的估值都合理。</div>
+    <div class="action"><b>應對：</b>追蹤安全需求是否轉成可辨識的訂單、續約與毛利改善。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">被動元件｜趨勢與價格位置</div>
+    <h2>漲價還在，不代表可以把研究變報牌</h2>
+    <div class="core"><span class="tag">重點</span>主持人回顧先前捕捉到被動元件漲價循環，並稱趨勢尚未結束。這提供持續追蹤的產業線索，但不包含具名公司、買點或持倉。</div>
+
+    <div class="mechanism"><span class="tag">產業趨勢的三層驗證</span><ol><li>報價是否持續。</li><li>需求與庫存是否支持。</li><li>個別公司能否把漲價留下為營收與毛利。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">最新定位</div>
+        <span class="ticker">被動元件族群：偏多</span>
+        <span class="ticker">漲價趨勢：持續</span>
+        <span class="ticker">個股買點：另行判斷</span>
+      </div>
+    <div class="note">主持人提醒聽眾不要聽到題材就立刻追買。</div>
+    <div class="risk"><b>風險：</b>部分股票已休息，漲價趨勢與股價節奏不必同步；庫存、價格與估值都可能先反映。</div>
+    <div class="action"><b>應對：</b>用公司報價、庫存、營收與毛利交叉確認，而不是只跟隨族群名稱。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">中國 A 股｜市場偏好</div>
+    <h2>不熟與不理想環境，就是不必硬做</h2>
+    <div class="core"><span class="tag">重點</span>主持人表示近年已不再操作中國市場，理由是認為市場環境不理想。這是明確的偏負面市場偏好，不等於逐一判定每家中國公司都沒有價值。</div>
+
+    <div class="mechanism"><span class="tag">先問能力圈</span><ol><li>是否仍持續研究該市場。</li><li>制度、流動性與產業環境是否可理解。</li><li>若沒有優勢，保留資金也是一種選擇。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集定位</div>
+        <span class="ticker">中國 A 股：偏負面</span>
+        <span class="ticker">市場能力圈</span>
+        <span class="ticker">資金選擇權</span>
+      </div>
+    <div class="note">本集沒有點名中國公司或提供放空、賣出與轉入其他市場的指令。</div>
+    <div class="risk"><b>風險：</b>把個人市場偏好誤讀成完整宏觀預測，會忽略個別公司與政策的差異。</div>
+    <div class="action"><b>應對：</b>若要研究，先建立制度、流動性、產業資料與風險來源的獨立框架。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">投資權限｜高資產服務與風險</div>
+    <h2>打開更多門之前，先確定看得懂門後面</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為高資產或專業投資人資格對懂得使用的人可能有幫助，但它也會帶來更複雜、未必適合每個人的商品與推銷壓力。</div>
+
+    <div class="mechanism"><span class="tag">權限不等於優勢</span><ol><li>先理解產品、成本與流動性。</li><li>再確認風險是否能自己承擔。</li><li>無法獨立判讀時，不因資格而擴大曝險。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">可帶走的規則</div>
+        <span class="ticker">專業投資人資格</span>
+        <span class="ticker">複雜產品</span>
+        <span class="ticker">獨立判斷</span>
+        <span class="ticker">風險承擔</span>
+      </div>
+    <div class="note">本卡是風險心法，沒有把高資產服務列為證券買賣或主持人持倉。</div>
+    <div class="risk"><b>風險：</b>資格與更多通路可能讓投資人接觸超出理解範圍的商品。</div>
+    <div class="action"><b>應對：</b>申請前先做產品清單、最差情境與退出條件，不靠他人保證。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">部位與風控揭露</div>
+    <h2>本集有產業觀察，沒有可確認具名現有持倉</h2>
+    <div class="note no-confirmed-holdings">本集未揭露可確認的具名現有持倉；不加持有星號。</div>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td>台股大盤(指數)</td>
+        <td>流動性與全球盤勢觀察</td>
+        <td>主持人討論抽籤資金與海外市場，但未公開指數部位、槓桿、點位或交易。</td>
+      </tr>
+      <tr>
+        <td>被動元件族群</td>
+        <td>漲價趨勢觀察</td>
+        <td>主持人稱趨勢仍在；未揭露具名公司、成本、數量或買賣。</td>
+      </tr>
+      <tr>
+        <td>中國 A 股</td>
+        <td>近年不再操作／關注</td>
+        <td>主持人表達市場偏好，沒有具名證券或帳戶交易資訊。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">本表不是主持人完整帳戶快照。</div>
+    <div class="note">AI 算力與資安的公司或族群立場，不等於本集公開買入。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">本集可帶走的觀察框架</div>
+    <h2>把安全、需求與投資價格分開驗證</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在整理</h4>
+        <ul><li>畫出 AI 從資料到部署的新增驗證流程。</li><li>將訓練、推論、測試與監控分開估算。</li><li>整理被動元件的報價、庫存與個別公司差異。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>監管與第三方評估是否實際落地。</li><li>雲端與模型商是否增加安全型運算預算。</li><li>資安需求是否轉為可辨識訂單與續約。</li><li>全球市場是否允許台股流動性改善延續。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>把主持人的動機推論當成已證實事實。</li><li>把產業趨勢直接當作個股追價訊號。</li><li>把市場觀察寫成主持人已買入。</li><li>在看不懂產品時，因更多權限而擴大風險。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
