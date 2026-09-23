@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta name="stockcancer-font-scale" content="1.5">
+  <meta name="stockcancer-layout" content="wide-1320-v1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP699 筆記｜2026-09-23</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 22.5px; /* stockcancer-font-base:15px */ padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 18px; /* stockcancer-font-base:12px */ color: #b8b8b8; }
+  .sec { font-size: 18px; /* stockcancer-font-base:12px */ color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 33px; /* stockcancer-font-base:22px */ margin-bottom: 4px; }
+  h2 { font-size: 27px; /* stockcancer-font-base:18px */ margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 19.5px; /* stockcancer-font-base:13px */ margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .ticker code { color: #a0a0a0; font-size: 18px; /* stockcancer-font-base:12px */ margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 21.75px; /* stockcancer-font-base:14.5px */ color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 19.5px; /* stockcancer-font-base:13px */ color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 18.75px; /* stockcancer-font-base:12.5px */ padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 19.5px; /* stockcancer-font-base:13px */ text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+<style id="stockcancer-font-scale-layout">
+@media (max-width: 640px) {
+  .card, section { min-width: 0; }
+  table { table-layout: fixed; max-width: 100%; }
+  th, td { white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+  .ticker, code, a { max-width: 100%; overflow-wrap: anywhere; word-break: break-word; }
+
+  #card-11 table, #moves table, #card-11 tbody, #moves tbody { display: block; width: 100%; overflow: visible; }
+  #card-11 thead, #moves tr:has(th) { display: none; }
+  #card-11 tbody tr, #moves tr:has(td) { display: block; padding: 12px 0; border-bottom: 1px solid #ececec; }
+  #card-11 td, #moves td { display: block; width: auto; min-width: 0; padding: 4px 0; border: 0; white-space: normal; }
+  #card-11 td::before, #moves td::before { font-weight: 700; color: #777; }
+  #card-11 td:nth-child(1)::before { content: '標的／部位：'; }
+  #card-11 td:nth-child(2)::before { content: '本集狀態：'; }
+  #card-11 td:nth-child(3)::before { content: '依據：'; }
+  #moves td:nth-child(1)::before { content: '集數：'; }
+  #moves td:nth-child(2)::before { content: '標的／部位：'; }
+  #moves td:nth-child(3)::before { content: '動作／狀態：'; }
+}
+  </style>
+<style id="stockcancer-wide-layout">
+.wrap { width: 100%; max-width: 1320px; }
+.card, .block, .grid3 > *, .cols3 > * { min-width: 0; }
+.grid3, .cols3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ticker { max-width: 100%; overflow-wrap: anywhere; }
+
+.story p, .why, .watchlist li, .mood,
+.card > .core, .card > .note, .card > .mechanism,
+.card > .risk, .card > .action, .card > blockquote {
+  max-inline-size: 40em;
+  overflow-wrap: anywhere;
+}
+.law .p, .law .q { max-inline-size: 40em; }
+.kpi .lab, .law .q { line-break: strict; overflow-wrap: anywhere; padding-inline-end: 1em; }
+
+@media (min-width: 1024px) {
+  .grid3, .cols3 { gap: 24px; }
+  .kpi { gap: 12px; }
+  .tgrid { gap: 16px; }
+}
+@media (max-width: 900px) and (min-width: 641px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+  .kpi { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kpi .k.txt { grid-column: 1 / -1; }
+  .tgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP699 筆記</h1>
+    <div class="date">2026-09-23｜高檔盤結構 × Agentic CPU 再催化 × 光模組 DSP｜官方發布 2026-09-23</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>有條件偏多</h4>
+        <span class="ticker">台股大盤(指數)</span>
+        <span class="ticker">AI 雲端／算力基礎設施</span>
+        <span class="ticker">光通訊族群</span>
+      </div>
+      <div class="col">
+        <h4>供需與時程追蹤</h4>
+        <span class="ticker">CPU／Agentic AI 供應鏈</span>
+        <span class="ticker">光模組 DSP／高速訊號晶片</span>
+        <span class="ticker">CCL 族群</span>
+      </div>
+      <div class="col">
+        <h4>不可誤當買單</h4>
+        <span class="ticker">整體在場部位非具名持股</span>
+        <span class="ticker">記憶體：觀望</span>
+        <span class="ticker">DSP 漲價仍待正式報價驗證</span>
+      </div>
+    </div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>大盤判讀：</b>指數高檔與輪動回升，不能因短線交易不順就猜頂。</a>
+    <a class="insight-pill" href="#card-3"><b>CPU 題材：</b>Muse 是第二波催化；需求倍數須先檢驗並發與利用率。</a>
+    <a class="insight-pill" href="#card-5"><b>光模組：</b>DSP 短中期供需和長期 CPO／LPO 架構轉變要分開看。</a>
+    <a class="insight-pill" href="#card-10"><b>風控底線：</b>方向、訂單證據與股價位置分開，保留失效條件。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 本集主線</a>
+      <a href="#card-3">03 大盤轉偏多</a>
+      <a href="#card-4">04 Agentic CPU</a>
+      <a href="#card-5">05 CPU 需求驗證</a>
+      <a href="#card-6">06 DSP 供需</a>
+      <a href="#card-7">07 架構與過渡</a>
+      <a href="#card-8">08 CCL 材料</a>
+      <a href="#card-9">09 記憶體</a>
+      <a href="#card-10">10 投資心法</a>
+      <a href="#card-11">11 操作揭露</a>
+      <a href="#card-12">12 觀察清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">總結｜本集投資主線</div>
+    <h2>大盤不急著猜頂，AI 題材不急著追滿</h2>
+    <div class="core"><span class="tag">重點</span>主持人看到指數高檔、弱勢族群回升與輪動改善，因此不願只因短線難做就全面轉空；另一方面，Meta Muse 使 CPU 與 agentic AI 題材再熱，但這是第二次催化，需要業績接棒。光模組 DSP 的漲價傳聞則提供另一條供需觀察線。</div>
+
+    <div class="mechanism"><span class="tag">三條線分開判斷</span><ol><li>市場：指數、廣度與破底證據。</li><li>CPU：實際部署、同時在線與營收。</li><li>DSP：報價、光模組升規與客戶架構。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">研究主線</div>
+        <span class="ticker">台股大盤(指數)</span>
+        <span class="ticker">CPU／Agentic AI 供應鏈</span>
+        <span class="ticker">光模組 DSP／高速訊號晶片</span>
+      </div>
+    <div class="note">這是主持人的市場框架，不是對個別股票的買進指令。</div>
+    <div class="risk"><b>風險：</b>盤面輪動、需求試算與漲價傳聞都可能快於實際訂單；方向正確也不保證短期股價。</div>
+    <div class="action"><b>應對：</b>各自列出能證實或推翻論點的下一份資料。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">大盤｜高檔與輪動</div>
+    <h2>短線做得痛，不代表指數已經轉空</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為指數接近或創新高、盤面結構逐漸改善，功率元件與光通等先前低迷族群開始回升。若只是個人的動能策略被反覆洗掉，不能因此替整體市場宣判熊市；這集由觀望轉為有條件偏多。</div>
+
+    <div class="mechanism"><span class="tag">更新立場的條件</span><ol><li>先看指數是否真正破底。</li><li>再看是否有更多股票同步轉弱。</li><li>最後確認輪動是否從回升變成衰竭。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集定位</div>
+        <span class="ticker">台股大盤(指數)：有條件偏多</span>
+        <span class="ticker">功率元件：弱勢修復觀察</span>
+        <span class="ticker">光通訊：輪動回升</span>
+      </div>
+    <div class="note">主持人自述通常保有八九成以上整體在場部位；這不是今天的帳戶截圖，更不是建議照抄的配置。</div>
+    <div class="risk"><b>風險：</b>指數高檔也可能伴隨個股大幅分化，無法用指數位置取代部位風控。</div>
+    <div class="action"><b>應對：</b>以破底、廣泛轉弱與輪動失效作為重新評估條件。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">CPU｜Muse 第二波催化</div>
+    <h2>Agentic AI 帶回 CPU，卻不是第一次發現它</h2>
+    <div class="core"><span class="tag">重點</span>Meta Muse 推出後，CPU 題材重新被市場注意。主持人認為 agentic 工作流程確實讓 CPU 更重要，但上半年已出現第一波重估，這次更像二度催化；短線衝高後能否延續，得看客戶實際部署、拉貨與營收。</div>
+
+    <div class="mechanism"><span class="tag">從 App 到硬體的四道門</span><ol><li>下載與使用是否持續。</li><li>真實同時在線的比例。</li><li>每個活躍任務消耗的實體核心。</li><li>採購、出貨與營收是否跟上。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集定位</div>
+        <span class="ticker">CPU／Agentic AI 供應鏈：偏多但防 FOMO</span>
+        <span class="ticker">AI 雲端／算力基礎設施：偏多</span>
+        <span class="ticker">Meta Muse：應用催化而非採購證明</span>
+      </div>
+    <div class="note">Meta 官方產品資料可確認 Muse 的代理功能；個別 CPU 公司受惠幅度仍須查客戶及財報。</div>
+    <div class="risk"><b>風險：</b>產品熱度未必變成穩定付費或等比例硬體採購。</div>
+    <div class="action"><b>應對：</b>追蹤實際用量與業績，不把產品聲量直接換算成晶片訂單。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">需求模型｜拆掉極端倍數</div>
+    <h2>沒有並發率的 CPU 估算，不能拿來追價</h2>
+    <div class="core"><span class="tag">重點</span>主持人質疑網路流傳的極端 CPU 對 GPU 數量比：若把所有註冊用戶當成同時上線，會把硬體需求放大。他提醒先算活躍率、同時在線、每個任務的核心消耗與資料中心目標利用率，才有合理的容量估算。</div>
+
+    <div class="mechanism"><span class="tag">合理試算順序</span><ol><li>總用戶 × 同時活躍比例。</li><li>活躍任務 × 平均實體核心消耗。</li><li>再除以每顆晶片可用核心與利用率。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">風險辨識</div>
+        <span class="ticker">極端比例：未獲合理情境支持</span>
+        <span class="ticker">CPU 長期需求：仍有研究價值</span>
+        <span class="ticker">股價噴出：不等於試算正確</span>
+      </div>
+    <div class="note">主持人的比例判斷也是情境推估，不是公司正式訂單或業界一致財測。</div>
+    <div class="risk"><b>風險：</b>極端敘事一旦被修正，股價可先於基本面迅速回落。</div>
+    <div class="action"><b>應對：</b>看到驚人數字時，要求公開每一步假設與資料來源。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">光模組｜DSP 價格</div>
+    <h2>DSP 缺貨與漲價傳聞，先看供應商正式說法</h2>
+    <div class="core"><span class="tag">重點</span>主持人說市場傳出美系 DSP 供應商調價，並認為在高速光模組持續升規的過渡期，訊號處理晶片仍具需求。這是短中期供需線索；價格幅度、客戶接受度與財務影響仍需供應商正式資料確認。</div>
+
+    <div class="mechanism"><span class="tag">供需傳導</span><ol><li>升規使訊號品質與處理更重要。</li><li>供給吃緊時才有議價空間。</li><li>正式報價、出貨與毛利驗證能否實現。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">追蹤對象，不是買單</div>
+        <span class="ticker">光模組 DSP／高速訊號晶片：偏多</span>
+        <span class="ticker">Marvell：觀察公司評論</span>
+        <span class="ticker">MaxLinear：觀察公司評論</span>
+      </div>
+    <div class="note">Marvell 的光 DSP 產品可由公司官方資料確認；節目中的調價仍是傳聞。</div>
+    <div class="risk"><b>風險：</b>不同客戶合約與模組架構差異大，不能把一個產業調價傳聞平均套到所有供應商。</div>
+    <div class="action"><b>應對：</b>比對公司公告、法說、客戶設計與實際毛利，不由股價倒推訂單。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">架構轉換｜CPO 與 LPO</div>
+    <h2>下一代可能改變 DSP 用法，但不會昨天說完今天歸零</h2>
+    <div class="core"><span class="tag">重點</span>主持人承認 CPO、LPO 等新架構可能降低既有 DSP 在某些模組中的角色；然而全面成熟、採用與放量需要時間。過渡期產品仍可能持續出貨，既有業者也可能以 IP、chiplet 或合作轉型。</div>
+
+    <div class="mechanism"><span class="tag">拒絕零和推論</span><ol><li>分清目前量產與未來目標架構。</li><li>逐段看 DSP 在不同鏈路的必要性。</li><li>觀察供應商能否轉向新價值環節。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">相關主題</div>
+        <span class="ticker">光模組 DSP</span>
+        <span class="ticker">CPO／LPO 架構</span>
+        <span class="ticker">光通訊族群</span>
+      </div>
+    <div class="note">逐字稿部分技術名詞有誤辨；本稿只使用在原文另有清楚出現的 CPO、LPO。</div>
+    <div class="risk"><b>風險：</b>若架構轉換加速，傳統 DSP 的價格與用量可能早於預期被重估。</div>
+    <div class="action"><b>應對：</b>把量產時間表、規格、IP 收費與客戶採用率分開追蹤。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">CCL｜降規要看時間尺度</div>
+    <h2>未來架構可能省材料，不等於現在立刻降規</h2>
+    <div class="core"><span class="tag">重點</span>主持人延續前集對 CCL 降規傳聞的保留：就算新互連架構最終改變部分板材要求，也要等技術成熟、成本下降與量產擴散；在此之前不能把目前的升規需求直接判死。</div>
+
+    <div class="mechanism"><span class="tag">判讀三層</span><ol><li>架構是否已量產，而不只是設計方向。</li><li>哪些訊號鏈路真的移出板材。</li><li>舊材料降價與新材料升規如何同時發生。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集定位</div>
+        <span class="ticker">CCL 族群：延續偏多</span>
+        <span class="ticker">高速板材：按鏈路驗證</span>
+        <span class="ticker">新架構：觀察時程</span>
+      </div>
+    <div class="note">本集沒有具名 CCL 公司交易、接單量或獲利指引。</div>
+    <div class="risk"><b>風險：</b>個別供應商的產品組合可能與產業總需求方向相反。</div>
+    <div class="action"><b>應對：</b>追蹤客戶材料規格與導入節奏，不用一個架構名詞宣判全族群。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">記憶體｜供需說法分歧</div>
+    <h2>一句『不缺』不能覆蓋所有 AI 零件</h2>
+    <div class="core"><span class="tag">重點</span>主持人質疑個別業者對記憶體或零件不缺貨的公開說法能否代表整體 AI 供應鏈。他認為新服務與算力配置會持續改變需求，但本集沒有可核對的產品別庫存與公司訂單，因此列為觀望而非追價指令。</div>
+
+    <div class="mechanism"><span class="tag">供需要分層</span><ol><li>先分 PC、手機與資料中心市場。</li><li>再分產品別庫存、價格與交期。</li><li>最後看新應用是否帶來實際採購。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集定位</div>
+        <span class="ticker">記憶體族群：觀望</span>
+        <span class="ticker">CPU 工作負載：需求變數</span>
+        <span class="ticker">個別高管評論：非全市場證明</span>
+      </div>
+    <div class="note">主持人的反駁屬觀點，不等於已取得全面供需資料。</div>
+    <div class="risk"><b>風險：</b>若某些市場供給快速恢復，單純的缺貨敘事可能失效。</div>
+    <div class="action"><b>應對：</b>按終端和品項比對實際庫存、價格及供應商財報。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">投資心法｜情境與失效證據</div>
+    <h2>先拆數字假設，也別太早宣判技術死亡</h2>
+    <div class="core"><span class="tag">重點</span>這集有兩個相反的提醒：市場熱時，極端硬體需求數字容易讓人 FOMO；技術轉換時，又容易過早認定舊供應鏈會消失。兩者都要回到情境、時間尺度與實際資料。</div>
+
+    <div class="mechanism"><span class="tag">每個題材先問</span><ol><li>數字從哪些假設推導，哪些尚未驗證。</li><li>這是目前量產、過渡期，還是遠期架構。</li><li>何種價格、營收或客戶證據會推翻我。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">可帶走的規則</div>
+        <span class="ticker">不摸頭猜頂</span>
+        <span class="ticker">不追極端倍數</span>
+        <span class="ticker">不把長期替代當成即刻歸零</span>
+      </div>
+    <div class="note">主持人通常維持市場曝險，但仍明言要以破底等證據更新判斷。</div>
+    <div class="risk"><b>風險：</b>過度相信單一情境會讓部位與市場證據脫節。</div>
+    <div class="action"><b>應對：</b>為每一條投資敘事寫下來源、時間表與失效條件。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">部位與風控揭露</div>
+    <h2>有整體曝險習慣，沒有具名現有持倉</h2>
+    <div class="note no-confirmed-holdings">本集未揭露可確認的具名現有持倉；不加持有星號。</div>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td>整體股票部位</td>
+        <td>主持人自述常態八九成以上在場</td>
+        <td>這是一般做法，不是本集即時帳戶快照、具名買單或對讀者的配置建議。</td>
+      </tr>
+      <tr>
+        <td>CPU／Agentic AI 供應鏈</td>
+        <td>需求方向偏多、價格防 FOMO</td>
+        <td>討論第二波催化與需求估算，未揭露具名持倉、成本或交易。</td>
+      </tr>
+      <tr>
+        <td>光模組 DSP 與 CCL</td>
+        <td>產業鏈觀察</td>
+        <td>討論供需、調價傳聞與架構替代，未公開具名現有部位。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">私人事業與蕭楠資本的遊戲投資不列入二級市場持倉。</div>
+    <div class="note">這不是主持人的完整投資組合。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">本集可帶走的觀察框架</div>
+    <h2>將指數、CPU 與 DSP 各自設驗證點</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>現在整理</h4>
+        <ul><li>將大盤高檔與個股短線策略績效分開。</li><li>為 CPU 題材列出活躍率、並發率和單任務核心用量。</li><li>把 DSP 漲價傳聞標成未證實資訊。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等待驗證</h4>
+        <ul><li>指數是否破底、輪動是否擴散或衰竭。</li><li>Agentic AI 的付費、部署、CPU 出貨與營收。</li><li>DSP 供應商正式報價、產品組合與毛利。</li><li>CPO／LPO 量產時程和原有供應商轉型。</li></ul>
+      </div>
+      <div class="box">
+        <h4>明確避免</h4>
+        <ul><li>把 App 下載熱度直接換成晶片需求。</li><li>拿沒有並發率的極端倍數追價。</li><li>用遠期架構宣告當前 DSP／CCL 立即失效。</li><li>把整體市場曝險誤讀為具名個股持倉。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
