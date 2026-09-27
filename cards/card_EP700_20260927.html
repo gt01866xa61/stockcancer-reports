@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta name="stockcancer-font-scale" content="1.5">
+  <meta name="stockcancer-layout" content="wide-1320-v1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP700 筆記｜2026-09-27</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 22.5px; /* stockcancer-font-base:15px */ padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 18px; /* stockcancer-font-base:12px */ color: #b8b8b8; }
+  .sec { font-size: 18px; /* stockcancer-font-base:12px */ color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 33px; /* stockcancer-font-base:22px */ margin-bottom: 4px; }
+  h2 { font-size: 27px; /* stockcancer-font-base:18px */ margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 19.5px; /* stockcancer-font-base:13px */ margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .ticker code { color: #a0a0a0; font-size: 18px; /* stockcancer-font-base:12px */ margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 21.75px; /* stockcancer-font-base:14.5px */ color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 19.5px; /* stockcancer-font-base:13px */ color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 18.75px; /* stockcancer-font-base:12.5px */ padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 19.5px; /* stockcancer-font-base:13px */ text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+<style id="stockcancer-font-scale-layout">
+@media (max-width: 640px) {
+  .card, section { min-width: 0; }
+  table { table-layout: fixed; max-width: 100%; }
+  th, td { white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+  .ticker, code, a { max-width: 100%; overflow-wrap: anywhere; word-break: break-word; }
+
+  #card-11 table, #moves table, #card-11 tbody, #moves tbody { display: block; width: 100%; overflow: visible; }
+  #card-11 thead, #moves tr:has(th) { display: none; }
+  #card-11 tbody tr, #moves tr:has(td) { display: block; padding: 12px 0; border-bottom: 1px solid #ececec; }
+  #card-11 td, #moves td { display: block; width: auto; min-width: 0; padding: 4px 0; border: 0; white-space: normal; }
+  #card-11 td::before, #moves td::before { font-weight: 700; color: #777; }
+  #card-11 td:nth-child(1)::before { content: '標的／部位：'; }
+  #card-11 td:nth-child(2)::before { content: '本集狀態：'; }
+  #card-11 td:nth-child(3)::before { content: '依據：'; }
+  #moves td:nth-child(1)::before { content: '集數：'; }
+  #moves td:nth-child(2)::before { content: '標的／部位：'; }
+  #moves td:nth-child(3)::before { content: '動作／狀態：'; }
+}
+  </style>
+<style id="stockcancer-wide-layout">
+.wrap { width: 100%; max-width: 1320px; }
+.card, .block, .grid3 > *, .cols3 > * { min-width: 0; }
+.grid3, .cols3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ticker { max-width: 100%; overflow-wrap: anywhere; }
+
+.story p, .why, .watchlist li, .mood,
+.card > .core, .card > .note, .card > .mechanism,
+.card > .risk, .card > .action, .card > blockquote {
+  max-inline-size: 40em;
+  overflow-wrap: anywhere;
+}
+.law .p, .law .q { max-inline-size: 40em; }
+.kpi .lab, .law .q { line-break: strict; overflow-wrap: anywhere; padding-inline-end: 1em; }
+
+@media (min-width: 1024px) {
+  .grid3, .cols3 { gap: 24px; }
+  .kpi { gap: 12px; }
+  .tgrid { gap: 16px; }
+}
+@media (max-width: 900px) and (min-width: 641px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+  .kpi { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kpi .k.txt { grid-column: 1 / -1; }
+  .tgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP700 筆記</h1>
+    <div class="date">2026-09-26｜Meta Muse 裝置 × 代理交易入口 × 多頭股等回檔｜官方發布 2026-09-26</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>延續偏多</h4>
+        <span class="ticker">台股大盤(指數)</span>
+        <span class="ticker">光通訊主題：仍有興趣</span>
+        <span class="ticker">多頭股：等回檔</span>
+      </div>
+      <div class="col">
+        <h4>產品與平台觀察</h4>
+        <span class="ticker">Meta／Muse Charm</span>
+        <span class="ticker">AI 眼鏡與隨身代理</span>
+        <span class="ticker">購物支付串接</span>
+      </div>
+      <div class="col">
+        <h4>不可誤當買單</h4>
+        <span class="ticker">聽眾持股不是作者持股</span>
+        <span class="ticker">裝置想買不等於股票已買</span>
+        <span class="ticker">台達電僅短線圖形轉空</span>
+      </div>
+    </div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-3"><b>Meta 機會：</b>既有社群用戶是起點；真實採用與帳號授權才是考題。</a>
+    <a class="insight-pill" href="#card-6"><b>眼鏡推算：</b>不能先假定取代手機，再倒推出極端波導產能。</a>
+    <a class="insight-pill" href="#card-8"><b>交易風格：</b>指數仍強，追紅卻易受洗；改挑多頭股的回檔。</a>
+    <a class="insight-pill" href="#card-11"><b>持股界線：</b>聽眾清單、作者偏好與作者實際持倉分開。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 本集主線</a>
+      <a href="#card-3">03 Muse Charm</a>
+      <a href="#card-4">04 代理入口</a>
+      <a href="#card-5">05 Meta 信任門檻</a>
+      <a href="#card-6">06 眼鏡與波導</a>
+      <a href="#card-7">07 台股盤面</a>
+      <a href="#card-8">08 組合判讀</a>
+      <a href="#card-9">09 交易轉型</a>
+      <a href="#card-10">10 市場心性</a>
+      <a href="#card-11">11 操作揭露</a>
+      <a href="#card-12">12 觀察清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">總結｜雙主線</div>
+    <h2>裝置看實用，交易看介入點</h2>
+    <div class="core"><span class="tag">重點</span>主持人一方面看 Meta Muse Charm 是否能成為真正好用的個人代理入口，另一方面承認近期動能追價反覆受挫。前者仍待實機、串接和信任驗證；後者已讓他把操作從追紅改為挑多頭形態中的回檔。指數仍有支撐，不代表每種交易法都好做。</div>
+
+    <div class="mechanism"><span class="tag">把三件事拆開</span><ol><li>產品：使用者會不會持續用。</li><li>平台：服務與支付願不願意接。</li><li>交易：公司好與買點好不必同時發生。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">主要研究線</div>
+        <span class="ticker">Meta／Muse Charm</span>
+        <span class="ticker">台股大盤(指數)</span>
+        <span class="ticker">動能與波段策略</span>
+      </div>
+    <div class="note">本集未揭露可確認的具名新買賣。</div>
+    <div class="risk"><b>風險：</b>把產品興趣直接變股票買單，或把追高失利直接變成全面看空，都是錯誤外推。</div>
+    <div class="action"><b>應對：</b>分別追蹤產品採用、平台合作與假後盤面。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">Meta｜Muse Charm</div>
+    <h2>第一個讓他想親自試的隨身代理裝置</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為 Muse Charm 比先前獨立的 AI 小裝置多了 Meta 社群平台和既有用戶作為起點，外型也令他想試。不過 Meta 官方目前只確認可與 Muse 語音互動，詳細規格與售價尚待公布。他說的是想買產品，不是已買 Meta 股票。</div>
+
+    <div class="mechanism"><span class="tag">潛在優勢</span><ol><li>Facebook、Instagram 可能降低導入摩擦。</li><li>Muse 代理能力可跨裝置延伸。</li><li>實機若真的比手機便利，才有後續投資研究價值。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集定位</div>
+        <span class="ticker">Meta：觀望產品落地</span>
+        <span class="ticker">Muse Charm：想實測</span>
+        <span class="ticker">硬體供應鏈：未給具名買點</span>
+      </div>
+    <div class="note">鏡頭、指紋等逐字稿推想，不列為官方公布規格。</div>
+    <div class="risk"><b>風險：</b>前代 AI Pin 等裝置的失敗提醒：外型和發表會熱度不等於留存。</div>
+    <div class="action"><b>應對：</b>等售價、規格、實測流程和用戶留存。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">平台｜代理交易入口</div>
+    <h2>誰替你下單，誰就可能掌握新入口</h2>
+    <div class="core"><span class="tag">重點</span>Muse 若能替用戶在零售、付款與旅遊服務間完成任務，可能改變網站流量與交易分潤。Meta 官方已列出多個連接對象，Expedia 屬即將加入；但主持人描述的自動看物、比價、購買，是使用情境，不是 Muse Charm 已驗證的完整功能。</div>
+
+    <div class="mechanism"><span class="tag">價值如何轉移</span><ol><li>用戶把任務交給代理人。</li><li>代理人選擇零售、付款或旅遊服務。</li><li>流量、廣告與手續費的分配可能改變。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">官方列示連接對象</div>
+        <span class="ticker">Walmart／Best Buy</span>
+        <span class="ticker">Gap／Sephora</span>
+        <span class="ticker">PayPal；Expedia 將加入</span>
+      </div>
+    <div class="note">合作名單不等於各公司營收已明顯受惠。</div>
+    <div class="risk"><b>風險：</b>既有平台可能限制外部代理，避免交易入口與廣告收益旁落。</div>
+    <div class="action"><b>應對：</b>追蹤實際可用串接、交易完成率及平台分潤。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">阻力｜信任與授權</div>
+    <h2>產品再好，帳號不敢交也難放大</h2>
+    <div class="core"><span class="tag">重點</span>主持人對 Meta 平台處理詐騙與隱私的信任感偏低，認為代理若要串接個人社群、零售與支付帳號，使用者授權會是最大門檻之一。節目提及的信任度調查未找到原始來源，因此不採用百分比作為證據。</div>
+
+    <div class="mechanism"><span class="tag">採用漏斗</span><ol><li>裝置想買：只是初步興趣。</li><li>服務願用：須證明比手動更方便。</li><li>帳號願授權：才可能形成代理交易閉環。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">阻力</div>
+        <span class="ticker">使用者信任</span>
+        <span class="ticker">個資與授權</span>
+        <span class="ticker">平台開放意願</span>
+      </div>
+    <div class="note">主持人對 Meta 信任度的評語屬個人觀點，不是已驗證的公司營收歸因。</div>
+    <div class="risk"><b>風險：</b>授權不普及或服務夥伴封鎖代理，會限制交易入口想像。</div>
+    <div class="action"><b>應對：</b>觀察正式隱私設計、授權率與串接服務使用。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">眼鏡｜手機替代假設</div>
+    <h2>別先假設眼鏡贏手機，再拿來推晶圓缺口</h2>
+    <div class="core"><span class="tag">重點</span>主持人承認輕量 VR 眼鏡改善配戴痛點，但現階段更注意 AR 眼鏡與小型代理裝置。他認為手機的既有功能與習慣非常強，眼鏡立刻取代手機難度高；用極端銷量倒推光波導與台積電晶圓需求，前提尚未證實。</div>
+
+    <div class="mechanism"><span class="tag">需求推算的必要步驟</span><ol><li>先證實產品長期使用與換機理由。</li><li>再估計終端滲透、波導結構及良率。</li><li>最後才推晶圓產能與供應鏈受惠。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集定位</div>
+        <span class="ticker">AR 眼鏡：觀察</span>
+        <span class="ticker">VR 眼鏡：改善重量但非核心</span>
+        <span class="ticker">台積電：僅作產能假設例子</span>
+      </div>
+    <div class="note">Meta 官方確認 VR 眼鏡約百克；主持人對外接組件總重量的口述前後不一致，未拿來做硬數字。</div>
+    <div class="risk"><b>風險：</b>終端銷量與波導用量若低於最佳情境，供應鏈需求估算須重算。</div>
+    <div class="action"><b>應對：</b>等裝置開賣、銷量與材料供應資料，不用單一遠景推估買股。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">大盤｜節後確認</div>
+    <h2>指數新高與追高難做，可以同時成立</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為指數仍往上墊，連假前去槓桿和資金回收可能增加賣壓，假後資金有機會回來；近期市場信任感似乎修復。但他明說要等中秋假後再觀察，因此延續有條件偏多，不把假後上漲寫成已發生。</div>
+
+    <div class="mechanism"><span class="tag">兩套指標</span><ol><li>指數：趨勢與廣度。</li><li>策略：追紅是否有延續性。</li><li>假後：資金是否真回流、盤面是否穩住。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集定位</div>
+        <span class="ticker">台股大盤(指數)：有條件偏多</span>
+        <span class="ticker">假後回流：待驗證</span>
+        <span class="ticker">動能追價：近期不順</span>
+      </div>
+    <div class="note">指數續強並非個股普漲，不能拿來忽略停損與部位管理。</div>
+    <div class="risk"><b>風險：</b>假期外盤變化可能打斷回流經驗；短線技術判斷也可能迅速改變。</div>
+    <div class="action"><b>應對：</b>假後觀察資金、廣度和動能成功率，再決定策略尺寸。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">Q&amp;A｜聽眾組合</div>
+    <h2>光通、功率與算力是完整敘事，不是作者持倉</h2>
+    <div class="core"><span class="tag">重點</span>聽眾列出 Google、Lumentum、Coherent、Infineon、Bloom Energy、Corning、Teradyne 與 AMD 等持股。主持人認為整體配置有邏輯，也說自己喜歡其中若干公司；但他補充若以現在的時間點重新挑選，未必每檔都會選。這是對聽眾組合的評論，不是主持人公開持倉。</div>
+
+    <div class="mechanism"><span class="tag">題材連結</span><ol><li>Google 與資料中心需求。</li><li>Lumentum、Coherent、Corning 與光通訊。</li><li>Infineon、Bloom Energy 與電力。</li><li>Teradyne、AMD 與設備及 CPU。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">不可混淆</div>
+        <span class="ticker">聽眾有持股</span>
+        <span class="ticker">作者表示喜歡</span>
+        <span class="ticker">作者沒有揭露自己持有</span>
+      </div>
+    <div class="note">Infineon 被評為股性較慢；Bloom Energy 是資料中心供電敘事，均非具名買進指令。</div>
+    <div class="risk"><b>風險：</b>產業方向相近不代表每檔估值、訂單和股價位置一樣。</div>
+    <div class="action"><b>應對：</b>逐檔核對商業模式與現價，而非複製整包組合。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">操作｜追紅改等綠</div>
+    <h2>股票沒換，進場方式先換</h2>
+    <div class="core"><span class="tag">重點</span>主持人指出近期追高容易被洗，甚至當天尾盤就反轉；自己的做法轉成挑仍屬多頭形態、但當日下跌的標的，在回檔時介入。他認為即使動能盤再回來，也可能保留較慢的做法，因為高槓桿遇到大幅震盪難扛。</div>
+
+    <div class="mechanism"><span class="tag">新舊做法</span><ol><li>過去：看到強勢就買紅追。</li><li>現在：先確立多頭形態，再等回檔。</li><li>持有：偏波段，接受需要時間發酵。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">判讀</div>
+        <span class="ticker">策略轉變：明確</span>
+        <span class="ticker">指數立場：非全面轉空</span>
+        <span class="ticker">具名持倉：本集未揭露</span>
+      </div>
+    <div class="note">台達電的轉空說法只針對當下短線技術形態，不可外推基本面。</div>
+    <div class="risk"><b>風險：</b>買綠不等於接所有下跌；多頭形態失效與加槓回撤仍要設界線。</div>
+    <div class="action"><b>應對：</b>把趨勢、等待價位與失效條件分開寫。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">心法｜風格轉換</div>
+    <h2>慢一點，才能避免互相洗掉</h2>
+    <div class="core"><span class="tag">重點</span>主持人認為近期動能交易者看拉不動就急著丟，彼此形成反覆洗盤；這是市場參與者的心性與交易法同時改變。他沒有宣稱知道精確的風格切換指標，只說連擅長動能的朋友都感到困難，因此偏向波段，並持續觀察假後能否恢復。</div>
+
+    <div class="mechanism"><span class="tag">三個自問</span><ol><li>是市場真的轉弱，還是我的策略失效。</li><li>是好公司變壞，還是買得太急。</li><li>如果遇到劇烈震盪，槓桿與部位能否承受。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">提醒</div>
+        <span class="ticker">追高成功率</span>
+        <span class="ticker">波段耐心</span>
+        <span class="ticker">回撤承受度</span>
+      </div>
+    <div class="note">棒球模擬與真實比賽的比喻，也在說交易不能只靠無壓力的模擬表現。</div>
+    <div class="risk"><b>風險：</b>把一次反彈誤讀為盤勢完全恢復，可能重演追價與停損循環。</div>
+    <div class="action"><b>應對：</b>先縮短決策衝動，等假後市場提供更明確證據。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">部位與風控揭露</div>
+    <h2>本集是方法調整，沒有具名持股清單</h2>
+    <div class="note no-confirmed-holdings">本集未揭露可確認的具名現有持倉；不加持有星號。</div>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td>整體操作風格</td>
+        <td>追紅轉等多頭股回檔</td>
+        <td>主持人自述近來選強中帶弱、買綠，屬策略，不提供具名持股或成本。</td>
+      </tr>
+      <tr>
+        <td>Meta／Muse Charm</td>
+        <td>想買產品試用、觀察投資機會</td>
+        <td>沒有宣布買進 Meta 股票、裝置供應商或串接服務。</td>
+      </tr>
+      <tr>
+        <td>聽眾的光通與電力持股</td>
+        <td>僅評論組合</td>
+        <td>Google、Lumentum 等名稱出自聽眾提問，不是主持人自己的持股。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">沒有可確認的具名現有持倉；勿從偏好或提問推定持股。</div>
+    <div class="note">本集未提供新的具名買賣或部位比例。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">本集可帶走的觀察框架</div>
+    <h2>產品、盤面、買點各設一個驗證關卡</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>先記清楚</h4>
+        <ul><li>Meta 裝置仍待詳細規格與售價。</li><li>官方合作名單不等於交易收入已實現。</li><li>主持人對聽眾持股的評論不等於自己持有。</li></ul>
+      </div>
+      <div class="box">
+        <h4>等下一步證據</h4>
+        <ul><li>Muse Charm 實機、授權率與串接完成率。</li><li>眼鏡滲透與波導材料需求，而非最佳情境推算。</li><li>假後資金是否回流、動能追價是否恢復延續。</li></ul>
+      </div>
+      <div class="box">
+        <h4>避免誤讀</h4>
+        <ul><li>想買裝置不等於買 Meta 股票。</li><li>指數新高不等於追每檔強勢股。</li><li>買綠不等於無條件接跌勢股。</li><li>台達電短線轉空不等於基本面永久轉壞。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
