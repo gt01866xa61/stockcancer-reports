@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta name="stockcancer-font-scale" content="1.5">
+  <meta name="stockcancer-layout" content="wide-1320-v1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP701 筆記｜2026-09-30</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 22.5px; /* stockcancer-font-base:15px */ padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 18px; /* stockcancer-font-base:12px */ color: #b8b8b8; }
+  .sec { font-size: 18px; /* stockcancer-font-base:12px */ color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 33px; /* stockcancer-font-base:22px */ margin-bottom: 4px; }
+  h2 { font-size: 27px; /* stockcancer-font-base:18px */ margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 19.5px; /* stockcancer-font-base:13px */ margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .ticker code { color: #a0a0a0; font-size: 18px; /* stockcancer-font-base:12px */ margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 21.75px; /* stockcancer-font-base:14.5px */ color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 19.5px; /* stockcancer-font-base:13px */ color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 18.75px; /* stockcancer-font-base:12.5px */ padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 19.5px; /* stockcancer-font-base:13px */ text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+<style id="stockcancer-font-scale-layout">
+@media (max-width: 640px) {
+  .card, section { min-width: 0; }
+  table { table-layout: fixed; max-width: 100%; }
+  th, td { white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+  .ticker, code, a { max-width: 100%; overflow-wrap: anywhere; word-break: break-word; }
+
+  #card-11 table, #moves table, #card-11 tbody, #moves tbody { display: block; width: 100%; overflow: visible; }
+  #card-11 thead, #moves tr:has(th) { display: none; }
+  #card-11 tbody tr, #moves tr:has(td) { display: block; padding: 12px 0; border-bottom: 1px solid #ececec; }
+  #card-11 td, #moves td { display: block; width: auto; min-width: 0; padding: 4px 0; border: 0; white-space: normal; }
+  #card-11 td::before, #moves td::before { font-weight: 700; color: #777; }
+  #card-11 td:nth-child(1)::before { content: '標的／部位：'; }
+  #card-11 td:nth-child(2)::before { content: '本集狀態：'; }
+  #card-11 td:nth-child(3)::before { content: '依據：'; }
+  #moves td:nth-child(1)::before { content: '集數：'; }
+  #moves td:nth-child(2)::before { content: '標的／部位：'; }
+  #moves td:nth-child(3)::before { content: '動作／狀態：'; }
+}
+  </style>
+<style id="stockcancer-wide-layout">
+.wrap { width: 100%; max-width: 1320px; }
+.card, .block, .grid3 > *, .cols3 > * { min-width: 0; }
+.grid3, .cols3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ticker { max-width: 100%; overflow-wrap: anywhere; }
+
+.story p, .why, .watchlist li, .mood,
+.card > .core, .card > .note, .card > .mechanism,
+.card > .risk, .card > .action, .card > blockquote {
+  max-inline-size: 40em;
+  overflow-wrap: anywhere;
+}
+.law .p, .law .q { max-inline-size: 40em; }
+.kpi .lab, .law .q { line-break: strict; overflow-wrap: anywhere; padding-inline-end: 1em; }
+
+@media (min-width: 1024px) {
+  .grid3, .cols3 { gap: 24px; }
+  .kpi { gap: 12px; }
+  .tgrid { gap: 16px; }
+}
+@media (max-width: 900px) and (min-width: 641px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+  .kpi { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kpi .k.txt { grid-column: 1 / -1; }
+  .tgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP701 筆記</h1>
+    <div class="date">2026-09-30｜台股信任回流 × IC 設計 AI 槓桿 × 美國設廠供應鏈｜官方發布 2026-09-30</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>有條件偏多</h4>
+        <span class="ticker">台股大盤(指數)</span>
+        <span class="ticker">光通訊族群</span>
+        <span class="ticker">中小型 IC 設計</span>
+      </div>
+      <div class="col">
+        <h4>AI 新研究線</h4>
+        <span class="ticker">Broadcom／博通</span>
+        <span class="ticker">聯發科／TPU 外溢</span>
+        <span class="ticker">企業地端模型</span>
+      </div>
+      <div class="col">
+        <h4>先等證據</h4>
+        <span class="ticker">台積電德州設廠傳聞</span>
+        <span class="ticker">廠務／材料毛利</span>
+        <span class="ticker">NVIDIA 對中供貨</span>
+      </div>
+    </div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>盤面：</b>信任感在回來，但作者不急著追回七月前的快錢。</a>
+    <a class="insight-pill" href="#card-4"><b>IC 設計：</b>訂單外溢與 AI 提效，是小型設計公司重估的雙引擎。</a>
+    <a class="insight-pill" href="#card-6"><b>地端 AI：</b>客戶機密推動模型進企業機房，閉源方案仍只是早期趨勢。</a>
+    <a class="insight-pill" href="#card-7"><b>美國設廠：</b>方向合理不等於傳聞成真；單價與毛利必須拆開。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 季度復盤</a>
+      <a href="#card-3">03 台股盤面</a>
+      <a href="#card-4">04 小型 IC 設計</a>
+      <a href="#card-5">05 AI 設計槓桿</a>
+      <a href="#card-6">06 Broadcom</a>
+      <a href="#card-7">07 地端模型</a>
+      <a href="#card-8">08 德州設廠</a>
+      <a href="#card-9">09 設廠受惠鏈</a>
+      <a href="#card-10">10 美中與動能</a>
+      <a href="#card-11">11 操作揭露</a>
+      <a href="#card-12">12 觀察清單</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">總結｜第三季復盤</div>
+    <h2>先活過回撤，再靠新主流把高點打回來</h2>
+    <div class="core"><span class="tag">重點</span>主持人回顧七月急跌時曾減碼部分仍有獲利的部位，原以為全年高點難以修復；八、九月把組合轉往光通訊、小型 IC 設計、銅纜、衛星與深度價值後，台股淨值比預期更早回到高點。這是季度復盤，不是保證下一季複製同樣報酬。</div>
+
+    <div class="mechanism"><span class="tag">修復路徑</span><ol><li>急跌：大型均線未止穩，先減碼降低壓力。</li><li>輪動：辨識光通等新主流後調整組合。</li><li>修復：新題材接棒，台股淨值先於美股回高。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">組合主線</div>
+        <span class="ticker">光通訊</span>
+        <span class="ticker">小型 IC 設計</span>
+        <span class="ticker">銅纜／衛星／深度價值</span>
+      </div>
+    <div class="note">未揭露個股成本與目前完整權重。</div>
+    <div class="risk"><b>風險：</b>事後復盤容易高估辨識能力；主持人也承認轉換速度帶有運氣成分。</div>
+    <div class="action"><b>應對：</b>記錄策略如何處理失效，而不是只看最後淨值修復。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">大盤｜信任回流</div>
+    <h2>盤面更健康，但速度還沒快到可以亂追</h2>
+    <div class="core"><span class="tag">重點</span>中秋後，主持人感覺市場信任、題材有效性與強勢股延續性逐步回來，指數也持續墊高，因此延續有條件偏多。不過他仍說要再看幾個交易日，且前三季績效已佳，後面會稍微放慢；看多盤面與放慢操作可以同時成立。</div>
+
+    <div class="mechanism"><span class="tag">確認三件事</span><ol><li>成交量是否放大。</li><li>強勢股是否能連續數日墊高。</li><li>故事是否真的轉成股價與獲利。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">最新定位</div>
+        <span class="ticker">指數：有條件偏多</span>
+        <span class="ticker">追價：不急</span>
+        <span class="ticker">操作：偏波段</span>
+      </div>
+    <div class="note">公債利率是風險，但不是唯一交易訊號。</div>
+    <div class="risk"><b>風險：</b>單日大漲後仍可能再洗一次；不能把氣氛改善寫成行情已完全恢復。</div>
+    <div class="action"><b>應對：</b>順著指數與題材試單，避免每天追紅、停損、再追紅。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">IC 設計｜訂單外溢</div>
+    <h2>大哥忙 AI，小弟開始喝到外溢的湯</h2>
+    <div class="core"><span class="tag">重點</span>主持人注意到台股小型 IC 設計公司集體表態。他的第一個解釋是大型公司優先把人力與投片量留給 AI 專案，其他工作只好往外分流；聯發科的 TPU 訂單被拿來當例子。需求由上往下溢出，最末端公司也可能接到過去拿不到的工作。</div>
+
+    <div class="mechanism"><span class="tag">訂單怎麼流</span><ol><li>AI 專案先占用設計人力與投片。</li><li>大型公司把非核心工作向外分流。</li><li>中小型設計公司取得新客戶或新產品機會。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">節點</div>
+        <span class="ticker">聯發科／TPU</span>
+        <span class="ticker">台灣 IC 設計大廠</span>
+        <span class="ticker">中小型 IC 設計</span>
+      </div>
+    <div class="note">這是產業輪廓，節目未提供逐家公司訂單名單。</div>
+    <div class="risk"><b>風險：</b>股價集體上漲不等於每家公司都有實際訂單；客戶、毛利與認列時程仍需驗證。</div>
+    <div class="action"><b>應對：</b>逐檔查營收、產品線與客戶，不複製整個族群。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">AI 設計｜營運槓桿</div>
+    <h2>同一批人若能多做產品，小公司估值邏輯會變</h2>
+    <div class="core"><span class="tag">重點</span>主持人的第二個假說，是 AI 工具可縮短晶片設計的人力與時間。若小型公司原本只能在數年內推出一項產品，未來能同時推更多產品，營運槓桿就可能被重新估值。Broadcom 參與的 OpenAI 晶片案例，被他視為流程加速的參考，但專案代號與 AI 實際貢獻仍待確認。</div>
+
+    <div class="mechanism"><span class="tag">槓桿來源</span><ol><li>自動化重複、勞力密集的設計工作。</li><li>縮短架構定型到投片的時程。</li><li>同樣人力同時推進更多產品。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">研究線</div>
+        <span class="ticker">Broadcom：設計能力偏正面</span>
+        <span class="ticker">OpenAI 晶片案例：代號待查</span>
+        <span class="ticker">小型設計公司：營運槓桿待驗證</span>
+      </div>
+    <div class="note">作者承認這是看到股價後再向業界驗證的研究流程。</div>
+    <div class="risk"><b>風險：</b>AI 提效不必然轉成營收；工具成本、驗證責任與客戶認證都可能限制產出。</div>
+    <div class="action"><b>應對：</b>追蹤產品數、投片時程與研發費用效率。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">Broadcom｜部位與能力</div>
+    <h2>股價曾拖累淨值，設計能力評價仍然偏正面</h2>
+    <div class="core"><span class="tag">重點</span>主持人披露美股組合曾壓較大的 Broadcom 部位，股價下跌後橫躺一段時間，讓美股淨值比台股更晚修復。談到 OpenAI 晶片時，他又表示快速完成設計高機率仍反映 Broadcom 本身能力強。這是部位與基本面同時存在，不可只看其中一邊。</div>
+
+    <div class="mechanism"><span class="tag">兩層判讀</span><ol><li>部位：曾占美股組合較大比例。</li><li>價格：下跌後盤整，拖慢淨值修復。</li><li>能力：晶片設計與交付速度仍獲肯定。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集界線</div>
+        <span class="ticker">hostOwned：是</span>
+        <span class="ticker">精確成本：未揭露</span>
+        <span class="ticker">目前權重：未揭露</span>
+      </div>
+    <div class="note">不要從歷史大部位推定現在仍是相同比例。</div>
+    <div class="risk"><b>風險：</b>專案貢獻與 AI 設計提效未量化，持倉資訊也不是即時部位表。</div>
+    <div class="action"><b>應對：</b>把公司能力、估值與個人部位風險分開追蹤。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">企業 AI｜地端部署</div>
+    <h2>模型進機房，機密才不必先上雲</h2>
+    <div class="core"><span class="tag">重點</span>晶片設計公司已高度依賴 AI，但直接串外部 API 可能讓客戶機密外流，因此現階段常把開源模型放在自家機房。主持人進一步觀察，先進閉源模型未來可能提供企業地端版本，定期在安全檢查後更新；這是早期趨勢，不是已公布的產品。</div>
+
+    <div class="mechanism"><span class="tag">需求鏈</span><ol><li>機密資料不能離開企業邊界。</li><li>模型部署到公司機房。</li><li>版本落後前沿一段距離，換取安全與可控。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">受惠方向</div>
+        <span class="ticker">企業 AI 伺服器</span>
+        <span class="ticker">模型部署與更新</span>
+        <span class="ticker">資安與資料治理</span>
+      </div>
+    <div class="note">作者認為閉源與開源解法會先共同成長，不是零和。</div>
+    <div class="risk"><b>風險：</b>閉源模型是否願意交付權重、如何計價及如何更新都未知。</div>
+    <div class="action"><b>應對：</b>等待供應商正式方案與企業採用案例。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">台積電｜美國設廠</div>
+    <h2>方向合理，傳聞仍然只是傳聞</h2>
+    <div class="core"><span class="tag">重點</span>市場傳出台積電可能赴德州達拉斯擴產，主持人先把它當謠言評論。他認為德州的水電、化工與產業基礎設施具合理性，美國客戶也有在地供應要求；但晶圓廠數量、前段或後段、時程都仍在早期評估。</div>
+
+    <div class="mechanism"><span class="tag">為何德州合理</span><ol><li>水電與基礎設施相對完整。</li><li>化工產業聚落可支援材料供應。</li><li>客戶與政策都要求供應鏈在地化。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">本集定位</div>
+        <span class="ticker">台積電：既有看多延續</span>
+        <span class="ticker">德州達拉斯：早期傳聞</span>
+        <span class="ticker">廠務／材料：條件式受惠</span>
+      </div>
+    <div class="note">主持人沒有在本集揭露新的台積電買賣。</div>
+    <div class="risk"><b>風險：</b>海外成本、補貼、客戶承諾與建廠時程都可能改變投資回報。</div>
+    <div class="action"><b>應對：</b>先等正式選址與資本支出，再談供應鏈訂單。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">供應鏈｜廠務與材料</div>
+    <h2>美國專案單價高，不代表毛利一定高</h2>
+    <div class="core"><span class="tag">重點</span>若台積電德州擴產成真，主持人認為廠務、建廠與材料公司會有成熟的受惠邏輯，且美國專案單價更高；但過去市場曾先把毛利估得太樂觀，後來下修，又發現實際成績沒那麼差。因此現在適合列觀察，不宜只用一個毛利假設。</div>
+
+    <div class="mechanism"><span class="tag">估值三步</span><ol><li>先確認專案真的成立。</li><li>再確認誰能進供應商名單。</li><li>最後拆單價、成本與毛利。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">觀察方向</div>
+        <span class="ticker">廠務工程</span>
+        <span class="ticker">建廠設備</span>
+        <span class="ticker">半導體材料</span>
+      </div>
+    <div class="note">逐字稿未清楚辨識出具名受惠公司，因此不猜。</div>
+    <div class="risk"><b>風險：</b>傳聞落空、專案延後或美國施工成本超支，都會改變受惠幅度。</div>
+    <div class="action"><b>應對：</b>只跟正式訂單與公司指引，不跟模糊影射追價。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">政策與交易｜沒有變化也是資訊</div>
+    <h2>NVIDIA 放行未落地，光通禁令也未解除</h2>
+    <div class="core"><span class="tag">重點</span>美中會面後，市場傳出中國科技公司可能購買 NVIDIA 產品，但主持人提醒仍要看美國政府是否真正批准；中國端光通禁令也沒有解除，因此政策催化視為沒有實質變化。交易上，真正強的動能股通常早盤就表態，尾盤偷拉不一定代表有持續攻擊意圖。</div>
+
+    <div class="mechanism"><span class="tag">兩種確認</span><ol><li>政策：看許可與可售規格，不看會後傳聞。</li><li>題材：看禁令是否真的解除。</li><li>動能：看早盤需求與延續，不靠尾盤偷拉。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">最新狀態</div>
+        <span class="ticker">NVIDIA：政策轉觀察</span>
+        <span class="ticker">光通訊：禁令無變化</span>
+        <span class="ticker">台股動能：早盤優先</span>
+      </div>
+    <div class="note">出口政策轉觀察，不等於 NVIDIA 長期基本面轉空。</div>
+    <div class="risk"><b>風險：</b>政策可能隨時改變；短線圖形也不能取代公司基本面。</div>
+    <div class="action"><b>應對：</b>等正式核准與公司揭露，盤中策略則先看早盤。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">部位與風控揭露</div>
+    <h2>季度復盤有部位線索，但不是即時持倉明細</h2>
+
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><span class="own">⭐</span>Broadcom／博通</td>
+        <td>美股組合曾有較大比例</td>
+        <td>主持人明說部位比例較大並拖慢淨值修復；本集未給目前權重、成本或是否減碼。</td>
+      </tr>
+      <tr>
+        <td><span class="own">⭐</span>光通／小型 IC／銅纜／衛星／深度價值</td>
+        <td>八、九月組合輪動方向</td>
+        <td>主持人明說組合換到這些新主流題材，但未公布具名個股。</td>
+      </tr>
+      <tr>
+        <td>台股整體風控</td>
+        <td>七月下半場曾減碼</td>
+        <td>部分仍有獲利的部位被砍出；這是季度歷史動作，不是本集新賣單。</td>
+      </tr>
+      <tr>
+        <td>後續操作</td>
+        <td>氣氛改善但仍稍微放慢</td>
+        <td>不急著追回前三季快錢，偏向波段與等待延續性。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">Tesla Roadster 是產品下訂，不是股票部位。</div>
+    <div class="note">沒有新揭露的具名台股買賣、成本或即時權重。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">本集可帶走的觀察框架</div>
+    <h2>先確認需求，再確認效率，最後才看估值</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>本週盯</h4>
+        <ul><li>台股成交量與強勢股延續性。</li><li>小型 IC 設計是否有營收或法說佐證。</li><li>NVIDIA 對中供貨是否出現正式許可。</li></ul>
+      </div>
+      <div class="box">
+        <h4>中期觀察</h4>
+        <ul><li>AI 工具是否真的縮短投片與產品時程。</li><li>閉源模型是否推出企業地端版本。</li><li>台積電是否正式確認德州選址與資本支出。</li></ul>
+      </div>
+      <div class="box">
+        <h4>避免誤讀</h4>
+        <ul><li>題材上漲不等於每家公司都有訂單。</li><li>設廠單價高不等於供應商毛利高。</li><li>產品預購不等於股票買進。</li><li>指數偏多不等於每天追紅。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
