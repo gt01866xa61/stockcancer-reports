@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta name="stockcancer-font-scale" content="1.5">
+  <meta name="stockcancer-layout" content="wide-1320-v1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP702 筆記｜2026-10-03</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 22.5px; /* stockcancer-font-base:15px */ padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 18px; /* stockcancer-font-base:12px */ color: #b8b8b8; }
+  .sec { font-size: 18px; /* stockcancer-font-base:12px */ color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 33px; /* stockcancer-font-base:22px */ margin-bottom: 4px; }
+  h2 { font-size: 27px; /* stockcancer-font-base:18px */ margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 19.5px; /* stockcancer-font-base:13px */ margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .ticker code { color: #a0a0a0; font-size: 18px; /* stockcancer-font-base:12px */ margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 21.75px; /* stockcancer-font-base:14.5px */ color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 19.5px; /* stockcancer-font-base:13px */ color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 18.75px; /* stockcancer-font-base:12.5px */ padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 19.5px; /* stockcancer-font-base:13px */ text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+<style id="stockcancer-font-scale-layout">
+@media (max-width: 640px) {
+  .card, section { min-width: 0; }
+  table { table-layout: fixed; max-width: 100%; }
+  th, td { white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+  .ticker, code, a { max-width: 100%; overflow-wrap: anywhere; word-break: break-word; }
+
+  #card-11 table, #moves table, #card-11 tbody, #moves tbody { display: block; width: 100%; overflow: visible; }
+  #card-11 thead, #moves tr:has(th) { display: none; }
+  #card-11 tbody tr, #moves tr:has(td) { display: block; padding: 12px 0; border-bottom: 1px solid #ececec; }
+  #card-11 td, #moves td { display: block; width: auto; min-width: 0; padding: 4px 0; border: 0; white-space: normal; }
+  #card-11 td::before, #moves td::before { font-weight: 700; color: #777; }
+  #card-11 td:nth-child(1)::before { content: '標的／部位：'; }
+  #card-11 td:nth-child(2)::before { content: '本集狀態：'; }
+  #card-11 td:nth-child(3)::before { content: '依據：'; }
+  #moves td:nth-child(1)::before { content: '集數：'; }
+  #moves td:nth-child(2)::before { content: '標的／部位：'; }
+  #moves td:nth-child(3)::before { content: '動作／狀態：'; }
+}
+  </style>
+<style id="stockcancer-wide-layout">
+.wrap { width: 100%; max-width: 1320px; }
+.card, .block, .grid3 > *, .cols3 > * { min-width: 0; }
+.grid3, .cols3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ticker { max-width: 100%; overflow-wrap: anywhere; }
+
+.story p, .why, .watchlist li, .mood,
+.card > .core, .card > .note, .card > .mechanism,
+.card > .risk, .card > .action, .card > blockquote {
+  max-inline-size: 40em;
+  overflow-wrap: anywhere;
+}
+.law .p, .law .q { max-inline-size: 40em; }
+.kpi .lab, .law .q { line-break: strict; overflow-wrap: anywhere; padding-inline-end: 1em; }
+
+@media (min-width: 1024px) {
+  .grid3, .cols3 { gap: 24px; }
+  .kpi { gap: 12px; }
+  .tgrid { gap: 16px; }
+}
+@media (max-width: 900px) and (min-width: 641px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+  .kpi { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kpi .k.txt { grid-column: 1 / -1; }
+  .tgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP702 筆記</h1>
+    <div class="date">2026-10-03｜好盤續抱 × AI 成本 × 光模組價值鏈｜官方發布 2026-10-03</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>本集正面論點</h4>
+        <span class="ticker">台股：全面轉強，不預判高點</span>
+        <span class="ticker">光通：既有主題續抱</span>
+        <span class="ticker">被動／功率：缺貨與漲價延續</span>
+        <span class="ticker">美系核心元件：條件式受惠</span>
+      </div>
+      <div class="col">
+        <h4>須分開判讀</h4>
+        <span class="ticker">AI 生產力 ≠ 無限預算</span>
+        <span class="ticker">地端模型 ≠ 免費又等效</span>
+        <span class="ticker">美系核心料 ≠ 台灣組裝</span>
+        <span class="ticker">產業趨勢 ≠ 短線漲跌</span>
+      </div>
+      <div class="col">
+        <h4>不可誤認買單</h4>
+        <span class="ticker">65% BOM：未成文政策傳聞</span>
+        <span class="ticker">Broadcom 等：供應商例子</span>
+        <span class="ticker">達發：非第一波直接受惠</span>
+        <span class="ticker">CPU：他人押注，不是本人部位</span>
+      </div>
+    </div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>操作：</b>手上光通仍走得好，就繼續留著，不為追輪動而換股。</a>
+    <a class="insight-pill" href="#card-4"><b>AI：</b>模型能力、部署方式與成本必須一起算，不能只看 token 用量。</a>
+    <a class="insight-pill" href="#card-6"><b>光模組：</b>先懂 DSP、Driver、雷射、PD、TIA，再拆誰握有高價值環節。</a>
+    <a class="insight-pill" href="#card-9"><b>政策：</b>傳聞若成立，美系核心元件較直接；台灣轉單仍屬間接想像。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 好盤與續抱</a>
+      <a href="#card-3">03 AI 預算</a>
+      <a href="#card-4">04 地端與雲端</a>
+      <a href="#card-5">05 被動與功率</a>
+      <a href="#card-6">06 DSP 收發架構</a>
+      <a href="#card-7">07 政策傳聞</a>
+      <a href="#card-8">08 價值鏈與中國</a>
+      <a href="#card-9">09 台灣與達發</a>
+      <a href="#card-10">10 研究與問答</a>
+      <a href="#card-11">11 本人部位</a>
+      <a href="#card-12">12 後續觀察</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">市場與操作</div>
+    <h2>好盤續抱，不預判最高點</h2>
+    <div class="core"><span class="tag">重點</span>期貨創高、盤面全面轉強。主持人手上以光通主題為主，既有部位表現仍好，因此續抱，而不是看別族群動就立刻換股。</div>
+    <blockquote>就是不要太早的想要去預判高點</blockquote>
+    <div class="mechanism"><span class="tag">本集的判斷順序</span><ol><li>看大盤與強勢股是否維持上行，不先押反轉。</li><li>被動、功率等慢啟動族群也上漲，盤面廣度改善。</li><li>手上主題走得好就留；下週再觀察強勢能否延續。</li><li>均線真正下彎、趨勢改變時再調整，不以信念硬抱。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">明確操作</div>
+        <span class="ticker">光通訊族群：現有續抱</span>
+        <span class="ticker">整體持股：暫不快速輪動</span>
+      </div>
+    <div class="note">本集沒有公布光通個股名稱、成本、權重或新加碼。</div>
+    <div class="note">CPU 上漲是他人押注例子，不算主持人新增持倉。</div>
+    <div class="risk"><b>風險：</b>好盤不代表每檔都好；價格急漲與產業趨勢仍須分開。</div>
+    <div class="action"><b>應對：</b>保留趨勢失效條件，觀察盤面廣度與既有強勢股，不把預測高點當主要策略。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">AI 營運成本</div>
+    <h2>工程師要最強模型，企業仍得算損益</h2>
+    <div class="core"><span class="tag">重點</span>主持人轉述聯發科 AI 額度受限、月費約一兩億的消息。問題不是 AI 有沒有用，而是使用量、有效產出與企業預算能否對得起來。</div>
+    <blockquote>最終都是回到成本</blockquote>
+    <div class="mechanism"><span class="tag">預算壓力如何形成</span><ol><li>工程師偏好最強模型，使用快速擴張。</li><li>token 消耗增加，費用進入企業損益與管理問題。</li><li>限額或換地端伺服器，可能帶來等待、回應變慢與品質落差。</li><li>成本、效率與營運改善須一起衡量，不能只追使用量。</li></ol></div>
+
+    <div class="note">月費是一兩億的節目轉述，幣別不明、未取得公司公告；不當作財報費用。</div>
+    <div class="note">這段是營運與成本背景，不是聯發科整體基本面轉空。</div>
+    <div class="risk"><b>風險：</b>預算有限不等於 AI 長期需求消失，也不代表所有地端設備立即受惠。</div>
+    <div class="action"><b>應對：</b>研究企業付費與投資回收，區分使用熱度、有效生產力與可持續支出。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">模型部署</div>
+    <h2>地端與雲端，是成本與能力的取捨</h2>
+    <div class="core"><span class="tag">重點</span>一次建置費與持續雲端費用不同；本機或開源模型可能處理文字、美編，卻不一定勝任晶片 layout。部署方式不能取代能力驗證。</div>
+
+    <div class="mechanism"><span class="tag">三個不能省略的問題</span><ol><li>任務：需求是一般文字、設計輔助，還是高難度晶片設計？</li><li>能力：小模型、開源與最尖端閉源模型是否能達到相同成果？</li><li>總成本：硬體、負載、等待時間、維運與模型費一起計算。</li><li>可落地性：前沿模型進企業機房仍是討論方向，不當作已量產方案。</li></ol></div>
+
+    <div class="note">主持人的部署構想屬推演，不代表供應商已有正式訂單。</div>
+    <div class="note">最新集補充 AI 成本限制，未明確推翻前集 AI 基建需求論點。</div>
+    <div class="risk"><b>風險：</b>為省模型費而犧牲產出品質，可能提高重工與等待的隱性成本。</div>
+    <div class="action"><b>應對：</b>用實際任務效果衡量部署，將成本限制與長期需求分開追蹤。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">供需與輪動</div>
+    <h2>被動、功率轉強，優先研究 AI 直接需求</h2>
+    <div class="core"><span class="tag">重點</span>較慢啟動的被動、功率元件開始補漲，缺貨與未來幾季漲價趨勢延續。作者仍優先 AI 直接需求，非 AI 排擠效應放在較後順位。</div>
+
+    <div class="mechanism"><span class="tag">兩層不同的故事</span><ol><li>直接需求：AI 的用量、規格升級與瓶頸，帶動供應鏈需求。</li><li>間接排擠：產能被挪去供應 AI，其他用途因此缺貨或漲價。</li><li>兩者都可能形成題材，但作者暫不優先選非 AI 排擠題材。</li><li>市場轉強不代表本人已換股或加碼。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">產業正面評論，非持倉揭露</div>
+        <span class="ticker">被動元件族群</span>
+        <span class="ticker">功率元件族群</span>
+      </div>
+    <div class="note">沒有具名受惠公司、訂單數量或漲價幅度；不能自行補標的。</div>
+    <div class="note">前段 ASR 模糊詞不採用，後段清楚的功率元件描述作為依據。</div>
+    <div class="risk"><b>風險：</b>族群上漲與公司獲利改善不是同一件事，需確認產品組合和實際漲價。</div>
+    <div class="action"><b>應對：</b>先問受惠是直接需求還是排擠效應，再確認價格是否已反映。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">光模組教學</div>
+    <h2>DSP 是訊號整理站，不是把光直接放大</h2>
+    <div class="core"><span class="tag">重點</span>光模組負責電與光之間的轉換。DSP 整理高速訊號；Driver 驅動雷射；接收端先由 PD 轉成電流，再由 TIA 放大，DSP 整理後交回主機。</div>
+
+    <div class="mechanism"><span class="tag">發送與接收的兩條路徑</span><ol><li>發送：主機電訊號 → DSP 整理 → Driver 驅動 → 雷射產生光 → 對光／光纖。</li><li>接收：光纖 → PD 將光轉電 → TIA 放大 → DSP 整理 → 主機。</li><li>DSP 兩個方向都參與訊號處理，不等於雷射或單純增幅器。</li><li>核心晶片、雷射與精密對光分工不同，不能把組裝營收當成全部技術價值。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">架構範例，沒有新增買進訊號</div>
+        <span class="ticker">Broadcom／Marvell／MaxLinear：DSP 範例</span>
+        <span class="ticker">Semtech：類比光電元件背景</span>
+        <span class="ticker">Lumentum／Coherent：雷射範例</span>
+        <span class="ticker">大立光／FAU：對光難度例子</span>
+      </div>
+    <div class="note">節目以800G EML DR8、約315美元 ASP作例子；價格未對照原始拆解，不當成現行市場報價。</div>
+    <div class="note">雷射顆數與通道數口述有歧義，本卡不硬補規格。公司拼法依上下文辨識，待確認仍保留。</div>
+    <div class="risk"><b>風險：</b>類比與簡化架構有助理解，不代表每款模組都有完全相同的整合方式。</div>
+    <div class="action"><b>應對：</b>先沿訊號路徑找元件功能，再研究每一環的技術門檻和議價能力。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">政策情境</div>
+    <h2>65% 美系 BOM：是傳聞，不是已生效法規</h2>
+    <div class="core"><span class="tag">重點</span>主持人轉述 Morgan Stanley 報告：美系料占比若達65%，光模組可能仍可出貨；800G、1.6T或較寬鬆，3.2T可能是後續收緊的世代。全數須保留條件。</div>
+    <blockquote>不要太認真看待</blockquote>
+    <div class="mechanism"><span class="tag">先拆現在，再拆未來</span><ol><li>現在：很多高價值料原本就來自美系供應商，未必立刻改變終端需求。</li><li>未來：如果占比規則成文，可能限制中國自製核心料的降成本路線。</li><li>世代：不可把遠期更高速規格限制，直接套到所有既有模組。</li><li>機關、定義、實施日期與完整條文都尚未確認。</li></ol></div>
+
+    <div class="note">未取得報告全文或官方規則，不把節目轉述稱為已核實政策。</div>
+    <div class="note">作者收尾再次提醒報告偏傳聞。</div>
+    <div class="risk"><b>風險：</b>傳聞消失、門檻不同或適用範圍改變，都可能推翻政策題材。</div>
+    <div class="action"><b>應對：</b>分開列政策假設與已知供應結構，看到成文規則後再更新。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">價值鏈比較</div>
+    <h2>美系高價值料，與中國組裝不是同一種曝險</h2>
+    <div class="core"><span class="tag">重點</span>BOM 比的是元件價值，產能占比比的是組裝供應。美系 DSP、Driver、TIA、雷射若受保護，可能壓縮中國核心料替代；過快封鎖組裝又會反傷美國建置。</div>
+
+    <div class="mechanism"><span class="tag">三層判讀</span><ol><li>核心價值：美系高速晶片與雷射，政策假設下較直接受惠。</li><li>降本路線：中國自製料的未來替代空間可能受限，不等於現有所有模組立即禁售。</li><li>組裝現實：作者估中國組裝占比六至七成以上，短期供應不能任意切斷。</li><li>成本概算：口述65%／35%與其餘三成以下並不完全一致，只作粗估。</li></ol></div>
+
+    <div class="note">占比與全球產能估算都是主持人口述，並非獨立取得的產業統計。</div>
+    <div class="note">個股因傳聞上漲，不等於其獲利已增加或作者已買進。</div>
+    <div class="risk"><b>風險：</b>台、美、中各環節曝險不同，泛稱光通受惠容易掩蓋差異。</div>
+    <div class="action"><b>應對：</b>拆開晶片、雷射、對光、封裝與組裝，再驗證政策究竟限制哪一層。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">台灣受惠層級</div>
+    <h2>台灣可能承接轉單，達發不是第一波直接受惠</h2>
+    <div class="core"><span class="tag">重點</span>若美系降低中國依賴，台灣機構、光學與封裝組裝可能承接轉單；但這是間接想像。台系 DSP 不等於美系料，不能直接套入65%美系占比受惠。</div>
+
+    <div class="mechanism"><span class="tag">不能跳過的中間步驟</span><ol><li>光學、機構、雷射封裝與組裝需看實際轉單和認證。</li><li>主持人描述達發／Airoha目前鎖定400G，距3.2T仍有世代差距。</li><li>台系 DSP 不是美系 DSP，主持人明說不是第一波直接受惠。</li><li>長期第二來源與去美化故事可以觀察，但不等於已落地營收。</li></ol></div>
+    <div class="stock-group">
+        <div class="gl">僅供層級判讀</div>
+        <span class="ticker">達發／Airoha：觀望，非首波直接受惠</span>
+        <span class="ticker">台灣光學機構／封裝組裝：中性、間接受惠</span>
+      </div>
+    <div class="note">ASR 公司名為達法，依聯發科母公司與官方 DSP 產品資料對應達發；沒有宣稱完整最新產品規格。</div>
+    <div class="note">台積電僅在先進製程與第三方投片的假設中提及，未新增公司投資立場。</div>
+    <div class="risk"><b>風險：</b>轉單題材先漲，實際毛利卻低或認證遲延，投資結果可能不同。</div>
+    <div class="action"><b>應對：</b>優先確認轉單、技術世代、占比定義與毛利，不只看台灣兩字。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">研究方法與問答</div>
+    <h2>股價跌、模型爆紅與量化競爭，都要先拆原因</h2>
+    <div class="core"><span class="tag">重點</span>產業趨勢不能直接被一段傳聞或短線漲跌取代；量化與長期投資的勝出機制不同，產品聲量也不等於母公司投資立場。</div>
+
+    <div class="mechanism"><span class="tag">本集的三個研究提醒</span><ol><li>SSD／HDD：先看擴產基期、規模與真正供需影響，不從股價下跌倒推需求崩壞。</li><li>量化：策略、設備、延遲與對手強度都重要，聰明或資金周轉快不保證勝出。</li><li>Muse：競品可能分走聲量，但應用熱度下降不等於 AI 總需求消失或 Meta 股票轉空。</li></ol></div>
+
+    <div class="note">3037只作傳聞後再創高的教學例子，傳聞原因不清，不自行猜事件。</div>
+    <div class="note">Amazon 與軟體巨獸是再投資的歷史比喻，不算本集買進建議或持倉。</div>
+    <div class="risk"><b>風險：</b>事後敘事容易把股價、需求、政策與持倉誤拼成因果。</div>
+    <div class="action"><b>應對：</b>每個結論標明是原文事實、主持人推演還是未知；背景事件不自動升級成整體轉向。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">本集本人部位</div>
+    <h2>唯一可確認：光通主題續抱；未具名個股</h2>
+
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><span class="own">⭐</span>光通訊族群（產業主題，非具名個股）</td>
+        <td>現有持有／續抱</td>
+        <td>原文說手上以光為主、這波主要押注，走得好就繼續留著；沒有成本、權重或新增加碼。</td>
+      </tr>
+      <tr>
+        <td>整體持股</td>
+        <td>暫不快速換股</td>
+        <td>操作節奏揭露，不是新增已買進部位。</td>
+      </tr>
+      <tr>
+        <td>非 AI 排擠題材</td>
+        <td>暫不優先選擇</td>
+        <td>選股篩選計畫，不是已執行賣出。</td>
+      </tr>
+      <tr>
+        <td>CPU／具名美系供應商</td>
+        <td>不可列為本集本人持倉</td>
+        <td>CPU 是他人押注；Broadcom 等是架構及事件例子，未更新本人部位。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">⭐只指本集確認的光通產業部位，不代表上述任何一家個股持有。</div>
+    <div class="note">不把前集歷史部位、政策情境、別人交易或研究篩選當成新增已買進。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">收束與觀察</div>
+    <h2>守住三個邊界：趨勢、成本、政策</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>盤面與操作</h4>
+        <ul><li>觀察下週強勢股延續與盤面廣度。</li><li>光通續抱論點與價格失效條件分開記錄。</li><li>不因每個族群輪動就急著換股。</li></ul>
+      </div>
+      <div class="box">
+        <h4>AI 與供需</h4>
+        <ul><li>追企業費用、有效產出與投資回收。</li><li>被動／功率先分直接需求與排擠效應。</li><li>地端模型用任務品質及總成本驗證。</li></ul>
+      </div>
+      <div class="box">
+        <h4>光模組政策</h4>
+        <ul><li>等待正式規則，不當傳聞已成文。</li><li>美系核心料與台灣間接轉單分開追蹤。</li><li>確認世代、實際訂單、認證與毛利。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
