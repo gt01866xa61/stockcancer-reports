@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta name="stockcancer-font-scale" content="1.5">
+  <meta name="stockcancer-layout" content="wide-1320-v1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌月報 2026-10｜EP699–EP706</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #fafaf7; color: #1f2937; font-family: "Noto Sans TC", "PingFang TC", sans-serif; line-height: 1.8; font-size: 22.5px; /* stockcancer-font-base:15px */ }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 40px 18px 88px; }
+    .hero, .block { background: #fff; border: 1px solid #ececec; border-radius: 14px; padding: 30px; margin: 0 0 24px; box-shadow: 0 3px 18px rgba(31,41,55,.05); }
+    h1 { margin: 0 0 8px; font-size: 45px; /* stockcancer-font-base:30px */ line-height: 1.35; }
+    h2 { margin: 0 0 14px; font-size: 33px; /* stockcancer-font-base:22px */ line-height: 1.4; }
+    h3 { margin: 0 0 8px; font-size: 25.5px; /* stockcancer-font-base:17px */ }
+    .sub, .why, .en { color: #7b8794; }
+    .en { font-size: 18px; /* stockcancer-font-base:12px */ letter-spacing: 1px; margin-left: 8px; }
+    .kpi { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; margin-top: 20px; }
+    .k { min-height: 104px; background: #f7f7f4; border: 1px solid #ececec; border-radius: 10px; padding: 12px 8px; text-align: center; }
+    .num { color: #c2410c; font-size: 39px; /* stockcancer-font-base:26px */ font-weight: 800; line-height: 1.15; }
+    .lab { margin-top: 8px; color: #6b7280; font-size: 18px; /* stockcancer-font-base:12px */ }
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; background: #1f2937; border-radius: 12px; padding: 14px; margin: 0 0 24px; }
+    .toc a { color: #fff; background: #374151; border-radius: 7px; text-decoration: none; padding: 7px 10px; font-size: 19.5px; /* stockcancer-font-base:13px */ }
+    .story { padding: 12px 0; border-bottom: 1px solid #ececec; }
+    .story:last-child { border-bottom: 0; }
+    .date-tag { color: #c2410c; font-weight: 800; margin-right: 8px; }
+    .topic-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+    .t { min-height: 118px; border-radius: 10px; background: #f7f7f4; padding: 14px; }
+    .t b { display: block; font-size: 22.5px; /* stockcancer-font-base:15px */ line-height: 1.45; }
+    .cnt { display: inline-block; color: #c2410c; font-size: 18px; /* stockcancer-font-base:12px */ margin-top: 10px; }
+    .flowgroup { margin: 16px 0; }
+    .gtitle { font-weight: 700; margin-bottom: 8px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+    .chip { display: inline-block; padding: 5px 8px; border-radius: 8px; background: #ececec; font-size: 18px; /* stockcancer-font-base:12px */ }
+    .chip.bull, .schip.bull { background: #d4e8d4; }
+    .chip.bear, .schip.bear { background: #e8d4d4; }
+    .chip.watch, .schip.watch { background: #ede5cf; }
+    .n { opacity: .75; }
+    .shift { padding: 14px 0; border-bottom: 1px solid #ececec; }
+    .shift:last-child { border-bottom: 0; }
+    .path { margin: 8px 0; display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+    .schip { display: inline-block; background: #ececec; border-radius: 7px; padding: 4px 7px; font-size: 18px; /* stockcancer-font-base:12px */ }
+    .grp { margin-top: 16px; font-weight: 800; }
+    .grp.buy { color: #167a3f; }
+    .grp.sell { color: #b42318; }
+    .grp.hold { color: #8a5d00; }
+    .grp.plan { color: #5f6b7a; }
+    table { width: 100%; border-collapse: collapse; margin: 8px 0 18px; font-size: 19.5px; /* stockcancer-font-base:13px */ }
+    th, td { text-align: left; vertical-align: top; padding: 9px; border-bottom: 1px solid #ececec; }
+    th { color: #6b7280; font-weight: 700; }
+    .ep { color: #c2410c; font-weight: 700; white-space: nowrap; }
+    .law { background: #fff5ec; border-left: 4px solid #c2410c; border-radius: 8px; padding: 13px 15px; margin: 10px 0; }
+    .watch-list { padding-left: 22px; margin: 0; }
+    .watch-list li { margin: 8px 0; }
+    .mood { background: #f7f7f4; border-radius: 10px; padding: 16px; }
+    .backtop { position: fixed; right: 18px; bottom: 18px; background: #1f2937; color: #fff; border-radius: 22px; padding: 9px 14px; text-decoration: none; font-size: 19.5px; /* stockcancer-font-base:13px */ }
+    .tracker-summary { margin-top: 14px; color: #5f6b7a; }
+    .tracker-carryovers { margin-top: 16px; }
+    .carryover-view { margin-top: 10px; padding: 12px; border-left: 3px solid #c2410c; background: #fff7ed; }
+    .tracker-meta { margin-top: 4px; color: #5f6b7a; }
+    .tracker-retirements { margin-top: 16px; }
+    .retired-view { margin-top: 10px; padding: 12px; border-left: 3px solid #6b7280; background: #f3f4f6; }
+    @media (max-width: 900px) { .kpi { grid-template-columns: repeat(4, minmax(0, 1fr)); } .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px) { .wrap { padding: 20px 12px 78px; } .hero, .block { padding: 20px; } .kpi { grid-template-columns: repeat(2, minmax(0, 1fr)); } .topic-grid { grid-template-columns: 1fr; } table { font-size: 18px; /* stockcancer-font-base:12px */ } }
+  </style>
+  <style id="stockcancer-wide-layout">
+.wrap { width: 100%; max-width: 1320px; }
+.card, .block, .grid3 > *, .cols3 > * { min-width: 0; }
+.grid3, .cols3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ticker { max-width: 100%; overflow-wrap: anywhere; }
+
+.story p, .why, .watchlist li, .mood,
+.card > .core, .card > .note, .card > .mechanism,
+.card > .risk, .card > .action, .card > blockquote {
+  max-inline-size: 40em;
+  overflow-wrap: anywhere;
+}
+.law .p, .law .q { max-inline-size: 40em; }
+.kpi .lab, .law .q { line-break: strict; overflow-wrap: anywhere; padding-inline-end: 1em; }
+
+@media (min-width: 1024px) {
+  .grid3, .cols3 { gap: 24px; }
+  .kpi { gap: 12px; }
+  .tgrid { gap: 16px; }
+}
+@media (max-width: 900px) and (min-width: 641px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+  .kpi { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kpi .k.txt { grid-column: 1 / -1; }
+  .tgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+}
+  </style>
+  <style id="stockcancer-font-scale-layout">
+@media (max-width: 640px) {
+  .card, section { min-width: 0; }
+  table { table-layout: fixed; max-width: 100%; }
+  th, td { white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+  .ticker, code, a { max-width: 100%; overflow-wrap: anywhere; word-break: break-word; }
+
+  #card-11 table, #moves table, #card-11 tbody, #moves tbody { display: block; width: 100%; overflow: visible; }
+  #card-11 thead, #moves tr:has(th) { display: none; }
+  #card-11 tbody tr, #moves tr:has(td) { display: block; padding: 12px 0; border-bottom: 1px solid #ececec; }
+  #card-11 td, #moves td { display: block; width: auto; min-width: 0; padding: 4px 0; border: 0; white-space: normal; }
+  #card-11 td::before, #moves td::before { font-weight: 700; color: #777; }
+  #card-11 td:nth-child(1)::before { content: '標的／部位：'; }
+  #card-11 td:nth-child(2)::before { content: '本集狀態：'; }
+  #card-11 td:nth-child(3)::before { content: '依據：'; }
+  #moves td:nth-child(1)::before { content: '集數：'; }
+  #moves td:nth-child(2)::before { content: '標的／部位：'; }
+  #moves td:nth-child(3)::before { content: '動作／狀態：'; }
+}
+  </style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <div class="hero">
+    <h1>從輪動找機會，到先守住回撤</h1>
+    <p class="sub">股癌滾動月報｜2026-10｜EP699–EP706<br>官方發布日 9/23–10/17；單集日期依節目來源，卡片完成日另列。</p>
+    <div class="kpi">
+      <div class="k"><div class="num">8</div><div class="lab">涵蓋集數</div></div>
+      <div class="k"><div class="num">20</div><div class="lab">看多提及</div></div>
+      <div class="k"><div class="num">2</div><div class="lab">看空提及</div></div>
+      <div class="k"><div class="num">29</div><div class="lab">觀望提及</div></div>
+      <div class="k"><div class="num">31</div><div class="lab">部位與風控揭露</div></div>
+      <div class="k"><div class="num">3</div><div class="lab">看法轉變（3 標的）</div></div>
+      <div class="k txt"><div class="num">留退路</div><div class="lab">本窗核心框架</div></div>
+    </div>
+  </div>
+  <div class="toc">
+    <a href="#narrative">這 8 集的故事線</a><a href="#topics">熱門題材</a><a href="#flow">立場分布</a><a href="#shifts">看法轉變</a><a href="#moves">部位與風控</a><a href="#laws">投資心法</a><a href="#watch">先放著觀察</a><a href="#mood">情緒與筆記</a>
+  </div>
+  <div class="block" id="narrative">
+    <h2>這 8 集的故事線<span class="en">NARRATIVE</span></h2>
+    <div class="story"><span class="date-tag">9/23 EP699</span><p>輪動改善，指數重新有條件偏多。Muse 與隨身代理讓 CPU、資料流量與新裝置出現想像；但極端同時在線率不是可直接套用的需求模型。DSP、光學新路線與 CCL 的位置、時程分開，不先用零和論把舊元件歸零。</p></div>
+    <div class="story"><span class="date-tag">9/26 EP700</span><p>方向還在，速度卻要慢下來。市場追強容易被洗，改找強中帶弱的切入；眼鏡與代理裝置的隱私、信任與採用障礙仍待解。功率先觀望，台達電的短線技術保留不擴張成公司基本面衰退。</p></div>
+    <div class="story"><span class="date-tag">9/30 EP701</span><p>回顧減碼後的輪動與部位調整：光通訊、小型 IC、銅與衛星等線索回到個別公司。既有博通部位與聯發科上游機會各自保留；廠務傳聞及 NVIDIA 出口催化仍需觀察，不把歷史配置當本期新買單。</p></div>
+    <div class="story"><span class="date-tag">10/3 EP702</span><p>市場與多個方向仍偏多，光部位有持有口述；被動與功率亦有正向訊號。光模組政策傳聞須拆核心零件與組裝能力，不能一概推算台灣廠直接受惠；需求與價格最後仍受成本及量產限制。</p></div>
+    <div class="story"><span class="date-tag">10/7 EP703</span><p>台積電成績與獲利仍是偏多錨點，但相對弱勢部位、現金與槓桿要另外處理。Neo Cloud 的風險不代表整體雲端需求同時轉空；零組件成本回落是條件研究，沒有就此成立新部位。</p></div>
+    <div class="story"><span class="date-tag">10/10 EP704</span><p>博通、Marvell 與光互連維持長線研究，遠期目標、年化數字與已實現收入必須分開。未確認的公司或產品詞不補代號；過往失敗交易與低預期研究也不能混成目前持有。短期雜訊可等，但風控不是放棄。</p></div>
+    <div class="story"><span class="date-tag">10/14 EP705</span><p>指數仍慢慢創高，交易卻很洗，採稍微反動能節奏；擁擠設備股不輕易重倉。AI 的實際用量與價值案例偏正向，並非保證所有企業 ROI。博通前瞻估值與 SPCX 的現有部位分開揭露，A 到 B 的假設失效時也要退出。</p></div>
+    <div class="story"><span class="date-tag">10/17 EP706</span><p>反動能也開始不順，能容納資金的強勢標的減少，台股與光通訊的交易狀態轉為觀望。台積電基本面仍正向，博通仍看案子與前瞻獲利；兩者都不保證當下價格。已調整的動能與光部位、僅剩美光的口述、歷史聯發科成本、質押經驗及尚未執行的軟體／指數承接規劃分開。先留現金、看反彈，再決定方向。</p></div>
+  </div>
+  <div class="block" id="topics">
+    <h2>熱門題材<span class="en">TOPICS</span></h2>
+    <p class="why">以實際討論集數整理，可包含背景與教學；不是每次提及都有新立場，也不是買進次數。</p>
+    <div class="topic-grid">
+      <div class="t" data-episodes="699,700,701,702,703,704,705,706"><b>AI 應用、需求與價值</b><p>裝置、用量與收益歸屬各自驗證；本集子類融資風險不代表所有 AI 需求消失。</p><span class="cnt">8 集</span></div>
+      <div class="t" data-episodes="699,700,701,702,704,706"><b>光通訊與高速互連</b><p>從技術增量、供應鏈到部位退出；本集轉觀望的是交易狀態，不宣告產業全面失效。</p><span class="cnt">6 集</span></div>
+      <div class="t" data-episodes="699,702,703,704,705,706"><b>記憶體、硬體成本與價格</b><p>缺貨、獲利與價格反應分開。估值可壓縮，熟悉基本面也不能免除續跌風險。</p><span class="cnt">6 集</span></div>
+      <div class="t" data-episodes="701,704,705,706"><b>博通、競爭與前瞻估值</b><p>份額下降不必然等於絕對獲利下滑；便宜不等於立即回升或無限加碼。</p><span class="cnt">4 集</span></div>
+      <div class="t" data-episodes="703,706"><b>Neo Cloud 與融資風險</b><p>CoreWeave、Nebius 的公司存續與股價是不同問題；可能被接手不是救助承諾。</p><span class="cnt">2 集</span></div>
+      <div class="t" data-episodes="700,706"><b>軟體與下一棒</b><p>條件式觀察修復領先者與資金容量；研究方向不冒充已全面換倉。</p><span class="cnt">2 集</span></div>
+      <div class="t" data-episodes="699,702,704,706"><b>替代路線與非零和競爭</b><p>DSP、材料、光與銅、業者份額的討論都保留時間尺度，不由單一新技術推導舊供應鏈歸零。</p><span class="cnt">4 集</span></div>
+      <div class="t" data-episodes="699,700,701,702,703,704,705,706"><b>預期差、回撤與退出紀律</b><p>市場從找輪動走到先守回撤；現金、分批、槓桿與失效條件一起看。</p><span class="cnt">8 集</span></div>
+    </div>
+  </div>
+  <div class="block" id="flow">
+  <h2>立場分布<span class="en">SENTIMENT MAP</span></h2>
+  <div class="why">每個標的依本視窗「最後一次被提及」的立場分組，並標出最後集數；這不是實際資金流。⭐＝本視窗曾明示本人持有，不代表最新一集仍持有。</div>
+  <div class="flowgroup">
+    <div class="gtitle">🟢 視窗內最後一次提及為看多｜累計 20 cover・12 檔</div>
+    <div class="chips">
+      <span class="chip bull"><span class="own">⭐</span>Broadcom／博通 <span class="n">4集</span>・最後 EP706</span>
+      <span class="chip bull">台積電 <span class="n">3集</span>・最後 EP706</span>
+      <span class="chip bull">AI 雲端／算力基礎設施 <span class="n">3集</span>・最後 EP705</span>
+      <span class="chip bull">功率元件族群 <span class="n">2集</span>・最後 EP702</span>
+      <span class="chip bull">中小型 IC 設計族群 <span class="n">1集</span>・最後 EP701</span>
+      <span class="chip bull">光模組 DSP／高速訊號晶片 <span class="n">1集</span>・最後 EP699</span>
+      <span class="chip bull">美系 DSP／Driver／TIA／雷射供應鏈 <span class="n">1集</span>・最後 EP702</span>
+      <span class="chip bull">被動元件族群 <span class="n">1集</span>・最後 EP702</span>
+      <span class="chip bull">聯發科 <span class="n">1集</span>・最後 EP701</span>
+      <span class="chip bull">CCL 族群 <span class="n">1集</span>・最後 EP699</span>
+      <span class="chip bull">CPU／Socket 供應鏈 <span class="n">1集</span>・最後 EP699</span>
+      <span class="chip bull">Marvell <span class="n">1集</span>・最後 EP704</span>
+    </div>
+  </div>
+  <div class="flowgroup">
+    <div class="gtitle">🔴 視窗內最後一次提及為看空｜累計 2 cover・2 檔</div>
+    <div class="chips">
+      <span class="chip bear">中國 DSP／雷射元件供應鏈 <span class="n">1集</span>・最後 EP702</span>
+      <span class="chip bear">台達電 <span class="n">1集</span>・最後 EP700</span>
+    </div>
+  </div>
+  <div class="flowgroup">
+    <div class="gtitle">🟡 視窗內最後一次提及為觀望｜累計 29 cover・14 檔</div>
+    <div class="chips">
+      <span class="chip watch">台股大盤(指數) <span class="n">7集</span>・最後 EP706</span>
+      <span class="chip watch"><span class="own">⭐</span>光通訊族群 <span class="n">6集</span>・最後 EP706</span>
+      <span class="chip watch">記憶體族群 <span class="n">3集</span>・最後 EP706</span>
+      <span class="chip watch">CoreWeave <span class="n">2集</span>・最後 EP706</span>
+      <span class="chip watch">Nebius <span class="n">2集</span>・最後 EP706</span>
+      <span class="chip watch">美股/Nasdaq <span class="n">1集</span>・最後 EP706</span>
+      <span class="chip watch">軟體/SaaS <span class="n">1集</span>・最後 EP706</span>
+      <span class="chip watch">達發／Airoha <span class="n">1集</span>・最後 EP702</span>
+      <span class="chip watch">零組件成本回落／出貨量受惠族群 <span class="n">1集</span>・最後 EP703</span>
+      <span class="chip watch">廠務族群 <span class="n">1集</span>・最後 EP701</span>
+      <span class="chip watch">擁擠小型設備股（未具名） <span class="n">1集</span>・最後 EP705</span>
+      <span class="chip watch">AI 眼鏡／隨身代理裝置 <span class="n">1集</span>・最後 EP700</span>
+      <span class="chip watch">Meta <span class="n">1集</span>・最後 EP700</span>
+      <span class="chip watch">NVIDIA <span class="n">1集</span>・最後 EP701</span>
+    </div>
+  </div>
+  <div class="flowgroup">
+    <div class="gtitle">⚪ 先放著觀察（視窗內最後一次提及為中性）｜累計 3 cover・3 檔</div>
+    <div class="chips">
+      <span class="chip">台灣光學機構／封裝組裝 <span class="n">1集</span>・最後 EP702</span>
+      <span class="chip">美光 <span class="n">1集</span>・最後 EP706</span>
+      <span class="chip"><span class="own">⭐</span>SpaceX <span class="n">1集</span>・最後 EP705</span>
+    </div>
+  </div>
+</div>
+
+<div class="block" id="shifts">
+  <h2>看法轉變<span class="en">SENTIMENT SHIFTS・3 次／3 標的</span></h2>
+  <div class="shift"><b>功率元件族群</b><div class="path"><span class="schip watch">EP700 觀望</span>→<span class="schip bull">EP702 看多</span></div><div class="why">EP700 觀望，EP702 因需求與價格訊號轉為看多。最新 EP706 未提及，維持 EP702 的既有看多；本集一般 power／能源只是 AI 可選曝險的列舉，不是功率半導體更新。</div></div>
+  <div class="shift"><b>台股大盤(指數)</b><div class="path"><span class="schip bull">EP699–703、705 看多</span>→<span class="schip watch">EP706 觀望</span></div><div class="why">EP699、EP700、EP701、EP702、EP703、EP705 維持偏多；最新 EP706 因強勢標的廣度收窄、反彈不順及風險訊號轉為交易觀望。這是當集真實風控轉變，不等於宣告長期多頭結束或已有空單。</div></div>
+  <div class="shift"><b>光通訊族群</b> <span class="own">⭐</span><div class="path"><span class="schip bull">EP699–702、704 看多</span>→<span class="schip watch">EP706 觀望</span></div><div class="why">EP699、EP700、EP701、EP702、EP704 為正向；最新 EP706 揭露部分光部位停利或停損退出，交易狀態轉觀望。未說所有公司基本面轉空，也沒有全數清倉證據；EP705 沒有新增該族群明確立場。</div></div>
+  <div class="tracker-summary">持續追蹤 7 個既有觀點；KPI 只計本 8 集實際轉向，不重複計入維持原立場者。</div>
+  <div class="tracker-carryovers">
+    <h3>持續追蹤</h3>
+    <div class="carryover-view"><b>台積電</b><div class="tracker-meta">追蹤起點 EP690・最後明確提及 EP706</div><div class="why">最新 EP706 仍認為公司成績與指引正向、按合理預期衡量優於預期，維持基本面看多。利多不漲是價格與交易風控警訊，不改寫成公司基本面轉空。</div></div>
+    <div class="carryover-view"><b>AI 雲端／算力基礎設施</b><div class="tracker-meta">追蹤起點 EP689・最後明確提及 EP705</div><div class="why">最新 EP706 僅提及 AI 可選曝險與 Neo Cloud 子類風險，未更新整體產業立場，維持 EP705 的既有看多。不能把 CoreWeave／Nebius 融資與股價疑慮擴張為整體雲端轉空。</div></div>
+    <div class="carryover-view"><b>Broadcom／博通</b><div class="tracker-meta">追蹤起點 EP690・最後明確提及 EP706</div><div class="why">最新 EP706 仍正向看待後續案子、漲價空間與互連角色，維持看多。聯發科競爭與份額下降不等於絕對獲利停止成長；前瞻便宜不是無限加碼承諾。</div></div>
+    <div class="carryover-view"><b>NVIDIA</b><div class="tracker-meta">追蹤起點 EP689・最後明確提及 EP701</div><div class="why">最新 EP706 僅提及歷史估值類比、管理階層看法與可能接手 Neo Cloud 的情境，未更新當前整體立場，維持 EP701 的既有觀望。沒有新增其持股或買進證據。</div></div>
+  </div>
+</div>
+
+<div class="block" id="moves">
+  <h2>部位與風控揭露<span class="en">POSITION &amp; RISK DISCLOSURES・31 筆</span></h2>
+  <div class="why">31 筆是 8 集所有本人部位、交易、規則與規劃揭露，不等於 31 次成交。⭐＝該列有實際交易或部位狀態證據；未執行的規劃、規則與觀察不加星。</div>
+  <div class="grp buy">▲ 已執行買進／加碼(0)</div>
+  <table>
+    <tr><th>EP</th><th>標的</th><th>動作／狀態</th></tr>
+
+  </table>
+  <div class="grp sell">▼ 已執行減碼／降曝險／出場(3)</div>
+  <table>
+    <tr><th>EP</th><th>標的</th><th>動作／狀態</th></tr>
+    <tr><td class="ep">EP701</td><td><span class="own">⭐</span>台股整體部位（歷史風控）</td><td>七月下半場減碼部分仍有獲利的部位；主持人回顧第三季初的急跌時，原本想撐住，但大型均線沒有止穩，最後把部分仍有獲利的部位砍出；這是季度復盤，不是本集新的逐檔賣單。</td></tr>
+    <tr><td class="ep">EP706</td><td><span class="own">⭐</span>動能／軟體等部位（未具名）</td><td>減碼／調整部位並保留現金；連仍相對強勢的部分軟體等部位也已調整，以保留之後承接或加碼的現金；不能推成所有軟體已賣光，也不捏造交易股數。</td></tr>
+    <tr><td class="ep">EP706</td><td><span class="own">⭐</span>光通訊部位（未具名）</td><td>減碼／部分停利或停損出場；本人談到光的部位被殺後，有不少部位必須停利或停損出去。沒有公司清單、股數與全部出清的證據；不是聽眾持倉移植。</td></tr>
+  </table>
+  <div class="grp hold">◆ 持有／部位與歷史交易回顧(14)</div>
+  <table>
+    <tr><th>EP</th><th>標的</th><th>動作／狀態</th></tr>
+    <tr><td class="ep">EP701</td><td><span class="own">⭐</span>光通訊／小型 IC 設計／銅纜／衛星／深度價值</td><td>八、九月把組合轉往新主流題材；主持人明確說明組合曾換到光通訊、小型 IC 設計、銅纜、衛星與深度價值等方向，並靠這次輪動修復台股高點；未揭露個股、成本或現有權重。</td></tr>
+    <tr><td class="ep">EP701</td><td><span class="own">⭐</span>Broadcom／博通</td><td>美股組合曾配置較大比例；主持人說美股淨值回到高點較慢，是因為 Broadcom 部位較大且股價下跌後橫躺一段時間；本集未提供成本、現值或是否已減碼。</td></tr>
+    <tr><td class="ep">EP702</td><td><span class="own">⭐</span>光通訊族群</td><td>持有／續抱；本集明確說手上主題以光為主，表現仍好，所以繼續留著；沒有公布個股名稱、成本、權重或新加碼。</td></tr>
+    <tr><td class="ep">EP703</td><td><span class="own">⭐</span>未具名冷門小型公司</td><td>持有／現有配置；目前配置部分冷門小型公司；零組件價格上漲會侵蝕其經營條件。主持人刻意不報公司名稱，不能自行補成具名持股。</td></tr>
+    <tr><td class="ep">EP703</td><td><span class="own">⭐</span>質押部位</td><td>揭露現有質押融資曝險；仍有質押部位。提高現金緩衝可對應降低 leverage，不能直接解讀為大幅轉空或完全停泊現金；本集沒有比例與實際償還數量。</td></tr>
+    <tr><td class="ep">EP703</td><td><span class="own">⭐</span>台指期</td><td>持有／長期轉倉部位；仍有長期轉倉部位，願意承擔轉倉成本；沒有揭露口數、當下方向與實際資金成本。這是衍生工具部位，不是台積電個股持倉。</td></tr>
+    <tr><td class="ep">EP704</td><td><span class="own">⭐</span>未具名既有股票配置</td><td>配置／已有配置與風控，放慢雜訊反應；主持人表示已做好配置與風控，不想只因短期消息砍掉長期建立的部位、事後再追回。仍保留真正論點失效時退出的規則；沒有具名現有股票、成交量或配置比例。</td></tr>
+    <tr><td class="ep">EP704</td><td><span class="own">⭐</span>新唐</td><td>歷史交易回顧／過去已執行的新唐投資虧損；回顧過去投資新唐因伺服器管理晶片題材而賠錢；本集重新思考整合方案與市場擴大的可能。不等於目前仍持有、新買進或正式轉空。</td></tr>
+    <tr><td class="ep">EP705</td><td><span class="own">⭐</span>SpaceX／SPCX</td><td>持有／目前部位快兩成；主持人明說目前 SPCX 可能占部位快兩成，是近似曝險描述，不換算成精確比率、成本或本集新增買進。官方申報確認 SPCX 是 SpaceX 上市普通股；僅列現有持倉，不從持有自動推定新看多。</td></tr>
+    <tr><td class="ep">EP705</td><td><span class="own">⭐</span>未具名現有股票</td><td>持有／手上亦有估值偏低的股票；主持人表示目前手上也有估值偏低的股票，隨即提醒低 PE 不代表一定漲。原詞辨為 DPE，語意依上下文保留；未指明該部位是 NVIDIA 或 Broadcom，不補公司名、成本或比例。</td></tr>
+    <tr><td class="ep">EP706</td><td><span class="own">⭐</span>Broadcom／博通</td><td>持有／回應已買較多的基本面理由；接續聽眾問為何買較多博通，本人回答基本面追蹤、案子與漲價空間，並說買到一定程度就停。這是既有部位理由，不是本集新增買單、精確持有比重或保證股價回升。</td></tr>
+    <tr><td class="ep">EP706</td><td><span class="own">⭐</span>美光（原稿：鎂光）</td><td>持有／自述記憶體只剩美光；原句是記憶體部位只有鎂光還在，其餘早先被洗掉；依記憶體公司脈絡正寫美光。不外推新增買進、比重或整個記憶體產業轉多。</td></tr>
+    <tr><td class="ep">EP706</td><td><span class="own">⭐</span>聯發科</td><td>過去組合曾配置聯發科／成本回顧；本集自述成本差不多 1000 左右，較早成本更低；這是成本與持有路徑的回顧，沒有新增買單，也未提供目前股數與完整持倉快照。不要把聽眾高檔倉位當主持人的成本。</td></tr>
+    <tr><td class="ep">EP706</td><td><span class="own">⭐</span>長抱股票質押（未具名）</td><td>歷史交易回顧／已執行長抱股票質押融通；從房產提問拆出公開市場相關的股票段落：本人不想賣部分長抱股票，曾以質押融通，強調槓桿不能太高。沒有本集新增借款、額度、維持率或具名股票；私人房屋方案不納入本表。</td></tr>
+  </table>
+  <div class="grp plan">◇ 規劃／規則／觀察（非成交紀錄）(14)</div>
+  <table>
+    <tr><th>EP</th><th>標的</th><th>動作／狀態</th></tr>
+    <tr><td class="ep">EP699</td><td>整體股票部位／台股大盤(指數)</td><td>自述常態維持八九成以上在場部位；未公告本集新買賣；主持人說自己的做法通常維持八九成以上在市場，不喜歡全面空手猜頂。這是概括的個人曝險習慣，不是可核對的即時帳戶快照、具名持股或讀者配置指令。</td></tr>
+    <tr><td class="ep">EP700</td><td>整體交易方法（非具名持倉）</td><td>由追紅轉為挑多頭股的回檔、偏波段處理；主持人自述最近選擇多頭形態但當日轉弱的股票，在回檔時介入；這是方法調整，不是本集公開的個股買單、成本或部位比例。</td></tr>
+    <tr><td class="ep">EP701</td><td>整體操作節奏（非具名持倉）</td><td>盤面改善但後續仍決定放慢；主持人先提到信任感回來後可更積極操作，後段又重申前三季績效已佳，不必急著追回七月前的快錢；以最後表述為準，維持波段與不追價。</td></tr>
+    <tr><td class="ep">EP702</td><td>整體持股</td><td>暫不換股；既有主題仍走得好，不因其他族群上漲而頻繁輪動；這是本集操作節奏，不是具名買賣。</td></tr>
+    <tr><td class="ep">EP702</td><td>非 AI 排擠題材</td><td>暫不選擇；優先研究 AI 直接需求，將非 AI 排擠效應放在較後順位；這是選股篩選規劃，不是已執行的賣出。</td></tr>
+    <tr><td class="ep">EP703</td><td>股票整體配置</td><td>維持股票配置／本波未追加追價；仍以股票為主要配置，不想在本輪切換股債配置；本波沒有像以前一樣額外積極追價或擴大借款槓桿。不是具名買進成交。</td></tr>
+    <tr><td class="ep">EP703</td><td>相對弱勢股</td><td>條件式減碼規則；當指數新高、個股仍低於自身近期高點，會考慮減碼；持續破底則退出。這是未具名風控規則，不把假設句登記為已成交賣單。</td></tr>
+    <tr><td class="ep">EP703</td><td>現金／股票整體曝險</td><td>規劃提高緩衝、降低槓桿；削弱留強，讓 cash position 多一點；目的是回到舒服的風險範圍，沒有揭露新的股票占比或已完成現金調整幅度。</td></tr>
+    <tr><td class="ep">EP703</td><td>零組件成本回落受惠股</td><td>規劃條件式配置；若零組件價格回落、出貨量大的公司開始走強，可能轉入以對沖既有成本敏感股；尚未提供具名標的或證實新買入，同屬股票的對沖仍可能一起跌。</td></tr>
+    <tr><td class="ep">EP704</td><td>未具名 XPU／資料中心互連候選</td><td>規劃研究低預期標的；從 Marvell 上修延伸研究其他 XPU 與互連公司，偏向注意市場預期較低者；沒有提供具名候選或已成交證據。</td></tr>
+    <tr><td class="ep">EP705</td><td>未具名股票加碼條件</td><td>規劃／持續上漲才考慮更多加碼，非已買進；低 PE 本身不決定配置上限；持續上漲與原有條件成立才考慮增加，否則買到限度便停止。這是條件式策略，沒有本集已成交或已加碼證據；也不是確認博通現有持倉。</td></tr>
+    <tr><td class="ep">EP706</td><td>整體股票曝險（未具名）</td><td>配置／仍有相當股票部位，計畫繼續壓低曝險；自述仍有六七成以上部位留在市場，同時盡量往下壓；沒有公布調整後的精確比例，也不是清倉宣告。</td></tr>
+    <tr><td class="ep">EP706</td><td>軟體修復／熟悉硬體超跌策略</td><td>規劃／觀察反彈領先者後再決定配置；若軟體率先站回來，配置天平才可能往該方向傾斜；熟悉且跌深的硬體也可能研究反彈。兩者都不是已執行加碼，不承諾買在最低。</td></tr>
+    <tr><td class="ep">EP706</td><td>寬基指數／分批承接策略</td><td>規劃／保留戰略縱深，不滿倉槓桿押底；談到大幅回調時偏向先承接指數反彈、之後再選股。前低及其下方區間只是規劃，不是確定底部；槓桿主題商品與場外借貸可能先迫使投資人出場。</td></tr>
+  </table>
+</div>
+
+<div class="block" id="laws">
+    <h2>投資心法<span class="en">FRAMEWORKS</span></h2>
+    <div class="law"><h3>EP699｜不要太早判定舊技術歸零</h3><p class="q">「我們都不會太早的去假設<br>就長遠來說這個東西不需要」</p><p class="p">新技術、既有規格與增量需求可共存；先看位置與量產時程，不把長期假說直接變成當期訂單結論。</p></div>
+    <div class="law"><h3>EP700｜策略要配合盤型</h3><p class="q">「我選強中帶弱的」</p><p class="p">強中帶弱是當時的切入思維，不是每一種市場都適用的口訣。最新一集反動能也變難，就須再調整曝險。</p></div>
+    <div class="law"><h3>EP702｜技術選擇要回到成本</h3><p class="q">「最終都是回到成本」</p><p class="p">規格、傳聞與技術優勢仍需對上成本與可交付能力；概念受惠不能當已實現財務數字。</p></div>
+    <div class="law"><h3>EP704｜放慢反應，不放棄退出</h3><p class="q">「只是就是會選擇讓子彈飛一下」</p><p class="p">短期雜訊可等，真正的基本面或風控條件失效仍要處理。不能把耐心變成對所有跌勢都硬扛。</p></div>
+    <div class="law"><h3>EP706｜方向之外，先保住續航</h3><p class="q">「所以我們到最後在做的事情<br>都是避免一波被歪炮」</p><p class="p">分批、現金與槓桿限制，是為了能留在場內。就算最後反彈，資金先被迫出場仍是不同結果。</p></div>
+  </div>
+  <div class="block" id="watch">
+    <h2>先放著觀察<span class="en">WATCHLIST</span></h2>
+    <ul class="watch-list">
+      <li>下一波反彈能否修復廣度，尤其硬體利多是否重新帶動價格，而不只是少數小標的上漲。</li>
+      <li>軟體是否率先站回來，且有足夠資金容量；尚未達成條件前，不把研究計畫當已換倉。</li>
+      <li>CoreWeave、Nebius 的實際融資條件與現金流；不把高債息、爆倉傳聞或可能收購直接寫成既成結果。</li>
+      <li>博通的後續案子、獲利與份額變化分開驗證；前瞻便宜不能代替價格與部位紀律。</li>
+      <li>指數承接的現金與分批空間，以及質押與場外借貸的最壞情境；NQ 原稿絕對點位待確認，不修補後充當買點。</li>
+    </ul>
+  </div>
+  <div class="block" id="mood">
+    <h2>情緒與筆記<span class="en">MOOD</span></h2>
+    <div class="mood"><p>這個視窗不是一路直線看多。前段是在強勢輪動中找位置，中段把預期差、產業研究與退出規則分開，最新一集則明顯把重心移到回撤、容量與現金。相對保守，不等於長期論點全數推翻；繼續認同某家公司，也不等於忽略當下價格。</p><p>本集說法仍有未核實的市場故事與辨識詞。融資減幅、韓國權重、年度指數漲幅、爆倉人名與絕對前低都沒有被本稿補成確定統計。私人購車、房屋方案與聽眾持股不進股票 KPI；股票質押的公開市場風控句子則拆開保留。</p></div>
+    <p class="why">補充查核只核對公司身分與安全界線，不替主持人的市場推估背書：
+      <a href="https://investors.coreweave.com/overview/default.aspx">CoreWeave 官方投資人資訊</a>、
+      <a href="https://nebius.com/newsroom/nebius-group-confirms-schedule-for-resumption-of-trading-on-nasdaq">Nebius 官方公司資訊</a>、
+      <a href="https://tw.micron.com/about/press/news">美光官方中文名稱</a>。
+      節目的 FSD 個人體驗不是安全許可；<a href="https://www.tesla.com/ownersmanual/models/en_us/GUID-2CB60804-9CEA-4F4B-8B04-09B991368DC5.html">Tesla 官方使用手冊</a>仍要求駕駛持續注意並準備隨時接手。</p>
+    <p class="why">立場與揭露是各集當時的節目觀點。卡片星號指可確認的持有揭露；月報星號還可能代表視窗內的歷史交易。兩者都不是即時完整持倉，也不是投資報酬保證。</p>
+  </div>
+</div>
+<a class="backtop" href="#top">返回目錄 ↑</a>
+</body>
+</html>
