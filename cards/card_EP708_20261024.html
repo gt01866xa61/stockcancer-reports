@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta name="stockcancer-font-scale" content="1.5">
+  <meta name="stockcancer-layout" content="wide-1320-v1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌 EP708｜反彈未必搶，先找下一棒｜2026-10-24</title>
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf7; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; color: #2b2b2b; line-height: 1.75; font-size: 22.5px; /* stockcancer-font-base:15px */ padding: 32px 16px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .card { background: #ffffff; border: 1px solid #ececec; border-radius: 10px; padding: 28px; margin-bottom: 22px; position: relative; }
+  .num { position: absolute; top: 14px; right: 18px; font-size: 18px; /* stockcancer-font-base:12px */ color: #b8b8b8; }
+  .sec { font-size: 18px; /* stockcancer-font-base:12px */ color: #9a9a9a; letter-spacing: 3px; margin-bottom: 6px; }
+  h1 { font-size: 33px; /* stockcancer-font-base:22px */ margin-bottom: 4px; }
+  h2 { font-size: 27px; /* stockcancer-font-base:18px */ margin-bottom: 12px; line-height: 1.5; }
+  .date { color: #9a9a9a; font-size: 19.5px; /* stockcancer-font-base:13px */ margin-bottom: 18px; }
+  .hl { color: #c2410c; font-weight: 700; }
+  .own { color: #c2410c; font-weight: 700; }
+  .core { margin: 10px 0 14px; font-weight: 500; }
+  .core .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; margin-right: 6px; }
+  .mechanism { background: #f7f7f4; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .mechanism .tag { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #9a9a9a; display: block; margin-bottom: 4px; }
+  .note { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #8a8a8a; padding-left: 18px; margin: 6px 0; }
+  .note::before { content: "➤ "; color: #b0b0b0; }
+  .risk { background: #fdf6e3; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .action { background: #fff5ec; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .stock-group { margin: 10px 0; }
+  .gl { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; margin-bottom: 4px; }
+  .ticker { display: inline-block; background: #f4f4f0; border-radius: 6px; padding: 2px 9px; margin: 3px 4px 3px 0; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .ticker code { color: #a0a0a0; font-size: 18px; /* stockcancer-font-base:12px */ margin-left: 3px; font-family: inherit; }
+  blockquote { border-left: 3px solid #e0e0da; padding: 8px 14px; color: #6a6a6a; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ background: #fbfbf9; }
+  .pills { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+  .pill { background: #f7f7f4; border-radius: 8px; padding: 10px 14px; font-size: 21px; /* stockcancer-font-base:14px */ }
+  .insight-pill { display: block; background: #f2f6fa; border-left: 4px solid #7a9cbf; border-radius: 8px; padding: 11px 15px; font-size: 21.75px; /* stockcancer-font-base:14.5px */ color: #2b2b2b; text-decoration: none; margin-bottom: 8px; }
+  .insight-pill:hover { background: #eaf1f7; }
+  .navpills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .navpills a { background: #f7f7f4; border-radius: 6px; padding: 4px 10px; font-size: 19.5px; /* stockcancer-font-base:13px */ color: #2b2b2b; text-decoration: none; }
+  .navpills a:hover { background: #ececec; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .grid3 .col h4 { font-size: 18.75px; /* stockcancer-font-base:12.5px */ color: #9a9a9a; font-weight: 500; margin-bottom: 6px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .cols3 .box { background: #f7f7f4; border-radius: 8px; padding: 14px; }
+  .cols3 .box h4 { font-size: 19.5px; /* stockcancer-font-base:13px */ color: #7a7a7a; margin-bottom: 8px; }
+  .cols3 .box ul { padding-left: 16px; font-size: 20.25px; /* stockcancer-font-base:13.5px */ }
+  .cols3 .box li { margin-bottom: 7px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 21px; /* stockcancer-font-base:14px */ }
+  th { text-align: left; color: #9a9a9a; font-weight: 500; font-size: 18.75px; /* stockcancer-font-base:12.5px */ padding: 6px 8px; border-bottom: 1px solid #ececec; }
+  td { padding: 8px; border-bottom: 1px solid #f2f2ee; vertical-align: top; }
+  .backtop { position: fixed; right: 18px; bottom: 18px; background: #2b2b2b; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 19.5px; /* stockcancer-font-base:13px */ text-decoration: none; opacity: .85; }
+  @media (max-width: 640px) { .grid3, .cols3 { grid-template-columns: 1fr; } }
+</style>
+<style id="stockcancer-font-scale-layout">
+@media (max-width: 640px) {
+  .card, section { min-width: 0; }
+  table { table-layout: fixed; max-width: 100%; }
+  th, td { white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+  .ticker, code, a { max-width: 100%; overflow-wrap: anywhere; word-break: break-word; }
+
+  #card-11 table, #moves table, #card-11 tbody, #moves tbody { display: block; width: 100%; overflow: visible; }
+  #card-11 thead, #moves tr:has(th) { display: none; }
+  #card-11 tbody tr, #moves tr:has(td) { display: block; padding: 12px 0; border-bottom: 1px solid #ececec; }
+  #card-11 td, #moves td { display: block; width: auto; min-width: 0; padding: 4px 0; border: 0; white-space: normal; }
+  #card-11 td::before, #moves td::before { font-weight: 700; color: #777; }
+  #card-11 td:nth-child(1)::before { content: '標的／部位：'; }
+  #card-11 td:nth-child(2)::before { content: '本集狀態：'; }
+  #card-11 td:nth-child(3)::before { content: '依據：'; }
+  #moves td:nth-child(1)::before { content: '集數：'; }
+  #moves td:nth-child(2)::before { content: '標的／部位：'; }
+  #moves td:nth-child(3)::before { content: '動作／狀態：'; }
+}
+  </style>
+<style id="stockcancer-wide-layout">
+.wrap { width: 100%; max-width: 1320px; }
+.card, .block, .grid3 > *, .cols3 > * { min-width: 0; }
+.grid3, .cols3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ticker { max-width: 100%; overflow-wrap: anywhere; }
+
+.story p, .why, .watchlist li, .mood,
+.card > .core, .card > .note, .card > .mechanism,
+.card > .risk, .card > .action, .card > blockquote {
+  max-inline-size: 40em;
+  overflow-wrap: anywhere;
+}
+.law .p, .law .q { max-inline-size: 40em; }
+.kpi .lab, .law .q { line-break: strict; overflow-wrap: anywhere; padding-inline-end: 1em; }
+
+@media (min-width: 1024px) {
+  .grid3, .cols3 { gap: 24px; }
+  .kpi { gap: 12px; }
+  .tgrid { gap: 16px; }
+}
+@media (max-width: 900px) and (min-width: 641px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+  .kpi { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kpi .k.txt { grid-column: 1 / -1; }
+  .tgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div class="wrap">
+  <div class="card" id="card-1">
+    <div class="num">1/12</div>
+    <div class="sec">本集總覽</div>
+    <h1>股癌 EP708｜反彈未必搶，先找下一棒</h1>
+    <div class="date">2026-10-24｜資金成本、軟體輪動與 GPU 租賃風險</div>
+    <div class="grid3">
+      <div class="col">
+        <h4>先保護已累積成果</h4>
+        <span class="ticker">反彈不自動買回</span>
+        <span class="ticker">舊高不是目標價</span>
+        <span class="ticker">提早調節與保留資金</span>
+      </div>
+      <div class="col">
+        <h4>研究下一棒</h4>
+        <span class="ticker">Meta 的 AI 實際價值</span>
+        <span class="ticker">軟體／資安相對強勢</span>
+        <span class="ticker">台灣仍需硬體領先者</span>
+      </div>
+      <div class="col">
+        <h4>重估瓶頸交易</h4>
+        <span class="ticker">記憶體與載板</span>
+        <span class="ticker">高毛利能否更好</span>
+        <span class="ticker">算力租金與需求彈性</span>
+      </div>
+    </div>
+    <div class="sec">核心洞見</div>
+    <a class="insight-pill" href="#card-2"><b>盤勢：</b>反彈可能接近，不代表本人想搶，也不代表舊主流會回到高點。</a>
+    <a class="insight-pill" href="#card-4"><b>價值：</b>公司持續創新，比單一產品短期爆紅更重要。</a>
+    <a class="insight-pill" href="#card-7"><b>分辨：</b>GPU 過剩是風險情境；節目同時說現在報價仍高且在漲。</a>
+    <a class="insight-pill" href="#card-10"><b>紀律：</b>誰賣出可能放大波動，卻不能解釋全部跌因。</a>
+    <div class="sec">章節導覽</div>
+    <div class="navpills">
+      <a href="#card-2">02 不急搶反彈</a>
+      <a href="#card-3">03 高點不保證</a>
+      <a href="#card-4">04 創新要有價值</a>
+      <a href="#card-5">05 瓶頸交易降溫</a>
+      <a href="#card-6">06 觀察下一棒</a>
+      <a href="#card-7">07 過剩是條件</a>
+      <a href="#card-8">08 反論要保留</a>
+      <a href="#card-9">09 能不能更好</a>
+      <a href="#card-10">10 不要只怪賣家</a>
+      <a href="#card-11">11 已做與規劃</a>
+      <a href="#card-12">12 分開驗證</a>
+    </div>
+  </div>
+
+  <div class="card" id="card-2">
+    <div class="num">2/12</div>
+    <div class="sec">盤勢與本人策略</div>
+    <h2>反彈可能近了，但他不想急著搶</h2>
+    <div class="core"><span class="tag">重點</span>主持人延續保守，猜測情緒極端後可能反彈，卻明說不想做這次反彈。</div>
+
+    <div class="mechanism"><span class="tag">已做、未做分開</span><ol><li>本輪察覺風險後已先調節；七月則是先扛跌、之後才調整。</li><li>提前減碼是本輪回顧，不是本集又新成交，更不是清倉或空單。</li><li>資金仍要尋找機會，但下一次帶動行情的，未必是原本那些股票。</li></ol></div>
+
+    <div class="note">節目沒有公布最新完整庫存；本輪已調節和本集新成交不可混用。</div>
+    <div class="risk"><b>風險：</b>反彈日期、幅度與新主流都未確定，不能把猜測寫成預告。</div>
+    <div class="action"><b>應對：</b>先檢查曝險與退出條件，不因別人猜反彈就追進。</div>
+  </div>
+
+  <div class="card" id="card-3">
+    <div class="num">3/12</div>
+    <div class="sec">價格錨定與資金成本</div>
+    <h2>跌很多，不代表原價一定回得去</h2>
+    <div class="core"><span class="tag">重點</span>原先高價可能早已反映遠期成長；好基本面與短期能否修復股價，是不同問題。</div>
+
+    <div class="mechanism"><span class="tag">價格要回到假設</span><ol><li>測試介面股票只是未具名族群示例，沒有點名公司或目標價。</li><li>利息與融資成本提高時，高預期資產可能需要更長時間消化估值。</li><li>弱勢股只有掉到有把握的深度價值區，才考慮少量；不是跌就無腦買。</li></ol></div>
+
+    <div class="note">歷史高價與遠期估值只是說明，不提供特定公司的合理價。</div>
+    <div class="risk"><b>風險：</b>流動性和利率是節目判斷，本稿不當央行公告或已核實統計。</div>
+    <div class="action"><b>應對：</b>比較未來業績、估值與資金效率，不把昔日高點當保證。</div>
+  </div>
+
+  <div class="card" id="card-4">
+    <div class="num">4/12</div>
+    <div class="sec">Meta 與 AI 應用</div>
+    <h2>產品熱度會退，公司仍要做出新東西</h2>
+    <div class="core"><span class="tag">重點</span>主持人明確肯定 Meta 持續創新；單一產品日活下滑，不等於公司已失去價值。</div>
+
+    <div class="mechanism"><span class="tag">從熱度走向實用</span><ol><li>Muse 名稱、日活下降與裝置期待皆為節目轉述，沒有獨立產品或數據確認。</li><li>重點是 AI 是否真的改善本業，或在新業務產出可用的東西。</li><li>想買裝置試用是私人消費，不是買 Meta 股票，也不證明現有持倉。</li></ol></div>
+
+    <div class="note">持續創新是主持人的公司看法；產品名稱和日活數據仍待原始資料。</div>
+    <div class="risk"><b>風險：</b>迭代太快，短期爆紅與留存、轉換和獲利不能畫上等號。</div>
+    <div class="action"><b>應對：</b>持續追蹤本業效益與使用者價值，不只看新產品聲量。</div>
+  </div>
+
+  <div class="card" id="card-5">
+    <div class="num">5/12</div>
+    <div class="sec">缺貨與估值</div>
+    <h2>記憶體、載板仍缺，也要看股價能否守住</h2>
+    <div class="core"><span class="tag">重點</span>最缺主流若連價格都撐不住，其他只靠缺貨漲價的股票更難一直漲。</div>
+
+    <div class="mechanism"><span class="tag">基本面與交易拆開</span><ol><li>記憶體維持交易警覺；載板由前集需求正向，轉為交易觀望。</li><li>短期均線重新轉強，也可能只被主持人當成反彈。</li><li>半導體仍可研究，但量增與價值提升，和單靠漲價推估值要分開。</li></ol></div>
+
+    <div class="note">交易警覺不等於宣布訂單消失，未公開的公司名不猜。</div>
+    <div class="risk"><b>風險：</b>沒有確認供需已反轉，也沒有因此揭露本集具名出清或空單。</div>
+    <div class="action"><b>應對：</b>核對報價、訂單、獲利與價格反應，避免只追一個缺貨故事。</div>
+  </div>
+
+  <div class="card" id="card-6">
+    <div class="num">6/12</div>
+    <div class="sec">軟體、資安與台股</div>
+    <h2>相對強勢在軟體，指數卻還需要硬體</h2>
+    <div class="core"><span class="tag">重點</span>不只少數個股，節目連軟體 ETF 型態都看得較正向；資安事件也讓相關走勢受到關注。</div>
+
+    <div class="mechanism"><span class="tag">領先者不等於已買單</span><ol><li>軟體由等待修復，轉為交易上較正向的下一棒候選。</li><li>資安與軟體相對半導體強，仍沒有指定股票、ETF 代碼或完成轉倉。</li><li>台灣資服在指數權重小；若台股要延續，還要找新的硬體領先者。</li></ol></div>
+
+    <div class="note">台灣資服、海外軟體 ETF 與個別資安公司不能直接視為同一筆曝險。</div>
+    <div class="risk"><b>風險：</b>產業傳導時間難抓，過往講得太早；相對強勢也可能失效。</div>
+    <div class="action"><b>應對：</b>觀察去槓桿後誰先轉強，再核對實際價值與資金容量。</div>
+  </div>
+
+  <div class="card" id="card-7">
+    <div class="num">7/12</div>
+    <div class="sec">GPU 與航空業類比</div>
+    <h2>高固定成本、低邊際成本，兩面都要看</h2>
+    <div class="core"><span class="tag">重點</span>主持人轉述 Ken Griffin 的類比：服務同質、閒置時段不能追回，過剩時可能出現價格競爭。</div>
+
+    <div class="mechanism"><span class="tag">只有前提成立才推演</span><ol><li>GPU 買好、資料中心蓋好後，額外使用的成本較低；供應過多時競爭可能加劇。</li><li>航空機位價格與電信光纖歷史是教學，不是即時 GPU 租金資料。</li><li>節目沒有確認現在已供過於求，也沒有宣告所有 AI 公司失敗。</li></ol></div>
+
+    <div class="note">原始訪問未提供；本卡保留轉述與條件式情境，不補已發生的過剩。</div>
+    <div class="risk"><b>風險：</b>訪問沒有原始逐字文件，類比不等於可直接套用的估值模型。</div>
+    <div class="action"><b>應對：</b>把建置量、實際需求、利用率、融資與合約分別追蹤。</div>
+  </div>
+
+  <div class="card" id="card-8">
+    <div class="num">8/12</div>
+    <div class="sec">類比限制與當前報價</div>
+    <h2>報價仍高，風險也不必等數字轉差才看</h2>
+    <div class="core"><span class="tag">重點</span>節目同時明說算力價格仍在漲、高檔未落；風險討論不是把這項觀察抹掉。</div>
+
+    <div class="mechanism"><span class="tag">需求彈性是另一面</span><ol><li>降價可能刺激更多使用，是主持人設想 Jensen 會怎麼反駁，不是真實對談。</li><li>GPU 使用場景與飛機需求不同，因此航空類比不能完全照搬。</li><li>股價可能先反映預期上限；不能只等營收或報價真的變差才檢查風險。</li></ol></div>
+
+    <div class="note">主持人假想的 Jensen 回應，不是 Jensen 或 GPU 公司已發布的承諾。</div>
+    <div class="risk"><b>風險：</b>沒有本稿核實的現貨報價或未來租金預測，也不把假想反駁當公司承諾。</div>
+    <div class="action"><b>應對：</b>同時記錄支持與反對原論點的證據，不只挑自己喜歡的劇本。</div>
+  </div>
+
+  <div class="card" id="card-9">
+    <div class="num">9/12</div>
+    <div class="sec">毛利與預期差</div>
+    <h2>數字很好，還要問上行空間在哪</h2>
+    <div class="core"><span class="tag">重點</span>朋友提出的高毛利問題提醒主持人：過去漲幅可能已反映好消息，還需要新的變化。</div>
+
+    <div class="mechanism"><span class="tag">好與更好不同</span><ol><li>DRAM、MLCC 供應瓶頸與毛利改善是節目轉述，未提供完整財務模型。</li><li>某個未具名族群若毛利難以再提升，資金可能開始評估持續性。</li><li>這是檢查預期差的方法，不是所有高毛利公司都該賣，也不新增具名看空。</li></ol></div>
+
+    <div class="note">沒有具名族群毛利率，本卡不補數字，也不把高毛利自動當利空。</div>
+    <div class="risk"><b>風險：</b>高原化與下滑都要驗證，不能把修辭直接當已發生的毛利衰退。</div>
+    <div class="action"><b>應對：</b>先寫明哪個指標需要更好、目前價格已反映多少，再決定曝險。</div>
+  </div>
+
+  <div class="card" id="card-10">
+    <div class="num">10/12</div>
+    <div class="sec">賣壓與風控</div>
+    <h2>基金賣出能放大跌勢，不等於全部原因</h2>
+    <div class="core"><span class="tag">重點</span>主持人提醒自己，不能想不到理由，就把下跌全歸咎某家基金爆倉或融資出場。</div>
+
+    <div class="mechanism"><span class="tag">回到價格為何轉弱</span><ol><li>去槓桿和解除配對可以加速波動，但不替代估值、需求與承接力的研究。</li><li>Action Brand 等名稱與事件未確認，不把傳聞當本次下跌真因。</li><li>提前調節不等於永久看空；後續仍找機會，同時重視守住已累積成果。</li></ol></div>
+
+    <div class="note">不把未確認的基金名、爆倉傳聞與本人實際帳戶混在一起。</div>
+    <div class="risk"><b>風險：</b>賣家故事可能讓人忽略論點失效；反彈也不能倒推風控必然多餘。</div>
+    <div class="action"><b>應對：</b>保留現金、停利停損與重新進場條件，用研究而非單一故事做判斷。</div>
+  </div>
+
+  <div class="card" id="card-11">
+    <div class="num">11/12</div>
+    <div class="sec">本人揭露與時態</div>
+    <h2>有提前調節，但沒有具名現有持股證據</h2>
+    <div class="note no-confirmed-holdings">本集未揭露可確認的具名現有持倉；不加持有星號。</div>
+    <table>
+      <thead><tr><th>標的／部位</th><th>本集狀態</th><th>依據</th></tr></thead>
+      <tbody>
+      <tr>
+        <td>整體曝險（未具名）</td>
+        <td>本輪回檔前已先調節；非本集新增成交。</td>
+        <td>沒有股票清單、比例或清倉證據。</td>
+      </tr>
+      <tr>
+        <td>供應鏈組合（未具名）</td>
+        <td>七月以前廣泛配置的歷史回顧。</td>
+        <td>不能當作目前仍持有的完整庫存。</td>
+      </tr>
+      <tr>
+        <td>反彈、深度價值與下一棒</td>
+        <td>不搶目前反彈；其餘是條件式研究。</td>
+        <td>沒有本集已買回、已加碼或已轉倉證據。</td>
+      </tr>
+      <tr>
+        <td>Meta、軟體與資安</td>
+        <td>公司觀點、相對強勢及研究方向。</td>
+        <td>裝置消費與題材關注不等於股票持倉。</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">本集沒有足夠證據確認具名現有持股，全表不加現有持倉星號。</div>
+    <div class="note">月報另保留各集的實際、歷史與規劃；歷史交易不代表今天仍持有。</div>
+  </div>
+
+  <div class="card" id="card-12">
+    <div class="num">12/12</div>
+    <div class="sec">行動清單</div>
+    <h2>先守住成果，再研究值得投入的下一棒</h2>
+    <div class="cols3">
+      <div class="box">
+        <h4>先核對來源</h4>
+        <ul><li>區分口述、歷史與假設。</li><li>未知產品、基金名不補成事實。</li><li>私人消費與聽眾損益不當本人部位。</li></ul>
+      </div>
+      <div class="box">
+        <h4>追蹤變化</h4>
+        <ul><li>算力價格、利用率與實際建置。</li><li>軟體、資安及新硬體的相對強勢。</li><li>高毛利是否有新上行，而非只維持漂亮數字。</li></ul>
+      </div>
+      <div class="box">
+        <h4>保留選擇</h4>
+        <ul><li>反彈不自動買回舊主流。</li><li>深度價值與交易資金分開。</li><li>先定曝險、退出與重新進場條件。</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a class="backtop" href="#top">↑ 目錄</a>
+</body>
+</html>
