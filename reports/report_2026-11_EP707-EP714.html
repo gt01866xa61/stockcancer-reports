@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta name="stockcancer-font-scale" content="1.5">
+  <meta name="stockcancer-layout" content="wide-1320-v1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股癌滾動月報｜EP707–EP714｜事件變多，先分清短線與長線</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #fafaf7; color: #1f2937; font-family: "Noto Sans TC", "PingFang TC", sans-serif; line-height: 1.8; font-size: 22.5px; /* stockcancer-font-base:15px */ }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 40px 18px 88px; }
+    .hero, .block { background: #fff; border: 1px solid #ececec; border-radius: 14px; padding: 30px; margin: 0 0 24px; box-shadow: 0 3px 18px rgba(31,41,55,.05); }
+    h1 { margin: 0 0 8px; font-size: 45px; /* stockcancer-font-base:30px */ line-height: 1.35; }
+    h2 { margin: 0 0 14px; font-size: 33px; /* stockcancer-font-base:22px */ line-height: 1.4; }
+    h3 { margin: 0 0 8px; font-size: 25.5px; /* stockcancer-font-base:17px */ }
+    .sub, .why, .en { color: #7b8794; }
+    .en { font-size: 18px; /* stockcancer-font-base:12px */ letter-spacing: 1px; margin-left: 8px; }
+    .kpi { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; margin-top: 20px; }
+    .k { min-height: 104px; background: #f7f7f4; border: 1px solid #ececec; border-radius: 10px; padding: 12px 8px; text-align: center; }
+    .num { color: #c2410c; font-size: 39px; /* stockcancer-font-base:26px */ font-weight: 800; line-height: 1.15; }
+    .lab { margin-top: 8px; color: #6b7280; font-size: 18px; /* stockcancer-font-base:12px */ }
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; background: #1f2937; border-radius: 12px; padding: 14px; margin: 0 0 24px; }
+    .toc a { color: #fff; background: #374151; border-radius: 7px; text-decoration: none; padding: 7px 10px; font-size: 19.5px; /* stockcancer-font-base:13px */ }
+    .story { padding: 12px 0; border-bottom: 1px solid #ececec; }
+    .story:last-child { border-bottom: 0; }
+    .date-tag { color: #c2410c; font-weight: 800; margin-right: 8px; }
+    .topic-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+    .t { min-height: 118px; border-radius: 10px; background: #f7f7f4; padding: 14px; }
+    .t b { display: block; font-size: 22.5px; /* stockcancer-font-base:15px */ line-height: 1.45; }
+    .cnt { display: inline-block; color: #c2410c; font-size: 18px; /* stockcancer-font-base:12px */ margin-top: 10px; }
+    .flowgroup { margin: 16px 0; }
+    .gtitle { font-weight: 700; margin-bottom: 8px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+    .chip { display: inline-block; padding: 5px 8px; border-radius: 8px; background: #ececec; font-size: 18px; /* stockcancer-font-base:12px */ }
+    .chip.bull, .schip.bull { background: #d4e8d4; }
+    .chip.bear, .schip.bear { background: #e8d4d4; }
+    .chip.watch, .schip.watch { background: #ede5cf; }
+    .n { opacity: .75; }
+    .shift { padding: 14px 0; border-bottom: 1px solid #ececec; }
+    .shift:last-child { border-bottom: 0; }
+    .path { margin: 8px 0; display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+    .schip { display: inline-block; background: #ececec; border-radius: 7px; padding: 4px 7px; font-size: 18px; /* stockcancer-font-base:12px */ }
+    .grp { margin-top: 16px; font-weight: 800; }
+    .grp.buy { color: #167a3f; }
+    .grp.sell { color: #b42318; }
+    .grp.hold { color: #8a5d00; }
+    .grp.plan { color: #5f6b7a; }
+    table { width: 100%; border-collapse: collapse; margin: 8px 0 18px; font-size: 19.5px; /* stockcancer-font-base:13px */ }
+    th, td { text-align: left; vertical-align: top; padding: 9px; border-bottom: 1px solid #ececec; }
+    th { color: #6b7280; font-weight: 700; }
+    .ep { color: #c2410c; font-weight: 700; white-space: nowrap; }
+    .law { background: #fff5ec; border-left: 4px solid #c2410c; border-radius: 8px; padding: 13px 15px; margin: 10px 0; }
+    .watch-list { padding-left: 22px; margin: 0; }
+    .watch-list li { margin: 8px 0; }
+    .mood { background: #f7f7f4; border-radius: 10px; padding: 16px; }
+    .backtop { position: fixed; right: 18px; bottom: 18px; background: #1f2937; color: #fff; border-radius: 22px; padding: 9px 14px; text-decoration: none; font-size: 19.5px; /* stockcancer-font-base:13px */ }
+    .tracker-summary { margin-top: 14px; color: #5f6b7a; }
+    .tracker-carryovers { margin-top: 16px; }
+    .carryover-view { margin-top: 10px; padding: 12px; border-left: 3px solid #c2410c; background: #fff7ed; }
+    .tracker-meta { margin-top: 4px; color: #5f6b7a; }
+    .tracker-retirements { margin-top: 16px; }
+    .retired-view { margin-top: 10px; padding: 12px; border-left: 3px solid #6b7280; background: #f3f4f6; }
+    @media (max-width: 900px) { .kpi { grid-template-columns: repeat(4, minmax(0, 1fr)); } .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px) { .wrap { padding: 20px 12px 78px; } .hero, .block { padding: 20px; } .kpi { grid-template-columns: repeat(2, minmax(0, 1fr)); } .topic-grid { grid-template-columns: 1fr; } table { font-size: 18px; /* stockcancer-font-base:12px */ } }
+    @media (max-width: 640px) {
+      #moves table.position-snapshot td:nth-child(1)::before { content: '部位：'; }
+      #moves table.position-snapshot td:nth-child(2)::before { content: '狀態：'; }
+      #moves table.position-snapshot td:nth-child(3)::before { content: '最後揭露：'; }
+    }
+  </style>
+  <style id="stockcancer-wide-layout">
+.wrap { width: 100%; max-width: 1320px; }
+.card, .block, .grid3 > *, .cols3 > * { min-width: 0; }
+.grid3, .cols3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ticker { max-width: 100%; overflow-wrap: anywhere; }
+
+.story p, .why, .watchlist li, .mood,
+.card > .core, .card > .note, .card > .mechanism,
+.card > .risk, .card > .action, .card > blockquote {
+  max-inline-size: 40em;
+  overflow-wrap: anywhere;
+}
+.law .p, .law .q { max-inline-size: 40em; }
+.kpi .lab, .law .q { line-break: strict; overflow-wrap: anywhere; padding-inline-end: 1em; }
+
+@media (min-width: 1024px) {
+  .grid3, .cols3 { gap: 24px; }
+  .kpi { gap: 12px; }
+  .tgrid { gap: 16px; }
+}
+@media (max-width: 900px) and (min-width: 641px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+  .kpi { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kpi .k.txt { grid-column: 1 / -1; }
+  .tgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .grid3, .cols3 { grid-template-columns: 1fr; }
+}
+  </style>
+  <style id="stockcancer-font-scale-layout">
+@media (max-width: 640px) {
+  .card, section { min-width: 0; }
+  table { table-layout: fixed; max-width: 100%; }
+  th, td { white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+  .ticker, code, a { max-width: 100%; overflow-wrap: anywhere; word-break: break-word; }
+
+  #card-11 table, #moves table, #card-11 tbody, #moves tbody { display: block; width: 100%; overflow: visible; }
+  #card-11 thead, #moves tr:has(th) { display: none; }
+  #card-11 tbody tr, #moves tr:has(td) { display: block; padding: 12px 0; border-bottom: 1px solid #ececec; }
+  #card-11 td, #moves td { display: block; width: auto; min-width: 0; padding: 4px 0; border: 0; white-space: normal; }
+  #card-11 td::before, #moves td::before { font-weight: 700; color: #777; }
+  #card-11 td:nth-child(1)::before { content: '標的／部位：'; }
+  #card-11 td:nth-child(2)::before { content: '本集狀態：'; }
+  #card-11 td:nth-child(3)::before { content: '依據：'; }
+  #moves td:nth-child(1)::before { content: '集數：'; }
+  #moves td:nth-child(2)::before { content: '標的／部位：'; }
+  #moves td:nth-child(3)::before { content: '動作／狀態：'; }
+}
+  </style>
+<style id="stockcancer-report-continuity">
+  .heatmap-wrap { margin: 6px 0 18px; }
+  table.heatmap { border-collapse: separate; border-spacing: 3px; width: 100%; table-layout: fixed; }
+  table.heatmap th { text-align: center; padding: 2px 0; }
+  table.heatmap th:first-child { width: 38%; text-align: left; }
+  td.hm-name { padding: 3px 4px 3px 0; overflow-wrap: anywhere; line-height: 1.35; }
+  td.hm { text-align: center; border-radius: 4px; font-weight: 700; padding: 3px 0; }
+  td.hm.bull { background: #dcefdc; color: #166534; }
+  td.hm.watch { background: #f1e9d4; color: #92400e; }
+  td.hm.neu { background: #efefed; color: #555555; }
+  td.hm.bear { background: #eedcdc; color: #b91c1c; }
+  td.hm.hm-none { background: #f7f7f4; }
+  .hm-tag { display: inline-block; margin-left: 4px; color: #c2410c; border: 1px solid #f2c9a8; border-radius: 4px; padding: 0 4px; }
+  .hm-tag.hm-trk { color: #4a6fa5; border-color: #c4d3ea; }
+  .continuity { margin-top: 18px; border-top: 1px dashed #e6e6e0; padding-top: 10px; }
+  .xw-row { margin: 10px 0; }
+  .xw-route { display: block; margin: 4px 0; }
+  .steady-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .steady-item { border-radius: 6px; padding: 2px 9px; background: #f4f4f0; }
+  .steady-item.bull { background: #dcefdc; }
+  .steady-item.watch { background: #f1e9d4; }
+  .steady-item.bear { background: #eedcdc; }
+  .steady-item.neu { background: #efefed; }
+  .snapshot { margin: 6px 0 14px; }
+  table.position-snapshot td { vertical-align: top; }
+  .ms-note { color: #8a8a8a; }
+  details.row-detail { display: inline; color: #8a8a8a; }
+  details.row-detail > summary { display: inline; cursor: pointer; color: #c2410c; margin-left: 4px; }
+  @media (max-width: 640px) {
+    table.position-snapshot thead { display: none; }
+    table.position-snapshot tr, table.position-snapshot td { display: block; width: 100%; border: 0; }
+    table.position-snapshot tr { border-bottom: 1px solid #e9e9e6; padding: 6px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <div class="hero">
+    <h1>事件變多，先分清短線與長線</h1>
+    <p class="sub">股癌滾動月報｜2026-11｜EP707–EP714<br>官方發布日 10/21–11/14；本期完成日 11/14。節目觀點、轉述與假設不等於買進建議。</p>
+    <div class="kpi">
+      <div class="k"><div class="num">8</div><div class="lab">涵蓋集數</div></div>
+      <div class="k"><div class="num">19</div><div class="lab">看多提及</div></div>
+      <div class="k"><div class="num">0</div><div class="lab">看空提及</div></div>
+      <div class="k"><div class="num">30</div><div class="lab">觀望提及</div></div>
+      <div class="k"><div class="num">23</div><div class="lab">部位與風控揭露</div></div>
+      <div class="k"><div class="num">7</div><div class="lab">看法轉變（5 標的）</div></div>
+      <div class="k txt"><div class="num">事件與時間尺度</div><div class="lab">本窗核心框架</div></div>
+    </div>
+  </div>
+  <div class="toc">
+    <a href="#narrative">這 8 集的故事線</a><a href="#topics">熱門題材</a><a href="#flow">立場分布</a><a href="#shifts">看法轉變</a><a href="#moves">部位與風控</a><a href="#laws">投資心法</a><a href="#watch">先放著觀察</a><a href="#mood">情緒與筆記</a>
+  </div>
+  <div class="block" id="narrative">
+    <h2>這 8 集的故事線<span class="en">NARRATIVE</span></h2>
+    <div class="story"><span class="date-tag">10/21 EP707</span><p>肯定算力、光與載板需求，保守主要是調節換股，不是清倉或空單。SpaceX 展望、算力回本與良率仍是未附原始文件的轉述。NAND 需求微調不等於過剩；載板擴產依序過廠房、無塵室、設備與良率。價格和基本面不能混為一談。</p></div>
+    <div class="story"><span class="date-tag">10/24 EP708</span><p>反彈可能接近，主持人卻不想急搶；本輪已提前調節，沒有新具名買單。Meta 的持續創新、軟體和資安相對強勢成為研究方向，台股仍需新硬體領先者。載板與算力提高的是交易警戒，不是確認需求崩塌。GPU 與航空的類比提出過剩風險，同時保留降價刺激用量的反論，以及當前算力報價仍高的觀察。去槓桿不是全部跌因，守住成果同樣重要。</p></div>
+    <div class="story"><span class="date-tag">10/28 EP709</span><p>台股反彈及格，主持人仍希望降低曝險、不上槓桿，觀察接下來的領先族群。CPU 潛在上修仍待確認；載板個股分歧，對純漲價交易保持警覺。資安設備供應鏈值得研究，但沒有具名買單。</p></div>
+    <div class="story"><span class="date-tag">10/31 EP710</span><p>反彈後再次破底，主持人檢討買回太多、部分認賠，並進一步降低曝險。他轉述雲端與伺服器需求強，但市場可能更關注現金流、融資與估值。融資賣壓、算力資產轉手與併購整合均屬情境或節目判斷，不是確定結果。</p></div>
+    <div class="story"><span class="date-tag">11/4 EP711</span><p>急跌後放量收下影線，主持人先提高指數曝險，個股仍等待融資變化。Palantir 的企業案例引出開源小模型、邊緣設備與系統整合機會，但估值及案例可複製性仍須檢查。AMD 伺服器需求正向、消費端較弱；台積電估值試算屬假設，不是底價。</p></div>
+    <div class="story"><span class="date-tag">11/7 EP712</span><p>週三試買、週五急跌再進，主持人當沖掉部分試買，後續保留現金。反彈要看能否站穩季線；高融資可能放大跌勢，不是國際事件的起因。AI 已在建案與新許可分開看，SoftBank 渦輪訂單只屬轉述；軟體、系統整合與巨頭相對抗跌，純漲價交易變難。</p></div>
+    <div class="story"><span class="date-tag">11/11 EP713</span><p>強彈接近季線，主持人規劃反彈再調整。NVIDIA 中國曝險與指引是風險推演，傳聞本身不改產品效能，也不能直接推成供應鏈洗牌。伺服器需求延後非取消；太空 AI、ASIC 與 AMD 鏈列研究方向。偏好提高 CSP 與軟體關注，也從櫃買找營收能兌現的機會。</p></div>
+    <div class="story"><span class="date-tag">11/14 EP714</span><p>主持人把 NVIDIA 跌後短線與長期創辦人價值分開，關注高溢價供應鏈的規格推進風險；仍保留目前未到全面標準化殺價、既有路線圖短期可接續的反論。他認為去中化政策仍支持台灣供應鏈，也認同 AMD、ASIC 的短線輪動，但未確認大波段或新訂單。本人正避開晶片事件，資金轉向仍未具名。人事、接班、回購與太空合作皆依節目轉述或假設呈現，不當成已核實事實。</p></div>
+  </div>
+  <div class="block" id="topics">
+    <h2>熱門題材<span class="en">TOPICS</span></h2>
+    <p class="why">按實際討論集數整理，包含背景與教學。提及次數不是買進次數，也不代表每集新增公司立場。</p>
+    <div class="topic-grid">
+      <div class="t" data-episodes="707,708,709,710,711,712,713,714"><b>市場與風險控制</b><p>從降低曝險、試買與反彈，走到事件增加；價格、時間尺度和自己的風險分開。</p><span class="cnt">8 集</span></div>
+      <div class="t" data-episodes="707,708,710,711,712,713,714"><b>AI 建置與應用</b><p>資金、許可、交期與新題材各自驗證；最新集也提醒太空伺服器量不大。</p><span class="cnt">7 集</span></div>
+      <div class="t" data-episodes="707,710"><b>光通訊與高速互連</b><p>需求與交易風險分開，最新集沒有更新光通訊立場。</p><span class="cnt">2 集</span></div>
+      <div class="t" data-episodes="707,708,709,710"><b>載板與瓶頸交易</b><p>擴產、良率和缺貨不同；最新集材料近音不清，不當成載板提及。</p><span class="cnt">4 集</span></div>
+      <div class="t" data-episodes="708,709,710,711,712,713"><b>軟體與系統整合</b><p>相對強勢與提高研究權重，仍要看營收兌現；最新集工作工具話題不更新產業立場。</p><span class="cnt">6 集</span></div>
+      <div class="t" data-episodes="707,708,710,712,714"><b>記憶體與供需</b><p>需求、庫存與競爭示例分開；最新集僅以記憶體舉例，沒有新方向。</p><span class="cnt">5 集</span></div>
+      <div class="t" data-episodes="707,710,711,712,713,714"><b>供應鏈調整與訂單</b><p>去中化政策支持和高規格溢價風險並存，輪動不等於已取得訂單。</p><span class="cnt">6 集</span></div>
+      <div class="t" data-episodes="707,708,709,710,711,712,713,714"><b>策略與研究框架</b><p>先研究再等資金確認；外資要辨別對象，消息不能直接套成當日漲跌。</p><span class="cnt">8 集</span></div>
+    </div>
+  </div>
+  <div class="block" id="flow">
+  <h2>立場分布<span class="en">SENTIMENT MAP</span></h2>
+  <div class="why">每個標的依本視窗「最後一次被提及」的立場分組，並標出最後集數；這不是實際資金流。⭐＝本視窗曾明示本人持有，不代表最新一集仍持有。</div>
+  <div class="heatmap-wrap">
+    <h3>立場熱圖（標的 × 集數）</h3>
+    <div class="why">每格是該集明確立場：多＝看多、望＝觀望、中＝中性、空＝看空，空白＝該集未表態；欄名為集數末兩碼。「轉」＝本窗有轉向，「追」＝持續追蹤中。</div>
+    <table class="heatmap">
+      <thead><tr><th>標的</th><th>07</th><th>08</th><th>09</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th></tr></thead>
+      <tbody>
+      <tr data-hm-name="功率元件族群" data-hm-tracked="true" data-hm-shifted="false"><td class="hm-name">功率元件族群<span class="hm-tag hm-trk">追</span></td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="台股大盤(指數)" data-hm-tracked="true" data-hm-shifted="true"><td class="hm-name">台股大盤(指數)<span class="hm-tag">轉</span><span class="hm-tag hm-trk">追</span></td><td class="hm watch" data-hm-episode="707" data-hm-sentiment="watchful">望</td><td class="hm watch" data-hm-episode="708" data-hm-sentiment="watchful">望</td><td class="hm watch" data-hm-episode="709" data-hm-sentiment="watchful">望</td><td class="hm bear" data-hm-episode="710" data-hm-sentiment="bearish">空</td><td class="hm bull" data-hm-episode="711" data-hm-sentiment="bullish">多</td><td class="hm watch" data-hm-episode="712" data-hm-sentiment="watchful">望</td><td class="hm watch" data-hm-episode="713" data-hm-sentiment="watchful">望</td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="台積電" data-hm-tracked="true" data-hm-shifted="false"><td class="hm-name">台積電<span class="hm-tag hm-trk">追</span></td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm bull" data-hm-episode="711" data-hm-sentiment="bullish">多</td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="光通訊族群" data-hm-tracked="true" data-hm-shifted="false"><td class="hm-name">光通訊族群<span class="hm-tag hm-trk">追</span></td><td class="hm watch" data-hm-episode="707" data-hm-sentiment="watchful">望</td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm watch" data-hm-episode="710" data-hm-sentiment="watchful">望</td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="軟體/SaaS" data-hm-tracked="true" data-hm-shifted="false"><td class="hm-name">軟體/SaaS<span class="hm-tag hm-trk">追</span></td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm bull" data-hm-episode="708" data-hm-sentiment="bullish">多</td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm bull" data-hm-episode="712" data-hm-sentiment="bullish">多</td><td class="hm bull" data-hm-episode="713" data-hm-sentiment="bullish">多</td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="載板/ABF" data-hm-tracked="true" data-hm-shifted="true"><td class="hm-name">載板/ABF<span class="hm-tag">轉</span><span class="hm-tag hm-trk">追</span></td><td class="hm bull" data-hm-episode="707" data-hm-sentiment="bullish">多</td><td class="hm watch" data-hm-episode="708" data-hm-sentiment="watchful">望</td><td class="hm watch" data-hm-episode="709" data-hm-sentiment="watchful">望</td><td class="hm watch" data-hm-episode="710" data-hm-sentiment="watchful">望</td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="AI 雲端／算力基礎設施" data-hm-tracked="true" data-hm-shifted="true"><td class="hm-name">AI 雲端／算力基礎設施<span class="hm-tag">轉</span><span class="hm-tag hm-trk">追</span></td><td class="hm bull" data-hm-episode="707" data-hm-sentiment="bullish">多</td><td class="hm watch" data-hm-episode="708" data-hm-sentiment="watchful">望</td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm watch" data-hm-episode="710" data-hm-sentiment="watchful">望</td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm watch" data-hm-episode="712" data-hm-sentiment="watchful">望</td><td class="hm watch" data-hm-episode="713" data-hm-sentiment="watchful">望</td><td class="hm watch" data-hm-episode="714" data-hm-sentiment="watchful">望</td></tr>
+      <tr data-hm-name="ASIC 供應鏈" data-hm-tracked="true" data-hm-shifted="true"><td class="hm-name">ASIC 供應鏈<span class="hm-tag">轉</span><span class="hm-tag hm-trk">追</span></td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm watch" data-hm-episode="713" data-hm-sentiment="watchful">望</td><td class="hm bull" data-hm-episode="714" data-hm-sentiment="bullish">多</td></tr>
+      <tr data-hm-name="Broadcom／博通" data-hm-tracked="true" data-hm-shifted="false"><td class="hm-name">Broadcom／博通<span class="hm-tag hm-trk">追</span></td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="CPU／Socket 供應鏈" data-hm-tracked="true" data-hm-shifted="true"><td class="hm-name">CPU／Socket 供應鏈<span class="hm-tag">轉</span><span class="hm-tag hm-trk">追</span></td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm watch" data-hm-episode="709" data-hm-sentiment="watchful">望</td><td class="hm bull" data-hm-episode="710" data-hm-sentiment="bullish">多</td><td class="hm bull" data-hm-episode="711" data-hm-sentiment="bullish">多</td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="NVIDIA" data-hm-tracked="true" data-hm-shifted="false"><td class="hm-name">NVIDIA<span class="hm-tag hm-trk">追</span></td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm watch" data-hm-episode="713" data-hm-sentiment="watchful">望</td><td class="hm watch" data-hm-episode="714" data-hm-sentiment="watchful">望</td></tr>
+      <tr data-hm-name="SpaceX" data-hm-tracked="true" data-hm-shifted="false"><td class="hm-name">SpaceX<span class="hm-tag hm-trk">追</span></td><td class="hm bull" data-hm-episode="707" data-hm-sentiment="bullish">多</td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="系統整合與 AI 導入服務" data-hm-tracked="false" data-hm-shifted="false"><td class="hm-name">系統整合與 AI 導入服務</td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm bull" data-hm-episode="711" data-hm-sentiment="bullish">多</td><td class="hm bull" data-hm-episode="712" data-hm-sentiment="bullish">多</td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="記憶體族群" data-hm-tracked="false" data-hm-shifted="false"><td class="hm-name">記憶體族群</td><td class="hm watch" data-hm-episode="707" data-hm-sentiment="watchful">望</td><td class="hm watch" data-hm-episode="708" data-hm-sentiment="watchful">望</td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="資安族群" data-hm-tracked="false" data-hm-shifted="false"><td class="hm-name">資安族群</td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm bull" data-hm-episode="708" data-hm-sentiment="bullish">多</td><td class="hm bull" data-hm-episode="709" data-hm-sentiment="bullish">多</td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="零組件漲價題材" data-hm-tracked="false" data-hm-shifted="false"><td class="hm-name">零組件漲價題材</td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm watch" data-hm-episode="712" data-hm-sentiment="watchful">望</td><td class="hm watch" data-hm-episode="713" data-hm-sentiment="watchful">望</td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="AI 伺服器供應鏈" data-hm-tracked="false" data-hm-shifted="false"><td class="hm-name">AI 伺服器供應鏈</td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm watch" data-hm-episode="713" data-hm-sentiment="watchful">望</td><td class="hm watch" data-hm-episode="714" data-hm-sentiment="watchful">望</td></tr>
+      <tr data-hm-name="AMD（AMD）" data-hm-tracked="false" data-hm-shifted="false"><td class="hm-name">AMD（AMD）</td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm bull" data-hm-episode="711" data-hm-sentiment="bullish">多</td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm bull" data-hm-episode="714" data-hm-sentiment="bullish">多</td></tr>
+      <tr data-hm-name="台灣中小型股／櫃買指數" data-hm-tracked="false" data-hm-shifted="false"><td class="hm-name">台灣中小型股／櫃買指數</td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm watch" data-hm-episode="713" data-hm-sentiment="watchful">望</td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="科技巨頭" data-hm-tracked="false" data-hm-shifted="false"><td class="hm-name">科技巨頭</td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm bull" data-hm-episode="712" data-hm-sentiment="bullish">多</td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="測試介面相關族群（未具名）" data-hm-tracked="false" data-hm-shifted="false"><td class="hm-name">測試介面相關族群（未具名）</td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm watch" data-hm-episode="708" data-hm-sentiment="watchful">望</td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="廠務族群" data-hm-tracked="false" data-hm-shifted="false"><td class="hm-name">廠務族群</td><td class="hm watch" data-hm-episode="707" data-hm-sentiment="watchful">望</td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="Meta" data-hm-tracked="false" data-hm-shifted="false"><td class="hm-name">Meta</td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm bull" data-hm-episode="708" data-hm-sentiment="bullish">多</td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="711" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      <tr data-hm-name="Palantir" data-hm-tracked="false" data-hm-shifted="false"><td class="hm-name">Palantir</td><td class="hm hm-none" data-hm-episode="707" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="708" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="709" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="710" data-hm-sentiment=""></td><td class="hm bull" data-hm-episode="711" data-hm-sentiment="bullish">多</td><td class="hm hm-none" data-hm-episode="712" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="713" data-hm-sentiment=""></td><td class="hm hm-none" data-hm-episode="714" data-hm-sentiment=""></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="flowgroup">
+    <div class="gtitle">🟢 視窗內最後一次提及為看多｜累計 19 cover・11 檔</div>
+    <div class="chips">
+      <span class="chip bull">軟體/SaaS <span class="n">3集</span>・最後 EP713</span>
+      <span class="chip bull">CPU／Socket 供應鏈 <span class="n">3集</span>・最後 EP711</span>
+      <span class="chip bull">系統整合與 AI 導入服務 <span class="n">2集</span>・最後 EP712</span>
+      <span class="chip bull">資安族群 <span class="n">2集</span>・最後 EP709</span>
+      <span class="chip bull">AMD（AMD） <span class="n">2集</span>・最後 EP714</span>
+      <span class="chip bull">ASIC 供應鏈 <span class="n">2集</span>・最後 EP714</span>
+      <span class="chip bull">台積電 <span class="n">1集</span>・最後 EP711</span>
+      <span class="chip bull">科技巨頭 <span class="n">1集</span>・最後 EP712</span>
+      <span class="chip bull">Meta <span class="n">1集</span>・最後 EP708</span>
+      <span class="chip bull">Palantir <span class="n">1集</span>・最後 EP711</span>
+      <span class="chip bull">SpaceX <span class="n">1集</span>・最後 EP707</span>
+    </div>
+  </div>
+  <div class="flowgroup">
+    <div class="gtitle">🔴 視窗內最後一次提及為看空｜累計 0 cover・0 檔</div>
+    <div class="chips">
+
+    </div>
+  </div>
+  <div class="flowgroup">
+    <div class="gtitle">🟡 視窗內最後一次提及為觀望｜累計 30 cover・11 檔</div>
+    <div class="chips">
+      <span class="chip watch">台股大盤(指數) <span class="n">7集</span>・最後 EP713</span>
+      <span class="chip watch">AI 雲端／算力基礎設施 <span class="n">6集</span>・最後 EP714</span>
+      <span class="chip watch">載板/ABF <span class="n">4集</span>・最後 EP710</span>
+      <span class="chip watch">光通訊族群 <span class="n">2集</span>・最後 EP710</span>
+      <span class="chip watch">記憶體族群 <span class="n">2集</span>・最後 EP708</span>
+      <span class="chip watch">零組件漲價題材 <span class="n">2集</span>・最後 EP713</span>
+      <span class="chip watch">AI 伺服器供應鏈 <span class="n">2集</span>・最後 EP714</span>
+      <span class="chip watch">NVIDIA <span class="n">2集</span>・最後 EP714</span>
+      <span class="chip watch">台灣中小型股／櫃買指數 <span class="n">1集</span>・最後 EP713</span>
+      <span class="chip watch">測試介面相關族群（未具名） <span class="n">1集</span>・最後 EP708</span>
+      <span class="chip watch">廠務族群 <span class="n">1集</span>・最後 EP707</span>
+    </div>
+  </div>
+  <div class="flowgroup">
+    <div class="gtitle">⚪ 先放著觀察（視窗內最後一次提及為中性）｜累計 0 cover・0 檔</div>
+    <div class="chips">
+
+    </div>
+  </div>
+</div>
+
+<div class="block" id="shifts">
+  <h2>看法轉變<span class="en">SENTIMENT SHIFTS・7 次／5 標的</span></h2>
+  <div class="shift"><b>台股大盤(指數)</b><div class="path"><span class="schip watch">EP707–709 觀望</span>→<span class="schip bear">EP710 看空</span>→<span class="schip bull">EP711 看多</span>→<span class="schip watch">EP712–713 觀望</span></div><div class="why">EP707、EP708、EP709 保守，EP710 破底轉空，EP711 放量收腳轉多，EP712 與 EP713 轉回交易觀望；EP714 未更新指數立場，維持 EP713 的既有觀望。</div></div>
+  <div class="shift"><b>載板/ABF</b><div class="path"><span class="schip bull">EP707 看多</span>→<span class="schip watch">EP708–710 觀望</span></div><div class="why">EP707 看好需求，EP708 提高交易警覺，EP709 個股分歧，EP710 關注擴產限制；EP714 未更新載板立場，維持 EP710 的觀望。材料名稱近音不清，不擅自算成載板。</div></div>
+  <div class="shift"><b>AI 雲端／算力基礎設施</b><div class="path"><span class="schip bull">EP707 看多</span>→<span class="schip watch">EP708、710、712–714 觀望</span></div><div class="why">EP707 需求正向，EP708 警覺融資與估值，EP710 關注現金流，EP712 區分在建案與新許可，EP713 研究交期與太空題材；EP714 延續太空伺服器研究但提醒量不大，交易觀察不變，不上修整體算力需求。</div></div>
+  <div class="shift"><b>ASIC 供應鏈</b><div class="path"><span class="schip watch">EP713 觀望</span>→<span class="schip bull">EP714 看多</span></div><div class="why">EP713 是可能輪動的研究方向、採觀望；EP714 認同事件帶動的短線交易，轉交易層正向。仍不認定已獲訂單、整體基本面上修或直接走成大波段。</div></div>
+  <div class="shift"><b>CPU／Socket 供應鏈</b><div class="path"><span class="schip watch">EP709 觀望</span>→<span class="schip bull">EP710–711 看多</span></div><div class="why">EP709 觀望上修，EP710 轉多，EP711 需求延續正向；EP714 未更新 CPU 整體立場，維持 EP711 的既有看多。AMD 的短線事件交易不等於 CPU 產業新觀點。</div></div>
+  <div class="tracker-summary">持續追蹤 12 個既有觀點；KPI 只計本 8 集實際轉向，不重複計入維持原立場者。</div>
+  <div class="tracker-carryovers">
+    <h3>持續追蹤</h3>
+    <div class="carryover-view"><b>功率元件族群</b><div class="tracker-meta">追蹤起點 EP700・最後明確提及 EP702</div><div class="why">EP714 未提及，維持 EP702 的既有看多立場。</div></div>
+    <div class="carryover-view"><b>台積電</b><div class="tracker-meta">追蹤起點 EP690・最後明確提及 EP711</div><div class="why">EP714 未提及，維持 EP711 的既有看多立場。</div></div>
+    <div class="carryover-view"><b>光通訊族群</b><div class="tracker-meta">追蹤起點 EP699・最後明確提及 EP710</div><div class="why">EP714 未提及，維持 EP710 的既有觀望立場。</div></div>
+    <div class="carryover-view"><b>軟體/SaaS</b><div class="tracker-meta">追蹤起點 EP706・最後明確提及 EP713</div><div class="why">EP714 未提及，維持 EP713 的既有看多立場。</div></div>
+    <div class="carryover-view"><b>Broadcom／博通</b><div class="tracker-meta">追蹤起點 EP690・最後明確提及 EP706</div><div class="why">EP714 未提及，維持 EP706 的既有看多立場。</div></div>
+    <div class="carryover-view"><b>NVIDIA</b><div class="tracker-meta">追蹤起點 EP689・最後明確提及 EP714</div><div class="why">EP714 把跌後短線機會與長期創辦人價值分開，維持觀望；既有路線圖可接續與事件可能反向發展都要保留，人事未獨立確認。</div></div>
+    <div class="carryover-view"><b>SpaceX</b><div class="tracker-meta">追蹤起點 EP705・最後明確提及 EP707</div><div class="why">EP714 僅提及太空伺服器合作與研究說法，未更新公司整體立場，維持 EP707 的既有看多立場。</div></div>
+  </div>
+  <div class="continuity">
+    <h3>跨視窗轉向</h3>
+    <div class="why">8 集視窗之前已有立場、進入本窗後立場不同的標的，補上滑動視窗看不到的轉折。</div>
+    <div class="xw-row" data-xw-name="AI 伺服器供應鏈" data-xw-before-episode="695" data-xw-before="bullish" data-xw-first-episode="713" data-xw-first="watchful"><b>AI 伺服器供應鏈</b><span class="xw-route"><span class="schip bull">EP695 看多</span> ⟶ <span class="schip watch">EP713 觀望</span></span><div class="why">轉折跨過 8 集視窗邊界，不計入本窗 KPI；EP714 仍明確表態觀望。</div></div>
+    <div class="xw-row" data-xw-name="AMD（AMD）" data-xw-before-episode="698" data-xw-before="watchful" data-xw-first-episode="711" data-xw-first="bullish"><b>AMD（AMD）</b><span class="xw-route"><span class="schip watch">EP698 觀望</span> ⟶ <span class="schip bull">EP711 看多</span></span><div class="why">轉折跨過 8 集視窗邊界，不計入本窗 KPI；EP714 仍明確表態看多。</div></div>
+    <div class="xw-row" data-xw-name="Palantir" data-xw-before-episode="695" data-xw-before="neutral" data-xw-first-episode="711" data-xw-first="bullish"><b>Palantir</b><span class="xw-route"><span class="schip neu">EP695 中性</span> ⟶ <span class="schip bull">EP711 看多</span></span><div class="why">轉折跨過 8 集視窗邊界，不計入本窗 KPI；最後明確表態 EP711。</div></div>
+    <div class="xw-row" data-xw-name="軟體/SaaS" data-xw-before-episode="706" data-xw-before="watchful" data-xw-first-episode="708" data-xw-first="bullish"><b>軟體/SaaS</b><span class="xw-route"><span class="schip watch">EP706 觀望</span> ⟶ <span class="schip bull">EP708 看多</span></span><div class="why">轉折跨過 8 集視窗邊界，不計入本窗 KPI；最後明確表態 EP713。</div></div>
+    <div class="xw-row" data-xw-name="資安族群" data-xw-before-episode="697" data-xw-before="watchful" data-xw-first-episode="708" data-xw-first="bullish"><b>資安族群</b><span class="xw-route"><span class="schip watch">EP697 觀望</span> ⟶ <span class="schip bull">EP708 看多</span></span><div class="why">轉折跨過 8 集視窗邊界，不計入本窗 KPI；最後明確表態 EP709。</div></div>
+    <div class="xw-row" data-xw-name="Meta" data-xw-before-episode="700" data-xw-before="watchful" data-xw-first-episode="708" data-xw-first="bullish"><b>Meta</b><span class="xw-route"><span class="schip watch">EP700 觀望</span> ⟶ <span class="schip bull">EP708 看多</span></span><div class="why">轉折跨過 8 集視窗邊界，不計入本窗 KPI；最後明確表態 EP708。</div></div>
+    <div class="xw-row" data-xw-name="SpaceX" data-xw-before-episode="705" data-xw-before="neutral" data-xw-first-episode="707" data-xw-first="bullish"><b>SpaceX</b><span class="xw-route"><span class="schip neu">EP705 中性</span> ⟶ <span class="schip bull">EP707 看多</span></span><div class="why">轉折跨過 8 集視窗邊界，不計入本窗 KPI；最後明確表態 EP707。</div></div>
+    <h3>本窗穩定立場</h3>
+    <div class="why">本窗至少表態 2 集、立場一致的標的；不計入轉向 KPI，但代表看法有延續。</div>
+    <div class="steady-list">
+      <span class="steady-item watch" data-steady-name="NVIDIA" data-steady-sentiment="watchful" data-steady-cover="2">NVIDIA・2集觀望・最後 EP714</span>
+      <span class="steady-item watch" data-steady-name="零組件漲價題材" data-steady-sentiment="watchful" data-steady-cover="2">零組件漲價題材・2集觀望・最後 EP713</span>
+      <span class="steady-item bull" data-steady-name="系統整合與 AI 導入服務" data-steady-sentiment="bullish" data-steady-cover="2">系統整合與 AI 導入服務・2集看多・最後 EP712</span>
+      <span class="steady-item watch" data-steady-name="光通訊族群" data-steady-sentiment="watchful" data-steady-cover="2">光通訊族群・2集觀望・最後 EP710</span>
+      <span class="steady-item watch" data-steady-name="記憶體族群" data-steady-sentiment="watchful" data-steady-cover="2">記憶體族群・2集觀望・最後 EP708</span>
+    </div>
+  </div>
+</div>
+
+<div class="block" id="moves">
+  <h2>部位與風控揭露<span class="en">POSITION &amp; RISK DISCLOSURES・23 筆</span></h2>
+  <div class="snapshot">
+    <h3>目前可確認部位快照（截至 EP714）</h3>
+    <div class="why">只列有本人部位證據、且之後沒有同名揭露更新的項目；「最後揭露」越舊，越可能已變動。⭐ 只標在這張快照。</div>
+    <table class="position-snapshot">
+      <thead><tr><th>部位</th><th>狀態</th><th>最後揭露</th></tr></thead>
+      <tbody>
+      <tr data-ms-episode="712" data-ms-ticker="本週抄底部位（未具名）"><td><span class="own">⭐</span>本週抄底部位（未具名）</td><td>前集揭露週三及週五試買<div class="ms-note">EP714 未確認剩餘數量；未具名的避險與資金安排不等於同批部位更新。</div></td><td class="ms-last">EP712<div class="ms-note">2 集前</div></td></tr>
+      </tbody>
+    </table>
+    <h3>8 集揭露明細</h3>
+  </div>
+  <div class="why">23 筆是 8 集所有本人部位、交易、規則與規劃揭露，不等於 23 次成交。每列只列動作，點「…」看說明與保留意見。</div>
+  <div class="grp buy">▲ 已執行買進／加碼(3)</div>
+  <table>
+    <tr><th>EP</th><th>標的</th><th>動作／狀態</th></tr>
+    <tr><td class="ep">EP709</td><td>型態改善股票（未具名）</td><td>買進／部分原先追蹤股票<details class="row-detail"><summary>…</summary>；主持人表示買入一些原本追蹤、型態改善的股票；未揭露名稱、數量或價格。</details></td></tr>
+    <tr><td class="ep">EP710</td><td>未具名股票</td><td>買進／反彈時回補<details class="row-detail"><summary>…</summary>；主持人檢討反彈時買回太多；未提供完整交易明細。</details></td></tr>
+    <tr><td class="ep">EP712</td><td>本週抄底部位（未具名）</td><td>買進／本週三及週五試買<details class="row-detail"><summary>…</summary>；主持人表示週三抄底，週五開盤再進場。沒有說明標的、金額或留下的數量。</details></td></tr>
+  </table>
+  <div class="grp sell">▼ 已執行減碼／降曝險／出場(5)</div>
+  <table>
+    <tr><th>EP</th><th>標的</th><th>動作／狀態</th></tr>
+    <tr><td class="ep">EP707</td><td>停滯部位與新題材（未具名）</td><td>減碼／調節漲不動部位，進行換股<details class="row-detail"><summary>…</summary>；保守姿態偏向換股，將部分停滯部位調節，保留轉往新題材的資金；未列具名股票、股數或完成後配置。</details></td></tr>
+    <tr><td class="ep">EP708</td><td>整體股票曝險（未具名）</td><td>先前已減碼／本輪回檔前提前調節<details class="row-detail"><summary>…</summary>；本人回顧本輪察覺風險後已先調節，並與七月先承受回檔、之後才調整的經驗對比。沒有完整股票清單、賣出日期或比例；不是清倉，也不宣稱本集又成交一筆。</details></td></tr>
+    <tr><td class="ep">EP709</td><td>停利股票（未具名）</td><td>賣出／前一日停利部分股票<details class="row-detail"><summary>…</summary>；主持人說前一日仍有一些型態不好的股票停利；沒有公布名稱、數量或價格，不代表全部清倉。</details></td></tr>
+    <tr><td class="ep">EP710</td><td>未具名股票</td><td>賣出／部分認賠<details class="row-detail"><summary>…</summary>；反彈時買回較多股票；其後已賣出部分並認賠。未提供名稱、價格或數量，不代表全部清倉。</details></td></tr>
+    <tr><td class="ep">EP712</td><td>週五跌停試買部位（未具名）</td><td>賣出／部分試買部位當日已出清<details class="row-detail"><summary>…</summary>；週五開盤買跌停後，因先前進場太早而將部分試買當沖掉。不是所有持股已清倉。</details></td></tr>
+  </table>
+  <div class="grp hold">◆ 持有／部位與歷史交易回顧(8)</div>
+  <table>
+    <tr><th>EP</th><th>標的</th><th>動作／狀態</th></tr>
+    <tr><td class="ep">EP707</td><td>整體股票部位（未具名）</td><td>持有／仍有相當大部位，僅調節部分資金<details class="row-detail"><summary>…</summary>；本人明說不是全面看空，仍留有相當大部位；本集不量化比例，不沿用前集比例當本集快照。</details></td></tr>
+    <tr><td class="ep">EP707</td><td>未具名小型股</td><td>歷史交易回顧／過去已執行首根跌停、賣壓較小時的承接<details class="row-detail"><summary>…</summary>；回答聽眾時分享既往經驗，不是本集具名交易或鼓勵一般投資人承接連續跌停；賣壓加大時本人同樣會害怕退出。</details></td></tr>
+    <tr><td class="ep">EP708</td><td>供應鏈缺貨漲價組合（未具名）</td><td>過去組合曾配置／回顧七月以前廣泛持有供應鏈股票<details class="row-detail"><summary>…</summary>；接續過往資本支出行情的討論，回顧當時滿手供應鏈與缺貨漲價股票。這是歷史組合，不是目前完整庫存，不據此替任何具名股票加現有持股星號。</details></td></tr>
+    <tr><td class="ep">EP711</td><td>指數部位（未具名）</td><td>持有／先提高指數部位<details class="row-detail"><summary>…</summary>；主持人表示先提高指數方面的曝險，個股則可能等融資賣壓釋出後再做；未說明指數、商品、成本或比例。</details></td></tr>
+    <tr><td class="ep">EP711</td><td>上週回補股票（未具名）</td><td>歷史交易回顧／先前已執行賣出<details class="row-detail"><summary>…</summary>；主持人回顧前一週反彈時進場過急，之後已賣出部分；本集沒有揭露具名股票或新賣單。</details></td></tr>
+    <tr><td class="ep">EP712</td><td>上週抄底部位（未具名）</td><td>歷史交易回顧／上週已執行賣出<details class="row-detail"><summary>…</summary>；他回顧上週試買太早，當時已賣掉該批部位；不是本集才賣出。</details></td></tr>
+    <tr><td class="ep">EP712</td><td>Netflix</td><td>歷史交易回顧／早年已執行退出<details class="row-detail"><summary>…</summary>；他說很久沒有追蹤這檔股票，回顧早年已退出，沒有吃到後來那段上漲；仍付訂閱費是用戶經驗。</details></td></tr>
+    <tr><td class="ep">EP713</td><td>指數部位（未具名）</td><td>歷史交易回顧／先前已執行指數抄底<details class="row-detail"><summary>…</summary>；回應先前換倉及上週進場的問答，說自己抄的是大盤；沒有說明商品、現有數量或本集新增買單。不能由聽眾問題推定個股全部換完。</details></td></tr>
+  </table>
+  <div class="grp plan">◇ 規劃／規則／觀察（非成交紀錄）(7)</div>
+  <table>
+    <tr><th>EP</th><th>標的</th><th>動作／狀態</th></tr>
+    <tr><td class="ep">EP707</td><td>修正後領先題材（未具名）</td><td>規劃／觀察修正後率先表現的方向<details class="row-detail"><summary>…</summary>；下一波若出現較大修正，先觀察跑第一棒的題材，再考慮資金轉換；不是已完成新買單。</details></td></tr>
+    <tr><td class="ep">EP708</td><td>近期反彈策略</td><td>規劃／不急著搶目前反彈<details class="row-detail"><summary>…</summary>；猜測情緒極端後反彈可能接近，但本人沒有意願搶這次反彈。這是當前策略，不是已建立空單、已全數退出或知道反彈日期。</details></td></tr>
+    <tr><td class="ep">EP708</td><td>深度價值與下一輪領先者（未具名）</td><td>規劃／深度價值才考慮少量，交易資金找下一棒<details class="row-detail"><summary>…</summary>；弱勢標的若便宜到有把握的價值區，才考慮少量研究；交易資金則偏向下一輪率先轉強的方向。條件尚未構成本集已買進或已完成轉倉。</details></td></tr>
+    <tr><td class="ep">EP712</td><td>現金與後續曝險</td><td>規劃／留現金並視反彈調整<details class="row-detail"><summary>…</summary>；他希望保留現金，限制下一次買進；若反彈無法站穩季線，可能提高現金比重，若能延續才考慮加碼。均屬條件式規劃。</details></td></tr>
+    <tr><td class="ep">EP713</td><td>反彈調整策略（未具名）</td><td>規劃／反彈時再調整部位<details class="row-detail"><summary>…</summary>；主持人預期反彈接近季線與其他均線時會調整；未明說本集已完成減碼、全數退出或建立空單。</details></td></tr>
+    <tr><td class="ep">EP713</td><td>整體組合風控（未具名）</td><td>風控紀錄／回顧本輪回撤<details class="row-detail"><summary>…</summary>；主持人口述本輪回撤起初約 10%，最深擴至約 17%，現正回升；七月曾回撤約三成。這是組合高低點回撤，不是當前持倉比重、單股跌幅或未來目標。</details></td></tr>
+    <tr><td class="ep">EP714</td><td>晶片與資金配置（未具名）</td><td>風控紀錄／避開晶片事件曝險，另規劃資金方向<details class="row-detail"><summary>…</summary>；主持人說自己正在閃避晶片相關事件，想等波動穩定再看；接著表示資金會移往較不受事件直接衝擊的方向。沒有具名標的、數量、已完成賣出或新增買單，不能推定晶片全部出清或已買入太空題材。</details></td></tr>
+  </table>
+</div>
+
+<div class="block" id="laws">
+    <h2>投資心法<span class="en">PRINCIPLES</span></h2>
+    <div class="law"><h3>EP710｜先控制風險</h3><p class="q">「其實應該把風控放在第一位」</p><p class="p">反彈時買得過多，行情轉弱時可能被迫調整。先決定能承受多少風險。</p></div>
+    <div class="law"><h3>EP711｜價值陷阱要看獲利結構</h3><p class="q">「價值陷阱不可以<br>一昧的套用在所有的標的上面」</p><p class="p">區分長期成長與循環高峰獲利；低本益比不是價格保證。</p></div>
+    <div class="law"><h3>EP712｜策略不只看勝率</h3><p class="q">「你不一定要追求勝率高<br>你要追求的是期望值」</p><p class="p">先找可重複的優勢，再衡量輸贏幅度、連續失利和能承受的曝險。</p></div>
+    <div class="law"><h3>EP713｜研究之後，等市場表態</h3><p class="q">「我們不去做太多預判<br>反正事情發生之後<br>我們快速反應就好」</p><p class="p">先篩品質與價值，再用相對強弱、量價和資金確認。不是只看哪一檔漲停。</p></div>
+    <div class="law"><h3>EP714｜消息和價格，不是一條直線</h3><p class="q">「因為你要考量<br>市場先會提早去pricing<br>去提早去想一些事情」</p><p class="p">因子多、變化快時，少猜當日方向。先區分短線與長線，再決定自己的事件曝險。</p></div>
+  </div>
+  <div class="block" id="watch">
+    <h2>先放著觀察<span class="en">WATCHLIST</span></h2>
+    <ul>
+      <li><b>事件與證據：</b>NVIDIA 的人事、接班及回購先找原始公告。未核實的私人指控不複述，不拿傳聞直接改寫訂單。</li>
+      <li><b>高溢價的條件：</b>觀察規格推進、產能協調與採購方式；目前未到全面標準化殺價，是主持人保留的重要反論。</li>
+      <li><b>AMD 與 ASIC：</b>最新集短線交易正向，仍未確認大波段或訂單轉移；不要把交易層想像變成整體基本面上修。</li>
+      <li><b>政策與太空題材：</b>去中化的產業支持和個股獲利分開。太空伺服器延續研究，量不大、合作及名稱也未核實。</li>
+      <li><b>自己的風控：</b>最新集未具名的避險與資金方向，不是持股清單。外資買賣也須先辨別參與者，不能編造單一動機。</li>
+    </ul>
+  </div>
+  <div class="block" id="mood">
+    <h2>情緒與筆記<span class="en">REFLECTION</span></h2>
+    <div class="callout">這個視窗從需求正向但交易保守，走過降低曝險、試買、急跌與反彈。最新集把焦點放到事件變數：短線可能有交易空間，長期卻不能忽略推規格與整合供應鏈的人；不確定時，先控制自己承受的風險。</div>
+    <p class="why">AMD 本集是短線正向，不是整體基本面上修。台灣政策支持與高規格溢價風險可以同時存在。最新集的避開晶片與資金安排未具名，沒有足夠證據確認現有個股庫存；歷史揭露也不自動延續為現在仍持有。</p>
+    <p class="why">私人遊戲基金與招聘資訊不進公開市場立場或持倉統計。人事、接班、回購、產品規格與太空合作均依節目轉述或假設呈現，未作獨立確認。生活、醫療及婚姻問答不當成投資、醫療或法律建議。原始來源：<a href="https://feeds.soundon.fm/podcasts/954689a5-3096-43a4-a80b-7810b219cef3.xml">股癌官方 RSS</a>。</p>
+  </div>
+  <a class="backtop" href="#top">↑ 返回目錄</a>
+</div>
+</body>
+</html>
